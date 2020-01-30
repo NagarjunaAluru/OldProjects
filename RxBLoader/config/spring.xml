@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-4.0.xsd
+http://www.springframework.org/schema/jdbc
+http://www.springframework.org/schema/jdbc/spring-jdbc-4.0.xsd
+http://www.springframework.org/schema/tx
+http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+	<context:annotation-config/>
+	<!-- DB2 database configuration -->
+	<bean id="db2dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close">
+		<property name="driverClass" value="com.ibm.as400.access.AS400JDBCDriver" />
+		<property name="jdbcUrl" value="jdbc:as400://sxcd1.sxc.com;naming=system;date format=iso;prompt=false" />
+		<property name="user" value="RXBDEV4" />                    
+        <property name="password" value="t6Utevej" />
+		<!-- connection pool for DB2 -->
+		<!-- these are C3P0 properties -->
+        <property name="acquireIncrement" value="1" /> <!-- Default: 3 -->
+        <property name="minPoolSize" value="3" /> <!-- Default: 3 -->
+        <property name="initialPoolSize" value="5" /> <!-- Default: 3 -->
+        <property name="maxPoolSize" value="30" />  <!-- Default: 15 -->
+        <property name="acquireRetryAttempts" value="30" /> <!-- Default: 30 -->
+        <property name="acquireRetryDelay" value="1000" /> <!-- Default: 1000 -->
+		<property name="idleConnectionTestPeriod" value="30" />
+        <property name="testConnectionOnCheckin" value="true"/>
+	</bean>
+	
+	<!-- Dao layer -->
+	<bean id="rxbLoaderDao" class="com.optumrx.rxb.dataloader.dao.db2.impl.RxBLoadDaoImpl">
+		<property name="dataSource"><ref bean="db2dataSource"/></property>
+	</bean>
+	
+	<!-- Util Classes -->
+	<bean id="applicationContextProvder" class="com.optumrx.rxb.dataloader.util.ApplicationContextProvider"/>
+	<bean id="loaderUtil" class="com.optumrx.rxb.dataloader.util.RxBLoaderUtil">
+		<property name="csvPath" value="D:/Nagarjuna_Aluru/Workspace/Load/Feed/" /> <!-- Suffix with / -->
+		<property name="zipPath" value="D:/Nagarjuna_Aluru/Workspace/Load/Archive/" /> <!-- Suffix with / -->
+		<property name="reportPath" value="D:/Nagarjuna_Aluru/Workspace/Load/Reports/" /> <!-- Suffix with / -->
+		<property name="optionKey" value="SXCD1-QA2" />    <!-- option key settings -->
+		<property name="jobendtime" value="8:00" /> <!--time in 24 hour format :: HH:MM -->
+        <property name="coolofperiod" value="05" />  <!-- value in minutes -->
+        <property name="archiveDeleteDays" value="90" />  <!-- number of days -->
+	</bean>
+	<bean id="fileReaderUtil" class="com.optumrx.rxb.dataloader.util.FileReadUtil"/>
+	<!-- Orchestrator -->
+	<bean id="rxbLoadOrchestor" class="com.optumrx.rxb.dataloader.orchestration.RxBLoadOrchestrator"/>
+	<bean id="eofFileListener" class="com.optumrx.rxb.dataloader.orchestration.component.EofFileListener"/>
+	
+	<!-- Thread Service -->
+	<bean id="rxbLoaderThreadService" class="com.optumrx.rxb.dataloader.util.RxBLoaderThreadService"/>
+		
+</beans>

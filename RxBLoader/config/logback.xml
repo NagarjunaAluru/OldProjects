@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="5 seconds">
+
+<property name="LOG_HOME" value="D:/Nagarjuna_Aluru/Workspace/Load/Log" />
+<appender name="FILE-THREAD" class="ch.qos.logback.classic.sift.SiftingAppender">
+
+	<discriminator>
+		<key>logFileName</key>
+		<defaultValue>RxBLoader</defaultValue>
+	</discriminator>
+	
+	<sift>
+		 <appender name="FILE-${logFileName}" class="ch.qos.logback.core.rolling.RollingFileAppender">
+				<file>${LOG_HOME}/${logFileName}.log</file>
+		<encoder>
+			<pattern>%d %-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<FileNamePattern>${LOG_HOME}/${logFileName}.%i.log.zip</FileNamePattern>
+			<MinIndex>1</MinIndex>
+			<MaxIndex>5</MaxIndex>
+		</rollingPolicy>
+
+		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<MaxFileSize>10MB</MaxFileSize>
+		</triggeringPolicy>
+		</appender>
+	</sift>
+	</appender>
+  
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d [%thread] %-5level %logger{36} - %msg%n</pattern>
+		</encoder>
+	</appender>
+	
+	<root level="DEBUG">
+		<appender-ref ref="FILE-THREAD" />
+	</root>
+	
+	<logger name="com.mchange.v2" level="ERROR" additivity="false">
+		<appender-ref ref="FILE-THREAD" />
+	</logger>
+	
+	<logger name="org.springframework" level="ERROR" additivity="false">
+		<appender-ref ref="FILE-THREAD" />
+	</logger>
+	
+	<!-- <logger name="com.optumrx.rxb.dataloader" level="ERROR" additivity="false">
+        <appender-ref ref="FILE-THREAD" />
+    </logger> 
+    
+    <category name="java.sql" level="ERROR" additivity="false">
+         <appender-ref ref="FILE-THREAD" />
+    </category> -->
+
+</configuration>
