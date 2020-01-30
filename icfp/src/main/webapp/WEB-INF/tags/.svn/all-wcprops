@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/ICFP-REWRITE/!svn/ver/9733/src/main/webapp/WEB-INF/tags
+END
+isError.tag
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/ICFP-REWRITE/!svn/ver/722/src/main/webapp/WEB-INF/tags/isError.tag
+END
+common.tag
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/ICFP-REWRITE/!svn/ver/567/src/main/webapp/WEB-INF/tags/common.tag
+END
+qualitativeAssessmentTooltip.tag
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/ICFP-REWRITE/!svn/ver/8772/src/main/webapp/WEB-INF/tags/qualitativeAssessmentTooltip.tag
+END
+actionCompleted.tag
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/ICFP-REWRITE/!svn/ver/8338/src/main/webapp/WEB-INF/tags/actionCompleted.tag
+END
+getActionPath.tag
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/ICFP-REWRITE/!svn/ver/9544/src/main/webapp/WEB-INF/tags/getActionPath.tag
+END
+r_error.tag
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/ICFP-REWRITE/!svn/ver/703/src/main/webapp/WEB-INF/tags/r_error.tag
+END
+transactionCaptureRadios.tag
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/7993/src/main/webapp/WEB-INF/tags/transactionCaptureRadios.tag
+END
+getEntityName.tag
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/ICFP-REWRITE/!svn/ver/8340/src/main/webapp/WEB-INF/tags/getEntityName.tag
+END
+isChecked.tag
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/ICFP-REWRITE/!svn/ver/3215/src/main/webapp/WEB-INF/tags/isChecked.tag
+END
+getQualitativeFactorID.tag
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/ICFP-REWRITE/!svn/ver/6323/src/main/webapp/WEB-INF/tags/getQualitativeFactorID.tag
+END
+getSection.tag
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/ICFP-REWRITE/!svn/ver/9733/src/main/webapp/WEB-INF/tags/getSection.tag
+END

@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/ICFP-REWRITE/!svn/ver/9751/src/main/webapp/jsp/day2/viewLeg
+END
+viewSettlementDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/ICFP-REWRITE/!svn/ver/9610/src/main/webapp/jsp/day2/viewLeg/viewSettlementDetails.jsp
+END
+rcaViewAgreementExtension.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/ICFP-REWRITE/!svn/ver/9731/src/main/webapp/jsp/day2/viewLeg/rcaViewAgreementExtension.jsp
+END
+rcaViewFODebtEquityOther.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/ICFP-REWRITE/!svn/ver/9750/src/main/webapp/jsp/day2/viewLeg/rcaViewFODebtEquityOther.jsp
+END
+rcaViewCorrection.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/ICFP-REWRITE/!svn/ver/9731/src/main/webapp/jsp/day2/viewLeg/rcaViewCorrection.jsp
+END
+rcaViewAssignment.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/ICFP-REWRITE/!svn/ver/9731/src/main/webapp/jsp/day2/viewLeg/rcaViewAssignment.jsp
+END
+rcaViewFOEarlyTermination.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/ICFP-REWRITE/!svn/ver/9750/src/main/webapp/jsp/day2/viewLeg/rcaViewFOEarlyTermination.jsp
+END
+rcaViewFOAmendIncreaseDecrease.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/ICFP-REWRITE/!svn/ver/9750/src/main/webapp/jsp/day2/viewLeg/rcaViewFOAmendIncreaseDecrease.jsp
+END
+viewTermsAndConditions.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/day2/viewLeg/viewTermsAndConditions.jsp
+END
+rcaViewDebtEquityOther.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/ICFP-REWRITE/!svn/ver/9731/src/main/webapp/jsp/day2/viewLeg/rcaViewDebtEquityOther.jsp
+END
+rcaViewPrepayment.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/ICFP-REWRITE/!svn/ver/9731/src/main/webapp/jsp/day2/viewLeg/rcaViewPrepayment.jsp
+END
+originalViewTransaction.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/day2/viewLeg/originalViewTransaction.jsp
+END
+rcaViewDrawDown.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/ICFP-REWRITE/!svn/ver/9731/src/main/webapp/jsp/day2/viewLeg/rcaViewDrawDown.jsp
+END
+rcaViewEarlyTermination.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/ICFP-REWRITE/!svn/ver/9731/src/main/webapp/jsp/day2/viewLeg/rcaViewEarlyTermination.jsp
+END
+rcaViewFOGenAmendment.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/ICFP-REWRITE/!svn/ver/9751/src/main/webapp/jsp/day2/viewLeg/rcaViewFOGenAmendment.jsp
+END
+rcaViewFOAgreementExtension.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/ICFP-REWRITE/!svn/ver/9750/src/main/webapp/jsp/day2/viewLeg/rcaViewFOAgreementExtension.jsp
+END
+rcaViewAmendIncreaseDecrease.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/ICFP-REWRITE/!svn/ver/9731/src/main/webapp/jsp/day2/viewLeg/rcaViewAmendIncreaseDecrease.jsp
+END
+originalViewTransactionOptional.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/day2/viewLeg/originalViewTransactionOptional.jsp
+END
+originalViewLenderBorrower.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/ICFP-REWRITE/!svn/ver/9610/src/main/webapp/jsp/day2/viewLeg/originalViewLenderBorrower.jsp
+END
+rcaViewFOAssignment.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/ICFP-REWRITE/!svn/ver/9750/src/main/webapp/jsp/day2/viewLeg/rcaViewFOAssignment.jsp
+END
+otherViewConsiderations.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/day2/viewLeg/otherViewConsiderations.jsp
+END
+originalViewUsdTransaction.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/day2/viewLeg/originalViewUsdTransaction.jsp
+END
+rcaViewGenAmendment.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/ICFP-REWRITE/!svn/ver/9731/src/main/webapp/jsp/day2/viewLeg/rcaViewGenAmendment.jsp
+END

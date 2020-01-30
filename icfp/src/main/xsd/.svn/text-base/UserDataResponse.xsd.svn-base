@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/UserData.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/UserData.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="UserDataResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Status" type="xs:string" minOccurs="0"/>
+				<xs:element ref="UserInformationResponse" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UserInformationResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="SSOID" type="xs:string" minOccurs="0"/>
+				<xs:element name="PersonalTitle" type="xs:string" minOccurs="0"/>
+				<xs:element name="FirstName" type="xs:string" minOccurs="0"/>
+				<xs:element name="LastName" type="xs:string" minOccurs="0"/>
+				<xs:element name="FullName" type="xs:string" minOccurs="0"/>
+				<xs:element name="DisplayName" type="xs:string" minOccurs="0"/>
+				<xs:element name="EmailAddress" type="xs:string" minOccurs="0"/>
+				<xs:element name="Title" type="xs:string" minOccurs="0"/>
+				<xs:element name="StreetAddress" type="xs:string" minOccurs="0"/>
+				<xs:element name="City" type="xs:string" minOccurs="0"/>
+				<xs:element name="State" type="xs:string" minOccurs="0"/>
+				<xs:element name="Country" type="xs:string" minOccurs="0"/>
+				<xs:element name="ZipCode" type="xs:string" minOccurs="0"/>
+				<xs:element name="EmployeeType" type="xs:string" minOccurs="0"/>
+				<xs:element name="BusinessUnit" type="xs:string" minOccurs="0"/>
+				<xs:element name="Department" type="xs:string" minOccurs="0"/>
+				<xs:element name="Company" type="xs:string" minOccurs="0"/>
+				<xs:element name="JobFunction" type="xs:string" minOccurs="0"/>
+				<xs:element name="DirectPhone" type="xs:string" minOccurs="0"/>
+				<xs:element name="Mobile" type="xs:string" minOccurs="0"/>
+				<xs:element name="DialCommPhone" type="xs:string" minOccurs="0"/>
+				<xs:element name="OtherPhone" type="xs:string" minOccurs="0"/>
+				<xs:element name="SupervisorSSOId" type="xs:string" minOccurs="0"/>
+				<xs:element name="SupervisorName" type="xs:string" minOccurs="0"/>
+				<xs:element name="Fax" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

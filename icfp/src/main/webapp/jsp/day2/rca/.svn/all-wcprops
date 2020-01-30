@@ -1,0 +1,155 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/ICFP-REWRITE/!svn/ver/9824/src/main/webapp/jsp/day2/rca
+END
+rcaPrepaymentRequestor.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/ICFP-REWRITE/!svn/ver/9820/src/main/webapp/jsp/day2/rca/rcaPrepaymentRequestor.jsp
+END
+rcaDerivativesCommon.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ICFP-REWRITE/!svn/ver/9607/src/main/webapp/jsp/day2/rca/rcaDerivativesCommon.jsp
+END
+rcaDrawDownRequestor.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ICFP-REWRITE/!svn/ver/9820/src/main/webapp/jsp/day2/rca/rcaDrawDownRequestor.jsp
+END
+rcaEarlyTerminationRequestor.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/ICFP-REWRITE/!svn/ver/9820/src/main/webapp/jsp/day2/rca/rcaEarlyTerminationRequestor.jsp
+END
+originalTransactionUsd.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/day2/rca/originalTransactionUsd.jsp
+END
+otherConsiderations.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/day2/rca/otherConsiderations.jsp
+END
+settlementDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/ICFP-REWRITE/!svn/ver/9610/src/main/webapp/jsp/day2/rca/settlementDetails.jsp
+END
+rcaAmendIncreaseDecreaseRequestor.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/ICFP-REWRITE/!svn/ver/9820/src/main/webapp/jsp/day2/rca/rcaAmendIncreaseDecreaseRequestor.jsp
+END
+rcaDebtEquityfrontOffice.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/9813/src/main/webapp/jsp/day2/rca/rcaDebtEquityfrontOffice.jsp
+END
+rcaEarlyTerminationfrontOffice.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/ICFP-REWRITE/!svn/ver/9813/src/main/webapp/jsp/day2/rca/rcaEarlyTerminationfrontOffice.jsp
+END
+rcaGenAmendmentRequestor.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/9820/src/main/webapp/jsp/day2/rca/rcaGenAmendmentRequestor.jsp
+END
+rcaAgreementExtensionRequestor.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/ICFP-REWRITE/!svn/ver/9820/src/main/webapp/jsp/day2/rca/rcaAgreementExtensionRequestor.jsp
+END
+foOriginalLenderBorrower.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/9823/src/main/webapp/jsp/day2/rca/foOriginalLenderBorrower.jsp
+END
+rcaAmendIncreaseDecreasefrontOffice.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/ICFP-REWRITE/!svn/ver/9813/src/main/webapp/jsp/day2/rca/rcaAmendIncreaseDecreasefrontOffice.jsp
+END
+termsAndConditions.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/day2/rca/termsAndConditions.jsp
+END
+rcaCorrectionRequestor.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/ICFP-REWRITE/!svn/ver/9820/src/main/webapp/jsp/day2/rca/rcaCorrectionRequestor.jsp
+END
+rcaAssignmentRequestor.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/ICFP-REWRITE/!svn/ver/9820/src/main/webapp/jsp/day2/rca/rcaAssignmentRequestor.jsp
+END
+originalTransaction.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/day2/rca/originalTransaction.jsp
+END
+rcaGenAmendmentfrontOffice.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/ICFP-REWRITE/!svn/ver/9813/src/main/webapp/jsp/day2/rca/rcaGenAmendmentfrontOffice.jsp
+END
+rcaAgreementExtensionfrontOffice.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/ICFP-REWRITE/!svn/ver/9813/src/main/webapp/jsp/day2/rca/rcaAgreementExtensionfrontOffice.jsp
+END
+originalTransactionOptional.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/day2/rca/originalTransactionOptional.jsp
+END
+originalLenderBorrower.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/ICFP-REWRITE/!svn/ver/9824/src/main/webapp/jsp/day2/rca/originalLenderBorrower.jsp
+END
+currentLegdetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/ICFP-REWRITE/!svn/ver/9738/src/main/webapp/jsp/day2/rca/currentLegdetails.jsp
+END
+rcaDebtEquityOtherRequestor.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/ICFP-REWRITE/!svn/ver/9803/src/main/webapp/jsp/day2/rca/rcaDebtEquityOtherRequestor.jsp
+END
+rcaAssignmentfrontOffice.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/9814/src/main/webapp/jsp/day2/rca/rcaAssignmentfrontOffice.jsp
+END

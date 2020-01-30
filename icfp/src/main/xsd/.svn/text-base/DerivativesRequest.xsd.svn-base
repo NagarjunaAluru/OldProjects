@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/DerivativesRequest.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ICFP/Attachments.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ICFP/EntityInformation.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/DerivativesRequest.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/Attachments.xsd" schemaLocation="Attachments.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/EntityInformation.xsd" schemaLocation="EntityInformation.xsd"/>
+	<xs:element name="Derivatives_Request">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Derivatives_Opcode" type="xs:string" minOccurs="0"/>
+				<xs:element name="Deriatives_Category_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Internal_Or_External" type="xs:string" minOccurs="0"/>
+				<xs:element name="Derivative_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Derivative_Type_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Hedge_Designation_Value" type="xs:string" minOccurs="0"/>
+				<xs:element name="Hedge_Designation_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Hedge_Program_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Tax_Designation_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Contract_Class_Value" type="xs:string" minOccurs="0"/>
+				<xs:element name="Contract_Class_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Deriatives_Seq_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Term_In_Months" type="xs:int" minOccurs="0"/>
+				<xs:element name="Derivatives_Trade_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Trade_Request_Workflow_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Counter_Party_Info" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Derivative_Details_Id" type="xs:int" minOccurs="0"/>
+							<xs:element name="Currency_Pair" type="xs:string" minOccurs="0"/>
+							<xs:element name="Amt" type="xs:double" minOccurs="0"/>
+							<xs:element name="Interest_Type" type="xs:string" minOccurs="0"/>
+							<xs:element name="Interest_Type_Id" type="xs:int" minOccurs="0"/>
+							<xs:element name="Fixed_Rate_Value" type="xs:double" minOccurs="0"/>
+							<xs:element name="Index" type="xs:string" minOccurs="0"/>
+							<xs:element name="Index_Term" type="xs:string" minOccurs="0"/>
+							<xs:element name="Spread" type="xs:double" minOccurs="0"/>
+							<xs:element name="Day_Count" type="xs:string" minOccurs="0"/>
+							<xs:element name="Day_Count_Id" type="xs:int" minOccurs="0"/>
+							<xs:element name="Interest_Reset_Freq" type="xs:string" minOccurs="0"/>
+							<xs:element name="Interest_Reset_Freq_Id" type="xs:int" minOccurs="0"/>
+							<xs:element ref="ns1:Entity" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="ns0:Attachment" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/ICFP-REWRITE/!svn/ver/9833/src/main/webapp/jsp/common
+END
+viewLenderBorrower.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ICFP-REWRITE/!svn/ver/9610/src/main/webapp/jsp/common/viewLenderBorrower.jsp
+END
+readOnlyViewSnO.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/ICFP-REWRITE/!svn/ver/9750/src/main/webapp/jsp/common/readOnlyViewSnO.jsp
+END
+withDraw.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/ICFP-REWRITE/!svn/ver/9635/src/main/webapp/jsp/common/withDraw.jsp
+END
+error.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/error.jsp
+END
+resubmit.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/ICFP-REWRITE/!svn/ver/9634/src/main/webapp/jsp/common/resubmit.jsp
+END
+rcaTPInputRO.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/ICFP-REWRITE/!svn/ver/9750/src/main/webapp/jsp/common/rcaTPInputRO.jsp
+END
+html5-min.js
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/ICFP-REWRITE/!svn/ver/7331/src/main/webapp/jsp/common/html5-min.js
+END
+TCodeResult.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/ICFP-REWRITE/!svn/ver/9832/src/main/webapp/jsp/common/TCodeResult.jsp
+END
+LEResult.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/ICFP-REWRITE/!svn/ver/9833/src/main/webapp/jsp/common/LEResult.jsp
+END
+MEResult.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/ICFP-REWRITE/!svn/ver/9832/src/main/webapp/jsp/common/MEResult.jsp
+END
+actionDetail.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/actionDetail.jsp
+END
+derivativeReadonly.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ICFP-REWRITE/!svn/ver/9572/src/main/webapp/jsp/common/derivativeReadonly.jsp
+END
+includeCssScripts.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/ICFP-REWRITE/!svn/ver/9073/src/main/webapp/jsp/common/includeCssScripts.jsp
+END
+legPageExceptions.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/ICFP-REWRITE/!svn/ver/9575/src/main/webapp/jsp/common/legPageExceptions.jsp
+END
+readOnlyView.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/ICFP-REWRITE/!svn/ver/9750/src/main/webapp/jsp/common/readOnlyView.jsp
+END
+allInputScreens.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/ICFP-REWRITE/!svn/ver/9813/src/main/webapp/jsp/common/allInputScreens.jsp
+END
+headerSection.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/ICFP-REWRITE/!svn/ver/9805/src/main/webapp/jsp/common/headerSection.jsp
+END
+saveDraft.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/ICFP-REWRITE/!svn/ver/9636/src/main/webapp/jsp/common/saveDraft.jsp
+END
+legPageAmendments.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/ICFP-REWRITE/!svn/ver/9254/src/main/webapp/jsp/common/legPageAmendments.jsp
+END
+LEMEResult.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/LEMEResult.jsp
+END
+submitConfirm.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/ICFP-REWRITE/!svn/ver/9638/src/main/webapp/jsp/common/submitConfirm.jsp
+END
+footerSection.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/ICFP-REWRITE/!svn/ver/9359/src/main/webapp/jsp/common/footerSection.jsp
+END

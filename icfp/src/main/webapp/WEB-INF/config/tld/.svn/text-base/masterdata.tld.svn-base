@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<taglib version="2.0" xmlns="http://java.sun.com/xml/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">
+	<tlib-version>1.0</tlib-version>
+	<short-name>ICFP Master Data</short-name>
+	<uri>http://ge.com/icfp/taglibs/masterdata</uri>
+	<display-name>ICFP Master Data Tags and Functions</display-name>
+	<description>ICFP Master Data Tags and Functions</description>
+	
+	<function>
+		<name>getDealCurrencies</name>
+		<function-class>com.ge.icfp.tag.MasterDataManager</function-class>
+		<function-signature>java.util.List getDealCurrencies(javax.servlet.jsp.PageContext)</function-signature>
+	</function>
+	
+	<function>
+		<name>getFloatingIndex</name>
+		<function-class>com.ge.icfp.tag.MasterDataManager</function-class>
+		<function-signature>java.util.List getFloatingIndex(javax.servlet.jsp.PageContext)</function-signature>
+	</function>
+	
+</taglib>

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/ICFP-REWRITE/!svn/ver/9813/src/main/webapp/jsp/transferPricing
+END
+cpaTransferPricingInput.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/ICFP-REWRITE/!svn/ver/9796/src/main/webapp/jsp/transferPricing/cpaTransferPricingInput.jsp
+END
+rcaTransferPricingInput.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/ICFP-REWRITE/!svn/ver/9813/src/main/webapp/jsp/transferPricing/rcaTransferPricingInput.jsp
+END
+transferPricingFourBlocker.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/ICFP-REWRITE/!svn/ver/9701/src/main/webapp/jsp/transferPricing/transferPricingFourBlocker.jsp
+END
+otherTransferPricingInput.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/ICFP-REWRITE/!svn/ver/9813/src/main/webapp/jsp/transferPricing/otherTransferPricingInput.jsp
+END

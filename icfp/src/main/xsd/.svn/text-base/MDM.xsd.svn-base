@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/MDM.xsd"
+	 xmlns:ns2="http://treasury.ge.com/schemas/ICFP/MgmtEntity.xsd"
+	 xmlns:ns3="http://treasury.ge.com/schemas/ICFP/DealCurrency.xsd"
+	 xmlns:ns4="http://treasury.ge.com/schemas/Rates/RatesRequest.xsd"
+	 xmlns:ns5="http://treasury.ge.com/schemas/ICFP/FixedRateInformation.xsd"
+	 xmlns:ns6="http://treasury.ge.com/schemas/ICFP/FloatRateInformation.xsd"
+	 xmlns:ns8="http://treasury.ge.com/schemas/ICFP/MDMEntityInfo.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ICFP/EntityInformation.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ICFP/MsgHeader.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/MDM.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/Rates/RatesRequest.xsd" schemaLocation="RatesRequest.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/FixedRateInformation.xsd" schemaLocation="FixedRateInformation.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/FloatRateInformation.xsd" schemaLocation="FloatRateInformation.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/MDMEntityInfo.xsd" schemaLocation="MDMEntityInfo.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/EntityInformation.xsd" schemaLocation="EntityInformation.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/MsgHeader.xsd" schemaLocation="MsgHeader.xsd"/>
+	<xs:element name="MDM">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Pagination" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Pagination_Enable" type="xs:boolean" minOccurs="0"/>
+							<xs:element name="Pagination_Start" type="xs:int" minOccurs="0"/>
+							<xs:element name="Pagination_Increment" type="xs:int" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="ns0:Entity" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns1:Msg_Header" minOccurs="0"/>
+				<xs:element ref="MgmtEntity" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Deal_Currency" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns4:Rates" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns5:Fixed_Information" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns6:Float_Information" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns8:Entity_Groups" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Bank_Information" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Bnk_Code" type="xs:string" minOccurs="0"/>
+							<xs:element name="Bnk_Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="Country" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Record_Count" type="xs:int" minOccurs="0"/>
+	            <xs:element name="Valid_Record_Count" type="xs:int" minOccurs="0"/>
+				<xs:element name="Region" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Region_ID" type="xs:string" minOccurs="0"/>
+							<xs:element name="Region_Name" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Cash_Pool" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Account_Id" type="xs:string" minOccurs="0"/>
+							<xs:element name="Bank_Account" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="Cash_Pool_Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="Legal_Entity" type="xs:string" minOccurs="0"/>
+							<xs:element name="CDR_Code" type="xs:string" minOccurs="0"/>
+							<xs:element name="Country" type="xs:string" minOccurs="0"/>
+							<xs:element name="Regulated_Entity" type="xs:string" minOccurs="0"/>
+							<xs:element name="Principal_Entity" type="xs:string" minOccurs="0"/>
+							<xs:element name="Capital_Industrial" type="xs:string" minOccurs="0"/>
+							<xs:element name="Bank_Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="Treasury_Code" type="xs:string" minOccurs="0"/>
+							<xs:element name="Region" type="xs:string" minOccurs="0"/>
+							<xs:element name="Management_Entity" type="xs:string" minOccurs="0"/>
+							<xs:element name="Currency" type="xs:string" minOccurs="0"/>
+							<xs:element name="LE_Gold_ID" type="xs:string" minOccurs="0"/>
+							<xs:element name="Business_Segment" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Vault_ID_Details" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Vault_Request_ID" type="xs:string" minOccurs="0"/>
+							<xs:element name="Cash_Pool_Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="Participant" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="CDR" type="xs:string" minOccurs="0"/>
+										<xs:element name="LE_Gold_ID" type="xs:string" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Pool_Leader" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="CDR" type="xs:string" minOccurs="0"/>
+										<xs:element name="LE_Gold_ID" type="xs:string" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Pool_Region" type="xs:string" minOccurs="0"/>
+							<xs:element name="Pool_Country" type="xs:string" minOccurs="0"/>
+							<xs:element name="Pool_Currency" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Country" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Country_Code" type="xs:string" minOccurs="0"/>
+							<xs:element name="Country_Name" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MgmtEntity" type="NameValue"/>
+	<xs:element name="Deal_Currency">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Currency_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="Currency_Name" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="NameValue">
+		<xs:sequence>
+			<xs:element name="ID" type="xs:int" minOccurs="0"/>
+			<xs:element name="Name" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

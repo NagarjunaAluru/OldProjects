@@ -1,0 +1,34 @@
+8
+
+dir
+9840
+http://192.168.0.14/ICFP-REWRITE/src
+http://192.168.0.14/ICFP-REWRITE
+
+
+
+2013-02-27T12:44:48.053135Z
+9840
+madhusudhang
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ba77e99c-fc20-4067-90bb-d77db4103c45
+
+test
+dir
+
+main
+dir
+

@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/ICFP-REWRITE/!svn/ver/9795/src/main/java/com/ge/icfp/common/attachments
+END
+AttachmentSecurity.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/ICFP-REWRITE/!svn/ver/9778/src/main/java/com/ge/icfp/common/attachments/AttachmentSecurity.java
+END
+DealPermissions.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/ICFP-REWRITE/!svn/ver/9795/src/main/java/com/ge/icfp/common/attachments/DealPermissions.java
+END
+AttachmentPermissions.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/ICFP-REWRITE/!svn/ver/9281/src/main/java/com/ge/icfp/common/attachments/AttachmentPermissions.java
+END
+ICFPAttachmentManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/ICFP-REWRITE/!svn/ver/9205/src/main/java/com/ge/icfp/common/attachments/ICFPAttachmentManager.java
+END
+ICFPAttachmentManagerImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/ICFP-REWRITE/!svn/ver/9497/src/main/java/com/ge/icfp/common/attachments/ICFPAttachmentManagerImpl.java
+END
+AttachmentUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/ICFP-REWRITE/!svn/ver/9253/src/main/java/com/ge/icfp/common/attachments/AttachmentUtils.java
+END
+ICFPAttachmentException.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/ICFP-REWRITE/!svn/ver/9274/src/main/java/com/ge/icfp/common/attachments/ICFPAttachmentException.java
+END
+AttachmentType.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/ICFP-REWRITE/!svn/ver/9593/src/main/java/com/ge/icfp/common/attachments/AttachmentType.java
+END
+AttachmentViewFunctions.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/ICFP-REWRITE/!svn/ver/9344/src/main/java/com/ge/icfp/common/attachments/AttachmentViewFunctions.java
+END
+IAttachmentConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/ICFP-REWRITE/!svn/ver/9778/src/main/java/com/ge/icfp/common/attachments/IAttachmentConstants.java
+END

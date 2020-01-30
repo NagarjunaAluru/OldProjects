@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/RCALegRequest.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ICFP/FixedRateInformation.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ICFP/FloatRateInformation.xsd"
+	 xmlns:ns3="http://treasury.ge.com/schemas/ICFP/EntityInformation.xsd"
+	 xmlns:ns4="http://treasury.ge.com/schemas/ICFP/QualitativeFactors.xsd"
+	 xmlns:ns5="http://treasury.ge.com/schemas/ICFP/TPLegRequest.xsd"
+	 xmlns:ns6="http://treasury.ge.com/schemas/ICFP/RateInformation.xsd"
+	 xmlns:ns7="http://treasury.ge.com/schemas/ICFP/Amendment.xsd"
+	 xmlns:ns8="http://treasury.ge.com/schemas/ICFP/Assignment.xsd"
+	 xmlns:ns9="http://treasury.ge.com/schemas/ICFP/DrawDown.xsd"
+	 xmlns:ns10="http://treasury.ge.com/schemas/ICFP/PrePayment.xsd"
+	 xmlns:ns11="http://treasury.ge.com/schemas/ICFP/Termination.xsd"
+	 xmlns:ns2="http://treasury.ge.com/schemas/ICFP/LegSummary.xsd"
+	 xmlns:ns12="http://treasury.ge.com/schemas/ICFP/DayTwoOperations"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/RCALegRequest.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/EntityInformation.xsd" schemaLocation="EntityInformation.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/QualitativeFactors.xsd" schemaLocation="QualitativeFactors.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/TPLegRequest.xsd" schemaLocation="TPLegRequest.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/RateInformation.xsd" schemaLocation="RateInformation.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/Amendment.xsd" schemaLocation="Amendment.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/Assignment.xsd" schemaLocation="Assignment.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/DrawDown.xsd" schemaLocation="DrawDown.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/PrePayment.xsd" schemaLocation="PrePayment.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/Termination.xsd" schemaLocation="Termination.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/LegSummary.xsd" schemaLocation="LegSummary.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/DayTwoOperations" schemaLocation="DayTwoOperations.xsd"/>
+	<xs:element name="RCA_Leg_Request">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Other_Fee_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Other_Fee_CCY" type="xs:string" minOccurs="0"/>
+				<xs:element name="Other_Fee_Amt" type="xs:double" minOccurs="0"/>
+				<xs:element name="Hedge_Interest_Rate_Derivativie_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Hedge_Foreign_Ex_Derivativie_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Drdown_Value_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Non_Standard_Agreements_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Cross_Border_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Withhldng_Tax_Applicable_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Commitment_Fee_Applicable_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Commitment_Fee_Rate" type="xs:double" minOccurs="0"/>
+				<xs:element name="Immdt_Drdown_Applicable_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Immdt_Drdown_Amt" type="xs:double" minOccurs="0"/>
+				<xs:element name="Guarantee_Fee_Applicable_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Guarantee_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Sovereign_Constraint_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="New_Legal_Entity_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Guarantee_Agreement_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Le_Bod_Governance_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Exception_Form_Attach_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Guarantee_Fee_Rate" type="xs:double" minOccurs="0"/>
+				<xs:element name="Spread" type="xs:double" minOccurs="0"/>
+				<xs:element ref="ns5:TP_Leg_Request" minOccurs="0"/>
+				<xs:element ref="ns6:Rate_Information" minOccurs="0"/>
+				<xs:element ref="ns2:Leg_Summary" minOccurs="0"/>
+				<xs:element ref="ns12:Day_Two_Operations" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="RCA_Leg_Request_Info">
+		<xs:sequence>
+			<xs:element ref="RCA_Leg_Request" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/DealRequest.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ICFP/Attachment.xsd"
+	 xmlns:ns7="http://treasury.ge.com/schemas/ICFP/QualitativeFactors.xsd"
+	 xmlns:ns4="http://treasury.ge.com/schemas/ICFP/MsgHeader.xsd"
+	 xmlns:ns2="http://treasury.ge.com/schemas/ICFP/ExceptionRequestForm.xsd"
+	 xmlns:ns6="http://treasury.ge.com/schemas/ICFP/Attachments.xsd"
+	 xmlns:ns8="http://treasury.ge.com/schemas/ICFP/Comments.xsd"
+	 xmlns:ns5="http://treasury.ge.com/schemas/ICFP/UserInfo.xsd"
+	 xmlns:ns9="http://treasury.ge.com/schemas/ICFP/LegTypeCollection.xsd"
+	 xmlns:ns3="http://treasury.ge.com/schemas/ICFP/ActionLog.xsd"
+	 xmlns:ns10="http://treasury.ge.com/schemas/ICFP/ClosingCheckList.xsd"
+	 xmlns:ns11="http://treasury.ge.com/schemas/ICFP/IDAGEAGLead.xsd"
+	 xmlns:ns12="http://treasury.ge.com/schemas/ICFP/AuditLog.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ICFP/AttachmentTypeComments.xsd"
+	 xmlns:ns13="http://treasury.ge.com/schemas/ICFP/BusinessApprovers.xsd"
+	 xmlns:ns14="http://treasury.ge.com/schemas/ICFP/EBRPriorAppr.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/DealRequest.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/QualitativeFactors.xsd" schemaLocation="QualitativeFactors.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/MsgHeader.xsd" schemaLocation="MsgHeader.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/ExceptionRequestForm.xsd" schemaLocation="ExceptionRequestForm.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/Attachments.xsd" schemaLocation="Attachments.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/Comments.xsd" schemaLocation="Comments.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/UserInfo.xsd" schemaLocation="UserInfo.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/LegTypeCollection.xsd" schemaLocation="LegTypeCollection.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/ActionLog.xsd" schemaLocation="ActionLog.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/ClosingCheckList.xsd" schemaLocation="ClosingCheckList.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/IDAGEAGLead.xsd" schemaLocation="IDAGEAGLead.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/AuditLog.xsd" schemaLocation="AuditLog.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/AttachmentTypeComments.xsd" schemaLocation="AttachmentTypeComments.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/BusinessApprovers.xsd" schemaLocation="BusinessApprovers.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/EBRPriorAppr.xsd" schemaLocation="EBRPriorAppr.xsd"/>
+	<xs:element name="Deal_Request">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="WF_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="WF_Queue_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="WF_Stage_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="WF_Stage" type="xs:string" minOccurs="0"/>
+				<xs:element name="Action_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Action" type="xs:string" minOccurs="0"/>
+				<xs:element name="Time_To_Obtain_Approvals" type="xs:string" minOccurs="0"/>
+				<xs:element name="Cash_Management_Assigned_Sso" type="xs:string" minOccurs="0"/>
+				<xs:element name="Front_Office_Assigned_Sso" type="xs:string" minOccurs="0"/>
+				<xs:element name="Middle_Office_Assigned_Sso" type="xs:string" minOccurs="0"/>
+				<xs:element name="Treasury_Tax_Assigned" type="xs:string" minOccurs="0"/>
+				<xs:element name="Request_Amendment_Type_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Request_Amendment_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Original_Deal_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Deal_Seq_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Business_Request_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Deal_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Deal_Rationale" type="xs:string" minOccurs="0"/>
+				<xs:element name="Deal_Category_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Deal_Category" type="xs:string" minOccurs="0"/>
+				<xs:element name="Number_Of_Transactions" type="xs:int" minOccurs="0"/>
+				<xs:element name="Priority_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Priority" type="xs:string" minOccurs="0"/>
+				<xs:element name="Priority_Comment" type="xs:string" minOccurs="0"/>
+				<xs:element name="Event_Type_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Event_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Value_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Number_Of_Days_Rem" type="xs:string" minOccurs="0"/>
+				<xs:element name="Responsible_Region_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Responsible_Region" type="xs:string" minOccurs="0"/>
+				<xs:element name="Request_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Trans_Owner_SsoId" type="xs:string" minOccurs="0"/>
+				<xs:element name="First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Security_Category_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Security_Category" type="xs:string" minOccurs="0"/>
+				<xs:element name="Debt_Value" type="xs:string" minOccurs="0"/>
+				<xs:element name="Equity_Value" type="xs:string" minOccurs="0"/>
+				<xs:element name="Subordinated_Debt_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Expected_Fund_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Cross_Border_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Non-Standard_Docs_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Impairment_History_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Impairment_Comment" type="xs:string" minOccurs="0"/>
+				<xs:element name="Fin_Sttmnt_Dt_Above_One_Yr_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Latest_Dt_Of_Fin_Sttmnt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Derivatives_Needed_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Equity_Infusions_dividends_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Prudentially_Regulated_Entity_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Principal_Legal_Entity_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Borrower_Insolvency_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="FO_Affirm_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Add_Approver_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Send_TC_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Unique_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+				<xs:element name="Chng_After_Idag_Approval_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Exception_Comments" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns7:Qualitative_Factors" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns12:Audit_Log" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns2:Exception_Request_Form" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns4:Msg_Header" minOccurs="0"/>
+				<xs:element ref="ns6:Attachment" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Product_Type_Collection" type="xs:string" minOccurs="0"/>
+				<xs:element name="Deal_Status" type="xs:string" minOccurs="0"/>
+				<xs:element name="Change_Type_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Change_Type_Comments" type="xs:string" minOccurs="0"/>
+				<xs:element name="Chng_After_Approvals_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Risk_Override_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Ru_Amended_Tcl" type="xs:int" minOccurs="0"/>
+				<xs:element name="Revised_Tcl_Comments" type="xs:string" minOccurs="0"/>
+				<xs:element name="Vault_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Deal_Tcl" type="xs:int" minOccurs="0"/>
+				<xs:element name="Highest_Leg_Amt" type="xs:double" minOccurs="0"/>
+				<xs:element name="Derivative_Trade_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Spot_Rates_Timestamp" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Tesg_Status" type="xs:string" minOccurs="0"/>
+				<xs:element name="Add_Approver_Status" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns8:Comments_Log" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Additional_Approvers" type="ns5:User_Information" minOccurs="0"/>
+				<xs:element ref="ns9:Legs" minOccurs="0"/>
+				<xs:element ref="ns3:Action_Log" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Status_Info" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Deal_Seq_Id" type="xs:int" minOccurs="0"/>
+							<xs:element name="Role_Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="Status" type="xs:string" minOccurs="0"/>
+							<xs:element name="Action_By" type="xs:string" minOccurs="0"/>
+							<xs:element name="Date" type="xs:dateTime" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="ns10:Closing_Check_List" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns11:IDAGEAG_Lead" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns1:Attachment_Type_Comments" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns13:Business_Approvers" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns14:EBRPriorAppr" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Le_Bod_Governance_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Chevron" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Req_Dt" type="xs:dateTime" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="Pipeline_Dt" type="xs:dateTime" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="SandO_Dt" type="xs:dateTime" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="Risk_Dt" type="xs:dateTime" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="Idag_Tesg_Dt" type="xs:dateTime" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="TC_Dt" type="xs:dateTime" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Deal_Requests">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Deal_Request" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Additional_Approvers" type="ns5:User_Information"/>
+</xs:schema>

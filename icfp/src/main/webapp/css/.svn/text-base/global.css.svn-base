@@ -1,0 +1,4 @@
+#tab-container{margin: 0px; padding: 0px; width: 940px;  clear: both;}
+.table-results{height:auto;margin-bottom:10px;border-radius:4px;border-bottom:1px solid #ddd;margin-left:4px;}
+.table-results1{height:400px;margin-bottom:10px;border-radius:4px;border-bottom:1px solid #ddd;margin-left:4px;}
+.table-results2{height:800px;margin-bottom:10px;border-radius:4px;border-bottom:1px solid #ddd;margin-left:4px;}

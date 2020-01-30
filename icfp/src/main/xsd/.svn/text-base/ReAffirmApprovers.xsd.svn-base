@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/ReAffirmApprovers.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/ReAffirmApprovers.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="ReAffirmApprovers">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Status" type="xs:string" minOccurs="0"/>
+				<xs:element name="First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="SSO_ID" type="xs:string" minOccurs="0"/>
+				<xs:element name="Group" type="xs:string" minOccurs="0"/>
+				<xs:element name="Deal_Seq_ID" type="xs:int" minOccurs="0"/>
+				<xs:element name="FO_SSO_ID" type="xs:string" minOccurs="0"/>
+				<xs:element name="Case_Tag" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

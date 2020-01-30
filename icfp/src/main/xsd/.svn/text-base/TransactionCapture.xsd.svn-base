@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/TransactionCapture.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ICFP/Attachments.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/TransactionCapture.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/Attachments.xsd" schemaLocation="Attachments.xsd"/>
+	<xs:element name="Transaction_Capture">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+				<xs:element ref="Deal_Info" minOccurs="0"/>
+				<xs:element ref="Leg_Info" minOccurs="0"/>
+				<xs:element ref="ns0:Attachment" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Deal_Info">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="IDAG_Change_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Material_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="IDAG_Change_Comments" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Leg_Info">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Transaction_Capture_In" type="xs:string" minOccurs="0"/>
+				<xs:element name="Transaction_Id" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Attachments" type="ns0:Attachment_Info"/>
+</xs:schema>

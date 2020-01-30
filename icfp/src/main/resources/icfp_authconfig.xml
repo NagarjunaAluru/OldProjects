@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AuthConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="AuthorizationConfig.xsd">
+
+	<!-- Note: Enter URI only when require URI based authorization -->
+	<Domains>
+		<Domain name="homePage">
+			<URI>/homePage.do</URI>
+		</Domain>
+		
+		<Domain name="FundingRequest">
+			<URI>/fundingRequest/.*</URI>
+
+			<PermissionsRef operator="or">
+				<PrincipalRef id="ICFFO-Requestor" pattern="prefix"/>
+			</PermissionsRef>
+		</Domain>
+		
+		<Domain name="FrontOffice">
+			<URI>/frontoffice/.*</URI>
+
+			<PermissionsRef operator="or">
+				<PrincipalRef id="ICFFO-FrontOffice" pattern="prefix"/>
+				<PrincipalRef id="FrontOffice_IDAG" pattern="suffix" />
+			</PermissionsRef>
+		</Domain>
+		
+		<Domain name="TransactionCapture">
+			<URI>/transactionCapture/.*</URI>
+
+			<PermissionsRef operator="or">
+				<PrincipalRef id="ICFFO-FrontOffice" pattern="prefix" />
+				<PrincipalRef id="ICFFO-MiddleOffice" pattern="prefix" />
+				<PrincipalRef id="ICFFO-CashManagement" pattern="prefix" />
+				<PrincipalRef id="ICFFO-AdditionalApprover" pattern="" />
+				<PrincipalRef id="FrontOffice_IDAG" pattern="suffix" />
+				<PrincipalRef id="FrontOffice_Delegate" pattern="suffix" />
+				<PrincipalRef id="CashManagement_IDAG" pattern="suffix" />
+				<PrincipalRef id="CashManagement_Delegate" pattern="suffix" />
+			</PermissionsRef>
+		</Domain>
+		
+		<Domain name="Admin">
+			<URI>/admin/.*</URI>
+			
+			<PermissionsRef operator="or">
+				<PrincipalRef id="ICFFO-Admin" pattern="prefix" />
+			</PermissionsRef>
+		</Domain>
+		
+		<Domain name="TreasuryTax">
+			<URI>/treasuryTax/.*</URI>
+
+			<PermissionsRef operator="or">
+				<PrincipalRef id="ICFFO-TreasuryTax" pattern="prefix" />
+				<PrincipalRef id="TreasuryTax_IDAG" pattern="suffix" />
+				<PrincipalRef id="TreasuryTax_Delegate" pattern="suffix" />
+			</PermissionsRef>
+		</Domain>
+		
+		<Domain name="MiddleOffice">
+			<URI>/middleOffice/.*</URI>
+
+			<PermissionsRef operator="or">
+				<PrincipalRef id="ICFFO-MiddleOffice" pattern="prefix" />
+				<PrincipalRef id="MiddleOffice_IDAG" pattern="suffix" />
+				<PrincipalRef id="MiddleOffice_Delegate" pattern="suffix" />
+			</PermissionsRef>
+		</Domain>
+		
+		<Domain name="CashManagement">
+			<URI>/cashManagement/.*</URI>
+
+			<PermissionsRef operator="or">
+				<PrincipalRef id="ICFFO-CashManagement" pattern="prefix" />
+				<PrincipalRef id="CashManagement_IDAG" pattern="suffix" />
+				<PrincipalRef id="CashManagement_Delegate" pattern="suffix" />
+			</PermissionsRef>
+		</Domain>
+		
+		<Domain name="TreasuryLegal">
+			<URI>/treasuryLegal/.*</URI>
+
+			<PermissionsRef operator="or">
+				<PrincipalRef id="ICFFO-TreasuryLegal" pattern="prefix" />
+				<PrincipalRef id="TreasuryLegal_IDAG" pattern="suffix" />
+				<PrincipalRef id="TreasuryLegal_Delegate" pattern="suffix" />
+			</PermissionsRef>
+		</Domain>
+		
+		<Domain name="TransferPricing">
+			<URI>/transferPricing/.*</URI>
+
+			<PermissionsRef operator="or">
+				<PrincipalRef id="ICFFO-TransferPricing" pattern="prefix" />
+				<PrincipalRef id="TransferPricing_IDAG" pattern="suffix" />
+				<PrincipalRef id="TransferPricing_Delegate" pattern="suffix" />
+			</PermissionsRef>
+		</Domain>
+		
+		<Domain name="CountryTax">
+			<URI>/countryTax/.*</URI>
+
+			<PermissionsRef operator="or">
+				<PrincipalRef id="ICFFO-CountryTax" pattern="prefix" />
+				<PrincipalRef id="CountryTax_IDAG" pattern="suffix" />
+				<PrincipalRef id="CountryTax_Delegate" pattern="suffix" />
+			</PermissionsRef>
+		</Domain>
+		
+		<Domain name="RiskUnderwriting">
+			<URI>/riskUnderwriting/.*</URI>
+
+			<PermissionsRef operator="or">
+				<PrincipalRef id="ICFFO-RiskUnderwriting" pattern="prefix" />
+				<PrincipalRef id="RiskUnderwriting_IDAG" pattern="suffix" />
+				<PrincipalRef id="RiskUnderwriting_Delegate" pattern="suffix" />
+			</PermissionsRef>
+		</Domain>
+		
+		<Domain name="IdagEag">
+			<URI>/idagEag/.*</URI>
+
+			<PermissionsRef operator="or">
+				<PrincipalRef id="IDAGEAG_Lead" pattern="suffix" />
+				<PrincipalRef id="_IDAG" pattern="suffix" />
+				<PrincipalRef id="_Delegate" pattern="suffix" />
+			</PermissionsRef>
+		</Domain>
+		
+		<Domain name="Tesg">
+			<URI>/tesg/.*</URI>
+
+			<PermissionsRef operator="or">
+				<PrincipalRef id="IDAGEAG_Lead" pattern="suffix" />
+				<PrincipalRef id="ICFFO-TESG_Member" pattern="suffix" />
+				<PrincipalRef id="ICFFO-TESG_Delegate" pattern="suffix" />
+			</PermissionsRef>
+		</Domain>
+		
+		<Domain name="ICFP_AUTH_ACTIONS">
+			<URI></URI>
+			<Components>
+				<Component name="AssignReviewer" type="action">
+					<PermissionsRef operator="or">
+						<PrincipalRef id="_TaskAssigner" pattern="suffix" />
+					</PermissionsRef>
+				</Component>
+				<Component name="PipelineAdmin" type="action">
+					<PermissionsRef operator="or">
+						<PrincipalRef id="ICFFO-Admin" pattern="prefix" />
+					<PrincipalRef id="ICFFO-PipelineReviewer" pattern="prefix" />
+					</PermissionsRef>
+				</Component>
+				
+				<Component name="IDAGEAGLeadActions" type="action">
+					<PermissionsRef operator="or">
+						<PrincipalRef id="IDAGEAG_Lead" pattern="suffix" />
+					</PermissionsRef>
+				</Component>
+				<Component name="IDAGEAGMemberActions" type="action">
+					<PermissionsRef operator="or">
+						<PrincipalRef id="_Member" pattern="suffix" />
+						<PrincipalRef id="_Delegate" pattern="suffix" />
+						<PrincipalRef id="ICFFO-TESG" pattern="suffix" />
+						<PrincipalRef id="_IDAG" pattern="suffix" />
+					</PermissionsRef>
+				</Component>
+				<Component name="TESGMemberActions" type="action">
+					<PermissionsRef operator="or">
+						<PrincipalRef id="ICFFO-TESG_Delegate" pattern="suffix" />
+						<PrincipalRef id="ICFFO-TESG_Member" pattern="suffix" />
+					</PermissionsRef>
+				</Component>
+				<Component name="MemberDelegateActions" type="action">
+					<PermissionsRef operator="or">
+						<PrincipalRef id="_Member" pattern="suffix" />
+						<PrincipalRef id="_Delegate" pattern="suffix" />
+					</PermissionsRef>
+				</Component>
+				<Component name="CreateRequestActions" type="action">
+					<PermissionsRef operator="or">
+						<PrincipalRef id="ICFFO-Requestor" pattern="" />
+					</PermissionsRef>
+				</Component> 
+
+				<Component name="FrontOffice" type="action">
+					<PermissionsRef operator="or">
+						<PrincipalRef id="ICFFO-FrontOffice" pattern="prefix"/>
+					</PermissionsRef>
+				</Component>
+				<Component name="CashManagment" type="action">
+					<PermissionsRef operator="or">
+						<PrincipalRef id="ICFFO-CashManagement" pattern="prefix"/>
+					</PermissionsRef>
+				</Component>
+
+				<Component name="AdminActions" type="action">
+					<PermissionsRef operator="or">
+						<PrincipalRef id="ICFFO-Admin" pattern="" />
+					</PermissionsRef>
+				</Component>
+				<Component name="NotAdminActions" type="action">
+					<PermissionsRef operator="not">
+						<PrincipalRef id="ICFFO-Admin" pattern="" />
+					</PermissionsRef>
+				</Component>
+				<Component name="NotManageDelegateActions" type="action">
+					<PermissionsRef operator="or">
+						<PrincipalRef id="_IDAG" pattern="suffix" />
+						<PrincipalRef id="_TaskAssigner" pattern="suffix" />
+						<PrincipalRef id="ICFFO-TESG_Member" pattern="prefix" />
+						<PrincipalRef id="ICFFO-BusinessApprovers_Approver" pattern="prefix" />
+						<PrincipalRef id="ICFFO-BusinessCFO_Approver" pattern="prefix" />
+					</PermissionsRef>
+				</Component>			
+
+			</Components>
+		</Domain>
+		
+	</Domains>
+
+	<Principals>
+		
+		<Principal id="ICFFO-Requestor" name="ICFFO-Requestor" />
+		<Principal id="ICFFO-Admin" name="ICFFO-Admin" />
+		<Principal id="ICFFO-PipelineReviewer" name="ICFFO-PipelineReviewer" />
+		
+		<Principal id="ICFFO-FrontOffice_Member" name="ICFFO-FrontOffice_Member" />
+		<Principal id="ICFFO-FrontOffice_Delegate" name="ICFFO-FrontOffice_Delegate" />
+		<Principal id="ICFFO-FrontOffice_IDAG" name="ICFFO-FrontOffice_IDAG" />
+		<Principal id="ICFFO-FrontOffice_TaskAssigner" name="ICFFO-FrontOffice_TaskAssigner" />
+		
+		<Principal id="ICFFO-CashManagement_Member" name="ICFFO-CashManagement_Member" />
+		<Principal id="ICFFO-CashManagement_IDAG" name="ICFFO-CashManagement_IDAG" />
+		<Principal id="ICFFO-CashManagement_TaskAssigner" name="ICFFO-CashManagement_TaskAssigner" />
+		<Principal id="ICFFO-CashManagement_Delegate" name="ICFFO-CashManagement_Delegate" />
+		
+		<Principal id="ICFFO-MiddleOffice_Member" name="ICFFO-MiddleOffice_Member" />
+		<Principal id="ICFFO-MiddleOffice_Delegate" name="ICFFO-MiddleOffice_Delegate" />
+		<Principal id="ICFFO-MiddleOffice_IDAG" name="ICFFO-MiddleOffice_IDAG" />
+		<Principal id="ICFFO-MiddleOffice_TaskAssigner" name="ICFFO-MiddleOffice_TaskAssigner" />
+		
+		<Principal id="ICFFO-TransferPricing_IDAG" name="ICFFO-TransferPricing_IDAG" />
+		<Principal id="ICFFO-TransferPricing_TaskAssigner" name="ICFFO-TransferPricing_TaskAssigner" />
+		<Principal id="ICFFO-TransferPricing_Delegate" name="ICFFO-TransferPricing_Delegate" />
+		<Principal id="ICFFO-TransferPricing_Member" name="ICFFO-TransferPricing_Member" />
+		
+		<Principal id="ICFFO-TreasuryLegal_IDAG" name="ICFFO-TreasuryLegal_IDAG" />
+		<Principal id="ICFFO-TreasuryLegal_TaskAssigner" name="ICFFO-TreasuryLegal_TaskAssigner" />
+		<Principal id="ICFFO-TreasuryLegal_Delegate" name="ICFFO-TreasuryLegal_Delegate" />
+		<Principal id="ICFFO-TreasuryLegal_Member" name="ICFFO-TreasuryLegal_Member" />
+		
+		<Principal id="ICFFO-TreasuryTax_IDAG" name="ICFFO-TreasuryTax_IDAG" />
+		<Principal id="ICFFO-TreasuryTax_TaskAssigner" name="ICFFO-TreasuryTax_TaskAssigner" />
+		<Principal id="ICFFO-TreasuryTax_Delegate" name="ICFFO-TreasuryTax_Delegate" />
+		<Principal id="ICFFO-TreasuryTax_Member" name="ICFFO-TreasuryTax_Member" />
+		
+		<Principal id="ICFFO-CountryTax_IDAG" name="ICFFO-CountryTax_IDAG" />
+		<Principal id="ICFFO-CountryTax_TaskAssigner" name="ICFFO-CountryTax_TaskAssigner" />
+		<Principal id="ICFFO-CountryTax_Delegate" name="ICFFO-CountryTax_Delegate" />
+		<Principal id="ICFFO-CountryTax_Member" name="ICFFO-CountryTax_Member" />
+		
+		<Principal id="ICFFO-RiskUnderwriting_IDAG" name="ICFFO-RiskUnderwriting_IDAG" />
+		<Principal id="ICFFO-RiskUnderwriting_TaskAssigner" name="ICFFO-RiskUnderwriting_TaskAssigner" />
+		<Principal id="ICFFO-RiskUnderwriting_Delegate" name="ICFFO-RiskUnderwriting_Delegate" />
+		<Principal id="ICFFO-RiskUnderwriting_Member" name="ICFFO-RiskUnderwriting_Member" />
+		
+		<Principal id="ICFFO-TreasuryBUFinance_IDAG" name="ICFFO-TreasuryBUFinance_IDAG" />
+		<Principal id="ICFFO-TreasuryBUFinance_Delegate" name="ICFFO-TreasuryBUFinance_Delegate" />
+		<Principal id="ICFFO-TreasuryBUFinance_Member" name="ICFFO-TreasuryBUFinance_Member" />
+		
+		<Principal id="ICFFO-CapitalManagement_IDAG" name="ICFFO-CapitalManagement_IDAG" />
+		<Principal id="ICFFO-CapitalManagement_Delegate" name="ICFFO-CapitalManagement_Delegate" />
+		<Principal id="ICFFO-CapitalManagement_Member" name="ICFFO-CapitalManagement_Member" />
+		
+		<Principal id="ICFFO-Liquidity_IDAG" name="ICFFO-Liquidity_IDAG" />
+		<Principal id="ICFFO-Liquidity_Delegate" name="ICFFO-Liquidity_Delegate" />
+		<Principal id="ICFFO-Liquidity_Member" name="ICFFO-Liquidity_Member" />
+		
+		<Principal id="ICFFO-IDAGEAG_Lead" name="ICFFO-IDAGEAG_Lead" />
+		<Principal id="ICFFO-IDAGEAG_Member" name="ICFFO-IDAGEAG_Member" />
+		
+		<Principal id="ICFFO-BusinessUnitCFO" name="ICFFO-BusinessUnitCFO" />
+		<Principal id="ICFFO-BusinessUnitTax" name="ICFFO-BusinessUnitTax" />
+		
+		<Principal id="ICFFO-TESG_Member" name="ICFFO-TESG_Member" />
+		<Principal id="ICFFO-TESG_Delegate" name="ICFFO-TESG_Delegate" />
+		
+		<Principal id="ICFFO-BusinessApprovers_Approver" name="ICFFO-BusinessApprovers_Approver" />
+		<Principal id="ICFFO-BusinessCFO_Approver" name="ICFFO-BusinessCFO_Approver" />
+		<Principal id="ICFFO-eBoardroom" name="ICFFO-eBoardroom" />
+		
+		<Principal id="ICFFO-AdditionalApprover" name="ICFFO-AdditionalApprover" />
+
+		<Principal id="ICFFO-BusinessApprovers_Approver_Asia" name="ICFFO-BusinessApprovers_Approver_Asia" />
+		<Principal id="ICFFO-BusinessApprovers_Delegate_Asia" name="ICFFO-BusinessApprovers_Delegate_Asia" />
+		<Principal id="ICFFO-BusinessApprovers_Approver_CapitalHQOther" name="ICFFO-BusinessApprovers_Approver_CapitalHQOther" />
+		<Principal id="ICFFO-BusinessApprovers_Delegate_CapitalHQOther" name="ICFFO-BusinessApprovers_Delegate_CapitalHQOther" />
+		<Principal id="ICFFO-BusinessApprovers_Approver_CLLAmericas" name="ICFFO-BusinessApprovers_Approver_CLLAmericas" /> 
+		<Principal id="ICFFO-BusinessApprovers_Delegate_CLLAmericas" name="ICFFO-BusinessApprovers_Delegate_CLLAmericas" /> 
+		<Principal id="ICFFO-BusinessApprovers_Approver_CommRealEstate" name="ICFFO-BusinessApprovers_Approver_CommRealEstate" /> 
+		<Principal id="ICFFO-BusinessApprovers_Delegate_CommRealEstate" name="ICFFO-BusinessApprovers_Delegate_CommRealEstate" /> 
+		<Principal id="ICFFO-BusinessApprovers_Approver_EFS" name="ICFFO-BusinessApprovers_Approver_EFS" /> 
+		<Principal id="ICFFO-BusinessApprovers_Delegate_EFS" name="ICFFO-BusinessApprovers_Delegate_EFS" /> 
+		<Principal id="ICFFO-BusinessApprovers_Approver_EMEA" name="ICFFO-BusinessApprovers_Approver_EMEA" /> 
+		<Principal id="ICFFO-BusinessApprovers_Delegate_EMEA" name="ICFFO-BusinessApprovers_Delegate_EMEA" /> 
+		<Principal id="ICFFO-BusinessApprovers_Approver_EMRG" name="ICFFO-BusinessApprovers_Approver_EMRG" /> 
+		<Principal id="ICFFO-BusinessApprovers_Delegate_EMRG" name="ICFFO-BusinessApprovers_Delegate_EMRG" /> 
+		<Principal id="ICFFO-BusinessApprovers_Approver_GECAS" name="ICFFO-BusinessApprovers_Approver_GECAS" /> 
+		<Principal id="ICFFO-BusinessApprovers_Delegate_GECAS" name="ICFFO-BusinessApprovers_Delegate_GECAS" /> 
+		<Principal id="ICFFO-BusinessApprovers_Approver_RestructureOp" name="ICFFO-BusinessApprovers_Approver_RestructureOp" /> 
+		<Principal id="ICFFO-BusinessApprovers_Delegate_RestructureOp" name="ICFFO-BusinessApprovers_Delegate_RestructureOp" /> 
+		<Principal id="ICFFO-BusinessApprovers_Approver_RetailFinance" name="ICFFO-BusinessApprovers_Approver_RetailFinance" /> 
+		<Principal id="ICFFO-BusinessApprovers_Delegate_RetailFinance" name="ICFFO-BusinessApprovers_Delegate_RetailFinance" /> 
+		<Principal id="ICFFO-BusinessApprovers_Approver_Treasury" name="ICFFO-BusinessApprovers_Approver_Treasury" /> 
+		<Principal id="ICFFO-BusinessApprovers_Delegate_Treasury" name="ICFFO-BusinessApprovers_Delegate_Treasury" />
+		
+		<Principal id="ICFFO-BusinessCFO_Approver_Asia" name="ICFFO-BusinessCFO_Approver_Asia" /> 
+		<Principal id="ICFFO-BusinessCFO_Delegate_Asia" name="ICFFO-BusinessCFO_Delegate_Asia" /> 
+		<Principal id="ICFFO-BusinessCFO_Approver_CapitalHQOther" name="ICFFO-BusinessCFO_Approver_CapitalHQOther" /> 
+		<Principal id="ICFFO-BusinessCFO_Delegate_CapitalHQOther" name="ICFFO-BusinessCFO_Delegate_CapitalHQOther" /> 
+		<Principal id="ICFFO-BusinessCFO_Approver_CLLAmericas" name="ICFFO-BusinessCFO_Approver_CLLAmericas" /> 
+		<Principal id="ICFFO-BusinessCFO_Delegate_CLLAmericas" name="ICFFO-BusinessCFO_Delegate_CLLAmericas" /> 
+		<Principal id="ICFFO-BusinessCFO_Approver_CommRealEstate" name="ICFFO-BusinessCFO_Approver_CommRealEstate" /> 
+		<Principal id="ICFFO-BusinessCFO_Delegate_CommRealEstate" name="ICFFO-BusinessCFO_Delegate_CommRealEstate" /> 
+		<Principal id="ICFFO-BusinessCFO_Approver_EFS" name="ICFFO-BusinessCFO_Approver_EFS" /> 
+		<Principal id="ICFFO-BusinessCFO_Delegate_EFS" name="ICFFO-BusinessCFO_Delegate_EFS" /> 
+		<Principal id="ICFFO-BusinessCFO_Approver_EMEA" name="ICFFO-BusinessCFO_Approver_EMEA" /> 
+		<Principal id="ICFFO-BusinessCFO_Delegate_EMEA" name="ICFFO-BusinessCFO_Delegate_EMEA" /> 
+		<Principal id="ICFFO-BusinessCFO_Approver_EMRG" name="ICFFO-BusinessCFO_Approver_EMRG" /> 
+		<Principal id="ICFFO-BusinessCFO_Delegate_EMRG" name="ICFFO-BusinessCFO_Delegate_EMRG" /> 
+		<Principal id="ICFFO-BusinessCFO_Approver_GECAS" name="ICFFO-BusinessCFO_Approver_GECAS" /> 
+		<Principal id="ICFFO-BusinessCFO_Delegate_GECAS" name="ICFFO-BusinessCFO_Delegate_GECAS" /> 
+		<Principal id="ICFFO-BusinessCFO_Approver_RestructureOp" name="ICFFO-BusinessCFO_Approver_RestructureOp" /> 
+		<Principal id="ICFFO-BusinessCFO_Delegate_RestructureOp" name="ICFFO-BusinessCFO_Delegate_RestructureOp" /> 
+		<Principal id="ICFFO-BusinessCFO_Approver_RetailFinance" name="ICFFO-BusinessCFO_Approver_RetailFinance" /> 
+		<Principal id="ICFFO-BusinessCFO_Delegate_RetailFinance" name="ICFFO-BusinessCFO_Delegate_RetailFinance" /> 
+		<Principal id="ICFFO-BusinessCFO_Approver_Treasury" name="ICFFO-BusinessCFO_Approver_Treasury" /> 
+		<Principal id="ICFFO-BusinessCFO_Delegate_Treasury" name="ICFFO-BusinessCFO_Delegate_Treasury" />
+
+		
+		<!-- Application Custom Roles  -->
+		<Principal id="_TaskAssigner" name="_TaskAssigner"/>
+		<Principal id="IDAGEAG_Lead" name="IDAGEAG_Lead"/>
+		<Principal id="_Delegate" name="_Delegate"/>
+		<Principal id="_Member" name="_Member"/>
+		<Principal id="_IDAG" name="_IDAG"/>
+		<Principal id="ICFFO-TESG" name="ICFFO-TESG"/>
+		<Principal id="IDAGEAG_Member" name="IDAGEAG_Member"/>
+		<Principal id="ICFFO-FrontOffice" name="ICFFO-FrontOffice" />		
+		<Principal id="ICFFO-CashManagement" name="ICFFO-CashManagement"/>				
+		<Principal id="ICFFO-MiddleOffice" name="ICFFO-MiddleOffice"/>
+		<Principal id="ICFFO-TreasuryTax" name="ICFFO-TreasuryTax"/>
+		<Principal id="ICFFO-TransferPricing" name="ICFFO-TransferPricing"/>
+		<Principal id="ICFFO-TreasuryLegal" name="ICFFO-TreasuryLegal"/>
+		<Principal id="ICFFO-CountryTax" name="ICFFO-CountryTax"/>
+		<Principal id="ICFFO-RiskUnderwriting" name="ICFFO-RiskUnderwriting"/>
+		<Principal id="ICFFO-TreasuryBUFinance" name="ICFFO-TreasuryBUFinance"/>
+		<Principal id="ICFFO-CapitalManagement" name="ICFFO-CapitalManagement"/>
+		<Principal id="ICFFO-Liquidity" name="ICFFO-Liquidity"/>
+		<Principal id="ICFFO-IDAGEAG" name="ICFFO-IDAGEAG"/>
+		<Principal id="ICFFO-BusinessApprovers" name="ICFFO-BusinessApprovers"/>
+		<Principal id="ICFFO-BusinessCFO" name="ICFFO-BusinessCFO"/>
+		
+		<Principal id="FrontOffice_IDAG" name="FrontOffice_IDAG"/>
+		<Principal id="CashManagement_IDAG" name="CashManagement_IDAG"/>
+		<Principal id="MiddleOffice_IDAG" name="MiddleOffice_IDAG"/>
+		<Principal id="TransferPricing_IDAG" name="TransferPricing_IDAG"/>
+		<Principal id="TreasuryLegal_IDAG" name="TreasuryLegal_IDAG"/>
+		<Principal id="TreasuryTax_IDAG" name="TreasuryTax_IDAG"/>
+		<Principal id="CountryTax_IDAG" name="CountryTax_IDAG"/>
+		<Principal id="RiskUnderwriting_IDAG" name="RiskUnderwriting_IDAG"/>
+		<Principal id="TreasuryBUFinance_IDAG" name="TreasuryBUFinance_IDAG"/>
+		<Principal id="CapitalManagement_IDAG" name="CapitalManagement_IDAG"/>
+		<Principal id="Liquidity_IDAG" name="Liquidity_IDAG"/>
+	</Principals>
+</AuthConfig>
+						

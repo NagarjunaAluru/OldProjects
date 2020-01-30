@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/ICFP-REWRITE/!svn/ver/9830/src/main/webapp/jsp/frontOffice
+END
+addFOCPARequest.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/ICFP-REWRITE/!svn/ver/9830/src/main/webapp/jsp/frontOffice/addFOCPARequest.jsp
+END
+frontOfficeFourBlockerReviewer.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/ICFP-REWRITE/!svn/ver/9768/src/main/webapp/jsp/frontOffice/frontOfficeFourBlockerReviewer.jsp
+END
+businessApprovers.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ICFP-REWRITE/!svn/ver/9421/src/main/webapp/jsp/frontOffice/businessApprovers.jsp
+END
+qualitativeAssessment.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/9618/src/main/webapp/jsp/frontOffice/qualitativeAssessment.jsp
+END
+frontOfficeFourBlockerLeader.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/frontOffice/frontOfficeFourBlockerLeader.jsp
+END
+addLeg.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/ICFP-REWRITE/!svn/ver/9814/src/main/webapp/jsp/frontOffice/addLeg.jsp
+END
+frontOfficeAddADerivative.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/ICFP-REWRITE/!svn/ver/9452/src/main/webapp/jsp/frontOffice/frontOfficeAddADerivative.jsp
+END
+cpaQualitativeAssessment.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/ICFP-REWRITE/!svn/ver/9798/src/main/webapp/jsp/frontOffice/cpaQualitativeAssessment.jsp
+END

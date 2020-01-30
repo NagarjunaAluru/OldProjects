@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<taglib version="2.0" xmlns="http://java.sun.com/xml/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">
+	<tlib-version>1.0</tlib-version>
+	<short-name>ICFP Deal Functions</short-name>
+	<uri>http://ge.com/icfp/taglibs/deal-functions</uri>
+	<display-name>ICFP Deal Functions</display-name>
+	<description>Provides current deal related functions></description>
+	
+	<function>
+		<name>fetchLegs</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.util.List fetchLegs(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>fetchLegSummary</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.Object fetchLegSummary(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getTotalNumberofLegs</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.util.List getTotalNumberofLegs(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getDealAttachments</name>
+		<function-class>com.ge.icfp.common.helper.CurrentDealManager</function-class>
+		<function-signature>java.util.List getDealAttachments(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getAttachmentsForAllLegs</name>
+		<function-class>com.ge.icfp.common.helper.CurrentDealManager</function-class>
+		<function-signature>java.util.List getAttachmentsForAllLegs(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getDerivativeAttachments</name>
+		<function-class>com.ge.icfp.common.helper.CurrentDealManager</function-class>
+		<function-signature>java.util.List getDerivativeAttachments(java.lang.Integer, java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getLegObject</name>
+		<function-class>com.ge.icfp.common.helper.CurrentDealManager</function-class>
+		<function-signature>java.lang.Object getLegByNumber(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getExceptionAttachments</name>
+		<function-class>com.ge.icfp.common.helper.CurrentDealManager</function-class>
+		<function-signature>java.util.List getExceptionAttachments(java.lang.Integer, java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getAmendmentAttachments</name>
+		<function-class>com.ge.icfp.common.helper.CurrentDealManager</function-class>
+		<function-signature>java.util.List getAmendmentAttachments(java.lang.Integer, java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	
+	<function>
+		<name>fetchDerivatives</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.util.List fetchDerivatives(java.lang.Integer, javax.servlet.jsp.PageContext)</function-signature>
+	</function>
+	
+	<function>
+		<name>getDerivative</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.util.List getDerivative(java.lang.Integer,java.lang.Integer, javax.servlet.jsp.PageContext)</function-signature>
+	</function>
+	
+	<function>
+		<name>getSubOrdinateDebtFlag</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getSubOrdinateDebtFlag(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getNonStandardDocsFlag</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getNonStandardDocsFlag(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getCPANonStandardDocsFlag</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getCPANonStandardDocsFlag(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	
+	<function>
+		<name>getEquityInfusionsDividendsFlag</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getEquityInfusionsDividendsFlag(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getDerivativesRequestsFlag</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getDerivativesRequestsFlag(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getPrincipalEntityFlag</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getPrincipalEntityFlag(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getPrudentialEntityFlag</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getPrudentialEntityFlag(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	<function>
+		<name>getImpairmentHistoryFlag</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getImpairmentHistoryFlag(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+
+	
+	<function>
+		<name>getFinalStatementFlag</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getFinalStatementFlag(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getBorrowerInsolvencyFlag</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getBorrowerInsolvencyFlag(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getLegCrossBorderFlagValue</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.Boolean getLegCrossBorderFlagValue(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+		
+	<function>
+		<name>getCrossBorderFlagValue</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getCrossBorderFlagValue(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getOtherDescription</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getOtherDescription(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	<function>
+		<name>getSecurityTypeFlag</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getSecurityTypeFlag(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getEBoardApprovalRequiredFlag</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getEBoardApprovalRequiredFlag(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getDoubleLeverageFlag</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getDoubleLeverageFlag(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getEquityFormId</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getEquityFormId(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getDebtTerms</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getDebtTerms(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getShareTypeId</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getShareTypeId(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getNumberOfShares</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getNumberOfShares(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getSharePrfId</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getSharePrfId(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+
+	<function>
+		<name>getClosingRequestMap</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.util.Map getClosingRequestMap(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getDealCategoryName</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getDealCategoryName(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getAllDealCategories</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.util.Map getAllDealCategories(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getWorkFlowStageDesc</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getWorkFlowStageDesc(java.lang.String, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getWorkflowStageDescMap</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.util.Map getWorkflowStageDescMap(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>exceptionCount</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.Integer exceptionCount(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+
+	<function>
+		<name>getFinalStatement</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getFinalStatement(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+
+	<function>
+		<name>getModelTypeIdForDeal</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.Integer getModelTypeIdForDeal(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getModelTypeIdForLeg</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.Integer getModelTypeIdForLeg(javax.servlet.http.HttpServletRequest,java.lang.Integer)</function-signature>
+	</function>
+	
+	<function>
+		<name>getModelTypeCountForDeal</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.Integer getModelTypeCountForDeal(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getRiskOverride</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getRiskOverride(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getChangeAfterApprovalFlag</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getChangeAfterApprovalFlag(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getChangeAfterIdagApprovalFlag</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getChangeAfterIdagApprovalFlag(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	<function>
+		<name>getFOAffirmFlag</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getFOAffirmFlag(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>	
+	
+	<function>
+		<name>getImmediateDrawdown</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getImmediateDrawdown(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	<function>
+		<name>getImmediateDrawdownAmount</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getImmediateDrawdownAmount(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	<function>
+		<name>getImmediateDrawdownValDt</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getImmediateDrawdownValDt(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	<function>
+		<name>getDrawdownValDt</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getDrawdownValDt(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	<function>
+		<name>getInterest</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>com.ge.icfp.model.RateInformation getInterest(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	<function>
+		<name>getTransferPricing</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>com.ge.icfp.model.TPLegRequest getTransferPricing(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	<function>
+		<name>getQualitativeNotching</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getQualitativeNotching(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	<function>
+		<name>getCommitmentFee</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getCommitmentFee(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	<function>
+		<name>getWithholdingTax</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getWithholdingTax(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	<function>
+		<name>getGuaranteeFee</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getGuaranteeFee(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	<function>
+		<name>getHedgeInterestRate</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getHedgeInterestRate(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	<function>
+		<name>getHedgeForeignExchange</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getHedgeForeignExchange(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	<function>
+		<name>getGuaranteeAgreement</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getGuaranteeAgreement(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	<function>
+		<name>getCommitmentFeeRate</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getCommitmentFeeRate(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getGuaranteeFeeRate</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getGuaranteeFeeRate(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getSovereignConstraint</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getSovereignConstraint(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	<function>
+		<name>getSolvencyMetricsAssessment</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.util.List getSolvencyMetricsAssessment(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getDealAttachmentComment</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getDealAttachmentComment(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>	
+	
+	<function>
+		<name>getLegAttachmentComment</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getLegAttachmentComment(java.lang.Integer, java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>	
+	
+	<function>
+		<name>formatXMLGregorianCalendar</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String formatXMLGregorianCalendar(javax.xml.datatype.XMLGregorianCalendar, java.lang.String)</function-signature>
+	</function>	
+	<function>
+		<name>convertAmountToCurrencyFormat</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String convertAmountToCurrencyFormat(java.lang.String)</function-signature>
+	</function>	
+	<function>
+		<name>isCPADeal</name>
+		<function-class>com.ge.icfp.common.helper.CurrentDealManager</function-class>
+		<function-signature>java.lang.Boolean isCPADeal(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>	
+	<function>
+		<name>fetchLegSummaryObject</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.Object fetchLegSummaryObject(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>	
+	<function>
+		<name>getEboardComments</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getEboardComments(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>	
+	<function>
+		<name>fetchDay2LegSummary</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.Object fetchDay2LegSummary(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	<function>
+		<name>fetchRateInfo</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.Object fetchRateInfo(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	<function>
+		<name>getHighestEquityAmount</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.Boolean getHighestEquityAmount(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	<function>
+		<name>getShareInfoList</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.util.List getShareInfoList(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	<function>
+		<name>getOtherEquityComments</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getOtherEquityComments(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	<function>
+		<name>hideLegView</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String hideLegView(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	<function>
+		<name>getCurrentWorkflowStage</name>
+		<function-class>com.ge.icfp.common.helper.CurrentInboxManager</function-class>
+		<function-signature>java.lang.String getCurrentWorkflowStage(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	<function>
+		<name>getAssigned</name>
+		<function-class>com.ge.icfp.tag.GetAssignedPerson</function-class>
+		<function-signature>java.lang.String getAssigned(com.ge.icfp.model.WorkItem)</function-signature>
+	</function>
+	<function>
+		<name>getIncreaseOrDecrease</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getIncreaseOrDecrease(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	<function>
+		<name>getVaultID</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getVaultID(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getDateFormat</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.text.DateFormat getDateFormat(java.lang.String)</function-signature>
+	</function>
+	
+	<function>
+		<name>formatDate</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String formatDate(javax.xml.datatype.XMLGregorianCalendar, java.text.DateFormat)</function-signature>
+	</function>
+	<function>
+		<name>getTPFundHoldOperationId</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.String getTPFundHoldOperationId(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>fetchLegsWithoutImmediate</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.util.List fetchLegsWithoutImmediate(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>isEquityLeg</name>
+		<function-class>com.ge.icfp.common.helper.CurrentDealManager</function-class>
+		<function-signature>java.lang.Boolean isEquityLeg(javax.servlet.http.HttpServletRequest, java.lang.Integer)</function-signature>
+	</function>
+	
+		
+	<function>
+		<name>fetchTPLegs</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.util.List fetchTPLegs(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getExceptions</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.util.List getExceptions(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getAmendments</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.util.List getAmendments(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+
+	<function>
+		<name>isUserInTESGPending</name>
+		<function-class>com.ge.icfp.tag.DealManager</function-class>
+		<function-signature>java.lang.Boolean isUserInTESGPending(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+</taglib>

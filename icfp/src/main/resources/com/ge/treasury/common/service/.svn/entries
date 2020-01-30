@@ -1,0 +1,40 @@
+8
+
+dir
+9840
+http://192.168.0.14/ICFP-REWRITE/src/main/resources/com/ge/treasury/common/service
+http://192.168.0.14/ICFP-REWRITE
+
+
+
+2012-06-07T15:03:57.194118Z
+3744
+chaitanya.n
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ba77e99c-fc20-4067-90bb-d77db4103c45
+
+CommonProp.properties
+file
+
+
+
+
+2013-05-20T09:00:25.320868Z
+76d5837a08d711cb3d97fb6e0bc0163c
+2012-06-07T15:03:57.194118Z
+3744
+chaitanya.n
+

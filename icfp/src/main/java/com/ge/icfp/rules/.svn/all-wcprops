@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/ICFP-REWRITE/!svn/ver/8714/src/main/java/com/ge/icfp/rules
+END
+RuleError.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/ICFP-REWRITE/!svn/ver/6681/src/main/java/com/ge/icfp/rules/RuleError.java
+END
+RuleErrors.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/ICFP-REWRITE/!svn/ver/5555/src/main/java/com/ge/icfp/rules/RuleErrors.java
+END
+RuleExecutor.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ICFP-REWRITE/!svn/ver/8714/src/main/java/com/ge/icfp/rules/RuleExecutor.java
+END
+RuleErrorLevel.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/ICFP-REWRITE/!svn/ver/5555/src/main/java/com/ge/icfp/rules/RuleErrorLevel.java
+END

@@ -1,0 +1,933 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" 
+		"http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	
+	  <form-beans>
+	 		<!-- ====================== New Financing Request Forms ===================== -->
+         <form-bean name="fundingRequestForm" type="com.ge.icfp.newrequest.form.FundingRequestForm"/>
+         <!--  <form-bean name="exceptionRequestForm" type="com.ge.icfp.newrequest.form.ExceptionRequestForm"/>-->
+        
+         
+         	<!-- ========================= Pipeline Forms ============================= -->
+         
+         <form-bean name="pipelineInboxForm" type="com.ge.icfp.pipeline.form.PipelineInboxForm" />
+        
+         <form-bean name="fourBlockerForm" type="com.ge.icfp.common.formbean.FourBlockerForm" />
+         <form-bean name="rcaTransferPricingInputForm" type="com.ge.icfp.rcaTransferPricing.form.RCATransferPricingInputForm" />
+         <form-bean name="inputform" type="com.ge.icfp.common.formbean.InputLegForm"/>
+         <form-bean name="adminform" type="com.ge.icfp.admin.formbean.AdminForm"/>
+         <form-bean name="manageDelegationForm" type="org.apache.struts.action.DynaActionForm">
+         	<form-property name="roleIds" type="java.lang.String[]" />
+	    	<form-property name="roleNames" type="java.lang.String[]" />
+	    	<form-property name="delegateSSOID" type="java.lang.String[]" />
+	    	<form-property name="delegateFirstNames" type="java.lang.String[]" />
+	    	<form-property name="delegateLastNames" type="java.lang.String[]" />
+	    	<form-property name="delegateFromDate" type="java.lang.String[]" />
+	    	<form-property name="delegateToDate" type="java.lang.String[]" />
+	    	<form-property name="delegatorSSOID" type="java.lang.String[]" />
+	    	<form-property name="delegatorFirstNames" type="java.lang.String[]" />
+	    	<form-property name="delegatorLastNames" type="java.lang.String[]" />
+	    	<form-property name="userDelegateId" type="java.lang.String[]" />
+	    	<form-property name="insertUpdate" type="java.lang.String[]" />
+	    	<form-property name="noOfRoles" type="java.lang.String" />
+         </form-bean>
+         <form-bean name="loginForm" type="org.apache.struts.validator.DynaValidatorForm">
+         	<form-property name="userName" type="java.lang.String" />
+         	<form-property name="password" type="java.lang.String" />
+         </form-bean>
+         <form-bean name="inboxForm" type="org.apache.struts.validator.DynaValidatorForm">
+         	<form-property name="type" type="java.lang.String" initial="MYTASKS"/>
+         	<form-property name="deleteRequestList" type="java.lang.String"/>
+         </form-bean>
+	</form-beans>
+	<global-forwards>
+      <forward name="auditLog" path="/jsp/common/inc/auditLogFull.jsp"></forward>
+      <forward name="commentLog" path="/jsp/common/inc/commentsLogFull.jsp"></forward>
+    </global-forwards>
+	<action-mappings>
+	
+		<action path="/login" 
+				name="loginForm"
+				type="com.ge.icfp.common.action.LoginAction"
+				input="/jsp/login/login.jsp">
+			<forward name="homePage" path="/homePage.do"  />
+		</action>
+		
+		<action path="/logout" 
+				type="com.ge.icfp.common.action.LogoutAction">
+			<forward name="loginPage" path="/login.do?login" redirect="true"/>
+		</action>
+		
+		<!-- ========================= Inbox ============================= -->
+		<action path="/inbox"
+				name="inboxForm"
+				type="org.springframework.web.struts.DelegatingActionProxy"
+				input="/jsp/login/inbox.jsp"
+				parameter="command">
+			<forward name="inboxPage" path="/jsp/login/inbox.jsp"></forward>
+			<forward name="readOnlySearch" path="/searchResults.do?command=searchForm"></forward>
+		</action>
+		<action path="/manageDelegation"
+				name="manageDelegationForm"
+				scope="session" 
+				type="org.springframework.web.struts.DelegatingActionProxy"
+				input="/jsp/login/manageMyRoles.jsp"
+				parameter="command"
+				validate="false">
+			<forward name="openManageRoles" path="/jsp/login/manageMyRoles.jsp"></forward>
+			<forward name="saveRoles" path="/manageDelegation.do?command=openManageDelegations"></forward>
+			<forward name="saveaAdminDelegationRoles" path="/manageDelegation.do?command=openAdminManageDelegations"></forward>
+			<forward name="manageDelegation" path="/admin/admin.do?command=manageDelegation"></forward>
+		</action>
+		<!-- ========================= New Financing Request ================================ -->
+		
+		<action path="/fundingRequest/newFundingRequestView"
+				name="dealRequestForm"
+				scope="session" 
+				type="org.springframework.web.struts.DelegatingActionProxy"
+				input="/jsp/fundingRequest/newFundingRequest.jsp"
+				parameter="command"
+				validate="false">
+            <forward name="success" path="/jsp/fundingRequest/newFundingRequest.jsp" />
+            <forward name="successFO" path="/jsp/frontOffice/frontOfficeFourBlockerReviewer.jsp" />
+            <forward name="editRequest" path="/jsp/fundingRequest/newFundingRequestWlegs.jsp" />
+            <forward name="editFrontOfficeRequest" path="/jsp/frontOffice/frontOfficeFourBlockerReviewer.jsp" />
+            <forward name="successcpa" path="/jsp/fundingRequest/newCPAFundingRequest.jsp" />
+            <forward name="viewDerivative" path="/jsp/common/derivativeReadonly.jsp" />
+        </action>
+        
+		<action path="/fundingRequest/newFundingRequest"
+				name="dealRequestForm"
+				scope="session" 
+				type="org.springframework.web.struts.DelegatingActionProxy"
+				input="/jsp/fundingRequest/newFundingRequest.jsp"
+				parameter="command"
+				validate="true">
+            <forward name="success" path="/jsp/fundingRequest/newFundingRequest.jsp" />
+            <forward name="successFO" path="/jsp/frontOffice/frontOfficeFourBlockerReviewer.jsp" />
+            <forward name="successCPA" path="/jsp/fundingRequest/newCPAFundingRequest.jsp" />
+            <forward name="editRequest" path="/jsp/fundingRequest/newFundingRequestWlegs.jsp" />
+            <forward name="addLeg" path="/RCALegRequest.do?command=addLeg" />
+            <forward name="addFOLeg" path="/RCALegRequest.do?command=addLeg" />
+            <forward name="deleteLeg" path="/RCALegRequest.do?command=deleteLeg" />
+            <forward name="modifyLeg" path="/RCALegRequest.do?command=openLeg" />
+            <forward name="addDerivatives" path="/jsp/NewFundingRequestAddADerivative.jsp" />
+            <forward name="home" path="/homePage.do"  />
+            <forward name="addCPARequest" path="/CPALegRequest.do?command=addLeg" />
+            <forward name="viewDerivative" path="/jsp/common/derivativeReadonly.jsp" />
+        </action>
+        
+        <action path="/fundingRequest/newCPAFundingRequest"
+				name="dealRequestForm"
+				scope="session" 
+				type="org.springframework.web.struts.DelegatingActionProxy"
+				input="/jsp/fundingRequest/newCPAFundingRequest.jsp"
+				parameter="command"
+				validate="true">
+            <forward name="success" path="/jsp/fundingRequest/newCPAFundingRequest.jsp" />
+            <forward name="successFO" path="/jsp/frontOffice/frontOfficeFourBlockerReviewer.jsp" />
+            <forward name="successCPA" path="/jsp/fundingRequest/newCPAFundingRequest.jsp" />
+            <forward name="home" path="/homePage.do"  />
+             <forward name="addCPARequest" path="/CPALegRequest.do?command=addLeg" />
+             <forward name="viewDerivative" path="/jsp/common/derivativeReadonly.jsp" />
+          </action>
+          
+          <!-- ========================== Front Office Mappings =========================- -->
+          
+          <action path="/frontoffice/fourBlocker" 
+        		name="updateStatusForm" 
+        		parameter="command"
+        		scope="session"
+        		type="org.springframework.web.struts.DelegatingActionProxy" 
+        		validate="false">
+        	<forward name="opendeal" path="/jsp/frontOffice/frontOfficeFourBlockerReviewer.jsp"></forward>
+        	<forward name="openCPAdeal" path="/jsp/frontOffice/frontOfficeFourBlockerReviewer.jsp"></forward>
+        	<forward name="addLeg" path="/frontoffice/RCALegRequest.do?command=addLeg" />
+        	<forward name="addCPALeg" path="/frontoffice/CPALegRequest.do?command=addLeg" />
+        	<forward name="addCPARequest"  path="/frontoffice/CPALegRequest.do?command=addLeg" />
+        	<forward name="deleteLeg" path="/frontoffice/RCALegRequest.do?command=deleteLeg" />
+        	<forward name="deleteCPALeg" path="/frontoffice/CPALegRequest.do?command=deleteLeg" />
+        	<forward name="openLeg" path="/frontoffice/RCALegRequest.do?command=openLeg" />
+        	<forward name="openCPALeg" path="/frontoffice/CPALegRequest.do?command=openLeg" />
+        	<forward name="inbox" path="/inbox.do?command=executeInbox" />
+        	<forward name="success" path="/frontoffice/fourBlocker.do?command=load"/>
+        	<forward name="submitSuccess"  path="/homePage.do"  />
+        	<forward name="reaffirmApprovers" path="/jsp/common/inc/reaffirm.jsp"></forward>
+        	<forward name="viewDerivative" path="/jsp/common/derivativeReadonly.jsp" />
+        </action> 
+        
+        <action path="/frontoffice/RCALegRequest"
+        	name="ICFPLegRequestForm"
+        	scope="session"
+        	type="org.springframework.web.struts.DelegatingActionProxy"
+        	parameter="command" 
+        	validate="false">
+        	<forward name="addLeg" path="/jsp/day1InputScreens.jsp" />
+        	<forward name="addDerivatives" path="/frontoffice/RCALegRequest/derivativeRequest.do?command=addDerivative"/>
+        	<forward name="success" path="/frontoffice/fourBlocker.do?command=load" />
+        	<forward name="day2Leg" path="/jsp/day2/day2InputScreens.jsp" />
+        	<forward name="home" path="/homePage.do"  />
+        	<forward name="openLeg" path="/frontoffice/RCALegRequest.do?command=openLeg" />
+        	<forward name="viewDerivative" path="/jsp/common/derivativeReadonly.jsp" />
+        </action>
+        
+        <action path="/frontoffice/RCALegRequest/derivativeRequest"
+				name="derivativesRequestForm"
+				scope="session" 
+				type="org.springframework.web.struts.DelegatingActionProxy"
+				parameter="command"
+				validate="false">
+            <forward name="success" path="/jsp/frontOffice/frontOfficeFourBlockerReviewer.jsp" />
+            <forward name="openLeg" path="/frontoffice/RCALegRequest.do?command=openLeg" />
+            <forward name="openDerivativeView" path="/jsp/frontOffice/frontOfficeAddADerivative.jsp" />
+            <forward name="redirectFunding" path="/jsp/frontOffice/frontOfficeFourBlockerReviewer.jsp" />
+            <forward name="addDerivative" path="/derivativeRequest.do?command=addDerivative" /> 
+            <forward name="openDerivative" path="/frontoffice/RCALegRequest/derivativeRequest.do?command=openDerivative" />
+            <forward name="viewDerivative" path="/jsp/common/derivativeReadonly.jsp" />
+        </action>  
+        
+        <action path="/frontoffice/CPALegRequest"
+        	name="cpaLegRequestForm"
+        	scope="session"
+        	type="org.springframework.web.struts.DelegatingActionProxy"
+        	parameter="command"
+        	validate="false">
+        	<forward name="addLeg" path="/jsp/day1InputScreens.jsp" />        	
+        	<forward name="addRequest" path="/jsp/day1InputScreens.jsp" />
+        	<forward name="success" path="/frontoffice/fourBlocker.do?command=load" />
+        	<forward name="home" path="/homePage.do" />
+        	<forward name="addDay2LegRequest" path="/jsp/day2/day2InputScreens.jsp" />
+        	<forward name="openLeg" path="/frontoffice/CPALegRequest.do?command=openLeg" />
+        	 <forward name="viewDerivative" path="/jsp/common/derivativeReadonly.jsp" />
+        </action>
+        
+         <action path="/CPALegRequest"
+        	name="cpaLegRequestForm"
+        	scope="session"
+        	type="org.springframework.web.struts.DelegatingActionProxy"
+        	parameter="command"
+        	validate="false">
+        	<forward name="addLeg" path="/jsp/day1InputScreens.jsp" />        	
+        	<forward name="addRequest" path="/jsp/day1InputScreens.jsp" />
+        	<forward name="success" path="/fundingRequest/newFundingRequest.do?command=openCurrentDealRequest" />
+        	<forward name="home" path="/homePage.do"  />
+        	 <forward name="saveAsDraft" path="/fundingRequest/newFundingRequest.do?command=saveAsDraft" />
+        	 <forward name="addDay2LegRequest" path="/jsp/day2/day2InputScreens.jsp" />
+        	 <forward name="day2Leg" path="/jsp/day2/day2InputScreens.jsp" />
+        	 <forward name="openLeg" path="/CPALegRequest.do?command=openLeg" />
+        	 <forward name="viewDerivative" path="/jsp/common/derivativeReadonly.jsp" />
+        </action>
+        
+        <action path="/RCALegRequest"
+        	name="ICFPLegRequestForm"
+        	scope="session"
+        	type="org.springframework.web.struts.DelegatingActionProxy"
+        	parameter="command"
+        	validate="false">
+        	<forward name="addFOLeg" path="/jsp/frontOffice/addLeg.jsp" />
+        	<forward name="addDerivatives" path="/derivativeRequest.do?command=addDerivative"/>
+        	<forward name="success" path="/fundingRequest/newFundingRequest.do?command=openCurrentDealRequest" />
+        	<forward name="successFO" path="/jsp/frontOffice/frontOfficeFourBlockerReviewer.jsp" />
+        	 <forward name="home" path="/homePage.do"  />
+        	 <forward name="saveAsDraft" path="/fundingRequest/newFundingRequest.do?command=saveAsDraft" />
+        	 <forward name="addLeg" path="/jsp/day1InputScreens.jsp"/>
+        	 <forward name="day2Leg" path="/jsp/day2/day2InputScreens.jsp" />
+        	 <forward name="openLeg" path="/RCALegRequest.do?command=openLeg" />
+        	  <forward name="viewDerivative" path="/jsp/common/derivativeReadonly.jsp" />
+        </action>
+
+        <action path="/homePage"
+				name="dealRequestForm"
+				scope="session" 
+				type="org.springframework.web.struts.DelegatingActionProxy"
+				input="/homePage.do" >
+            <forward name="pipelineManagement" path="/pipelineReview/pipelineReviewView.do?command=executeInbox" />
+            <forward name="approvalInbox" path="/inbox.do?command=executeInboxHomeLink" />
+            <forward name="dataMaintenance" path="/admin/admin.do?command=loadStaticData"></forward>
+            <forward name="readOnlySearch" path="/searchResults.do?command=searchForm"></forward>
+        </action>
+        
+        <action path="/derivativeRequest"
+				name="derivativesRequestForm"
+				scope="session" 
+				type="org.springframework.web.struts.DelegatingActionProxy"
+				parameter="command">
+            <forward name="success" path="/jsp/fundingRequest/newFundingRequest.jsp" />
+            <forward name="openLeg" path="/RCALegRequest.do?command=openLeg" />
+            <forward name="openDerivativeView" path="/jsp/NewFundingRequestAddADerivative.jsp" />
+            <forward name="redirectFunding" path="/jsp/fundingRequest/newFundingRequest.jsp" />
+            <forward name="addDerivative" path="/derivativeRequest.do?command=addDerivative" /> 
+            <forward name="openDerivative" path="/derivativeRequest.do?command=openDerivative" />
+            <forward name="viewDerivative" path="/jsp/common/derivativeReadonly.jsp" />
+            <forward name="viewLeg" path="/frontoffice/RCALegRequest.do?command=openLeg" />
+        </action>
+		
+       <!-- =========================== Pipeline Review ===================================== -->
+        <action path="/pipelineReview/pipelineReviewView" 
+        		name="pipelineInboxForm"
+        		scope="session"  
+        		type="org.springframework.web.struts.DelegatingActionProxy"
+        		parameter="command"
+        		validate="false">
+  			<forward name="viewinbox"  path="/jsp/PipelineInbox.jsp" />
+  			<forward name="viewinboxmo" path="/jsp/PipelineInboxMO.jsp"></forward>
+        <forward name="actionDetail" path="/jsp/common/actionDetail.jsp"/>
+ 		</action>
+ 		
+      
+		<action path="/attachmentAction"	
+				name="attachmentForm"
+				scope="session" 
+				type="org.springframework.web.struts.DelegatingActionProxy"
+				parameter="command" validate="false">
+        </action>
+        
+        <action path="/attachmentUpdateAction"	
+				name="updateStatusForm"
+				scope="session" 
+				type="org.springframework.web.struts.DelegatingActionProxy"
+				parameter="command" validate="false">
+        </action>
+        
+ 		
+ 		<action
+			path="/attachmentFileDownload"
+			type="org.springframework.web.struts.DelegatingActionProxy" >
+		</action>	
+
+		<!--Kavitha Ramdeni Starts Here -->
+		 
+        <!-- Pipeline Review Equity-->
+		
+		<action path="/pipelineReview/pipelineReviewDeal"
+				name="updateStatusForm"
+				scope="session" 
+				type="org.springframework.web.struts.DelegatingActionProxy"
+				parameter="command"
+				input="/jsp/pipelineReview/PipelineReviewDeal.jsp"
+				validate="true">
+			   <forward name="view" path="/jsp/pipelineReview/PipelineReviewDeal.jsp" />
+               <forward name="success" path="/jsp/pipelineReview/PipelineReviewDeal.jsp"  />
+               <forward name="accept_success" path="/pipelineReview/pipelineReviewView.do?command=executeInbox" />
+               <forward name="accept_successMO" path="/pipelineReview/pipelineReviewView.do?command=executeInboxMO" />
+               <forward name="accept_successDashboard" path="/inbox.do?command=executeInboxHomeLink" />
+               <forward name="sendbank_success" path="/pipelineReview/pipelineReviewView.do?command=executeInbox" />
+               <forward name="review_success" path="/pipelineReview/pipelineReviewDeal.do?command=getPipelineReviewDealDetail"/>
+               <forward name="save_sucessfully" path="/jsp/pipelineReview/PipelineReviewDeal.jsp" />
+                <forward name="cpa_pipeline" path="/jsp/pipelineReview/CPAPipelineReviewDeal.jsp" />
+               <forward name="equity_pipeline" path="/jsp/pipelineReview/PipelineReviewDeal.jsp" />
+               <forward name="viewInputScreens" path="/jsp/day1InputScreens.jsp" />
+               <forward name="day2ViewLeg" path="/jsp/day2/day2InputScreens.jsp" />
+               
+            <forward name="homePage" path="/pipelineReview/pipelineReviewView.do?command=executeInbox" />
+        </action> 
+        
+        <action path="/pipelineReview/pipelineReviewDealLeg"
+        		name="ICFPLegRequestForm"
+        		scope="session"
+        		type="org.springframework.web.struts.DelegatingActionProxy"
+        		parameter="command"
+        		validate="false">
+        	<forward name="viewLeg" path="/jsp/pipelineReview/viewLeg.jsp" />
+        	<forward name="day2ViewLeg" path="/jsp/day2/day2InputScreens.jsp" />
+        	<forward name="home" path="/homePage.do"  />
+        </action>
+        <action path="/pipelineReview/pipelineReviewCPALeg"
+        		name="cpaLegRequestForm"
+        		scope="session"
+        		type="org.springframework.web.struts.DelegatingActionProxy"
+        		parameter="command"
+        		validate="false">
+        	<forward name="viewLeg" path="/jsp/pipelineReview/viewCPALeg.jsp" />
+        	<forward name="day2ViewLeg" path="/jsp/day2/day2InputScreens.jsp" />
+        	<forward name="home" path="/homePage.do"  />
+        </action>
+        <action path="/approver"
+        		name="updateStatusForm"
+        		scope="session"
+        		type="org.springframework.web.struts.DelegatingActionProxy"
+        		parameter="command">
+        	<forward name="viewInputScreens" path="/jsp/common/allInputScreens.jsp" />
+        	<forward name="home" path="/homePage.do"  />
+        </action>
+        <action path="/treasuryTax/treasuryTax" 
+        		name="updateStatusForm" 
+        		parameter="command"
+        		scope="session"
+        		type="org.springframework.web.struts.DelegatingActionProxy">
+        	<forward name="success" path="/jsp/treasuryTax/TreasuryTaxFourBlocker.jsp"></forward>
+        	<forward name="legSummary" path="/jsp/day1InputScreens.jsp"></forward>
+        	<forward name="successCPA" path="/jsp/treasuryTax/TreasuryTaxFourBlocker.jsp"></forward>
+      		<forward name="legSummaryCPA" path="/jsp/day1InputScreens.jsp"></forward>
+        	<forward name="equity_success" path="/jsp/treasuryTax/TreasuryTaxFourBlocker.jsp"></forward>
+        	<forward name="equity_legSummary" path="/jsp/day1InputScreens.jsp"></forward>
+        	<forward name="submitSuccess"  path="/homePage.do"  />
+        	 <forward name="day2Leg" path="/jsp/day2/day2InputScreens.jsp" />
+        </action> 
+        
+        <action path="/treasuryTax/treasuryTaxLeg" 
+        		name="inputform" 
+        		parameter="command"
+        		scope="request"
+        		type="org.springframework.web.struts.DelegatingActionProxy">
+        	<forward name="success" path="/jsp/treasuryTax/TreasuryTaxFourBlocker.jsp"></forward>
+        	<forward name="legSummary" path="/jsp/day1InputScreens.jsp"></forward>
+        	<forward name="successCPA" path="/jsp/treasuryTax/TreasuryTaxFourBlocker.jsp"></forward>
+      		<forward name="legSummaryCPA" path="/jsp/day1InputScreens.jsp"></forward>
+        	<forward name="nextLeg" path="/treasuryTax/treasuryTax.do?command=legDetails"></forward>
+        	<forward name="equity_success" path="/jsp/treasuryTax/TreasuryTaxFourBlocker.jsp"></forward>
+        	<forward name="equity_legSummary" path="/jsp/day1InputScreens.jsp"></forward>
+        	 <forward name="day2Leg" path="/jsp/day2/day2InputScreens.jsp" />
+        </action>
+        
+      	<!-- Cash Management -->
+      	<action path="/cashManagement/cashManagement"
+      			name="updateStatusForm"
+      			scope="session"
+      			type="org.springframework.web.struts.DelegatingActionProxy"
+      			parameter="command"
+      			input="/jsp/cashManagement/cashManagement-FourBlocker.jsp"
+      			validate="false">
+      		<forward name="success" path="/jsp/cashManagement/cashManagement-FourBlocker.jsp"></forward>
+      		<forward name="legSummary" path="/jsp/day1InputScreens.jsp"></forward>
+      		<forward name="successCPA" path="/jsp/cashManagement/cashManagement-FourBlocker.jsp"></forward>
+      		<forward name="legSummaryCPA" path="/jsp/day1InputScreens.jsp"></forward>
+      		<forward name="equity_success" path="/jsp/cashManagement/cashManagement-FourBlocker.jsp"></forward>
+      		<forward name="equity_legSummary" path="/jsp/day1InputScreens.jsp"></forward>
+      		<forward name="submitSuccess"  path="/homePage.do"  />
+      		<forward name="auditLog" path="/jsp/common/inc/auditLogFull.jsp"></forward>
+      		<forward name="commentLog" path="/jsp/common/inc/commentsLogFull.jsp"></forward>
+      		<forward name="homePage" path="/homePage.do"   ></forward>
+      		<forward name="day2Leg" path="/jsp/day2/day2InputScreens.jsp" />
+      	</action>
+      
+      	<action path="/cashManagement/cashManagementLeg" 
+        		name="inputform" 
+        		parameter="command"
+        		scope="request"
+        		type="org.springframework.web.struts.DelegatingActionProxy">
+        	<forward name="success" path="/jsp/cashManagement/cashManagement-FourBlocker.jsp"></forward>
+        	<forward name="legSummary" path="/jsp/day1InputScreens.jsp"></forward>
+        	<forward name="nextLeg" path="/cashManagement/cashManagement.do?command=legDetails"></forward>
+        	<forward name="successCPA" path="/jsp/cashManagement/cashManagement-FourBlocker.jsp"></forward>
+      		<forward name="legSummaryCPA" path="/jsp/day1InputScreens.jsp"></forward>
+        	<forward name="equity_success" path="/jsp/cashManagement/cashManagement-FourBlocker.jsp"></forward>
+      		<forward name="equity_legSummary" path="/jsp/day1InputScreens.jsp"></forward>
+      		<forward name="day2Leg" path="/jsp/day2/day2InputScreens.jsp" />
+        </action>
+        
+        <action path="/countryTax/countryTax"
+      			name="updateStatusForm"
+      			scope="session"
+      			type="org.springframework.web.struts.DelegatingActionProxy"
+      			parameter="command"
+      			input="/jsp/cpa/countryTax/countryTaxFourBlocker.jsp"
+      			validate="false">
+      		<forward name="success" path="/jsp/cpa/countryTax/countryTaxFourBlocker.jsp"></forward>
+      		<forward name="legSummary" path="/jsp/day1InputScreens.jsp"></forward>
+      		<forward name="successCPA" path="/jsp/cpa/countryTax/countryTaxFourBlocker.jsp"></forward>
+      		<forward name="legSummaryCPA" path="/jsp/day1InputScreens.jsp"></forward>
+      		<forward name="equity_success" path="/jsp/cpa/countryTax/countryTaxFourBlocker.jsp"></forward>
+      		<forward name="equity_legSummary" path="/jsp/day1InputScreens.jsp"></forward>
+      		<forward name="submitSuccess"  path="/homePage.do"  />
+      		<forward name="homePage" path="/homePage.do"   ></forward>
+      		<forward name="day2Leg" path="/jsp/day2/day2InputScreens.jsp" />
+      	</action>
+      
+      	<action path="/countryTax/countryTaxLeg" 
+        		name="inputform" 
+        		parameter="command"
+        		scope="request"
+        		type="org.springframework.web.struts.DelegatingActionProxy">
+        	<forward name="success" path="/jsp/cpa/countryTax/countryTaxFourBlocker.jsp"></forward>
+        	<forward name="legSummary" path="/jsp/day1InputScreens.jsp"></forward>
+        	<forward name="nextLeg" path="/countryTax/countryTax.do?command=legDetails"></forward>
+        	<forward name="successCPA" path="/jsp/cpa/countryTax/countryTaxFourBlocker.jsp"></forward>
+      		<forward name="legSummaryCPA" path="/jsp/day1InputScreens.jsp"></forward>
+        	<forward name="equity_success" path="/jsp/cpa/countryTax/countryTaxFourBlocker.jsp"></forward>
+      		<forward name="equity_legSummary" path="/jsp/day1InputScreens.jsp"></forward>
+      		<forward name="day2Leg" path="/jsp/day2/day2InputScreens.jsp" />
+        </action>
+        
+      	<action path="/middleOffice/middleOffice" 
+        		name="updateStatusForm"
+        		scope="session"  
+        		type="org.springframework.web.struts.DelegatingActionProxy"
+        		parameter="command"
+        		input="/jsp/middleOffice/middleOfficeFourBlocker.jsp"
+				validate="false">
+  			<forward name="success"  path="/jsp/middleOffice/middleOfficeFourBlocker.jsp" />
+  			<forward name="legSummary" path="/jsp/day1InputScreens.jsp"></forward>
+  			<forward name="successCPA" path="/jsp/middleOffice/middleOfficeFourBlocker.jsp"></forward>
+      		<forward name="legSummaryCPA" path="/jsp/day1InputScreens.jsp"></forward>
+  			<forward name="equity_success"  path="/jsp/middleOffice/middleOfficeFourBlocker.jsp" />
+  			<forward name="equity_legSummary" path="/jsp/day1InputScreens.jsp"></forward>
+  			<forward name="submitSuccess"  path="/homePage.do"  />
+  			<forward name="homePage"  path="/homePage.do"  />
+  			<forward name="day2Leg" path="/jsp/day2/day2InputScreens.jsp" />
+  			
+  		</action>
+  		<action path="/frontOfficeFourBlocker"
+                name="updateStatusForm"
+                parameter="command"
+                scope="session"
+                type="org.springframework.web.struts.DelegatingActionProxy"
+                input="/jsp/frontOffice/frontOfficeFourBlockerLeader.jsp"
+                validate="false">
+             <forward name="success" path="/jsp/frontOffice/frontOfficeFourBlockerLeader.jsp"></forward>
+             <forward name="equity_success" path="/jsp/frontOffice/frontOfficeFourBlockerLeader.jsp"></forward>
+             <forward name="home.jsp"  path="/homePage.do"  />
+  			 <forward name="submitSuccess"  path="/homePage.do"  /> 
+  			 <forward name="day2Leg" path="/jsp/day2/day2InputScreens.jsp" />
+        </action>
+ 		<action path="/middleOffice/middleOfficeInputLeg" 
+        		name="inputform" 
+        		parameter="command"
+        		scope="request"
+        		type="org.springframework.web.struts.DelegatingActionProxy">
+        	<forward name="success" path="/jsp/middleOffice/middleOfficeFourBlocker.jsp"></forward>
+        	<forward name="legSummary" path="/jsp/day1InputScreens.jsp"></forward>
+        	<forward name="nextLeg" path="/middleOffice/middleOffice.do?command=legDetails"></forward>
+        	<forward name="successCPA" path="/jsp/middleOffice/middleOfficeFourBlocker.jsp"></forward>
+      		<forward name="legSummaryCPA" path="/jsp/day1InputScreens.jsp"></forward>
+        	<forward name="equity_success"  path="/jsp/middleOffice/middleOfficeFourBlocker.jsp" />
+  			<forward name="equity_legSummary" path="/jsp/day1InputScreens.jsp"></forward>
+  			<forward name="day2Leg" path="/jsp/day2/day2InputScreens.jsp" />
+        </action>
+      	
+      	<action path="/middleOffice/middleOfficeFourBlockerValidation" 
+        		name="dealRequestForm"
+        		scope="session"  
+        		type="org.springframework.web.struts.DelegatingActionProxy"
+        		parameter="command"
+				input="/jsp/middleOffice/middleOfficeFourBlocker.jsp"
+				validate="false">
+				
+  			<forward name="success"  path="/jsp/middleOffice/middleOfficeFourBlocker.jsp" />
+  			<forward name="submitSuccess"  path="/homePage.do"  />
+ 		</action>
+ 	   	<action path="/treasuryLegal/treasuryLegal" 
+        		name="updateStatusForm" 
+        		parameter="command"
+        		scope="session" 
+        		type="org.springframework.web.struts.DelegatingActionProxy"
+        		input="/jsp/treasurylegal/treasuryLegalFourBlocker.jsp"
+        		validate="false">
+        	<forward name="success" path="/jsp/treasurylegal/treasuryLegalFourBlocker.jsp"></forward>
+        	<forward name="successCPA" path="/jsp/treasurylegal/treasuryLegalFourBlocker.jsp"></forward>
+        	<forward name="legSummary" path="/jsp/day1InputScreens.jsp"></forward>
+        	<forward name="legSummaryCPA" path="/jsp/day1InputScreens.jsp"></forward>
+        	<forward name="equity_success" path="/jsp/treasurylegal/treasuryLegalFourBlocker.jsp"></forward>
+        	<forward name="equity_legSummary" path="/jsp/day1InputScreens.jsp"></forward>
+        	<forward name="homePage" path="/homePage.do"   ></forward>
+        	<forward name="submitSuccess"  path="/homePage.do"  />
+        	<forward name="day2Leg" path="/jsp/day2/day2InputScreens.jsp" />
+        </action> 
+ 		<action path="/additionalApprovers" 
+        		name="updateStatusForm" 
+        		parameter="command"
+        		scope="session" 
+        		type="org.springframework.web.struts.DelegatingActionProxy"
+        		input="/jsp/treasurylegal/treasuryLegalFourBlocker.jsp"
+        		validate="false">
+        	<forward name="success" path="/jsp/treasurylegal/treasuryLegalFourBlocker.jsp"></forward>
+        	<forward name="frontOffice" path="/jsp/frontOffice/frontOfficeFourBlockerReviewer.jsp"></forward>
+        	<forward name="submitSuccess"  path="/homePage.do"  />
+        </action>
+        <action path="/businessApprovers" 
+        		name="updateStatusForm" 
+        		parameter="command"
+        		scope="session" 
+        		type="org.springframework.web.struts.DelegatingActionProxy"
+        		input="/jsp/frontOffice/frontOfficeFourBlockerReviewer.jsp"
+        		validate="false">
+        	<forward name="success" path="/jsp/frontOffice/frontOfficeFourBlockerReviewer.jsp"></forward>
+        	<forward name="submitSuccess"  path="/homePage.do"  />
+        </action>
+        <action path="/treasuryLegal/treasuryLegalLeg" 
+        		name="inputform" 
+        		parameter="command"
+        		scope="request"
+        		type="org.springframework.web.struts.DelegatingActionProxy">
+        	<forward name="success" path="/jsp/treasurylegal/treasuryLegalFourBlocker.jsp"></forward>
+        	<forward name="legSummary" path="/jsp/day1InputScreens.jsp"></forward>
+        	<forward name="successCPA" path="/jsp/treasurylegal/treasuryLegalFourBlocker.jsp"></forward>
+      		<forward name="legSummaryCPA" path="/jsp/day1InputScreens.jsp"></forward>
+        	<forward name="equity_success" path="/jsp/treasurylegal/treasuryLegalFourBlocker.jsp"></forward>
+        	<forward name="equity_legSummary" path="/jsp/day1InputScreens.jsp"></forward>
+        	<forward name="nextLeg" path="/treasuryLegal/treasuryLegal.do?command=legDetails"></forward>
+        	<forward name="day2Leg" path="/jsp/day2/day2InputScreens.jsp" />
+        </action>
+   
+
+        <action path="/transferPricing/transferPricing" 
+        		name="updateStatusForm"
+        		scope="session"  
+        		input="/jsp/transferPricing/transferPricingFourBlocker.jsp"
+        		type="org.springframework.web.struts.DelegatingActionProxy"
+        		parameter="command"
+        		validate="false">
+  			<forward name="success"  path="/jsp/transferPricing/transferPricingFourBlocker.jsp" />
+  		    <forward name="legSummary" path="/transferPricing/transferPricingLegView.do?command=openRCALeg"></forward> 
+  		    <forward name="otherlegSummary" path="/transferPricing/transferPricingOtherLegView.do?command=openRCALeg"></forward> 
+  		    <forward name="legSummaryCPA" path="/transferPricing/cpatransferPricingLegView.do?command=openCPALeg"></forward>
+  		    <forward name="successCPA" path="/jsp/transferPricing/transferPricingFourBlocker.jsp"></forward>
+      		<forward name="equity_success"  path="/jsp/equity/transferPricing/equityTransferPricingFourBlocker.jsp" />
+  			<forward name="equity_legSummary" path="/jsp/day1InputScreens.jsp"></forward>
+  			<forward name="submitSuccess"  path="/homePage.do"  />
+  			<forward name="homePage" path="/homePage.do"   ></forward>
+  			<forward name="day2Leg" path="/transferPricing/transferPricingOtherLegView.do?command=openRCALeg" />  
+  			<forward name="day2CPALeg" path="/transferPricing/cpatransferPricingLegView.do?command=openCPALeg"></forward>
+ 		</action>
+ 		
+ 		<action path="/transferPricing/transferPricingLegView" 
+        		name="ICFPLegRequestForm" 
+        		parameter="command"
+        		validate="false"
+        		input="/jsp/transferPricing/rcaTransferPricingInput.jsp"
+        		scope="session"
+        		type="org.springframework.web.struts.DelegatingActionProxy">
+        	<forward name="success"  path="/transferPricing/transferPricing.do?command=load" />
+        	<forward name="legSummary" path="/jsp/day1InputScreens.jsp" />
+        	<forward name="otherlegSummary" path="/jsp/day1InputScreens.jsp"></forward>
+        	<forward name="submitSuccess"  path="/homePage.do"  />
+        	<forward name="day2Leg" path="/jsp/day2/day2InputScreens.jsp" />
+        </action>
+ 		
+ 		<action path="/transferPricing/transferPricingLeg" 
+        		name="ICFPLegRequestForm"
+        		scope="session"  
+        		type="org.springframework.web.struts.DelegatingActionProxy"
+        		parameter="command"
+        		validate="false">
+        	<forward name="success"  path="/jsp/transferPricing/transferPricingFourBlocker.jsp" />
+        	<forward name="legSummary" path="/jsp/day1InputScreens.jsp" />
+        	<forward name="nextlegSummary" path="/transferPricing/transferPricingLegView.do?command=openRCALeg"></forward> 
+        	<forward name="nextLeg" path="/transferPricing/transferPricing.do?command=legDetails"></forward>
+        	<forward name="equity_legSummary" path="/transferPricing/transferPricing.do?command=legDetails"></forward>
+        	<forward name="day2Leg" path="/jsp/day2/day2InputScreens.jsp" />
+        </action>
+        
+        <action path="/transferPricing/cpatransferPricingLegView" 
+        		name="cpaLegRequestForm" 
+        		parameter="command"
+        		validate="false"
+        		input="/jsp/transferPricing/cpaTransferPricingInput.jsp"
+        		scope="session"
+        		type="org.springframework.web.struts.DelegatingActionProxy">
+        	<forward name="success"  path="/transferPricing/transferPricing.do?command=load" />
+        	<forward name="cpaLegSummary" path="/jsp/day1InputScreens.jsp"></forward>
+        	<forward name="day2Leg" path="/jsp/day2/day2InputScreens.jsp" />
+        </action>
+        
+        <action path="/transferPricing/cpatransferPricingLeg" 
+        		name="cpaLegRequestForm" 
+        		parameter="command"
+        		scope="session"
+        		validate="false"
+        		type="org.springframework.web.struts.DelegatingActionProxy">
+        	<forward name="success"  path="/transferPricing/transferPricing.do?command=load" />
+        	<forward name="cpaLegSummary" path="/jsp/day1InputScreens.jsp"></forward>
+        </action>
+        
+        <action path="/transferPricing/day2CPATransferPricingLeg" 
+        		name="cpaLegRequestForm" 
+        		parameter="command"
+        		validate="false"
+        		scope="session"
+        		type="org.springframework.web.struts.DelegatingActionProxy">
+        	<forward name="success"  path="/transferPricing/transferPricing.do?command=load" />
+        	<forward name="day2Leg" path="/jsp/day2/day2InputScreens.jsp"></forward>
+        </action>
+        
+        <action path="/transferPricing/transferPricingOtherLegView" 
+        		name="ICFPLegRequestForm" 
+        		parameter="command"
+        		validate="false"
+        		input="/jsp/transferPricing/otherTransferPricingInput.jsp"
+        		scope="session"
+        		type="org.springframework.web.struts.DelegatingActionProxy">
+        		
+        	<forward name="success"  path="/transferPricing/transferPricing.do?command=load" />
+        	<forward name="otherlegSummary" path="/jsp/day1InputScreens.jsp"></forward>
+        	<forward name="submitSuccess"  path="/homePage.do"  />
+        	<forward name="day2Leg" path="/jsp/day2/day2InputScreens.jsp" />
+        </action>
+ 		
+ 		<action path="/transferPricing/transferPricingOtherLeg" 
+        		name="ICFPLegRequestForm"
+        		scope="session"  
+        		type="org.springframework.web.struts.DelegatingActionProxy"
+        		input="/jsp/transferPricing/otherTransferPricingInput.jsp"
+        		parameter="command"
+        		validate="false">
+        	<forward name="success"  path="/transferPricing/transferPricing.do?command=load" />
+        	<forward name="legSummary" path="/jsp/day1InputScreens.jsp"/>
+        	<forward name="otherlegSummary" path="/jsp/day1InputScreens.jsp"/>
+        	 <forward name="nextlegSummary" path="/transferPricing/transferPricingLegView.do?command=openRCALeg"></forward>
+        	 <forward name="day2Leg" path="/jsp/day2/day2InputScreens.jsp" /> 
+        </action>
+ 
+        <!-- ========================= Risk Underwriting ================================ -->
+
+		<action path="/riskUnderwriting/riskUnderwriting"
+			name="updateStatusForm"
+			scope="session"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="command"
+			input="/jsp/riskunderwriting/riskUnderwritingFourBlocker.jsp"
+			validate="false">
+			<forward name="success" path="/jsp/riskunderwriting/riskUnderwritingFourBlocker.jsp" />
+			<forward name="successCPA" path="/jsp/riskunderwriting/riskUnderwritingFourBlocker.jsp" />
+			<forward name="homePage" path="/homePage.do"  />
+			<forward name="submitSuccess" path="/homePage.do"  />
+        	<forward name="viewInputScreens" path="/jsp/common/allInputScreens.jsp" />
+        	<forward name="day2Leg" path="/jsp/day2/day2InputScreens.jsp" /> 
+        </action> 
+        <!-- ========================= Equity Business CFO ================================ -->
+        <action path="/equityBusinessCFO"
+			name="updateStatusForm"
+			scope="session"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="command"
+			input="/jsp/equityBusiness/equityBusinessCFOFourBlocker.jsp"
+			validate="false">
+			<forward name="success" path="/jsp/equityBusiness/equityBusinessCFOFourBlocker.jsp" />
+			<forward name="homePage" path="/homePage.do"  />
+			<forward name="submitSuccess" path="/homePage.do"  />
+			<forward name="approveSuccess" path="/homePage.do" ></forward>
+        	<forward name="rejectSuccess" path="/homePage.do" ></forward>
+        	<forward name="viewInputScreens" path="/jsp/common/allInputScreens.jsp" />
+        	<forward name="day2Leg" path="/jsp/day2/day2InputScreens.jsp" />
+        </action>
+        
+        <!-- ========================= Equity Business Approvers ================================ -->
+        <action path="/equityBusinessApprover"
+			name="updateStatusForm"
+			scope="session"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="command"
+			input="/jsp/equityBusiness/equityBusinessApproverFourBlocker.jsp"
+			validate="false">
+			<forward name="success" path="/jsp/equityBusiness/equityBusinessApproverFourBlocker.jsp" />
+			<forward name="homePage" path="/homePage.do"  />
+			<forward name="submitSuccess" path="/homePage.do"  />
+			<forward name="approveSuccess" path="/homePage.do" ></forward>
+        	<forward name="rejectSuccess" path="/homePage.do" ></forward>
+        	<forward name="viewInputScreens" path="/jsp/common/allInputScreens.jsp" />
+        	<forward name="day2Leg" path="/jsp/day2/day2InputScreens.jsp" />
+        </action>
+       
+        <!-- ========================= IDAG EAG ================================ -->
+
+		<action path="/idagEag/idagEag"
+			name="updateStatusForm"
+			scope="session"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="command"
+			input="/jsp/idag/idagEagFourBlockerSuperUser.jsp"
+			validate="false">
+			<forward name="success" path="/jsp/idag/idagEagFourBlockerSuperUser.jsp" />
+			<forward name="successCPA" path="/jsp/idag/idagEagFourBlockerSuperUser.jsp" />
+			<forward name="homePage" path="/homePage.do"  />
+			<forward name="submitSuccess" path="/homePage.do"  />
+        	<forward name="viewInputScreens" path="/jsp/common/allInputScreens.jsp" />
+        	<forward name="day2Leg" path="/jsp/day2/day2InputScreens.jsp" /> 
+        </action> 
+        
+        
+		<action path="/underwriting"
+			name="updateStatusForm"
+			scope="session"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="command"
+			input="/jsp/idag/idagEagFourBlockerSuperUser.jsp"
+			validate="false">
+			<forward name="success" path="/jsp/idag/idagEagFourBlockerSuperUser.jsp" />
+			<forward name="successCPA" path="/jsp/idag/idagEagFourBlockerSuperUser.jsp" />
+			<forward name="homePage" path="/homePage.do"  />
+			<forward name="submitSuccess" path="/homePage.do"  />
+        	<forward name="viewInputScreens" path="/jsp/common/allInputScreens.jsp" />
+        	<forward name="day2Leg" path="/jsp/day2/day2InputScreens.jsp" /> 
+        </action> 
+       
+        <!-- ========================= TESG ================================ -->
+
+		<action path="/tesg/tesg"
+			name="updateStatusForm"
+			scope="session"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="command"
+			input="/jsp/tesg/tesgFourBlockerSuperUser.jsp"
+			validate="false">
+			<forward name="success" path="/jsp/tesg/tesgFourBlockerSuperUser.jsp" />
+			<forward name="successCPA" path="/jsp/tesg/tesgFourBlockerSuperUser.jsp" />
+			<forward name="homePage" path="/homePage.do"  />
+			<forward name="submitSuccess" path="/homePage.do"  />
+        	<forward name="viewInputScreens" path="/jsp/common/allInputScreens.jsp" />
+        	<forward name="day2Leg" path="/jsp/day2/day2InputScreens.jsp" /> 
+        </action> 
+       
+       
+       <action path="/transferPricing/rcaTransferPricingInputView"
+				name="RCALegRequestForm"
+				scope="request" 
+				type="org.springframework.web.struts.DelegatingActionProxy"
+				input="/jsp/transferPricing/rcaTransferPricingInput.jsp"
+				parameter="command"
+				validate="false">
+            <forward name="success" path="/jsp/day1InputScreens.jsp" />
+        </action>
+        <action path="/transferPricing/rcaTransferPricingInput"
+				name="rcaTransferPricingInputForm"
+				scope="request" 
+				type="org.springframework.web.struts.DelegatingActionProxy"
+				parameter="command"
+				validate="false">
+            <forward name="success" path="/jsp/day1InputScreens.jsp" />
+        </action>
+        
+        <!-- ========================= Transaction Capture Additional Reviewers Four Blocker ================================ -->
+        <action path="/transactionCapture/transactionCapture*" 
+        		name="updateStatusForm" 
+        		parameter="command"
+        		scope="session" 
+        		type="org.springframework.web.struts.DelegatingActionProxy"
+        		input="/jsp/transactioncapture/transactionCapture{1}.jsp"
+        		validate="false">
+        	<forward name="success" path="/jsp/transactioncapture/transactionCapture{1}.jsp"></forward>
+        	<forward name="successCPA" path="/jsp/transactioncapture/transactionCapture{1}.jsp"></forward>
+        <!-- 	<forward name="successManager" path="/jsp/transactioncapture/transactionCaptureManagerFourBlocker.jsp"></forward>-->
+        	<forward name="legSummary" path="/jsp/transactioncapture/transactionCaptureMiddleOfficeLeg.jsp"></forward> 
+        	<forward name="legSummaryCPA" path="/jsp/transactioncapture/transactionCaptureMiddleOfficeLeg.jsp"></forward>
+        	<forward name="viewInputScreens" path="/jsp/common/allInputScreens.jsp" />
+        	<forward name="submitSuccess" path="/homePage.do" ></forward>
+        	<forward name="approveSuccess" path="/homePage.do" ></forward>
+        	<forward name="rejectSuccess" path="/homePage.do" ></forward>
+        	<forward name="homePage" path="/homePage.do"   ></forward>
+        	<forward name="equity_success" path="/jsp/transactioncapture/transactionCapture{1}.jsp"></forward>
+      		<forward name="equity_legSummary" path="/jsp/transactioncapture/transactionCaptureMiddleOfficeLeg.jsp"></forward>
+      		<forward name="day2TCMOleg" path="/jsp/day2/day2transactionCaptureMO.jsp"></forward>
+      		<forward name="day2Leg" path="/jsp/day2/day2InputScreens.jsp" />
+        </action>
+        
+        <action path="/transactionCapture/transactionCaptureLeg" 
+        		name="inputform" 
+        		parameter="command"
+        		scope="session" 
+        		type="org.springframework.web.struts.DelegatingActionProxy">
+        	<forward name="success" path="/jsp/transactioncapture/transactionCaptureMOFourBlocker.jsp"></forward>
+        	<forward name="legSummary" path="/jsp/transactioncapture/transactionCaptureMiddleOfficeLeg.jsp"></forward>
+        	<forward name="nextLeg" path="/transactionCapture/transactionCaptureMOFourBlocker.do?command=legDetails"></forward>
+        	<forward name="nextLegFOCM" path="/transactionCapture/transactionCaptureFOCMFourBlocker.do?command=viewInputScreens"></forward>
+        	<forward name="successCPA" path="/jsp/transactioncapture/transactionCaptureMOFourBlocker.jsp"></forward>
+      		<forward name="legSummaryCPA" path="/jsp/transactioncapture/transactionCaptureMiddleOfficeLeg.jsp"></forward>
+      		<forward name="equity_success" path="/jsp/transactioncapture/transactionCaptureMOFourBlocker.jsp"></forward>
+      		<forward name="equity_legSummary" path="/jsp/transactioncapture/transactionCaptureMiddleOfficeLeg.jsp"></forward>
+            <forward name="sucessCMFO" path="/jsp/transactioncapture/transactionCaptureFOCMFourBlocker.jsp"/>
+            <forward name="day2Leg" path="/jsp/day2/day2InputScreens.jsp" />
+            <forward name="viewInputScreens" path="/jsp/common/allInputScreens.jsp" />
+        </action>
+        
+        <action path="/transferPricing/equityTransferPricing" 
+        		name="inputform" 
+        		parameter="command"
+        		scope="session"
+        		type="org.springframework.web.struts.DelegatingActionProxy">
+             <forward name="success" path="/jsp/transferPricing/transferPricingFourBlocker.jsp"></forward>
+        	 <forward name="legSummary" path="/jsp/day1InputScreens.jsp"></forward>
+        	 <forward name="nextLeg" path="/transferPricing/transferPricing.do?command=legDetails"></forward>
+        </action>
+        
+        <action path="/admin/admin" 
+        		name="adminform" 
+        		parameter="command"
+        		scope="session"
+        		type="org.springframework.web.struts.DelegatingActionProxy" 
+        		validate="false">
+        	<forward name="success" path="/jsp/admin/adminDataMaintenance.jsp"></forward>
+        	<forward name="editTable" path="/jsp/admin/adminEditTable.jsp"></forward>
+        	<forward name="editDropdown" path="/jsp/admin/adminEditDropdown.jsp"></forward>
+        	<forward name="editString" path="/jsp/admin/adminEditString.jsp"></forward>
+        	<forward name="modifyApprover" path="/jsp/admin/adminModifyApprover.jsp"></forward>
+        	<forward name="manageDelegation" path="/jsp/admin/adminSearchDelegation.jsp"></forward>
+        	<forward name="openManageRoles" path="/manageDelegation.do?command=openAdminManageDelegations"></forward>
+        </action>
+        <!-- Lookup for typeahead -->
+        <action path="/lookup"
+        		parameter="cmd"
+        		scope="request"
+        		type="org.springframework.web.struts.DelegatingActionProxy">
+        	<forward name="LEresults" path="/jsp/common/LEResult.jsp"/>
+            <forward name="MEresults" path="/jsp/common/MEResult.jsp"/>	
+            <forward name="TCODEResults" path="/jsp/common/TCodeResult.jsp"/>
+        </action>		
+            <!-- =========================== Contact Us Results ===================================== -->
+         <action path="/contactUs/contactUs" 
+        		name="searchResultsForm"
+        		scope="session"  
+        		type="org.springframework.web.struts.DelegatingActionProxy"
+        		parameter="command">
+  			<forward name="contactUs"  path="/jsp/contactUs/contactUs.jsp" />
+ 		</action>
+ 		<action path="/help" 
+        		name="searchResultsForm"
+        		scope="session"  
+        		type="org.springframework.web.struts.DelegatingActionProxy"
+        		parameter="command">
+  			<forward name="help"  path="/lib/hello.pdf" />
+ 		</action>
+ 		
+            <!-- =========================== Search Results ===================================== -->
+        <action path="/searchResults" 
+        		name="searchResultsForm"
+        		scope="session"  
+        		type="org.springframework.web.struts.DelegatingActionProxy"
+        		parameter="command">
+  			<forward name="searchResults"  path="/jsp/search/searchForm.jsp" />
+  			<forward name="searchForm"  path="/jsp/search/searchForm.jsp" />
+  			<forward name="searchDetails"  path="/jsp/search/searchResults.jsp" />
+  			<forward name="viewInputScreens" path="/jsp/day1InputScreens.jsp" />
+  			<forward name="day2Leg" path="/jsp/day2/day2InputScreens.jsp" />
+  			<forward name="homePage" path="/homePage.do"  />
+  			<forward name="searchroute" path="/jsp/searchRouter.jsp"/>
+            <forward name="searchreadOnly"
+             path="/searchResults.do?command=searchEmailResults"/>
+ 		</action>
+ 		 <!-- ========================Cognos Reports========================= -->
+ 		 <action path="/reports/cognosReports" 
+        		name="pipelineManagementFilterForm"
+        		scope="request"  
+        		type="org.springframework.web.struts.DelegatingActionProxy"
+        		parameter="command">
+  			<forward name="dealReportTest" path="/jsp/report/dealReportTest.jsp"/>
+  			<forward name="dealDataReport" path="/jsp/report/dealDataReport.jsp"/>
+ 		</action>
+        <!-- for opening deal from Email notification -->
+        <action path="/router"
+                scope="request"
+                type="org.springframework.web.struts.DelegatingActionProxy"
+                parameter="cmd">
+            <forward name="route" path="/jsp/router.jsp"/>
+            <forward name="readOnly"
+             path="/searchResults.do?command=searchEmailResults"/>    
+        </action>        
+
+
+ 		 
+	</action-mappings>
+	<message-resources parameter="properties.application"/>
+	<message-resources key="exception" parameter="properties.exception"/>
+	 	
+	 	 	
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">     
+    <set-property property="pathnames"        
+    value="/WEB-INF/config/validator-rules.xml,/WEB-INF/config/validation.xml" /> 
+    </plug-in>
+    <plug-in className="formdef.plugin.FormDefPlugIn">
+        <set-property property="pathnames" value="/WEB-INF/config/form-defs/dealrequest-defs.xml"/>
+    </plug-in>
+</struts-config>

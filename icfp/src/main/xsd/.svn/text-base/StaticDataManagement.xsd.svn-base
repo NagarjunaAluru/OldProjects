@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ICFP/MsgHeader.xsd"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/StaticDataManagement.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/StaticDataManagement.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/MsgHeader.xsd" schemaLocation="MsgHeader.xsd"/>
+	<xs:element name="StaticDataManagement">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Deal_Category" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Product_Type" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Terms_And_Conditions" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="General_Amendment_Types" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Derivative_Types" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Hedge_Designations" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Contract_Class" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Tax_Designation" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns1:Msg_Header" minOccurs="0"/>
+				<xs:element ref="Interest_Reset_Freq" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Day_Count" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Hedge_Program" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Model_Score" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="SNP_Rating" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Range" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Final_Rating" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Fund_Hold_Other" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="SearchCriteria" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Attachment_Types" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Transaction_Captured_In" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Share_Type" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Equity_Forms" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Model_Type" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Region_Responsibility" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Cert_List" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="FC_HC_OC" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="SolvencyMetrics_Calc" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Solvency_Metrics_Calc_Id" type="xs:string" minOccurs="0"/>
+							<xs:element name="Solvency_Metrics_Type_Id" type="xs:string" minOccurs="0"/>
+							<xs:element name="Pass" type="xs:string" minOccurs="0"/>
+							<xs:element name="Conditional_Pass" type="xs:string" minOccurs="0"/>
+							<xs:element name="Weak_Performer" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="WF_Stage_Details" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="WF_Stage_Id" type="xs:string" minOccurs="0"/>
+							<xs:element name="WF_Stage" type="xs:string" minOccurs="0"/>
+							<xs:element name="WF_Stage_Desc" type="xs:string" minOccurs="0"/>
+                            <xs:element name="For_Search" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Reference_Data" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Reference_Data_Id" type="xs:string" minOccurs="0"/>
+							<xs:element name="Reference_Data_Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="Reference_Data_Value" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Transaction_Event_Types" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Event_Type_ID" type="xs:string" minOccurs="0"/>
+							<xs:element name="Event_Type_Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="Leg_Type_ID" type="xs:string" minOccurs="0"/>
+							<xs:element name="Leg_Type_Name" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Contact_ICF" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="SSO_ID" type="xs:string" minOccurs="0"/>
+							<xs:element name="Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="Phone_Number" type="xs:string" minOccurs="0"/>
+							<xs:element name="Email" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Deal_Category" type="NameValue"/>
+	<xs:element name="SearchCriteria" type="NameValue"/>
+	<xs:element name="Product_Type" type="NameValue"/>
+	<xs:element name="Terms_And_Conditions" type="NameValue"/>
+	<xs:element name="General_Amendment_Types" type="NameValue"/>
+	<xs:element name="Derivative_Types" type="NameValue"/>
+	<xs:element name="Hedge_Designations" type="NameValue"/>
+	<xs:element name="Contract_Class" type="NameValue"/>
+	<xs:element name="Tax_Designation" type="NameValue"/>
+	<xs:element name="Model_Score" type="NameValue"/>
+	<xs:element name="SNP_Rating" type="NameValue"/>
+	<xs:element name="Range" type="NameValue"/>
+	<xs:element name="Final_Rating" type="NameValue"/>
+	<xs:element name="Fund_Hold_Other" type="NameValue"/>
+	<xs:element name="Attachment_Types" type="NameValue"/>
+	<xs:element name="Transaction_Captured_In" type="NameValue"/>
+	<xs:element name="Share_Type" type="NameValue"/>
+	<xs:element name="Model_Type" type="NameValue"/>
+	<xs:element name="Region_Responsibility" type="NameValue"/>
+	<xs:element name="Equity_Forms" type="NameValue"/>
+	<xs:element name="Cert_List" type="NameValue"/>
+	<xs:element name="FC_HC_OC" type="NameValue"/>
+	<xs:complexType name="NameValue">
+		<xs:sequence>
+			<xs:element name="ID" type="xs:int" minOccurs="0"/>
+			<xs:element name="Name" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Interest_Reset_Freq" type="NameValue"/>
+	<xs:element name="Day_Count" type="NameValue"/>
+	<xs:element name="Hedge_Program" type="NameValue"/>
+</xs:schema>

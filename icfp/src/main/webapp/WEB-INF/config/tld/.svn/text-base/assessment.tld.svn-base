@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<taglib version="2.0" xmlns="http://java.sun.com/xml/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">
+
+	<tlib-version>1.0</tlib-version>
+	<short-name>Qualitative Assessments</short-name>
+	<uri>http://ge.com/icfp/taglibs/assessments</uri>
+	<display-name>ICFP Qualitative assessments Functions</display-name>
+	<description>ICFP Qualitative assessments Functions</description>
+	
+	<function>
+		<name>isChecked</name>
+		<function-class>com.ge.icfp.tag.CheckAssessment</function-class>
+		<function-signature>java.lang.Integer getAssessment(java.util.List, java.lang.Integer)</function-signature>
+	</function>
+	
+	<function>
+		<name>getComment</name>
+		<function-class>com.ge.icfp.tag.CheckAssessment</function-class>
+		<function-signature>java.lang.String getComment(java.util.List, java.lang.Integer)</function-signature>
+	</function>
+
+</taglib>

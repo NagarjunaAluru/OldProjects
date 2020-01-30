@@ -1,0 +1,21 @@
+###
+# Leg Summary Properties
+###
+
+# Table Headers
+columnHeader.select=Select
+columnHeader.blank=#
+columnHeader.action=Action
+columnHeader.legNo=Leg #
+columnHeader.productType=Product Type
+columnHeader.term=Term <span class=small>in months</span>
+columnHeader.lender=Lender/Provider
+columnHeader.borrower=Borrower/Recipient
+columnHeader.origCurr=Original Currency
+columnHeader.usdEquivalent=USD Equivalent
+columnHeader.derivatives=Derivatives
+columnHeader.existing=Existing
+columnHeader.legalEntity=Legal Entity
+columnHeader.country=Country
+columnHeader.currency=Currency
+columnHeader.amount=Amount

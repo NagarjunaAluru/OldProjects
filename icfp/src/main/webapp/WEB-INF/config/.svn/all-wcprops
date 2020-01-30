@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/ICFP-REWRITE/!svn/ver/9836/src/main/webapp/WEB-INF/config
+END
+global-struts-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/ICFP-REWRITE/!svn/ver/1652/src/main/webapp/WEB-INF/config/global-struts-config.xml
+END
+global-beans.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/ICFP-REWRITE/!svn/ver/9800/src/main/webapp/WEB-INF/config/global-beans.xml
+END
+struts-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/ICFP-REWRITE/!svn/ver/9739/src/main/webapp/WEB-INF/config/struts-config.xml
+END
+beans.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/ICFP-REWRITE/!svn/ver/9660/src/main/webapp/WEB-INF/config/beans.xml
+END
+validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/ICFP-REWRITE/!svn/ver/9453/src/main/webapp/WEB-INF/config/validation.xml
+END
+validator-rules.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/ICFP-REWRITE/!svn/ver/8219/src/main/webapp/WEB-INF/config/validator-rules.xml
+END
+bw-beans.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/ICFP-REWRITE/!svn/ver/9836/src/main/webapp/WEB-INF/config/bw-beans.xml
+END

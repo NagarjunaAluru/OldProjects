@@ -1,0 +1,52 @@
+8
+
+dir
+9840
+http://192.168.0.14/ICFP-REWRITE/src/main/java/com/ge/icfp/common/constants
+http://192.168.0.14/ICFP-REWRITE
+
+
+
+2013-02-07T18:29:23.182279Z
+9795
+prithivid
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ba77e99c-fc20-4067-90bb-d77db4103c45
+
+AttachmentConstants.java
+file
+
+
+
+
+2013-05-20T09:00:21.341664Z
+31d09d4dc30adeed3c9fed1ede970ab9
+2012-10-20T14:52:29.982220Z
+8960
+madhusudhang
+
+ICFPConstants.java
+file
+
+
+
+
+2013-05-20T09:00:21.347662Z
+e5c941f3e2dba25a12070624ec7d0793
+2013-02-07T18:29:23.182279Z
+9795
+prithivid
+

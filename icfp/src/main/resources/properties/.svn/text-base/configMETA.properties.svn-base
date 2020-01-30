@@ -1,0 +1,36 @@
+label.meta.lenderGoldID=Lender GOLD ID  
+label.meta.lenderCDR=Lender CDR Code
+label.meta.lenderBusiness=Lender Business
+label.meta.lenderLCI=Lender Country of Incorporation   
+label.meta.lenderLME=Lender Management Entity (BSLA) 
+label.meta.borrowerGoldID=Borrower_GOLD_ID   
+label.meta.borrowerCDR=Borrower_CDR_Code
+label.meta.borrowerBusiness=Borrower Business
+label.meta.borrowerLCI=Borrower Country of Incorporation
+label.meta.borrowerLME=Borrower Management Entity (BSLA)
+label.meta.workFlowRequestID=Workflow Request ID   
+label.meta.dealName=Deal Name
+label.meta.dealType=Deal Type
+label.meta.business=Business/Region
+label.meta.transactionNo=Transaction Details 
+label.meta.facilityNo=Facility #
+label.meta.TCS=Trade capture system
+label.meta.effectiveDT=Effective Date
+label.meta.closedDT=Closed Date
+label.meta.termDate=Termination / Maturity Date
+label.meta.productType=Loan Type.
+label.meta.documentType=Document Type
+label.meta.entityName1=Lender GE Entity Long Name 
+label.meta.entityName2=Borrower GE Entity Long Name 
+
+# CPA participant info
+label.meta.goldID=GOLD ID
+label.meta.cdrCode=CDR Code
+label.meta.meName=Management Entity (BSLA)
+label.meta.entityName=Entity Name
+# CPA pool leader info
+label.meta.poolName=Pool Name 
+label.meta.poolLeadGoldID=Pool Lead Gold ID
+label.meta.geEntityLongName=GE Entity Long Name
+label.meta.Currency=Currency
+

@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE form-definition PUBLIC "-//FormDef//FormDef Form Definition 1.0//EN" "https://formdef.dev.java.net/form-defs_1_0.dtd">
+
+
+<form-definition>
+	 <!-- set the default form type to DynaValidatorActionForm -->
+    <formdef-config formType="org.apache.struts.validator.DynaValidatorForm"/>
+
+    <global-converters>
+             <global-converter for="property-type"
+                target="javax.xml.datatype.XMLGregorianCalendar"
+                type="com.ge.icfp.util.convertion.formdef.XMLGregorianCalendarConverter"
+                param="MM/dd/yyyy"/>
+                
+              <global-converter for="converter-name" target="decimalConverter" param="###"/>
+              <global-converter for="converter-name" target="integerConverter" param="###"/>
+    </global-converters>
+
+    <formset>
+    
+    <form name="attachmentForm">
+    	 <field property="attachmentFile" type="org.apache.struts.upload.FormFile"  />
+    </form>
+    
+    <form name="qualitativeFactorsForm" beanType="com.ge.icfp.model.QualitativeFactors" />
+    
+    <form name="messageHeaderForm" beanType="com.ge.icfp.model.MsgHeader" />
+    
+     <form name="userInfoForm" beanType="com.ge.icfp.model.UserInfo" />
+    
+     <form name="additionalApproversForm" beanType="com.ge.icfp.model.AdditionalApprovers">
+     	<field property="userInfos" type="java.util.List">
+            <converter type="formdef.plugin.conversion.FormCollectionConverter" param="userInfoForm">
+                <set-property key="formType" value="java.util.ArrayList"/>
+                <set-property key="beanType" value="java.util.ArrayList"/>
+            </converter>
+        </field>
+    </form>
+    <form name="businessApproversForm" beanType="com.ge.icfp.model.BusinessApprovers"/>
+     	
+    
+	
+     <form name="pipelineManagementFilterForm">
+     	<field property="filterOption" />
+     	<field property="filterValue" />
+     </form>
+     
+    <form name="dealRequestForm" beanType="com.ge.icfp.model.DealRequest" formType="org.apache.struts.validator.DynaValidatorForm">
+    	<excludes>attachments,commentsLogs,auditLogs,actionLogs,legs,qualitativeFactors</excludes>
+ 	
+    	<field property="subordinatedDebtFlag"  getter="isSubordinatedDebtFlag" />
+    	<field property="crossBorderFlag"  getter="isCrossBorderFlag" />
+    	<field property="nonStandardDocsFlag"  getter="isNonStandardDocsFlag" />
+    	<field property="impairmentHistoryFlag"  getter="isImpairmentHistoryFlag" />
+    	<field property="finSttmntDtAboveOneYrFlag"  getter="isFinSttmntDtAboveOneYrFlag" />
+    	<field property="derivativesNeededFlag"  getter="isDerivativesNeededFlag" />
+    	<field property="equityInfusionsDividendsFlag"  getter="isEquityInfusionsDividendsFlag" />
+    	<field property="prudentiallyRegulatedEntityFlag"  getter="isPrudentiallyRegulatedEntityFlag" />
+    	<field property="principalLegalEntityFlag"  getter="isprincipalLegalEntityFlag" />
+    	<field property="chngAfterIdagApprovalFlag"  getter="isChngAfterIdagApprovalFlag" />
+    	<field property="chngAfterApprovalsFlag"  getter="isChngAfterApprovalsFlag" />
+    	<field property="riskOverrideFlag"  getter="isRiskOverrideFlag" />
+    	<field property="foAffirmFlag"  getter="isFOAffirmFlag" />
+    	<field property="addApproverFlag"  getter="isAddApproverFlag" />
+  	    <field property="cashmapDocument" type="org.apache.struts.upload.FormFile"  />
+  	    <field property="structureDocument" type="org.apache.struts.upload.FormFile"  />
+  	    <field property="legalDocument" type="org.apache.struts.upload.FormFile"  />
+  	    <field property="consolidatedDocument" type="org.apache.struts.upload.FormFile"  />
+  	    <field property="corporateDocument" type="org.apache.struts.upload.FormFile"  />
+  	    <field property="otherDocument" type="org.apache.struts.upload.FormFile"  />
+  	    <field property="equityPitch" type="org.apache.struts.upload.FormFile"  />
+  	    <field property="transferPricingAttachment" type="org.apache.struts.upload.FormFile"  />
+  	    <field property="journalEntries" type="org.apache.struts.upload.FormFile"  />
+  	    <field property="derivativeComments" type="java.lang.String[]" />
+  	    <field property="derivativeTradeTicket" type="org.apache.struts.upload.FormFile"  />
+		<field property="exceptionDocument" type="org.apache.struts.upload.FormFile" />
+		<field property="ameexceptionDocument" type="org.apache.struts.upload.FormFile"  />
+		<!-- Following five properties are added for attachment comments -->
+		<field property="atmtCommentType" type="java.lang.String[]" />
+		<field property="atmtComment" type="java.lang.String[]" />
+		<field property="atmtLegNumber" type="java.lang.String[]" />
+  	    <field property="atmtLegCommentType" type="java.lang.String[]" />
+		<field property="atmtLegComment" type="java.lang.String[]" />
+  	    
+  	    <field property="msgHeader" formName="messageHeaderForm" />
+    	<field property="additionalApprovers" formName="additionalApproversForm" />
+    	<!-- field property="businessApprovers" formName="businessApproversForm" -->
+    	<field property="businessApprovers" type="java.util.List">
+    		<converter type="formdef.plugin.conversion.FormCollectionConverter" param="businessApproversForm">
+    			<set-property key="formType" value="java.util.ArrayList" />
+                <set-property key="beanType" value="java.util.ArrayList" />
+    		</converter>
+    	</field>
+    	
+    	    	
+        <field property="otherRadios" type="java.lang.String[]"  />
+    	<field property="page" type="java.lang.Integer" initial="2"/>
+     	<field property="defaultClassificationLevel" type="java.lang.Boolean" getter="isDefaultClassificationLevel" />
+     	<field property="revisedTransactionClassificationLevel" type="java.lang.String" getter="isRevisedTransactionClassificationLevel" />
+     	<field property="revisedTransactionClassificationLevelComment" type="java.lang.String" getter="isRevisedTransactionClassificationLevelComment" />
+		<field property="riskReviewOverrideNeeded" type="java.lang.Boolean" getter="isRiskReviewOverrideNeeded" />
+		<field property="dComments" type="java.lang.String"/>
+		<field property="sbComments" type="java.lang.String"/>
+		<field property="legTypeId" type="java.lang.String"/>
+		<field property="eventTypeId" type="java.lang.String"/>
+		<field property="eventTypes" type="java.util.HashMap"/>
+		<field property="cloneFlag" type="java.lang.String"/>
+		
+	 </form>
+    
+     <form name="updateDealStatusForm" beanType="com.ge.icfp.model.UpdateStatus">
+    	<excludes>attachments,commentsLogs,auditLogs,actionLogs,legs,qualitativeFactors</excludes>
+    </form>
+
+	 <form name="entityForm" beanType="com.ge.icfp.model.Entity">
+   		<field property="princplEntityFlag"  getter="isPrincplEntityFlag" />
+   		<field property="regulatedEntityFlag"  getter="isRegulatedEntityFlag" />
+   		<field property="treasuryCode" type="java.lang.String" />
+   	</form>
+ 	
+ 	<form name="entityInfoForm" beanType="com.ge.icfp.model.EntityInfo">
+ 		<field property="entity" formName="entityForm" />
+ 	</form>
+ 	 
+ 	 <form name="solvencyMetricsForm" beanType="com.ge.icfp.model.SolvencyMetrics">
+ 	   <field property="assessmentFlag"  getter="isAssessmentFlag" />
+ 	 </form>
+ 	 
+ 	<form name="TPLegRequestForm" beanType="com.ge.icfp.model.TPLegRequest">
+ 		<field property="sovereignConstraintFlag"  getter="isSovereignConstraintFlag" />
+ 	    <field property="solvencyMetrics" type="java.util.List">
+    		<converter type="formdef.plugin.conversion.FormCollectionConverter" param="solvencyMetricsForm">
+    			<set-property key="formType" value="java.util.ArrayList" />
+                <set-property key="beanType" value="java.util.ArrayList" />
+    		</converter>
+    	</field>
+ 	     
+ 	</form>
+ 	
+ 	<form name="fixedInformationForm" beanType="com.ge.icfp.model.FixedInformation" />
+ 	
+ 	<form name="floatInformationForm" beanType="com.ge.icfp.model.FloatInformation" />
+ 	
+ 	<!-- RateInformation Form -->
+ 	<form name="rateInformationForm" beanType="com.ge.icfp.model.RateInformation">
+ 		<field property="fixedInformation" formName="fixedInformationForm" />
+ 		<field property="floatInformation" formName="floatInformationForm" />
+ 	</form>
+ 	
+ 	<!-- Exception Form -->
+ 	<form name="exceptionRequestForm" beanType="com.ge.icfp.model.ExceptionRequestForm">
+ 		<excludes>attachments</excludes>
+ 	</form>
+ 	<form name="ShareInfoForm" beanType="com.ge.icfp.model.ShareInfo">
+ 		<field property="numberOfShares">
+            <converter name="integerConverter"/>
+        </field>
+ 		<field property="shareValue">
+            <converter name="decimalConverter"/>
+        </field>
+ 	</form>
+ 	<!-- <form name="derivativesRequestCounterPartyInfos" beanType="com.ge.icfp.model.DerivativesRequest$CounterParytInfo" /> -->
+ 	
+ 	<form name="derivativesRequestForm" beanType="com.ge.icfp.model.DerivativesRequest">
+ 		<excludes>attachments</excludes>
+ 		<field property="counterPartyInfos" type="java.util.ArrayList" />
+ 		<field property="fixedOrFloat1" type="java.lang.String"/>
+ 		<field property="fixedOrFloat2" type="java.lang.String"/>
+		<field property="derivativeTradeTicket" type="org.apache.struts.upload.FormFile"  />
+		<field property="derivativeComments" type="java.lang.String[]" />
+ 		<field property="legNumber" />
+		<field property="derivativeNumber" />
+	<!-- <field property="termInMonths" type="java.lang.Integer"/> -->
+		<field property="firstCurrencyIndexTermMap" type="java.util.HashMap"/>
+		<field property="secondCurrencyIndexTermMap" type="java.util.HashMap"/>
+ 		<field property="currency1Name" type="java.lang.String"/>
+ 		<field property="currency2Name" type="java.lang.String"/>
+		
+ 	</form>
+ 	
+ 	<!-- LegSummary form -->
+ 	<form name="legSummaryForm" beanType="com.ge.icfp.model.LegSummary">
+ 		<excludes>attachments,derivativesRequests,commentsLog,entities</excludes>
+ 		
+ 		<!-- Please include all boolean properties -->
+ 		
+ 		<field property="qualitativeFactors" type="java.util.List">
+    		<converter type="formdef.plugin.conversion.FormCollectionConverter" param="qualitativeFactorsForm">
+    			<set-property key="formType" value="java.util.ArrayList" />
+                <set-property key="beanType" value="java.util.ArrayList" />
+    		</converter>
+    	</field>
+    	
+ 		 <field property="lenderEntity"  formName="entityForm" />
+    	 <field property="borrowerEntity"  formName="entityForm" />
+    	 <field property="newLenderEntity"  formName="entityForm" />
+    	 <field property="newBorrowerEntity"  formName="entityForm" />
+    	 <field property="payorEntity"  formName="entityForm" />
+
+    	 <field property="lenderTCodeEntity"  formName="entityForm" />
+    	 <field property="borrowerTCodeEntity"  formName="entityForm" />
+    	 <field property="newLenderTCodeEntity"  formName="entityForm" />
+    	 <field property="newBorrowerTCodeEntity"  formName="entityForm" />
+    	 <field property="payorTCodeEntity"  formName="entityForm" />
+    	 
+    	 <field property="guarantorEntity"  formName="entityForm" />
+    	
+    	<field property="exceptionRequestForms" type="java.util.List">
+    			<converter type="formdef.plugin.conversion.FormCollectionConverter" param="exceptionRequestForm">
+    				<set-property key="formType" value="java.util.ArrayList" />
+                	<set-property key="beanType" value="java.util.ArrayList" />
+    			</converter>
+    	</field>
+    	
+    	<field property="derivativesFlag" getter="isDerivativesFlag" />
+    	<field property="nonStandardAgreementsFlag" getter="isNonStandardAgreementsFlag" />
+    	<field property="existingFlag" getter="isExistingFlag" />
+    	<field property="subordinatedDebt" getter="isSubordinatedDebt" />
+    	<field property="eventNoticeAttachedFlag" getter="isEventNoticeAttachedFlag" />
+    	<field property="applyQA" type="java.lang.String"/>
+    	
+ 	</form>
+ 	
+ 	<form name="AssignmentForm" beanType="com.ge.icfp.model.Assignment">
+ 		<field property="newLenderOrBorrowerFlag" getter="isNewLenderOrBorrowerFlag" />
+ 		<field property="origLegalAgreementAttachedFlag" getter="isOrigLegalAgreementAttachedFlag" />
+ 	</form>
+ 	
+ 	<form name="DrawDownForm" beanType="com.ge.icfp.model.DrawDown">
+ 		<field property="drawdownNoticeAttachedFlag" getter="isDrawdownNoticeAttachedFlag" />
+ 	</form>
+ 	
+ 	<form name="PrePaymentForm" beanType="com.ge.icfp.model.PrePayment">
+ 		<field property="prepaymentNoticeAttachedFlag" getter="isPrepaymentNoticeAttachedFlag" />
+ 	</form>
+ 	
+ 	<form name="TerminationForm" beanType="com.ge.icfp.model.Termination">
+ 		<field property="terminationNoticeAttachedFlag" getter="isTerminationNoticeAttachedFlag" />
+ 	</form>
+ 	
+ 	<form name="DividendPaymentForm" beanType="com.ge.icfp.model.DividendPayment" />
+ 	
+ 	<form name="FacilityIncreaseDecreaseForm" beanType="com.ge.icfp.model.FacilityIncreaseDecrease" />
+ 	
+ 	<form name="AgreementExtensionForm" beanType="com.ge.icfp.model.AgreementExtension">
+ 		<field property="origLegalAgreementAttachedFlag" getter="isOrigLegalAgreementAttachedFlag" />
+ 	</form>
+ 	
+ 	<form name="CorrectionForm" beanType="com.ge.icfp.model.Correction" />
+ 	
+ 	<form name="CPATerminationForm" beanType="com.ge.icfp.model.CPATermination" />
+ 	
+ 	<form name="AmendmentForm" beanType="com.ge.icfp.model.Amendment">
+ 		<excludes>attachments</excludes>
+ 	</form>
+ 	
+ 	<form name="DayTwoOperationsForm" beanType="com.ge.icfp.model.DayTwoOperations">
+ 		<field property="assignment" formName="AssignmentForm" />
+ 		<field property="drawDown" formName="DrawDownForm" />
+ 		<field property="prePayment" formName="PrePaymentForm" />
+ 		<field property="dividendPayment" formName="DividendPaymentForm" />
+ 		<field property="facilityIncreaseDecrease" formName="FacilityIncreaseDecreaseForm" />
+ 		<field property="agreementExtension" formName="AgreementExtensionForm" />
+ 		<field property="correction" formName="CorrectionForm" />
+ 		<field property="CPATermination" formName="CPATerminationForm" />
+ 		<field property="amendments" type="java.util.List">
+    			<converter type="formdef.plugin.conversion.FormCollectionConverter" param="AmendmentForm">
+    				<set-property key="formType" value="java.util.ArrayList" />
+                	<set-property key="beanType" value="java.util.ArrayList" />
+    			</converter>
+    	</field>
+
+ 		<field property="termination" formName="TerminationForm" />
+ 		
+ 		
+ 		
+ 	</form>
+
+    <!-- RCA LegRequestForm -->
+ 	<form name="ICFPLegRequestForm" beanType="com.ge.icfp.model.RCALegRequest">
+ 		<field property="hedgeInterestRateDerivativieFlag" getter="isHedgeInterestRateDerivativieFlag" />
+ 		<field property="hedgeForeignExDerivativieFlag" getter="isHedgeForeignExDerivativieFlag" />
+ 		<field property="nonStandardAgreementsFlag" getter="isNonStandardAgreementsFlag" />
+ 		<field property="crossBorderFlag" getter="isCrossBorderFlag" />
+ 		<field property="withhldngTaxApplicableFlag"  getter="isWithhldngTaxApplicableFlag" />
+ 		<field property="commitmentFeeApplicableFlag"  getter="isCommitmentFeeApplicableFlag" />
+ 		<field property="immdtDrdownApplicableFlag"  getter="isImmdtDrdownApplicableFlag" />
+ 		<field property="guaranteeFeeApplicableFlag"  getter="isGuaranteeFeeApplicableFlag" />
+ 		<field property="guaranteeFlag" getter="isGuaranteeFlag" />
+ 		<field property="otherFeeFlag"  getter="isOtherFeeFlag" />
+ 		<field property="newLegalEntityFlag"  getter="isNewLegalEntityFlag" />
+ 		<field property="guaranteeAgreementFlag"  getter="isGuaranteeAgreementFlag" />
+ 		<field property="guarantorInformation" formName="entityInfoForm" />
+ 		<field property="TPLegRequest" formName="TPLegRequestForm" />
+ 		<field property="rateInformation" formName="rateInformationForm" />
+ 		<field property="legSummary" formName="legSummaryForm" />
+ 		<field property="dayTwoOperations" formName="DayTwoOperationsForm" />
+ 		
+ 		<field property="cashmapDocument" type="org.apache.struts.upload.FormFile"  />
+  	    <field property="structureDocument" type="org.apache.struts.upload.FormFile"  />
+  	    <field property="legalDocument" type="org.apache.struts.upload.FormFile"  />
+  	    <field property="consolidatedDocument" type="org.apache.struts.upload.FormFile"  />
+  	    <field property="corporateDocument" type="org.apache.struts.upload.FormFile"  />
+  	    <field property="otherDocument" type="org.apache.struts.upload.FormFile"  />
+  	    <field property="journalEntries" type="org.apache.struts.upload.FormFile"  />
+  	    <field property="equityPitch" type="org.apache.struts.upload.FormFile"  />
+  	    <field property="derivativeTradeTicket" type="org.apache.struts.upload.FormFile"  />
+  	    <field property="transferPricingAttachment" type="org.apache.struts.upload.FormFile"  />
+  	    
+  	 
+  	    <!-- Following five properties are added for attachment comments -->
+		<field property="atmtCommentType" type="java.lang.String[]"  />
+		<field property="atmtComment" type="java.lang.String[]" />
+		
+		<field property="atmtLegNumber" type="java.lang.String[]" />
+  	    <field property="atmtLegCommentType" type="java.lang.String[]" />
+		<field property="atmtLegComment" type="java.lang.String[]" />
+  	    	
+  	    <field property="msgHeader" formName="messageHeaderForm" />
+    	<field property="additionalApprovers" formName="additionalApproversForm" />
+        <field property="otherRadios" type="java.lang.String[]"  />
+       
+ 		<field property="assessment"/>
+ 		<field property="rationale"/>
+ 		<field property="qApplyAssessment"/>
+ 
+ 		<!-- Extra fields for Exceptions -->
+ 		<field property="standardTermsConditions" type="java.lang.String[]" />
+ 		<field property="standardTermsConditionsId" type="java.lang.String[]" /> 		
+ 		<field property="derivativeComments" type="java.lang.String[]" />
+ 		<field property="requestedException" type="java.lang.String[]" />
+ 		<field property="rationaleForExceptionImpact" type="java.lang.String[]" />
+ 		<field property="remediationTimelineId" type="java.lang.String[]" />
+ 		<field property="rationaleForExceptionPotentialAlternatives" type="java.lang.String[]" />
+ 		<field property="remediationTimelineComments" type="java.lang.String[]" />
+ 		<field property="remediationTimeline" type="java.lang.String[]"/>
+		<field property="exceptionDocument" type="org.apache.struts.upload.FormFile"  />
+		<field property="ameexceptionDocument" type="org.apache.struts.upload.FormFile"  />
+		<field property="legNumber" type="java.lang.String"  />
+ 		<field property="exceptionIndex" type="java.lang.String[]" />
+ 		
+ 		<field property="shareInfos" type="java.util.List">
+    			<converter type="formdef.plugin.conversion.FormCollectionConverter" param="ShareInfoForm">
+    				<set-property key="formType" value="java.util.ArrayList" />
+                	<set-property key="beanType" value="java.util.ArrayList" />
+    			</converter>
+    	</field>
+    	
+    	<!-- Extra fields for Equity -->
+ 		<field property="equityFormId" type="java.lang.Integer"  />
+ 		<field property="shareTypeId" type="java.lang.String[]"  />
+ 		<field property="numberOfShares" type="java.lang.String[]" />
+ 		<field property="shareValue" type="java.lang.String[]" />
+ 		<field property="debtTerms" type="java.lang.String[]" />
+ 		<field property="sharePrfId" type="java.lang.String[]"  />
+ 		<field property="eBoardApprovalRequiredFlag" type="java.lang.Boolean"/>
+ 		<field property="doubleLeverageFlag" type="java.lang.Boolean"/>
+ 		<field property="equityInfusionsDividendsFlag" type="java.lang.Boolean"/>
+ 		<field property="modelType" type="java.lang.String"  />
+ 		<field property="nextLegNumber" type="java.lang.String"  />
+ 		<field property="otherEquityComments" type="java.lang.String"  />
+ 		<field property="page" type="java.lang.Integer" initial="2"/>
+ 		
+	
+ 		<field property="indexTermMap" type="java.util.HashMap"/>
+ 		<field property="eventNoticeAttachedFlag"  getter="isEventNoticeAttachedFlag" />
+ 		
+ 		<!-- Extra fields for amendments -->
+ 		<field property="amendmentIndex" type="java.lang.String[]" />
+ 		<field property="amendmentTypeId" type="java.lang.String[]" />
+ 		<field property="ameRequestedException" type="java.lang.String[]" />
+ 		<field property="ameRationaleForExceptionImpact" type="java.lang.String[]" />
+ 		<field property="ameRationaleForExceptionPotentialAlternatives" type="java.lang.String[]" />
+ 		<field property="ameRemediationTimelineComments" type="java.lang.String[]" />
+ 		<field property="ameRemediationTimelineTimeframe" type="java.lang.String[]"/>
+ 		
+ 		<field property="description" type="java.lang.String"  />
+		
+ 	</form>
+ 	
+ 	<form name="ICFPOtherLegRequestForm" beanType="com.ge.icfp.model.OtherLegRequest">
+    	<field property="legSummary" formName="legSummaryForm" />
+    	<field property="crossBorderFlag" getter="isCrossBorderFlag" />
+    	<field property="guaranteeFeeApplicableFlag"  getter="isGuaranteeFeeApplicableFlag" />
+		<field property="guaranteeAgreementFlag"  getter="isGuaranteeAgreementFlag" />
+		<field property="commitmentFeeApplicableFlag"  getter="isCommitmentFeeApplicableFlag" />
+		<field property="TPLegRequest" formName="TPLegRequestForm" />
+ 		<field property="rateInformation" formName="rateInformationForm" />
+ 		<field property="nextLegNumber" type="java.lang.String"  />
+ 		<field property="page" type="java.lang.Integer" initial="2"/>
+ 		<field property="legNumber" type="java.lang.String"  />
+ 		<field property="dayTwoOperations" formName="DayTwoOperationsForm" />
+ 		
+ 		<!-- Extra fields for Exceptions	--> 
+  		<field property="standardTermsConditions" type="java.lang.String[]" />
+  		<field property="standardTermsConditionsId" type="java.lang.String[]" /> 
+ 		<field property="requestedException" type="java.lang.String[]" />
+ 		<field property="rationaleForExceptionImpact" type="java.lang.String[]" />
+ 		<field property="remediationTimelineId" type="java.lang.String[]" />
+ 		<field property="rationaleForExceptionPotentialAlternatives" type="java.lang.String[]" />
+ 		<field property="remediationTimelineComments" type="java.lang.String[]" />
+ 		<field property="remediationTimeline" type="java.lang.String[]"/>
+		<field property="exceptionDocument" type="org.apache.struts.upload.FormFile"  />
+		<field property="ameexceptionDocument" type="org.apache.struts.upload.FormFile"  />
+ 		<field property="exceptionIndex" type="java.lang.String[]" />
+ 		<field property="exceptionIndex1" type="java.lang.String" />
+ 		<field property="indexTermMap" type="java.util.HashMap"/>
+ 		
+ 		
+   </form>
+ 	
+ 	<form name="rateInformation" beanType="com.ge.icfp.model.RateInformation" />
+ 	<!-- CPA LegRequestForm -->
+ 	 	
+ 	<form name="cpaSummaryForm" beanType="com.ge.icfp.model.CPASummary">
+ 		 <excludes>attachments,commentsLog,entities</excludes>
+ 		 <field property="exceptionRequestForms" type="java.util.List">
+    			<converter type="formdef.plugin.conversion.FormCollectionConverter" param="exceptionRequestForm">
+    				<set-property key="formType" value="java.util.ArrayList" />
+                	<set-property key="beanType" value="java.util.ArrayList" />
+    			</converter>
+    	</field>
+    	<field property="qualitativeFactors" type="java.util.List">
+    		<converter type="formdef.plugin.conversion.FormCollectionConverter" param="qualitativeFactorsForm">
+    			<set-property key="formType" value="java.util.ArrayList" />
+                <set-property key="beanType" value="java.util.ArrayList" />
+    		</converter>
+    	</field>
+ 		 <field property="participantEntity"  formName="entityForm" />
+ 		  <field property="participantTCodeEntities"  type="java.lang.String[]" />
+    	 <field property="poolLeaderEntity"  formName="entityForm" /> 
+ 	</form>
+	
+ 	<form name="cpaLegRequestForm" beanType="com.ge.icfp.model.CPALegRequest">
+ 		<field property="cpaSummary" formName="cpaSummaryForm" />
+ 		<field property="rateInformation" formName="rateInformationForm" />
+ 		
+  		<field property="nonStandardAgreementsFlag" getter="isNonStandardAgreementsFlag" />		
+  		<field property="subordinatedDebt" type="java.lang.Boolean" getter="isSubordinatedDebt" />
+ 		<field property="crossBorderFlag"  getter="isCrossBorderFlag" />
+ 		<field property="TPLegRequest" formName="TPLegRequestForm" />
+ 		<field property="dayTwoOperations" formName="DayTwoOperationsForm" />
+ 		
+ 		<!-- Extra fields for Exceptions	--> 
+  		<field property="standardTermsConditions" type="java.lang.String[]" />
+  		<field property="standardTermsConditionsId" type="java.lang.String[]" /> 
+ 		<field property="requestedException" type="java.lang.String[]" />
+ 		<field property="rationaleForExceptionImpact" type="java.lang.String[]" />
+ 		<field property="remediationTimelineId" type="java.lang.String[]" />
+ 		<field property="rationaleForExceptionPotentialAlternatives" type="java.lang.String[]" />
+ 		<field property="remediationTimelineComments" type="java.lang.String[]" />
+ 		<field property="remediationTimeline" type="java.lang.String[]"/>
+		<field property="exceptionDocument" type="org.apache.struts.upload.FormFile"  />
+		<field property="ameexceptionDocument" type="org.apache.struts.upload.FormFile"  />
+ 		<field property="exceptionIndex" type="java.lang.String[]" />
+ 		<field property="exceptionIndex1" type="java.lang.String" />
+ 		
+ 		<field property="cashmapComments" type="java.lang.String[]"  />
+  	    <field property="structureComments" type="java.lang.String[]"  />
+  	    <field property="legalComments" type="java.lang.String[]"  />
+  	    <field property="consolidatedComments" type="java.lang.String[]"  />
+  	    <field property="corporateComments" type="java.lang.String[]"  />
+  	    <field property="otherComments" type="java.lang.String[]"  />
+  	    <field property="journalEntriesComments" type="java.lang.String[]"  />
+  	    <field property="equityPitchComments" type="java.lang.String[]"  />
+  	    <field property="derivativeComments" type="java.lang.String[]" />
+  	    <field property="transferPricingComments" type="java.lang.String[]"  />
+	
+		<field property="legNumber" type="java.lang.String"  />
+		<field property="nextLegNumber" type="java.lang.String"  />
+		<field property="page" type="java.lang.Integer" initial="2"/>
+		<field property="indexTermMap" type="java.util.HashMap"/>
+		<field property="vaultId" type="java.lang.String"/>
+ 	</form>
+ 	
+ 	<!-- Fourblocker forms -->
+ 	
+ 	<form name="TSummaryOwnerForm" beanType="com.ge.icfp.model.TSummaryOwner">
+ 		<field property="crossBorder" type="java.lang.Boolean" getter="isCrossBorder" />
+ 		<field property="impairmentHistory" getter="isImpairmentHistory" />
+ 		<field property="financialStatementFlag" type="java.lang.Boolean" getter="isFinancialStatementFlag" />
+ 	</form>
+ 	
+ 	<form name="TPriorityTimingsForm" beanType="com.ge.icfp.model.TPriorityTimings"/>
+ 	<form name="TClassificationLevelForm" beanType="com.ge.icfp.model.TClassificationLevel" />
+ 	<form name="projectSummaryForm" beanType="com.ge.icfp.model.FourBlocker$ProjectSummary"/>
+ 	
+ 	<form name="fourBlockerForm" beanType="com.ge.icfp.model.FourBlocker">
+ 		<excludes>assignReviewers</excludes>
+ 		<field property="otherDocument" type="org.apache.struts.upload.FormFile"  />
+ 		 <field property="equityPitch" type="org.apache.struts.upload.FormFile"  />
+ 		<field property="transferPricingAttachment" type="org.apache.struts.upload.FormFile"  />
+ 		<field property="journalEntries" type="org.apache.struts.upload.FormFile"  />
+ 		
+ 		 <field property="cashmapComments" type="java.lang.String[]"  />
+  	    <field property="structureComments" type="java.lang.String[]"  />
+  	    <field property="legalComments" type="java.lang.String[]"  />
+  	    <field property="consolidatedComments" type="java.lang.String[]"  />
+  	    <field property="corporateComments" type="java.lang.String[]"  />
+  	    <field property="otherComments" type="java.lang.String[]"  />
+  	    <field property="journalEntriesComments" type="java.lang.String[]"  />
+  	    <field property="equityPitchComments" type="java.lang.String[]"  />
+  	    <field property="derivativeComments" type="java.lang.String[]" />
+  	    <field property="transferPricingComments" type="java.lang.String[]"  />
+  	    
+  	    <!-- Following five properties are added for attachment comments -->
+		<field property="atmtCommentType" type="java.lang.String[]" />
+		<field property="atmtComment" type="java.lang.String[]" />
+		<field property="atmtLegNumber" type="java.lang.String[]" />
+  	    <field property="atmtLegCommentType" type="java.lang.String[]" />
+		<field property="atmtLegComment" type="java.lang.String[]" />
+		
+ 		<field property="tSummaryOwner" formName="TSummaryOwnerForm" />
+ 		<field property="tPriorityTimings" formName="TPriorityTimingsForm" />
+ 		<field property="tClassificationLevel" formName="TClassificationLevelForm" />
+ 		<field property="qualitativeFactors" formName="qualitativeFactorsForm" />
+ 		<field property="projectSummary" formName="projectSummaryForm" />
+ 	</form>
+ 	
+ 	<form name="closingChecklistForm" beanType="com.ge.icfp.model.ClosingCheckList" />
+ 	
+ 	<form name="updateStatusForm" beanType="com.ge.icfp.model.UpdateStatus">
+ 		 <excludes>attachments,msgHeader,additionalApprovals,legs</excludes>
+ 		<field property="leBoardChoice" type="java.lang.Boolean" getter="isLEBoardChoice" />
+ 		
+ 		<field property="socmFlag" getter="isSocmFlag" />
+ 		<field property="somidFlag" getter="isSomidFlag" />
+ 		<field property="sotlFlag" getter="isSotlFlag" />
+ 		<field property="sotpFlag" getter="isSotpFlag" />
+ 		<field property="sottFlag" getter="isSottFlag" />
+ 		<field property="soctFlag" getter="isSoctFlag" />
+ 		
+ 		<field property="fourBlocker" formName="fourBlockerForm" />
+ 		<field property="forwardPage" type="java.lang.String" />
+ 		<field property="approverList" type="java.lang.String" />
+     	<field property="defaultClassificationLevel" type="java.lang.Boolean" getter="isDefaultClassificationLevel" />
+     	<field property="revisedTransactionClassificationLevel" type="java.lang.String" getter="isRevisedTransactionClassificationLevel" />
+     	<field property="revisedTransactionClassificationLevelComment" type="java.lang.String" getter="isRevisedTransactionClassificationLevelComment" />
+		<field property="riskReviewOverrideNeeded" type="java.lang.Boolean" getter="isRiskReviewOverrideNeeded" />
+		<field property="otherDocument" type="org.apache.struts.upload.FormFile"  />
+		<field property="journalEntries" type="org.apache.struts.upload.FormFile"  />
+		<field property="transferPricingAttachment" type="org.apache.struts.upload.FormFile"  />
+		<field property="equityPitch" type="org.apache.struts.upload.FormFile"  />
+		
+		<field property="cashmapDocument" type="org.apache.struts.upload.FormFile"  />
+  	    <field property="structureDocument" type="org.apache.struts.upload.FormFile"  />
+  	    <field property="legalDocument" type="org.apache.struts.upload.FormFile"  />
+  	    <field property="consolidatedDocument" type="org.apache.struts.upload.FormFile"  />
+  	    <field property="corporateDocument" type="org.apache.struts.upload.FormFile"  />
+  	    <field property="otherDocument" type="org.apache.struts.upload.FormFile"  />
+  	    <field property="journalEntries" type="org.apache.struts.upload.FormFile"  />
+  	    <field property="exceptionDocument" type="org.apache.struts.upload.FormFile"  />
+  	    <field property="ameexceptionDocument" type="org.apache.struts.upload.FormFile"  />
+  	    <field property="equityPitch" type="org.apache.struts.upload.FormFile"  />
+  	    <field property="derivativeTradeTicket" type="org.apache.struts.upload.FormFile"  />
+  	    <field property="transferPricingAttachment" type="org.apache.struts.upload.FormFile"  />
+  	    
+  	 
+  	    <!-- Following five properties are added for attachment comments -->
+		<field property="atmtCommentType" type="java.lang.String[]"  />
+		<field property="atmtComment" type="java.lang.String[]" />
+		
+		<field property="atmtLegNumber" type="java.lang.String[]" />
+  	    <field property="atmtLegCommentType" type="java.lang.String[]" />
+		<field property="atmtLegComment" type="java.lang.String[]" />
+  	    	
+  	    <field property="msgHeader" formName="messageHeaderForm" />
+    	<field property="additionalApprovers" formName="additionalApproversForm" />
+        <field property="otherRadios" type="java.lang.String[]"  />
+  	    
+		<field property="borrowerSolvency" type="java.lang.String" getter="getBorrowerSolvency"/>		
+		<field property="closingCheckLists" type="java.util.List">
+   			<converter type="formdef.plugin.conversion.FormCollectionConverter" param="closingChecklistForm">
+   				<set-property key="formType" value="java.util.ArrayList" />
+               	<set-property key="beanType" value="java.util.ArrayList" />
+   			</converter>
+    	</field>
+    	<field property="legTypeId" type="java.lang.String"/>
+        <field property="eventTypeId" type="java.lang.String"/>
+        <field property="eventTypes" type="java.util.HashMap"/>
+        <field property="tradeRequestWorkflowId" type="java.lang.String[]" />
+		<field property="sourcePage" type="java.lang.String"/>
+ 	</form>
+ 	
+	<form name="lenderForm" beanType="com.ge.icfp.model.Search$Lender">
+		<excludes>countries,fundHoldOperationIds</excludes>
+		<field property="country" type="java.lang.String[]" />
+		<field property="fundHoldOperationId" type="java.lang.String[]" />
+	</form>
+	
+	<form name="borrowerForm" beanType="com.ge.icfp.model.Search$Borrower">
+		<excludes>countries,fundHoldOperationIds</excludes>
+		<field property="country" type="java.lang.String[]" />
+		<field property="fundHoldOperationId" type="java.lang.String[]" />
+	</form>
+	
+	<form name="cashPoolParticipantForm" beanType="com.ge.icfp.model.Search$CashPoolParticipant">
+		<excludes>countries,fundHoldOperationIds</excludes>
+		<field property="country" type="java.lang.String[]" />
+		<field property="fundHoldOperationId" type="java.lang.String[]" />
+	</form>
+	
+	<form name="cashPoolLeaderForm" beanType="com.ge.icfp.model.Search$CashPoolLeader">
+		<excludes>countries,fundHoldOperationIds</excludes>
+		<field property="country" type="java.lang.String[]" />
+		<field property="fundHoldOperationId" type="java.lang.String[]" />
+	</form>
+ 	 
+ 	<form name="searchResultsForm" beanType="com.ge.icfp.model.Search">
+ 		<excludes>productTypes,eventTypes,dealCategories,requestStates,regions,businessSegments,cashPoolDetailsBankNames,cashPoolDetailsCountries,cashPoolDetailsRegions,cashPoolDetailsCurrencies</excludes>
+ 		<field property="productType" type="java.lang.String[]" />
+ 		<field property="eventType" type="java.lang.String[]" />
+ 		<field property="dealCategory" type="java.lang.Integer[]" />
+ 		<field property="requestState" type="java.lang.String[]" />
+ 		<field property="region" type="java.lang.String[]" />
+ 		<field property="businessSegment" type="java.lang.String[]" />
+ 		<field property="cashPoolDetailsBankName" type="java.lang.String[]" />
+ 		<field property="cashPoolDetailsCountry" type="java.lang.String[]" />
+ 		<field property="cashPoolDetailsRegion" type="java.lang.String[]" />
+ 		<field property="cashPoolDetailsCurrency" type="java.lang.String[]" /> 
+ 		
+ 		<field property="lender" formName="lenderForm" />
+    	<field property="borrower" formName="borrowerForm" />
+ 	 	<field property="cashPoolParticipant" formName="cashPoolParticipantForm" />
+    	<field property="cashPoolLeader" formName="cashPoolLeaderForm" />
+    	<field property="leBodGovernanceFlag" type="java.lang.String" />
+    </form>
+    
+    
+    <form name="columnForm" beanType="com.ge.icfp.model.Row$Column">
+    </form>
+    <form name="rowForm" beanType="com.ge.icfp.model.Row">
+        <field property="columns" type="java.util.List">
+		   	<converter type="formdef.plugin.conversion.FormCollectionConverter" param="columnForm">
+		   		<set-property key="formType" value="java.util.ArrayList" />
+		       	<set-property key="beanType" value="java.util.ArrayList" />
+		   	</converter>
+	    </field>
+    </form>
+    <form name="adminDataTableForm" beanType="com.ge.icfp.model.AdminDataTable">
+	    <field property="tableRows" type="java.util.List">
+		   	<converter type="formdef.plugin.conversion.FormCollectionConverter" param="rowForm">
+		   		<set-property key="formType" value="java.util.ArrayList" />
+		       	<set-property key="beanType" value="java.util.ArrayList" />
+		   	</converter>
+	   </field>
+    </form>
+ 	<form name="icfpAdminForm" beanType="com.ge.icfp.model.AdminDataMaintenance">
+ 	<excludes>auditLogs,msgHeader</excludes>
+ 		<field property="adminDataTables" type="java.util.List">
+    			<converter type="formdef.plugin.conversion.FormCollectionConverter" param="adminDataTableForm">
+    				<set-property key="formType" value="java.util.ArrayList" />
+                	<set-property key="beanType" value="java.util.ArrayList" />
+    			</converter>
+    	</field>
+ 	</form>
+    </formset>
+</form-definition>
+
+       

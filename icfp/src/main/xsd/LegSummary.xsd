@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/LegSummary.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ICFP/EntityInformation.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ICFP/DerivativesRequest.xsd"
+	 xmlns:ns2="http://treasury.ge.com/schemas/ICFP/ExceptionRequestForm.xsd"
+	 xmlns:ns3="http://treasury.ge.com/schemas/ICFP/Comments.xsd"
+	 xmlns:ns4="http://treasury.ge.com/schemas/ICFP/QualitativeFactors.xsd"
+	 xmlns:ns5="http://treasury.ge.com/schemas/ICFP/Attachments.xsd"
+	 xmlns:ns6="http://treasury.ge.com/schemas/ICFP/AttachmentTypeComments.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/LegSummary.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/EntityInformation.xsd" schemaLocation="EntityInformation.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/DerivativesRequest.xsd" schemaLocation="DerivativesRequest.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/ExceptionRequestForm.xsd" schemaLocation="ExceptionRequestForm.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/Comments.xsd" schemaLocation="Comments.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/QualitativeFactors.xsd" schemaLocation="QualitativeFactors.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/Attachments.xsd" schemaLocation="Attachments.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/AttachmentTypeComments.xsd" schemaLocation="AttachmentTypeComments.xsd"/>
+	<xs:element name="Leg_Summary">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Leg_Seq_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Leg_Type_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Product_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Leg_Opcode" type="xs:string" minOccurs="0"/>
+				<xs:element name="Term_In_Months" type="xs:int" minOccurs="0"/>
+				<xs:element name="Original_CCY_Amount" type="xs:double" minOccurs="0"/>
+				<xs:element name="Original_CCY" type="xs:string" minOccurs="0"/>
+				<xs:element name="Currency_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="USD_Equivalent" type="xs:double" minOccurs="0"/>
+				<xs:element name="Derivatives_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Existing_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Non_Standard_Agreements_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Original_Legal_Agreements_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Subordinated_Debt" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Accrued_Interest_Amt" type="xs:double" minOccurs="0"/>
+				<xs:element name="Fees" type="xs:double" minOccurs="0"/>
+				<xs:element name="Gross_Settlement_Amt" type="xs:double" minOccurs="0"/>
+				<xs:element name="DayOne_CCY" type="xs:string" minOccurs="0"/>
+				<xs:element name="DayOne_CCY_Amount" type="xs:double" minOccurs="0"/>
+				<xs:element name="DayOne_USD_Equivalent" type="xs:double" minOccurs="0"/>
+				<xs:element name="Transaction_Event_Type_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Transaction_Event_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Event_Notice_Attached_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element ref="ns1:Derivatives_Request" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns2:Exception_Request_Form" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns0:Entity" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Leg_Number" type="xs:int" minOccurs="0"/>
+				<xs:element name="Effective_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Maturity_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Transaction_Capture_In_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Transaction_Capture_In" type="xs:string" minOccurs="0"/>
+				<xs:element name="Transaction_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Is_Hedged_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Draw_Down" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instrument_Id" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns3:Comments_Log" minOccurs="0"/>
+				<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns4:Qualitative_Factors" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns5:Attachment" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns6:Attachment_Type_Comments" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Issue_Price" type="xs:double" minOccurs="0"/>
+				<xs:element name="Agent_Dealer_Commission" type="xs:double" minOccurs="0"/>
+				<xs:element name="Net_Proceeds_Amt" type="xs:double" minOccurs="0"/>
+				<xs:element name="Requester_Validate_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Tp_Validate_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Fo_Validate_Flag" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Leg_Summary_Info">
+		<xs:sequence>
+			<xs:element ref="Leg_Summary" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

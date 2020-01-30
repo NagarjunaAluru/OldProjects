@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+	http://www.springframework.org/schema/util 
+	http://www.springframework.org/schema/util/spring-util-2.0.xsd">
+	
+	<bean id="serviceClient" class="com.hydus.wff.common.bw.ApplicationServiceClient">
+		<property name="serviceStub" ref="bwStubImpl" />
+	</bean>
+	
+	<!-- Attachments Component -->
+	<bean id="GELibRepository" class="com.hydus.wff.ge.attachments.impl.GELibRepository">
+		<property name="applicationId" value="4008" />
+		<property name="userId" value="500862468" />
+		<property name="applicationPassword" value="test123test" />
+		<property name="localDirectory" value="/web/appconfig/icffo/GEUploads/" />
+		<property name="defaultFolderId" value="3000870222031" />
+	</bean>
+	
+	<bean id="attachmentManager" class="com.hydus.wff.ge.attachments.AttachmentManager">
+		<property name="repository" ref="GELibRepository" />
+	</bean>
+	
+	
+</beans>

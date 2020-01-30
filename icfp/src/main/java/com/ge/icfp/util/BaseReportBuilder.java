@@ -1,0 +1,96 @@
+package com.ge.icfp.util;
+
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+
+import com.lowagie.text.Document;
+import com.lowagie.text.Element;
+import com.lowagie.text.Rectangle;
+import com.lowagie.text.pdf.BaseFont;
+import com.lowagie.text.pdf.PdfContentByte;
+import com.lowagie.text.pdf.PdfPageEventHelper;
+import com.lowagie.text.pdf.PdfTemplate;
+import com.lowagie.text.pdf.PdfWriter;
+
+public abstract class BaseReportBuilder extends PdfPageEventHelper {
+	protected BaseFont baseFont;
+	private PdfTemplate totalPages;
+	private float footerTextSize = 8f;
+	private int pageNumberAlignment = Element.ALIGN_CENTER;
+
+	public BaseReportBuilder() {
+		super();
+		baseFont = load("fonts", "tahoma.ttf");
+	}
+
+	private BaseFont load(String location, String fontname) {
+		try {
+			InputStream is = getClass().getClassLoader().getResourceAsStream(location + System.getProperty("file.separator") + fontname);
+
+			ByteArrayOutputStream out = new ByteArrayOutputStream();
+			byte buf[] = new byte[1024];
+
+			while (true) {
+				int size = is.read(buf);
+				if (size < 0)
+					break;
+				out.write(buf, 0, size);
+			}
+			is.close();
+			buf = out.toByteArray();
+			return BaseFont.createFont(fontname, BaseFont.CP1252, true, true, buf, null);
+		} catch (Exception ex) {
+			return null;
+		}
+	}
+
+	@Override
+	public void onOpenDocument(PdfWriter writer, Document document) {
+		totalPages = writer.getDirectContent().createTemplate(100, 100);
+		totalPages.setBoundingBox(new Rectangle(-20, -20, 100, 100));
+	}
+
+	@Override
+	public void onEndPage(PdfWriter writer, Document document) {
+		PdfContentByte cb = writer.getDirectContent();
+		cb.saveState();
+		String text = String.format("Page %s of ", writer.getPageNumber());
+
+		float textBase = document.bottom() - 20;
+		float textSize = baseFont.getWidthPoint(text, footerTextSize);
+		
+		cb.beginText();
+		cb.setFontAndSize(baseFont, footerTextSize);
+		if(Element.ALIGN_CENTER == pageNumberAlignment) {
+			cb.setTextMatrix((document.right() / 2), textBase);
+			cb.showText(text);
+			cb.endText();
+			cb.addTemplate(totalPages, (document.right() / 2) + textSize, textBase);
+		} else if(Element.ALIGN_LEFT == pageNumberAlignment) {
+			cb.setTextMatrix(document.left(), textBase);
+			cb.showText(text);
+			cb.endText();
+			cb.addTemplate(totalPages, document.left() + textSize, textBase);
+		} else {
+			float adjust = baseFont.getWidthPoint("0", footerTextSize);
+			cb.setTextMatrix(document.right() - textSize - adjust, textBase);
+			cb.showText(text);
+			cb.endText();
+			cb.addTemplate(totalPages, document.right() - adjust, textBase);
+		}
+		cb.restoreState();
+	}
+
+	@Override
+	public void onCloseDocument(PdfWriter writer, Document document) {
+		totalPages.beginText();
+		totalPages.setFontAndSize(baseFont, footerTextSize);
+		totalPages.setTextMatrix(0, 0);
+		totalPages.showText(String.valueOf(writer.getPageNumber() - 1));
+		totalPages.endText();
+	}
+
+	public void setPageNumberAlignment(int pageNumberAlignment) {
+		this.pageNumberAlignment = pageNumberAlignment;
+	}
+}

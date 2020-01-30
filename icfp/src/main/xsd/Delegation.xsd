@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/Delegation.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ICFP/MsgHeader.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/Delegation.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/MsgHeader.xsd" schemaLocation="MsgHeader.xsd"/>
+	<xs:element name="Delegation">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Delegate_Opcode" type="xs:string" minOccurs="0"/>
+				<xs:element name="Role_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Role_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="User_Delegate_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Delegator_SSO" type="xs:string" minOccurs="0"/>
+				<xs:element name="Delegate_SSO" type="xs:string" minOccurs="0"/>
+				<xs:element name="Delegate_From_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Delegate_To_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Actual_Delegate_End_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Delegator_Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Delegator_First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Delete_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Delegate_Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Delegate_First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Status" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns0:Msg_Header" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DelegationRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Delegation" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

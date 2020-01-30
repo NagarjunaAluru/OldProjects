@@ -1,0 +1,2149 @@
+
+html {
+	overflow-y: scroll;
+}
+body {
+	background:#fff;
+	margin:10px;
+}
+
+@font-face {
+        font-family: "GE Inspira Regular";
+        font-style: normal;
+       src: url('../font/GEInspRg.eot?#iefix') format('embedded-opentype'); /* for IE 6 */
+        src: local("GE Inspira Regular"), url("../font/GEInspRg.ttf") format("truetype"); /* non-IE */
+}
+@font-face {
+        font-family: "GE Inspira Medium";
+        font-style: normal;
+        src: url('../font/GEInspMd.eot?#iefix') format('embedded-opentype'); /* for IE 6 */ 
+        src: local("GE Inspira Medium"), url("../font/GEInspMd.ttf") format("truetype"); /* non-IE */
+}
+
+
+/*Silo div show*/
+
+
+ html>body div.scrollable tbody {
+            overflow: auto;
+         }
+ 
+         table.resizable th{
+            text-align:center;
+            padding: 0px 5px 0px 5px;
+         }
+ 
+         /* if mozilla, add 10 for the scrollbar */
+         html>body th.scrollbarCol {
+            width:10px;
+         }
+ 
+         table.resizable td{
+            padding: 5px;
+         }
+ 
+         table.resizable{
+            table-layout:fixed;
+         }
+ 
+         table.resizable input{
+            width:100%;
+         }
+ 
+         table.resizable textarea{
+            width:100%;
+         }
+ 
+         .nowrap {
+             white-space:nowrap;
+         }
+.tr1 {
+	background:#fff;
+	border:1px solid #f2f2f2;
+}
+.tr2 {
+	background:#f4f5f7;
+	border:1px solid #f2f2f2;
+}
+         
+         
+ 
+         /* needed for IE */
+         table.tabular th.scrollbarCol {
+            background-color:transparent; 
+         }
+ 
+         table.tabular {
+	font-family:GE Inspira Regular;
+	font-weight:normal;
+	font-size:12px;
+	color:#666666;
+         }
+ 
+         table.tabular thead {
+	font-family:GE Inspira Regular;
+	font-weight:normal;
+	font-size:12px;
+	color:#666666;
+         }
+         
+         
+#table-border {
+	margin: 0px auto;
+	border: 1px solid #e3eaf4;
+	width: 600px;
+	
+} 
+#table-border1 {
+	margin: 0px auto;
+	border: 1px solid #e3eaf4;
+	width: 600px;
+	
+} 
+#table-border2 {
+	margin: 0px auto;
+	border: 1px solid #e3eaf4;
+	width: 600px;
+	
+} 
+#content-scroll {
+	border: none;
+	height: 300px;
+	overflow: auto;
+	width: 600px;
+}
+
+/*Success Messege container*/
+
+#success_container{margin: 0px auto; padding: 5px 0px 5px 0px; width: 928px;}
+
+#success_container .success_close{margin: 0px; padding: 0px 0px 0px 100px; width: 16px; position:relative; height: 16px;  float: right;}
+
+#success_message_top{ margin: 0px; padding: 6px 10px 0px 10px; width:908px; background:url(../images/success_message_top.gif) top left no-repeat;}
+
+#success_message_middle{ 
+ margin: 0px;
+ padding: 0px 20px 0px 20px;
+ width:888px;
+ font-family:Arial, Helvetica;
+font-weight:Normal;
+font-size:14px;
+color:#666666;
+ background:url(../images/success_message_middle.gif) top left repeat-y;}
+ 
+#success_message_bottom{ margin: 0px; padding: 0px 0px 0px 0px; width:928px; height: 8px; background:url(../images/success_message_bottom.gif) bottom left no-repeat;}
+
+/*Datepicker*/
+
+#ui-datepicker-div { font-size: 11px; font-weight: normal; border: 1px solid #aaaaaa; }
+#settlementDateSD, #settlementDateED, #settlementDateMD, #settlementDateSD1, #settlementDateMD1, #settlementDateSD2, #settlementDateMD2 {
+	font-family:GE Inspira Regualr;
+	font-weight:bold;
+	font-size:11px;
+	color:#666;
+}
+
+#textfield{
+	font-family:GE Inspira Regualr;
+	font-weight:bold;
+	font-size:11px;
+	color:#666;
+}	
+
+#textfield1{
+	font-family:GE Inspira Regualr;
+	font-weight:normal;
+	font-size:11px;
+	color:#666;
+}
+#textfield2{
+	font-family:GE Inspira Regualr;
+	font-weight:normal;
+	font-size:11px;
+	color:#666;
+	width: 100px;
+}
+	
+#settlementDateSD{margin: 0px 10px 0px 0px;width:200px;}
+#settlementDateED{margin: 0px 10px 0px 0px;width:200px;}
+#settlementDateMD{margin: 0px 10px 0px 0px;width:200px;}
+#settlementDateSD1{margin: 0px 10px 0px 0px;width:200px;}
+#settlementDateMD1{margin: 0px 10px 0px 0px;width:200px;}
+#settlementDateSD2{margin: 0px 10px 0px 0px;width:200px;}
+#settlementDateMD2{margin: 0px 10px 0px 0px;width:200px;}
+#settlementDateSD3{margin: 0px 10px 0px 0px;width:100px;}
+#settlementDateED3{margin: 0px 10px 0px 0px;width:100px;}
+		
+input.file {
+	position: relative;
+	text-align: right;
+	-moz-opacity:0 ;
+	filter:alpha(opacity: 0);
+	opacity: 0;
+	z-index: 2;
+	border: 1px solid blue;
+} 
+
+a {
+	font-family:GE Inspira Regular;
+	font-weight:bold;
+	font-size:10px;
+	color:#bb4f00;
+	text-decoration:none;
+}
+a:hover {
+	color:#bb4f00;
+	text-decoration:underline;
+}
+
+a.link1{
+	font-family:GE Inspira Regular;
+	font-size:16px;
+	color:#bb4f00 !important;
+	text-decoration:none;
+}
+a.link1:hover {
+	color:#bb4f00;
+	text-decoration:underline;
+}
+
+
+a.link{
+	font-family:GE Inspira Regular;
+	font-weight:bold;
+	font-size:10px;
+	color:#bb4f00 !important;
+	text-decoration:none;
+}
+a.link:hover {
+	color:#bb4f00;
+	text-decoration:underline;
+}
+
+
+p {
+	font-family:GE Inspira Regualr;
+	font-weight:normal;
+	font-size:12px;
+	color:#666;
+	text-decoration:none;
+	margin:5px 0px;
+	padding: 0px 4px;
+}
+
+p a {
+	font-family:GE Inspira Regualr;
+	font-weight:normal;
+	font-size:11px;
+	color:#bb4f00;
+	text-decoration:none;
+}
+p a:hover {
+	color:#bb4f00;
+	text-decoration:underline;
+}
+
+
+h1 {
+	font-family:GE Inspira Medium;
+	font-weight:normal;
+	font-size:18px;
+	color: #000000;
+	margin:0px 0px 5px 0px;
+}
+
+h2 {
+	font-family:GE Inspira Regular;
+	font-weight:bold;
+	font-size:16px;
+	margin:0px;
+}
+h3 {
+	font-family:GE Inspira Regular;
+	font-weight:bold;
+	font-size:12px;
+	margin:0px 2px;
+	color: #000000;
+}
+h4 {
+	font-family:GE Inspira Medium;
+	font-weight:normal;
+	font-size:18px;
+	color: #666;
+	margin:0px 0px 5px 0px;
+}
+
+.Italic{ font-family:GE Inspira Regualr;
+    font-style: italic;
+	font-size:12px;
+	color: #666;
+	margin:0px ;}
+
+/*Global*/
+input.button {
+	background-color: transparent;
+}
+input.reset {
+	background-color: transparent;
+}
+input.submit {
+	background-color: transparent;
+}
+/*input.text {
+	font-family:GE Inspira Regular;
+	font-weight:bold;
+	font-size:10px;
+	margin:0px;
+	padding:4px;
+	border:1px solid #ccc;
+	width:140px;
+	color: #666;
+}*/
+input[type="text"] {
+    border: 1px solid #ccc;
+    color: #666;
+    font-family:GE Inspira Regular;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    padding: 4px;
+    width: 200px;
+}
+/*input.text {
+    border: 1px solid blue;
+    color: #666;
+    font-family:GE Inspira Regular;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    padding: 4px;
+    width: 200px;
+}*/
+input.radio {
+	font-family:GE Inspira Regular;
+	font-weight:bold;
+	font-size:12px;
+	margin:0px 3px 0px 0px;
+	padding:4px;
+	border:none;
+	width:auto;
+	color: #666;
+}
+input.checkbox {
+	font-family:GE Inspira Regular;
+	font-weight:bold;
+	font-size:11px;
+	margin:0px 3px 0px 0px;
+	padding:4px;
+	border:none;
+	width:auto;
+	color: #666;
+}
+
+select {
+	font-family:GE Inspira Regular;
+	font-weight:bold;
+	font-size:12px;
+	margin:0px;
+	padding:4px;
+	border:1px solid #ccc;
+	width:210px;
+	color: #666;
+}
+
+*:first-child+html select {
+	font-family:GE Inspira Regular;
+	font-weight:bold;
+	font-size:12px;
+	margin:0px;
+	padding: 10px;
+	border:1px solid #cccccc;
+	width:210px;
+	color: #666;
+	}
+
+textarea{
+	font-family:GE Inspira Regular;
+	font-weight:bold;
+	font-size:10px;
+	margin:0px;
+	padding:4px;
+	border:1px solid #ccc;
+	width:350px;
+	height: 70px;
+	color: #666;
+}
+
+/* BUTTONS */
+.save-as-draft-btn-big { background: url(../images/btns/btn_save_as_draft_big.gif) no-repeat; width:130px; height: 32px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.save-as-draft-btn { background: url(../images/btns/btn_save_as_draft.gif) no-repeat; width:88px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.submit-btn { background: url(../images/btns/btn_save_big.gif)  no-repeat; width: 83px; height: 32px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.submit-btn-big { background: url(../images/btns/btn_submit.gif)  no-repeat; width: 89px; height: 32px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.banksearch-btn{background: url(../images/btns/btn_banksearch.gif)  no-repeat; width: 117px; height: 34px; margin: 0; padding: 0; border: none; cursor: pointer;}
+.manually-specify-btn{background: url(../images/btns/btn_manually.gif)  no-repeat; width: 189px; height: 30px; margin: 0; padding: 0; border: none; cursor: pointer;}
+.add-another-silo-btn{background: url(../images/btns/btn_add_another_silo.gif)  no-repeat; width: 112px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer;}
+.remove-btn { background: transparent url(../images/btns/btn_remove.gif); width: 60px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.check-all-btn { background: transparent url(../images/btns/btn_check_all.gif); width: 72px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.clear-all-btn { background: transparent url(../images/btns/btn_clear_all.gif); width: 72px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.save-btn { background: transparent url(../images/btns/btn_save.gif); width: 60px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.cancel-btn { background: transparent url(../images/btns/btn_cancel_inner.gif); width: 60px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.send-reminder-btn { background: transparent url(../images/btns/btn_send_reminder.gif); width: 112px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.cancel-request-btn { background: transparent url(../images/btns/btn_cancel_request.gif); width: 114px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.close-btn { background: transparent url(../images/btns/btn_close.gif); width: 60px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.review-btn { background: transparent url(../images/btns/btn_review.gif); width: 72px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.reject-btn { background: transparent url(../images/btns/btn_reject.gif); width: 61px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.approve-btn { background: transparent url(../images/btns/btn_approve.gif); width: 81px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.modify-access-btn { background: transparent url(../images/btns/btn_modiy_access.gif); width: 112px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.print-btn-admin {background: url(../images/btns/btn_print_admin.gif); width: 61px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.search-btn-small { background: transparent url(../images/btns/btn_search_small.gif); width: 60px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.save-big { background-image: url(../images/btns/btn_save_big.gif); width: 83px; height: 32px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.create-new-user-btn { background: url(../images/btns/btn_create_new_user.gif); width: 138px; height: 24px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.create-new-user-btn-big { background: url(../images/btns/btn_create_new_user_big.gif); width: 138px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.go-btn { background: url(../images/btns/btn_go.gif); width: 60px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+
+.yes-btn { background: url(../images/btns/btn_yes.gif); width: 53px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.no-btn { background: url(../images/btns/btn_no.gif); width: 53px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.add-btn { background: url(../images/btns/btn_add.gif); width: 60px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+/* BUTTONS 
+
+
+.submit-btn { background-image: url(Images/btn_submit.gif); width: 60px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+
+.cancel-btn-inner { background-image: url(Images/btn_cancel_inner.gif); width: 60px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.print-btn { background-image: url(Images/btn_print.gif); width: 130px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+
+
+.save-as-draft-btn-big { background-image: url(Images/btn_save_as_draft_big.gif); width: 130px; height: 32px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.create-new-request-btn { background-image: url(Images/btn_create_new_request.gif); width: 123px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.create-new-request-big-btn { background-image: url(Images/btn_create_new_request_big.gif); width: 173px; height: 32px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.export-excel-btn { background-image: url(Images/btn_export_excel.gif); width: 103px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.search-cash-pool-btn { background-image: url(Images/btn_search_cash_pool.gif); width: 117px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+
+.checkout-btn { background-image: url(Images/btn_checkout.gif); width: 80px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.undocheckout-btn { background-image: url(Images/btn-undocheckout.gif); width: 102px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.clearall-btn { background-image: url(Images/btn_clearall.gif); width: 77px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+
+.search-btn-none { display:none; }
+.edit-btn { background-image: url(Images/btn_edit.gif); width: 60px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+
+.save-btn-big { background-image: url(Images/btn_save_big.gif); width: 83px; height: 32px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.add-new-line-btn { background-image: url(Images/btn_add_new_line.gif); width: 96px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.go-btn { background-image: url(Images/btn_go.gif); width: 60px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.add-doc-btn { background-image: url(Images/btn_add_document.gif); width: 96px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.add-another-signer-btn { background-image: url(Images/btn_add_another_signer.gif); width: 124px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.generate-btn { background-image: url(Images/btn_generate.gif); width: 74px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.attach-btn { background-image: url(Images/btn_attach.gif); width: 60px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.browse-btn { background-image: url(Images/btn_browse.gif); width: 60px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+
+
+.save-changes-btn { background-image: url(Images/btn_save_changes.gif); width: 114px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+
+.reset-btn { background-image: url(Images/btn_reset.gif); width: 61px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.add-signer-btn { background-image: url(Images/btn_add_signer.gif); width: 78px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.templatepreview-btn-admin { background-image: url(Images/btn_template_preview.gif); width: 120px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+.delete-btn { background-image: url(Images/btn_delete.gif); width: 60px; height: 26px; margin: 0; padding: 0; border: none; cursor: pointer; }
+*/
+
+.hiddenDiv {
+	display: none;
+}
+.clear {
+	clear: both;
+}
+
+.required {
+	font-family:GE Inspira Regular;
+	font-weight:normal;
+	font-size:11px;
+	margin:0px;
+	color: #666;
+	text-align: right;
+}
+
+.red {
+	font-family:GE Inspira Regular;
+	font-weight:normal;
+	font-size:12px;
+	margin:0px;
+	color: red;
+}
+#legal {
+	width: 300px;
+	height: 200px;
+	overflow: auto;
+	margin: 0px;
+	padding: 5px;
+	border: 1px solid #ccc;
+}
+
+#disabled {
+	font-family:GE Inspira Regular;
+	font-weight:bold;
+	font-size:10px;
+	margin:0px;
+	padding:4px;
+	border:1px solid #ccc;
+	width:auto;
+	color: #666;
+	background: #f2f2f2;
+	resize:none;
+}
+.disabled {
+	font-family:GE Inspira Regular;
+	font-weight:bold;
+	font-size:10px;
+	margin:0px;
+	padding:4px;
+	border:1px solid #ccc;
+	width:auto;
+	color: #666;
+	background: #ece9d8;
+	resize:none;
+}
+
+
+/* WRAPPER */
+#wrapper {
+	width: 960px;
+	border: 1px solid #ccc;
+	margin: 0px auto;
+}
+
+/* HEADER */
+#header {
+	width: 960px;
+	border:none;
+	margin: 0px;
+}
+/* TOP BAR */
+#top-bar {
+	width: 960px;
+	height: 35px;
+	border:none;
+	margin: 0px;
+}
+#top-bar .left-col-tb {
+	width: 250px;
+	height: 26px;
+	border:none;
+	margin: 7px 0px 0px 0px;
+	float: left;
+	font-family: GE Inspira Medium;
+	font-weight: normal;
+	font-size: 16px;
+	color: #666;
+	padding-left: 100px;
+	background: url(../images/in_tresury_logo.gif) top left no-repeat;
+
+}
+#top-bar .left-col-tb a {
+	font-family: GE Inspira Medium;
+	font-weight: normal;
+	font-size: 12px;
+	color: #336699;
+	text-decoration: none;
+}
+#top-bar .left-col-tb a:hover {
+	text-decoration:underline;
+}
+#top-bar .right-col-tb {
+	width: 500px;
+	border:none;
+	margin: 5px 10px 0px 0px;
+	float: right;
+	font-family: GE Inspira Medium;
+	font-weight: normal;
+	font-size: 12px;
+	color: #666;
+	text-align: right;
+}
+#top-bar .right-col-tb a {
+	font-family: GE Inspira Medium;
+	font-weight: normal;
+	font-size: 12px;
+	color: #336699;
+	text-decoration: none;
+}
+#top-bar .right-col-tb a:hover {
+	text-decoration:underline;
+}
+#top-bar .right-col-tb select {
+	font-family:GE Inspira Regular;
+	font-weight:bold;
+	font-size:10px;
+	margin:0px;
+	padding:2px;
+	border:1px solid #ccc;
+	width:auto;
+	color: #666;
+}
+
+/* LOGO */
+#logo {
+	width:960px;
+	height: 60px;
+	background: url(../images/header_bg.jpg);
+	border-bottom: 4px solid #699ab3;
+	margin-bottom: 10px;
+}
+#logo .left-col-logo {
+	width:340px;
+	float: left;
+	border:none;
+	margin: 12px 0px 0px 10px;
+}
+#logo .left-col-logo .company {
+	font-family: GE Inspira Medium;
+	font-weight: bold;
+	font-size: 28px;
+	color: #ffffff;
+}
+#logo .left-col-logo .caption {
+	font-family: GE Inspira Medium;
+	font-weight: normal;
+	font-size: 16px;
+	color: #ffffff;
+}
+
+#logo .right-col-logo {
+	width:auto;
+	float: right;
+	border:none;
+	margin: 22px 10px 5px 15px;
+	text-align: right;
+	padding: 0px;
+	font-family: GE Inspira Medium;
+	font-size: 12px;
+	font-weight: normal;
+	color: #666;
+	text-decoration: none;
+}
+#logo .right-col-logo a {
+	font-family: GE Inspira Medium;
+	font-size: 12px;
+	font-weight: normal;
+	color: #fff;
+	text-decoration: none;
+}
+#logo .right-col-logo a:hover {
+	text-decoration: underline;
+}
+
+#logo .mid-col-logo {
+	width:auto;
+
+	float: right;
+	border:1px solid #32719c;
+	margin: 15px 0px 5px 0px;
+	text-align: left;
+	padding: 0px;
+	font-family: GE Inspira Medium;
+	font-size: 12px;
+	font-weight: normal;
+	color: #666;
+	text-decoration: none;
+	background: #32719c;
+}
+
+/* ### MAIN NAVIGATION ### */
+#main-menu { width:100%; border:none; margin:0px;}
+
+#main-menu ul#nav {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#main-menu ul#nav li a {
+	display: block;
+	font-weight:bold;
+	padding: 6px 8px;
+	_padding: 6px 6px;
+	color: #fff;
+	text-decoration: none;
+	font-family:GE Inspira Regular;
+	font-size:14px;
+	text-transform:capitalize;
+}
+#main-menu ul#nav li a:hover{
+	color: #fff;
+	background: #69839b;
+	}
+#main-menu ul#nav li {
+	float: left;
+	position: relative;
+	list-style:none;
+	display: inline; 
+}
+#main-menu li ul {
+	display: none;
+	position: absolute;
+	width:100px;
+	top: 0;
+	left: 0;
+	font-weight: normal;
+	padding: 1px 0 10px 0;
+	margin-left:-1px;
+}
+#main-menu ul#nav li ul.sub li{
+	border-width:0 1px 1px 1px!important;
+	width:150px;
+	border-bottom:1px solid #666;
+}
+#main-menu ul#nav li ul.sub li a{
+	font-weight: normal!important;	
+}
+#main-menu li>ul {
+	top: auto;
+	left: auto;
+}
+#main-menu li:hover ul, li.over ul {
+	display: block;
+}
+
+
+/* CONTAINER */
+#container {
+	width: 950px;
+	margin: 0px auto 10px auto;
+	border:none;
+}
+#container .left-col {
+	width: 100%; /*710px;*/
+	float: left;
+	border:none;
+	min-height: 540px;
+}
+#container .right-col {
+	width: 220px;
+	float: right;
+	border:none;
+}
+#container .left-col-admin {
+	width: 220px;
+	float: left;
+	border:none;
+	min-height: 540px;
+}
+#container .right-col-admin {
+   _margin-top:-13px;
+	width: 710px;
+	float: right;
+	border:none;
+}
+#container .left-col-inbox {
+	width: 940px;
+	float: left;
+	border:none;
+	min-height: 540px;
+}
+#container .left-col-search-result {
+	width: 940px;
+	border:none;
+	min-height: 540px;
+}
+
+
+
+/* BREADCRUMS */
+#breadcrums {
+	width:710px;
+	margin:0px 0px 10px 0px;
+	font-family:GE Inspira Medium;
+	font-weight:normal;
+	font-size:12px;
+	color:#666999;
+	text-decoration:none;
+	border:none;
+}
+#breadcrums a {
+	font-family:GE Inspira Medium;
+	font-weight:normal;
+	font-size:12px;
+	color:#bb4f00;
+	text-decoration:none;
+}
+#breadcrums a:hover {
+	color:#bb4f00;
+	text-decoration:underline;
+}
+
+/* POP UP BREAD CRUMS */
+#mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:3;
+  background-color:#000;
+  display:none;
+}
+  
+#boxes .window {
+  position:absolute;
+  left:0;
+  top:0;
+  width:440px;
+  height:200px;
+  display:none;
+	z-index: 3;
+  padding:20px;
+}
+
+#boxes #dialog, #boxes #dialog2, #boxes #dialog3, #boxes #dialog4, #boxes #dialog5  {
+	width:610px; 
+	height:600px;
+	padding:10px;
+	background-color:#ffffff;
+    margin-top: 250px;
+    margin-left: 130px;
+}
+
+#boxes #dialog7,#boxes #dialog7a,#boxes #dialog7b, #boxes #dialog6 {
+  width:610px; 
+  height:380px;
+  padding:10px;
+	background-color:#ffffff;
+    margin-top: 250px;
+    margin-left: 130px;
+}
+
+
+#boxes #dialog8 {
+  width:610px; 
+  height:280px;
+  padding:10px;
+	background-color:#ffffff;
+    margin-top: 250px;
+    margin-left: 130px;
+}
+
+#boxes #dialog9 {
+  width:710px; 
+  height:650px;
+  padding:10px;
+	background-color:#ffffff;
+    margin-top: 250px;
+    margin-left: 130px;
+}
+
+#boxes #dialog10,#boxes #dialog10a,#boxes #dialog10b {
+  width:610px; 
+  height:300px;
+  padding:10px;
+	background-color:#ffffff;
+    margin-top: 250px;
+    margin-left: 130px;
+}
+
+#boxes #dialog10c {
+  width:640px; 
+  height:230px;
+  padding:10px;
+	background-color:#ffffff;
+    margin-top: 250px;
+    margin-left: 130px;
+}
+
+#boxes #dialog1 {
+  width:375px; 
+  height:203px;
+}
+
+
+/* TOP NAV */
+#top-nav {
+	width: 99%;
+	height: 25px;
+	padding:5px 4px 0px 4px;
+	margin: 0px;
+	border:none;
+	background: url(../images/greyround_bg.gif);
+}
+#top-nav ul {
+	margin-top:0px;
+	margin-left:0px;
+	margin-bottom:0px;
+	padding:0px;
+}
+#top-nav li {
+	list-style:none;
+	display:inline;
+	font-family:GE Inspira Medium;
+	font-weight:normal;
+	font-size:12px;
+	color:#666;
+	text-decoration:none;
+}
+#top-nav li a {
+	font-family:GE Inspira Medium;
+	font-weight:normal;
+	font-size:12px;
+	color:#bb4f00;
+	text-decoration:none;
+}
+#top-nav li a:hover {
+	color:#bb4f00;
+	text-decoration:underline;
+}
+
+/* TOP NAV ADMIN */
+#top-nav-admin {
+	width: 99%;
+	height: 25px;
+	padding:5px 4px 0px 4px;
+	margin: 0px;
+	border:none;
+	background: url(../images/greyround_bg.gif) no-repeat;
+}
+#top-nav-admin ul {
+	margin-top:0px;
+	margin-left:0px;
+	margin-bottom:0px;
+	padding:0px;
+}
+#top-nav-admin li {
+	list-style:none;
+	display:inline;
+	font-family:GE Inspira Medium;
+	font-weight:normal;
+	font-size:12px;
+	color:#666;
+	text-decoration:none;
+}
+#top-nav-admin li a {
+	font-family:GE Inspira Medium;
+	font-weight:normal;
+	font-size:12px;
+	color:#bb4f00;
+	text-decoration:none;
+}
+#top-nav-admin li a:hover {
+	color:#bb4f00;
+	text-decoration:underline;
+}
+
+
+/* HEADING */
+#heading {
+	width: 915px;
+	font-family:GE Inspira Medium;
+	font-weight: normal;
+	font-size:16px;
+	margin: 0px 0px 5px 0px;
+	padding: 3px 5px;
+	line-height: 25px;
+	color:#ffffff;
+	border:none;
+	background-color:#376a97;
+	
+}
+
+#sub-heading {
+	width:100%;
+	font-family:GE Inspira Regular, sans-serif;
+	font-weight:bold;
+	font-size:13px;
+	color:#003366;
+	border:1px solid #f2f2f2;
+	background:#e3eaf4;
+	margin: 0px;
+	padding: 4px;
+}
+
+/* MAJOR HEADING */
+#major-heading {
+	width: 100%;
+	height: 25px;
+	padding:3px 5px 3px 5px;
+	margin: 0px;
+	border:none;
+	background: url(../images/blueround_head_r.gif);
+	font-family: GE Inspira Regular;
+	border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+	font-weight: bold;
+	font-size: 14px;
+	color: #fff;
+}
+#major-heading a {
+	font-family:GE Inspira Regular;
+	font-weight:bold;
+	font-size:11px;
+	color:#fff;
+	text-decoration:none;
+}
+#major-heading a:hover {
+	color:#fff;
+	text-decoration:underline;
+}
+#major-heading .left-col-mh {
+	width: 450px;
+	padding:0px;
+	margin: 0px;
+	border:none;
+	font-family: GE Inspira Regular;
+	font-weight: bold;
+	font-size: 14px;
+	color: #fff;
+	float: left;
+}
+#major-heading .right-col-mh {
+	width: 200px;
+	padding:0px;
+	margin: 0px;
+	border:none;
+	font-family: GE Inspira Regular;
+	font-weight: normal;
+	font-size: 14px;
+	color: #fff;
+	float: right;
+	text-align: right;
+}
+
+#major-heading-admin {
+	width: 100%;
+	height: 25px;
+	padding:3px 5px 3px 5px;
+	margin: 0px;
+	border:none;
+	background: url(../images/blueround_head_r_710.gif);
+	font-family: GE Inspira Regular;
+	font-weight: bold;
+	font-size: 14px;
+	color: #fff;
+}
+#major-heading-admin a {
+	font-family:GE Inspira Regular;
+	font-weight:bold;
+	font-size:11px;
+	color:#fff;
+	text-decoration:none;
+}
+#major-heading-admin a:hover {
+	color:#fff;
+	text-decoration:underline;
+}
+
+
+#major-heading-result .left-col-mh {
+	width: 450px;
+	padding:0px;
+	margin: 0px;
+	border:none;
+	font-family: GE Inspira Regular;
+	font-weight: bold;
+	font-size: 14px;
+	color: #fff;
+	float: left;
+}
+#major-heading-result .right-col-mh {
+	width: 200px;
+	padding:0px;
+	margin: 0px;
+	border:none;
+	font-family: GE Inspira Regular;
+	font-weight: normal;
+	font-size: 14px;
+	color: #fff;
+	float: right;
+	text-align: right;
+}
+
+/* MAJOR HEADING */
+#major-heading-result {
+	width: 100%;
+	height: 25px;
+	padding:3px 5px 3px 5px;
+	margin: 0px;
+	border:none;
+	background: url(../images/blueround_head_r_result.gif);
+	font-family: GE Inspira Regular;
+	font-weight: bold;
+	font-size: 14px;
+	color: #fff;
+}
+#major-heading-result a {
+	font-family:GE Inspira Regular;
+	font-weight:bold;
+	font-size:11px;
+	color:#fff;
+	text-decoration:none;
+}
+#major-heading-result a:hover {
+	color:#fff;
+	text-decoration:underline;
+}
+
+
+
+/* MAJOR HEADING */
+#major-heading-search-result {
+	width: 935px;
+	height: 25px;
+	padding:3px 5px 3px 5px;
+	margin: 0px;
+	background: url(../images/signs2.png);
+	font-family: GE Inspira Regular;
+	font-weight: bold;
+	font-size: 14px;
+	color: #fff;
+	border:none;
+}
+#major-heading-search-result a {
+	font-family:GE Inspira Regular;
+	font-weight:bold;
+	font-size:11px;
+	color:#fff;
+	text-decoration:none;
+}
+#major-heading-search-result a:hover {
+	color:#fff;
+	text-decoration:underline;
+}
+#major-heading-search-result .left-col-mh {
+	width: 450px;
+	padding:0px;
+	margin: 0px;
+	border:none;
+	font-family: GE Inspira Regular;
+	font-weight: bold;
+	font-size: 14px;
+	color: #fff;
+	float: left;
+}
+#major-heading-search-result .right-col-mh {
+	width: 200px;
+	padding:0px;
+	margin: 0px;
+	border:none;
+	font-family: GE Inspira Regular;
+	font-weight: normal;
+	font-size: 14px;
+	color: #fff;
+	float: right;
+	text-align: right;
+}
+
+#content-border {
+    border: none;
+    margin: 0px 0px 15px 0px;
+    padding: 0;
+}
+
+#yourinputnew {
+	font-family:GE Inspira Regular;
+	font-weight:normal;
+	font-size:11px;
+	color:#bb4f00;
+	margin:0px;
+	padding:4px;
+	border:1px solid #fff;
+	width:auto;
+}
+.readonly-txt {
+	font-family:GE Inspira Regular;
+	font-weight:bold;
+	font-size:20px;
+	color:#666;
+}
+.requestor {
+	font-family:GE Inspira Regular;
+	font-weight:normal;
+	font-size:11px;
+	color:#bb4f00;
+}
+
+
+/* MAIN TABLE */
+#main-table {
+	width:100%;
+	border:none;
+	font-family:GE Inspira Regular;
+	font-weight:bold;
+	font-size:11px;
+	color:#666;
+}
+/* MAIN TABLE INBOX */
+#main-table-inbox {
+	width:100%;
+	border:none;
+	font-family:GE Inspira Regular;
+	font-weight:bold;
+	font-size:11px;
+	color:#666;
+	margin: 0px;
+}
+
+
+#inner-table {
+	width:100%;
+	margin: 0px auto;
+	border:none;
+	font-family: GE Inspira Regular;
+	font-weight: bold;
+	font-size: 12px;
+	color:#666;
+}
+#inner-table .td01 td {
+	padding: 8px;
+	font-family: GE Inspira Regular;
+	font-weight: bold;
+	font-size: 12px;
+	color:#666;
+	background: #f2f2f2;
+}
+#inner-table .td02 td {
+	padding: 8px;
+	font-family: GE Inspira Regular;
+	font-weight: bold;
+	font-size: 12px;
+	color:#666;
+	background: #fafafa;
+}
+
+#inner-table-inbox {
+	width:100%;
+	margin: 0px auto;
+	border:none;
+	font-family:GE Inspira Regular;
+	font-weight:bold;
+	font-size:11px;
+	color:#666;
+}
+
+#inner-table1 {
+	width:98%;
+	margin: 0px auto;
+	border:none;
+	font-family:GE Inspira Regular;
+	font-weight:bold;
+	font-size:11px;
+	color:#666;
+}
+#inner-table td {
+	font-family:GE Inspira Regular;
+	font-weight:bold;
+	font-size:11px;
+	color:#666;
+}
+
+#inner-table td, #inner-table-inbox td {
+	padding: 5px 2px;
+}
+
+#inner-table td .readonly-txt {
+ font-family:GE Inspira Regular;
+ font-weight:normal;
+ font-size:13px;
+ color:#666;
+}
+
+.domain-value-text {
+	 font-family:GE Inspira Regular;
+	 font-weight:bold;
+	 font-size:10px;
+	 margin:0px;
+	 padding:4px;
+	 border:1px solid #ccc;
+	 width:140px;
+	 height:20px;
+	 color: #666;
+}
+
+.domain-value-radio {
+	 font-family:GE Inspira Regular;
+	 font-weight:bold;
+	 font-size:11px;
+	 margin:0px 3px 0px 0px;
+	 padding:4px;
+	 border:none;
+	 width:auto;
+	 height:20px;
+	 color: #666;
+}
+
+
+/*Search Panel*/
+#search_wrap{
+    margin: 0px; 
+    padding: 0px;
+    background-color:#a1b5c6; font-family:GE Inspira Regular;
+	font-size:15px;
+	font-weight:bold;
+	color:#000;}
+	
+	
+#search_heading{
+    margin: 0px; 
+    padding: 0px;
+    background-color:#e3eaf4; font-family:GE Inspira Regular;
+	font-size:15px;
+	font-weight:bold;
+	border: 0px solid #a1b5c6;
+	color:#000;}
+
+/*toggle Search Panel*/
+
+#toggle-wrap{margin:0px 0px 5px 0px; padding:0px 0px 0px 0px;  height:auto; width: 720px;}
+
+h2.trigger {
+    background: url(../images//toggle_img.gif) no-repeat scroll 0 0 transparent;
+	padding:0px 5px 0px 35px;
+	margin:0px 0px 0px 0px;
+	background-color:#e3eaf4;
+	font-family:GE Inspira Medium;
+	font-size:12px;
+	height: 31px;
+	line-height: 31px;
+	width: 680px;
+	float: left;
+	color: #666;
+}
+h2.trigger a {
+	color: #fff;
+	text-decoration: none;
+	display: block;color: #666; font-size:12px;
+}
+h2.trigger a:hover { color: #666; font-size:12px; }
+
+
+
+h2.active {background-position: left bottom; font-size:12px; color: #666;} /*--When toggle is triggered, it will shift the image to the bottom to show its "opened" state--*/
+
+
+.toggle_container {
+	margin: 0 0 5px;
+	padding: 0px;
+	border-top: 1px solid #d6d6d6;
+	background: #fff url(../images/toggle_block_stretch.gif) repeat-y left top;
+	overflow: hidden;
+	font-size: 1.2em;
+	width: 720px;
+	clear: both;
+}
+.toggle_container .searchform { width:720px;
+	 /*--Padding of Container--*/
+	background: url(../images/toggle_block_btm.gif) no-repeat left bottom; /*--Bottom rounded corners--*/
+}
+
+/*Page Heading Logged details*/
+.btn_container{margin:0px; padding:5px; border-top:1px solid #a1b5c6; background-color:#ffffff; text-align:right; }
+
+/*Toggle for Each Row*/
+
+#report { border-collapse:collapse; border: 1px solid #ccc; font-family:GE Inspira Regular, Sans-Serif; font-size: 11px; width: 950px;}
+#report h4 { margin:0px; padding:0px;}
+#report img { float:right;}
+#report th { background-color:#e3eaf4; color:#000000; padding:5px 5px; font-family:GE Inspira,arial; font-weight:Bold; text-align: center; font-size:11px;border: 1px solid #ccc;}
+#report td { color:#000; padding:5px 5px; border: 1px solid #ccc;   text-align: center; }    
+#report tr.odd td {  cursor:pointer; }        
+#report tr.srtr1 {background-color:#ffffff;}
+#report tr.srtr2 {background-color:#f4f5f7;}
+#report div.arrow { background:transparent url(../images/arrows.png) no-repeat scroll 0px -20px; width:20px; height:20px; display:block;}
+#report div.up { background-position:0px 0px;}
+
+
+#report th select{font-family:GE Inspira Regular;
+	font-weight:normal;
+	font-size:9px;
+	margin:0px;
+	color: #666;}
+	
+
+
+#report-details-container{margin:0px; padding:0px; width: 800px;}
+#report-details{margin:0px; padding:0px; width: 250px; float: left; text-align: left;}
+
+/*dropdown menu Div hide and show*/
+#dropdown {
+position: absolute; 
+margin-top: 20px;
+margin-left: -60px; widows: 100px; display: none;  }
+
+#dropdown #top{margin: 0px; padding: 0px; background:url(../images/dropdown_top.png) top left no-repeat; width: 100px; height:10px;}
+#dropdown #middle{margin: 0px; padding: 5px; background: url(../images/dropdown_middle.png) top left repeat-y; width: 90px; height: auto;}
+
+#dropdown #middle ul{margin: 0px; padding: 0px; list-style: none;}
+#dropdown #middle ul li{margin: 0px; padding: 5px; list-style: none;font-family:GE Inspira Medium;
+	font-size:12px; text-align: left; color:#ffffff; }
+#dropdown #middle ul li a{ color:#ffffff; text-decoration: underline; }
+#dropdown #bottom{margin: 0px; padding: 0px; background: url(../images/dropdown_bottom.png) top left no-repeat; width: 100px; height:10px;}
+
+
+
+#dropdown1 {
+position: absolute; 
+margin-top: 20px;
+margin-left: -60px; widows: 100px; display: none;  }
+
+#dropdown1 #top{margin: 0px; padding: 0px; background:url(../images/dropdown_top.png) top left no-repeat; width: 100px; height:10px;}
+#dropdown1 #middle{margin: 0px; padding: 5px; background: url(../images/dropdown_middle.png) top left repeat-y; width: 90px; height: auto;}
+
+#dropdown1 #middle ul{margin: 0px; padding: 0px; list-style: none;}
+#dropdown1 #middle ul li{margin: 0px; padding: 5px; list-style: none;font-family:GE Inspira Medium;
+	font-size:12px; text-align: left; color:#ffffff; }
+#dropdown1 #bottom{margin: 0px; padding: 0px; background: url(../images/dropdown_bottom.png) top left no-repeat; width: 100px; height:10px;}
+
+
+
+/* ROUNDED CORNER DIV  */
+#option-div {
+	min-width:200px;
+	float: right;
+	border:1px solid #ccc;
+	padding:4px;
+	background:#fafafa;
+	color:#ffffff;
+	font-family:GE Inspira Regular;
+	font-weight:normal;
+	font-size:12px;
+	margin-left:5px;
+}
+
+*:first-child+html #option-div {
+	width: expression( document.body.clientWidth < 400 ? "200px" : "240" ); /* set min-width for IE */
+}
+
+#option-div-reject {
+	width:auto;
+	float: right;
+	border:1px solid #990000;
+	padding:4px;
+	background:#fafafa;
+	color:#990000;
+	font-family:GE Inspira Regular;
+	font-weight:bold;
+	font-size:12px;
+	margin-left: 5px;
+}
+#option-div-approve {
+	width:auto;
+	float: right;
+	border:1px solid #006600;
+	padding:4px;
+	background:#fafafa;
+	color:#006600;
+	font-family:GE Inspira Regular;
+	font-weight:bold;
+	font-size:12px;
+	margin-left: 5px;
+}
+#option-div-send-to-legal {
+	width:auto;
+	float: right;
+	border:1px solid #003366;
+	padding:4px;
+	background:#fafafa;
+	color:#003366;
+	font-family:GE Inspira Regular;
+	font-weight:bold;
+	font-size:12px;
+	margin-left: 5px;
+}
+
+
+#option-div select{
+	font-family:GE Inspira Regular;
+	font-weight:normal;
+	font-size:11px;
+	margin:0px;
+	padding:0px;
+	border:1px solid #ccc;
+	width:auto;
+}
+
+/* WORK FLOW STEP FOOTER */
+
+#workflow-step-footer th {
+	font-family:GE Inspira Regular, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	color:#000;
+	text-align:center;
+	padding: 3px;
+	border:1px solid #dedede;
+}
+#workflow-step-footer td {
+	font-family:GE Inspira Regular, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	color:#666;
+	text-align:left;
+	padding: 3px;
+	border:1px solid #dedede;
+}
+
+/* CHECKOUT DIV */
+#checkout-div {
+	width:97%;
+	padding:4px;
+	border:1px solid #ccc;
+	margin:5px auto 5px auto;
+}
+
+
+/* SEARCH RESULT TABLE */
+#search-results {
+	width: 937px;
+	margin: 0px;
+	padding: 4px;
+	font-family: GE Inspira Medium;
+	font-size: 12px;
+	background: #ebebeb;
+	border-top: 3px solid #376097;
+	border-bottom: 3px solid #376097;
+}
+#search-results a {
+	font-family: GE Inspira Medium;
+	font-size: 12px;
+	color: #bb4f00;
+	text-decoration: none;
+}
+#search-results select {
+	font-family:GE Inspira Regular;
+	font-weight:normal;
+	font-size:12px;
+	margin:0px;
+	padding:1px;
+	border:1px solid #ccc;
+	width:auto;
+}
+/* ### TABLE ### */
+#search-results-table {
+	width:auto;
+	font-family:GE Inspira Regular, sans-serif;
+	font-size:11px;
+	color:#666;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	border:1px solid #dbdbdb;
+}
+#search-results-table a {
+	font-family:GE Inspira Regular;
+	font-weight:normal;
+	font-size:11px;
+	color:#bb4f00;
+	text-decoration:underline;
+}
+#search-results-table a:hover {
+	color:#bb4f00;
+	text-decoration:underline;
+}
+#search-results-table td {
+	border:1px solid #dbdbdb;
+	padding: 4px;
+	text-align: center;
+}
+
+#search-results-table th {
+	font-family:GE Inspira Regular;
+	font-size:11px;
+	font-weight:bold;
+	color:#000;
+	padding: 4px;
+	text-align: left;
+	background:#e3eaf4;
+	border:1px solid #dbdbdb;
+}
+#search-results-table .srtr1 {
+	background:#fff;
+	border:1px solid #dbdbdb;
+}
+#search-results-table .srtr2 {
+	background:#f4f5f7;
+	border:1px solid #dbdbdb;
+}
+#search-results-table .srtr1a {
+	background:#fffffdb;
+	border:1px solid #dbdbdb;
+}
+
+/* INBOX TABLE */
+#inbox-results {
+	width: 100%;
+	margin: 0px auto;
+	padding: 4px 0px 4px 0px;
+	font-family: GE Inspira Medium;
+	font-size: 12px;
+	background: #ebebeb;
+}
+#inbox-results a {
+	font-family: GE Inspira Medium;
+	font-size: 12px;
+	color: #bb4f00;
+	text-decoration: none;
+}
+#inbox-results select {
+	font-family:GE Inspira Regular;
+	font-weight:normal;
+	font-size:12px;
+	margin:0px;
+	padding:1px;
+	border:1px solid #ccc;
+	width:auto;
+}
+/* ### TABLE ### */
+#inbox-results-table {
+	width:auto;
+	font-family:GE Inspira Regular, sans-serif;
+	font-size:11px;
+	color:#666;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	border:1px solid #dbdbdb;
+}
+#inbox-results-table a {
+	font-family:GE Inspira Regular;
+	font-weight:normal;
+	font-size:11px;
+	color:#1e77d1;
+	text-decoration:none;
+}
+#inbox-results-table a:hover {
+	color:#1e77d1;
+	text-decoration:underline;
+}
+#inbox-results-table td {
+	border:1px solid #dbdbdb;
+	padding: 10px;
+	text-align: center;
+}
+
+#inbox-results-table th {
+	font-family:GE Inspira Regular;
+	font-size:11px;
+	font-weight:bold;
+	color:#000;
+	padding: 4px;
+	text-align: center;
+	background:#e3eaf4;
+	border:1px solid #dbdbdb;
+}
+#inbox-results-table .srtr1 {
+	background:#fff;
+	border:1px solid #dbdbdb;
+}
+#inbox-results-table .srtr2 {
+	background:#f4f5f7;
+	border:1px solid #dbdbdb;
+}
+#inbox-results-table .srtr1a {
+	background:#fffffdb;
+	border:1px solid #dbdbdb;
+}
+
+
+/**** SHOW HIT CSS ***/
+#hintbox{ /*CSS for pop up hint box */
+	position:absolute;
+	top: 0;
+	background-color: lightyellow;
+	width: 350px; /*Default width of hint.*/ 
+	padding: 3px;
+	border:1px solid black;
+	font:normal 11px Verdana;
+	line-height:18px;
+	z-index:100;
+	visibility: hidden;
+}
+
+.hintanchor{ /*CSS for link that shows hint onmouseover*/
+	font-weight: bold;
+	color: navy;
+	margin: 3px 8px;
+}
+
+
+   /* Error Msg */
+#fWdErrors {
+         width:710px;
+}
+#fWdErrors_940 {
+         width:940px;
+}
+.errorMsgTop  {
+         background-image: url(../images/errorbox_top.gif);
+         background-repeat:no-repeat;
+         height:9px;
+         width:710px;
+}
+.errorMsgTop_940  {
+         background-image: url(../images/errorbox_top_940.gif);
+         background-repeat:no-repeat;
+         height:9px;
+         width:940px;
+}
+
+.errorMsgBody  {
+         background-image:url(../images/errorbox_bg.gif);
+         background-repeat:repeat-y;
+         height:auto;
+         width:710px;
+         overflow:hidden;
+         text-align:left;
+}
+.errorMsgBody_940  {
+         background-image:url(../images/errorbox_bg_940.gif);
+         background-repeat:repeat-y;
+         height:auto;
+         width:940px;
+         overflow:hidden;
+         text-align:left;
+
+}
+.errorMsgBottom  {
+         background-image:url(../images/errorbox_bot.gif);
+         background-repeat:no-repeat;
+         width:710px;
+         height:9px;
+}
+.errorMsgBottom_940  {
+         background-image:url(../images/errorbox_bot_940.gif);
+         background-repeat:no-repeat;
+         width:710px;
+         height:9px;
+}
+
+
+.errorMsgHeaderReg   {
+         font-family:GE Inspira Regular, sans-serif;
+         font-size:14px;
+         color:#666;
+         padding:5px 10px;
+         border:none;
+         width:50%;
+         float:left;
+}
+.errorMsgHeaderBold   {
+         font-family:GE Inspira Regular, sans-serif;
+         font-size:14px;
+         color:#666;
+         font-weight:bold;
+}
+
+.errorMsgName  {
+         font-family:GE Inspira Regular, sans-serif;
+         font-size:12px;
+         color:#d69566;
+         font-weight: bold;
+         padding:0 0 0 10px;
+}
+
+.errorMsgNameSecondary  {
+         font-family:GE Inspira Regular, sans-serif;
+         font-size:12px;
+         color:#d69566;
+         font-weight: bold;
+         padding:0 0 0 0;
+}
+
+.errorMsgDesc  {
+         font-family:GE Inspira Regular, sans-serif;
+         font-size:12px;
+         color:#666;
+         font-weight: normal;
+}
+.errorMsgDesc  ul {
+         padding:0 0 0 50px;
+}
+.errorMsgDesc  li {
+         padding:0 0 5px 0;
+}
+
+.errorMsgIcon {
+         float:left;
+         padding:5px 10px;
+}
+
+.errorMsgItemBG {
+     background-color:#ffffdb;
+     border:#c26666 thin solid;
+}
+.errorMsgItemText {
+     font-family:GE Inspira Regular, sans-serif;
+     font-size:11px;
+     color:#bf2f24;
+}
+
+/*  Success Message  */
+#successMsg {margin: 0px auto;
+         width:930px;
+}
+.successMsgTop  {
+     background-image: url(../images/successBox_top.png);
+     background-repeat:no-repeat;
+     height:9px;
+     width:930px;
+}
+.successMsgBody  {
+     background-image:url(../images/successBox_bg.png);
+     background-repeat:repeat-y;
+     height:auto;
+     width:930px;
+     overflow:hidden;
+     text-align:left;
+}
+
+.successMsgBottom {
+     background-image:url(../images/successBox_bot.png);
+     background-repeat:no-repeat;
+     width:930px;
+     height:9px;
+}
+
+.successMsgHeaderReg {
+     font-family:GE Inspira Regular, sans-serif;
+     font-size:14px;
+     color:#666;
+     padding:2px 0 0 10px;
+     float:left;
+}
+
+.successMsgHeaderBold {
+     font-family:GE Inspira Regular, sans-serif;
+     font-size:14px;
+     color:#666;
+     font-weight:bold;
+}
+
+.successMsgIcon {
+     float:left;
+     padding:0 10px;
+}
+
+.successCloseBtn {
+     float:right;
+     padding:0 10px;
+}
+
+
+
+/* SIDEBAR */
+#sidebar {
+	width: 220px;
+	border:none;
+	margin-top: 65px;
+}
+#sidebar-admin-home {
+	width: 220px;
+	border:none;
+}
+#sidebar-heading {
+	width: 97%;
+	background: transparent url(../images/left-nav-heading-bg.gif) top left no-repeat;
+	padding:7px 4px 7px 10px;
+	margin: 0px;
+	border:none;
+	font-family: GE Inspira Regular;
+	font-weight: bold;
+	font-size: 14px;
+	color: #fff;
+}
+#sidebar-content {
+	width: 97%;
+	padding:7px 4px 7px 5px;
+	_padding:7px 0px 7px 3px;
+	margin: 0px;
+	border:none;
+	background: #f3f5f7;
+	font-family: GE Inspira Regular;
+	font-weight: bold;
+	font-size: 14px;
+	color: #fff;
+}
+#sidebar-content .heading-sc {
+	margin: 0px;
+	font-family: GE Inspira Medium;
+	font-weight: normal;
+	font-size: 12px;
+	color: #003366;
+	text-transform: uppercase;
+}
+
+/* SIDEBAR NAVIGATION */
+#right-nav {
+	width:220px;
+	margin:0px;
+	border:none;
+}
+#right-nav ul {
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-left:-60px;
+	* margin-left:0px;
+	_margin-left:30px;
+}
+#right-nav li {
+	list-style:bullet;
+	padding:0px;
+	color:#aacdee;
+	margin-left: 45px;
+}
+#right-nav li a {
+	width:100%;
+	display:block;
+	font-family:GE Inspira Regular;
+	font-size:12px;
+	font-weight:normal;
+	color:#bb4f00;
+	text-decoration:none;
+	text-transform:capitalize;
+	padding-left:0px;
+	padding-bottom:2px;
+	padding-top:2px;
+}
+#right-nav li a:hover {
+	text-decoration:underline;
+}
+
+
+
+
+/* FOOTER */
+#footer {
+	width: 960px;
+	height: 105px;
+	background: #e6e6e6;
+	border:none;
+}
+#footer-menu {
+	width: 960px;
+	height: 35px;
+	background: url(../images/header_bg.jpg);
+	border-top: 4px solid #699ab3;
+}
+#footer-menu .left-col-fm {
+	width:270px;
+	float: left;
+	border:none;
+	margin: 5px 0px 0px 5px;
+}
+#footer-menu .left-col-fm .company-f {
+	font-family: GE Inspira Medium;
+	font-weight: bold;
+	font-size: 18px;
+	color: #ffffff;
+}
+#footer-menu .left-col-fm .caption-f {
+	font-family: GE Inspira Medium;
+	font-weight: normal;
+	font-size: 16px;
+	color: #ffffff;
+}
+
+#footer-menu .right-col-fm {
+	width:120px;
+	float: right;
+	border:none;
+	margin: 10px 10px 5px 0px;
+	text-align: right;
+	padding: 0px;
+	font-family: GE Inspira Medium;
+	font-size: 12px;
+	font-weight: normal;
+	color: #666;
+	text-decoration: none;
+}
+#footer-menu .right-col-fm a {
+	font-family: GE Inspira Medium;
+	font-size: 12px;
+	font-weight: normal;
+	color: #fff;
+	text-decoration: none;
+}
+#footer-menu .right-col-fm a:hover {
+	text-decoration: underline;
+}
+
+#footer-menu .mid-col-fm {
+	width:510px;
+	float: left;
+	border:none;
+	margin: 5px 0px 5px 0px;
+	text-align: left;
+	padding: 0px;
+	font-family: GE Inspira Medium;
+	font-size: 12px;
+	font-weight: normal;
+	color: #666;
+	text-decoration: none;
+}
+
+/* ### MAIN NAVIGATION ### */
+#main-menu-fm { width:100%; border:none; margin:0px;}
+
+#main-menu-fm ul#nav {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#main-menu-fm ul#nav li a {
+	display: block;
+	font-weight:normal;
+	padding: 4px 5px;
+	color: #fff;
+	text-decoration: none;
+	font-family:GE Inspira Regular;
+	font-size:12px;
+	text-transform:capitalize;
+}
+#main-menu-fm ul#nav li a:hover{
+	text-decoration: underline;
+	}
+#main-menu-fm ul#nav li {
+	float: left;
+	position: relative;
+	list-style:none;
+	display: inline; 
+}
+#main-menu-fm li ul {
+	display: none;
+	position: absolute;
+	width:100px;
+	top: 0;
+	left: 0;
+	font-weight: normal;
+	padding: 1px 0 10px 0;
+	margin-left:-1px;
+}
+#main-menu-fm ul#nav li ul.sub li{
+	border-width:0 1px 1px 1px!important;
+	width:150px;
+	border-bottom:1px solid #666;
+}
+#main-menu-fm ul#nav li ul.sub li a{
+	font-weight: normal!important;	
+}
+#main-menu-fm li>ul {
+	top: auto;
+	left: auto;
+}
+#main-menu-fm li:hover ul, li.over ul {
+	display: block;
+}
+
+/* 
+	Required Styles
+*/
+#aToolTip {
+	position: absolute;
+	display: none;
+	z-index: 50000;
+}
+
+	#aToolTip .aToolTipContent {
+		position:relative;
+		margin:0;
+		padding:0;
+	}
+/* 
+	END: Required Styles
+*/
+/**
+	Default Theme
+*/
+.defaultTheme {
+	border:1px solid #cc9933;
+	color:#fff;
+	margin:0;
+	padding:6px 12px;
+	min-width: 70px;
+	max-width: 300px;
+	background: #ffffcc;
+	margin-left: -180px;	
+	
+}
+	
+	.defaultTheme #aToolTipCloseBtn {
+		display:block;
+		height:18px;
+		width:18px;
+		background:url(../images/closeBtn.png) no-repeat;
+		text-indent:-9999px;
+		outline:none;
+		position:absolute;
+		top:-20px;
+		right:-30px;
+		margin:2px;
+		padding:4px;
+	}
+	
+/* 
+	Required Styles
+*/
+#aToolTip1 {
+	position: absolute;
+	display: none;
+	z-index: 50000;
+}
+
+	#aToolTip1 .aToolTipContent1 {
+		position:relative;
+		margin:0;
+		padding:0;
+	}
+/* 
+	END: Required Styles
+*/
+/**
+	Default Theme
+*/
+.defaultTheme1 {
+	border:1px solid #cc9933;
+	color:#fff;
+	margin:0;
+	padding:6px 12px;
+	min-width: 70px;
+	max-width: 300px;
+	background: #ffffcc;
+}
+	
+	.defaultTheme1 #aToolTipCloseBtn1 {
+		display:block;
+		height:18px;
+		width:18px;
+		background:url(../images/closeBtn.png) no-repeat;
+		text-indent:-9999px;
+		outline:none;
+		position:absolute;
+		top:-20px;
+		right:-30px;
+		margin:2px;
+		padding:4px;
+	}	
+	
+	
+#footer-credits {
+	width: 950px;
+	height: 35px;
+	margin: 5px auto;
+	border:none;
+}
+#footer-credits .left-col-fc {
+	width: 300px;
+	height: 60px;
+	float: left;
+	background: url(../images/ge_logo_footer.gif) top left no-repeat;
+	margin: 0px;
+	border:none;
+}
+#footer-credits .right-col-fc {
+	width: 600px;
+	float: right;
+	margin: 20px 0px 0px 0px;
+	text-align: right;
+	border:none;
+	font-family: GE Inspira Medium;
+	font-weight: normal;
+	font-size: 12px;
+	color: #666;
+}
+#footer-credits .right-col-fc a {
+	font-family: GE Inspira Medium;
+	font-weight: normal;
+	font-size: 12px;
+	color: #336699;
+	text-decoration: none;
+}
+#footer-credits .right-col-fc a:hover {
+	text-decoration:underline;
+}

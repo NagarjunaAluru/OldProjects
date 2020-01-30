@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/ICFP-REWRITE/!svn/ver/9795/src/main/java/com/ge/icfp/util/report/pdf
+END
+DealPDFStyle.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/ICFP-REWRITE/!svn/ver/8465/src/main/java/com/ge/icfp/util/report/pdf/DealPDFStyle.java
+END
+ReportContext.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/ICFP-REWRITE/!svn/ver/9778/src/main/java/com/ge/icfp/util/report/pdf/ReportContext.java
+END
+PDFReportHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/ICFP-REWRITE/!svn/ver/9795/src/main/java/com/ge/icfp/util/report/pdf/PDFReportHelper.java
+END
+DealPDFGenerator.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/ICFP-REWRITE/!svn/ver/8714/src/main/java/com/ge/icfp/util/report/pdf/DealPDFGenerator.java
+END
+HeaderFooter.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/ICFP-REWRITE/!svn/ver/8714/src/main/java/com/ge/icfp/util/report/pdf/HeaderFooter.java
+END
+TableOfContent.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/ICFP-REWRITE/!svn/ver/8461/src/main/java/com/ge/icfp/util/report/pdf/TableOfContent.java
+END
+CompositePdfPageEventHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/ICFP-REWRITE/!svn/ver/8465/src/main/java/com/ge/icfp/util/report/pdf/CompositePdfPageEventHelper.java
+END
+DealRenderer.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/ICFP-REWRITE/!svn/ver/9185/src/main/java/com/ge/icfp/util/report/pdf/DealRenderer.java
+END
+ReportType.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/8460/src/main/java/com/ge/icfp/util/report/pdf/ReportType.java
+END

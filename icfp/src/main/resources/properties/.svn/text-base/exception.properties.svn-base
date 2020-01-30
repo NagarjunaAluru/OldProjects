@@ -1,0 +1,115 @@
+####
+#   
+#  TMIWF Exception codes and their description
+#
+####
+
+###
+#
+# ErrorType = WEB;
+# Subcategory = HTTP;
+#
+###
+
+HWF-404=Sorry, The page requested is not found.
+HWF-500=Internal Server Error.
+HWF-600=HTTP Connection is not established.
+HWF-601=Request to HTTP is timed out.
+HWF-602=HTTP Protocol exception has occured.
+
+###
+#
+# ErrorType = BWServices;
+# Subcategory = Retrive Transactions;
+#
+###
+
+HWF-5001=Retrieve Transactions Failed.
+
+HWF-6001=Search Failed.
+
+HWF-9999=Some internal problems occurred
+
+
+###
+#
+# ErrotType = COI service 
+# 
+####
+HWF-7001=COI service failed
+
+###
+#
+# ErrotType = WF Notepad service 
+# 
+####
+HWF-7201=WF Notepad service failed
+
+###
+#
+# ErrotType = Reindexing service 
+# 
+####
+HWF-7501=Reindexing service failed
+
+###
+#
+# ErrotType = VMOD Request 
+# 
+####
+HWF-8001=Verbal EMOD service failed
+
+###
+#
+# ErrotType = Fax Request
+# 
+####
+HWF-8201=Fax Request service failed
+
+###
+#
+# ErrotType = IA Notepad
+# 
+####
+HWF-8501=IA Notepad service failed
+
+###
+#
+# ErrotType = LP Request
+# 
+####
+HWF-8701=LP Request service failed
+
+
+#service errors
+HWF.RETIEVEUSERS.1001=Error invoking retrieve users service
+HWF.RETIEVEEVENTCODE.1001=Error invoking retrieve event codes service
+HWF.UNLOCKWI.1001=Error occurred while unlocking work item
+
+HWF.LOGIN.1001=Authentication Failed
+
+HWF.TEMPLATEMODULE.SAMPLEBW.1001=Error invoking sample bw service
+
+
+#ICFP Errors
+HWF.ICFP.1001=Error invoking ICFP service
+HWF.ICFP.1002=Error in parsing the request XML for calling ICFP Service  
+HWF.ICFP.1003=Error in parsing the given date. Date should follow the format MM/dd/YYYY
+
+#MDM Errors
+HWF.MDM.1001=Error updating Entity Attributes
+HWF.MDM.1002=No response from MDM service
+
+#Email Router
+HWF.ROUTER.1001=Not able to pull deal details. Either Deal ID/User info is missing.
+
+#Admin Delegation
+HWF.DELEGATION.1001=Error invoking ICFP service
+
+#Inbox
+HWF.INBOX.1001=No users information available to load his INBOX
+#FourBlocker
+HWF.FOURBLOCKER.1001=Unable to invoke service since actionID is missing
+
+#NewFunding Request
+HWF.FUNDINGREQUEST.1001=Unable to invoke service since legs missing

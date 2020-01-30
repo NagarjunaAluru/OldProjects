@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/Rates/RatesRequest.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/Rates/RatesRequest.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="Rates">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="TransactionId" type="xs:string" minOccurs="0"/>
+				<xs:element name="ApplicationName" type="xs:string" minOccurs="0"/>
+				<xs:element name="RateType" type="RateTypes" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Rate Type is either MOR or GAP</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Year" type="xs:integer" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>4 Digit Year number. If Empty, Extracts rates for current year</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Frequency" type="xs:double" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Month number in case of MOR Rates(1..12), and Quarter number in case of GAP Rates (1..4). If Empty, Extracts rates for current month/quarter</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ObjectCurrencyCode" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>3 Character Currency Code to which you need exchange rate. If Empty, Extracts rates for all available Currencies.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="RateTypes">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="MOR"/>
+			<xs:enumeration value="GAP"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

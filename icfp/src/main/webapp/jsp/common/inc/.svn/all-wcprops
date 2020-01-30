@@ -1,0 +1,359 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/ICFP-REWRITE/!svn/ver/9830/src/main/webapp/jsp/common/inc
+END
+projectSummary.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ICFP-REWRITE/!svn/ver/9748/src/main/webapp/jsp/common/inc/projectSummary.jsp
+END
+projectSummary_Equity.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/projectSummary_Equity.jsp
+END
+transactionClassificationLevelView.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/transactionClassificationLevelView.jsp
+END
+legQualitativeAssessment.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/legQualitativeAssessment.jsp
+END
+closingCheckList.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/ICFP-REWRITE/!svn/ver/8759/src/main/webapp/jsp/common/inc/closingCheckList.jsp
+END
+common.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/common.jsp
+END
+eBoardroom.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/eBoardroom.jsp
+END
+reaffirm.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/reaffirm.jsp
+END
+assignReviewer.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/assignReviewer.jsp
+END
+moPipelineDealTeam.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/moPipelineDealTeam.jsp
+END
+progreessBar.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/ICFP-REWRITE/!svn/ver/9746/src/main/webapp/jsp/common/inc/progreessBar.jsp
+END
+qualitativeAssessment.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/qualitativeAssessment.jsp
+END
+userActions.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/ICFP-REWRITE/!svn/ver/2523/src/main/webapp/jsp/common/inc/userActions.jsp
+END
+transctionSummaryAndOwner.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/ICFP-REWRITE/!svn/ver/9433/src/main/webapp/jsp/common/inc/transctionSummaryAndOwner.jsp
+END
+fromToEntity.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/ICFP-REWRITE/!svn/ver/9763/src/main/webapp/jsp/common/inc/fromToEntity.jsp
+END
+otherConsideration.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/otherConsideration.jsp
+END
+adminRevoke.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/adminRevoke.jsp
+END
+exceptionDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/exceptionDetails.jsp
+END
+viewAdditionalApprovers.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/viewAdditionalApprovers.jsp
+END
+entityLookup.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/ICFP-REWRITE/!svn/ver/9739/src/main/webapp/jsp/common/inc/entityLookup.jsp
+END
+commentsLogModel.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/commentsLogModel.jsp
+END
+auditLog.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/ICFP-REWRITE/!svn/ver/9750/src/main/webapp/jsp/common/inc/auditLog.jsp
+END
+transactionSummaryForTreasuryLegalAndMOInput.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/transactionSummaryForTreasuryLegalAndMOInput.jsp
+END
+modealTeamSelection.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/modealTeamSelection.jsp
+END
+cashPoolDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/cashPoolDetails.jsp
+END
+cpaTPLegRequestDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/cpaTPLegRequestDetails.jsp
+END
+actionLog.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/actionLog.jsp
+END
+transactionPriorityAndTiming.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/ICFP-REWRITE/!svn/ver/8780/src/main/webapp/jsp/common/inc/transactionPriorityAndTiming.jsp
+END
+cpaQualitativeAssessment.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/ICFP-REWRITE/!svn/ver/9385/src/main/webapp/jsp/common/inc/cpaQualitativeAssessment.jsp
+END
+dealTeamSelection.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/dealTeamSelection.jsp
+END
+transactionLegDetails_Equity.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/transactionLegDetails_Equity.jsp
+END
+closingChecklistView.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/ICFP-REWRITE/!svn/ver/8759/src/main/webapp/jsp/common/inc/closingChecklistView.jsp
+END
+adminReassign.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/adminReassign.jsp
+END
+solvencyMetricsView.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/ICFP-REWRITE/!svn/ver/9492/src/main/webapp/jsp/common/inc/solvencyMetricsView.jsp
+END
+attachTransactionLegs.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/attachTransactionLegs.jsp
+END
+equityDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/equityDetails.jsp
+END
+commentsLog.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/ICFP-REWRITE/!svn/ver/9750/src/main/webapp/jsp/common/inc/commentsLog.jsp
+END
+frontOfficeLegView.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/frontOfficeLegView.jsp
+END
+vaultRequestIDDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/vaultRequestIDDetails.jsp
+END
+otherLegQualitativeAssessment.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/otherLegQualitativeAssessment.jsp
+END
+viewBusinessApprovers.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/viewBusinessApprovers.jsp
+END
+auditLogModel.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/auditLogModel.jsp
+END
+dealExceptionDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/dealExceptionDetails.jsp
+END
+auditLogFull.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/ICFP-REWRITE/!svn/ver/9750/src/main/webapp/jsp/common/inc/auditLogFull.jsp
+END
+legexceptionDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/legexceptionDetails.jsp
+END
+transactionLegs.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/ICFP-REWRITE/!svn/ver/9625/src/main/webapp/jsp/common/inc/transactionLegs.jsp
+END
+cpaCashPoolDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/cpaCashPoolDetails.jsp
+END
+transactionLegsWithDerivatives.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/transactionLegsWithDerivatives.jsp
+END
+qualitativeAssessment_LegSummary.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/ICFP-REWRITE/!svn/ver/9769/src/main/webapp/jsp/common/inc/qualitativeAssessment_LegSummary.jsp
+END
+transactionSummary.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/transactionSummary.jsp
+END
+additionalApprovers.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/additionalApprovers.jsp
+END
+commentsLogFull.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/ICFP-REWRITE/!svn/ver/9750/src/main/webapp/jsp/common/inc/commentsLogFull.jsp
+END
+dealTeam.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/ICFP-REWRITE/!svn/ver/8759/src/main/webapp/jsp/common/inc/dealTeam.jsp
+END
+newTransactionSummary.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/newTransactionSummary.jsp
+END
+cpaRequestDetailInput.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/ICFP-REWRITE/!svn/ver/9829/src/main/webapp/jsp/common/inc/cpaRequestDetailInput.jsp
+END
+editAdditionalApprovers.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/editAdditionalApprovers.jsp
+END
+detailSummary.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/detailSummary.jsp
+END
+cpaRequestDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/ICFP-REWRITE/!svn/ver/9499/src/main/webapp/jsp/common/inc/cpaRequestDetails.jsp
+END
+transactionLegDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/ICFP-REWRITE/!svn/ver/9738/src/main/webapp/jsp/common/inc/transactionLegDetails.jsp
+END

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/FloatRateInformation.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/FloatRateInformation.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="Float_Information">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Floating_Rate_Index" type="xs:string" minOccurs="0"/>
+				<xs:element name="Floating_Rate_Index_Term" type="xs:string" minOccurs="0"/>
+				<xs:element name="Index_Source" type="xs:string" minOccurs="0"/>
+				<xs:element name="Min_Spread" type="xs:string" minOccurs="0"/>
+				<xs:element name="Max_Spread" type="xs:string" minOccurs="0"/>
+				<xs:element name="Rate_Reset_Freq_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Rate_Reset_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Rate_Fixing_Methodology_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Interest_Calc_Freq_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Business_Days_For_Rate_Reset" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Float_Information_Info">
+		<xs:sequence>
+			<xs:element ref="Float_Information" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

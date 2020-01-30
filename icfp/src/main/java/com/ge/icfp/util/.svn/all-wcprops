@@ -1,0 +1,155 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/ICFP-REWRITE/!svn/ver/9795/src/main/java/com/ge/icfp/util
+END
+BusinessRegion.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/ICFP-REWRITE/!svn/ver/9206/src/main/java/com/ge/icfp/util/BusinessRegion.java
+END
+CashPoolSortByCountry.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/7059/src/main/java/com/ge/icfp/util/CashPoolSortByCountry.java
+END
+LegComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ICFP-REWRITE/!svn/ver/8377/src/main/java/com/ge/icfp/util/LegComparator.java
+END
+Utils.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/ICFP-REWRITE/!svn/ver/9580/src/main/java/com/ge/icfp/util/Utils.java
+END
+UserRole.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/ICFP-REWRITE/!svn/ver/7669/src/main/java/com/ge/icfp/util/UserRole.java
+END
+Actions.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/ICFP-REWRITE/!svn/ver/8714/src/main/java/com/ge/icfp/util/Actions.java
+END
+RequestEncodingFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/9306/src/main/java/com/ge/icfp/util/RequestEncodingFilter.java
+END
+TimeLogListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/ICFP-REWRITE/!svn/ver/9476/src/main/java/com/ge/icfp/util/TimeLogListener.java
+END
+TimeLogFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ICFP-REWRITE/!svn/ver/9213/src/main/java/com/ge/icfp/util/TimeLogFilter.java
+END
+MethodDebugInterceptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/ICFP-REWRITE/!svn/ver/7086/src/main/java/com/ge/icfp/util/MethodDebugInterceptor.java
+END
+SecurityHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/ICFP-REWRITE/!svn/ver/9682/src/main/java/com/ge/icfp/util/SecurityHelper.java
+END
+StaticDataFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ICFP-REWRITE/!svn/ver/9497/src/main/java/com/ge/icfp/util/StaticDataFactory.java
+END
+DateUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/ICFP-REWRITE/!svn/ver/9100/src/main/java/com/ge/icfp/util/DateUtil.java
+END
+QualitativeFactorsType.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/ICFP-REWRITE/!svn/ver/6322/src/main/java/com/ge/icfp/util/QualitativeFactorsType.java
+END
+BaseReportBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ICFP-REWRITE/!svn/ver/7073/src/main/java/com/ge/icfp/util/BaseReportBuilder.java
+END
+MasterDataFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ICFP-REWRITE/!svn/ver/8714/src/main/java/com/ge/icfp/util/MasterDataFactory.java
+END
+WriteToExcel.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/ICFP-REWRITE/!svn/ver/9116/src/main/java/com/ge/icfp/util/WriteToExcel.java
+END
+WorkflowStages.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/ICFP-REWRITE/!svn/ver/8924/src/main/java/com/ge/icfp/util/WorkflowStages.java
+END
+ProductType.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/ICFP-REWRITE/!svn/ver/4320/src/main/java/com/ge/icfp/util/ProductType.java
+END
+EventType.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/ICFP-REWRITE/!svn/ver/4322/src/main/java/com/ge/icfp/util/EventType.java
+END
+NoCacheResponseFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/7998/src/main/java/com/ge/icfp/util/NoCacheResponseFilter.java
+END
+SolvencyCalc.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/ICFP-REWRITE/!svn/ver/9126/src/main/java/com/ge/icfp/util/SolvencyCalc.java
+END
+SearchUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/ICFP-REWRITE/!svn/ver/9795/src/main/java/com/ge/icfp/util/SearchUtils.java
+END
+PipelineUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ICFP-REWRITE/!svn/ver/9795/src/main/java/com/ge/icfp/util/PipelineUtils.java
+END
+ValidateQualitativeAssessments.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/ICFP-REWRITE/!svn/ver/9121/src/main/java/com/ge/icfp/util/ValidateQualitativeAssessments.java
+END

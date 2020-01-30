@@ -1,0 +1,291 @@
+8
+
+dir
+9840
+http://192.168.0.14/ICFP-REWRITE/src/main/webapp/jsp/day2
+http://192.168.0.14/ICFP-REWRITE
+
+
+
+2013-02-21T12:09:15.196860Z
+9834
+madhusudhang
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ba77e99c-fc20-4067-90bb-d77db4103c45
+
+day2FrontOffice.jsp
+file
+
+
+
+
+2013-05-20T09:00:46.876556Z
+9903e43b9e4d1385bb66a8ae6937b182
+2013-02-07T18:29:23.182279Z
+9795
+prithivid
+has-props
+
+day2transactionCaptureMO.jsp
+file
+
+
+
+
+2013-05-20T09:00:46.894552Z
+5cb4f064597fdbf505c52a7e253d9e90
+2012-10-31T16:57:47.750107Z
+9306
+madhusudhang
+
+day2MiddleOfficeView.jsp
+file
+
+
+
+
+2013-05-20T09:00:46.886554Z
+0b61fa1d2460ab37e07d6c8b641fc875
+2012-11-12T09:39:31.222017Z
+9467
+srinivasanu
+
+equity
+dir
+
+treasuryLegal
+dir
+
+day2ReadOnlyView.jsp
+file
+
+
+
+
+2013-05-20T09:00:46.902550Z
+99428f5493baff2f0c717621657aa3a5
+2013-01-30T21:36:47.370238Z
+9750
+prithivid
+
+day2MiddleOffice.jsp
+file
+
+
+
+
+2013-05-20T09:00:46.922546Z
+5ad1f05268e0c925818f5c7edda76e7a
+2012-11-12T09:31:52.022680Z
+9465
+srinivasanu
+has-props
+
+day2CashManagement.jsp
+file
+
+
+
+
+2013-05-20T09:00:46.931545Z
+6ce89be1b584c90a4e71615fe8fac373
+2012-11-06T09:36:39.786372Z
+9347
+nagarjuna.a
+has-props
+
+common
+dir
+
+day2TreasuryLegalView.jsp
+file
+
+
+
+
+2013-05-20T09:00:46.938543Z
+a43189a046418f3def2f9475a23d1eaa
+2012-11-12T09:40:17.394889Z
+9469
+srinivasanu
+
+treasuryTax
+dir
+
+transferPricingView
+dir
+
+day2CountryTax.jsp
+file
+
+
+
+
+2013-05-20T09:00:46.945542Z
+0b93c9b07d3a2e336be631bdcb1bd79e
+2012-11-09T09:52:24.444179Z
+9450
+nagarjuna.a
+has-props
+
+day2InputScreens.jsp
+file
+
+
+
+
+2013-05-20T09:00:46.953540Z
+73adc4718c915f5e5ecdb0727fc4c97f
+2013-01-29T18:40:25.027715Z
+9746
+prithivid
+has-props
+
+day2TreasuryLegal.jsp
+file
+
+
+
+
+2013-05-20T09:00:46.963538Z
+1549f96e2580120bb4de0b13e1e1b3c5
+2012-11-12T09:39:53.032193Z
+9468
+srinivasanu
+has-props
+
+day2ViewTransferPricingLeg.jsp
+file
+
+
+
+
+2013-05-20T09:00:46.971537Z
+3d5b58c6c69676acf38406452c822d3a
+2012-11-12T09:46:24.353819Z
+9474
+srinivasanu
+has-props
+
+transferPricing
+dir
+
+day2TreasuryTaxView.jsp
+file
+
+
+
+
+2013-05-20T09:00:46.977535Z
+4e498c1e230b0d54c3074810fbd7e377
+2012-11-12T09:41:12.198773Z
+9471
+srinivasanu
+
+viewLeg
+dir
+
+day2ViewFOLeg.jsp
+file
+
+
+
+
+2013-05-20T09:00:46.985534Z
+95089dfe28fb4cce8a0c3a22bca4ed01
+2013-01-30T21:36:47.370238Z
+9750
+prithivid
+
+cashMgmt
+dir
+
+cpa
+dir
+
+day2Requestor.jsp
+file
+
+
+
+
+2013-05-20T09:00:46.995532Z
+0c26175cf8b803146b51588b688ab8e0
+2012-10-31T16:57:47.750107Z
+9306
+madhusudhang
+has-props
+
+rca
+dir
+
+day2TreasuryTax.jsp
+file
+
+
+
+
+2013-05-20T09:00:47.005530Z
+c9fb1f7d7b3cc8978e2f629181cb6122
+2012-11-12T09:40:43.312568Z
+9470
+srinivasanu
+has-props
+
+transactionCapture
+dir
+
+day2ViewCashManagementLeg.jsp
+file
+
+
+
+
+2013-05-20T09:00:47.012528Z
+b6c9ba2c70b707ad9a50f3002c76a215
+2013-02-21T12:09:15.196860Z
+9834
+madhusudhang
+has-props
+
+middleOffice
+dir
+
+day2TransferPricing.jsp
+file
+
+
+
+
+2013-05-20T09:00:47.021527Z
+27c5a70da9d683b825f877069eb13cfe
+2012-11-08T13:27:56.558917Z
+9434
+nagarjuna.a
+has-props
+
+day2ViewLeg.jsp
+file
+
+
+
+
+2013-05-20T09:00:47.028525Z
+b47f990ccd5dc458be8a6de386a5c90e
+2012-10-31T16:57:47.750107Z
+9306
+madhusudhang
+

@@ -1,0 +1,52 @@
+8
+
+dir
+9840
+http://192.168.0.14/ICFP-REWRITE/src/main/webapp/jsp/report
+http://192.168.0.14/ICFP-REWRITE
+
+
+
+2012-10-31T16:57:47.750107Z
+9306
+madhusudhang
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ba77e99c-fc20-4067-90bb-d77db4103c45
+
+dealDataReport.jsp
+file
+
+
+
+
+2013-05-20T09:00:47.981335Z
+6f42390e2caa518752c15e3726ca416f
+2012-10-31T16:57:47.750107Z
+9306
+madhusudhang
+
+dealReportTest.jsp
+file
+
+
+
+
+2013-05-20T09:00:47.991333Z
+1a082a895f2cb208e2d811b38196f013
+2012-10-31T16:57:47.750107Z
+9306
+madhusudhang
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/DrawDown.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/DrawDown.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="DrawDown">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Drawdown_Notice_Attached_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Drawdown_Value_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Drawdown_Amt" type="xs:double" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="DrawDown_Info">
+		<xs:sequence>
+			<xs:element ref="DrawDown" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

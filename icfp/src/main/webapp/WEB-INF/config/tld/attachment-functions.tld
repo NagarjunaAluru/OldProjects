@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<taglib version="2.0" xmlns="http://java.sun.com/xml/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">
+	<tlib-version>1.0</tlib-version>
+	<short-name>ICFP Attachment Functions</short-name>
+	<uri>http://ge.com/icfp/taglibs/attachment-functions</uri>
+	<display-name>ICFP Attachment Functions</display-name>
+	<description></description>
+	
+	<function>
+		<name>getDealAttachments</name>
+		<function-class>com.ge.icfp.common.attachments.AttachmentViewFunctions</function-class>
+		<function-signature>java.util.List getDealAttachments(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getLegAttachments</name>
+		<function-class>com.ge.icfp.common.attachments.AttachmentViewFunctions</function-class>
+		<function-signature>java.util.List getLegAttachments(java.lang.Integer, java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getAttachmentLegsWithIndexes</name>
+		<function-class>com.ge.icfp.common.attachments.AttachmentViewFunctions</function-class>
+		<function-signature>java.util.Map getAttachmentLegsWithIndexes(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getLegSummaryVOs</name>
+		<function-class>com.ge.icfp.common.attachments.AttachmentViewFunctions</function-class>
+		<function-signature>java.util.List getLegSummaryVOs(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getCPALegSummaryVOs</name>
+		<function-class>com.ge.icfp.common.attachments.AttachmentViewFunctions</function-class>
+		<function-signature>java.util.List getCPALegSummaryVOs(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getAllDealAttachmentTypeComments</name>
+		<function-class>com.ge.icfp.common.attachments.AttachmentViewFunctions</function-class>
+		<function-signature>java.util.Map getAllDealAttachmentTypeComments(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getLegAllAttachmentTypeComments</name>
+		<function-class>com.ge.icfp.common.attachments.AttachmentViewFunctions</function-class>
+		<function-signature>java.util.Map getLegAllAttachmentTypeComments(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getAllLegsAllAttachmentTypeComments</name>
+		<function-class>com.ge.icfp.common.attachments.AttachmentViewFunctions</function-class>
+		<function-signature>java.util.Map getAllLegsAllAttachmentTypeComments(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getDerivatives</name>
+		<function-class>com.ge.icfp.common.attachments.AttachmentViewFunctions</function-class>
+		<function-signature>java.util.List getDerivatives(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getExceptions</name>
+		<function-class>com.ge.icfp.common.attachments.AttachmentViewFunctions</function-class>
+		<function-signature>java.util.List getExceptions(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getDerivativeAttachments</name>
+		<function-class>com.ge.icfp.common.attachments.AttachmentViewFunctions</function-class>
+		<function-signature>java.util.List getDerivativeAttachments(java.lang.Integer, java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<!-- <function>
+		<name>getLegSeqId</name>
+		<function-class>com.ge.icfp.common.attachments.AttachmentViewFunctions</function-class>
+		<function-signature>java.lang.Integer getLegSeqId(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function> -->
+	
+	<function>
+		<name>getUnderWritingFileName</name>
+		<function-class>com.ge.icfp.common.attachments.AttachmentViewFunctions</function-class>
+		<function-signature>java.lang.String getUnderWritingFileName(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<!-- <function>
+		<name>isCPADeal</name>
+		<function-class>com.ge.icfp.common.attachments.AttachmentViewFunctions</function-class>
+		<function-signature>java.lang.Boolean isCPADeal(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function> -->
+	
+	<function>
+		<name>getAttachmentPermissions</name>
+		<function-class>com.ge.icfp.common.attachments.AttachmentViewFunctions</function-class>
+		<function-signature>com.ge.icfp.common.attachments.AttachmentPermissions getAttachmentPermissions(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getLegAttachmentPermissions</name>
+		<function-class>com.ge.icfp.common.attachments.AttachmentViewFunctions</function-class>
+		<function-signature>com.ge.icfp.common.attachments.AttachmentPermissions getLegAttachmentPermissions(java.lang.Integer, java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>getDealPermissions</name>
+		<function-class>com.ge.icfp.common.attachments.AttachmentViewFunctions</function-class>
+		<function-signature>com.ge.icfp.common.attachments.DealPermissions getDealPermissions(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+	<function>
+		<name>toLong</name>
+		<function-class>com.ge.icfp.common.attachments.AttachmentViewFunctions</function-class>
+		<function-signature>java.lang.Long toLong(java.lang.Integer)</function-signature>
+	</function>
+	
+	<function>
+		<name>getDealPageAttachmentsCount</name>
+		<function-class>com.ge.icfp.common.attachments.AttachmentViewFunctions</function-class>
+		<function-signature>java.lang.Integer getDealPageAttachmentsCount(javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	<function>
+		<name>getLegPageAttachmentsCount</name>
+		<function-class>com.ge.icfp.common.attachments.AttachmentViewFunctions</function-class>
+		<function-signature>java.lang.Integer getLegPageAttachmentsCount(java.lang.Integer, javax.servlet.http.HttpServletRequest)</function-signature>
+	</function>
+	
+</taglib>

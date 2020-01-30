@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" 
+		"http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<!-- Message Resources -->
+	<message-resources parameter="com.ge.icfp.MessageResources" null="false" />
+
+	<!-- Spring Struts plugin -->
+	<plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation" value="/WEB-INF/config/global-beans.xml,/WEB-INF/config/bw-beans.xml,/WEB-INF/config/beans.xml" />
+	</plug-in>
+
+	<!-- Validator plugin -->
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames" value="/WEB-INF/config/validation.xml,/WEB-INF/config/validator-rules.xml" />
+	</plug-in>
+	
+	<!-- FormDef Plugin -->
+	<plug-in className="formdef.plugin.FormDefPlugIn">
+        <set-property property="pathnames" value="/WEB-INF/config/form-defs/dealrequest-defs.xml"/>
+    </plug-in>
+</struts-config>

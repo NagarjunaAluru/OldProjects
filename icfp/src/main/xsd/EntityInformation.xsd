@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/EntityInformation.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/EntityInformation.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="Entity" type="EntityType"/>
+	<xs:complexType name="EntityType">
+		<xs:sequence>
+			<xs:element name="LE_Gold_Id" type="xs:string" minOccurs="0"/>
+			<xs:element name="LE_Name" type="xs:string" minOccurs="0"/>
+			<xs:element name="LE_Category" type="xs:string" minOccurs="0"/>
+			<xs:element name="CDR_Cd" type="xs:string" minOccurs="0"/>
+			<xs:element name="ME_Name" type="xs:string" minOccurs="0"/>
+			<xs:element name="Bank_Treasury_Cd" type="xs:string" minOccurs="0"/>
+			<xs:element name="Treasury_Code" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="BankInformation" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Treasury_Code" type="xs:string" minOccurs="0"/>
+						<xs:element name="Bank_Name" type="xs:string" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Legal_Entity_Seq_Id" type="xs:int" minOccurs="0"/>
+			<xs:element name="Country" type="xs:string" minOccurs="0"/>
+			<xs:element name="Country_Cd" type="xs:string" minOccurs="0"/>
+			<xs:element name="Le_Type" type="xs:string" minOccurs="0"/>
+			<xs:element name="Le_Type_Id" type="xs:int" minOccurs="0"/>
+			<xs:element name="Me_Gold_Id" type="xs:string" minOccurs="0"/>
+			<xs:element name="Le_Category_Id" type="xs:int" minOccurs="0"/>
+			<xs:element name="Princpl_Entity_Flag" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="Regulated_Entity_Flag" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="Entity_Setup_Flag" type="xs:string" minOccurs="0"/>
+			<xs:element name="Capital_Industrial" type="xs:string" minOccurs="0"/>
+			<xs:element name="Business_Segment" type="xs:string" minOccurs="0"/>
+			<xs:element name="Fund_Hold_Operation_Id" type="xs:int" minOccurs="0"/>
+			<xs:element name="Fund_Hold_Operation" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Entity_Info">
+		<xs:sequence>
+			<xs:element ref="Entity" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

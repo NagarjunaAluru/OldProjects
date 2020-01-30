@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/Termination.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/Termination.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="Termination">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Termination_Notice_Attached_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Brokerage_Cost_Amt" type="xs:double" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Termination_Info">
+		<xs:sequence>
+			<xs:element ref="Termination" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

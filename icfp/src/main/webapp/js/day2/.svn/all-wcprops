@@ -1,0 +1,161 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/ICFP-REWRITE/!svn/ver/9829/src/main/webapp/js/day2
+END
+frontOffice.js
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/ICFP-REWRITE/!svn/ver/9412/src/main/webapp/js/day2/frontOffice.js
+END
+timeline.js
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/ICFP-REWRITE/!svn/ver/9073/src/main/webapp/js/day2/timeline.js
+END
+rcaTreasuryTaxEvents.js
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/ICFP-REWRITE/!svn/ver/8896/src/main/webapp/js/day2/rcaTreasuryTaxEvents.js
+END
+day2CPASANDO.js
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/ICFP-REWRITE/!svn/ver/9144/src/main/webapp/js/day2/day2CPASANDO.js
+END
+rcaTCMOGenAmendment.js
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/ICFP-REWRITE/!svn/ver/9144/src/main/webapp/js/day2/rcaTCMOGenAmendment.js
+END
+equityCashManagement.js
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/ICFP-REWRITE/!svn/ver/9073/src/main/webapp/js/day2/equityCashManagement.js
+END
+cpaRequestor.js
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/ICFP-REWRITE/!svn/ver/9163/src/main/webapp/js/day2/cpaRequestor.js
+END
+rcaTCMOAgreementExtension.js
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/ICFP-REWRITE/!svn/ver/8857/src/main/webapp/js/day2/rcaTCMOAgreementExtension.js
+END
+rcaCashMgmtEvents.js
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/ICFP-REWRITE/!svn/ver/8896/src/main/webapp/js/day2/rcaCashMgmtEvents.js
+END
+rcaTCMOCorrection.js
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/ICFP-REWRITE/!svn/ver/9144/src/main/webapp/js/day2/rcaTCMOCorrection.js
+END
+rcaTCMOAssignment.js
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/ICFP-REWRITE/!svn/ver/8857/src/main/webapp/js/day2/rcaTCMOAssignment.js
+END
+equityDay2TransferPricing.js
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/ICFP-REWRITE/!svn/ver/9237/src/main/webapp/js/day2/equityDay2TransferPricing.js
+END
+rcaTLegalEvents.js
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/ICFP-REWRITE/!svn/ver/8896/src/main/webapp/js/day2/rcaTLegalEvents.js
+END
+cpaTransferPricing.js
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/ICFP-REWRITE/!svn/ver/9163/src/main/webapp/js/day2/cpaTransferPricing.js
+END
+cpaTCMiddleOffice.js
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/ICFP-REWRITE/!svn/ver/9829/src/main/webapp/js/day2/cpaTCMiddleOffice.js
+END
+rcaMiddleOfficeEvents.js
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/ICFP-REWRITE/!svn/ver/8896/src/main/webapp/js/day2/rcaMiddleOfficeEvents.js
+END
+day2CashPool.js
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/ICFP-REWRITE/!svn/ver/9410/src/main/webapp/js/day2/day2CashPool.js
+END
+rcaTCMODebtEquityOther.js
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ICFP-REWRITE/!svn/ver/9144/src/main/webapp/js/day2/rcaTCMODebtEquityOther.js
+END
+cpaDay2Request.js
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/ICFP-REWRITE/!svn/ver/9409/src/main/webapp/js/day2/cpaDay2Request.js
+END
+rcaTCMOPrepayment.js
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/ICFP-REWRITE/!svn/ver/9144/src/main/webapp/js/day2/rcaTCMOPrepayment.js
+END
+rcaTCMODrawdown.js
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/ICFP-REWRITE/!svn/ver/9144/src/main/webapp/js/day2/rcaTCMODrawdown.js
+END
+cpaCashManagement.js
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/ICFP-REWRITE/!svn/ver/8896/src/main/webapp/js/day2/cpaCashManagement.js
+END
+rcaTCMOEarlyTermination.js
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/ICFP-REWRITE/!svn/ver/9144/src/main/webapp/js/day2/rcaTCMOEarlyTermination.js
+END
+day2Equity.js
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/ICFP-REWRITE/!svn/ver/9814/src/main/webapp/js/day2/day2Equity.js
+END
+rcaTCMOAmendIncreaseDecrease.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/ICFP-REWRITE/!svn/ver/9144/src/main/webapp/js/day2/rcaTCMOAmendIncreaseDecrease.js
+END
+equityTCMO.js
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/ICFP-REWRITE/!svn/ver/9240/src/main/webapp/js/day2/equityTCMO.js
+END

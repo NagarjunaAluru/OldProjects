@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/TPLegRequest.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/TPLegRequest.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="TP_Leg_Request">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="TP_Summary" type="xs:string" minOccurs="0"/>
+				<xs:element name="Model_Type_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Model_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Total_Debt" type="xs:double" minOccurs="0"/>
+				<xs:element name="Total_Capital" type="xs:double" minOccurs="0"/>
+				<xs:element name="Net_Income" type="xs:double" minOccurs="0"/>
+				<xs:element name="Return_On_Avg_Assets" type="xs:double" minOccurs="0"/>
+				<xs:element name="Total_Debt_Captial_Ratio" type="xs:double" minOccurs="0"/>
+				<xs:element name="Net_Charge-off_Receivables" type="xs:double" minOccurs="0"/>
+				<xs:element name="Net_Interest_Margin" type="xs:double" minOccurs="0"/>
+				<xs:element name="Model_Score_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Model_Score" type="xs:string" minOccurs="0"/>
+				<xs:element name="Range_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Range" type="xs:string" minOccurs="0"/>
+				<xs:element name="Sovereign_Constraint_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="SP_Numerical_Rating" type="xs:double" minOccurs="0"/>
+				<xs:element name="SP_Rating_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="SP_Rating" type="xs:string" minOccurs="0"/>
+				<xs:element name="Qualitative_Notches" type="xs:string" minOccurs="0"/>
+				<xs:element name="Final_Rating_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Final_Rating" type="xs:string" minOccurs="0"/>
+				<xs:element ref="Solvency_Metrics" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="TP_Leg_Request_Info">
+		<xs:sequence>
+			<xs:element ref="TP_Leg_Request" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Solvency_Metrics">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Solvency_Metric_Opcode" type="xs:string" minOccurs="0"/>
+				<xs:element name="Solvency_Metric_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Solvency_Metric" type="xs:string" minOccurs="0"/>
+				<xs:element name="Pre_Transaction" type="xs:string" minOccurs="0"/>
+				<xs:element name="Post_Transaction" type="xs:string" minOccurs="0"/>
+				<xs:element name="Fund_Threshold" type="xs:string" minOccurs="0"/>
+				<xs:element name="Assessment_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Comment" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

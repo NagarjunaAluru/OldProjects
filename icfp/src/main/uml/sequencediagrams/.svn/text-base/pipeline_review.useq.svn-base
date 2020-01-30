@@ -1,0 +1,82 @@
+<sequence-diagram version="1.0.9" icons="true">  
+  <object id="1" language="java" name="com.ge.icfp.pipeline.action.PipelineReviewDealAction" project="icfp" 
+    file="/icfp/src/main/java/com/ge/icfp/pipeline/action/PipelineReviewDealAction.java" binary="false" 
+    label="pipelineReviewDealAction" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="527" y="0"/>    
+    <execution id="2">      
+      <position height="252" width="170" x="5" y="82"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="189" width="170" x="5" y="124"/>    
+    </execution>    
+    <execution id="6">      
+      <position height="63" width="7" x="90" y="166"/>    
+    </execution>    
+    <execution id="13">      
+      <position height="166" width="170" x="5" y="362"/>    
+    </execution>    
+    <execution id="15">      
+      <position height="103" width="170" x="5" y="404"/>    
+    </execution>  
+  </object>  
+  <object id="20" language="java" name="com.ge.icfp.common.helper.CurrentDealManager" project="icfp" 
+    file="/icfp/src/main/java/com/ge/icfp/common/helper/CurrentDealManager.java" binary="false" 
+    label="currentDealManager" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="521" y="0"/>    
+    <execution id="10">      
+      <position height="21" width="141" x="179" y="271"/>    
+    </execution>    
+    <execution id="17">      
+      <position height="21" width="141" x="179" y="425"/>    
+    </execution>  
+  </object>  
+  <object id="21" language="java" name="com.hydus.wff.common.bw.ServiceClient" project="icfp" 
+    file="C:/Users/chaitanya/.m2/repository/com/hydus/hwf-core/0.0.17/hwf-core-0.0.17.jar" binary="true" 
+    label="serviceClient" type="interface" autoSize="true">    
+    <position height="-1" width="-1" x="797" y="0"/>    
+    <execution id="8">      
+      <position height="21" width="124" x="324" y="246"/>    
+    </execution>    
+    <execution id="12">      
+      <position height="21" width="124" x="324" y="187"/>    
+    </execution>    
+    <execution id="19">      
+      <position height="21" width="124" x="324" y="465"/>    
+    </execution>  
+  </object>  
+  <message id="3" 
+    operation="getPipelineReviewDealDetail(org.apache.struts.action.ActionMapping,org.apache.struts.action.ActionForm,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse):org.apache.struts.action.ActionForward">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" 
+    operation="roleInfoInvocation(javax.servlet.http.HttpServletRequest,java.util.Map&lt;String,RoleInfo&gt;):void">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" operation="invokeService(java.lang.String,java.lang.Object,java.lang.Class&lt;T&gt;):T">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="9" operation="setActiveDeal(com.ge.icfp.model.DealRequest,javax.servlet.http.HttpServletRequest):void">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="10"/>  
+  </message>  
+  <message id="11" operation="invokeService(java.lang.String,java.lang.Object,java.lang.Class&lt;T&gt;):T">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="14" 
+    operation="acceptRequest(org.apache.struts.action.ActionMapping,org.apache.struts.action.ActionForm,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse):org.apache.struts.action.ActionForward">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="15"/>  
+  </message>  
+  <message id="16" operation="getCurrentDeal(javax.servlet.http.HttpServletRequest):com.ge.icfp.model.DealRequest">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="17"/>  
+  </message>  
+  <message id="18" operation="invokeService(java.lang.String,java.lang.Object,java.lang.Class&lt;T&gt;):T">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="19"/>  
+  </message>
+</sequence-diagram>

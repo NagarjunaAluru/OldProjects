@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/ICFP-REWRITE/!svn/ver/9825/src/main/java/com/ge/icfp/common/helper
+END
+CurrentDealManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/ICFP-REWRITE/!svn/ver/9281/src/main/java/com/ge/icfp/common/helper/CurrentDealManager.java
+END
+ICFPDay2LegHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/ICFP-REWRITE/!svn/ver/9795/src/main/java/com/ge/icfp/common/helper/ICFPDay2LegHelper.java
+END
+ICFPLegHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/ICFP-REWRITE/!svn/ver/9795/src/main/java/com/ge/icfp/common/helper/ICFPLegHelper.java
+END
+ICFPAdminHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/ICFP-REWRITE/!svn/ver/9795/src/main/java/com/ge/icfp/common/helper/ICFPAdminHelper.java
+END
+ICFPCommonHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/ICFP-REWRITE/!svn/ver/9825/src/main/java/com/ge/icfp/common/helper/ICFPCommonHelper.java
+END
+EntityHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/9795/src/main/java/com/ge/icfp/common/helper/EntityHelper.java
+END
+CurrentInboxManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/ICFP-REWRITE/!svn/ver/9795/src/main/java/com/ge/icfp/common/helper/CurrentInboxManager.java
+END

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/IDAGEAGLead.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/IDAGEAGLead.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="IDAGEAG_Lead">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Group" type="xs:string" minOccurs="0"/>
+				<xs:element name="SSO_ID" type="xs:string" minOccurs="0"/>
+				<xs:element name="Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Action_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Approved_SSO" type="xs:string" minOccurs="0"/>
+				<xs:element name="Approved_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Action_Date" type="xs:string" minOccurs="0"/>
+				<xs:element name="Action" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

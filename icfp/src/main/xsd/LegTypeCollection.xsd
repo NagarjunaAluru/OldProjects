@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/LegTypeCollection.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ICFP/CPALegRequest.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ICFP/RCALegRequest.xsd"
+	 xmlns:ns2="http://treasury.ge.com/schemas/ICFP/EquityLegRequest.xsd"
+	 xmlns:ns3="http://treasury.ge.com/schemas/ICFP/OtherLegRequest.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/LegTypeCollection.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/CPALegRequest.xsd" schemaLocation="CPALegRequest.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/RCALegRequest.xsd" schemaLocation="RCALegRequest.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/EquityLegRequest.xsd" schemaLocation="EquityLegRequest.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/OtherLegRequest.xsd" schemaLocation="OtherLegRequest.xsd"/>
+	<xs:element name="Legs">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="ns0:CPA_Leg_Request"/>
+				<xs:element ref="ns1:RCA_Leg_Request"/>
+				<xs:element ref="ns2:Equity_Leg_Request"/>
+				<xs:element ref="ns3:Other_Leg_Request"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Leg_Type_Collection">
+		<xs:sequence>
+			<xs:element ref="Legs" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

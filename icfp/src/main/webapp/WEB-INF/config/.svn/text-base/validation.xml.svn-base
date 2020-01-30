@@ -1,0 +1,2335 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+
+<form-validation>
+
+<!--
+     This is a minimal Validator form file with a couple of examples.
+-->
+
+    <global>
+
+        <!-- An example global constant
+        <constant>
+            <constant-name>postalCode</constant-name>
+            <constant-value>^\d{5}\d*$</constant-value>
+        </constant>
+        end example-->
+
+    </global>
+
+ <formset>
+	
+		<!-- Strtus ActionForm Validation -->
+           <form name="dealRequestForm">
+           
+           <field
+                property="dealName" page="3"
+                depends="required">
+                    <arg key="fundingRequest.dealName"/>
+             </field>
+           
+            
+            
+             <field
+                property="dealRationale" page="3"
+                depends="required">
+                    <arg key="label.fundingRequest.dealRationale"/>
+             </field>
+            
+            <field
+                property="dealRationale" page="2"
+                depends="maxlength">
+                     <arg0 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                      <var-name>maxlength</var-name>
+                      <var-value>2500</var-value>
+                    </var>
+            </field>
+            <field
+                property="dealCategoryId" page="3"
+                depends="required">
+                    <arg key="fundingRequest.dealCategoryID"/>
+            </field>
+            
+            
+              <field
+                property="securityCategoryId" page="4"
+                depends="required">
+                    <arg key="fundingRequest.securityID"/>
+             </field>  
+             
+             <field
+                property="impairmentHistoryFlag" page="3" 
+                depends="required">
+                    <arg key="fundingRequest.isImpairmentHistory"/>
+             </field>
+             
+              <field property="vaultId"   depends="mask,maxlength"  >
+	                <arg0 key="cpafundingRequest.vaultID"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+	                 <var>
+                        <var-name>mask</var-name>
+                        <var-value>^[a-zA-Z0-9\s]*$</var-value>
+                    </var>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>50</var-value>
+                     </var>
+                     
+                     
+	           </field>
+			  
+			  <field property="impairmentComment" depends="validwhen" page="3" >
+     			 <arg0 key="fundingRequest.impairmentComment"/>
+       			 <var>
+         			 <var-name>test</var-name>
+          			 <var-value>((impairmentHistoryFlag == "false") or (*this* != null))</var-value>
+       			 </var>
+      		  </field>
+ 			  <field
+                 property="impairmentComment" page="2" 
+                depends="maxlength">
+                    <arg key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                      <var-name>maxlength</var-name>
+                      <var-value>500</var-value>
+                    </var>
+             </field>
+			  
+             
+              <field
+                property="finSttmntDtAboveOneYrFlag" page="3"
+                depends="required">
+                    <arg key="fundingRequest.finSttmntDtAboveOneYrFlag"/>
+             </field>
+             
+              <field property="latestDtOfFinSttmnt" depends="validwhen" page="3" >
+     			 <arg0 key="fundingRequest.lastDateofFinancialStmt"/>
+       			 <var>
+         			 <var-name>test</var-name>
+          			 <var-value>((finSttmntDtAboveOneYrFlag == "false") or (*this* != null))</var-value>
+       			 </var>
+      		  </field>
+      		  
+      		   <field
+                property="latestDtOfFinSttmnt" page="2"
+                depends="maxlength">
+                    <arg key="${var:maxlength}" name="maxlength" resource="false"/>
+                    <var> 
+                      <var-name>maxlength</var-name>
+                      <var-value>10</var-value>
+                    </var>
+                    
+             </field>
+             
+             <field
+                property="crossBorderFlag" page="3"
+                depends="required">
+                    <arg key="fundingRequest.isCrossBorder"/>
+             </field> 
+          
+           
+             <field
+                property="priorityId" page="3"
+                depends="required">
+                    <arg key="fundingRequest.priorityID"/>
+             </field>
+             
+             <field property="priorityComment" depends="validwhen" page="3" >
+     			 <arg0 key="fundingRequest.priorityComment"/>
+       			 <var>
+         			 <var-name>test</var-name>
+          			  <var-value>( (priorityId == "3") or (*this* != null ))</var-value>
+       			 </var>
+      		  </field>
+             
+             <field
+                property="priorityComment" page="2"
+                depends="maxlength">
+                    <arg key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                      <var-name>maxlength</var-name>
+                      <var-value>500</var-value>
+                    </var>
+             </field>
+             <field
+                property="responsibleRegionId" page="3"
+                depends="required">
+                    <arg key="fundingRequest.regionResponsibility"/>
+             </field>
+             
+              <field
+                property="valueDt" page="3"
+                depends="required">
+                    <arg key="fundingRequest.valueDate"/>
+              </field>
+             
+             <field
+                property="valueDt" page="2"
+                depends="maxlength">
+                    <arg key="${var:maxlength}" name="maxlength" resource="false"/>
+
+                    <var> 
+                      <var-name>maxlength</var-name>
+                      <var-value>10</var-value>
+                    </var>
+                                        
+             </field>
+             
+             
+              
+              <field
+                property="comments" page="2"
+                depends="maxlength">
+                    <arg key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                      <var-name>maxlength</var-name>
+                      <var-value>500</var-value>
+                    </var>
+             </field> 
+             <field
+                property="dealName" page="3"
+                depends="legSize">
+                    <arg key="fundingRequest.dealName"/>
+             </field>
+        <!--      <field
+                property="valueDt" page="3"
+                depends="valueDate">
+                    <arg key="fundingRequest.valueDate"/>
+             </field>  -->
+             
+            
+        </form> 
+        
+    </formset>   
+      <!-- Added by Kavitha Ramdeni for Pipeline Review Deal Validations -->
+   <formset>
+    <form name="pipeLineReviewForm">
+          <field
+                property="valueDate"
+                depends="required,maxlength,date">
+                    <arg0 key="pipeLineReviewForm.valueDate"/>
+                    <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                    <arg2 key="pipeLineReviewForm.valueDate"/>
+                    <var> 
+                      <var-name>maxlength</var-name>
+                      <var-value>10</var-value>
+                    </var>
+                    <var> 
+                      <var-name>date</var-name>
+                      <var-value>MM/dd/yyyy</var-value>
+                    </var>
+                     
+             </field>
+        
+           <field
+                property="frontOfficeID"
+                depends="required">
+                    <arg key="pipeLineReviewForm.frontOfficeID"/>
+            </field>
+            
+            <field
+                property="middleOfficeID"
+                depends="required">
+                    <arg key="pipeLineReviewForm.middleOfficeID"/>
+            </field>
+            
+            <field
+                property="cashManagementID"
+                depends="required">
+                    <arg key="pipeLineReviewForm.cashManagementID"/>
+            </field>
+            
+            <field
+                property="treasuryTaxID"
+                depends="required">
+                    <arg key="pipeLineReviewForm.treasuryTaxID"/>
+            </field>
+       
+    
+     		<field
+                property="comments"
+                depends="required,maxlength">
+                    <arg0 key="pipeLineReviewForm.comments"/>
+                    <arg0 key="pipeLineReviewForm.comments"/>
+                    <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                      <var-name>maxlength</var-name>
+                      <var-value>500</var-value>
+                    </var>
+             </field> 
+             
+        </form> 
+         <!-- Ended by Kavitha Ramdeni for Pipeline Review Deal Validations -->
+         <!-- Treasury Legal validation 
+	   	<form name="fourBlockerForm">
+	          
+	            <field
+	                property="qAssessment"
+	                depends="required">
+	                    <arg key="fourBlockerForm.qAssessment"/>
+	             </field>
+	            <field
+	                property="comments"
+	                depends="required,maxlength">
+	                    <arg0 key="fourBlockerForm.comments"/>
+	                    <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+	                     <var> 
+	                      <var-name>maxlength</var-name>
+	                      <var-value>500</var-value>
+	                    </var>
+	            </field>
+	    </form> 
+   -->
+ 			<form name="fourBlockerForm">
+	       		<field 
+	       		    property="lComments"
+	                depends="required,maxlength">
+	                    <arg0 key="fundingRequest.comments"/>
+	                    <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+	                     <var> 
+	                      <var-name>maxlength</var-name>
+	                      <var-value>500</var-value>
+	                    </var>
+	             </field> 
+             </form>
+  
+          
+    </formset>  
+    <formset>
+     <!-- RCA Transfer Pricing InputForm  VALIDATION STARTS -->
+    <form name="ICFPLegRequestForm">
+    
+    			<field   property="guaranteeFeeApplicableFlag"  page="3"   depends="required" >
+                    <arg key="rcaTransferPricingInputForm.guaranteeFeeApplicable"/>
+              </field>
+              
+               <field property="commitmentFeeApplicableFlag"   page="3"  depends="validwhen"  >
+     			 <arg0 key="rcaTransferPricingInputForm.commitmentFeeApplicable"/>
+       			 <var>
+         			 <var-name>test</var-name>
+          			  <var-value>( (legSummary.productType != "RCA") or (*this* != null ))</var-value>
+       			 </var>
+       			</field>
+              
+              <field property="commitmentFeeRate"   page="3"  depends="validwhen"  >
+     			 <arg0 key="rcaTransferPricingInputForm.commitmentFeeRate"/>
+       			 <var>
+         			 <var-name>test</var-name>
+          			  <var-value>( (commitmentFeeApplicableFlag != "true") or (*this* != null ))</var-value>
+       			 </var>
+       			</field>
+      		    
+      		    <field property="commitmentFeeRate" page="2"  depends="double,maxlength"  >
+	                <arg0 key="rcaTransferPricingInputForm.commitmentFeeRate"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+	                 <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>9</var-value>
+                     </var>
+
+	           </field>
+	            <field property="commitmentFeeRate" page="2"  depends="minimumValue"  >
+	                <arg key="rcaTransferPricingInputForm.commitmentFeeRate"/>
+	            </field>
+	           
+	           <field property="guaranteeFeeRate"  page="3"  depends="validwhen"   >
+     			 <arg0 key="rcaTransferPricingInputForm.guaranteeFeeRate"/>
+       			 <var>
+         			 <var-name>test</var-name>
+          			  <var-value>( (guaranteeFeeApplicableFlag != "true") or (*this* != null ))</var-value>
+       			 </var>
+       			</field>
+      		    
+      		    <field property="guaranteeFeeRate"  page="2"  depends="double,maxlength" >
+	                <arg0 key="rcaTransferPricingInputForm.guaranteeFeeRate"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>9</var-value>
+                     </var>
+                     
+	           </field> 
+	            <field property="guaranteeFeeRate" page="2"  depends="minimumValue"  >
+	                <arg key="rcaTransferPricingInputForm.guaranteeFeeRate"/>
+	            </field>
+	          
+	            <field   property="guaranteeAgreementFlag"  page="3"   depends="validwhen" >
+                    <arg key="rcaTransferPricingInputForm.guaranteeAgreementFlag"/>
+                     <var>
+         			    <var-name>test</var-name>
+          			    <var-value>( (guaranteeFeeApplicableFlag != "true") or (*this* != null ))</var-value>
+       			    </var>
+                </field>
+               
+                
+               
+	           
+	            <field   property="TPLegRequest.modelTypeId"  page="3" depends="required"  >
+                    <arg key="rcaTransferPricingInputForm.modelType"/>
+                </field>
+                
+                <field property="TPLegRequest.totalDebt"  page="2"  depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.totalDebtUSD"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>22</var-value>
+                     </var>
+	           </field>
+	           
+	            <field property="TPLegRequest.totalDebt" page="3"  depends="amountValidation" >
+	                 <arg key="amountValidation"/>
+	           </field>
+	           
+	            <field property="TPLegRequest.totalDebtCaptialRatio"  page="2"  depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.totalCapitalUSD"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>14</var-value>
+                     </var>
+	           </field>
+	           
+	            <field property="TPLegRequest.totalCapital" page="2"  depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.totalDebtTotalCapital"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>22</var-value>
+                     </var>
+	           </field>
+	           
+	           <field property="TPLegRequest.totalCapital" page="3"  depends="amountValidation" >
+	                 <arg key="amountValidation"/>
+	           </field>
+	           
+	            <field property="TPLegRequest.netChargeOffReceivables"  page="2"  depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.netChangeOff"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>14</var-value>
+                     </var>
+	           </field>
+	           
+	           <field property="TPLegRequest.netIncome"  page="2" depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.netIncomeUSD"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>22</var-value>
+                     </var>
+	           </field>
+	           
+	           
+	           <field property="TPLegRequest.netIncome" page="3"  depends="amountValidation" >
+	                 <arg key="amountValidation"/>
+	           </field>
+	           
+	            <field property="TPLegRequest.netInterestMargin"  page="2" depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.netInterestMargin"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>14</var-value>
+                     </var>
+	           </field>
+	           
+	           <field property="TPLegRequest.returnOnAvgAssets"  page="2"  depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.returnOnAvgAssets"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>14</var-value>
+                     </var>
+	           </field>
+	           
+	         <!-- Scores validation  start -->
+	           
+	            <field property="TPLegRequest.modelScoreId"  page="3" depends="validwhen" >
+	                 <arg key="rcaTransferPricingInputForm.modalScore"/>
+	                  <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( ((TPLegRequest.modelTypeId != "1") and (TPLegRequest.modelTypeId != "2")) or (*this* != null ))</var-value>
+       				 </var>
+	           </field> 
+	           <field property="TPLegRequest.modelScoreId" page="3"  depends="validwhen" >
+	                 <arg key="rcaTransferPricingInputForm.modalScore"/>
+	                  <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (TPLegRequest.modelTypeId != "3") or (*this* != null ))</var-value>
+       				 </var>
+	           </field>
+	         <!--  <field property="TPLegRequest.SPRatingId" page="3"  depends="validwhen" >
+	                 <arg key="rcaTransferPricingInputForm.spRating"/>
+	                 <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( ((TPLegRequest.modelTypeId != "1") and (TPLegRequest.modelTypeId != "2")) or (*this* != null ))</var-value>
+       				 </var>
+	           </field>
+	            <field property="TPLegRequest.SPRatingId"  page="3"  depends="validwhen" >
+	                 <arg key="rcaTransferPricingInputForm.spRating"/>
+	              <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (TPLegRequest.modelTypeId != "3") or (*this* != null ))</var-value>
+       				 </var>
+	           </field> --> 
+	           
+	             <field property="TPLegRequest.rangeId"  page="3" depends="validwhen"  >
+	                 <arg key="rcaTransferPricingInputForm.range"/>
+	                <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (TPLegRequest.modelTypeId != "1") or (*this* != null ))</var-value>
+       				 </var>
+	           </field>
+	           
+	           
+	           
+	           <field property="TPLegRequest.finalRatingId" page="3"  depends="validwhen"  >
+	                 <arg key="rcaTransferPricingInputForm.finalRating"/>
+	                    <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( ((TPLegRequest.modelTypeId != "1") and (TPLegRequest.modelTypeId != "2")) or (*this* != null ))</var-value>
+       				 </var>
+	           </field>
+	            <field property="TPLegRequest.finalRatingId"  page="3"  depends="validwhen"   >
+	                 <arg key="rcaTransferPricingInputForm.finalRating"/>
+	                   <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (TPLegRequest.modelTypeId != "3") or (*this* != null ))</var-value>
+       				 </var>
+	           </field>
+	           <field property="TPLegRequest.sovereignConstraintFlag" page="3"  depends="validwhen" >
+	                 <arg key="rcaTransferPricingInputForm.sovereignConstraint"/>
+	                    <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( ((TPLegRequest.modelTypeId != "1") and (TPLegRequest.modelTypeId != "2")) or (*this* != null ))</var-value>
+       				 </var>
+	           </field>
+	           <field property="TPLegRequest.sovereignConstraintFlag"  page="3"  depends="validwhen" >
+	                 <arg key="rcaTransferPricingInputForm.sovereignConstraint"/>
+	                     <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (TPLegRequest.modelTypeId != "3") or (*this* != null ))</var-value>
+       				 </var>
+	           </field>
+	           
+	           <field property="TPLegRequest.qualitativeNotches"  page="3" depends="validwhen"   >
+	                 <arg key="rcaTransferPricingInputForm.qualitativeNotches"/>
+	                   <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( ((TPLegRequest.modelTypeId != "1") and (TPLegRequest.modelTypeId != "2")) or (*this* != null ))</var-value>
+       				 </var>
+	           </field>
+	           
+	            <field property="TPLegRequest.qualitativeNotches" page="3"  depends="validwhen"   >
+	                 <arg key="rcaTransferPricingInputForm.qualitativeNotches"/>
+	                  <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (TPLegRequest.modelTypeId != "3") or (*this* != null ))</var-value>
+       				 </var>
+	           </field>
+
+	           <field property="TPLegRequest.qualitativeNotches" page="2"  depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.qualitativeNotches"/>
+                     <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>20</var-value>
+                     </var>
+	           </field>
+	           
+	     <!--       <field property="TPLegRequest.SPNumericalRating"  page="3" depends="validwhen"  >
+	                 <arg key="rcaTransferPricingInputForm.spNumericalRating"/>
+	                <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (TPLegRequest.modelTypeId != "1") or (*this* != null ))</var-value>
+       				 </var>
+	           </field> -->
+	           
+	             <field property="TPLegRequest.SPNumericalRating"  page="2" depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.spNumericalRating"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>9</var-value>
+                     </var>
+	           </field>
+	           <!-- Scores validation  ends -->
+	           <!-- Pricing Information -->
+	            <!-- Fixed  Starts-->
+	           
+	            <field   property="rateInformation.interestTypeId"  page="3" depends="required"  >
+                    <arg key="rcaTransferPricingInputForm.interestTypeId"/>
+                </field>
+                
+                <field property="rateInformation.interestTypeId" page="3"  depends="validwhen" >
+	                 <arg0 key="rcaTransferPricingInputForm.interestTypeId"/>
+	                  <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (rateInformation.interestTypeId != "0") or (*this* != "0" ))</var-value>
+       				 </var>
+	           </field>
+                 
+                
+	            <field property="rateInformation.baseFixedRate" page="3"  depends="validwhen" >
+	                 <arg0 key="rcaTransferPricingInputForm.baseFixedRate"/>
+	                  <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (rateInformation.interestTypeId != "1") or (*this* != null ))</var-value>
+       				 </var>
+	           </field>
+	           
+	           <field property="rateInformation.baseFixedRate"  page="2" depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.baseFixedRate"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>9</var-value>
+                     </var>
+	           </field>
+	           
+	      <!--       <field property="rateInformation.maxSpread"   depends="required,double,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.maxSpreadBPS"/>
+	                  <arg1 key="rcaTransferPricingInputForm.maxSpreadBPS"/>
+	                 <arg2 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>6</var-value>
+                     </var>
+	           </field>
+	           
+	           <field property="rateInformation.minSpread"  depends="required,double,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.minSpreadBPS"/>
+	                 <arg1 key="rcaTransferPricingInputForm.minSpreadBPS"/>
+	                 <arg2 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>6</var-value>
+                     </var>
+	           </field>    -->
+	            <field property="rateInformation.maxSpread"  page="3"  depends="required,spreadMaxValue">
+	                 <arg0 key="rcaTransferPricingInputForm.maxSpreadBPS"/>
+	                 <arg1 key="rcaTransferPricingInputForm.minmaxSpreadBPS"/>
+	           </field>
+	           
+	            <field property="rateInformation.maxSpread"  page="2"  depends="double,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.maxSpreadBPS"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>8</var-value>
+                     </var>
+	           </field>
+	           
+	           <field property="rateInformation.minSpread"  page="3" depends="required">
+	                 <arg key="rcaTransferPricingInputForm.minSpreadBPS"/>
+	           </field> 
+	           <field property="rateInformation.minSpread"  page="2" depends="double,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.minSpreadBPS"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>8</var-value>
+                     </var>
+	           </field> 
+	           
+	           <field property="rateInformation.minSpread" page="3"  depends="amountDecimalValidation" >
+	                 <arg key="amountDecimalValidation"/>
+	           </field>
+	           <field property="rateInformation.maxSpread" page="3"  depends="amountDecimalValidation" >
+	                 <arg key="amountDecimalValidation"/>
+	           </field>
+	            <!-- Fixed  Ends-->
+	           <!-- Float  Starts-->
+	           
+	           
+	           <field property="rateInformation.floatingRateIndex"  page="3" depends="validwhen" >
+	                 <arg0 key="rcaTransferPricingInputForm.floatingRateIndex"/>
+	                  <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (rateInformation.interestTypeId != "2") or (*this* != null ))</var-value>
+       				 </var>
+	           </field>
+	           
+	            <field property="rateInformation.floatingRateIndexTerm"  page="3" depends="validwhen" >
+	                 <arg0 key="rcaTransferPricingInputForm.indexTerm"/>
+	                  <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (rateInformation.interestTypeId != "2") or (*this* != null ))</var-value>
+       				 </var>
+	           </field>
+	            <!-- Float  ends-->
+				<!-- Qualitative Assessment start -->
+	           <!--   <field property="TPLegRequest.tpSummary"  depends="required,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.transferPricingSummary"/>
+	                 <arg2 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>1000</var-value>
+                     </var>
+	           </field> 
+	           
+	             <field property="TPLegRequest.TPSummary"  page="3" depends="required">
+	                 <arg key="rcaTransferPricingInputForm.transferPricingSummary"/>
+	             </field>  -->        
+
+               <field property="comment" indexedListProperty="legSummary.qualitativeFactors" page="3" depends="validwhen" >
+			      <arg0 key="rcaTransferPricingInputForm.rationale"/>
+			        <var>
+			          <var-name>test</var-name>
+			          <var-value>((legSummary.qualitativeFactors[].assessmentId != "1" ) or (*this* != null))</var-value>
+			          
+			        </var>
+			      </field>
+			      <field property="comment" indexedListProperty="legSummary.qualitativeFactors" page="3" depends="validwhen" >
+			      <arg0 key="rcaTransferPricingInputForm.rationale"/>
+			        <var>
+			          <var-name>test</var-name>
+			          <var-value>((legSummary.qualitativeFactors[].assessmentId != "2" ) or (*this* != null))</var-value>
+			          
+			        </var>
+			      </field>
+
+				<!-- Qualitative Assessment ends -->
+                <!--  Solency Matrix start -->
+               <field property="TPLegRequest.solvencyMetrics[0].preTransaction"  page="3"  depends="required">
+	                 <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+	             </field>   
+			      
+			      <field property="TPLegRequest.solvencyMetrics[0].preTransaction"  page="2" depends="double">
+	                 <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+	             </field> 
+	             
+	             <field property="TPLegRequest.solvencyMetrics[1].preTransaction"  page="3"  depends="required">
+	                 <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+	             </field>   
+			      
+			      <field property="TPLegRequest.solvencyMetrics[1].preTransaction"  page="2" depends="double">
+	                 <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+	             </field> 
+	             
+	             <field property="TPLegRequest.solvencyMetrics[2].preTransaction"  page="3"  depends="required">
+	                 <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+	             </field>   
+			      
+			      <field property="TPLegRequest.solvencyMetrics[2].preTransaction"  page="2" depends="double">
+	                 <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+	             </field> 
+	             
+	             <field property="TPLegRequest.solvencyMetrics[3].preTransaction"  page="3"  depends="required">
+	                 <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+	             </field>   
+			      
+			      <field property="TPLegRequest.solvencyMetrics[3].preTransaction"  page="2" depends="double">
+	                 <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+	             </field> 
+	             
+	             <field property="TPLegRequest.solvencyMetrics[4].preTransaction"  page="3"  depends="required,amountValidation">
+	                 <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+	             </field>   
+			      
+			      <field property="TPLegRequest.solvencyMetrics[4].preTransaction"  page="2" depends="double,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.derPreTransaction"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>22</var-value>
+                     </var>
+	             </field> 
+	             
+	             <field property="TPLegRequest.solvencyMetrics[5].preTransaction"  page="3"  depends="required,amountValidation">
+	                 <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+	             </field>   
+			      
+			      <field property="TPLegRequest.solvencyMetrics[5].preTransaction"  page="2" depends="double,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.derPreTransaction"/>
+	                  <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>22</var-value>
+                     </var>
+	             </field> 
+	             
+	             <field property="TPLegRequest.solvencyMetrics[6].preTransaction"  page="3"  depends="required">
+	                 <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+	             </field>   
+			      
+			      <field property="TPLegRequest.solvencyMetrics[6].preTransaction"  page="2" depends="double">
+	                 <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+	             </field>  
+	             
+			     
+			      <field property="TPLegRequest.solvencyMetrics[0].postTransaction"  page="3"  depends="required">
+	                 <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+	             </field>   
+			      
+			      <field property="TPLegRequest.solvencyMetrics[0].postTransaction"  page="2" depends="double">
+	                <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+	             </field>  
+			      
+			       <field property="TPLegRequest.solvencyMetrics[1].postTransaction"  page="3"  depends="required">
+	                 <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+	             </field>   
+			      
+			      <field property="TPLegRequest.solvencyMetrics[1].postTransaction"  page="2" depends="double">
+	                <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+	             </field>  
+	             
+	              <field property="TPLegRequest.solvencyMetrics[2].postTransaction"  page="3"  depends="required">
+	                 <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+	             </field>   
+			      
+			      <field property="TPLegRequest.solvencyMetrics[2].postTransaction"  page="2" depends="double">
+	                <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+	             </field>  
+	             
+	              <field property="TPLegRequest.solvencyMetrics[3].postTransaction"  page="3"  depends="required">
+	                 <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+	             </field>   
+			      
+			      <field property="TPLegRequest.solvencyMetrics[3].postTransaction"  page="2" depends="double">
+	                <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+	             </field>  
+	             
+	              <field property="TPLegRequest.solvencyMetrics[4].postTransaction"  page="3"  depends="required,amountValidation">
+	                 <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+	             </field>   
+			      
+			      <field property="TPLegRequest.solvencyMetrics[4].postTransaction"  page="2" depends="double,maxlength">
+	                <arg0 key="rcaTransferPricingInputForm.derPostTransaction"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>22</var-value>
+                     </var>
+	             </field>  
+	             
+	              <field property="TPLegRequest.solvencyMetrics[5].postTransaction"  page="3"  depends="required,amountValidation">
+	                 <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+	             </field>   
+			      
+			      <field property="TPLegRequest.solvencyMetrics[5].postTransaction"  page="2" depends="double,maxlength">
+	                <arg0 key="rcaTransferPricingInputForm.derPostTransaction"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>22</var-value>
+                     </var>
+	             </field>  
+	             
+	              <field property="TPLegRequest.solvencyMetrics[6].postTransaction"  page="3"  depends="required">
+	                 <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+	             </field>   
+			      
+			      <field property="TPLegRequest.solvencyMetrics[6].postTransaction"  page="2" depends="double">
+	                <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+	             </field>  
+	             
+	          <!--   <field property="TPLegRequest.solvencyMetrics[0].assessmentFlag"  page="3" depends="required">
+	                <arg key="rcaTransferPricingInputForm.qualitativeassessment"/>
+	             </field>  -->
+	             
+			  <field property="TPLegRequest.solvencyMetrics[0].comment" page="3" depends="validwhen" >
+			      <arg key="rcaTransferPricingInputForm.qualitativecomment"/>
+			        <var>
+			          <var-name>test</var-name>
+			          <var-value>((TPLegRequest.solvencyMetrics[0].assessmentFlag != "false") or (*this* != null))</var-value>
+			          
+			        </var>
+			      </field>  
+			<!--       <field property="TPLegRequest.solvencyMetrics[1].assessmentFlag"  page="3" depends="required">
+	                <arg key="rcaTransferPricingInputForm.qualitativeassessment"/>
+	             </field>  -->
+	             
+			      <field property="TPLegRequest.solvencyMetrics[1].comment" page="3" depends="validwhen" >
+			      <arg key="rcaTransferPricingInputForm.qualitativecomment"/>
+			        <var>
+			          <var-name>test</var-name>
+			          <var-value>((TPLegRequest.solvencyMetrics[1].assessmentFlag != "false") or (*this* != null))</var-value>
+			          
+			        </var>
+			      </field> 
+			  <!--    <field property="TPLegRequest.solvencyMetrics[2].assessmentFlag"  page="3" depends="required">
+	                <arg key="rcaTransferPricingInputForm.qualitativeassessment"/>
+	             </field>   -->
+	             
+			      <field property="TPLegRequest.solvencyMetrics[2].comment" page="3" depends="validwhen" >
+			      <arg key="rcaTransferPricingInputForm.qualitativecomment"/>
+			        <var>
+			          <var-name>test</var-name>
+			          <var-value>((TPLegRequest.solvencyMetrics[2].assessmentFlag != "false") or (*this* != null))</var-value>
+			          
+			        </var>
+			      </field>
+			  <!--     <field property="TPLegRequest.solvencyMetrics[3].assessmentFlag"  page="3" depends="required">
+	                <arg key="rcaTransferPricingInputForm.qualitativeassessment"/>
+	             </field>  -->
+	             
+			      <field property="TPLegRequest.solvencyMetrics[3].comment" page="3" depends="validwhen" >
+			      <arg key="rcaTransferPricingInputForm.qualitativecomment"/>
+			        <var>
+			          <var-name>test</var-name>
+			          <var-value>((TPLegRequest.solvencyMetrics[3].assessmentFlag != "false") or (*this* != null))</var-value>
+			          
+			        </var>
+			      </field>
+			   <!--    <field property="TPLegRequest.solvencyMetrics[4].assessmentFlag"  page="3" depends="required">
+	                <arg key="rcaTransferPricingInputForm.qualitativeassessment"/>
+	             </field>  -->
+	             
+			      <field property="TPLegRequest.solvencyMetrics[4].comment" page="3" depends="validwhen" >
+			      <arg key="rcaTransferPricingInputForm.qualitativecomment"/>
+			        <var>
+			          <var-name>test</var-name>
+			          <var-value>((TPLegRequest.solvencyMetrics[4].assessmentFlag != "false") or (*this* != null))</var-value>
+			          
+			        </var>
+			      </field>
+			<!--      <field property="TPLegRequest.solvencyMetrics[5].assessmentFlag"  page="3" depends="required">
+	                <arg key="rcaTransferPricingInputForm.qualitativeassessment"/>
+	             </field>  -->
+	             
+			      <field property="TPLegRequest.solvencyMetrics[5].comment" page="3" depends="validwhen" >
+			      <arg key="rcaTransferPricingInputForm.qualitativecomment"/>
+			        <var>
+			          <var-name>test</var-name>
+			          <var-value>((TPLegRequest.solvencyMetrics[5].assessmentFlag != "false") or (*this* != null))</var-value>
+			          
+			        </var>
+			      </field>
+			      <field property="TPLegRequest.solvencyMetrics[6].assessmentFlag"  page="3" depends="required">
+	                <arg key="rcaTransferPricingInputForm.qualitativeassessment"/>
+	             </field>  
+	             
+			      <field property="TPLegRequest.solvencyMetrics[6].comment" page="3" depends="validwhen" >
+			      <arg key="rcaTransferPricingInputForm.qualitativecomment"/>
+			        <var>
+			          <var-name>test</var-name>
+			          <var-value>((TPLegRequest.solvencyMetrics[6].assessmentFlag != "true") or (*this* != null))</var-value>
+			          
+			        </var>
+			      </field>
+			      
+                <!--  Solency Matrix end -->
+       
+                
+          </form>
+          <!-- RCA Transfer Pricing InputForm  VALIDATION ENDS -->
+         <!-- CPA Transfer Pricing InputForm  VALIDATION STARTS -->
+          <form name="cpaLegRequestForm">
+      		   
+	         <!--    <field   property="TPLegRequest.modelTypeId"  page="3" depends="required"  >
+                    <arg key="rcaTransferPricingInputForm.modelType"/>
+                </field>
+                
+                <field property="TPLegRequest.totalDebt"   depends="validwhen"   >
+     			 <arg0 key="rcaTransferPricingInputForm.totalDebtUSD"/>
+       			 <var>
+         			 <var-name>test</var-name>
+          			  <var-value>( (TPLegRequest.modelTypeId != "1") or (*this* != null ))</var-value>
+       			 </var>
+      		    </field>  -->
+      		 
+      		     <field property="rateInformation.maxSpread"  page="3" depends="required">
+	                 <arg key="rcaTransferPricingInputForm.maxSpreadBPS"/>
+	           	</field>
+	           	
+	           	<field property="rateInformation.maxSpread"  page="2" depends="double,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.maxSpreadBPS"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>8</var-value>
+                     </var>
+	           	</field>
+	           	
+	           	 <field property="rateInformation.minSpread"  page="3" depends="required">
+	                 <arg key="rcaTransferPricingInputForm.minSpreadBPS"/>
+	           </field> 
+	           
+	            <field property="rateInformation.minSpread"  page="2" depends="double,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.minSpreadBPS"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>8</var-value>
+                     </var>
+	           </field>
+      		    
+      		   <field property="rateInformation.minSpread" page="3"  depends="amountDecimalValidation" >
+	                 <arg key="amountDecimalValidation"/>
+	           </field>
+	           <field property="rateInformation.maxSpread" page="3"  depends="amountDecimalValidation" >
+	                 <arg key="amountDecimalValidation"/>
+	           </field>
+      		     
+                <field property="TPLegRequest.totalDebt"  page="2"  depends="double,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.totalDebtUSD"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>22</var-value>
+                     </var>
+	           </field>
+	           
+	           <field property="TPLegRequest.totalDebt" page="3"  depends="amountValidation" >
+	                 <arg key="amountValidation"/>
+	           </field>
+	           
+	        <!--   <field property="TPLegRequest.totalDebtCaptialRatio"  depends="validwhen"   >
+     			<arg key="rcaTransferPricingInputForm.totalCapitalUSD"/>
+       			<var>
+         			 <var-name>test</var-name>
+          			  <var-value>( (TPLegRequest.modelTypeId != "1") or (*this* != null ))</var-value>
+       			 </var>
+      		    </field> -->
+	           
+	            <field property="TPLegRequest.totalDebtCaptialRatio"  page="2"  depends="double,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.totalCapitalUSD"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>14</var-value>
+                     </var>
+	           </field>
+	           
+	        <!--   <field property="TPLegRequest.totalCapital"   depends="validwhen"   >
+     			<arg key="rcaTransferPricingInputForm.totalDebtTotalCapital"/>
+       			 <var>
+         			 <var-name>test</var-name>
+          			  <var-value>( (TPLegRequest.modelTypeId != "1") or (*this* != null ))</var-value>
+       			 </var>
+      		    </field> -->
+	           
+	            <field property="TPLegRequest.totalCapital"  page="2" depends="double,maxlength">
+	            	 <arg0 key="rcaTransferPricingInputForm.totalDebtTotalCapital"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>22</var-value>
+                     </var>
+	           </field>
+	            <field property="TPLegRequest.totalCapital" page="3"  depends="amountValidation" >
+	                 <arg key="amountValidation"/>
+	           </field>
+	           
+	          <!--   <field property="TPLegRequest.netChargeOffReceivables"   depends="validwhen"   >
+     			 <arg key="rcaTransferPricingInputForm.netChangeOff"/>
+       			 <var>
+         			 <var-name>test</var-name>
+          			  <var-value>( (TPLegRequest.modelTypeId != "1") or (*this* != null ))</var-value>
+       			 </var>
+      		    </field> -->
+	           
+	            <field property="TPLegRequest.netChargeOffReceivables"  page="2" depends="double,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.netChangeOff"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>14</var-value>
+                     </var>
+	           </field>
+	           
+	          <!--  <field property="TPLegRequest.netIncome"   depends="validwhen"   >
+     			 <arg key="rcaTransferPricingInputForm.netIncomeUSD"/>
+       			 <var>
+         			 <var-name>test</var-name>
+          			  <var-value>( (TPLegRequest.modelTypeId != "1") or (*this* != null ))</var-value>
+       			 </var>
+      		    </field> -->
+      		    
+	           <field property="TPLegRequest.netIncome"  page="2" depends="double,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.netIncomeUSD"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>22</var-value>
+                     </var>
+	           </field>
+	            <field property="TPLegRequest.netIncome" page="3"  depends="amountValidation" >
+	                 <arg key="amountValidation"/>
+	           </field>
+	           
+	        <!--   <field property="TPLegRequest.netInterestMargin"   depends="validwhen"   >
+     			 <arg key="rcaTransferPricingInputForm.netInterestMargin"/>
+       			<var>
+         			 <var-name>test</var-name>
+          			  <var-value>( (TPLegRequest.modelTypeId != "1") or (*this* != null ))</var-value>
+       			 </var>
+      		    </field>  -->
+	           
+	            <field property="TPLegRequest.netInterestMargin"  page="2"  depends="double,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.netInterestMargin"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>14</var-value>
+                     </var>
+	           </field>
+	           
+	        <!--     <field property="TPLegRequest.returnOnAvgAssets"  depends="validwhen"   >
+     			 <arg key="rcaTransferPricingInputForm.returnOnAvgAssets"/>
+       			<var>
+         			 <var-name>test</var-name>
+          			  <var-value>( (TPLegRequest.modelTypeId != "1") or (*this* != null ))</var-value>
+       			 </var>
+      		    </field> -->
+	           
+	           <field property="TPLegRequest.returnOnAvgAssets" page="2" depends="double,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.returnOnAvgAssets"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>14</var-value>
+                     </var>
+	           </field>
+	           
+	         <!-- Scores validation  start -->
+	           
+	        <!--     <field property="TPLegRequest.modelScoreId"  page="2" depends="validwhen" >
+	                 <arg key="rcaTransferPricingInputForm.modalScore"/>
+	                  <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( ((TPLegRequest.modelTypeId != "1") and (TPLegRequest.modelTypeId != "2")) or (*this* != null ))</var-value>
+       				 </var>
+	           </field> 
+	           <field property="TPLegRequest.modelScoreId" page="2" depends="validwhen" >
+	                 <arg key="rcaTransferPricingInputForm.modalScore"/>
+	                  <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (TPLegRequest.modelTypeId != "3") or (*this* != null ))</var-value>
+       				 </var>
+	           </field>  -->
+	        <!--    <field property="TPLegRequest.SPRatingId" page="2" depends="validwhen"  >
+	                 <arg key="rcaTransferPricingInputForm.spRating"/>
+	                 <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( ((TPLegRequest.modelTypeId != "1") and (TPLegRequest.modelTypeId != "2")) or (*this* != null ))</var-value>
+       				 </var>
+	           </field>
+	            <field property="TPLegRequest.SPRatingId"  page="2"  depends="validwhen"  >
+	                 <arg key="rcaTransferPricingInputForm.spRating"/>
+	              <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (TPLegRequest.modelTypeId != "3") or (*this* != null ))</var-value>
+       				 </var>
+	           </field>  -->
+	           
+	        <!--      <field property="TPLegRequest.rangeId" page="2" depends="validwhen"  >
+	                 <arg key="rcaTransferPricingInputForm.range"/>
+	                <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (TPLegRequest.modelTypeId != "1") or (*this* != null ))</var-value>
+       				 </var>
+	           </field>  -->
+	           
+	           
+	           
+	         <!--   <field property="TPLegRequest.finalRatingId" page="2" depends="validwhen"  >
+	                 <arg key="rcaTransferPricingInputForm.finalRating"/>
+	                    <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( ((TPLegRequest.modelTypeId != "1") and (TPLegRequest.modelTypeId != "2")) or (*this* != null ))</var-value>
+       				 </var>
+	           </field>
+	            <field property="TPLegRequest.finalRatingId" page="2" depends="validwhen"  >
+	                 <arg key="rcaTransferPricingInputForm.finalRating"/>
+	                   <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (TPLegRequest.modelTypeId != "3") or (*this* != null ))</var-value>
+       				 </var>
+	           </field>
+	           <field property="TPLegRequest.sovereignConstraintFlag" page="2"  depends="validwhen"   >
+	                 <arg key="rcaTransferPricingInputForm.sovereignConstraint"/>
+	                    <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( ((TPLegRequest.modelTypeId != "1") and (TPLegRequest.modelTypeId != "2")) or (*this* != null ))</var-value>
+       				 </var>
+	           </field>
+	           <field property="TPLegRequest.sovereignConstraintFlag" page="2" depends="validwhen"   >
+	                 <arg key="rcaTransferPricingInputForm.sovereignConstraint"/>
+	                     <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (TPLegRequest.modelTypeId != "3") or (*this* != null ))</var-value>
+       				 </var>
+	           </field>
+	           
+	           <field property="TPLegRequest.qualitativeNotches" page="2" depends="validwhen"   >
+	                 <arg key="rcaTransferPricingInputForm.qualitativeNotches"/>
+	                   <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( ((TPLegRequest.modelTypeId != "1") and (TPLegRequest.modelTypeId != "2")) or (*this* != null ))</var-value>
+       				 </var>
+	           </field>
+	           
+	            <field property="TPLegRequest.qualitativeNotches" page="2" depends="validwhen"   >
+	                 <arg key="rcaTransferPricingInputForm.qualitativeNotches"/>
+	                  <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (TPLegRequest.modelTypeId != "3") or (*this* != null ))</var-value>
+       				 </var>
+	           </field>  -->
+
+	           <field property="TPLegRequest.qualitativeNotches" page="2" depends="double,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.qualitativeNotches"/>
+                     <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>20</var-value>
+                     </var>
+	           </field>
+	           
+	       <!--     <field property="TPLegRequest.SPNumericalRating" page="2" depends="validwhen"  >
+	                 <arg key="rcaTransferPricingInputForm.spNumericalRating"/>
+	                <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (TPLegRequest.modelTypeId != "1") or (*this* != null ))</var-value>
+       				 </var>
+	           </field> -->
+	           
+	             <field property="TPLegRequest.SPNumericalRating"  page="2" depends="double,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.spNumericalRating"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>9</var-value>
+                     </var>
+	           </field>
+	           <!-- Scores validation  ends -->
+	           <!-- Pricing Information -->
+	           
+	           <!-- Float  Starts-->
+	           
+	           
+	           <field property="rateInformation.floatingRateIndex" page="3" depends="required">
+	                 <arg key="rcaTransferPricingInputForm.floatingRateIndex"/>
+	           </field>
+	           
+	            <field property="rateInformation.floatingRateIndexTerm" page="3" depends="required">
+	                 <arg key="rcaTransferPricingInputForm.indexTerm"/>
+	           </field>
+	            <!-- Float  ends-->
+				<!-- Qualitative Assessment start -->
+	          <!--    <field property="TPLegRequest.tpSummary"  depends="required">
+	                 <arg key="rcaTransferPricingInputForm.transferPricingSummary"/>
+	             </field>  -->
+	          
+	           <field property="comment" indexedListProperty="cpaSummary.qualitativeFactors" page="2"  depends="validwhen">
+			      <arg  key="rcaTransferPricingInputForm.qualitativecomment"/>
+			        <var>
+			          <var-name>test</var-name>
+			          <var-value>(((cpaSummary.qualitativeFactors[].assessmentId != "1") and (legSummary.qualitativeFactors[].assessment != "2")) or (*this* != null))</var-value>
+			          
+			        </var>
+			      </field>
+			       <field property="comment" indexedListProperty="cpaSummary.qualitativeFactors" page="2" depends="validwhen">
+			      <arg  key="rcaTransferPricingInputForm.qualitativecomment"/>
+			        <var>
+			          <var-name>test</var-name>
+			          <var-value>(((cpaSummary.qualitativeFactors[].assessmentId != "2") and (legSummary.qualitativeFactors[].assessment != "2")) or (*this* != null))</var-value>
+			          
+			        </var>
+			      </field>  
+
+				<!-- Qualitative Assessment ends -->
+                <!--  Solency Matrix start -->
+                 
+			     <field property="TPLegRequest.solvencyMetrics[0].preTransaction"  page="3"  depends="required">
+	                 <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+	             </field>   
+			      
+			      <field property="TPLegRequest.solvencyMetrics[0].preTransaction"  page="2" depends="double">
+	                 <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+	             </field> 
+	             
+	             <field property="TPLegRequest.solvencyMetrics[1].preTransaction"  page="3"  depends="required">
+	                 <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+	             </field>   
+			      
+			      <field property="TPLegRequest.solvencyMetrics[1].preTransaction"  page="2" depends="double">
+	                 <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+	             </field> 
+	             
+	             <field property="TPLegRequest.solvencyMetrics[2].preTransaction"  page="3"  depends="required">
+	                 <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+	             </field>   
+			      
+			      <field property="TPLegRequest.solvencyMetrics[2].preTransaction"  page="2" depends="double">
+	                 <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+	             </field> 
+	             
+	             <field property="TPLegRequest.solvencyMetrics[3].preTransaction"  page="3"  depends="required">
+	                 <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+	             </field>   
+			      
+			      <field property="TPLegRequest.solvencyMetrics[3].preTransaction"  page="2" depends="double">
+	                 <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+	             </field> 
+	             
+	             <field property="TPLegRequest.solvencyMetrics[4].preTransaction"  page="3"  depends="required,amountValidation">
+	                 <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+	             </field>   
+			      
+			      <field property="TPLegRequest.solvencyMetrics[4].preTransaction"  page="2" depends="double,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.derPreTransaction"/>
+	                  <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>22</var-value>
+                     </var>
+	             </field> 
+	             
+	             <field property="TPLegRequest.solvencyMetrics[5].preTransaction"  page="3"  depends="required,amountValidation">
+	                 <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+	             </field>   
+			      
+			      <field property="TPLegRequest.solvencyMetrics[5].preTransaction"  page="2" depends="double,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.derPreTransaction"/>
+	                  <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>22</var-value>
+                     </var>
+	             </field> 
+	             
+	             <field property="TPLegRequest.solvencyMetrics[6].preTransaction"  page="3"  depends="required">
+	                 <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+	             </field>   
+			      
+			      <field property="TPLegRequest.solvencyMetrics[6].preTransaction"  page="2" depends="double">
+	                 <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+	             </field>  
+	             
+			     
+			      <field property="TPLegRequest.solvencyMetrics[0].postTransaction"  page="3"  depends="required">
+	                 <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+	             </field>   
+			      
+			      <field property="TPLegRequest.solvencyMetrics[0].postTransaction"  page="2" depends="double">
+	                <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+	             </field>  
+			      
+			       <field property="TPLegRequest.solvencyMetrics[1].postTransaction"  page="3"  depends="required">
+	                 <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+	             </field>   
+			      
+			      <field property="TPLegRequest.solvencyMetrics[1].postTransaction"  page="2" depends="double">
+	                <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+	             </field>  
+	             
+	              <field property="TPLegRequest.solvencyMetrics[2].postTransaction"  page="3"  depends="required">
+	                 <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+	             </field>   
+			      
+			      <field property="TPLegRequest.solvencyMetrics[2].postTransaction"  page="2" depends="double">
+	                <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+	             </field>  
+	             
+	              <field property="TPLegRequest.solvencyMetrics[3].postTransaction"  page="3"  depends="required">
+	                 <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+	             </field>   
+			      
+			      <field property="TPLegRequest.solvencyMetrics[3].postTransaction"  page="2" depends="double">
+	                <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+	             </field>  
+	             
+	              <field property="TPLegRequest.solvencyMetrics[4].postTransaction"  page="3"  depends="required,amountValidation">
+	                 <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+	             </field>   
+			      
+			      <field property="TPLegRequest.solvencyMetrics[4].postTransaction"  page="2" depends="double,maxlength">
+	                <arg0 key="rcaTransferPricingInputForm.derPostTransaction"/>
+	                <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>22</var-value>
+                     </var>
+	             </field>  
+	             
+	              <field property="TPLegRequest.solvencyMetrics[5].postTransaction"  page="3"  depends="required,amountValidation">
+	                 <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+	             </field>   
+			      
+			      <field property="TPLegRequest.solvencyMetrics[5].postTransaction"  page="2" depends="double,maxlength">
+	                <arg0 key="rcaTransferPricingInputForm.derPostTransaction"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>22</var-value>
+                     </var>
+	             </field>  
+	             
+	              <field property="TPLegRequest.solvencyMetrics[6].postTransaction"  page="3"  depends="required">
+	                 <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+	             </field>   
+			      
+			      <field property="TPLegRequest.solvencyMetrics[6].postTransaction"  page="2" depends="double">
+	                <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+	             </field>  
+	             
+	          <!--   <field property="TPLegRequest.solvencyMetrics[0].assessmentFlag"  page="3" depends="required">
+	                <arg key="rcaTransferPricingInputForm.qualitativeassessment"/>
+	             </field>  -->
+	             
+			      <field property="TPLegRequest.solvencyMetrics[0].comment" page="3" depends="validwhen" >
+			      <arg key="rcaTransferPricingInputForm.qualitativecomment"/>
+			        <var>
+			          <var-name>test</var-name>
+			          <var-value>((TPLegRequest.solvencyMetrics[0].assessmentFlag != "false") or (*this* != null))</var-value>
+			          
+			        </var>
+			      </field>
+			   <!--    <field property="TPLegRequest.solvencyMetrics[1].assessmentFlag"  page="3" depends="required">
+	                <arg key="rcaTransferPricingInputForm.qualitativeassessment"/>
+	             </field>  -->
+	             
+			      <field property="TPLegRequest.solvencyMetrics[1].comment" page="3" depends="validwhen" >
+			      <arg key="rcaTransferPricingInputForm.qualitativecomment"/>
+			        <var>
+			          <var-name>test</var-name>
+			          <var-value>((TPLegRequest.solvencyMetrics[1].assessmentFlag != "false") or (*this* != null))</var-value>
+			          
+			        </var>
+			      </field>
+			  <!--    <field property="TPLegRequest.solvencyMetrics[2].assessmentFlag"  page="3" depends="required">
+	                <arg key="rcaTransferPricingInputForm.qualitativeassessment"/>
+	             </field>  -->
+	             
+			      <field property="TPLegRequest.solvencyMetrics[2].comment" page="3" depends="validwhen" >
+			      <arg key="rcaTransferPricingInputForm.qualitativecomment"/>
+			        <var>
+			          <var-name>test</var-name>
+			          <var-value>((TPLegRequest.solvencyMetrics[2].assessmentFlag != "false") or (*this* != null))</var-value>
+			          
+			        </var>
+			      </field>
+			<!--      <field property="TPLegRequest.solvencyMetrics[3].assessmentFlag"  page="3" depends="required">
+	                <arg key="rcaTransferPricingInputForm.qualitativeassessment"/>
+	             </field>  -->
+	             
+			      <field property="TPLegRequest.solvencyMetrics[3].comment" page="3" depends="validwhen" >
+			      <arg key="rcaTransferPricingInputForm.qualitativecomment"/>
+			        <var>
+			          <var-name>test</var-name>
+			          <var-value>((TPLegRequest.solvencyMetrics[3].assessmentFlag != "false") or (*this* != null))</var-value>
+			          
+			        </var>
+			      </field>
+			  <!--    <field property="TPLegRequest.solvencyMetrics[4].assessmentFlag"  page="3" depends="required">
+	                <arg key="rcaTransferPricingInputForm.qualitativeassessment"/>
+	             </field>  -->
+	             
+			      <field property="TPLegRequest.solvencyMetrics[4].comment" page="3" depends="validwhen" >
+			      <arg key="rcaTransferPricingInputForm.qualitativecomment"/>
+			        <var>
+			          <var-name>test</var-name>
+			          <var-value>((TPLegRequest.solvencyMetrics[4].assessmentFlag != "false") or (*this* != null))</var-value>
+			          
+			        </var>
+			      </field>
+			   <!--   <field property="TPLegRequest.solvencyMetrics[5].assessmentFlag"  page="3" depends="required">
+	                <arg key="rcaTransferPricingInputForm.qualitativeassessment"/>
+	             </field>  -->
+	             
+			      <field property="TPLegRequest.solvencyMetrics[5].comment" page="3" depends="validwhen" >
+			      <arg key="rcaTransferPricingInputForm.qualitativecomment"/>
+			        <var>
+			          <var-name>test</var-name>
+			          <var-value>((TPLegRequest.solvencyMetrics[5].assessmentFlag != "false") or (*this* != null))</var-value>
+			          
+			        </var>
+			      </field> 
+			      <field property="TPLegRequest.solvencyMetrics[6].assessmentFlag"  page="3" depends="required">
+	                <arg key="rcaTransferPricingInputForm.qualitativeassessment"/>
+	             </field>  
+	             
+			      <field property="TPLegRequest.solvencyMetrics[6].comment" page="3" depends="validwhen" >
+			      <arg key="rcaTransferPricingInputForm.qualitativecomment"/>
+			        <var>
+			          <var-name>test</var-name>
+			          <var-value>((TPLegRequest.solvencyMetrics[6].assessmentFlag != "true") or (*this* != null))</var-value>
+			          
+			        </var>
+			      </field>
+                <!--  Solency Matrix end -->
+                
+          </form>
+          <!-- CPA Transfer Pricing InputForm  VALIDATION ENDS -->
+          <!-- Other Transfer Pricing Input Form validation starts -->
+          <form name="ICFPOtherLegRequestForm">
+    
+    		<!-- 	<field   property="guaranteeFeeApplicableFlag"  page="3"   depends="required" >
+                    <arg key="rcaTransferPricingInputForm.guaranteeFeeApplicable"/>
+              </field>
+    
+   			  <field   property="guaranteeAgreementFlag"  page="3"   depends="required" >
+                    <arg key="rcaTransferPricingInputForm.guaranteeAgreementFlag"/>
+              </field>
+    
+    		  <field   property="commitmentFeeApplicableFlag" page="3"  depends="required"  >
+                    <arg key="rcaTransferPricingInputForm.commitmentFeeApplicable"/>
+              </field>  -->
+              
+               <field   property="guaranteeAgreementFlag"  page="3"   depends="validwhen" >
+                    <arg key="rcaTransferPricingInputForm.guaranteeAgreementFlag"/>
+                     <var>
+         			    <var-name>test</var-name>
+          			    <var-value>( (guaranteeFeeApplicableFlag != "true") or (*this* != null ))</var-value>
+       			    </var>
+                </field>
+              
+              <field property="commitmentFeeRate"   page="3"  depends="validwhen"  >
+     			 <arg0 key="rcaTransferPricingInputForm.commitmentFeeRate"/>
+       			 <var>
+         			 <var-name>test</var-name>
+          			  <var-value>( (commitmentFeeApplicableFlag != "true") or (*this* != null ))</var-value>
+       			 </var>
+       			</field>
+      		    
+      		    <field property="commitmentFeeRate" page="2"  depends="double,maxlength"  >
+	                <arg0 key="rcaTransferPricingInputForm.commitmentFeeRate"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>9</var-value>
+                     </var>
+                     
+	           </field>
+	            <field property="commitmentFeeRate" page="2"  depends="minimumValue"  >
+	                <arg key="rcaTransferPricingInputForm.commitmentFeeRate"/>
+	            </field>
+	           
+	           <field property="guaranteeFeeRate"  page="3"  depends="validwhen"   >
+     			 <arg0 key="rcaTransferPricingInputForm.guaranteeFeeRate"/>
+       			 <var>
+         			 <var-name>test</var-name>
+          			  <var-value>( (guaranteeFeeApplicableFlag != "true") or (*this* != null ))</var-value>
+       			 </var>
+       			</field>
+      		    
+      		    <field property="guaranteeFeeRate"  page="2"  depends="double,maxlength" >
+	                <arg0 key="rcaTransferPricingInputForm.guaranteeFeeRate"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>9</var-value>
+                     </var>
+                     
+	           </field> 
+	            <field property="guaranteeFeeRate" page="2"  depends="minimumValue"  >
+	                <arg key="rcaTransferPricingInputForm.guaranteeFeeRate"/>
+	            </field>
+	           
+	         <!--    <field   property="TPLegRequest.modelTypeId"  page="3" depends="required"  >
+                    <arg key="rcaTransferPricingInputForm.modelType"/>
+                </field>  -->
+                
+                
+	           
+	           
+	           
+	            <!--     <field property="TPLegRequest.totalDebt"   depends="validwhen"   >
+     			 <arg0 key="rcaTransferPricingInputForm.totalDebtUSD"/>
+       			 <var>
+         			 <var-name>test</var-name>
+          			  <var-value>( (TPLegRequest.modelTypeId != "1") or (*this* != null ))</var-value>
+       			 </var>
+      		    </field>  -->
+      		    
+                <field property="TPLegRequest.totalDebt"  page="2"  depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.totalDebtUSD"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>22</var-value>
+                     </var>
+	           </field>
+	           <field property="TPLegRequest.totalDebt" page="3"  depends="amountValidation" >
+	                 <arg key="amountValidation"/>
+	           </field>
+	        <!--   <field property="TPLegRequest.totalDebtCaptialRatio"  depends="validwhen"   >
+     			<arg key="rcaTransferPricingInputForm.totalCapitalUSD"/>
+       			<var>
+         			 <var-name>test</var-name>
+          			  <var-value>( (TPLegRequest.modelTypeId != "1") or (*this* != null ))</var-value>
+       			 </var>
+      		    </field> -->
+	           
+	            <field property="TPLegRequest.totalDebtCaptialRatio"  page="2"  depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.totalCapitalUSD"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>14</var-value>
+                     </var>
+	           </field>
+	           
+	        <!--   <field property="TPLegRequest.totalCapital"   depends="validwhen"   >
+     			<arg key="rcaTransferPricingInputForm.totalDebtTotalCapital"/>
+       			 <var>
+         			 <var-name>test</var-name>
+          			  <var-value>( (TPLegRequest.modelTypeId != "1") or (*this* != null ))</var-value>
+       			 </var>
+      		    </field> -->
+	           
+	            <field property="TPLegRequest.totalCapital" page="2"  depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.totalDebtTotalCapital"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>22</var-value>
+                     </var>
+	           </field>
+	            <field property="TPLegRequest.totalCapital" page="3"  depends="amountValidation" >
+	                 <arg key="amountValidation"/>
+	           </field>
+	           
+	          <!--   <field property="TPLegRequest.netChargeOffReceivables"   depends="validwhen"   >
+     			 <arg key="rcaTransferPricingInputForm.netChangeOff"/>
+       			 <var>
+         			 <var-name>test</var-name>
+          			  <var-value>( (TPLegRequest.modelTypeId != "1") or (*this* != null ))</var-value>
+       			 </var>
+      		    </field> -->
+	           
+	            <field property="TPLegRequest.netChargeOffReceivables"  page="2"  depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.netChangeOff"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>14</var-value>
+                     </var>
+	           </field>
+	           
+	          <!--  <field property="TPLegRequest.netIncome"   depends="validwhen"   >
+     			 <arg key="rcaTransferPricingInputForm.netIncomeUSD"/>
+       			 <var>
+         			 <var-name>test</var-name>
+          			  <var-value>( (TPLegRequest.modelTypeId != "1") or (*this* != null ))</var-value>
+       			 </var>
+      		    </field> -->
+      		    
+	           <field property="TPLegRequest.netIncome"  page="2" depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.netIncomeUSD"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>22</var-value>
+                     </var>
+	           </field>
+	             <field property="TPLegRequest.netIncome" page="3"  depends="amountValidation" >
+	                 <arg key="amountValidation"/>
+	           </field>
+	           
+	        <!--   <field property="TPLegRequest.netInterestMargin"   depends="validwhen"   >
+     			 <arg key="rcaTransferPricingInputForm.netInterestMargin"/>
+       			<var>
+         			 <var-name>test</var-name>
+          			  <var-value>( (TPLegRequest.modelTypeId != "1") or (*this* != null ))</var-value>
+       			 </var>
+      		    </field>  -->
+	           
+	            <field property="TPLegRequest.netInterestMargin"  page="2" depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.netInterestMargin"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>14</var-value>
+                     </var>
+	           </field>
+	           
+	        <!--     <field property="TPLegRequest.returnOnAvgAssets"  depends="validwhen"   >
+     			 <arg key="rcaTransferPricingInputForm.returnOnAvgAssets"/>
+       			<var>
+         			 <var-name>test</var-name>
+          			  <var-value>( (TPLegRequest.modelTypeId != "1") or (*this* != null ))</var-value>
+       			 </var>
+      		    </field> -->
+	           
+	           <field property="TPLegRequest.returnOnAvgAssets"  page="2"  depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.returnOnAvgAssets"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>14</var-value>
+                     </var>
+	           </field>
+	           
+	         <!-- Scores validation  start -->
+	           
+	       <!--      <field property="TPLegRequest.modelScoreId"  page="3" depends="validwhen" >
+	                 <arg key="rcaTransferPricingInputForm.modalScore"/>
+	                  <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( ((TPLegRequest.modelTypeId != "1") and (TPLegRequest.modelTypeId != "2")) or (*this* != null ))</var-value>
+       				 </var>
+	           </field> 
+	           <field property="TPLegRequest.modelScoreId" page="3"  depends="validwhen" >
+	                 <arg key="rcaTransferPricingInputForm.modalScore"/>
+	                  <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (TPLegRequest.modelTypeId != "3") or (*this* != null ))</var-value>
+       				 </var>
+	           </field>  -->
+	          <!--  <field property="TPLegRequest.SPRatingId" page="3"  depends="validwhen" >
+	                 <arg key="rcaTransferPricingInputForm.spRating"/>
+	                 <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( ((TPLegRequest.modelTypeId != "1") and (TPLegRequest.modelTypeId != "2")) or (*this* != null ))</var-value>
+       				 </var>
+	           </field>
+	            <field property="TPLegRequest.SPRatingId"  page="3"  depends="validwhen" >
+	                 <arg key="rcaTransferPricingInputForm.spRating"/>
+	              <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (TPLegRequest.modelTypeId != "3") or (*this* != null ))</var-value>
+       				 </var>
+	           </field>  -->
+	           
+	          <!--    <field property="TPLegRequest.rangeId"  page="3" depends="validwhen"  >
+	                 <arg key="rcaTransferPricingInputForm.range"/>
+	                <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (TPLegRequest.modelTypeId != "1") or (*this* != null ))</var-value>
+       				 </var>
+	           </field> -->
+	           
+	           
+	           
+	        <!--    <field property="TPLegRequest.finalRatingId" page="3"  depends="validwhen"  >
+	                 <arg key="rcaTransferPricingInputForm.finalRating"/>
+	                    <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( ((TPLegRequest.modelTypeId != "1") and (TPLegRequest.modelTypeId != "2")) or (*this* != null ))</var-value>
+       				 </var>
+	           </field>
+	            <field property="TPLegRequest.finalRatingId"  page="3"  depends="validwhen"   >
+	                 <arg key="rcaTransferPricingInputForm.finalRating"/>
+	                   <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (TPLegRequest.modelTypeId != "3") or (*this* != null ))</var-value>
+       				 </var>
+	           </field>
+	           <field property="TPLegRequest.sovereignConstraintFlag" page="3"  depends="validwhen" >
+	                 <arg key="rcaTransferPricingInputForm.sovereignConstraint"/>
+	                    <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( ((TPLegRequest.modelTypeId != "1") and (TPLegRequest.modelTypeId != "2")) or (*this* != null ))</var-value>
+       				 </var>
+	           </field>
+	           <field property="TPLegRequest.sovereignConstraintFlag"  page="3"  depends="validwhen" >
+	                 <arg key="rcaTransferPricingInputForm.sovereignConstraint"/>
+	                     <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (TPLegRequest.modelTypeId != "3") or (*this* != null ))</var-value>
+       				 </var>
+	           </field>
+	           
+	           <field property="TPLegRequest.qualitativeNotches"  page="3" depends="validwhen"   >
+	                 <arg key="rcaTransferPricingInputForm.qualitativeNotches"/>
+	                   <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( ((TPLegRequest.modelTypeId != "1") and (TPLegRequest.modelTypeId != "2")) or (*this* != null ))</var-value>
+       				 </var>
+	           </field>
+	           
+	            <field property="TPLegRequest.qualitativeNotches" page="3"  depends="validwhen"   >
+	                 <arg key="rcaTransferPricingInputForm.qualitativeNotches"/>
+	                  <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (TPLegRequest.modelTypeId != "3") or (*this* != null ))</var-value>
+       				 </var>
+	           </field>  -->
+
+	           <field property="TPLegRequest.qualitativeNotches" page="2"  depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.qualitativeNotches"/>
+                     <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>20</var-value>
+                     </var>
+	           </field>
+	           
+	   <!--         <field property="TPLegRequest.SPNumericalRating"  page="3" depends="validwhen"  >
+	                 <arg key="rcaTransferPricingInputForm.spNumericalRating"/>
+	                <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (TPLegRequest.modelTypeId != "1") or (*this* != null ))</var-value>
+       				 </var>
+	           </field> -->
+	           
+	             <field property="TPLegRequest.SPNumericalRating"  page="2" depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.spNumericalRating"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>9</var-value>
+                     </var>
+	           </field>
+	           <!-- Scores validation  ends -->
+	           <!-- Pricing Information -->
+	            <!-- Fixed  Starts-->
+	           
+	       <!--      <field   property="rateInformation.interestTypeId"  page="3" depends="required"  >
+                    <arg key="rcaTransferPricingInputForm.interestTypeId"/>
+                </field>  -->
+                
+                <field property="rateInformation.interestTypeId" page="3"  depends="validwhen" >
+	                 <arg0 key="rcaTransferPricingInputForm.interestTypeId"/>
+	                  <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (rateInformation.interestTypeId != "0") or (*this* != "0" ))</var-value>
+       				 </var>
+	           </field>
+                 
+                
+	            <field property="rateInformation.baseFixedRate" page="3"  depends="validwhen" >
+	                 <arg0 key="rcaTransferPricingInputForm.baseFixedRate"/>
+	                  <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (rateInformation.interestTypeId != "1") or (*this* != null ))</var-value>
+       				 </var>
+	           </field>
+	           
+	           <field property="rateInformation.baseFixedRate"  page="2" depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.baseFixedRate"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>9</var-value>
+                     </var>
+	           </field>
+	           
+	      <!--       <field property="rateInformation.maxSpread"   depends="required,double,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.maxSpreadBPS"/>
+	                  <arg1 key="rcaTransferPricingInputForm.maxSpreadBPS"/>
+	                 <arg2 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>6</var-value>
+                     </var>
+	           </field>
+	           
+	           <field property="rateInformation.minSpread"  depends="required,double,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.minSpreadBPS"/>
+	                 <arg1 key="rcaTransferPricingInputForm.minSpreadBPS"/>
+	                 <arg2 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>6</var-value>
+                     </var>
+	           </field>    -->
+	            <field property="rateInformation.maxSpread"  page="3"  depends="spreadMaxValue">
+	                 <arg key="rcaTransferPricingInputForm.maxSpreadBPS"/>
+	            </field>
+	            <field property="rateInformation.maxSpread"  page="2"  depends="double,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.maxSpreadBPS"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>8</var-value>
+                     </var>
+	           </field>
+	           
+	           <field property="rateInformation.minSpread"  page="2" depends="double,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.minSpreadBPS"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>8</var-value>
+                     </var>
+	           </field> 
+	            <field property="rateInformation.minSpread" page="3"  depends="amountDecimalValidation" >
+	                 <arg key="amountDecimalValidation"/>
+	           </field>
+	           <field property="rateInformation.maxSpread" page="3"  depends="amountDecimalValidation" >
+	                 <arg key="amountDecimalValidation"/>
+	           </field>
+	            <!-- Fixed  Ends-->
+	           <!-- Float  Starts-->
+	           
+	           
+	           <field property="rateInformation.floatingRateIndex"  page="3" depends="validwhen" >
+	                 <arg0 key="rcaTransferPricingInputForm.floatingRateIndex"/>
+	                  <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (rateInformation.interestTypeId != "2") or (*this* != null ))</var-value>
+       				 </var>
+	           </field>
+	           
+	            <field property="rateInformation.floatingRateIndexTerm"  page="3" depends="validwhen" >
+	                 <arg0 key="rcaTransferPricingInputForm.indexTerm"/>
+	                  <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (rateInformation.interestTypeId != "2") or (*this* != null ))</var-value>
+       				 </var>
+	           </field>
+	            <!-- Float  ends-->
+				<!-- Qualitative Assessment start -->
+	           <!--   <field property="TPLegRequest.tpSummary"  depends="required,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.transferPricingSummary"/>
+	                 <arg2 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>1000</var-value>
+                     </var>
+	           </field> -->
+	           
+	          <!--    <field property="TPLegRequest.TPSummary"  page="3" depends="required">
+	                 <arg key="rcaTransferPricingInputForm.transferPricingSummary"/>
+	             </field>  -->          
+                
+               <field property="comment" indexedListProperty="legSummary.qualitativeFactors" page="3" depends="validwhen" >
+			      <arg key="rcaTransferPricingInputForm.rationale"/>
+			        <var>
+			          <var-name>test</var-name>
+			          <var-value>((legSummary.qualitativeFactors[].assessmentId != "1" ) or (*this* != null))</var-value>
+			          
+			        </var>
+			      </field>
+			       <field property="comment" indexedListProperty="legSummary.qualitativeFactors" page="3" depends="validwhen" >
+			      <arg key="rcaTransferPricingInputForm.rationale"/>
+			        <var>
+			          <var-name>test</var-name>
+			          <var-value>((legSummary.qualitativeFactors[].assessmentId != "2" ) or (*this* != null))</var-value>
+			          
+			        </var>
+			      </field>
+
+				<!-- Qualitative Assessment ends -->
+                <!--  Solency Matrix start -->
+               <field  property="preTransaction" indexedListProperty="TPLegRequest.solvencyMetrics" page="2" depends="double" >
+			      <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+			      </field>
+			      
+			      <field  property="postTransaction" indexedListProperty="TPLegRequest.solvencyMetrics" page="2" depends="double" >
+			      <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+			      </field> 
+			     
+			      
+			 <!--      <field property="TPLegRequest.solvencyMetrics[0].comment" page="3" depends="validwhen" >
+			      <arg key="rcaTransferPricingInputForm.qualitativecomment"/>
+			        <var>
+			          <var-name>test</var-name>
+			          <var-value>((TPLegRequest.solvencyMetrics[0].assessmentFlag != "false") or (*this* != null))</var-value>
+			          
+			        </var>
+			      </field>
+			      <field property="TPLegRequest.solvencyMetrics[1].comment" page="3" depends="validwhen" >
+			      <arg key="rcaTransferPricingInputForm.qualitativecomment"/>
+			        <var>
+			          <var-name>test</var-name>
+			          <var-value>((TPLegRequest.solvencyMetrics[1].assessmentFlag != "false") or (*this* != null))</var-value>
+			          
+			        </var>
+			      </field>
+			      <field property="TPLegRequest.solvencyMetrics[2].comment" page="3" depends="validwhen" >
+			      <arg key="rcaTransferPricingInputForm.qualitativecomment"/>
+			        <var>
+			          <var-name>test</var-name>
+			          <var-value>((TPLegRequest.solvencyMetrics[2].assessmentFlag != "false") or (*this* != null))</var-value>
+			          
+			        </var>
+			      </field>
+			      <field property="TPLegRequest.solvencyMetrics[3].comment" page="3" depends="validwhen" >
+			      <arg key="rcaTransferPricingInputForm.qualitativecomment"/>
+			        <var>
+			          <var-name>test</var-name>
+			          <var-value>((TPLegRequest.solvencyMetrics[3].assessmentFlag != "false") or (*this* != null))</var-value>
+			          
+			        </var>
+			      </field>
+			      <field property="TPLegRequest.solvencyMetrics[4].comment" page="3" depends="validwhen" >
+			      <arg key="rcaTransferPricingInputForm.qualitativecomment"/>
+			        <var>
+			          <var-name>test</var-name>
+			          <var-value>((TPLegRequest.solvencyMetrics[4].assessmentFlag != "false") or (*this* != null))</var-value>
+			          
+			        </var>
+			      </field>
+			      <field property="TPLegRequest.solvencyMetrics[5].comment" page="3" depends="validwhen" >
+			      <arg key="rcaTransferPricingInputForm.qualitativecomment"/>
+			        <var>
+			          <var-name>test</var-name>
+			          <var-value>((TPLegRequest.solvencyMetrics[5].assessmentFlag != "false") or (*this* != null))</var-value>
+			          
+			        </var>
+			      </field>  -->
+			      
+			       <field property="TPLegRequest.solvencyMetrics[4].preTransaction"  page="3"  depends="amountValidation">
+	                 <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+	               </field>
+	                <field property="TPLegRequest.solvencyMetrics[4].preTransaction"  page="2" depends="double,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.derPreTransaction"/>
+	                  <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>22</var-value>
+                     </var>
+	               </field> 
+
+		     	  <field property="TPLegRequest.solvencyMetrics[5].preTransaction"  page="3"  depends="amountValidation">
+	                 <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+	              </field>  
+	               <field property="TPLegRequest.solvencyMetrics[5].preTransaction"  page="2" depends="double,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.derPreTransaction"/>
+	                  <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>22</var-value>
+                     </var>
+	             </field> 
+
+				 <field property="TPLegRequest.solvencyMetrics[4].postTransaction"  page="3"  depends="amountValidation">
+	                 <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+	             </field>  
+	             <field property="TPLegRequest.solvencyMetrics[4].postTransaction"  page="2" depends="double,maxlength">
+	                <arg0 key="rcaTransferPricingInputForm.derPostTransaction"/>
+	                <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>22</var-value>
+                     </var>
+	             </field>  
+
+		         <field property="TPLegRequest.solvencyMetrics[5].postTransaction"  page="3"  depends="amountValidation">
+	                 <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+	             </field>
+	             <field property="TPLegRequest.solvencyMetrics[5].postTransaction"  page="2" depends="double,maxlength">
+	                <arg0 key="rcaTransferPricingInputForm.derPostTransaction"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>22</var-value>
+                     </var>
+	             </field>  
+			      
+			     <!--  <field property="TPLegRequest.solvencyMetrics[6].comment" page="3" depends="validwhen" >
+			      <arg key="rcaTransferPricingInputForm.qualitativecomment"/>
+			        <var>
+			          <var-name>test</var-name>
+			          <var-value>((TPLegRequest.solvencyMetrics[6].assessmentFlag != "true") or (*this* != null))</var-value>
+			          
+			        </var>
+			      </field> -->
+			      
+                <!--  Solency Matrix end -->
+          </form>
+          <!-- Other Transfer Pricing Input Form validation ends -->
+           <!-- CPA DAY2 Transfer Pricing Input Form validation starts -->
+          <form name="ICFPCPADAY2LegRequestForm">
+    
+              
+               <field   property="guaranteeAgreementFlag"  page="3"   depends="validwhen" >
+                    <arg key="rcaTransferPricingInputForm.guaranteeAgreementFlag"/>
+                     <var>
+         			    <var-name>test</var-name>
+          			    <var-value>( (guaranteeFeeApplicableFlag != "true") or (*this* != null ))</var-value>
+       			    </var>
+                </field>
+              
+              <field property="commitmentFeeRate"   page="3"  depends="validwhen"  >
+     			 <arg0 key="rcaTransferPricingInputForm.commitmentFeeRate"/>
+       			 <var>
+         			 <var-name>test</var-name>
+          			  <var-value>( (commitmentFeeApplicableFlag != "true") or (*this* != null ))</var-value>
+       			 </var>
+       			</field>
+      		    
+      		    <field property="commitmentFeeRate" page="2"  depends="double,maxlength"  >
+	                <arg0 key="rcaTransferPricingInputForm.commitmentFeeRate"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>9</var-value>
+                     </var>
+                     
+	           </field>
+	            <field property="commitmentFeeRate" page="2"  depends="minimumValue"  >
+	                <arg key="rcaTransferPricingInputForm.commitmentFeeRate"/>
+	            </field>
+	           
+	           <field property="guaranteeFeeRate"  page="3"  depends="validwhen"   >
+     			 <arg0 key="rcaTransferPricingInputForm.guaranteeFeeRate"/>
+       			 <var>
+         			 <var-name>test</var-name>
+          			  <var-value>( (guaranteeFeeApplicableFlag != "true") or (*this* != null ))</var-value>
+       			 </var>
+       			</field>
+      		    
+      		    <field property="guaranteeFeeRate"  page="2"  depends="double,maxlength" >
+	                <arg0 key="rcaTransferPricingInputForm.guaranteeFeeRate"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>9</var-value>
+                     </var>
+                     
+	           </field> 
+	            <field property="guaranteeFeeRate" page="2"  depends="minimumValue"  >
+	                <arg key="rcaTransferPricingInputForm.guaranteeFeeRate"/>
+	            </field>
+	           
+	        
+      		    
+                <field property="TPLegRequest.totalDebt"  page="2"  depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.totalDebtUSD"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>22</var-value>
+                     </var>
+	           </field>
+	           <field property="TPLegRequest.totalDebt" page="3"  depends="amountValidation" >
+	                 <arg key="amountValidation"/>
+	           </field>
+	       
+	           
+	            <field property="TPLegRequest.totalDebtCaptialRatio"  page="2"  depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.totalCapitalUSD"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>14</var-value>
+                     </var>
+	           </field>
+	           
+	           
+	            <field property="TPLegRequest.totalCapital" page="2"  depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.totalDebtTotalCapital"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>22</var-value>
+                     </var>
+	           </field>
+	            <field property="TPLegRequest.totalCapital" page="3"  depends="amountValidation" >
+	                 <arg key="amountValidation"/>
+	           </field>
+	           
+	        
+	           
+	            <field property="TPLegRequest.netChargeOffReceivables"  page="2"  depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.netChangeOff"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>14</var-value>
+                     </var>
+	           </field>
+	           
+	         
+      		    
+	           <field property="TPLegRequest.netIncome"  page="2" depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.netIncomeUSD"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>22</var-value>
+                     </var>
+	           </field>
+	             <field property="TPLegRequest.netIncome" page="3"  depends="amountValidation" >
+	                 <arg key="amountValidation"/>
+	           </field>
+	           
+	       
+	           
+	            <field property="TPLegRequest.netInterestMargin"  page="2" depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.netInterestMargin"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>14</var-value>
+                     </var>
+	           </field>
+	           
+	       
+	           
+	           <field property="TPLegRequest.returnOnAvgAssets"  page="2"  depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.returnOnAvgAssets"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>14</var-value>
+                     </var>
+	           </field>
+	           
+	         <!-- Scores validation  start -->
+	           
+	      
+
+	           <field property="TPLegRequest.qualitativeNotches" page="2"  depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.qualitativeNotches"/>
+                     <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>20</var-value>
+                     </var>
+	           </field>
+	           
+	  
+	           
+	             <field property="TPLegRequest.SPNumericalRating"  page="2" depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.spNumericalRating"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>9</var-value>
+                     </var>
+	           </field>
+	           <!-- Scores validation  ends -->
+	           <!-- Pricing Information -->
+	            <!-- Fixed  Starts-->
+	           
+	     
+                
+                <field property="rateInformation.interestTypeId" page="3"  depends="validwhen" >
+	                 <arg0 key="rcaTransferPricingInputForm.interestTypeId"/>
+	                  <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (rateInformation.interestTypeId != "0") or (*this* != "0" ))</var-value>
+       				 </var>
+	           </field>
+                 
+                
+	            <field property="rateInformation.baseFixedRate" page="3"  depends="validwhen" >
+	                 <arg0 key="rcaTransferPricingInputForm.baseFixedRate"/>
+	                  <var>
+         			 	<var-name>test</var-name>
+          			  	<var-value>( (rateInformation.interestTypeId != "1") or (*this* != null ))</var-value>
+       				 </var>
+	           </field>
+	           
+	           <field property="rateInformation.baseFixedRate"  page="2" depends="double,maxlength" >
+	                 <arg0 key="rcaTransferPricingInputForm.baseFixedRate"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>9</var-value>
+                     </var>
+	           </field>
+	           
+	      
+	            
+	            <field property="rateInformation.maxSpread"  page="2"  depends="double,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.maxSpreadBPS"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>8</var-value>
+                     </var>
+	           </field>
+	           
+	           <field property="rateInformation.minSpread"  page="2" depends="double,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.minSpreadBPS"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>8</var-value>
+                     </var>
+	           </field> 
+	            <field property="rateInformation.minSpread" page="3"  depends="amountDecimalValidation" >
+	                 <arg key="amountDecimalValidation"/>
+	           </field>
+	           <field property="rateInformation.maxSpread" page="3"  depends="amountDecimalValidation" >
+	                 <arg key="amountDecimalValidation"/>
+	           </field>
+	            <!-- Fixed  Ends-->
+	         
+				<!-- Qualitative Assessment start -->
+	        
+                
+               <field property="comment" indexedListProperty="cpaSummary.qualitativeFactors" page="3" depends="validwhen" >
+			      <arg key="rcaTransferPricingInputForm.rationale"/>
+			        <var>
+			          <var-name>test</var-name>
+			          <var-value>((cpaSummary.qualitativeFactors[].assessmentId != "1" ) or (*this* != null))</var-value>
+			          
+			        </var>
+			      </field>
+			       <field property="comment" indexedListProperty="cpaSummary.qualitativeFactors" page="3" depends="validwhen" >
+			      <arg key="rcaTransferPricingInputForm.rationale"/>
+			        <var>
+			          <var-name>test</var-name>
+			          <var-value>((cpaSummary.qualitativeFactors[].assessmentId != "2" ) or (*this* != null))</var-value>
+			          
+			        </var>
+			      </field>
+
+				<!-- Qualitative Assessment ends -->
+                <!--  Solency Matrix start -->
+               <field  property="preTransaction" indexedListProperty="TPLegRequest.solvencyMetrics" page="2" depends="double" >
+			      <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+			      </field>
+			      
+			      <field  property="postTransaction" indexedListProperty="TPLegRequest.solvencyMetrics" page="2" depends="double" >
+			      <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+			      </field> 
+			     
+			      
+			
+			      
+			       <field property="TPLegRequest.solvencyMetrics[4].preTransaction"  page="3"  depends="amountValidation">
+	                 <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+	               </field>
+	                <field property="TPLegRequest.solvencyMetrics[4].preTransaction"  page="2" depends="double,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.derPreTransaction"/>
+	                  <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>22</var-value>
+                     </var>
+	               </field> 
+
+		     	  <field property="TPLegRequest.solvencyMetrics[5].preTransaction"  page="3"  depends="amountValidation">
+	                 <arg key="rcaTransferPricingInputForm.derPreTransaction"/>
+	              </field>  
+	               <field property="TPLegRequest.solvencyMetrics[5].preTransaction"  page="2" depends="double,maxlength">
+	                 <arg0 key="rcaTransferPricingInputForm.derPreTransaction"/>
+	                  <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>22</var-value>
+                     </var>
+	             </field> 
+
+				 <field property="TPLegRequest.solvencyMetrics[4].postTransaction"  page="3"  depends="amountValidation">
+	                 <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+	             </field>  
+	             <field property="TPLegRequest.solvencyMetrics[4].postTransaction"  page="2" depends="double,maxlength">
+	                <arg0 key="rcaTransferPricingInputForm.derPostTransaction"/>
+	                <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>22</var-value>
+                     </var>
+	             </field>  
+
+		         <field property="TPLegRequest.solvencyMetrics[5].postTransaction"  page="3"  depends="amountValidation">
+	                 <arg key="rcaTransferPricingInputForm.derPostTransaction"/>
+	             </field>
+	             <field property="TPLegRequest.solvencyMetrics[5].postTransaction"  page="2" depends="double,maxlength">
+	                <arg0 key="rcaTransferPricingInputForm.derPostTransaction"/>
+	                 <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+                     <var> 
+                        <var-name>maxlength</var-name>
+                        <var-value>22</var-value>
+                     </var>
+	             </field>  
+			      
+			 
+			      
+                <!--  Solency Matrix end -->
+          </form>
+          <!-- CPA DAY2 validation ends -->
+    </formset>
+    
+   
+    
+    </form-validation>

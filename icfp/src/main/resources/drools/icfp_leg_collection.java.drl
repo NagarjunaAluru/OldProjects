@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rule-set name="ICFP Leg Collection Rules"
+          xmlns="http://drools.org/rules"
+          xmlns:java="http://drools.org/semantics/java"
+          xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+          xs:schemaLocation="http://drools.org/rules rules.xsd
+                             http://drools.org/semantics/java java.xsd">
+                             
+	<import>com.ge.icfp.rules.RuleErrorLevel</import>
+	<import>com.ge.icfp.rules.RuleError</import>
+	<import>com.ge.icfp.common.helper.ICFPLegHelper</import>
+	<import>com.ge.icfp.common.helper.ICFPDay2LegHelper</import>
+	<import>com.ge.icfp.util.ProductType</import>
+	<import>com.ge.icfp.util.EventType</import>
+	
+	<application-data identifier="ruleErrors">com.ge.icfp.rules.RuleErrors</application-data>
+
+	<java:functions>
+	</java:functions>
+
+	<!-- Rules for Correction -->
+	<rule name="No more that one Correction">
+		<parameter identifier="legCollection">	
+			<class>com.ge.icfp.rules.util.LegCollectionRuleWrapper</class>
+		</parameter>
+		
+		<java:condition>
+			legCollection.searchLegs(new Integer(-1), new Integer(EventType.CORRECTION.getId())).size() > 1
+		</java:condition>
+		
+		<java:consequence>
+			ruleErrors.addError("icfp.rule.error.moreThanOneCorrection");
+		</java:consequence>
+	</rule>
+</rule-set>

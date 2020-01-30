@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/ICFP-REWRITE/!svn/ver/7156/src/main/resources/com/ge/treasury/security/config
+END
+AuthConnClientConfig.properties
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/ICFP-REWRITE/!svn/ver/6865/src/main/resources/com/ge/treasury/security/config/AuthConnClientConfig.properties
+END
+SecFWConfig.properties
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/ICFP-REWRITE/!svn/ver/7156/src/main/resources/com/ge/treasury/security/config/SecFWConfig.properties
+END

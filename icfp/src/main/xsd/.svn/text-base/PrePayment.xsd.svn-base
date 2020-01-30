@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/PrePayment.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/PrePayment.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="Pre_Payment">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Prepayment_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Prepayment_Notice_Attached_Flag" type="xs:boolean" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Pre_Payment_Info">
+		<xs:sequence>
+			<xs:element ref="Pre_Payment" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

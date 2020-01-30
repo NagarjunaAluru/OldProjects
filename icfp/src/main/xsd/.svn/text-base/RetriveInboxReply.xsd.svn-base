@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/RetriveInboxReply.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ICFP/WorkItemData.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/RetriveInboxReply.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/WorkItemData.xsd" schemaLocation="WorkItemData.xsd"/>
+	<xs:element name="InboxReply">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="MyTaskData" minOccurs="0"/>
+				<xs:element ref="MyGroupTaskData" minOccurs="0"/>
+				<xs:element ref="MyAssignData" minOccurs="0"/>
+				<xs:element name="MyReq_Count" type="xs:string" minOccurs="0"/>
+				<xs:element name="MyDraft_Count" type="xs:string" minOccurs="0"/>
+				<xs:element name="MyClose_Count" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MyTaskData">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ns0:WorkItem" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MyGroupTaskData">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ns0:WorkItem" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MyAssignData">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ns0:WorkItem" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

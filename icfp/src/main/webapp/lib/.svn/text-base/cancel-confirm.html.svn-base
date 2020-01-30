@@ -1,0 +1,26 @@
+
+			<div class="modal-header">
+				<a class="close" data-dismiss="modal">X</a>
+				<h3>Cancel Request</h3>
+			</div>
+			<div class="modal-body">
+			<form>
+				<h2>1. Select a Leg to attach a document</h2>
+				<div class="row">
+					
+				</div>
+				<h2>2. Attachment document</h2>
+				<div class="row">
+					<div class="span4">
+						<div class="form-row">
+							<input type="file" id="fileInput" class="input-file-attach" >
+						</div>
+					</div> <!-- end of block -->
+
+				</div>
+			</form>
+			</div>
+			<div class="modal-footer">
+				<a href="#derivatives-table" class="btn right btn-success" id="saveAttachment" data-dismiss="modal">Save</a>
+				<a href="#" class="btn-link right cancel" data-dismiss="modal">Close window</a>
+			</div>

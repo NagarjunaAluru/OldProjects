@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/ApproverAssessment.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ICFP/QualitativeFactors.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ICFP/Attachments.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/ApproverAssessment.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/QualitativeFactors.xsd" schemaLocation="QualitativeFactors.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/Attachments.xsd" schemaLocation="Attachments.xsd"/>
+	<xs:element name="Approver_Assessment">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="TCL_Workflow" type="xs:string" minOccurs="0"/>
+				<xs:element name="Risk_Override_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="TCL_Risk" type="xs:string" minOccurs="0"/>
+				<xs:element name="TCL_Comments" type="xs:string" minOccurs="0"/>
+				<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+				<xs:element ref="Workflow_Comment" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns0:Qualitative_Factors" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Approver_Assessment_Info">
+		<xs:sequence>
+			<xs:element ref="Approver_Assessment" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Workflow_Comment">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="User" type="xs:string" minOccurs="0"/>
+				<xs:element name="Function" type="xs:string" minOccurs="0"/>
+				<xs:element name="Status" type="xs:string" minOccurs="0"/>
+				<xs:element name="Comment" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

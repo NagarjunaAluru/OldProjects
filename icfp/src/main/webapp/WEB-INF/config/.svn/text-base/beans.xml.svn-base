@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"	
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd	
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-2.5.xsd
+	http://www.springframework.org/schema/util 
+	http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+ 
+	<context:component-scan base-package="com.ge.icfp" />	
+	
+	<bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+	  <property name="beanNames"><value>/*</value></property>
+	  <property name="interceptorNames">
+	    <list>
+	      <value>debugInterceptor</value>
+	    </list>
+	  </property>
+	</bean>
+	
+	<bean id="masterDataFactory" class="com.ge.icfp.util.MasterDataFactory">
+		<property name="serviceClient" ref="serviceClient" />
+	</bean>
+	
+	<bean id="staticDataFactory" class="com.ge.icfp.util.StaticDataFactory">
+		<property name="serviceClient" ref="serviceClient" />
+	</bean>
+	
+	<!-- ICFP Attachment Manager -->
+	<util:properties id="attachmentsConfiguration" location="classpath:properties/attachment.properties" />
+	
+	<bean id="ICFPAttachmentManager" class="com.ge.icfp.common.attachments.ICFPAttachmentManagerImpl">
+		<property name="manager" ref="attachmentManager" />
+		<property name="repositoryRootFolderId" value="3000931171031" />
+		<property name="repositoryCPARootFolderId" value="3000931174031" />
+		<property name="cpaLegalAgreementsFolderId" value="3000931170031" />
+		<property name="serviceClient" ref="serviceClient" />
+		<property name="staticDataFactory" ref="staticDataFactory" />
+		<property name="configuration" ref="attachmentsConfiguration" />
+	</bean>
+
+	<bean class="org.springframework.web.context.support.ServletContextAttributeExporter">
+		<property name="attributes">
+			<map>
+				<entry key="com.ge.icfp.MasterData">
+					<ref bean="masterDataFactory" />
+				</entry>
+				<entry key="com.ge.icfp.StaticData">
+					<ref bean="staticDataFactory" />
+				</entry>
+				<entry key="com.ge.icfp.AttachmentManager">
+					<ref bean="ICFPAttachmentManager" />
+				</entry>
+			</map>
+		</property>
+	</bean> 
+	
+	<!-- ========================================== Struts Action Definitions ======================================= -->
+	
+	
+	<bean name="/fundingRequest/newFundingRequest" class="com.ge.icfp.newrequest.action.NewFundingRequestAction">
+		<property name="attachmentManager" ref="ICFPAttachmentManager" />
+		<property name="serviceClient" ref="serviceClient" />
+	</bean>
+	
+	<bean name="/derivativeRequest" class="com.ge.icfp.newrequest.action.DerivativeAction">
+		<property name="serviceClient" ref="serviceClient" />
+	</bean>
+	
+	<bean name="/frontoffice/RCALegRequest/derivativeRequest" class="com.ge.icfp.newrequest.action.DerivativeAction">
+		<property name="serviceClient" ref="serviceClient" />
+	</bean>	
+	
+	<bean name="/fundingRequest/newFundingRequestView" class="com.ge.icfp.newrequest.action.NewFundingRequestAction">
+		<property name="attachmentManager" ref="ICFPAttachmentManager" />
+		<property name="serviceClient" ref="serviceClient" />
+	</bean>
+	
+	<bean name="/fundingRequest/newCPAFundingRequest" class="com.ge.icfp.newrequest.action.NewFundingRequestAction">
+		<property name="attachmentManager" ref="ICFPAttachmentManager" />
+		<property name="serviceClient" ref="serviceClient" />
+	</bean>
+	
+	<bean name="/RCALegRequest" class="com.ge.icfp.common.legs.action.RCALegAction">
+		<property name="serviceClient" ref="serviceClient" />
+		<property name="attachmentManager" ref="ICFPAttachmentManager" />
+	</bean>
+	
+	<bean name="/CPALegRequest" class="com.ge.icfp.common.legs.action.CPALegAction">
+		<property name="serviceClient" ref="serviceClient" />
+	</bean>
+	
+	<bean name="/inbox" class="com.ge.icfp.common.action.InboxAction">
+ 		<property name="serviceClient" ref="serviceClient" />
+ 		<property name="attachmentManager" ref="ICFPAttachmentManager" />
+ 	</bean>
+ 	
+ 	<bean name="/manageDelegation" class="com.ge.icfp.common.action.ManageDelegationAction">
+ 		<property name="serviceClient" ref="serviceClient" />
+ 		<property name="securityHelper" ref="securityHelper" />
+ 	</bean>
+ 	
+ 	<bean name="/pipelineReview/pipelineReviewView" class="com.ge.icfp.pipeline.action.PipelineInboxAction">
+ 		<property name="serviceClient" ref="serviceClient" />
+ 	</bean>
+ 	
+ 	<bean name="/pipelineReview/pipelineReviewDeal" class="com.ge.icfp.pipeline.action.PipelineReviewDealAction">
+ 		<property name="serviceClient" ref="serviceClient" />
+ 		<property name="attachmentManager" ref="ICFPAttachmentManager" />
+	</bean>
+    <bean name="/pipelineReview/pipelineReviewDealLeg" class="com.ge.icfp.pipeline.action.PipelineReviewDealAction">
+ 		<property name="serviceClient" ref="serviceClient" />
+ 		<property name="attachmentManager" ref="ICFPAttachmentManager" />
+	</bean>
+	<bean name="/pipelineReview/pipelineReviewCPALeg" class="com.ge.icfp.pipeline.action.PipelineReviewDealAction">
+ 		<property name="serviceClient" ref="serviceClient" />
+ 		<property name="attachmentManager" ref="ICFPAttachmentManager" />
+	</bean>
+    <bean name="/cashManagement/cashManagement" class="com.ge.icfp.common.action.FourBlockerAction">
+ 		<property name="serviceClient" ref="serviceClient" />
+ 		<property name="attachmentManager" ref="ICFPAttachmentManager" />
+ 		<property name="actionId" value="4"/>
+	</bean>
+	
+	<bean name="/cashManagement/cashManagementLeg" class="com.ge.icfp.common.action.FourBlockerLegAction">
+		<property name="serviceClient" ref="serviceClient" />	
+		<property name="actionId" value="4"/>
+	</bean>
+	<bean name="/countryTax/countryTax" class="com.ge.icfp.common.action.FourBlockerAction">
+		<property name="serviceClient" ref="serviceClient" />
+		<property name="attachmentManager" ref="ICFPAttachmentManager" />
+ 		<property name="actionId" value="8"/>
+	</bean>
+	
+	<bean name="/countryTax/countryTaxLeg" class="com.ge.icfp.common.action.FourBlockerLegAction">
+		<property name="serviceClient" ref="serviceClient" />	
+	</bean>
+    
+	<!-- <bean name="/legSummary" class="com.ge.icfp.common.action.LegSummaryAction">
+		<property name="serviceClient" ref="serviceClient" />
+	</bean> -->
+	<bean name="/homePage" class="com.ge.icfp.common.action.HomePageAction"/>
+	
+	<bean name="/treasuryTax/treasuryTax" class="com.ge.icfp.common.action.FourBlockerAction">
+		<property name="serviceClient" ref="serviceClient" />
+		<property name="attachmentManager" ref="ICFPAttachmentManager" />
+		<property name="actionId" value="6"/>
+	</bean>
+	
+	<bean name="/treasuryTax/treasuryTaxLeg" class="com.ge.icfp.common.action.FourBlockerLegAction">
+		<property name="serviceClient" ref="serviceClient" />
+		<property name="actionId" value="6"/>	
+	</bean>
+	
+	<bean name="/treasuryLegal/treasuryLegal" class="com.ge.icfp.common.action.FourBlockerAction">
+		<property name="serviceClient" ref="serviceClient" />
+		<property name="attachmentManager" ref="ICFPAttachmentManager" />	
+		<property name="actionId" value="5"/>
+	</bean>
+	<bean name="/treasuryLegal/treasuryLegalLeg" class="com.ge.icfp.common.action.FourBlockerLegAction">
+		<property name="serviceClient" ref="serviceClient" />
+		<property name="actionId" value="5"/>	
+	</bean>
+
+	<bean name="/middleOffice/middleOffice" class="com.ge.icfp.common.action.FourBlockerAction">
+		<property name="serviceClient" ref="serviceClient" />
+		<property name="attachmentManager" ref="ICFPAttachmentManager" />
+		<property name="actionId" value="7"/>	
+	</bean>
+	<bean name="/middleOffice/middleOfficeFourBlockerValidation" class="com.ge.icfp.common.action.FourBlockerAction">
+		<property name="serviceClient" ref="serviceClient" />
+		<property name="attachmentManager" ref="ICFPAttachmentManager" />
+		<property name="actionId" value="7"/>	
+	</bean>
+
+	<bean name="/riskUnderwriting/riskUnderwriting" class="com.ge.icfp.common.action.FourBlockerAction">
+		<property name="serviceClient" ref="serviceClient" />
+		<property name="attachmentManager" ref="ICFPAttachmentManager" />
+		<property name="actionId" value="31"/>
+	</bean>
+	
+	<bean name="/transferPricing/transferPricing" class="com.ge.icfp.common.action.FourBlockerAction">
+		<property name="serviceClient" ref="serviceClient" />
+		<property name="attachmentManager" ref="ICFPAttachmentManager" />	
+		<property name="actionId" value="3"/>
+	</bean>
+	
+	<bean name="/transferPricing/transferPricingLegView" class="com.ge.icfp.transferpricing.action.RCATransferPricingInputAction">
+		<property name="serviceClient" ref="serviceClient" />
+	</bean>
+	<bean name="/transferPricing/transferPricingOtherLegView" class="com.ge.icfp.transferpricing.action.RCATransferPricingInputAction">
+		<property name="serviceClient" ref="serviceClient" />
+	</bean>
+	
+	<bean name="/transferPricing/transferPricingLeg" class="com.ge.icfp.transferpricing.action.RCATransferPricingInputAction">
+		<property name="serviceClient" ref="serviceClient" />
+	</bean>
+	
+	<bean name="/transferPricing/cpatransferPricingLegView" class="com.ge.icfp.transferpricing.action.RCATransferPricingInputAction">
+		<property name="serviceClient" ref="serviceClient" />
+	</bean>
+	
+	<bean name="/transferPricing/transferPricingOtherLeg" class="com.ge.icfp.transferpricing.action.RCATransferPricingInputAction">
+		<property name="serviceClient" ref="serviceClient" />
+	</bean>
+	
+	
+	<bean name="/transferPricing/cpatransferPricingLeg" class="com.ge.icfp.transferpricing.action.RCATransferPricingInputAction">
+		<property name="serviceClient" ref="serviceClient" />
+	</bean>
+	
+	<bean name="/transferPricing/day2CPATransferPricingLeg" class="com.ge.icfp.transferpricing.action.RCATransferPricingInputAction">
+		<property name="serviceClient" ref="serviceClient" />
+	</bean>
+	
+	<bean name="/transferPricing/rcaTransferPricingInputView" class="com.ge.icfp.transferpricing.action.RCATransferPricingInputAction">
+		<property name="serviceClient" ref="serviceClient" />
+	</bean>
+	
+	<bean name="/transactionCapture/transactionCaptureARFourBlocker" class="com.ge.icfp.transactioncapture.action.TransactionCaptureAction">
+	<property name="serviceClient" ref="serviceClient" />
+		<property name="actionId" value="36"/>
+		<property name="attachmentManager" ref="ICFPAttachmentManager" />
+	</bean>
+	
+	<bean name="/transactionCapture/transactionCaptureManagerFourBlocker" class="com.ge.icfp.transactioncapture.action.TransactionCaptureAction">
+	<property name="serviceClient" ref="serviceClient" />
+	<property name="actionId" value="39"/>
+	<property name="attachmentManager" ref="ICFPAttachmentManager" />
+	</bean>
+	
+	
+	<bean name="/transactionCapture/transactionCaptureFOCMFourBlocker" class="com.ge.icfp.transactioncapture.action.TransactionCaptureAction">
+		<property name="serviceClient" ref="serviceClient" />
+		<property name="actionId" value="37"/>
+		<property name="attachmentManager" ref="ICFPAttachmentManager" />
+	</bean>
+	
+	<bean name="/transactionCapture/transactionCaptureMOFourBlocker" class="com.ge.icfp.transactioncapture.action.TransactionCaptureAction">
+		<property name="serviceClient" ref="serviceClient" />
+		<property name="actionId" value="38"/>
+		<property name="attachmentManager" ref="ICFPAttachmentManager" />
+	</bean>
+	
+	<bean name="/transactionCapture/transactionCaptureLeg" class="com.ge.icfp.transactioncapture.action.TransactionCaptureLegAction">
+		<property name="serviceClient" ref="serviceClient" />
+	</bean>
+	
+
+	<bean name="/attachmentAction" class="com.ge.icfp.common.action.AttachmentAction">
+		<property name="serviceClient" ref="serviceClient" />
+		<property name="attachmentManager" ref="ICFPAttachmentManager" />
+	</bean>
+	
+	<bean name="/attachmentUpdateAction" class="com.ge.icfp.common.action.AttachmentAction">
+		<property name="serviceClient" ref="serviceClient" />
+		<property name="attachmentManager" ref="ICFPAttachmentManager" />
+	</bean>
+	
+	<bean name="/middleOffice/middleOfficeInputLeg" class="com.ge.icfp.common.action.FourBlockerLegAction">
+		<property name="serviceClient" ref="serviceClient" />	
+	</bean>
+	
+	<bean name="/lookup" class=" com.ge.icfp.common.action.TypeaheadAction">
+	<property name="serviceClient" ref="serviceClient" />
+	</bean>
+	
+	<bean name="/equityBusinessCFO" class="com.ge.icfp.common.action.FourBlockerAction">
+		<property name="serviceClient" ref="serviceClient" />
+		<property name="attachmentManager" ref="ICFPAttachmentManager" />
+		<property name="actionId" value="35"/>	
+	</bean>
+	<bean name="/equityBusinessApprover" class="com.ge.icfp.common.action.FourBlockerAction">
+		<property name="serviceClient" ref="serviceClient" />
+		<property name="attachmentManager" ref="ICFPAttachmentManager" />
+		<property name="actionId" value="34"/>
+	</bean>
+	<bean name="/equityInputLegDetails" class="com.ge.icfp.common.action.FourBlockerLegAction">
+	     <property name="serviceClient" ref="serviceClient" />	
+	</bean>
+
+	<bean name="/idagEag/idagEag" class="com.ge.icfp.common.action.FourBlockerAction">	
+		<property name="serviceClient" ref="serviceClient" />
+		<property name="attachmentManager" ref="ICFPAttachmentManager" />
+		<property name="actionId" value="32"/>
+	</bean>
+		
+	<bean name="/underwriting" class="com.ge.icfp.common.action.FourBlockerAction">		
+		<property name="serviceClient" ref="serviceClient" />
+		<property name="attachmentManager" ref="ICFPAttachmentManager" />
+		<property name="actionId" value="32"/>
+	</bean>
+	
+	<bean name="/tesg/tesg" class="com.ge.icfp.common.action.FourBlockerAction">	
+		<property name="serviceClient" ref="serviceClient" />
+		<property name="attachmentManager" ref="ICFPAttachmentManager" />
+		<property name="actionId" value="33"/>
+	</bean>
+
+	<bean name="/approver" class="com.ge.icfp.common.action.FourBlockerAction">		
+		<property name="serviceClient" ref="serviceClient" />
+		<property name="attachmentManager" ref="ICFPAttachmentManager" />
+	</bean>
+
+	<bean name="/additionalApprovers" class="com.ge.icfp.common.action.AdditionalApproversAction">
+	     <property name="serviceClient" ref="serviceClient" />
+	</bean>
+	<bean name="/businessApprovers" class="com.ge.icfp.common.action.BusinessApproversAction">
+	     <property name="serviceClient" ref="serviceClient" />
+	</bean>
+	
+	<!-- Front Office Action Mappings -->
+	
+	<bean name="/frontoffice/fourBlocker" class="com.ge.icfp.frontoffice.action.FOFourBlockerAction">
+	     <property name="serviceClient" ref="serviceClient" />
+	     <property name="attachmentManager" ref="ICFPAttachmentManager" />
+	</bean>
+	
+	<bean name="/frontoffice/RCALegRequest" class="com.ge.icfp.frontoffice.action.FORCALegAction">
+	     <property name="serviceClient" ref="serviceClient" />
+	     <property name="attachmentManager" ref="ICFPAttachmentManager" />
+	</bean>
+	
+	<bean name="/frontoffice/CPALegRequest" class="com.ge.icfp.frontoffice.action.FOCPALegAction">
+	     <property name="serviceClient" ref="serviceClient" />
+	</bean>
+
+  	<bean name="/transferPricing/equityTransferPricing" class="com.ge.icfp.common.action.FourBlockerLegAction">
+		<property name="serviceClient" ref="serviceClient" />	
+	</bean>
+	
+	<bean name="/admin/admin" class="com.ge.icfp.admin.action.ICFPAdminAction">
+	     <property name="serviceClient" ref="serviceClient" />
+	</bean>
+	
+	<bean name="/searchResults" class="com.ge.icfp.common.action.SearchAction">
+ 		<property name="serviceClient" ref="serviceClient" />
+ 	</bean>
+ 	<bean name="/contactUs/contactUs" class="com.ge.icfp.common.action.SearchAction">
+ 		<property name="serviceClient" ref="serviceClient" />
+ 	</bean>
+ 	<bean name="/help" class="com.ge.icfp.common.action.SearchAction">
+ 		<property name="serviceClient" ref="serviceClient" />
+ 	</bean>
+ 	<bean name="/reports/cognosReports" class="com.ge.icfp.reports.CognosReportsAction">
+ 	</bean>
+
+ 	<bean name="/router" class="com.ge.icfp.action.RouterAction">
+ 		<property name="serviceClient" ref="serviceClient" />
+ 	</bean>
+ 	
+</beans>

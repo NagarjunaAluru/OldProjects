@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/Comments.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/Comments.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="Comments_Log">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Author" type="xs:string" minOccurs="0"/>
+				<xs:element name="Action_Dt" type="xs:string" minOccurs="0"/>
+				<xs:element name="First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Comment_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+				<xs:element name="Comment_Type_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Comment_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Attachment_Type_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Attachment_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="User_SSO" type="xs:string" minOccurs="0"/>
+				<xs:element name="Wf_Stage_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Wf_Stage" type="xs:string" minOccurs="0"/>
+				<xs:element name="Deal_Seq_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Leg_Seq_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Legal_Exceptions_Id" type="xs:int" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

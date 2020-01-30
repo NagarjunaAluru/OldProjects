@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/Correction.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/Correction.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="Correction">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Problem_Statement" type="xs:string" minOccurs="0"/>
+				<xs:element name="Action_Needed_By_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Correction_Needed_Comments" type="xs:string" minOccurs="0"/>
+				<xs:element name="Debt_Equity_Other_Comments" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Correction_Info">
+		<xs:sequence>
+			<xs:element ref="Correction" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

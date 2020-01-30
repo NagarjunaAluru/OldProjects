@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/UpdateDealStatus.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ICFP/Attachments.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ICFP/MsgHeader.xsd"
+	 xmlns:ns2="http://treasury.ge.com/schemas/ICFP/LegTypeCollection.xsd"
+	 xmlns:ns3="http://treasury.ge.com/schemas/ICFP/QualitativeFactors.xsd"
+	 xmlns:ns4="http://treasury.ge.com/schemas/ICFP/ClosingCheckList.xsd"
+	 xmlns:ns5="http://treasury.ge.com/schemas/ICFP/IDAGEAGLead.xsd"
+	 xmlns:ns6="http://treasury.ge.com/schemas/ICFP/EboardUpdate.xsd"
+	 xmlns:ns7="http://treasury.ge.com/schemas/ICFP/AttachmentTypeComments.xsd"
+	 xmlns:ns8="http://treasury.ge.com/schemas/ICFP/BusinessApprovers.xsd"
+	 xmlns:ns9="http://treasury.ge.com/schemas/ICFP/TesgList.xsd"
+	 xmlns:ns10="http://treasury.ge.com/schemas/ICFP/TesgPopUp.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/UpdateDealStatus.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/Attachments.xsd" schemaLocation="Attachments.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/MsgHeader.xsd" schemaLocation="MsgHeader.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/LegTypeCollection.xsd" schemaLocation="LegTypeCollection.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/QualitativeFactors.xsd" schemaLocation="QualitativeFactors.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/ClosingCheckList.xsd" schemaLocation="ClosingCheckList.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/IDAGEAGLead.xsd" schemaLocation="IDAGEAGLead.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/EboardUpdate.xsd" schemaLocation="EboardUpdate.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/AttachmentTypeComments.xsd" schemaLocation="AttachmentTypeComments.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/BusinessApprovers.xsd" schemaLocation="BusinessApprovers.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/TesgList.xsd" schemaLocation="TesgList.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/TesgPopUp.xsd" schemaLocation="TesgPopUp.xsd"/>
+	<xs:complexType name="UpdateDealStatus">
+		<xs:sequence>
+			<xs:element ref="UpdateStatus" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="UpdateStatus">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Spot_Rates_Timestamp" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="OpCode" type="xs:string" minOccurs="0"/>
+				<xs:element name="Approver_SSO_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Approver_Fname" type="xs:string" minOccurs="0"/>
+				<xs:element name="Approver_Lname" type="xs:string" minOccurs="0"/>
+				<xs:element name="Role_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="WF_Stage" type="xs:string" minOccurs="0"/>
+				<xs:element name="WF_Stage_ID" type="xs:string" minOccurs="0"/>
+				<xs:element name="Queue_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="WF_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+				<xs:element name="Acction_Comments" type="xs:string" minOccurs="0"/>
+				<xs:element name="Deal_Seq_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Business_Request_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Status_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Current_Status_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Action_id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Approve_Reject" type="xs:string" minOccurs="0"/>
+				<xs:element name="Value_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Product_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Front_Office" type="xs:string" minOccurs="0"/>
+				<xs:element name="Front_Office_First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Front_Office_Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Front_Office_Role_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Front_Office_Role_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Cash_Management" type="xs:string" minOccurs="0"/>
+				<xs:element name="Cash_Management_First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Cash_Management_Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Cash_Management_Role_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Cash_Management_Role_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Middle_Office" type="xs:string" minOccurs="0"/>
+				<xs:element name="Middle_Office_First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Middle_Office_Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Middle_Office_Role_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Middle_Office_Role_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Treasury_Tax" type="xs:string" minOccurs="0"/>
+				<xs:element name="Treasury_Tax_First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Treasury_Tax_Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Treasury_Tax_Role_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Treasury_Tax_Role_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Derivative_Trade_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="IDAG_AT_Groups" type="xs:string" minOccurs="0"/>
+				<xs:element name="IDAG_Action_Groups" type="xs:string" minOccurs="0"/>
+				<xs:element name="IDAG_Action_SSOID" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns0:Attachment" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns1:Msg_Header" minOccurs="0"/>
+				<xs:element ref="Four_Blocker" minOccurs="0"/>
+				<xs:element name="Additional_Approvals" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="First_Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="Last_Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="SSO_Id" type="xs:string" minOccurs="0"/>
+							<xs:element name="Op_Code" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Le_Bod_Governance_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="LE_Board_Choice" type="xs:boolean" minOccurs="0"/>
+				<xs:element ref="ns2:Legs" minOccurs="0"/>
+				<xs:element name="Additional_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Material_C_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Addi_App_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Socm_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Approval_P_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Ord_Approv_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Soct_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Somid_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Sotl_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Sotp_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Sott_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Tesg_Escal_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Ebord_Room_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Override_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Change_After_Approval_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Change_Type_Comments" type="xs:string" minOccurs="0"/>
+				<xs:element name="Change_Type_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Vault_Id" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns4:Closing_Check_List" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns5:IDAGEAG_Lead" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns6:EboardUpdate" minOccurs="0"/>
+				<xs:element ref="ns7:Attachment_Type_Comments" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns8:Business_Approvers" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns9:TesgList" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns10:TesgPopUp" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Four_Blocker">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="T_Summary_Owner" minOccurs="0"/>
+				<xs:element ref="T_Priority_Timings" minOccurs="0"/>
+				<xs:element ref="AssignReviewer" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="T_ClassificationLevel" minOccurs="0"/>
+				<xs:element ref="ns3:Qualitative_Factors" minOccurs="0"/>
+				<xs:element name="Project_Summary" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Deal_Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="Deal_Category" type="xs:string" minOccurs="0"/>
+							<xs:element name="Deal_Rationale" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="T_Summary_Owner">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="T_Owner_FName" type="xs:string" minOccurs="0"/>
+				<xs:element name="T_Owner_LName" type="xs:string" minOccurs="0"/>
+				<xs:element name="T_Owner_Title" type="xs:string" minOccurs="0"/>
+				<xs:element name="Security_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Derivatives" type="xs:string" minOccurs="0"/>
+				<xs:element name="Cross_Border" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Equity_Infusion_Dividends" type="xs:string" minOccurs="0"/>
+				<xs:element name="Impairment_History" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="PrudentiallyRegulated_LegalEntity" type="xs:string" minOccurs="0"/>
+				<xs:element name="Impairment_Comments" type="xs:string" minOccurs="0"/>
+				<xs:element name="Principal_LegalEntity" type="xs:string" minOccurs="0"/>
+				<xs:element name="Subordinated_Debt" type="xs:string" minOccurs="0"/>
+				<xs:element name="FinancialStatement_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Latest_Date_Of_FinancialStatement" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="NonStandard_Legal_Agreement" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="T_Priority_Timings">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Priority" type="xs:string" minOccurs="0"/>
+				<xs:element name="Priority_Comments" type="xs:string" minOccurs="0"/>
+				<xs:element name="Region_Responsibility" type="xs:string" minOccurs="0"/>
+				<xs:element name="value_Dt" type="xs:dateTime" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AssignReviewer">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="SSO_ID" type="xs:string" minOccurs="0"/>
+				<xs:element name="Role_id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Opcode" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="T_ClassificationLevel">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="RiskReview_Override" type="xs:string" minOccurs="0"/>
+				<xs:element name="Default_Classification_Level" type="xs:string" minOccurs="0"/>
+				<xs:element name="RU_Amended_TCL" type="xs:string" minOccurs="0"/>
+				<xs:element name="Revised_TCL_Comments" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

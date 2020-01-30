@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/ICFP-REWRITE/!svn/ver/9813/src/main/webapp/jsp/day2/common
+END
+originalTPLenderBorrower.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/day2/common/originalTPLenderBorrower.jsp
+END
+originalTPTransactionDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/day2/common/originalTPTransactionDetails.jsp
+END
+rcaGenAmendmentReadOnly.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/day2/common/rcaGenAmendmentReadOnly.jsp
+END
+breadScrum.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/ICFP-REWRITE/!svn/ver/9499/src/main/webapp/jsp/day2/common/breadScrum.jsp
+END
+rcaAgreementExtensionReadOnly.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/day2/common/rcaAgreementExtensionReadOnly.jsp
+END
+otherTPConsiderations.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/day2/common/otherTPConsiderations.jsp
+END
+saveButton.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/ICFP-REWRITE/!svn/ver/9813/src/main/webapp/jsp/day2/common/saveButton.jsp
+END
+derivativesDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/ICFP-REWRITE/!svn/ver/9555/src/main/webapp/jsp/day2/common/derivativesDetails.jsp
+END
+rcaAssignmentReadOnly.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/day2/common/rcaAssignmentReadOnly.jsp
+END
+tpSettlementDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/day2/common/tpSettlementDetails.jsp
+END
+originalTPUsdTransactionDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/day2/common/originalTPUsdTransactionDetails.jsp
+END
+originalTCMOLenderBorrower.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/day2/common/originalTCMOLenderBorrower.jsp
+END
+rcaDebtEquityOtherReadOnly.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/day2/common/rcaDebtEquityOtherReadOnly.jsp
+END
+legAmendmentDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/day2/common/legAmendmentDetails.jsp
+END
+transferPricingCommon.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/day2/common/transferPricingCommon.jsp
+END
+newTPLenderBorrower.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/day2/common/newTPLenderBorrower.jsp
+END
+rcaEarlyTerminationReadOnly.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/day2/common/rcaEarlyTerminationReadOnly.jsp
+END
+tpTermsAndConditions.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/day2/common/tpTermsAndConditions.jsp
+END
+rcaAmendIncreaseDecreaseReadOnly.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/day2/common/rcaAmendIncreaseDecreaseReadOnly.jsp
+END
+transactionLegDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/9738/src/main/webapp/jsp/day2/common/transactionLegDetails.jsp
+END

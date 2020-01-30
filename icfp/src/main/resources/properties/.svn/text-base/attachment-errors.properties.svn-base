@@ -1,0 +1,14 @@
+ICFFO_ATMT_001=Unable to upload the file {1} to GE Libraries. Please try again later.
+ICFFO_ATMT_011=Unable to download the file {1} from GE Libraries. Please try again later.
+ICFFO_ATMT_016=Unable to delete the file {0} of type {2} from GE Libraries. Please try again later.
+ICFFO_ATMT_021=Unable to update metadata of attachment {0} of type {2} for the deal {3}
+ICFFO_ATMT_031=Invalid file name {1}
+ICFFO_ATMT_035=Wrong filetype, {4} Extensions are valid.
+ICFFO_ATMT_032=Multiple attachments not allowed for the type {2}
+ICFFO_ATMT_033=Invalid input parameters
+ICFFO_ATMT_034=Files more than the size ; are not allowed
+ICFFO_ATMT_036=Application does not support special characters like <>:/\|*''%.+=# in the file name.Please rename the file and try again.
+ICFFO_ATMT_070=Error while performing service operation
+ICFFO_ATMT_080=Error while loading the attachment security rules.
+ICFFO_ATMT_090=Error while loading the attachment validation rules.
+ICFFO_ATMT_120=Unable to generate the underwriting file {1}.

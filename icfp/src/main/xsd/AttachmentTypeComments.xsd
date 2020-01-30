@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/AttachmentTypeComments.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/AttachmentTypeComments.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="Attachment_Type_Comments">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Comment_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Leg_Seq_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Comment_Opcode" type="xs:string" minOccurs="0"/>
+				<xs:element name="Attachment_Type_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

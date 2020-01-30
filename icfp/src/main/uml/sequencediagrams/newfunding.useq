@@ -1,0 +1,162 @@
+<sequence-diagram version="1.0.9" icons="true">  
+  <object id="1" language="java" name="com.ge.icfp.newrequest.action.NewFundingRequestAction" project="icfp" 
+    file="/icfp/src/main/java/com/ge/icfp/newrequest/action/NewFundingRequestAction.java" binary="false" 
+    label="newFundingRequestAction" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="119" y="0"/>    
+    <execution id="2">      
+      <position height="145" width="0" x="0" y="119"/>    
+    </execution>    
+    <execution id="4">      
+      <position height="82" width="0" x="0" y="161"/>    
+    </execution>    
+    <execution id="9">      
+      <position height="84" width="175" x="5" y="297"/>    
+    </execution>    
+    <execution id="11">      
+      <position height="21" width="175" x="5" y="339"/>    
+    </execution>    
+    <execution id="12">      
+      <position height="156" width="175" x="5" y="787"/>    
+    </execution>    
+    <execution id="14">      
+      <position height="93" width="175" x="5" y="829"/>    
+    </execution>  
+  </object>  
+  <object id="19" language="java" name="com.ge.icfp.common.legs.action.RCALegAction" project="icfp" 
+    file="/icfp/src/main/java/com/ge/icfp/common/legs/action/RCALegAction.java" binary="false" label="rcaLegAction" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="573" y="0"/>    
+    <execution id="20">      
+      <position height="202" width="144" x="184" y="411"/>    
+    </execution>    
+    <execution id="22">      
+      <position height="139" width="144" x="184" y="453"/>    
+    </execution>    
+    <execution id="31">      
+      <position height="191" width="144" x="184" y="618"/>    
+    </execution>    
+    <execution id="33">      
+      <position height="128" width="144" x="184" y="660"/>    
+    </execution>  
+  </object>  
+  <object id="40" language="java" name="com.ge.icfp.common.helper.CurrentDealManager" project="icfp" 
+    file="/icfp/src/main/java/com/ge/icfp/common/helper/CurrentDealManager.java" binary="false" 
+    label="currentDealManager" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="648" y="0"/>    
+    <execution id="8">      
+      <position height="21" width="141" x="332" y="201"/>    
+    </execution>    
+    <execution id="28">      
+      <position height="21" width="141" x="332" y="524"/>    
+    </execution>    
+    <execution id="35">      
+      <position height="21" width="141" x="332" y="681"/>    
+    </execution>    
+    <execution id="16">      
+      <position height="21" width="141" x="332" y="850"/>    
+    </execution>  
+  </object>  
+  <object id="41" language="java" name="com.ge.icfp.common.helper.ICFPLegHelper" project="icfp" 
+    file="/icfp/src/main/java/com/ge/icfp/common/helper/ICFPLegHelper.java" binary="false" label="icfpLegHelper" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="863" y="0"/>    
+    <execution id="24">      
+      <position height="21" width="124" x="477" y="474"/>    
+    </execution>    
+    <execution id="26">      
+      <position height="21" width="124" x="477" y="506"/>    
+    </execution>    
+    <execution id="30">      
+      <position height="21" width="124" x="477" y="550"/>    
+    </execution>    
+    <execution id="37">      
+      <position height="21" width="124" x="477" y="712"/>    
+    </execution>  
+  </object>  
+  <object id="42" language="java" name="com.hydus.wff.common.bw.ServiceClient" project="icfp" 
+    file="C:/Users/chaitanya/.m2/repository/com/hydus/hwf-core/0.0.17/hwf-core-0.0.17.jar" binary="true" 
+    label="serviceClient" type="interface" autoSize="true">    
+    <position height="-1" width="-1" x="1014" y="0"/>    
+    <execution id="6">      
+      <position height="21" width="124" x="605" y="182"/>    
+    </execution>    
+    <execution id="39">      
+      <position height="21" width="124" x="605" y="746"/>    
+    </execution>    
+    <execution id="18">      
+      <position height="21" width="124" x="605" y="880"/>    
+    </execution>  
+  </object>  
+  <message id="3" 
+    operation="newRequest(org.apache.struts.action.ActionMapping,org.apache.struts.action.ActionForm,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse):org.apache.struts.action.ActionForward">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="5" operation="invokeService(java.lang.String,java.lang.Object,java.lang.Class&lt;T&gt;):T">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </message>  
+  <message id="7" operation="setActiveDeal(com.ge.icfp.model.DealRequest,javax.servlet.http.HttpServletRequest):void">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="10" 
+    operation="addLeg(org.apache.struts.action.ActionMapping,org.apache.struts.action.ActionForm,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse):org.apache.struts.action.ActionForward">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="11"/>  
+  </message>  
+  <message id="13" 
+    operation="createRequest(org.apache.struts.action.ActionMapping,org.apache.struts.action.ActionForm,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse):org.apache.struts.action.ActionForward">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="14"/>  
+  </message>  
+  <message id="15" operation="getCurrentDeal(javax.servlet.http.HttpServletRequest):com.ge.icfp.model.DealRequest">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="16"/>  
+  </message>  
+  <message id="17" operation="invokeService(java.lang.String,java.lang.Object,java.lang.Class&lt;T&gt;):T">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="18"/>  
+  </message>  
+  <message id="21" 
+    operation="addLeg(org.apache.struts.action.ActionMapping,org.apache.struts.action.ActionForm,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse):org.apache.struts.action.ActionForward">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="22"/>  
+  </message>  
+  <message id="23" 
+    operation="prepareICFPLegRequestForm(org.apache.struts.action.DynaActionForm,org.apache.struts.action.ActionMapping,javax.servlet.http.HttpServletRequest,org.apache.struts.action.Action):void">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="24"/>  
+  </message>  
+  <message id="25" operation="createLegObject(com.ge.icfp.util.ProductType):java.lang.Object">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="26"/>  
+  </message>  
+  <message id="27" operation="addLeg(java.lang.Object,javax.servlet.http.HttpServletRequest):void">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="28"/>  
+  </message>  
+  <message id="29" 
+    operation="syncFormWithLeg(org.apache.struts.action.DynaActionForm,java.lang.Object,javax.servlet.http.HttpServletRequest,javax.servlet.ServletContext,org.apache.struts.action.ActionMapping,org.apache.struts.action.Action):void">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="30"/>  
+  </message>  
+  <message id="32" 
+    operation="saveAndReturnToDeal(org.apache.struts.action.ActionMapping,org.apache.struts.action.ActionForm,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse):org.apache.struts.action.ActionForward">    
+    <end type="SOURCE" refId="31"/>    
+    <end type="TARGET" refId="33"/>  
+  </message>  
+  <message id="34" operation="getLegByNumber(int,javax.servlet.http.HttpServletRequest):java.lang.Object">    
+    <end type="SOURCE" refId="33"/>    
+    <end type="TARGET" refId="35"/>  
+  </message>  
+  <message id="36" 
+    operation="synchLegWithForm(java.lang.Object,org.apache.struts.action.DynaActionForm,javax.servlet.http.HttpServletRequest,javax.servlet.ServletContext,org.apache.struts.action.ActionMapping,org.apache.struts.action.Action):void">    
+    <end type="SOURCE" refId="33"/>    
+    <end type="TARGET" refId="37"/>  
+  </message>  
+  <message id="38" operation="invokeService(java.lang.String,java.lang.Object,java.lang.Class&lt;T&gt;):T">    
+    <end type="SOURCE" refId="33"/>    
+    <end type="TARGET" refId="39"/>  
+  </message>
+</sequence-diagram>

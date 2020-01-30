@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<taglib version="2.0" xmlns="http://java.sun.com/xml/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">
+	<tlib-version>1.0</tlib-version>
+	<short-name>ICFP Static Data</short-name>
+	<uri>http://ge.com/icfp/taglibs/staticdata</uri>
+	<display-name>ICFP Static Data Tags and Functions</display-name>
+	<description>ICFP Static Data Tags and Functions</description>
+	
+	<function>
+		<name>getDealCategories</name>
+		<function-class>com.ge.icfp.tag.StaticDataManager</function-class>
+		<function-signature>java.util.List getDealCategories(javax.servlet.jsp.PageContext)</function-signature>
+	</function>
+	
+	<function>
+		<name>getDerivativeTypes</name>
+		<function-class>com.ge.icfp.tag.StaticDataManager</function-class>
+		<function-signature>java.util.List getDerivativeTypes(javax.servlet.jsp.PageContext)</function-signature>
+	</function>
+	
+	<function>
+		<name>getProductTypes</name>
+		<function-class>com.ge.icfp.tag.StaticDataManager</function-class>
+		<function-signature>java.util.List getProductTypes(javax.servlet.jsp.PageContext)</function-signature>
+	</function>
+	
+	<function>
+		<name>getHedgeDesignation</name>
+		<function-class>com.ge.icfp.tag.StaticDataManager</function-class>
+		<function-signature>java.util.List getHedgeDesignation(javax.servlet.jsp.PageContext)</function-signature>
+	</function>
+	
+	<function>
+		<name>getTaxDesignation</name>
+		<function-class>com.ge.icfp.tag.StaticDataManager</function-class>
+		<function-signature>java.util.List getTaxDesignation(javax.servlet.jsp.PageContext)</function-signature>
+	</function>
+	
+	<function>
+		<name>getInterestResetFreqs</name>
+		<function-class>com.ge.icfp.tag.StaticDataManager</function-class>
+		<function-signature>java.util.List getInterestResetFreqs(javax.servlet.jsp.PageContext)</function-signature>
+	</function>
+	
+		<function>
+		<name>getHedgePrograms</name>
+		<function-class>com.ge.icfp.tag.StaticDataManager</function-class>
+		<function-signature>java.util.List getHedgePrograms(javax.servlet.jsp.PageContext)</function-signature>
+	</function>
+	
+		<function>
+		<name>getDayCounts</name>
+		<function-class>com.ge.icfp.tag.StaticDataManager</function-class>
+		<function-signature>java.util.List getDayCounts(javax.servlet.jsp.PageContext)</function-signature>
+	</function>
+	
+	<function>
+		<name>getContractClass</name>
+		<function-class>com.ge.icfp.tag.StaticDataManager</function-class>
+		<function-signature>java.util.List getContractClass(javax.servlet.jsp.PageContext)</function-signature>
+	</function>
+	
+	<function>
+		<name>getSolvencyMatrixList</name>
+		<function-class>com.ge.icfp.tag.StaticDataManager</function-class>
+		<function-signature>java.util.List getSolvencyMatrixList(javax.servlet.jsp.PageContext)</function-signature>
+	</function>
+	
+	<function>
+		<name>getContactUsList</name>
+		<function-class>com.ge.icfp.tag.StaticDataManager</function-class>
+		<function-signature>java.util.List getContactUsList(javax.servlet.jsp.PageContext)</function-signature>
+	</function>
+	<function>
+		<name>getWorkFlowStageList</name>
+		<function-class>com.ge.icfp.tag.StaticDataManager</function-class>
+		<function-signature>java.util.List getWorkFlowStageList(javax.servlet.jsp.PageContext)</function-signature>
+	</function>
+	<function>
+		<name>getCertificateList</name>
+		<function-class>com.ge.icfp.tag.StaticDataManager</function-class>
+		<function-signature>java.util.List getCertificateList(javax.servlet.jsp.PageContext)</function-signature>
+	</function>
+	<function>
+		<name>getSearchCriteria</name>
+		<function-class>com.ge.icfp.tag.StaticDataManager</function-class>
+		<function-signature>java.util.List getSearchCriteria(javax.servlet.jsp.PageContext)</function-signature>
+	</function>
+		<function>
+		<name>getReportsURLS</name>
+		<function-class>com.ge.icfp.tag.StaticDataManager</function-class>
+		<function-signature>java.util.List getReportsURLS(javax.servlet.jsp.PageContext)</function-signature>
+	</function>
+</taglib>

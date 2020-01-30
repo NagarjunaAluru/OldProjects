@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/AdminData.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ICFP/MsgHeader.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ICFP/AuditLog.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/AdminData.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/MsgHeader.xsd" schemaLocation="MsgHeader.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/AuditLog.xsd" schemaLocation="AuditLog.xsd"/>
+	<xs:element name="AdminDataMaintenance">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="OpCode" type="xs:string" minOccurs="0"/>
+				<xs:element name="AdminData_Table" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Table_Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="Table_Rows" type="Row" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="ns0:Msg_Header" minOccurs="0"/>
+				<xs:element ref="ns1:Audit_Log" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Row">
+		<xs:sequence>
+			<xs:element name="OpCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="ID" type="xs:int" minOccurs="0"/>
+			<xs:element name="Change" type="xs:string" minOccurs="0"/>
+			<xs:element name="Column" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="name" type="xs:string" minOccurs="0"/>
+						<xs:element name="Value" type="xs:string" minOccurs="0"/>
+						<xs:element name="ID" type="xs:string" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

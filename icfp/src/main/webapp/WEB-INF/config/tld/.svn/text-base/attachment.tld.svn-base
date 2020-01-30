@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+  "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+<taglib>
+	<tlib-version>1.1</tlib-version>
+    <jsp-version>1.2</jsp-version>
+    <short-name>icfp</short-name>	
+	<tag>
+	<name>attachment</name>
+	<tag-class>com.ge.icfp.tag.AttachmentTag</tag-class>
+	<body-content>empty</body-content>
+	<display-name>attachment</display-name>
+	<description>Display Gold ID details in a prescribed format</description>
+	
+	<attribute>
+		<name>showType</name>
+		<required>false</required>
+		<rtexprvalue>false</rtexprvalue>
+		<description> Use this attibute for viewTable of the bean having the property.</description>
+	</attribute>
+	
+	<attribute>
+		<name>label</name>
+		<required>false</required>
+		<rtexprvalue>false</rtexprvalue>
+		<description> Use this attibute for label of the bean having the property.</description>
+	</attribute>
+	
+	<attribute>
+		<name>property</name>
+		<required>true</required>
+		<rtexprvalue>false</rtexprvalue>
+		<description> Use this attibute containing property to be displayed in the screen.</description>
+	</attribute>
+	
+	<attribute>
+		<name>formName</name>
+		<required>true</required>
+		<rtexprvalue>false</rtexprvalue>
+		<description> Use this attibute containing the listtype information to be displayed in the screen.</description>
+	</attribute>
+	
+		<attribute>
+		<name>requestProperty</name>
+		<required>true</required>
+		<rtexprvalue>false</rtexprvalue>
+		<description> Use this attibute containing the listtype information to be displayed in the screen.</description>
+	</attribute>
+
+	<attribute>
+		<name>attachVOName</name>
+		<required>true</required>
+		<rtexprvalue>false</rtexprvalue>
+		<description> Use this attibute containing the listtype information to be displayed in the screen.</description>
+	</attribute>
+	
+
+	
+	<attribute>
+		<name>showDiv</name>
+		<required>true</required>
+		<rtexprvalue>false</rtexprvalue>
+		<description> Use this attibute containing the listtype information to be displayed in the screen.</description>
+	</attribute>
+	
+	
+	
+	<attribute>
+		<name>replaceField</name>
+		<required>true</required>
+		<rtexprvalue>false</rtexprvalue>
+		<description> replaceField of input type file.</description>
+	</attribute>
+	
+	<attribute>
+		<name>mandatory</name>
+		<required>true</required>
+		<rtexprvalue>false</rtexprvalue>
+		<description> replaceField of input type file.</description>
+	</attribute>
+	
+	
+	</tag>
+</taglib>

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/ICFP-REWRITE/!svn/ver/9779/src/main/webapp/js/admin
+END
+adminEditString.js
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/ICFP-REWRITE/!svn/ver/8715/src/main/webapp/js/admin/adminEditString.js
+END
+adminEditTable.js
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/ICFP-REWRITE/!svn/ver/8715/src/main/webapp/js/admin/adminEditTable.js
+END
+adminSearchDelegation.js
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ICFP-REWRITE/!svn/ver/9660/src/main/webapp/js/admin/adminSearchDelegation.js
+END
+adminEditDropdown.js
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/ICFP-REWRITE/!svn/ver/8715/src/main/webapp/js/admin/adminEditDropdown.js
+END
+adminModifyApprover.js
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/ICFP-REWRITE/!svn/ver/9779/src/main/webapp/js/admin/adminModifyApprover.js
+END

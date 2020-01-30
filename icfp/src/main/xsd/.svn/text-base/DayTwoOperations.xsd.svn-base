@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/DayTwoOperations"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ICFP/Assignment.xsd"
+	 xmlns:ns2="http://treasury.ge.com/schemas/ICFP/DrawDown.xsd"
+	 xmlns:ns3="http://treasury.ge.com/schemas/ICFP/PrePayment.xsd"
+	 xmlns:ns4="http://treasury.ge.com/schemas/ICFP/Termination.xsd"
+
+	 xmlns:ns7="http://treasury.ge.com/schemas/ICFP/DividendPayment.xsd"
+	 xmlns:ns8="http://treasury.ge.com/schemas/ICFP/FacilityIncreaseDecrease.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ICFP/CPATermination.xsd"
+	 xmlns:ns6="http://treasury.ge.com/schemas/ICFP/Correction.xsd"
+	 xmlns:ns9="http://treasury.ge.com/schemas/ICFP/AgreementExtension.xsd"
+	 xmlns:ns10="http://treasury.ge.com/schemas/ICFP/Amendment.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/DayTwoOperations"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/Assignment.xsd" schemaLocation="Assignment.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/DrawDown.xsd" schemaLocation="DrawDown.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/PrePayment.xsd" schemaLocation="PrePayment.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/Termination.xsd" schemaLocation="Termination.xsd"/>
+
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/DividendPayment.xsd" schemaLocation="DividendPayment.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/FacilityIncreaseDecrease.xsd" schemaLocation="FacilityIncreaseDecrease.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/CPATermination.xsd" schemaLocation="CPATermination.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/Correction.xsd" schemaLocation="Correction.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/AgreementExtension.xsd" schemaLocation="AgreementExtension.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/Amendment.xsd" schemaLocation="Amendment.xsd"/>
+	<xs:element name="Day_Two_Operations">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ns1:Assignment" minOccurs="0"/>
+				<xs:element ref="ns2:DrawDown" minOccurs="0"/>
+				<xs:element ref="ns3:Pre_Payment" minOccurs="0"/>
+				<xs:element ref="ns4:Termination" minOccurs="0"/>
+		
+				<xs:element ref="ns7:Dividend_Payment" minOccurs="0"/>
+				<xs:element ref="ns8:Facility_Increase_Decrease" minOccurs="0"/>
+				<xs:element ref="ns9:Agreement_Extension" minOccurs="0"/>
+				<xs:element ref="ns6:Correction" minOccurs="0"/>
+				<xs:element ref="ns0:CPATermination" minOccurs="0"/>
+				<xs:element ref="ns10:Amendment" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Day_Two_Operations_Info">
+		<xs:sequence>
+			<xs:element ref="Day_Two_Operations" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

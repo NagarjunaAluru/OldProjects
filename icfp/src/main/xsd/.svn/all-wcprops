@@ -1,0 +1,359 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/ICFP-REWRITE/!svn/ver/9722/src/main/xsd
+END
+EntityInformation.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/ICFP-REWRITE/!svn/ver/7039/src/main/xsd/EntityInformation.xsd
+END
+OtherLegRequest.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/ICFP-REWRITE/!svn/ver/4726/src/main/xsd/OtherLegRequest.xsd
+END
+ErrorLookup.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/ICFP-REWRITE/!svn/ver/1169/src/main/xsd/ErrorLookup.xsd
+END
+DividendPayment.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/ICFP-REWRITE/!svn/ver/4278/src/main/xsd/DividendPayment.xsd
+END
+PrePayment.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/ICFP-REWRITE/!svn/ver/4613/src/main/xsd/PrePayment.xsd
+END
+TPLegRequest.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/ICFP-REWRITE/!svn/ver/4235/src/main/xsd/TPLegRequest.xsd
+END
+LegSummary.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/ICFP-REWRITE/!svn/ver/7959/src/main/xsd/LegSummary.xsd
+END
+DrawDown.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/ICFP-REWRITE/!svn/ver/4772/src/main/xsd/DrawDown.xsd
+END
+Comments.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/ICFP-REWRITE/!svn/ver/5122/src/main/xsd/Comments.xsd
+END
+MDMEntityInfo.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/ICFP-REWRITE/!svn/ver/1169/src/main/xsd/MDMEntityInfo.xsd
+END
+RatesRequest.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/ICFP-REWRITE/!svn/ver/5174/src/main/xsd/RatesRequest.xsd
+END
+Termination.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/ICFP-REWRITE/!svn/ver/4277/src/main/xsd/Termination.xsd
+END
+ExceptionRequestForm.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/ICFP-REWRITE/!svn/ver/5671/src/main/xsd/ExceptionRequestForm.xsd
+END
+ReAffirmApprovers.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/ICFP-REWRITE/!svn/ver/4278/src/main/xsd/ReAffirmApprovers.xsd
+END
+DerivativesRequest.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/ICFP-REWRITE/!svn/ver/6556/src/main/xsd/DerivativesRequest.xsd
+END
+TesgList.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/ICFP-REWRITE/!svn/ver/4569/src/main/xsd/TesgList.xsd
+END
+AttachmentTypeComments.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/ICFP-REWRITE/!svn/ver/4099/src/main/xsd/AttachmentTypeComments.xsd
+END
+RateInformation.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/ICFP-REWRITE/!svn/ver/4615/src/main/xsd/RateInformation.xsd
+END
+DealRequests.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/ICFP-REWRITE/!svn/ver/9722/src/main/xsd/DealRequests.xsd
+END
+UserMgmt.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/ICFP-REWRITE/!svn/ver/7939/src/main/xsd/UserMgmt.xsd
+END
+Search.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/ICFP-REWRITE/!svn/ver/8691/src/main/xsd/Search.xsd
+END
+RCALegRequest.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/ICFP-REWRITE/!svn/ver/4235/src/main/xsd/RCALegRequest.xsd
+END
+ModifyApprover.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/ICFP-REWRITE/!svn/ver/6291/src/main/xsd/ModifyApprover.xsd
+END
+Correction.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/ICFP-REWRITE/!svn/ver/4770/src/main/xsd/Correction.xsd
+END
+IDAGEAGLead.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/ICFP-REWRITE/!svn/ver/8839/src/main/xsd/IDAGEAGLead.xsd
+END
+TransactionCapture.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/ICFP-REWRITE/!svn/ver/1169/src/main/xsd/TransactionCapture.xsd
+END
+QualitativeFactors.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/ICFP-REWRITE/!svn/ver/4034/src/main/xsd/QualitativeFactors.xsd
+END
+FacilityIncreaseDecrease.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/ICFP-REWRITE/!svn/ver/5596/src/main/xsd/FacilityIncreaseDecrease.xsd
+END
+DayTwoOperations.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/ICFP-REWRITE/!svn/ver/5137/src/main/xsd/DayTwoOperations.xsd
+END
+Attachments.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/ICFP-REWRITE/!svn/ver/6380/src/main/xsd/Attachments.xsd
+END
+Delegation.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/ICFP-REWRITE/!svn/ver/6147/src/main/xsd/Delegation.xsd
+END
+UpdateDealStatus.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/ICFP-REWRITE/!svn/ver/9715/src/main/xsd/UpdateDealStatus.xsd
+END
+CPATermination.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/ICFP-REWRITE/!svn/ver/4771/src/main/xsd/CPATermination.xsd
+END
+SalePurchase.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/ICFP-REWRITE/!svn/ver/3115/src/main/xsd/SalePurchase.xsd
+END
+EquityLegRequest.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/ICFP-REWRITE/!svn/ver/9600/src/main/xsd/EquityLegRequest.xsd
+END
+UserDataRequest.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/ICFP-REWRITE/!svn/ver/4252/src/main/xsd/UserDataRequest.xsd
+END
+AdminData.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/ICFP-REWRITE/!svn/ver/5288/src/main/xsd/AdminData.xsd
+END
+LegTypeCollection.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/ICFP-REWRITE/!svn/ver/1169/src/main/xsd/LegTypeCollection.xsd
+END
+TesgPopUp.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/ICFP-REWRITE/!svn/ver/9250/src/main/xsd/TesgPopUp.xsd
+END
+FloatRateInformation.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/ICFP-REWRITE/!svn/ver/1169/src/main/xsd/FloatRateInformation.xsd
+END
+UserDataResponse.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/ICFP-REWRITE/!svn/ver/4252/src/main/xsd/UserDataResponse.xsd
+END
+ClosingCheckList.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/ICFP-REWRITE/!svn/ver/5588/src/main/xsd/ClosingCheckList.xsd
+END
+UserInfo.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/ICFP-REWRITE/!svn/ver/4252/src/main/xsd/UserInfo.xsd
+END
+WorkItemData.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/ICFP-REWRITE/!svn/ver/5929/src/main/xsd/WorkItemData.xsd
+END
+RetriveInboxReply.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/ICFP-REWRITE/!svn/ver/5816/src/main/xsd/RetriveInboxReply.xsd
+END
+BusinessApprovers.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/ICFP-REWRITE/!svn/ver/6648/src/main/xsd/BusinessApprovers.xsd
+END
+EboardUpdate.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/ICFP-REWRITE/!svn/ver/8691/src/main/xsd/EboardUpdate.xsd
+END
+MsgHeader.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/ICFP-REWRITE/!svn/ver/4433/src/main/xsd/MsgHeader.xsd
+END
+AgreementExtension.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/ICFP-REWRITE/!svn/ver/4283/src/main/xsd/AgreementExtension.xsd
+END
+ApproverAssessment.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/ICFP-REWRITE/!svn/ver/1169/src/main/xsd/ApproverAssessment.xsd
+END
+CPALegRequest.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/ICFP-REWRITE/!svn/ver/7959/src/main/xsd/CPALegRequest.xsd
+END
+EBRPriorAppr.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/ICFP-REWRITE/!svn/ver/7105/src/main/xsd/EBRPriorAppr.xsd
+END
+Amendment.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/ICFP-REWRITE/!svn/ver/5794/src/main/xsd/Amendment.xsd
+END
+Assignment.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/ICFP-REWRITE/!svn/ver/4609/src/main/xsd/Assignment.xsd
+END
+AuditLog.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/ICFP-REWRITE/!svn/ver/6488/src/main/xsd/AuditLog.xsd
+END
+MDM.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/ICFP-REWRITE/!svn/ver/9626/src/main/xsd/MDM.xsd
+END
+StaticDataManagement.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/ICFP-REWRITE/!svn/ver/7682/src/main/xsd/StaticDataManagement.xsd
+END
+ActionLog.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/ICFP-REWRITE/!svn/ver/1169/src/main/xsd/ActionLog.xsd
+END
+FixedRateInformation.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/ICFP-REWRITE/!svn/ver/1169/src/main/xsd/FixedRateInformation.xsd
+END

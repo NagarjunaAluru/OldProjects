@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/UserMgmt.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ICFP/MsgHeader.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ICFP/ReAffirmApprovers.xsd"
+	 xmlns:ns2="http://treasury.ge.com/schemas/UserDataRequest.xsd"
+	 xmlns:ns3="http://treasury.ge.com/schemas/UserData.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/UserMgmt.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/MsgHeader.xsd" schemaLocation="MsgHeader.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/ReAffirmApprovers.xsd" schemaLocation="ReAffirmApprovers.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/UserDataRequest.xsd" schemaLocation="UserDataRequest.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/UserData.xsd" schemaLocation="UserDataResponse.xsd"/>
+	<xs:element name="Role_Info">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Role_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Sso_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Role_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Business_Unit" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="User_Information">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Role_Info" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns0:Msg_Header" minOccurs="0"/>
+				<xs:element ref="ns1:ReAffirmApprovers" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns2:UserInformationRequest" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns3:UserDataResponse" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="User_Action_Data" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="User_Action_Data">
+<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Deal_Seq_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Wf_Stage_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Action_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="SSO_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="DateTime" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	
+	</xs:element>
+</xs:schema>

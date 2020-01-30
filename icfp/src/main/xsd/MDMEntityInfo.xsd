@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/MDMEntityInfo.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ICFP/EntityInformation.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ICFP/MsgHeader.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/MDMEntityInfo.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/EntityInformation.xsd" schemaLocation="EntityInformation.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/MsgHeader.xsd" schemaLocation="MsgHeader.xsd"/>
+	<xs:element name="MDM_Entity_Info">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Entity_Groups" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Entity_Groups">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Entity_Group_Name" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns0:Entity" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

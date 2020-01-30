@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/EquityLegRequest.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ICFP/EntityInformation.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ICFP/LegSummary.xsd"
+	 xmlns:ns2="http://treasury.ge.com/schemas/ICFP/DayTwoOperations"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/EquityLegRequest.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/EntityInformation.xsd" schemaLocation="EntityInformation.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/LegSummary.xsd" schemaLocation="LegSummary.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/DayTwoOperations" schemaLocation="DayTwoOperations.xsd"/>
+	<xs:element name="Equity_Leg_Request">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="E_Board_Approval_Required_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Double_Leverage_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Equity_Form_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Equity_Form" type="xs:string" minOccurs="0"/>
+				<xs:element name="Other_Equity_Comments" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns1:Leg_Summary" minOccurs="0"/>
+				<xs:element name="Cross_Border_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Equity_Infusions_dividends_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element ref="ns2:Day_Two_Operations" minOccurs="0"/>
+				<xs:element ref="Share_Info" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Equity_Leg_Request_Info">
+		<xs:sequence>
+			<xs:element ref="Equity_Leg_Request" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Share_Info">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Share_Type_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Share_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Number_Of_Shares" type="xs:int" minOccurs="0"/>
+				<xs:element name="Debt_Terms" type="xs:string" minOccurs="0"/>
+				<xs:element name="Share_Value" type="xs:double" minOccurs="0"/>
+				<xs:element name="Share_Opcode" type="xs:string" minOccurs="0"/>
+				<xs:element name="Share_Prf_Id" type="xs:int" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

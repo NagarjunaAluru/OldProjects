@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/ICFP-REWRITE/!svn/ver/9660/src/main/resources/properties
+END
+queue.properties
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/ICFP-REWRITE/!svn/ver/4392/src/main/resources/properties/queue.properties
+END
+legSummary.properties
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/ICFP-REWRITE/!svn/ver/4559/src/main/resources/properties/legSummary.properties
+END
+attachment.properties
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/ICFP-REWRITE/!svn/ver/8995/src/main/resources/properties/attachment.properties
+END
+configMETA.properties
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/ICFP-REWRITE/!svn/ver/8119/src/main/resources/properties/configMETA.properties
+END
+cognosReportsURLs.properties
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/ICFP-REWRITE/!svn/ver/8660/src/main/resources/properties/cognosReportsURLs.properties
+END
+icfp-exception.properties
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/ICFP-REWRITE/!svn/ver/2203/src/main/resources/properties/icfp-exception.properties
+END
+exception.properties
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/ICFP-REWRITE/!svn/ver/9660/src/main/resources/properties/exception.properties
+END
+PdfReportResources.properties
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/ICFP-REWRITE/!svn/ver/9149/src/main/resources/properties/PdfReportResources.properties
+END
+attachment-errors.properties
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/ICFP-REWRITE/!svn/ver/9270/src/main/resources/properties/attachment-errors.properties
+END
+application.properties
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/ICFP-REWRITE/!svn/ver/9379/src/main/resources/properties/application.properties
+END

@@ -1,0 +1,41 @@
+8
+
+dir
+9840
+http://192.168.0.14/ICFP-REWRITE/src/main/webapp/jsp/idag
+http://192.168.0.14/ICFP-REWRITE
+
+
+
+2013-02-01T15:32:42.451308Z
+9756
+madhusudhang
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ba77e99c-fc20-4067-90bb-d77db4103c45
+
+idagEagFourBlockerSuperUser.jsp
+file
+
+
+
+
+2013-05-20T09:00:47.439443Z
+8d4e06903f23ea7b7b8e8aa90f7bb77b
+2013-02-01T15:32:42.451308Z
+9756
+madhusudhang
+has-props
+

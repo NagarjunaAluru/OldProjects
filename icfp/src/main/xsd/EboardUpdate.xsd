@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/EboardUpdate.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/EboardUpdate.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="EboardUpdate">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Deal_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Deal_Category" type="xs:string" minOccurs="0"/>
+				<xs:element name="Created_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="T_Amount" type="xs:double" minOccurs="0"/>
+				<xs:element name="T_Class_Level" type="xs:int" minOccurs="0"/>
+				<xs:element name="T_Description" type="xs:string" minOccurs="0"/>
+				<xs:element name="Approval_By_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="UnderWriting_Pitch_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="UnderWriting_Pitch_File" type="xs:string" minOccurs="0"/>
+				<xs:element name="UnderWriting_Pitch_Desc" type="xs:string" minOccurs="0"/>
+				<xs:element name="Equity_Pitch_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Equity_Pitch_File" type="xs:string" minOccurs="0"/>
+				<xs:element name="Equity_Pitch_Desc" type="xs:string" minOccurs="0"/>
+				<xs:element name="Other_Attachment1" type="xs:string" minOccurs="0"/>
+				<xs:element name="Other_Attachment1_File_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Other_Attachment1_Desc" type="xs:string" minOccurs="0"/>
+				<xs:element name="Other_Attachment2" type="xs:string" minOccurs="0"/>
+				<xs:element name="Other_Attachment2_File_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Other_Attachment2_Desc" type="xs:string" minOccurs="0"/>
+				<xs:element name="Other_Attachment3" type="xs:string" minOccurs="0"/>
+				<xs:element name="Other_Attachment3_File_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Other_Attachment3_Desc" type="xs:string" minOccurs="0"/>
+				<xs:element name="Originator_SsoId" type="xs:int" minOccurs="0"/>
+				<xs:element name="Gecc_Cfo_SsoId" type="xs:int" minOccurs="0"/>
+				<xs:element name="Gecc_Cro_SsoId" type="xs:int" minOccurs="0"/>
+				<xs:element name="Gecc_Tax_Dir_Ssoid" type="xs:int" minOccurs="0"/>
+				<xs:element name="Deal_Type_Flag" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

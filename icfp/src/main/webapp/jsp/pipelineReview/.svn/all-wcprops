@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/ICFP-REWRITE/!svn/ver/9796/src/main/webapp/jsp/pipelineReview
+END
+CPAOriginalTranscationDetailsRO.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/pipelineReview/CPAOriginalTranscationDetailsRO.jsp
+END
+viewCPALeg.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ICFP-REWRITE/!svn/ver/9610/src/main/webapp/jsp/pipelineReview/viewCPALeg.jsp
+END
+CPAParticipantPoolLeaderRO.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/pipelineReview/CPAParticipantPoolLeaderRO.jsp
+END
+viewPipelineReviewLeg.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/ICFP-REWRITE/!svn/ver/9502/src/main/webapp/jsp/pipelineReview/viewPipelineReviewLeg.jsp
+END
+CPAOtherConsiderationsRO.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/pipelineReview/CPAOtherConsiderationsRO.jsp
+END
+PipelineReviewDeal.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/9795/src/main/webapp/jsp/pipelineReview/PipelineReviewDeal.jsp
+END
+cpaRequestor.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/ICFP-REWRITE/!svn/ver/9796/src/main/webapp/jsp/pipelineReview/cpaRequestor.jsp
+END
+CPARequestDetailInput.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/ICFP-REWRITE/!svn/ver/9502/src/main/webapp/jsp/pipelineReview/CPARequestDetailInput.jsp
+END
+CPAPipelineReviewDeal.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/ICFP-REWRITE/!svn/ver/9770/src/main/webapp/jsp/pipelineReview/CPAPipelineReviewDeal.jsp
+END
+viewLeg.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/ICFP-REWRITE/!svn/ver/9610/src/main/webapp/jsp/pipelineReview/viewLeg.jsp
+END

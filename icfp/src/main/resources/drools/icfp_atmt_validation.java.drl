@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rule-set name="ICFP Attachment Security Rules"
+          xmlns="http://drools.org/rules"
+          xmlns:java="http://drools.org/semantics/java"
+          xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+          xs:schemaLocation="http://drools.org/rules rules.xsd
+                             http://drools.org/semantics/java java.xsd">
+                             
+	<import>java.util.Iterator</import>
+	<import>com.ge.icfp.common.attachments.AttachmentType</import>
+	<import>com.ge.icfp.common.attachments.validation.LegAdapter</import>
+	<import>com.ge.icfp.common.attachments.DealPermissions</import>
+	<application-data identifier="validationErrors">com.ge.icfp.common.attachments.validation.ValidationErrors</application-data>
+	
+	<java:functions>
+		public static boolean isMandatoryForRole(DealPermissions dealPermissions) {
+			return dealPermissions.isRequestor() || dealPermissions.isPipelineReview() || dealPermissions.isMiddleOffice() 
+				|| dealPermissions.isCashManagement() || dealPermissions.isTreasuryTax() || dealPermissions.isTransferPricing() 
+				|| dealPermissions.isTreasuryLeagal() || dealPermissions.isFrontOffice() || dealPermissions.isRequlatoryOrJurisdictional() 
+				|| dealPermissions.isBusinessApprover() || dealPermissions.isBusinessCFO() || dealPermissions.isRiskReview() 
+				|| dealPermissions.isIDAGMember() || dealPermissions.isTESGMember() || dealPermissions.isIDAGLead() 
+				|| dealPermissions.isAdditionalApprover() || dealPermissions.isTransactionCaptureManager();
+		}
+	</java:functions>
+
+	<!-- CASH MAP MANDATORY -->
+	<rule name="CASH MAP MANDATORY">
+		<parameter identifier="dealAdapter">	
+			<class>com.ge.icfp.common.attachments.validation.DealAdapter</class>
+		</parameter>
+		
+		<java:condition>!dealAdapter.getDealPermissions().isCPADeal()</java:condition>
+		<java:condition>isMandatoryForRole(dealAdapter.getDealPermissions())</java:condition>
+		<java:condition>!dealAdapter.hasAttachment(AttachmentType.CASH_MAP)</java:condition>
+		<java:condition>!dealAdapter.hasComment(AttachmentType.CASH_MAP)</java:condition>
+		
+		<java:consequence>
+			validationErrors.addDealAttachmentError(AttachmentType.CASH_MAP);
+		</java:consequence>
+	</rule>
+	
+	<!-- STRUCTURED DIAGRAM MANDATORY -->
+	<rule name="STRUCTURED_DIAGRAM MANDATORY">
+		<parameter identifier="dealAdapter">	
+			<class>com.ge.icfp.common.attachments.validation.DealAdapter</class>
+		</parameter>
+		
+		<java:condition>!dealAdapter.getDealPermissions().isCPADeal()</java:condition>
+		<java:condition>isMandatoryForRole(dealAdapter.getDealPermissions())</java:condition>
+		<java:condition>!dealAdapter.hasAttachment(AttachmentType.STRUCTURED_DIAGRAM)</java:condition>
+		<java:condition>!dealAdapter.hasComment(AttachmentType.STRUCTURED_DIAGRAM)</java:condition>
+		
+		<java:consequence>
+			validationErrors.addDealAttachmentError(AttachmentType.STRUCTURED_DIAGRAM);
+		</java:consequence>
+	</rule>
+	
+	<!-- Attachment validation for all legs of the deal -->
+	<rule name="ALL LEG CHECK">
+		<parameter identifier="dealAdapter">	
+			<class>com.ge.icfp.common.attachments.validation.DealAdapter</class>
+		</parameter>
+		
+		<java:condition>isMandatoryForRole(dealAdapter.getDealPermissions())</java:condition>
+		
+		<java:consequence>
+			Iterator legItr = dealAdapter.getLegs().iterator();
+			while(legItr.hasNext()) {
+				drools.assertObject(legItr.next()); // Assert each leg
+			}
+		</java:consequence>
+	</rule>
+	
+	<!-- ========================================== LEG ATTACHMENTS CHECKS ========================================= -->
+	
+	<!-- LEGAL_AGREEMENTS MANDATORY -->
+	<rule name="LEGAL_AGREEMENTS MANDATORY">
+		<parameter identifier="legAdapter">	
+			<class>com.ge.icfp.common.attachments.validation.LegAdapter</class>
+		</parameter>
+		
+		<java:condition>isMandatoryForRole(legAdapter.getDealPermissions())</java:condition>
+		<java:condition>!legAdapter.hasAttachment(AttachmentType.LEGAL_AGREEMENTS)</java:condition>
+		<java:condition>!legAdapter.hasComment(AttachmentType.LEGAL_AGREEMENTS)</java:condition>
+		
+		<java:consequence>
+			validationErrors.addLegAttachmentError(legAdapter.getLegIndex(), AttachmentType.LEGAL_AGREEMENTS);
+		</java:consequence>
+	</rule>
+    
+    <!-- CONSOLIDATED_FINANCIAL_STATEMENTS -->
+	<rule name="CONSOLIDATED_FINANCIAL_STATEMENTS MANDATORY">
+		<parameter identifier="legAdapter">	
+			<class>com.ge.icfp.common.attachments.validation.LegAdapter</class>
+		</parameter>
+		
+		<java:condition>isMandatoryForRole(legAdapter.getDealPermissions())</java:condition>
+		<java:condition>!legAdapter.hasAttachment(AttachmentType.CONSOLIDATED_FINANCIAL_STATEMENTS)</java:condition>
+		<java:condition>!legAdapter.hasComment(AttachmentType.CONSOLIDATED_FINANCIAL_STATEMENTS)</java:condition>
+		
+		<java:consequence>
+			validationErrors.addLegAttachmentError(legAdapter.getLegIndex(), AttachmentType.CONSOLIDATED_FINANCIAL_STATEMENTS);
+		</java:consequence>
+	</rule>                 
+</rule-set>

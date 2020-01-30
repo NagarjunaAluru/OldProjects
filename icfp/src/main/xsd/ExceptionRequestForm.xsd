@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/ExceptionRequestForm.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ICFP/Attachments.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/ExceptionRequestForm.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/Attachments.xsd" schemaLocation="Attachments.xsd"/>
+	<xs:element name="Exception_Request_Form">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Legal_Exceptions_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Exception_Opcode" type="xs:string" minOccurs="0"/>
+				<xs:element name="Transaction_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Standard_Terms_Conditions" type="xs:string" minOccurs="0"/>
+				<xs:element name="Requested_Exception" type="xs:string" minOccurs="0"/>
+				<xs:element name="Rationale_For_Exception_Impact" type="xs:string" minOccurs="0"/>
+				<xs:element name="Exception_Timeline" type="xs:string" minOccurs="0"/>
+				<xs:element name="Exception_Timeline_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Remediation_Timeline" type="xs:string" minOccurs="0"/>
+				<xs:element name="Rationale_For_Exception_Potential_Alternatives" type="xs:string" minOccurs="0"/>
+				<xs:element name="Remediation_Timeline_Comments" type="xs:string" minOccurs="0"/>
+				<xs:element name="Action_By" type="xs:string" minOccurs="0"/>
+				<xs:element name="Standard_Terms_Conditions_Id" type="xs:int" minOccurs="0"/>
+				<xs:element ref="ns1:Attachment" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Exception_Request_Form_Info">
+		<xs:sequence>
+			<xs:element ref="Exception_Request_Form" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/ICFP-REWRITE/!svn/ver/3827/src/main/java/com/ge/icfp/form
+END
+ICFPBaseForm.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/ICFP-REWRITE/!svn/ver/3825/src/main/java/com/ge/icfp/form/ICFPBaseForm.java
+END
+ICFPBaseValidatorForm.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/3826/src/main/java/com/ge/icfp/form/ICFPBaseValidatorForm.java
+END
+AbstractFormlMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/ICFP-REWRITE/!svn/ver/3827/src/main/java/com/ge/icfp/form/AbstractFormlMapper.java
+END

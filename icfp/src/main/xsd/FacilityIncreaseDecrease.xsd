@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/FacilityIncreaseDecrease.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ICFP/EntityInformation.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/FacilityIncreaseDecrease.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/EntityInformation.xsd" schemaLocation="EntityInformation.xsd"/>
+	<xs:element name="Facility_Increase_Decrease">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Facility_Type_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Facility_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Currency_Facility_Amt" type="xs:double" minOccurs="0"/>
+				<xs:element name="Currency_USD_Equivalent_Amt" type="xs:double" minOccurs="0"/>
+				<xs:element name="Amended_Facility_Amt" type="xs:double" minOccurs="0"/>
+				<xs:element name="Amended_USD_Equivalent_Amt" type="xs:double" minOccurs="0"/>
+				<xs:element name="Facility_Inc_Dec_Amt" type="xs:double" minOccurs="0"/>
+				<xs:element name="Facility_Inc_Dec_USD_Equivalent_Amt" type="xs:double" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Facility_Increase_Decrease_Info">
+		<xs:sequence>
+			<xs:element ref="Facility_Increase_Decrease" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

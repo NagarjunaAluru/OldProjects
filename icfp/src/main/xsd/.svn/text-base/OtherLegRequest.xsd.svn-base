@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/OtherLegRequest.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ICFP/EntityInformation.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ICFP/DerivativesRequest.xsd"
+	 xmlns:ns2="http://treasury.ge.com/schemas/ICFP/ExceptionRequestForm.xsd"
+	 xmlns:ns3="http://treasury.ge.com/schemas/ICFP/Comments.xsd"
+	 xmlns:ns4="http://treasury.ge.com/schemas/ICFP/QualitativeFactors.xsd"
+	 xmlns:ns5="http://treasury.ge.com/schemas/ICFP/Attachments.xsd"
+	 xmlns:ns6="http://treasury.ge.com/schemas/ICFP/DayTwoOperations"
+	 xmlns:ns7="http://treasury.ge.com/schemas/ICFP/LegSummary.xsd"
+	 xmlns:ns8="http://treasury.ge.com/schemas/ICFP/TPLegRequest.xsd"
+	 xmlns:ns9="http://treasury.ge.com/schemas/ICFP/RateInformation.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/OtherLegRequest.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/EntityInformation.xsd" schemaLocation="EntityInformation.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/DerivativesRequest.xsd" schemaLocation="DerivativesRequest.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/ExceptionRequestForm.xsd" schemaLocation="ExceptionRequestForm.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/Comments.xsd" schemaLocation="Comments.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/QualitativeFactors.xsd" schemaLocation="QualitativeFactors.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/Attachments.xsd" schemaLocation="Attachments.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/DayTwoOperations" schemaLocation="DayTwoOperations.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/LegSummary.xsd" schemaLocation="LegSummary.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/TPLegRequest.xsd" schemaLocation="TPLegRequest.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/RateInformation.xsd" schemaLocation="RateInformation.xsd"/>
+	<xs:element name="Other_Leg_Request">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ns6:Day_Two_Operations" minOccurs="0"/>
+				<xs:element ref="ns7:Leg_Summary" minOccurs="0"/>
+				<xs:element name="Cross_Border_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Guarantee_Fee_Applicable_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Guarantee_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Guarantee_Agreement_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Guarantee_Fee_Rate" type="xs:double" minOccurs="0"/>
+				<xs:element name="Commitment_Fee_Applicable_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Commitment_Fee_Rate" type="xs:double" minOccurs="0"/>
+				<xs:element name="Description" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns8:TP_Leg_Request" minOccurs="0"/>
+				<xs:element ref="ns9:Rate_Information" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Other_Leg_Summary_Info">
+		<xs:sequence>
+			<xs:element ref="Other_Leg_Request" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

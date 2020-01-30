@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/ICFP-REWRITE/!svn/ver/9596/src/main/webapp/WEB-INF/tags/attachments
+END
+cpaLegAttachments.tag
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/ICFP-REWRITE/!svn/ver/9591/src/main/webapp/WEB-INF/tags/attachments/cpaLegAttachments.tag
+END
+derivativeAttachments.tag
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/ICFP-REWRITE/!svn/ver/9254/src/main/webapp/WEB-INF/tags/attachments/derivativeAttachments.tag
+END
+allLegsAttachments.tag
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/ICFP-REWRITE/!svn/ver/9596/src/main/webapp/WEB-INF/tags/attachments/allLegsAttachments.tag
+END
+dealAttachments.tag
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/ICFP-REWRITE/!svn/ver/9348/src/main/webapp/WEB-INF/tags/attachments/dealAttachments.tag
+END
+cpaAllLegsAttachments.tag
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/ICFP-REWRITE/!svn/ver/9592/src/main/webapp/WEB-INF/tags/attachments/cpaAllLegsAttachments.tag
+END
+legAttachments.tag
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/ICFP-REWRITE/!svn/ver/9595/src/main/webapp/WEB-INF/tags/attachments/legAttachments.tag
+END

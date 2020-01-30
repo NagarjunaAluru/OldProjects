@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/ICFP-REWRITE/!svn/ver/9750/src/main/webapp/jsp/day2/transferPricingView
+END
+solvencyMetricsView.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/ICFP-REWRITE/!svn/ver/9491/src/main/webapp/jsp/day2/transferPricingView/solvencyMetricsView.jsp
+END
+day2CPATPSummaryRO.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/ICFP-REWRITE/!svn/ver/9507/src/main/webapp/jsp/day2/transferPricingView/day2CPATPSummaryRO.jsp
+END
+rcaTPEventsView.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/ICFP-REWRITE/!svn/ver/9750/src/main/webapp/jsp/day2/transferPricingView/rcaTPEventsView.jsp
+END
+cpaDay2TPView.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/ICFP-REWRITE/!svn/ver/9507/src/main/webapp/jsp/day2/transferPricingView/cpaDay2TPView.jsp
+END

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rule-set name="ICFP Attachment Security Rules"
+          xmlns="http://drools.org/rules"
+          xmlns:java="http://drools.org/semantics/java"
+          xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+          xs:schemaLocation="http://drools.org/rules rules.xsd
+                             http://drools.org/semantics/java java.xsd">
+
+	<import>com.ge.icfp.common.attachments.AttachmentPermissions</import>
+	<import>com.ge.icfp.common.attachments.AttachmentType</import>
+	<import>com.ge.icfp.common.attachments.DealPermissions</import>
+	
+	<java:functions>
+		public static boolean hasFullAccessRole(DealPermissions dealPermissions) {
+			return dealPermissions.isRequestor() || dealPermissions.isPipelineReview() || dealPermissions.isMiddleOffice() 
+				|| dealPermissions.isCashManagement() || dealPermissions.isTreasuryTax() || dealPermissions.isTransferPricing() 
+				|| dealPermissions.isTreasuryLeagal() || dealPermissions.isFrontOffice() || dealPermissions.isRequlatoryOrJurisdictional() 
+				|| dealPermissions.isBusinessApprover() || dealPermissions.isBusinessCFO() || dealPermissions.isRiskReview() 
+				|| dealPermissions.isIDAGMember() || dealPermissions.isTESGMember() || dealPermissions.isIDAGLead() 
+				|| dealPermissions.isAdditionalApprover() || dealPermissions.isTransactionCapture() || dealPermissions.isTransactionCaptureManager();
+		}
+		
+		public static boolean hasMandatoryRole(DealPermissions dealPermissions) {
+			return dealPermissions.isRequestor() || dealPermissions.isPipelineReview() || dealPermissions.isMiddleOffice() 
+				|| dealPermissions.isCashManagement() || dealPermissions.isTreasuryTax() || dealPermissions.isTransferPricing() 
+				|| dealPermissions.isTreasuryLeagal() || dealPermissions.isFrontOffice() || dealPermissions.isRequlatoryOrJurisdictional() 
+				|| dealPermissions.isBusinessApprover() || dealPermissions.isBusinessCFO() || dealPermissions.isRiskReview() 
+				|| dealPermissions.isIDAGMember() || dealPermissions.isTESGMember() || dealPermissions.isIDAGLead() 
+				|| dealPermissions.isAdditionalApprover() || dealPermissions.isTransactionCaptureManager();
+		}
+		
+		public static boolean canEditExceptionDocuments(DealPermissions dealPermissions) {
+			return dealPermissions.isRequestor() || dealPermissions.isPipelineReview() || dealPermissions.isMiddleOffice() 
+				|| dealPermissions.isCashManagement() || dealPermissions.isTreasuryTax() || dealPermissions.isTransferPricing() 
+				|| dealPermissions.isTreasuryLeagal() || dealPermissions.isFrontOffice() || dealPermissions.isRequlatoryOrJurisdictional();
+		}
+	</java:functions>
+	
+	<!-- ======================================= VIEW RULES ======================================= -->
+	
+	<!-- Deal Attachments VIEW except 'Equity Pitch' -->
+	<rule name="Deal Attachments VIEW">
+		<parameter identifier="permissions">	
+			<class>com.ge.icfp.common.attachments.AttachmentPermissions</class>
+		</parameter>
+		
+		<java:condition>AttachmentType.isDealAttachmentType(permissions.getAttachmentType())</java:condition>
+		<java:condition>permissions.getAttachmentType() != AttachmentType.EQUITY_PITCH</java:condition>
+		<java:condition>!permissions.isCPADeal()</java:condition>
+		
+		<java:consequence>
+			permissions.setViewable(true);
+		</java:consequence>
+	</rule>
+	
+	<!-- 'Equity Pitch' VIEW -->
+	<rule name="Equity Pitch VIEW">
+		<parameter identifier="permissions">	
+			<class>com.ge.icfp.common.attachments.AttachmentPermissions</class>
+		</parameter>
+		
+		<java:condition>permissions.getAttachmentType() == AttachmentType.EQUITY_PITCH</java:condition>
+		<java:condition>permissions.hasEquityLegs()</java:condition>
+		<java:condition>!permissions.isCPADeal()</java:condition>
+		
+		<java:consequence>
+			permissions.setViewable(true);
+		</java:consequence>
+	</rule>
+	
+	<!-- Underwriting File View  -->
+	<rule name="UnderwritingFile VIEW">
+		<parameter identifier="permissions">	
+			<class>com.ge.icfp.common.attachments.AttachmentPermissions</class>
+		</parameter>
+		
+		<java:condition>permissions.getAttachmentType() == AttachmentType.UNDERWRITING</java:condition>
+		
+		<java:consequence>
+			permissions.setViewable(true);
+		</java:consequence>
+	</rule>
+	
+	<!-- Leg attachments VIEW -->
+	<rule name="Leg Attachments VIEW">
+		<parameter identifier="permissions">	
+			<class>com.ge.icfp.common.attachments.AttachmentPermissions</class>
+		</parameter>
+		
+		<java:condition>AttachmentType.isLegAttachmentType(permissions.getAttachmentType())</java:condition>
+		
+		<java:consequence>
+			permissions.setViewable(true);
+		</java:consequence>
+	</rule>
+	
+	<!--  Derivative Attachment VIEW -->
+	<rule name="Derivative VIEW">
+		<parameter identifier="permissions">	
+			<class>com.ge.icfp.common.attachments.AttachmentPermissions</class>
+		</parameter>
+		
+		<java:condition>permissions.getAttachmentType() == AttachmentType.DERIVATIVE_TRADE_TICKET</java:condition>
+		<java:condition>!permissions.isCPADeal()</java:condition>
+		
+		<java:consequence>
+			permissions.setViewable(true);
+		</java:consequence>
+	</rule>
+	
+	<!--  Exception Attachment VIEW -->
+	<rule name="Exception VIEW">
+		<parameter identifier="permissions">	
+			<class>com.ge.icfp.common.attachments.AttachmentPermissions</class>
+		</parameter>
+		
+		<java:condition>permissions.getAttachmentType() == AttachmentType.EXCEPTIONS_ATTACHMENTS</java:condition>
+		
+		<java:consequence>
+			permissions.setViewable(true);
+		</java:consequence>
+	</rule>
+	
+	<!--  Amendment Attachment VIEW -->
+	<rule name="Amendment VIEW">
+		<parameter identifier="permissions">	
+			<class>com.ge.icfp.common.attachments.AttachmentPermissions</class>
+		</parameter>
+		
+		<java:condition>permissions.getAttachmentType() == AttachmentType.AMENDMENTS_ATTACHMENTS</java:condition>
+		
+		<java:consequence>
+			permissions.setViewable(true);
+		</java:consequence>
+	</rule>
+	<!-- ======================================= EDIT/DELETE RULES ======================================= -->
+	
+	<!-- Deal Attachments EDIT-DELETE except 'Equity Pitch' -->
+	<rule name="Deal Attachments EDIT-DELETE">
+		<parameter identifier="permissions">	
+			<class>com.ge.icfp.common.attachments.AttachmentPermissions</class>
+		</parameter>
+		
+		<java:condition>AttachmentType.isDealAttachmentType(permissions.getAttachmentType())</java:condition>
+		<java:condition>permissions.getAttachmentType() != AttachmentType.EQUITY_PITCH</java:condition>
+		<java:condition>!permissions.isCPADeal()</java:condition>
+		<java:condition>hasFullAccessRole(permissions.getDealPermissions())</java:condition>
+		
+		<java:consequence>
+			permissions.setEditable(true);
+			permissions.setDeletable(true);
+		</java:consequence>
+	</rule>
+	
+	<!-- 'Equity Pitch' attachment EDIT-DELETE -->
+	<rule name="Equity Pitch EDIT-DELETE">
+		<parameter identifier="permissions">	
+			<class>com.ge.icfp.common.attachments.AttachmentPermissions</class>
+		</parameter>
+		
+		<java:condition>permissions.getAttachmentType() == AttachmentType.EQUITY_PITCH</java:condition>
+		<java:condition>permissions.hasEquityLegs()</java:condition>
+		<java:condition>!permissions.isCPADeal()</java:condition>
+		<java:condition>hasFullAccessRole(permissions.getDealPermissions())</java:condition>
+		
+		<java:consequence>
+			permissions.setEditable(true);
+			permissions.setDeletable(true);
+		</java:consequence>
+	</rule>
+	
+	
+	<!-- Leg Attachments EDIT AND DELETE except 'Transfer Pricing'  -->
+	<rule name="Leg Attachments EDIT-DELETE">
+		<parameter identifier="permissions">	
+			<class>com.ge.icfp.common.attachments.AttachmentPermissions</class>
+		</parameter>
+		
+		<java:condition>AttachmentType.isLegAttachmentType(permissions.getAttachmentType())</java:condition>
+		<java:condition>permissions.getAttachmentType() != AttachmentType.TRANSFER_PRICING_ATTACHMENTS</java:condition>
+		<java:condition>hasFullAccessRole(permissions.getDealPermissions())</java:condition>
+		
+		<java:consequence>
+			permissions.setEditable(true);
+			permissions.setDeletable(true);
+		</java:consequence>
+	</rule>
+	
+	<!-- Transfer Pricing EDIT AND DELETE  -->
+	<rule name="Transfer Pricing EDIT-DELETE">
+		<parameter identifier="permissions">	
+			<class>com.ge.icfp.common.attachments.AttachmentPermissions</class>
+		</parameter>
+		
+		<java:condition>permissions.getAttachmentType() == AttachmentType.TRANSFER_PRICING_ATTACHMENTS</java:condition>
+		<java:condition>permissions.getDealPermissions().isTransferPricing()</java:condition>
+		
+		<java:consequence>
+			permissions.setEditable(true);
+			permissions.setDeletable(true);
+		</java:consequence>
+	</rule>
+	
+	<!--  Other Documents can be updated at Closeout -->
+	<rule name="Other Documents CloseOut EDIT">
+		<parameter identifier="permissions">	
+			<class>com.ge.icfp.common.attachments.AttachmentPermissions</class>
+		</parameter>
+		
+		<java:condition>permissions.getAttachmentType() == AttachmentType.OTHER_DOCUMENTS</java:condition>
+		<java:condition>permissions.getDealPermissions().isCloseOut() || permissions.getDealPermissions().isClosed()</java:condition>
+		
+		<java:consequence>
+			permissions.setEditable(true);
+		</java:consequence>
+	</rule>
+	
+	<!--  Derivative Attachment EDIT AND DELETE -->
+	<rule name="Derivative EDIT-DELETE">
+		<parameter identifier="permissions">	
+			<class>com.ge.icfp.common.attachments.AttachmentPermissions</class>
+		</parameter>
+		
+		<java:condition>permissions.getAttachmentType() == AttachmentType.DERIVATIVE_TRADE_TICKET</java:condition>
+		<java:condition>!permissions.isCPADeal()</java:condition>
+		<java:condition>hasFullAccessRole(permissions.getDealPermissions())</java:condition>
+		
+		<java:consequence>
+			permissions.setEditable(true);
+			permissions.setDeletable(true);
+		</java:consequence>
+	</rule>
+	
+	<!--  Exception Attachment EDIT and DELETE -->
+	<rule name="Exception EDIT-DELETE">
+		<parameter identifier="permissions">	
+			<class>com.ge.icfp.common.attachments.AttachmentPermissions</class>
+		</parameter>
+		
+		<java:condition>permissions.getAttachmentType() == AttachmentType.EXCEPTIONS_ATTACHMENTS</java:condition>
+		<java:condition>canEditExceptionDocuments(permissions.getDealPermissions())</java:condition>
+		
+		<java:consequence>
+			permissions.setEditable(true);
+			permissions.setDeletable(true);
+		</java:consequence>
+	</rule>
+	
+	<!--  Amendment Attachment EDIT and DELETE -->
+	<rule name="Amendment EDIT-DELETE">
+		<parameter identifier="permissions">	
+			<class>com.ge.icfp.common.attachments.AttachmentPermissions</class>
+		</parameter>
+		
+		<java:condition>permissions.getAttachmentType() == AttachmentType.AMENDMENTS_ATTACHMENTS</java:condition>
+		<java:condition>!permissions.isCPADeal()</java:condition>
+		<java:condition>canEditExceptionDocuments(permissions.getDealPermissions())</java:condition>
+		
+		<java:consequence>
+			permissions.setEditable(true);
+			permissions.setDeletable(true);
+		</java:consequence>
+	</rule>
+	
+	
+	<!-- ======================================= MANDATORY RULES ======================================= -->
+	
+	<!-- Deal Attachments MANDATORY except 'Equity Pitch' -->
+	<rule name="Deal Attachments MANDATORY">
+		<parameter identifier="permissions">	
+			<class>com.ge.icfp.common.attachments.AttachmentPermissions</class>
+		</parameter>
+		
+		<java:condition>AttachmentType.isDealAttachmentType(permissions.getAttachmentType())</java:condition>
+		<java:condition>permissions.getAttachmentType() != AttachmentType.EQUITY_PITCH</java:condition>
+		<java:condition>!permissions.isCPADeal()</java:condition>
+		<java:condition>hasMandatoryRole(permissions.getDealPermissions())</java:condition>
+		
+		<java:consequence>
+			permissions.setMandatory(true);
+		</java:consequence>
+	</rule>
+	
+	<!-- LEGAL_AGREEMENTS Attachments -->
+ 	<rule name="LEGAL_AGREEMENTS MANDATORY">
+		<parameter identifier="permissions">	
+			<class>com.ge.icfp.common.attachments.AttachmentPermissions</class>
+		</parameter>
+		
+		<java:condition>permissions.getAttachmentType() == AttachmentType.LEGAL_AGREEMENTS</java:condition>
+		<java:condition>hasMandatoryRole(permissions.getDealPermissions())</java:condition>
+		
+		<java:consequence>
+			permissions.setMandatory(true);
+		</java:consequence>
+	</rule>
+	
+	<!-- CONSOLIDATED_FINANCIAL_STATEMENTS Attachments -->
+	<rule name="CONSOLIDATED_FINANCIAL_STATEMENTS MANDATORY">
+		<parameter identifier="permissions">	
+			<class>com.ge.icfp.common.attachments.AttachmentPermissions</class>
+		</parameter>
+		
+		<java:condition>permissions.getAttachmentType() == AttachmentType.CONSOLIDATED_FINANCIAL_STATEMENTS</java:condition>
+		<java:condition>hasMandatoryRole(permissions.getDealPermissions())</java:condition>
+		
+		<java:consequence>
+			permissions.setMandatory(true);
+		</java:consequence>
+	</rule>
+</rule-set>

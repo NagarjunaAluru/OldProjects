@@ -1,0 +1,41 @@
+8
+
+dir
+9840
+http://192.168.0.14/ICFP-REWRITE/src/main/webapp/jsp/equity/transferPricing
+http://192.168.0.14/ICFP-REWRITE
+
+
+
+2013-02-15T10:57:25.214810Z
+9813
+madhusudhang
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ba77e99c-fc20-4067-90bb-d77db4103c45
+
+equityTransferPricingInput.jsp
+file
+
+
+
+
+2013-05-20T09:00:48.084314Z
+799470b5d7f88579bb8aeea4bb99bb23
+2013-02-15T10:57:25.214810Z
+9813
+madhusudhang
+has-props
+

@@ -1,0 +1,257 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/ICFP-REWRITE/!svn/ver/9830/src/main/webapp/jsp/common/inc/day2
+END
+day2CPAOriginalTranscationDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/ICFP-REWRITE/!svn/ver/9610/src/main/webapp/jsp/common/inc/day2/day2CPAOriginalTranscationDetails.jsp
+END
+day2CPAExceptions.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/day2CPAExceptions.jsp
+END
+day2CPASettlementsOROtherDetailsRO.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/day2CPASettlementsOROtherDetailsRO.jsp
+END
+day2PayerReceiver.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/9814/src/main/webapp/jsp/common/inc/day2/day2PayerReceiver.jsp
+END
+day2PayerReceiverROCMO.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/day2PayerReceiverROCMO.jsp
+END
+legReference.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/legReference.jsp
+END
+day2CPAOtherConsiderations.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/day2CPAOtherConsiderations.jsp
+END
+day2CPAPoolLeader.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/9830/src/main/webapp/jsp/common/inc/day2/day2CPAPoolLeader.jsp
+END
+day2CPACorrectionsRO.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/day2CPACorrectionsRO.jsp
+END
+day2CPASnO.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/ICFP-REWRITE/!svn/ver/9500/src/main/webapp/jsp/common/inc/day2/day2CPASnO.jsp
+END
+day2CPATPSummary.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/day2CPATPSummary.jsp
+END
+day2ParticipantPoolLeaderRO.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/day2ParticipantPoolLeaderRO.jsp
+END
+day2OtherConsiderationsRO.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/day2OtherConsiderationsRO.jsp
+END
+day2CashPoolTerminationDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/day2CashPoolTerminationDetails.jsp
+END
+day2CPATPRateInformation.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/day2CPATPRateInformation.jsp
+END
+day2SettlementDetailsCMO.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/day2SettlementDetailsCMO.jsp
+END
+day2CPAFOExceptions.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/day2CPAFOExceptions.jsp
+END
+day2CPATPSolvency.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/day2CPATPSolvency.jsp
+END
+day2DividendPaymentDetailsROCMO.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/day2DividendPaymentDetailsROCMO.jsp
+END
+day2SettlementDetailsRO.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/day2SettlementDetailsRO.jsp
+END
+day2DividendPaymentDetailsRO.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/day2DividendPaymentDetailsRO.jsp
+END
+day2LenderBorrowerRO.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/day2LenderBorrowerRO.jsp
+END
+originalTransactionDetailsROCMO.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/originalTransactionDetailsROCMO.jsp
+END
+originalTransactionDetailsRO.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/originalTransactionDetailsRO.jsp
+END
+day2CPAParticipantRO.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/day2CPAParticipantRO.jsp
+END
+day2CPASettlementsOROtherDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/day2CPASettlementsOROtherDetails.jsp
+END
+day2CPAOriginalTranscationDetailsRO.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/ICFP-REWRITE/!svn/ver/9829/src/main/webapp/jsp/common/inc/day2/day2CPAOriginalTranscationDetailsRO.jsp
+END
+day2PayerReceiverRO.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/day2PayerReceiverRO.jsp
+END
+day2CPATPModelScoresNSolvency.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/ICFP-REWRITE/!svn/ver/9505/src/main/webapp/jsp/common/inc/day2/day2CPATPModelScoresNSolvency.jsp
+END
+day2CPAParticipantPoolLeaderRO.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/ICFP-REWRITE/!svn/ver/9829/src/main/webapp/jsp/common/inc/day2/day2CPAParticipantPoolLeaderRO.jsp
+END
+day2CPAOtherConsiderationsRO.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/day2CPAOtherConsiderationsRO.jsp
+END
+day2CPACorrections.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/ICFP-REWRITE/!svn/ver/9504/src/main/webapp/jsp/common/inc/day2/day2CPACorrections.jsp
+END
+day2CPARequestDetailInput.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/ICFP-REWRITE/!svn/ver/9500/src/main/webapp/jsp/common/inc/day2/day2CPARequestDetailInput.jsp
+END
+day2CPARequestDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/day2CPARequestDetails.jsp
+END
+day2OtherConsiderations.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/day2OtherConsiderations.jsp
+END
+day2CPATPSummaryRO.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/day2CPATPSummaryRO.jsp
+END
+day2CashPoolTerminationDetailsRO.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/day2CashPoolTerminationDetailsRO.jsp
+END
+day2DividendPaymentDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/day2DividendPaymentDetails.jsp
+END
+day2CPATPRateInformationRO.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/day2CPATPRateInformationRO.jsp
+END
+day2SettlementDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/day2SettlementDetails.jsp
+END
+originalTransactionDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/common/inc/day2/originalTransactionDetails.jsp
+END
+day2CPAParticipant.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/ICFP-REWRITE/!svn/ver/9610/src/main/webapp/jsp/common/inc/day2/day2CPAParticipant.jsp
+END

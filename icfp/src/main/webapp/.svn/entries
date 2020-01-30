@@ -1,0 +1,83 @@
+8
+
+dir
+9840
+http://192.168.0.14/ICFP-REWRITE/src/main/webapp
+http://192.168.0.14/ICFP-REWRITE
+
+
+
+2013-02-27T12:44:48.053135Z
+9840
+madhusudhang
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ba77e99c-fc20-4067-90bb-d77db4103c45
+
+calendar2.gif
+file
+
+
+
+
+2013-05-20T09:00:53.860159Z
+bad41e0d97da41b89e1e385021ee89d2
+2012-07-24T15:05:37.196356Z
+6003
+nagarjuna.a
+has-props
+
+META-INF
+dir
+
+index.jsp
+file
+
+
+
+
+2013-05-20T09:00:53.864158Z
+da45b526ec0ca9d220d975c66d505929
+2012-05-08T10:18:30.545574Z
+1734
+chaitanya.n
+
+fundingRequest
+dir
+
+frontoffice
+dir
+
+images
+dir
+
+lib
+dir
+
+WEB-INF
+dir
+
+css
+dir
+
+img
+dir
+
+js
+dir
+
+jsp
+dir
+

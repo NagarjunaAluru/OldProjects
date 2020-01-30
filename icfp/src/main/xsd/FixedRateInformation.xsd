@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/FixedRateInformation.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/FixedRateInformation.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="Fixed_Information">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Base_Fixed_Rate" type="xs:string" minOccurs="0"/>
+				<xs:element name="Min_Spread" type="xs:string" minOccurs="0"/>
+				<xs:element name="Max_Spread" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Fixed_Information_Info">
+		<xs:sequence>
+			<xs:element ref="Fixed_Information" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

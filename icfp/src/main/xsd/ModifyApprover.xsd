@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/ModifyApprover.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ICFP/MsgHeader.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/ModifyApprover.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ICFP/MsgHeader.xsd" schemaLocation="MsgHeader.xsd"/>
+	<xs:element name="ModifyApprover">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ModifyApprovers" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="SSO_ID" type="xs:string" minOccurs="0"/>
+							<xs:element name="Wf_Id" type="xs:string" minOccurs="0"/>
+							<xs:element name="Wf_Stage_Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="Wf_Stage_Id" type="xs:int" minOccurs="0"/>
+							<xs:element name="Queue-Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="Dql_Seq_Id" type="xs:string" minOccurs="0"/>
+							<xs:element name="First_Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="Last_Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="Role_Id" type="xs:string" minOccurs="0"/>
+							<xs:element name="Role_Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="Audit_Creator_Role_Id" type="xs:int" minOccurs="0"/>
+							<xs:element name="OpCode" type="xs:string" minOccurs="0"/>
+							<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+							<xs:element ref="ns0:Msg_Header" minOccurs="0"/>
+							<xs:element name="Action_Flag" type="xs:string" minOccurs="0"/>
+							<xs:element name="Reassign" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="SSO_ID" type="xs:string" minOccurs="0"/>
+										<xs:element name="Role_Id" type="xs:string" minOccurs="0"/>
+										<xs:element name="Role_Name" type="xs:string" minOccurs="0"/>
+										<xs:element name="First_Name" type="xs:string" minOccurs="0"/>
+										<xs:element name="Last_Name" type="xs:string" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

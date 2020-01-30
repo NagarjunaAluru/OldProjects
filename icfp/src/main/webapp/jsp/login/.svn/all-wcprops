@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/ICFP-REWRITE/!svn/ver/9830/src/main/webapp/jsp/login
+END
+home.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/login/home.jsp
+END
+login.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/ICFP-REWRITE/!svn/ver/9306/src/main/webapp/jsp/login/login.jsp
+END
+inbox.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/ICFP-REWRITE/!svn/ver/9830/src/main/webapp/jsp/login/inbox.jsp
+END
+manageMyRoles.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/ICFP-REWRITE/!svn/ver/9801/src/main/webapp/jsp/login/manageMyRoles.jsp
+END

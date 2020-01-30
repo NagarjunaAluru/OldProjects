@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/ICFP-REWRITE/!svn/ver/9797/src/main/java/com/ge/icfp/tag
+END
+UserInformationManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/2491/src/main/java/com/ge/icfp/tag/UserInformationManager.java
+END
+DealManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/ICFP-REWRITE/!svn/ver/9797/src/main/java/com/ge/icfp/tag/DealManager.java
+END
+MasterDataManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/ICFP-REWRITE/!svn/ver/6253/src/main/java/com/ge/icfp/tag/MasterDataManager.java
+END
+LegSummaryTag.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/ICFP-REWRITE/!svn/ver/7259/src/main/java/com/ge/icfp/tag/LegSummaryTag.java
+END
+CheckAssessment.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/ICFP-REWRITE/!svn/ver/3250/src/main/java/com/ge/icfp/tag/CheckAssessment.java
+END
+AttachmentTag.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/ICFP-REWRITE/!svn/ver/8714/src/main/java/com/ge/icfp/tag/AttachmentTag.java
+END
+GetAssignedPerson.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/ICFP-REWRITE/!svn/ver/8714/src/main/java/com/ge/icfp/tag/GetAssignedPerson.java
+END
+GetAllApprovers.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/ICFP-REWRITE/!svn/ver/9778/src/main/java/com/ge/icfp/tag/GetAllApprovers.java
+END
+StaticDataManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/ICFP-REWRITE/!svn/ver/6671/src/main/java/com/ge/icfp/tag/StaticDataManager.java
+END

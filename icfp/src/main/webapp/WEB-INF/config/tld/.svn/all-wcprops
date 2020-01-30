@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/ICFP-REWRITE/!svn/ver/9543/src/main/webapp/WEB-INF/config/tld
+END
+attachment-functions.tld
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/ICFP-REWRITE/!svn/ver/9254/src/main/webapp/WEB-INF/config/tld/attachment-functions.tld
+END
+displaytag-el.tld
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/ICFP-REWRITE/!svn/ver/300/src/main/webapp/WEB-INF/config/tld/displaytag-el.tld
+END
+displaytag.tld
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/ICFP-REWRITE/!svn/ver/300/src/main/webapp/WEB-INF/config/tld/displaytag.tld
+END
+staticdata.tld
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ICFP-REWRITE/!svn/ver/8253/src/main/webapp/WEB-INF/config/tld/staticdata.tld
+END
+userInformation.tld
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/ICFP-REWRITE/!svn/ver/3697/src/main/webapp/WEB-INF/config/tld/userInformation.tld
+END
+assessment.tld
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ICFP-REWRITE/!svn/ver/3251/src/main/webapp/WEB-INF/config/tld/assessment.tld
+END
+hwf-securitytag.tld
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/ICFP-REWRITE/!svn/ver/1/src/main/webapp/WEB-INF/config/tld/hwf-securitytag.tld
+END
+masterdata.tld
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ICFP-REWRITE/!svn/ver/1356/src/main/webapp/WEB-INF/config/tld/masterdata.tld
+END
+hwf-desktoptag.tld
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ICFP-REWRITE/!svn/ver/2452/src/main/webapp/WEB-INF/config/tld/hwf-desktoptag.tld
+END
+attachment.tld
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/ICFP-REWRITE/!svn/ver/287/src/main/webapp/WEB-INF/config/tld/attachment.tld
+END
+deal-functions.tld
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ICFP-REWRITE/!svn/ver/9543/src/main/webapp/WEB-INF/config/tld/deal-functions.tld
+END
+hwf-rules.tld
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/ICFP-REWRITE/!svn/ver/1/src/main/webapp/WEB-INF/config/tld/hwf-rules.tld
+END

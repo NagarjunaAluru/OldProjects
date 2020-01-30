@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/ICFP-REWRITE/!svn/ver/9282/src/main/java/com/ge/icfp/common/attachments/validation
+END
+DealAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/ICFP-REWRITE/!svn/ver/9282/src/main/java/com/ge/icfp/common/attachments/validation/DealAdapter.java
+END
+ValidationErrors.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/ICFP-REWRITE/!svn/ver/9282/src/main/java/com/ge/icfp/common/attachments/validation/ValidationErrors.java
+END
+LegAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/ICFP-REWRITE/!svn/ver/9282/src/main/java/com/ge/icfp/common/attachments/validation/LegAdapter.java
+END
+ValidationAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/ICFP-REWRITE/!svn/ver/9282/src/main/java/com/ge/icfp/common/attachments/validation/ValidationAdapter.java
+END
+AttachmentValidator.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/ICFP-REWRITE/!svn/ver/9282/src/main/java/com/ge/icfp/common/attachments/validation/AttachmentValidator.java
+END

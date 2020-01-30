@@ -1,0 +1,40 @@
+8
+
+dir
+9840
+http://192.168.0.14/ICFP-REWRITE/src/main/webapp/WEB-INF/config/form-defs
+http://192.168.0.14/ICFP-REWRITE
+
+
+
+2012-10-29T07:30:17.656153Z
+9179
+rsatti
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ba77e99c-fc20-4067-90bb-d77db4103c45
+
+dealrequest-defs.xml
+file
+
+
+
+
+2013-05-20T09:00:34.054121Z
+0b594e5eba9a801d3d523c40565addd1
+2012-10-29T07:30:17.656153Z
+9179
+rsatti
+

@@ -1,0 +1,713 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/ICFP-REWRITE/!svn/ver/9723/src/main/java/com/ge/icfp/model
+END
+TPriorityTimings.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/TPriorityTimings.java
+END
+DividendPaymentInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/DividendPaymentInfo.java
+END
+CPALegRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/CPALegRequest.java
+END
+AgreementExtension.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/AgreementExtension.java
+END
+Correction.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/Correction.java
+END
+IDAGEAGLead.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/ICFP-REWRITE/!svn/ver/8837/src/main/java/com/ge/icfp/model/IDAGEAGLead.java
+END
+Amendment.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/Amendment.java
+END
+Assignment.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/Assignment.java
+END
+MsgHeaderInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/MsgHeaderInfo.java
+END
+DayTwoOperations.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/DayTwoOperations.java
+END
+FloatInformation.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/FloatInformation.java
+END
+Entity.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/ICFP-REWRITE/!svn/ver/7038/src/main/java/com/ge/icfp/model/Entity.java
+END
+EntityGroups.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/EntityGroups.java
+END
+RoleInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/RoleInfo.java
+END
+NameValue.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/NameValue.java
+END
+CPATermination.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/CPATermination.java
+END
+DealRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/ICFP-REWRITE/!svn/ver/9723/src/main/java/com/ge/icfp/model/DealRequest.java
+END
+ShareInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/ICFP-REWRITE/!svn/ver/9599/src/main/java/com/ge/icfp/model/ShareInfo.java
+END
+EquityLegRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/EquityLegRequest.java
+END
+CPASummary.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/ICFP-REWRITE/!svn/ver/7957/src/main/java/com/ge/icfp/model/CPASummary.java
+END
+RCALegRequestInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/RCALegRequestInfo.java
+END
+MyAssignData.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/MyAssignData.java
+END
+PrePayment.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/PrePayment.java
+END
+TPLegRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/TPLegRequest.java
+END
+UserInformation.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/ICFP-REWRITE/!svn/ver/7945/src/main/java/com/ge/icfp/model/UserInformation.java
+END
+LegTypeCollection.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/LegTypeCollection.java
+END
+FacilityIncreaseDecreaseInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/FacilityIncreaseDecreaseInfo.java
+END
+MDMEntityInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/MDMEntityInfo.java
+END
+QualitativeFactorsInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/QualitativeFactorsInfo.java
+END
+Legs.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/Legs.java
+END
+InboxReply.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/InboxReply.java
+END
+UserInformationRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/UserInformationRequest.java
+END
+BusinessApprovers.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/BusinessApprovers.java
+END
+ObjectFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/ObjectFactory.java
+END
+EboardUpdate.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ICFP-REWRITE/!svn/ver/8651/src/main/java/com/ge/icfp/model/EboardUpdate.java
+END
+WorkItem.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/ICFP-REWRITE/!svn/ver/7731/src/main/java/com/ge/icfp/model/WorkItem.java
+END
+UserInformationResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/UserInformationResponse.java
+END
+TerminationInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/TerminationInfo.java
+END
+FixedInformation.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/FixedInformation.java
+END
+Row.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/Row.java
+END
+DealCurrency.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/DealCurrency.java
+END
+CPALegRequestInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/CPALegRequestInfo.java
+END
+AgreementExtensionInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/AgreementExtensionInfo.java
+END
+CorrectionInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/CorrectionInfo.java
+END
+ErrorLookup.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/ErrorLookup.java
+END
+AmendmentInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/AmendmentInfo.java
+END
+AssignmentInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/AssignmentInfo.java
+END
+DrawDown.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/DrawDown.java
+END
+LegSummary.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/ICFP-REWRITE/!svn/ver/7958/src/main/java/com/ge/icfp/model/LegSummary.java
+END
+TesgPopUp.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/ICFP-REWRITE/!svn/ver/9248/src/main/java/com/ge/icfp/model/TesgPopUp.java
+END
+DayTwoOperationsInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/DayTwoOperationsInfo.java
+END
+FloatInformationInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/FloatInformationInfo.java
+END
+EntityInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/EntityInfo.java
+END
+CPATerminationInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/CPATerminationInfo.java
+END
+ExceptionRequestForm.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/ExceptionRequestForm.java
+END
+TSummaryOwner.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/TSummaryOwner.java
+END
+EquityLegRequestInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/EquityLegRequestInfo.java
+END
+TPLegRequestInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/TPLegRequestInfo.java
+END
+PrePaymentInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/PrePaymentInfo.java
+END
+RateInformation.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/RateInformation.java
+END
+MgmtEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/MgmtEntity.java
+END
+DealRequests.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/DealRequests.java
+END
+MyTaskData.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/MyTaskData.java
+END
+OtherLegSummaryInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/OtherLegSummaryInfo.java
+END
+ApproverAssessment.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/ApproverAssessment.java
+END
+Search.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/ICFP-REWRITE/!svn/ver/8712/src/main/java/com/ge/icfp/model/Search.java
+END
+RateInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/RateInfo.java
+END
+AuditLog.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/AuditLog.java
+END
+TransactionCapture.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/TransactionCapture.java
+END
+Delegation.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/Delegation.java
+END
+Attachments.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/Attachments.java
+END
+FourBlocker.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/FourBlocker.java
+END
+StaticDataManagement.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/7681/src/main/java/com/ge/icfp/model/StaticDataManagement.java
+END
+MyGroupTaskData.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/MyGroupTaskData.java
+END
+SalePurchase.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/SalePurchase.java
+END
+RateTypes.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/RateTypes.java
+END
+FixedInformationInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/FixedInformationInfo.java
+END
+DealInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/DealInfo.java
+END
+OtherLegRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/OtherLegRequest.java
+END
+DividendPayment.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/DividendPayment.java
+END
+package-info.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/package-info.java
+END
+AdminDataMaintenance.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/AdminDataMaintenance.java
+END
+UpdateStatus.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ICFP-REWRITE/!svn/ver/9714/src/main/java/com/ge/icfp/model/UpdateStatus.java
+END
+UserDataResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/UserDataResponse.java
+END
+Attachment.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/Attachment.java
+END
+AssignReviewer.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/AssignReviewer.java
+END
+WorkflowComment.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/WorkflowComment.java
+END
+DerivativesRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/DerivativesRequest.java
+END
+TesgList.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/TesgList.java
+END
+MsgHeader.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/MsgHeader.java
+END
+AttachmentTypeComments.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/AttachmentTypeComments.java
+END
+LegSummaryInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/LegSummaryInfo.java
+END
+DrawDownInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/DrawDownInfo.java
+END
+ModifyApprover.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/ModifyApprover.java
+END
+RCALegRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/RCALegRequest.java
+END
+UserActionData.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/ICFP-REWRITE/!svn/ver/7938/src/main/java/com/ge/icfp/model/UserActionData.java
+END
+ExceptionRequestFormInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/ExceptionRequestFormInfo.java
+END
+EBRPriorAppr.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ICFP-REWRITE/!svn/ver/7078/src/main/java/com/ge/icfp/model/EBRPriorAppr.java
+END
+TClassificationLevel.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/TClassificationLevel.java
+END
+FacilityIncreaseDecrease.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/FacilityIncreaseDecrease.java
+END
+AdditionalApprovers.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/AdditionalApprovers.java
+END
+QualitativeFactors.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/QualitativeFactors.java
+END
+UpdateDealStatus.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/UpdateDealStatus.java
+END
+MDM.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/ICFP-REWRITE/!svn/ver/9627/src/main/java/com/ge/icfp/model/MDM.java
+END
+Rates.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/Rates.java
+END
+ActionLog.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/ActionLog.java
+END
+ApproverAssessmentInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/ApproverAssessmentInfo.java
+END
+LegInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/LegInfo.java
+END
+DelegationRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/DelegationRequest.java
+END
+AuditLogInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/AuditLogInfo.java
+END
+CommentsLog.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/CommentsLog.java
+END
+ClosingCheckList.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/ClosingCheckList.java
+END
+Error.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/Error.java
+END
+SolvencyMetrics.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/SolvencyMetrics.java
+END
+Termination.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/Termination.java
+END
+UserInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/UserInfo.java
+END
+SalePurchaseInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/SalePurchaseInfo.java
+END
+ReAffirmApprovers.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/ICFP-REWRITE/!svn/ver/6823/src/main/java/com/ge/icfp/model/ReAffirmApprovers.java
+END

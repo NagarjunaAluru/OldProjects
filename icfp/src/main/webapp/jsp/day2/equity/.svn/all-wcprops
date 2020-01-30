@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/ICFP-REWRITE/!svn/ver/9820/src/main/webapp/jsp/day2/equity
+END
+equityFrontOffice.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ICFP-REWRITE/!svn/ver/9813/src/main/webapp/jsp/day2/equity/equityFrontOffice.jsp
+END
+equityRequestor.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/ICFP-REWRITE/!svn/ver/9820/src/main/webapp/jsp/day2/equity/equityRequestor.jsp
+END
+equityCashManagement.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/ICFP-REWRITE/!svn/ver/9795/src/main/webapp/jsp/day2/equity/equityCashManagement.jsp
+END
+currentLegdetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ICFP-REWRITE/!svn/ver/9738/src/main/webapp/jsp/day2/equity/currentLegdetails.jsp
+END
+equityTransferPricing.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/ICFP-REWRITE/!svn/ver/9813/src/main/webapp/jsp/day2/equity/equityTransferPricing.jsp
+END
+equityTCMO.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/ICFP-REWRITE/!svn/ver/9813/src/main/webapp/jsp/day2/equity/equityTCMO.jsp
+END

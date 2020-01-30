@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<License>
+  <Data>
+    <LicensedTo>GE</LicensedTo>
+    <LicenseType>Site Enterprise Subscription</LicenseType>
+    <LicenseNote>Limited to 10 physical sites, not to exceed 10 developers</LicenseNote>
+    <OrderID>100528125203</OrderID>
+    <OEM>Not to exceed 10 deployments</OEM>
+    <Products>
+      <Product>Aspose.Total for Java</Product>
+    </Products>
+    <EditionType>Enterprise</EditionType>
+    <SerialNumber>b66b5164-7145-432f-a4b9-0a32527c3e9a</SerialNumber>
+    <SubscriptionExpiry>20110723</SubscriptionExpiry>
+    <LicenseVersion>2.2</LicenseVersion>
+  </Data>
+  <Signature>xXokcRQnbvSMkIrNVT6aF5ORAaNof5lU/0uLWYLTybhjPDK60XQYHtHHJOtZo2hZGBwXX15qHWJ+qAvTYd4sEyICDxmLcaCxR9cQFPArxv18ZI3dUT9DzfxD+Cq7u+m0qUKawUKqRBKaQRhIEl95uzV5TlcNVnFQwMGH0KzUxwo=</Signature>
+</License>

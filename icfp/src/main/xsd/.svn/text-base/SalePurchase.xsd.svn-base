@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/SalePurchase.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/SalePurchase.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="Sale_Purchase">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Gross_Amt" type="xs:string" minOccurs="0"/>
+				<xs:element name="No_Of_Shares" type="xs:int" minOccurs="0"/>
+				<xs:element name="Share_Type" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Sale_Purchase_Info">
+		<xs:sequence>
+			<xs:element ref="Sale_Purchase" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

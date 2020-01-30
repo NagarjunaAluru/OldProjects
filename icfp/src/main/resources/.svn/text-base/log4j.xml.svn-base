@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration>
+
+	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ABSOLUTE} %-5p [%c{1}:%L] %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="App_log" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="/web/SUNWappserver_9.1/domains/icffo/logs/icfp.log" />
+		<param name="maxFileSize" value="1024MB" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd,HH:mm:ss:SS} %-5p %c %t %x - %m%n" />
+		</layout>
+	</appender>
+	
+	<appender name="JMS_log" class="com.hydus.wff.ge.log4j.appenders.JMSAppender">
+		<param name="Threshold" value="ERROR"/>
+         <param name="fetchFromJNDI" value="true" />
+         <param name="providerContextFactory" value="HWF.USERINFO.JMS.JNDI.CF" />
+         <param name="serverUrl" value="HWF.ICFP.JMS.JNDI.URL" />
+         <param name="queueConFactory" value="HWF.ICFP.JMS.QUEUE.CF" />
+         <param name="topicConFactory" value="HWF.ICFP.JMS.TOPIC.CF" />
+         <param name="destination" value="HWF.ICFP.ERROR.QUEUE" />
+         <param name="applicationName" value="ICFFO" />
+         <param name="defaultErrorCode" value="ICFP_001" />
+         <param name="jndiUserName" value="HWF.ICFP.JMS.USERNAME"/>
+         <param name="jndiPassword" value="HWF.ICFP.JMS.PASSWORD"/>
+         <param name="jmsUserName" value="HWF.ICFP.JMS.USERNAME"/>
+         <param name="jmsPassword" value="HWF.ICFP.JMS.PASSWORD"/>
+         <param name="messageExpireTime" value="HWF.ICFP.JMS.SERVICETIMEOUT.DEFAULT"/>
+         <param name="serviceTimeOut" value="HWF.ICFP.JMS.SERVICETIMEOUT.DEFAULT"/>
+     </appender>
+	
+	<logger name="com.hydus">
+		<level value="info" />
+		<appender-ref ref="App_log" />
+		<appender-ref ref="CONSOLE" />
+	</logger>
+	
+	<logger name="com.ge.icfp">
+		<level value="info" />
+		<appender-ref ref="App_log" />
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="JMS_log" />
+	</logger>
+		
+</log4j:configuration>

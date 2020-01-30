@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/ICFP-REWRITE/!svn/ver/9778/src/main/java/com/ge/icfp/util/report/pdf/builder
+END
+ReportBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/ICFP-REWRITE/!svn/ver/8468/src/main/java/com/ge/icfp/util/report/pdf/builder/ReportBuilder.java
+END
+DealPageBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/ICFP-REWRITE/!svn/ver/9778/src/main/java/com/ge/icfp/util/report/pdf/builder/DealPageBuilder.java
+END
+Day1LegBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/ICFP-REWRITE/!svn/ver/8462/src/main/java/com/ge/icfp/util/report/pdf/builder/Day1LegBuilder.java
+END
+Day2LegBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/ICFP-REWRITE/!svn/ver/9238/src/main/java/com/ge/icfp/util/report/pdf/builder/Day2LegBuilder.java
+END
+LegBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/ICFP-REWRITE/!svn/ver/9604/src/main/java/com/ge/icfp/util/report/pdf/builder/LegBuilder.java
+END

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ICFP/WorkItemData.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ICFP/WorkItemData.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="WorkItem">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Deal_Seq_ID" type="xs:string" minOccurs="0"/>
+				<xs:element name="Business_Request_ID" type="xs:string" minOccurs="0"/>
+				<xs:element name="Queue_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="AuditcreatorDate" type="xs:string" minOccurs="0"/>
+				<xs:element name="CurrentStage" type="xs:string" minOccurs="0"/>
+				<xs:element name="DateCreated" type="xs:string" minOccurs="0"/>
+				<xs:element name="Sw_Starter" type="xs:string" minOccurs="0"/>
+				<xs:element name="WF_ID" type="xs:string" minOccurs="0"/>
+				<xs:element name="WorkItemTag" type="xs:string" minOccurs="0"/>
+				<xs:element name="FO_App_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Deal_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Deal_Category" type="xs:string" minOccurs="0"/>
+				<xs:element name="Event" type="xs:string" minOccurs="0"/>
+				<xs:element name="Debt_Value" type="xs:string" minOccurs="0"/>
+				<xs:element name="Equity_Value" type="xs:string" minOccurs="0"/>
+				<xs:element name="Transaction_Owner" type="xs:string" minOccurs="0"/>
+				<xs:element name="Value_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Number_Of_Days_Rem" type="xs:string" minOccurs="0"/>
+				<xs:element name="Priority" type="xs:string" minOccurs="0"/>
+				<xs:element name="Deal_Status" type="xs:string" minOccurs="0"/>
+				<xs:element name="MyReq_Count" type="xs:string" minOccurs="0"/>
+				<xs:element name="MyDraft_Count" type="xs:string" minOccurs="0"/>
+				<xs:element name="MyClose_Count" type="xs:string" minOccurs="0"/>
+				<xs:element name="FO_DealTeam" type="xs:string" minOccurs="0"/>
+				<xs:element name="CM_DealTeam" type="xs:string" minOccurs="0"/>
+				<xs:element name="MO_DealTeam" type="xs:string" minOccurs="0"/>
+				<xs:element name="FO_Assgned" type="xs:string" minOccurs="0"/>
+				<xs:element name="MO_Assigned" type="xs:string" minOccurs="0"/>
+				<xs:element name="RU_Assigned" type="xs:string" minOccurs="0"/>
+				<xs:element name="TT_ASSigned" type="xs:string" minOccurs="0"/>
+				<xs:element name="TL_Assigned" type="xs:string" minOccurs="0"/>
+				<xs:element name="CM_Assigned" type="xs:string" minOccurs="0"/>
+				<xs:element name="TP_Assigned" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

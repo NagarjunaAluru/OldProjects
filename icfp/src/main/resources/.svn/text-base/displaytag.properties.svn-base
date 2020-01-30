@@ -1,0 +1,96 @@
+basic.empty.showtable=false
+basic.show.header=true
+
+# page | list
+sort.amount=list
+
+export.amount=list
+export.decorated=true
+
+paging.banner.group_size=5
+paging.banner.placement=top
+
+
+css.tr.even=rowEven
+css.tr.odd=rowOdd
+css.th.ascending=ascending
+css.th.descending=descending
+css.table=
+
+# factory classes for extensions
+factory.requestHelper=org.displaytag.util.DefaultRequestHelperFactory
+
+# locale provider (Jstl provider by default)
+locale.provider=org.displaytag.localization.I18nJstlAdapter
+
+# locale.resolver (nothing by default, simply use locale from request)
+#locale.resolver=
+
+export.types=csv excel xml pdf
+
+export.csv.class=com.ge.common.ExportCSV
+export.excel.class=org.displaytag.export.ExcelView
+export.xml.class=org.displaytag.export.XmlView
+export.pdf.class=org.displaytag.export.PdfView
+
+export.csv=true
+export.csv.label=<span class="export csv"> Export CSV </span>
+export.csv.include_header=true
+export.csv.filename=
+
+export.excel=false
+export.excel.label=<span class="normalText"><img src="img/excel.gif" width="14" height="15" border="0"/></span>
+export.excel.include_header=true
+export.excel.filename=
+
+export.xml=false
+export.xml.label=<span class="export xml">XML </span>
+export.xml.filename=
+
+export.pdf=false
+export.pdf.label=<span class="export pdf">PDF </span>
+export.pdf.include_header=true
+export.pdf.filename=
+
+
+# messages
+
+basic.msg.empty_list=<span class="normalText">Nothing found to display</span>.
+basic.msg.empty_list_row=<tr><td colspan="{0}" class="normalText">Nothing found to display.</td></tr>
+error.msg.invalid_page=invalid page
+
+export.banner=<div class="normalText">{0}</div>
+export.banner.sepchar= | 
+
+paging.banner.item_name=item
+paging.banner.items_name=items
+
+paging.banner.no_items_found=
+paging.banner.one_item_found=<span class="pagebanner">Item 1 to 1 ( 1 Item )</span>
+paging.banner.all_items_found=<span class="pagebanner">Item 1 to {0} ( {0} items )</span>
+paging.banner.some_items_found=<span class="pagebanner">Items {2} to {3} ( {0} items )</span>
+
+paging.banner.full=<span class="paginationlinks"><a href="{2}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;« Previous</a> | Page {0} | <a href="{3}">Next »</a></span>
+paging.banner.first=<span class="paginationlinks">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;« Previous | Page {0} | <a href="{3}">Next »</a></span>
+paging.banner.last=<span class="paginationlinks"><a href="{2}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;« Previous</a> | Page {0} | Next »</span>
+paging.banner.onepage=
+
+paging.banner.placement=both
+
+paging.banner.page.selected=<strong>{0}</strong>
+paging.banner.page.link=<a href="{1}" title="Go to page {0}">{0}</a>
+paging.banner.page.separator=, 
+
+# unused
+save.excel.banner=<a href="{0}" rel="external">save ({1} bytes)</a>
+save.excel.filename=export.xls
+
+#audit
+audit.maintable=<table border="0" cellpadding="0" cellspacing="0" align="center" id="main-table">
+audit.majorheading=<tr><td id="major-heading" colspan="2">
+audit.innertable=<div id="content-border" style="width: 894px;"><table border="0" cellpadding="0" cellspacing="0" align="center" id="inner-table">
+audit.workflowstepfooter=<tr><td colspan="2"><table width="100%" cellpadding="3" cellspacing="0" border="0" id="workflow-step-footer">
+audit.tablename=Audit Log
+audit.columnnames=Action:Author:Date (MM/DD/YYYY):Comments
+
+

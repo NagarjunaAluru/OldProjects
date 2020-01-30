@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/ICFP-REWRITE/!svn/ver/9816/src/main/webapp/js/common
+END
+equityDetails.js
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/ICFP-REWRITE/!svn/ver/9144/src/main/webapp/js/common/equityDetails.js
+END
+otherLegQualitativeAssessment.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/ICFP-REWRITE/!svn/ver/9144/src/main/webapp/js/common/otherLegQualitativeAssessment.js
+END
+progressBar.js
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/ICFP-REWRITE/!svn/ver/9144/src/main/webapp/js/common/progressBar.js
+END
+transferPricingCommon.js
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/ICFP-REWRITE/!svn/ver/9144/src/main/webapp/js/common/transferPricingCommon.js
+END
+allInputScreens.js
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/ICFP-REWRITE/!svn/ver/8715/src/main/webapp/js/common/allInputScreens.js
+END
+TCodeResult.js
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/ICFP-REWRITE/!svn/ver/9816/src/main/webapp/js/common/TCodeResult.js
+END
+headerSection.js
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/ICFP-REWRITE/!svn/ver/9660/src/main/webapp/js/common/headerSection.js
+END
+LEResult.js
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/ICFP-REWRITE/!svn/ver/9815/src/main/webapp/js/common/LEResult.js
+END
+MEResult.js
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/ICFP-REWRITE/!svn/ver/9816/src/main/webapp/js/common/MEResult.js
+END
+editAdditionalApprovers.js
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/ICFP-REWRITE/!svn/ver/8715/src/main/webapp/js/common/editAdditionalApprovers.js
+END
+transactionLegs.js
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/ICFP-REWRITE/!svn/ver/9144/src/main/webapp/js/common/transactionLegs.js
+END
+qualitativeAsessmentLegSummary.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/ICFP-REWRITE/!svn/ver/9073/src/main/webapp/js/common/qualitativeAsessmentLegSummary.js
+END
+cpaQualitativeAssessment.js
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ICFP-REWRITE/!svn/ver/9144/src/main/webapp/js/common/cpaQualitativeAssessment.js
+END
+cpaRequestDetails.js
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/ICFP-REWRITE/!svn/ver/9144/src/main/webapp/js/common/cpaRequestDetails.js
+END

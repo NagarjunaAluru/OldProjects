@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/ICFP-REWRITE/!svn/ver/9288/src/main/resources/drools
+END
+icfp_atmt_validation.java.drl
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/ICFP-REWRITE/!svn/ver/8950/src/main/resources/drools/icfp_atmt_validation.java.drl
+END
+icfp_leg_collection.java.drl
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/ICFP-REWRITE/!svn/ver/9127/src/main/resources/drools/icfp_leg_collection.java.drl
+END
+rules.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/ICFP-REWRITE/!svn/ver/5553/src/main/resources/drools/rules.xsd
+END
+icfp_atmt_security.java.drl
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/ICFP-REWRITE/!svn/ver/9288/src/main/resources/drools/icfp_atmt_security.java.drl
+END
+java.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/ICFP-REWRITE/!svn/ver/5553/src/main/resources/drools/java.xsd
+END

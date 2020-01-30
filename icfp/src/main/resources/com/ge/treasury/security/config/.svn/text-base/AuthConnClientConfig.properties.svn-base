@@ -1,0 +1,21 @@
+com.ge.treasury.security.log4j.log4jConfigFileLocation=log4jConfig.xml
+com.ge.treasury.security.client.ws.OperationName=getUserPermissions
+com.ge.treasury.security.client.ws.ParameterName=userId
+com.ge.treasury.security.client.ws.XMLSchemaURI=http://www.w3.org/2001/XMLSchema
+com.ge.treasury.security.client.ws.datatypes.XMLString=string
+com.ge.treasury.security.client.ws.SecurityFrameworkDataURI=http://data.security.treasury.ge.com
+com.ge.treasury.security.client.ws.datatypes.UserPermissions=UserPermissions
+# Following property is environment specific; Change to corresponding URL
+com.ge.treasury.security.client.ws.SecurityFrameworkURI=http://192.168.0.34:7080/SecurityUtil
+com.ge.treasury.security.client.ws.ReturnElement=getUserPermissionsReturn
+com.ge.treasury.security.client.ws.datatypes.ApplicationRoles=ApplicationRoles
+com.ge.treasury.security.client.ws.datatypes.ApplicationRolesArray=ArrayOf_tns2_ApplicationRoles
+com.ge.treasury.security.client.ws.datatypes.ApplicationRoleElement=applicationRole
+com.ge.treasury.security.client.ws.datatypes.StringArray=ArrayOf_xsd_string
+com.ge.treasury.security.client.ws.datatypes.RoleElement=role
+com.ge.treasury.security.client.ws.SoapActionURI=getUserPermissions
+com.ge.treasury.security.client.ws.ServiceName=SecurityUtilService
+
+# Following property is environment specific; Change to corresponding URL
+com.ge.treasury.security.client.ws.ServiceAddress=http://192.168.0.34:7080/SecurityUtilServer/services/SecurityUtilService
+
