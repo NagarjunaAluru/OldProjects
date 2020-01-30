@@ -1,0 +1,75 @@
+<class-diagram version="1.0.11" icons="true" automaticImage="JPEG" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.action.admin.ReimbursementAgreementAction" 
+    project="aloc" file="/aloc/src/com/ge/aloc/action/admin/ReimbursementAgreementAction.java" binary="false">    
+    <position height="329" width="349" x="-102" y="-131"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="2" corner="BOTTOM_RIGHT" language="java" 
+    name="com.ge.aloc.manager.admin.IReimbursementAgreementMgmtManager" project="aloc" 
+    file="/aloc/src/com/ge/aloc/manager/admin/IReimbursementAgreementMgmtManager.java" binary="false">    
+    <position height="112" width="341" x="284" y="-125"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="3" corner="BOTTOM_RIGHT" language="java" 
+    name="com.ge.aloc.manager.impl.admin.ReimbursementAgreementMgmtManager" project="aloc" 
+    file="/aloc/src/com/ge/aloc/manager/impl/admin/ReimbursementAgreementMgmtManager.java" binary="false">    
+    <position height="-1" width="-1" x="493" y="126"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="4" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.dao.admin.IReimbursementAgreementMgmtDAO" 
+    project="aloc" file="/aloc/src/com/ge/aloc/dao/admin/IReimbursementAgreementMgmtDAO.java" binary="false">    
+    <position height="-1" width="-1" x="47" y="297"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="5" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.dao.impl.admin.ReimbursementAgreementMgmtDAO" 
+    project="aloc" file="/aloc/src/com/ge/aloc/dao/impl/admin/ReimbursementAgreementMgmtDAO.java" binary="false">    
+    <position height="146" width="337" x="289" y="227"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <realization id="6">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <association id="7">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="8" name="reimbursementAgreementMgmtManager"/>      
+      <multiplicity id="9" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="10">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
+  <association id="11">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="12" name="reimbursementAgreementMgmtDAO"/>      
+      <multiplicity id="13" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

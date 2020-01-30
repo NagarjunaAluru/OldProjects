@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/taxonomy
+END
+taxonomyPrincipalDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/taxonomy/taxonomyPrincipalDetails.jsp
+END
+taxonomyBondDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/taxonomy/taxonomyBondDetails.jsp
+END
+taxonomyRiders.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/taxonomy/taxonomyRiders.jsp
+END
+taxonomyBusinessContactPerson.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/taxonomy/taxonomyBusinessContactPerson.jsp
+END
+transactionHistoryIssuanceAttachments.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/taxonomy/transactionHistoryIssuanceAttachments.jsp
+END
+instrumentDocumentationReadOnly.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/taxonomy/instrumentDocumentationReadOnly.jsp
+END
+historicalTransactionissuer.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/taxonomy/historicalTransactionissuer.jsp
+END
+taxonomyFeesQuoted.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/taxonomy/taxonomyFeesQuoted.jsp
+END
+issuanceAttachmentsReadOnly.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/taxonomy/issuanceAttachmentsReadOnly.jsp
+END
+taxonomyBundledTransactions.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/taxonomy/taxonomyBundledTransactions.jsp
+END
+updateReportingAuditLog.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/taxonomy/updateReportingAuditLog.jsp
+END
+closureAttachmentsReadOnly.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/taxonomy/closureAttachmentsReadOnly.jsp
+END
+updateReportingData.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/taxonomy/updateReportingData.jsp
+END
+taxonomyAuditLog.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/taxonomy/taxonomyAuditLog.jsp
+END
+taxonomyAmendment.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/taxonomy/taxonomyAmendment.jsp
+END
+documentationReadOnly.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/taxonomy/documentationReadOnly.jsp
+END
+issuerReadOnly.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/taxonomy/issuerReadOnly.jsp
+END
+attachmentsReadOnly.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/taxonomy/attachmentsReadOnly.jsp
+END
+closureReadOnly.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/taxonomy/closureReadOnly.jsp
+END
+taxonomyLinkedTransaction.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/taxonomy/taxonomyLinkedTransaction.jsp
+END
+taxonomyTransactionParties.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/taxonomy/taxonomyTransactionParties.jsp
+END
+taxonomyFeeHistory.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/taxonomy/taxonomyFeeHistory.jsp
+END
+taxonomyCurrentBankFees.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/taxonomy/taxonomyCurrentBankFees.jsp
+END
+taxonomyAmendmentRequest.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/taxonomy/taxonomyAmendmentRequest.jsp
+END

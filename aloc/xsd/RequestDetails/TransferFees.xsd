@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/TransferFees.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/TransferFees.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="TransferFees">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Transfer_Cost_BPS" type="xs:string" minOccurs="0"/>
+				<xs:element name="Currency_BPS_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Currency_BPS_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Per_Annum_Quarter_BPS" type="xs:string" minOccurs="0"/>
+				<xs:element name="Transfer_Cost_Numeric" type="xs:string" minOccurs="0"/>
+				<xs:element name="Currency_Numeric_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Currency_Numeric_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Per_Annum_Quarter_Numeric" type="xs:string" minOccurs="0"/>
+				<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

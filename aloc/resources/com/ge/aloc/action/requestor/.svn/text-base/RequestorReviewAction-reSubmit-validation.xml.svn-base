@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	 <!-- Transaction Parties Section Validation -->
+	 <field name="requestDetails.transactionParties">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(((requestDetails.sendbackbyBuApprover == "N" && requestDetails.transactionParties.requiresEdits == true) || (requestDetails.sendbackbyBuApprover == "Y" || requestDetails.WFDetails.WFStage == "BUSAPROV")) && actionType ==  32 && (requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@BANK_GUARANTEE.getId() || requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@LOC.getId()))
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	<!-- Project Description Section Validation -->
+	<field name="requestDetails.projDescription">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(((requestDetails.sendbackbyBuApprover == "N" && requestDetails.projDescription.requiresEdits == true) || (requestDetails.sendbackbyBuApprover == "Y" || requestDetails.WFDetails.WFStage == "BUSAPROV")) && actionType ==  32 && (requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@BANK_GUARANTEE.getId() || requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@LOC.getId()))
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<!-- Instrument Details Section Validation -->
+	<field name="requestDetails.instrumentDetails">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(((requestDetails.sendbackbyBuApprover == "N" && requestDetails.instrumentDetails.requiresEdits == true) || (requestDetails.sendbackbyBuApprover == "Y") || (requestDetails.WFDetails.WFStage == "BUSAPROV")) && actionType ==  32 && (requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@BANK_GUARANTEE.getId() || requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@LOC.getId()))
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	<!-- Instrument Risk Section Validation -->
+	<field name="requestDetails.instrumentRisk">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(((requestDetails.sendbackbyBuApprover == "N" && requestDetails.instrumentRisk.requiresEdits == true) || (requestDetails.sendbackbyBuApprover == "Y") || (requestDetails.WFDetails.WFStage == "BUSAPROV")) && actionType ==  32 && (requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@BANK_GUARANTEE.getId() || requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@LOC.getId()))
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<!-- Instrument Reporting Section Validation -->
+	<field name="requestDetails.instrReporting">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(((requestDetails.sendbackbyBuApprover == "N" && requestDetails.instrReporting.requiresEdits == true) || (requestDetails.sendbackbyBuApprover == "Y") || (requestDetails.WFDetails.WFStage == "BUSAPROV")) && actionType ==  32 && (requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@BANK_GUARANTEE.getId() || requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@LOC.getId()))
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	<field name="requestDetails.deliveryInstructions">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(((requestDetails.sendbackbyBuApprover == "N" && requestDetails.deliveryInstructions.requiresEdits == true) || (requestDetails.sendbackbyBuApprover == "Y") || (requestDetails.WFDetails.WFStage == "BUSAPROV")) && actionType ==  32 && (requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@BANK_GUARANTEE.getId() || requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@LOC.getId()))
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.SBLC">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(((requestDetails.sendbackbyBuApprover == "N" && requestDetails.SBLC.requiresEdits == true) || (requestDetails.sendbackbyBuApprover == "Y") || (requestDetails.WFDetails.WFStage == "BUSAPROV")) &&actionType ==  32 && requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@LOC.getId())
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>  
+	 <!-- Issuing Bank Details Section Validation -->
+	<field name="requestDetails.issuingBankDetails">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					((requestDetails.issuingBankDetails.requiresEdits == true || requestDetails.WFDetails.WFStage == "BUSAPROV") && actionType ==  32 && requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@DOCUMENT_LOC.getId())
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	<!-- Applicant Details Section Validation -->
+	<field name="requestDetails.applicantDetails">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					((requestDetails.applicantDetails.requiresEdits == true || requestDetails.WFDetails.WFStage == "BUSAPROV") && actionType ==  32 && requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@DOCUMENT_LOC.getId())
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	<!-- Customer/Beneficiary Section Validation -->
+	<field name="requestDetails.beneficiaryDetails">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					((requestDetails.beneficiaryDetails.requiresEdits == true || requestDetails.WFDetails.WFStage == "BUSAPROV") && actionType ==  32 && requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@DOCUMENT_LOC.getId())
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	<!-- Transaction Details Section Validation -->
+	<field name="requestDetails.transactionDetails">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					((requestDetails.transactionDetails.requiresEdits == true || requestDetails.WFDetails.WFStage == "BUSAPROV") && actionType ==  32 && requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@DOCUMENT_LOC.getId())
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	<!-- Payment Schedule Section Validation -->
+	<field name="requestDetails.paymentScheduleDetails">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					((requestDetails.paymentScheduleDetails.requiresEdits == true || requestDetails.WFDetails.WFStage == "BUSAPROV" ) && actionType ==  32 && requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@DOCUMENT_LOC.getId())
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	<!--Surety Bond Request Validations Starts From Here -->	
+
+	<!-- Bond Details Section Validation -->
+	<field name="requestDetails.bondDetails">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(((requestDetails.sendbackbyBuApprover == "N" && requestDetails.bondDetails.requiresEdits == true) || (requestDetails.sendbackbyBuApprover == "Y") || (requestDetails.WFDetails.WFStage == "BUSAPROV")) && actionType ==  32 && requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@SURETY_BOND.getId())
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+
+	<!-- Principal Details Section Validation -->
+	<field name="requestDetails.principal">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(((requestDetails.sendbackbyBuApprover == "N" && requestDetails.principal.requiresEdits == true) || (requestDetails.sendbackbyBuApprover == "Y") || (requestDetails.WFDetails.WFStage == "BUSAPROV")) && actionType ==  32 && requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@SURETY_BOND.getId())
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+
+	<!-- Obligee Details Section Validation -->
+	<field name="requestDetails.obligee">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(((requestDetails.sendbackbyBuApprover == "N" && requestDetails.principal.requiresEdits == true) || (requestDetails.sendbackbyBuApprover == "Y") || (requestDetails.WFDetails.WFStage == "BUSAPROV")) && actionType ==  32 && requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@SURETY_BOND.getId())
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+
+	<!--Bond Request details Section Validation -->
+	<field name="requestDetails.bondReqDtls">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(((requestDetails.sendbackbyBuApprover == "N" && requestDetails.bondReqDtls.requiresEdits == true) || (requestDetails.sendbackbyBuApprover == "Y") || (requestDetails.WFDetails.WFStage == "BUSAPROV")) && actionType ==  32 && requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@SURETY_BOND.getId())
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+
+	<!-- Requestor Mailing Address Section Validation -->
+	<field name="requestDetails.addressDtls">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(((requestDetails.sendbackbyBuApprover == "N" && requestDetails.addressDtls.requiresEdits == true) || (requestDetails.sendbackbyBuApprover == "Y") || (requestDetails.WFDetails.WFStage == "BUSAPROV")) && actionType ==  32 && requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@SURETY_BOND.getId())
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+
+	<!-- Bond Information Section Validation -->
+	<field name="requestDetails.bondInfo">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(((requestDetails.sendbackbyBuApprover == "N" && (requestDetails.bondInfo.requiresEdits == true || requestDetails.bondInfo.attorneyRequiresEdits == true)) || (requestDetails.sendbackbyBuApprover == "Y") || (requestDetails.WFDetails.WFStage == "BUSAPROV")) && actionType ==  32 && requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@SURETY_BOND.getId())
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+
+	<!-- Delivery Instructions Section Validation -->
+	<field name="requestDetails.deliveryInstructions">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(((requestDetails.sendbackbyBuApprover == "N" && requestDetails.deliveryInstructions.requiresEdits == true) || (requestDetails.sendbackbyBuApprover == "Y") || (requestDetails.WFDetails.WFStage == "BUSAPROV")) && actionType ==  32 && requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@SURETY_BOND.getId())
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<!-- geRecipient lookup validation for  SB,BG,SBLC-->
+	<field name="geRecipient">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[(((requestDetails.sendbackbyBuApprover != "Y" && requestDetails.deliveryInstructions.requiresEdits != true) || (requestDetails.sendbackbyBuApprover != "N" && requestDetails.deliveryInstructions.requiresEdits != false) || ( requestDetails.WFDetails.WFStage == "BUSAPROV")) || (@com.ge.aloc.util.ALOCCommonHelper@isDocLOCRequest(requestDetails.instrumentTypeId) != false) || (actionType !=  32) || (requestDetails.deliveryInstructions.ecopyOtherGEPerson != 'true') || (geRecipient != null && geRecipient.trim() != "" && recipientSelection != null && recipientSelection.trim() != "") || ((geRecipient ==null || geRecipient.trim() =="") && recipientSelection!=null && recipientSelection.trim() !="")) ]]>
+			</param>
+			<message key="error.required.requestDetails.geRecipient"></message>
+		</field-validator>
+	</field>
+	
+	<!-- business Approver validation for  SB,BG,SBLC-->
+	 <field name="requestDetails.buDelegation.buApprover.approverSso">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requestDetails.instrumentTypeId == 4) || ((requestDetails.sendbackbyBuApprover != "Y" && requestDetails.WFDetails.WFStage != "BUSAPROV")) ||  (actionType !=  32) || (requestDetails.buDelegation!=null && requestDetails.buDelegation.buApprover.approverSso != "" && requestDetails.buDelegation.buApprover.approverSso != null))]]>
+      	</param>
+			<message key="error.required.requestDetails.submitbusinessApprover" />
+		</field-validator>
+	</field>
+	
+	 <field name="requestDetails.buDelegation.buApprover.approverSso">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requestDetails.instrumentTypeId == 4) || (requestDetails.businessReApprovalFlag != "Y" ) ||  (actionType !=  32) || (requestDetails.buDelegation!=null && requestDetails.buDelegation.buApprover.approverSso != "" && requestDetails.buDelegation.buApprover.approverSso != null))]]>
+      	</param>
+			<message key="error.required.requestDetails.submitbusinessApprover" />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetailsBO.formatBO.model.formatTypeId"> 
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression"><![CDATA[ actionType != 32 || (requestDetailsBO.formatBO.model.formatTypeId != null && requestDetailsBO.formatBO.model.formatTypeId != "")]]>
+			</param>
+			<message key="error.required.requestDetails.format.formatType" />
+		</field-validator>	
+	</field>
+	<field name="requestDetailsBO.formatBO.attachmentBOList" >
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression"><![CDATA[ actionType != 32 || @com.ge.aloc.util.ALOCCommonHelper@validateFormatDefaultAtmtFileUpload()]]>
+			</param>
+			<message key="error.required.requestDetails.format.attachmentFileUpload" />
+		</field-validator>
+	</field>	
+	<field name="requestDetailsBO.attachmentBOList">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression"><![CDATA[ actionType != 32 || @com.ge.aloc.util.ALOCCommonHelper@validateAtmtFileUpload()]]>
+			</param>
+			<message key="error.required.requestDetails.attachments.fileUpload" />
+		</field-validator>
+	</field>
+	
+</validators>

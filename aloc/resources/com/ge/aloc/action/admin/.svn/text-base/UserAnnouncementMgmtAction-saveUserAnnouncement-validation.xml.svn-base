@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>	
+		<field name="userAnnouncementBO.model.messageContent">
+				<field-validator type="fieldexpression">
+					<param name="expression">
+					   <![CDATA[userAnnouncementBO.model.messageContent != ""]]>
+					</param>
+					<message key="error.required.userAnnouncementMgmt.messageContent" />
+				</field-validator>
+			</field>
+			
+	<field name="userAnnouncementBO.model.siteSelections">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[(@com.ge.aloc.util.ALOCCommonHelper@validatelist(userAnnouncementBO.model.siteSelections))]]>
+			</param>
+			<message key="error.required.userAnnouncementMgmt.siteSelections" />
+		</field-validator>
+	</field>
+	
+	<field name="userAnnouncementBO.model.selectedRoles">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[(@com.ge.aloc.util.ALOCCommonHelper@validatelist(userAnnouncementBO.model.selectedRoles))]]>
+			</param>
+			<message key="error.required.userAnnouncementMgmt.roleSelection" />
+		</field-validator>
+	</field>
+	 
+	<field name="userAnnouncementBO.model.startDate">
+		<field-validator type="required" short-circuit="true">
+			<message key="error.required.userAnnouncementMgmt.startDate" />
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+			<param name="expression">(userAnnouncement.startDate).compareTo(@com.ge.aloc.util.ALOCCommonHelper@getCurrentDateWithOutTime()) != -1</param>
+			<message key="error.required.userAnnouncementMgmt.startDateCompare" />
+		</field-validator>
+	</field>
+	<field name="userAnnouncementBO.model.endDate">
+		<field-validator type="required" short-circuit="true">
+			<message key="error.required.userAnnouncementMgmt.endDate" />
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+		<param name="expression">
+			<![CDATA[(  ((userAnnouncement.endDate).compareTo(@com.ge.aloc.util.ALOCCommonHelper@getCurrentDateWithOutTime()) != -1) &&  ((userAnnouncement.startDate).compareTo(userAnnouncement.endDate) != 1 ) )]]>
+		</param>	
+			<message key="error.required.userAnnouncementMgmt.endDateCompare" />
+		</field-validator>
+	</field>
+</validators>

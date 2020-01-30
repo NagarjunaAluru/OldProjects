@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/APM/APMDetails.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ALOC/APM/BUCAndADN.xsd"
+	 xmlns:ns2="http://treasury.ge.com/schemas/ALOC/APM/FeeSummaryDetails.xsd"
+	 xmlns:ns3="http://treasury.ge.com/schemas/ALOC/APM/FeePaymentRunDetails.xsd"
+	 xmlns:ns4="http://treasury.ge.com/schemas/ALOC/APM/FXRateHistoryAndCurrencySetup.xsd"
+	 xmlns:ns5="http://treasury.ge.com/schemas/ALOC/APM/PaymentPeriodDetails.xsd"
+	 xmlns:ns6="http://treasury.ge.com/schemas/ALOC/APM/FeeHistoryDetails.xsd"
+	 xmlns:ns7="http://treasury.ge.com/schemas/ALOC/APM/APMSearch.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/APM/APMDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd" schemaLocation="../RequestDetails/MsgHeader.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/APM/BUCAndADN.xsd" schemaLocation="BUCAndADN.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/APM/FeeSummaryDetails.xsd" schemaLocation="FeeSummaryDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/APM/FeePaymentRunDetails.xsd" schemaLocation="FeePaymentRunDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/APM/FXRateHistoryAndCurrencySetup.xsd" schemaLocation="FXRateHistoryAndCurrencySetup.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/APM/PaymentPeriodDetails.xsd" schemaLocation="PaymentPeriodDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/APM/FeeHistoryDetails.xsd" schemaLocation="FeeHistoryDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/APM/APMSearch.xsd" schemaLocation="APMSearch.xsd"/>
+	<xs:element name="APMDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ns0:Msg_Header" minOccurs="0"/>
+				<xs:element ref="ns1:BUCAndADN" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns2:FeeSummaryDetails" minOccurs="0"/>
+				<xs:element ref="ns3:FeePaymentRunDetails" minOccurs="0"/>
+				<xs:element ref="ns4:FXRateHistoryAndCurrencySetup" minOccurs="0"/>
+				<xs:element ref="ns5:PaymentPeriodDetails" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns6:FeeHistoryDetails" minOccurs="0"/>
+				<xs:element ref="ns7:APMSearch" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

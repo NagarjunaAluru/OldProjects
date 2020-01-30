@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/apm
+END
+APMDetailsAction-saveCurrencySetRow-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/apm/APMDetailsAction-saveCurrencySetRow-validation.xml
+END
+APMDetailsAction-savePaymentPeriod-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/apm/APMDetailsAction-savePaymentPeriod-validation.xml
+END
+APMDetailsAction-updateBUCADNDetails-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/apm/APMDetailsAction-updateBUCADNDetails-validation.xml
+END

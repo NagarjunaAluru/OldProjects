@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/Reports/FeeQuotationDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/Reports/FeeQuotationDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="FeeQuotationDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="In_Issuer" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="In_Fee_Max_Dt" type="xs:string" minOccurs="0"/>
+				<xs:element name="In_Fee_Min_Dt" type="xs:string" minOccurs="0"/>
+				<xs:element name="In_Fee_Forecast_Max_Dt" type="xs:string" minOccurs="0"/>
+				<xs:element name="In_Fee_Forecast_Min_Dt" type="xs:string" minOccurs="0"/>
+				<xs:element name="In_Country_Issuance" type="xs:string" minOccurs="0"/>
+				<xs:element name="In_Site_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Number_Of_Issuances" type="xs:string" minOccurs="0"/>
+				<xs:element name="USD_Equivalent_Of_Issuances" type="xs:string" minOccurs="0"/>
+				<xs:element name="Total_USD_Equivalent_Fees" type="xs:string" minOccurs="0"/>
+				<xs:element name="Other_Fees" type="xs:string" minOccurs="0"/>
+				<xs:element name="Average_BPS" type="xs:string" minOccurs="0"/>
+				<xs:element name="Total_Number_Of_Bids" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

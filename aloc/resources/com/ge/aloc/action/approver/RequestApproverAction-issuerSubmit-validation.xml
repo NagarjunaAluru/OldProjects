@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	
+	<field name="requestDetailsBO.attachmentBOList">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression"><![CDATA[(optionsRadiosp != "upload") || @com.ge.aloc.util.ALOCCommonHelper@validateissuerAttachment()]]>
+			</param>
+			<message key="error.required.suretybond.attachmentfields" />
+		</field-validator>
+	
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+	        	<![CDATA[(requestDetails.instrumentTypeId == 4) || (optionsRadiosp != "upload") || @com.ge.aloc.util.ALOCCommonHelper@validateIssuanceDate()]]>
+			</param>
+			<message key="error.required.suretybond.issuanceDate"/>
+		</field-validator>
+		
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+	        	<![CDATA[(requestDetails.instrumentTypeId != 4) || (optionsRadiosp != "upload") || @com.ge.aloc.util.ALOCCommonHelper@validateIssuanceDate()]]>
+			</param>
+			<message key="error.required.DLOC.issuanceDate"/>
+		</field-validator>
+		
+		
+	<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[(optionsRadiosp != "upload") || @com.ge.aloc.util.ALOCCommonHelper@validateAttachment()]]>
+		</param>
+		<message key="error.required.suretybond.issuanceattachment"/>
+	</field-validator>
+	
+</field>
+
+	<field name="requestDetails.actionDetails.reasonForOptingOut">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((optionsRadiosp != "copyPaste") || (requestDetails.actionDetails.reasonForOptingOut != "" && requestDetails.actionDetails.reasonForOptingOut != null))]]>
+		</param>
+		<message key="error.required.suretybond.issuanceOptOut"/>
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.feesDetails.surityId" >
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">
+        <![CDATA[((requestDetails.instrumentTypeId != 3) || (optionsRadiosp != "upload") || (requestDetails.feesDetails.surityId != "" && requestDetails.feesDetails.surityId != null))]]>
+		</param>
+		<message key="error.required.suretybond.suretyId"/>
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        <![CDATA[((requestDetails.instrumentTypeId != 6) || (optionsRadiosp != "upload") || (requestDetails.feesDetails.surityId != "" && requestDetails.feesDetails.surityId != null))]]>
+		</param>
+		<message key="error.required.suretybond.suretyId"/>
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.feesDetails.premiumFees" >
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">  <![CDATA[((requestDetails.instrumentTypeId != 3) || (optionsRadiosp != "upload") || @com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(requestDetails.feesDetails.premiumFees))]]>
+		</param>
+			<message key="error.required.bidReply.amount" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">  <![CDATA[((requestDetails.instrumentTypeId != 6) || (optionsRadiosp != "upload") || @com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(requestDetails.feesDetails.premiumFees))]]>
+			</param>
+			<message key="error.required.bidReply.amount" />
+		</field-validator>
+	</field>
+
+    <field name="requestDetails.additionalFees">
+		<field-validator type="fieldexpression">
+			<param name="expression"> <![CDATA[((requestDetails.instrumentTypeId != 6) || (optionsRadiosp != "upload") || @com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(requestDetails.additionalFees))]]>
+			</param>
+			<message key="error.required.bidReply.amount" />
+		</field-validator>
+    </field>
+    <field name="requestDetails.feesDetails.chargeForRider" >
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">  <![CDATA[((requestDetails.instrumentTypeId != 3) || (optionsRadiosp != "upload") || @com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(requestDetails.feesDetails.chargeForRider))]]>
+		</param>
+			<message key="error.required.bidReply.amount" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">  <![CDATA[((requestDetails.instrumentTypeId != 6) || (optionsRadiosp != "upload") || @com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(requestDetails.feesDetails.chargeForRider))]]>
+			</param>
+			<message key="error.required.bidReply.amount" />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.feesDetails.totoalPremium">
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">  <![CDATA[((requestDetails.instrumentTypeId != 3) || (optionsRadiosp != "upload") || @com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(requestDetails.feesDetails.totoalPremium))]]>
+		</param>
+			<message key="error.required.bidReply.amount" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">  <![CDATA[((requestDetails.instrumentTypeId != 6) || (optionsRadiosp != "upload") || @com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(requestDetails.feesDetails.totoalPremium))]]>
+			</param>
+			<message key="error.required.bidReply.amount" />
+		</field-validator>
+    </field>
+   
+</validators>
+
+

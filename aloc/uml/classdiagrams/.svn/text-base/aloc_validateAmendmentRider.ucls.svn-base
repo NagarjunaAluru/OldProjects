@@ -1,0 +1,75 @@
+<class-diagram version="1.0.11" icons="true" automaticImage="JPEG" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.action.common.ValidateAmendmentRiderAction" 
+    project="aloc" file="/aloc/src/com/ge/aloc/action/common/ValidateAmendmentRiderAction.java" binary="false">    
+    <position height="231" width="396" x="-60" y="-12"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="2" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.dao.common.IValidateAmendmentRiderDAO" 
+    project="aloc" file="/aloc/src/com/ge/aloc/dao/common/IValidateAmendmentRiderDAO.java" binary="false">    
+    <position height="-1" width="-1" x="89" y="343"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="3" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.dao.impl.common.ValidateAmendmentRiderDAO" 
+    project="aloc" file="/aloc/src/com/ge/aloc/dao/impl/common/ValidateAmendmentRiderDAO.java" binary="false">    
+    <position height="-1" width="-1" x="473" y="345"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="4" corner="BOTTOM_RIGHT" language="java" 
+    name="com.ge.aloc.manager.impl.common.ValidateAmendmentRiderManager" project="aloc" 
+    file="/aloc/src/com/ge/aloc/manager/impl/common/ValidateAmendmentRiderManager.java" binary="false">    
+    <position height="129" width="358" x="371" y="148"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="5" corner="BOTTOM_RIGHT" language="java" 
+    name="com.ge.aloc.manager.common.IValidateAmendmentRiderManager" project="aloc" 
+    file="/aloc/src/com/ge/aloc/manager/common/IValidateAmendmentRiderManager.java" binary="false">    
+    <position height="-1" width="-1" x="476" y="53"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <realization id="6">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <association id="7">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="8" name="validateAmendmentRiderDAO"/>      
+      <multiplicity id="9" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="10">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="11" name="validateAmendmentRiderManager"/>      
+      <multiplicity id="12" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="13">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

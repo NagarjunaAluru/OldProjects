@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/ADHOC
+END
+MyReports.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/ADHOC/MyReports.xsd
+END
+Filter.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/ADHOC/Filter.xsd
+END
+Template.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/ADHOC/Template.xsd
+END
+ADHOCReports.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/ADHOC/ADHOCReports.xsd
+END
+Column.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/ADHOC/Column.xsd
+END
+PublishedReports.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/ADHOC/PublishedReports.xsd
+END

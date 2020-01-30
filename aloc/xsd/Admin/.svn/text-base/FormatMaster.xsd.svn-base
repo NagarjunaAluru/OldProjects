@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/Admin/FormatMaster.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ALOC/Admin/FormatAuditTrailCollection.xsd"
+	 xmlns:ns2="http://treasury.ge.com/schemas/ALOC/Admin/BookMarkMasterCollection.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/Admin/FormatMaster.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd" schemaLocation="../RequestDetails/MsgHeader.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/Admin/FormatAuditTrailCollection.xsd" schemaLocation="FormatAuditTrailCollection.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/Admin/BookMarkMasterCollection.xsd" schemaLocation="BookMarkMasterCollection.xsd"/>
+	<xs:element name="StandardFormat_Master">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Op_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="Save_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="StandardFormat_Id" type="xs:long" minOccurs="0"/>
+				<xs:element name="StandardFormat_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="StandardFormat_Desc" type="xs:string" minOccurs="0"/>
+				<xs:element name="StandardFormat_InstrumentType_Id" type="xs:long" minOccurs="0"/>
+				<xs:element name="StandardFormat_Purpus_Id" type="xs:long" minOccurs="0"/>
+				<xs:element name="StandardFormat_BondType_Id" type="xs:long" minOccurs="0"/>
+				<xs:element name="StandardFormat_SubBondType_Id" type="xs:long" minOccurs="0"/>
+				<xs:element name="StandardFormat_Format" type="xs:string" minOccurs="0"/>
+				<xs:element name="Last_Modified_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element ref="ns0:Msg_Header" minOccurs="0"/>
+				<xs:element ref="ns1:FormatAuditTrailCollection" minOccurs="0"/>
+				<xs:element ref="ns2:BookMarkMaster_Collection" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

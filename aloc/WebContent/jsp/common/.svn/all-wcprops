@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common
+END
+businessLandingPage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/businessLandingPage.jsp
+END
+home.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/home.jsp
+END
+help.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/help.jsp
+END
+includeSectionCommonScripts.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/includeSectionCommonScripts.jsp
+END
+error.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/error.jsp
+END
+ncludeRequestSectionCommonScripts.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/ncludeRequestSectionCommonScripts.jsp
+END
+rolesNotFoundPage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/rolesNotFoundPage.jsp
+END
+advanceCommonSearch.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/advanceCommonSearch.jsp
+END
+linkTo.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/linkTo.jsp
+END
+issuanceAttachmentRefresh.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/issuanceAttachmentRefresh.jsp
+END
+dashboardIncludeScripts.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/dashboardIncludeScripts.jsp
+END
+contactUs.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/contactUs.jsp
+END
+includeCommonScripts.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/includeCommonScripts.jsp
+END
+attachmentRefresh.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/attachmentRefresh.jsp
+END
+login.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/login.jsp
+END
+closureAttachments.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/closureAttachments.jsp
+END
+treasuryLandingPage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/treasuryLandingPage.jsp
+END
+includeRequestCommonScripts.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/includeRequestCommonScripts.jsp
+END
+headerSection.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/headerSection.jsp
+END
+requestsForBidProcessModal.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/requestsForBidProcessModal.jsp
+END
+commonSearch.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/commonSearch.jsp
+END
+siteIncludeScripts.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/siteIncludeScripts.jsp
+END
+footerSection.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/footerSection.jsp
+END

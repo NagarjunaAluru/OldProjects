@@ -1,0 +1,115 @@
+8
+
+dir
+56
+https://openge.ge.com/svn/treasury_aloc/trunk/source/web/sunone_codebase/aloc
+https://openge.ge.com/svn/treasury_aloc
+
+
+
+2014-12-15T21:59:54.823004Z
+55
+ovijays
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+720fd033-fee8-473a-95ce-a3690b27228b
+
+test
+dir
+
+.classpath
+file
+
+
+
+
+2014-12-17T16:05:12.239569Z
+cb276f7903b7c0ba15d0092409bcccf6
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+xjb
+dir
+
+.project
+file
+
+
+
+
+2014-12-17T16:05:12.277569Z
+cb49d4e75649016f09d9408f7491fa75
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+src
+dir
+
+WebContent
+dir
+
+JBoss-pom.xml
+file
+
+
+
+
+2014-12-17T16:05:12.294569Z
+d75015c121406d9f051382496f5bb8ec
+2014-12-15T21:59:54.823004Z
+55
+ovijays
+
+wsdl
+dir
+
+resources
+dir
+
+pom.xml
+file
+
+
+
+
+2014-12-17T16:05:12.312569Z
+90542e99aeede7d515802ab8e097eb55
+2014-12-15T21:59:54.823004Z
+55
+ovijays
+
+uml
+dir
+
+.settings
+dir
+
+xsd
+dir
+
+.pmd
+file
+
+
+
+
+2014-12-17T16:05:12.327569Z
+9aae5fdca277f0373c77d2b1b858e6d3
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+

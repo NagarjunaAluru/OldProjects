@@ -1,0 +1,52 @@
+8
+
+dir
+56
+https://openge.ge.com/svn/treasury_aloc/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/dao/impl/dashboard
+https://openge.ge.com/svn/treasury_aloc
+
+
+
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+720fd033-fee8-473a-95ce-a3690b27228b
+
+DashboardRefDataDAOTest.java
+file
+
+
+
+
+2014-12-17T16:03:46.366569Z
+95a26d1c648700200c085a20f8f197f8
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+DashboardDAOTest.java
+file
+
+
+
+
+2014-12-17T16:03:46.373569Z
+13f6e74810a0833cd4ffa249fe55f00b
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+

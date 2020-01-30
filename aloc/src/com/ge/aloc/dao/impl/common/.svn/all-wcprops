@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/dao/impl/common
+END
+HomePageDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/dao/impl/common/HomePageDAO.java
+END
+ValidateCloseTransactionDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/dao/impl/common/ValidateCloseTransactionDAO.java
+END
+ValidateAmendmentRiderDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/dao/impl/common/ValidateAmendmentRiderDAO.java
+END

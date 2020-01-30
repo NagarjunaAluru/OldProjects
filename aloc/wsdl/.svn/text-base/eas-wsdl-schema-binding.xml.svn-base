@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jaxb:bindings version="2.0" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+   xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" 
+   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+   xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+   xmlns:inheritance="http://jaxb2-commons.dev.java.net/basic/inheritance">
+   
+   <jaxb:bindings schemaLocation="EAS.wsdl#types?schema1" node="/xs:schema">
+   		 <jaxb:globalBindings 
+	         collectionType="java.util.ArrayList" 
+	         generateValueClass="true"
+	         generateElementProperty="false">
+	         <jaxb:serializable uid="2" />
+	      </jaxb:globalBindings>
+      
+		<!-- <jaxb:schemaBindings>      
+         	<jaxb:package name="com.ge.aloc.eas.service.client.modal"/>
+      </jaxb:schemaBindings> -->
+   </jaxb:bindings>
+</jaxb:bindings>

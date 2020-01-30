@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+
+    <field name="blockBUCSelectedVal">
+		<field-validator type="fieldexpression">
+		<param name="expression"><![CDATA[(blockBUCSelectedVal !=null && blockBUCSelectedVal !="")]]></param>
+      	<message key="error.required.blockBUCMgmt.bucSelection" />
+      	</field-validator>
+    </field>
+
+	<field name="businessUnitCode.BUC">
+		<field-validator type="fieldexpression">
+		<param name="expression"><![CDATA[(businessUnitCode.BUC !=null && businessUnitCode.BUC !="")]]></param>
+      	<message key="error.required.blockBUCMgmt.buc" />
+      	</field-validator>
+    </field>
+    
+    <field name="businessUnitCode.ADN">
+		<field-validator type="fieldexpression">
+		<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@validateSelectedADN(blockBUCSelectedVal,businessUnitCode.ADN)</param>
+      	<message key="error.required.blockBUCMgmt.adn" />
+      	</field-validator>
+    </field>
+    
+    <field name="businessUnitCode.notes">
+		<field-validator type="fieldexpression">
+		<param name="expression"><![CDATA[@com.ge.aloc.util.ALOCCommonHelper@validateSelectedBUCBlockedReason(blockBUCSelectedVal,businessUnitCode.ADN,businessUnitCode.notes)]]></param>
+      	<message key="error.required.blockBUCMgmt.notes" />
+      	</field-validator>
+    </field>	
+    
+    <field name="reasonForBlock">
+		<field-validator type="fieldexpression">
+		<param name="expression"><![CDATA[@com.ge.aloc.util.ALOCCommonHelper@validateSelectedADNBlockedReason(blockBUCSelectedVal,businessUnitCode.ADN,reasonForBlock)]]></param>
+      	<message key="error.required.blockBUCMgmt.notes" />
+      	</field-validator>
+    </field>		
+</validators>

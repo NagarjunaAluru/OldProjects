@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/apm
+END
+calculateFeeExpandTable.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/apm/calculateFeeExpandTable.jsp
+END
+fxRateperiodSelect.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/apm/fxRateperiodSelect.jsp
+END
+readOnlyPaymentPeriodTwoRow.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/apm/readOnlyPaymentPeriodTwoRow.jsp
+END
+readOnlyCurrencySetupRow.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/apm/readOnlyCurrencySetupRow.jsp
+END
+requestsFullViewHeader.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/apm/requestsFullViewHeader.jsp
+END
+apmThirdPartyStatusMsg.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/apm/apmThirdPartyStatusMsg.jsp
+END
+feeSummaryQuickView.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/apm/feeSummaryQuickView.jsp
+END
+apmQuickView.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/apm/apmQuickView.jsp
+END
+readOnlyPaymentPeriodRow.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/apm/readOnlyPaymentPeriodRow.jsp
+END
+currencySetupDelPopups.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/apm/currencySetupDelPopups.jsp
+END
+bucADNupdateRequest.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/apm/bucADNupdateRequest.jsp
+END
+fxRateHistory.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/apm/fxRateHistory.jsp
+END
+currencySetup.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/apm/currencySetup.jsp
+END
+addCurrencySetupRow.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/apm/addCurrencySetupRow.jsp
+END
+showFXRates.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/apm/showFXRates.jsp
+END
+paymentPeriod.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/apm/paymentPeriod.jsp
+END
+addPaymentPeriodRow.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/apm/addPaymentPeriodRow.jsp
+END
+apmCalculateFeeTable.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/request/apm/apmCalculateFeeTable.jsp
+END

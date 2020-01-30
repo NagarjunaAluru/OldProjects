@@ -1,0 +1,2420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adhoc-field-config
+	xmlns="http:///treasury.ge.com/schemas/ALOC/adhoc-report-field-config"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http:///treasury.ge.com/schemas/ALOC/adhoc-report-field-config adhoc-report-field-config.xsd ">
+	
+<!-- ######  DO NOT INCLUDE . OPERATOR/SYMBOL IN ID -->	
+<!-- Section : Transaction Parties -->
+	<section id="common" name="ALOC Record Number" >
+		<field id="alocRecordNo" name="ALOC Record Number" instrumentIds="1 2 3 4 5 6">
+			<!-- <operators>equal</operators> -->
+			<operators>like</operators>
+			<operators>greater than</operators>
+			<!-- <operators>greater than or equal</operators> -->
+			<!-- <operators>in between</operators> -->
+			<operators>less than</operators>
+			<!-- <operators>less than or equal</operators> -->
+		</field>
+	</section>
+<!-- Section : Transaction Parties -->
+	<section id="tp" name="Transaction Parties"  instrumentIds="1 2 5">
+		<field id="tp_siteName" name="Site Name" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field>
+		<field id="tp_instrumentPurposeId" name="Instrument purpose" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field>
+		<!-- <field id="tp_instrumentPurposeOther" name="Other" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field> -->
+		<field id="tp_triPartyRequestFlag" name="Is this a Tri-Party request?" instrumentIds="1 2 5">
+			<operators>equal</operators>
+		</field>
+		<!-- <field id="tp_requiresEdits" name="Fields in this section requires edits by Requestor" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field>
+		<field id="tp_sendBackNotes" name="Send back notes (required)" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field> -->
+		
+		<!-- Sub Section of Transaction Parties : Tri Party Applicant-->
+		<field id="tp_tpaPrivateLabelFlag" name="Is this a Private label ?" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field>
+		<field id="tp_tpaName" name="Tri Party Applicant Name" instrumentIds="1 2 5">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="tp_tpaAddress1" name="Tri Party Applicant Address 1" instrumentIds="1 2 5">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="tp_tpaAddress2" name="Tri Party Applicant Address 2" instrumentIds="1 2 5">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="tp_tpaCity" name="Tri Party Applicant City" instrumentIds="1 2 5">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="tp_tpaStateProvince" name="Tri Party Applicant State/Province" instrumentIds="1 2 5">
+			<operators>equal</operators>
+		</field>
+		<field id="tp_tpaZIP_PostalCode" name="Tri Party Applicant ZIP/Postal code" instrumentIds="1 2 5">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="tp_tpaCountry" name="Tri Party Applicant Country" instrumentIds="1 2 5">
+			<operators>equal</operators>
+		</field>
+		<!--  
+		<field id="tp_tpa" name="Save for future use" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		-->
+		<!-- <field id="tp_tpaRequiresEdits" name="Fields in this section requires edits by Requestor" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field>
+		<field id="tp_tpaSendBackNotes" name="Send back notes (required)" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field> -->
+		
+		<!-- Sub Section of Transaction Parties : Applicant-->
+		<field id="tp_applicantLeName" name="Legal entity name" instrumentIds="1 2 5">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="tp_applicantLeGoldId" name="Legal entity GOLD ID" instrumentIds="1 2 5">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="tp_applicantTpBuContactPersonFirstName" name="Additional Business contact First name" instrumentIds="1 2 5">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<!-- <field id="tp_applicantTpBuContactPersonLastName" name="Additional Business contact Last name" instrumentIds="1 2 5">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field> -->
+		<field id="tp_applicantSsoId" name="Additional Business contact SSO:" instrumentIds="1 2 5">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<!--  
+		<field id="tp_applicantApplicantName" name="" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="tp_applicantApplicantAddress" name="" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		-->
+		<field id="tp_applicantApplicantName" name="Applicant name" instrumentIds="1 2 5">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="tp_applicantAddress1" name="Applicant Address 1" instrumentIds="1 2 5">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="tp_applicantAddress2" name="Applicant Address 2" instrumentIds="1 2 5">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="tp_applicantCity" name="Applicant City" instrumentIds="1 2 5">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="tp_applicantStateProvince" name="Applicant State/Province" instrumentIds="1 2 5">
+			<operators>equal</operators>
+		</field>
+		<field id="tp_applicantZIPPostalCode" name="Applicant ZIP/Postal code" instrumentIds="1 2 5">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="tp_applicantCountry" name="Applicant Country" instrumentIds="1 2 5">
+			<operators>equal</operators>
+		</field>
+		<!-- 
+		<field id="tp_applicantFutureUseFlag" name="Save for future use" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		-->
+		<field id="tp_applicantRefId" name="GE Applicant reference" instrumentIds="1 2 5">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<!-- 
+		<field id="tp_applicant" name="GE Applicant reference <2> - optional" instrumentIds="1 2 5">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="tp_applicant" name="GE Applicant reference <3> - optional" instrumentIds="1 2 5">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		 -->
+		<field id="tp_applicantBuUnitCode" name="Business unit code (BUC)" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>	
+		</field>
+		<field id="tp_applicantAccDistNo" name="Accounting distribution number (ADN)" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>			
+		</field>
+		<field id="tp_applicantCsoNo" name="Credit support obligation (CSO) number" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>			
+		</field>
+		<field id="tp_applicantCsoApprovalDt" name="CSO approval date" instrumentIds="1 2" dataType="date">
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+			<operators>in between</operators>
+			<operators>less than</operators>
+			<operators>less than or equal</operators>		
+		</field>
+		<!-- <field id="tp_applicantCertifyFlag" name="I agree" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field>
+		<field id="tp_applicantRequiresEdits" name="Fields in this section requires edits by Requestor" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field>
+		<field id="tp_applicantSendBackNotes" name="Send back notes (required)" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field> -->
+			
+		<!-- Sub Section of Transaction Parties : Customer/Beneficiary-->
+		<!-- 
+		<field id="tp_cbCustomerName" name="Customer/Beneficiary name" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="tp_cbCustomerAddress" name="Customer/Beneficiary address" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		-->
+		<field id="tp_cbName" name="Customer/Beneficiary Name" instrumentIds="1 2 5">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="tp_cbAddress1" name="Customer/Beneficiary Address 1" instrumentIds="1 2 5">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="tp_cbAddress2" name="Customer/Beneficiary Address 2" instrumentIds="1 2 5">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="tp_cbCity" name="Customer/Beneficiary City" instrumentIds="1 2 5">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="tp_cbStateProvince" name="Customer/Beneficiary State/Province" instrumentIds="1 2 5">
+			<operators>equal</operators>
+		</field>
+		<field id="tp_cbZIPPostalCode" name="Customer/Beneficiary ZIP/Postal code" instrumentIds="1 2 5">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="tp_cbCountry" name="Customer/Beneficiary Country" instrumentIds="1 2 5">
+			<operators>equal</operators>
+		</field>
+		<!-- 
+		<field id="tp_cbFutureUseFlag" name="Save for future use" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		-->
+		<field id="tp_cbRefId" name="Customer/Beneficiary reference" instrumentIds="1 2 5">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<!-- 
+		<field id="tp_cb" name="Customer/Beneficiary reference <2> - optional" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="tp_cb" name="Customer/Beneficiary reference <3> - optional" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		 -->
+		<!-- <field id="tp_cbRequiresEdits" name="Fields in this section requires edits by Requestor" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field>
+		<field id="tp_cbSendBackNotes" name="Send back notes (required)" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field> -->
+	
+	</section>
+	 
+<!-- Section : Project Description -->	
+	<section id="pd" name="Project Description"  instrumentIds="1 2">
+		<field id="pd_projDesc" name="Project description" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="pd_bidDt" name="Bid date" instrumentIds="1 2" dataType="date">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+			<operators>in between</operators>
+		</field>
+		<field id="pd_bidProposalNo" name="Bid/Proposal number" instrumentIds="1 2">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+			<operators>in between</operators>
+		</field>
+		<field id="pd_contractNo" name="Contract number" instrumentIds="1 2">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+			<operators>in between</operators>
+		</field>
+		<field id="pd_contractDt" name="Contract date" instrumentIds="1 2" dataType="date">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+			<operators>in between</operators>
+		</field>
+		<field id="pd_bidCurrName" name="Bid/Contract currency" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="pd_bidContractAmt" name="Bid/Contract amount" instrumentIds="1 2">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+			<operators>in between</operators>
+		</field>
+		<!-- <field id="pd_requiresEdits" name="Fields in this section requires edits by Requestor" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field>
+		<field id="pd_sendBackNotes" name="Send back notes (required)" instrumentIds="1 2">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+			<operators>in between</operators>
+		</field> -->
+	</section>
+	
+<!-- Section : Instrument Details -->	
+	<section id="id" name="Instrument Details"  instrumentIds="1 2">
+		<field id="id_issuanceCountry" name="Country of issuance" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field>
+		<field id="id_instrumentCurrency" name="Currency of instrument" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="id_instrumentAmt" name="Amount of instrument" instrumentIds="1 2">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+			<operators>in between</operators>
+		</field>
+		<field id="id_USDEquivalent" name="Approximate USD instrument amount" instrumentIds="1 2">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+			<operators>in between</operators>
+		</field>
+		<!-- 
+		<field id="id_" name="<CCY> - <Instrument Amount in Words Value>" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		 -->
+		<field id="id_percentValueOfBid" name="Percentage of value of total bid or contract amount" instrumentIds="1 2">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+			<operators>in between</operators>
+		</field>
+		<field id="id_maxPossibleExpo" name="Maximum possible exposure" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="id_issueDt" name="Issue date" instrumentIds="1 2" dataType="date">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+			<operators>in between</operators>
+		</field>
+		<field id="id_expiryDt" name="Expiration date" instrumentIds="1 2" dataType="date">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+			<operators>in between</operators>
+		</field>
+		<field id="id_econoExpiryDt" name="Economic expiration date" instrumentIds="1 2" dataType="date">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+			<operators>in between</operators>
+		</field>
+		<field id="id_autoExtendFlag" name="Is an auto extend clause present?" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field>
+		<field id="id_nonRenewalPeriod" name="Select number of days in non-renewal notice period" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field>
+		<field id="id_otherTimeframe" name="Other time frame" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="id_initialExpiryDt" name="Initial expiration date" instrumentIds="1 2" dataType="date">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+			<operators>in between</operators>
+		</field>
+		<field id="id_autoIncDecFlag" name="Auto-increase/decrease" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field>
+		<!-- <field id="id_action" name="Action" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field> -->
+		<field id="id_autoIncIndicator" name="Auto-increase/decrease indicator" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field>
+		<field id="id_autoIncAmt" name="Auto-increase/decrease amount" instrumentIds="1 2">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+			<operators>in between</operators>
+		</field>
+		<field id="id_autoIncDt" name="Auto-increase/decrease date" instrumentIds="1 2" dataType="date">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+			<operators>in between</operators>
+		</field>
+		<!-- <field id="id_requiresEdits" name="Fields in this section requires edits by Requestor" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field>
+		<field id="id_sendBackNotes" name="Send back notes (required)" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field> -->
+	</section>
+
+<!-- Section : Instrument Risk -->	
+	<section id="ir" name="Instrument Risk"  instrumentIds="1 2">
+		<field id="ir_notiClauseFlag" name="Is there a notification clause in this instrument format" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field>
+		<field id="ir_curePeriodFlag" name="Is there a cure period in this instrument format" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field>
+		<field id="ir_noOfDays" name="Number of days in cure period" instrumentIds="1 2">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+			<operators>in between</operators>
+		</field>
+		<field id="ir_drDownApprFlag" name="Instrument require GE approval prior to draw down" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field>
+		<field id="ir_contrReqFlag" name="Instrument comply with the contract requirements" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field>
+		<field id="ir_contrReqReason" name="Explain why this instrument does not comply" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<!-- <field id="ir_requiresEdits" name="Fields in this section requires edits by Requestor" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field>
+		<field id="ir_sendBackNotes" name="Send back notes (required)" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field> -->
+	</section>
+	
+<!-- Section : Instrument Reporting Attributes -->	
+	<section id="ira" name="Instrument Reporting Attributes"  instrumentIds="1 2">
+		<field id="ira_poleName" name="Pole name" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="ira_buProjId" name="Business Project ID" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="ira_billingRef" name="Billing reference" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<!-- 
+		<field id="ira_siteCustomValue1" name="<Site custom value 1> - optional" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="ira_siteCustomValue2" name="<Site custom value 2> - optional" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="ira_siteCustomValue3" name="<Site custom value 3> - optional" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		 -->
+		<!-- <field id="ira_requiresEdits" name="Fields in this section requires edits by Requestor" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="ira_sendBackNotes" name="Send back notes (required)" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field> -->
+	</section>
+
+<!-- Section : Delivery Instructions -->	
+	<section id="di" name="Delivery Instructions"  instrumentIds="1 2 3 5 6">
+		<field id="di_deliveryType" name="Delivery Type" instrumentIds="1 2 3 5 6">
+			<operators>equal</operators>
+		</field>
+		<field id="di_address1" name="Address 1" instrumentIds="1 2 3 5 6">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="di_address2" name="Address 2" instrumentIds="1 2 3 5 6">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="di_city" name="City" instrumentIds="1 2 3 5 6">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="di_stateProvince" name="State/Province" instrumentIds="1 2 3 5 6">
+			<operators>equal</operators>
+		</field>
+		<field id="di_ZIPPostalcode" name="ZIP/Postal code" instrumentIds="1 2 3 5 6">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="di_country" name="Country" instrumentIds="1 2 3 5 6">
+			<operators>equal</operators>
+		</field>
+		<field id="di_companyName" name="Company name" instrumentIds="1 2 3 5 6">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="di_recipientFirstName" name="Recipient's first name" instrumentIds="1 2 3 5 6">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="di_recipientLastName" name="Recipient's last name" instrumentIds="1 2 3 5 6">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="di_title" name="Title - optional" instrumentIds="1 2 3 5 6">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="di_phoneNo" name="Phone number" instrumentIds="1 2 3 5 6">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<!-- <field id="di_specialInstructions" name="Special instructions - optional" instrumentIds="1 2 3 5 6">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field> -->
+		<field id="di_deliveryDesignationFlag" name="Is the delivery or pick up by" instrumentIds="1 2 5">
+			<operators>equal</operators>
+		</field>
+		<!-- <field id="di_additionalDeliveryInfo" name="Additional delivery information" instrumentIds="1 2 3 5">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field> -->
+		<field id="di_ecopyMyself" name="Send electronic copy to myself" instrumentIds="1 2 3 5 6">
+			<operators>equal</operators>
+		</field>
+		<field id="di_ecopyOtherGEPerson" name="Send electronic copy to other GE recipient" instrumentIds="1 2 3 5 6">
+			<operators>equal</operators>
+		</field>
+		<field id="di_geRecipient" name="GE recipient" instrumentIds="1 2 3 5 6">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="di_recipientEmail" name="GE recipient email" instrumentIds="1 2 3 5 6">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<!-- <field id="di_requiresEdits" name="Fields in this section requires edits by Requestor" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field>
+		<field id="di_sendBackNotes" name="Send back notes (required)" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field> -->
+		<field id="di_instrumentType" name="Instrument type" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field>
+		<field id="di_governingRuleId" name="Governing rules" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field>
+		<field id="di_otherGoverningRuleId" name="Other governing rules" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="di_pricingSubject" name="Is pricing subject to Request for Proposal (RFP) in place?" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field>
+	</section>
+
+<!-- Section : Standby Letter of Credit Conditions  -->	
+	<section id="slcc" name="Standby Letter of Credit Conditions"  instrumentIds="2">
+		<!-- <field id="slcc_requiresEdits" name="Fields in this section requires edits by Requestor" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field>
+		<field id="slcc_sendBackNotes" name="Send back notes (required)" instrumentIds="1 2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field> -->
+		<field id="slcc_USIssuanceFlag" name="Is Standby Letter of Credit (SBLC) to be issued in the U.S.?" instrumentIds="2">
+			<operators>equal</operators>
+		</field>
+		<field id="slcc_creditReqCnfmFlag" name="Does the U.S. SBLC require confirmation ?" instrumentIds="2">
+			<operators>equal</operators>
+		</field>
+		<field id="slcc_creditCnfmCountry" name="What country is SBLC to be confirmed in?" instrumentIds="2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="slcc_creditReqAdviseFlag" name="Does the U.S. SBLC require advisement?" instrumentIds="2">
+			<operators>equal</operators>
+		</field>
+		<field id="slcc_creditAdviseCountry" name="What country is the U.S. SBLC to be advised in?" instrumentIds="2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="slcc_creditIssuanceCountry" name="What country outside the U.S. is SBLC to be issued in ?" instrumentIds="2">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+	</section>
+	    
+
+<!-- Section : Bond Type -->	
+	    <section id="bt" name="Bond Type" instrumentIds="3">
+	    	<field id="bt_siteName" name="Site" instrumentIds="3">
+	    		<operators>equal</operators>
+	    	</field>
+	    	<field id="bt_bondType" name="Bond type" instrumentIds="3">
+	    		<operators>equal</operators>
+	    	</field>
+	    	<field id="bt_bondSubType" name="Bond sub-type" instrumentIds="3">
+	    		<operators>equal</operators>
+	    	</field>
+	    </section>    
+	    
+<!-- Section : Principal -->   
+	 <section id="principal" name="Principal" instrumentIds="3 6">
+	    	<field id="principal_leName" name="Legal Entity name" instrumentIds="3 6">
+	    		<operators>equal</operators>
+	    		<operators>like</operators>
+	    	</field>
+	    	<field id="principal_leGoldId" name="Legal Entity GOLD ID" instrumentIds="3 6">
+	    		<operators>equal</operators>
+	    		<operators>like</operators>
+	    	</field>
+	    	<!-- <field id="principal_principleInfoFlag" name="Use for Principal information below" instrumentIds="3">
+	    		<operators>equal</operators>
+	    		<operators>like</operators>
+	    	</field> -->
+	    	<field id="principal_geDivisionName" name="GE division name" instrumentIds="3 6">
+	    		<operators>equal</operators>
+	    	</field>
+	    	<field id="principal_name" name="Principal Name" instrumentIds="3 6">
+	    		<operators>equal</operators>
+	    		<operators>like</operators>
+	    	</field>
+	    	<field id="principal_address1" name="Principal Address 1" instrumentIds="3 6">
+	    		<operators>equal</operators>
+	    		<operators>like</operators>
+	    	</field>
+	    	<field id="principal_address2" name="Principal Address 2" instrumentIds="3 6">
+	    		<operators>equal</operators>
+	    		<operators>like</operators>
+	    	</field>
+	    	<field id="principal_city" name="Principal City" instrumentIds="3 6">
+	    		<operators>equal</operators>
+	    		<operators>like</operators>
+	    	</field>
+	    	<field id="principal_stateProvince" name="Principal State/Province" instrumentIds="3 6">
+	    		<operators>equal</operators>
+	    	</field>
+	    	<field id="principal_ZIPPostalCode" name="Principal ZIP/Postal code" instrumentIds="3 6">
+	    		<operators>equal</operators>
+	    		<operators>like</operators>
+	    	</field>
+	    	<field id="principal_country" name="Principal Country" instrumentIds="3 6">
+	    		<operators>equal</operators>
+	    	</field>
+	    	<!-- 
+	    	<field id="principal_futureUseFlag" name="Save for future use" instrumentIds="3 6">
+	    		<operators>equal</operators>
+	    		<operators>like</operators>
+	    	</field>
+	    	 -->
+	    	<field id="principal_stateOfInc" name="State of incorporation" instrumentIds="3 6">
+	    		<operators>equal</operators>
+	    	</field>
+	    	<field id="principal_businessId" name="Business ID" instrumentIds="3">
+	    		<operators>equal</operators>
+	    		<operators>like</operators>
+	    	</field>
+	    	<field id="principal_refValue1" name="GE Principal reference" instrumentIds="3">
+	    		<operators>equal</operators>
+	    		<operators>like</operators>
+	    	</field>
+	    	<!-- 
+	    	<field id="principal_refValue2" name="GE Principal reference <2> - optional" instrumentIds="3">
+	    		<operators>equal</operators>
+	    		<operators>like</operators>
+	    	</field>
+	    	<field id="principal_refValue3" name="GE Principal reference <3> - optional" instrumentIds="3">
+	    		<operators>equal</operators>
+	    		<operators>like</operators>
+	    	</field>
+	    	 -->
+	    	<field id="principal_buUnitcd" name="Principal Business unite code (BUC)" instrumentIds="3">
+	    		<operators>equal</operators>
+	    		<operators>like</operators>
+	    	</field>
+	    	<field id="principal_accDistNo" name="Principal accounting distribution number (ADN)" instrumentIds="3">
+	    		<operators>equal</operators>
+	    		<operators>like</operators>
+	    	</field>
+	 </section> 
+
+<!-- Section : Obligee -->    
+	 <section id="obl" name="Obligee" instrumentIds="3 6">
+	 	<field id="obl_name" name="Obligee Name" instrumentIds="3 6">
+	 		<operators>equal</operators>
+	 		<operators>like</operators>
+	 	</field>
+	    <field id="obl_address1" name="Obligee Address 1" instrumentIds="3 6">
+	 		<operators>equal</operators>
+	 		<operators>like</operators>
+	 	</field>
+	    <field id="obl_address2" name="Obligee Address 2" instrumentIds="3 6">
+	 		<operators>equal</operators>
+	 		<operators>like</operators>
+	 	</field>
+	    <field id="obl_city" name="Obligee City" instrumentIds="3 6">
+	 		<operators>equal</operators>
+	 		<operators>like</operators>
+	 	</field>
+	    <field id="obl_stateProvince" name="Obligee State/Province" instrumentIds="3 6">
+	 		<operators>equal</operators>
+	 	</field>
+	    <field id="obl_ZIPPostalCode" name="Obligee ZIP/Postal code" instrumentIds="3 6">
+	 		<operators>equal</operators>
+	 		<operators>like</operators>
+	 	</field>
+	    <field id="obl_country" name="Obligee Country" instrumentIds="3 6">
+	 		<operators>equal</operators>
+	 	</field>
+	 	<!-- 
+	    <field id="obl_futureUseFlag" name="Save for future use" instrumentIds="3">
+	 		<operators>equal</operators>
+	 		<operators>like</operators>
+	 	</field>
+	 	 -->
+	 	<field id="obl_stateOfInc" name="State of incorporation" instrumentIds="3">
+	 		<operators>equal</operators>
+	 	</field>
+	 	<!-- <field id="obl_bussinessId" name="Business ID" instrumentIds="3">
+	 		<operators>equal</operators>
+	 		<operators>like</operators>
+	 	</field> -->
+	    <field id="obl_refValue1" name="Obligee  reference" instrumentIds="3">
+	 		<operators>equal</operators>
+	 		<operators>like</operators>
+	 	</field>
+	 	<!-- 
+	    <field id="obl_refValue2" name="Obligee  reference <2> - optional" instrumentIds="3">
+	 		<operators>equal</operators>
+	 		<operators>like</operators>
+	 	</field>
+	    <field id="obl_refValue3" name="Obligee  reference <3> - optional" instrumentIds="3">
+	 		<operators>equal</operators>
+	 		<operators>like</operators>
+	 	</field>
+	     -->
+	 </section>
+	    
+<!-- Section : Bond Requestor -->
+	<section id="br" name="Bond Requestor" instrumentIds="3">
+		<field id="br_contactPerson" name="Contact Person" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="br_name" name="Name" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="br_emailAddress" name="Email address" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="br_phoneNo" name="Phone number" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="br_faxNo" name="Fax number" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<!-- <field id="br_requiresEdits" name="Fields in this section requires edits by Requestor" instrumentIds="3">
+			<operators>equal</operators>
+		</field>
+		<field id="br_sendBackNotes" name="Send back notes (required)" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field> -->
+	</section>
+	
+<!-- Section : Requestor Mailing Address -->
+	<section id="rma" name="Requestor Mailing Address" instrumentIds="3">
+		<field id="rma_companyName" name="Company Name" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="rma_contactFirstName" name="Contact first name" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="rma_contactLastName" name="Contact last Name" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<!-- <field id="rma_name" name="Name" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field> -->
+		<field id="rma_address1" name="Address 1" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="rma_address2" name="Address 2" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="rma_city" name="City" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="rma_stateProvince" name="State/Province" instrumentIds="3">
+			<operators>equal</operators>
+		</field>
+		<field id="rma_ZIPPostalCode" name="ZIP/Postal code" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="rma_country" name="Country" instrumentIds="3">
+			<operators>equal</operators>
+		</field>
+		<field id="rma_countryOfInc" name="Country of incorporation" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="rma_phoneNumber" name="Phone number" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+	</section>
+	
+<!-- Section : Bond Information -->
+	<section id="bi" name="Bond Information" instrumentIds="3">
+		<field id="bi_projDesc" name="Project description" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="bi_invitationOrBidNo" name="Project, Invitation or Bid Number" instrumentIds="3">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="bi_obligationCity" name="City of Obligation" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="bi_obligationCountryOrState" name="State/Country of Obligation" instrumentIds="3">
+			<operators>equal</operators>
+		</field>
+		<field id="bi_effectiveDt" name="Effective date" instrumentIds="3" dataType="date">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="bi_expirationDt" name="Expiration date" instrumentIds="3" dataType="date">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="bi_contractDt" name="Contract date" instrumentIds="3" dataType="date">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="bi_estCompletionDt" name="Estimated completion date" instrumentIds="3" dataType="date">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="bi_currencyCd" name="Currency code" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="bi_performanceBondAmt" name="performance Bond amount" instrumentIds="3">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<!-- 
+		<field id="bi_" name="<CCY> - <Performance Bond Amount in Words Value>" instrumentIds="3">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		 -->
+		<field id="bi_contractAmt" name="Contract amount" instrumentIds="3">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="bi_contractCurName" name="Contract currency" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="bi_USDcontractAmt" name="USD contract amount" instrumentIds="3">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="bi_liquidatedDamages" name="Liquidated damages (How much per day?)" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="bi_warrantyTerm" name="Warranty term (months)" instrumentIds="3">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="bi_needByDt" name="Need by date" instrumentIds="3" dataType="date">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="bi_otherInfo" name="Other information" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="bi_bondFormType" name="Type of bond form" instrumentIds="3">
+			<operators>equal</operators>
+		</field>
+		<!-- <field id="bi_pole" name="Pole" instrumentIds="3">
+			<operators>equal</operators>
+		</field> -->
+		<!-- <field id="bi_requiresEdits" name="Fields in this section requires edits by Requestor" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="bi_sendBackNotes" name="Send back notes (required)" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field> -->
+	</section>
+
+
+<!-- Section : Court Bond Details -->
+	<section id="cbd" name="Court Bond Details" instrumentIds="3">
+		<!-- <field id="cbd_issuanceCountry" name="Country of issuance" instrumentIds="3">
+			<operators>equal</operators>
+		</field> -->
+		<field id="cbd_courtOfJurisdiction" name="Court of jurisdiction" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="cbd_county" name="County" instrumentIds="3">
+			<operators>equal</operators>
+		</field>
+		<field id="cbd_state" name="State" instrumentIds="3">
+			<operators>equal</operators>
+		</field>
+		<field id="cbd_caseNumber" name="Case number" instrumentIds="3">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="cbd_dateFiled" name="Date filed" instrumentIds="3" dataType="date">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<!-- <field id="cbd_judgementAmtCur" name="Judgement amount currency" instrumentIds="3">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field> -->
+		<field id="cbd_judgementAmount" name="Judgement amount" instrumentIds="3">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="cbd_bondCurrency" name="Bond currency" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="cbd_bondAmount" name="Bond amount" instrumentIds="3">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="cbd_USEquivalentBondAmt" name="U.S. equivalent bond amount" instrumentIds="3">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="cbd_effectiveDate" name="Effective date" instrumentIds="3" dataType="date">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="cbd_needByDate" name="Need by date" instrumentIds="3" dataType="date">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="cbd_courtOtherInfo" name="Other information" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+	</section>	
+	    
+<!-- Section : Attorney Information -->
+	<section id="ai" name="Attorney Information" instrumentIds="3">
+		<field id="ai_lawFirmName" name="Law firm name" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>	    
+	    <field id="ai_attorneyAddress1" name="Attorney address 1" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>	    
+	    <field id="ai_attorneyAddress2" name="Attorney address 2 - optional" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>	    
+	    <field id="ai_attorneyCity" name="Attorney city" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>	    
+	    <field id="ai_attorneyState" name="Attorney state/Province" instrumentIds="3">
+			<operators>equal</operators>
+		</field>	    
+		<field id="ai_attorneyCountry" name="Attorney Country" instrumentIds="3">
+			<operators>equal</operators>
+		</field>
+	    <field id="ai_attorneyZIPCode" name="Attorney ZIP/Postal code" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>	    
+	    <field id="ai_attorneyPhoneNum" name="Attorney phone number" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>	    
+	    <field id="ai_attorneyFaxNum" name="Attorney fax number" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>	    
+	    <field id="ai_attorneyEmail" name="Attorney email" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>	    
+	    <!-- <field id="ai_requiresEdits" name="Fields in this section requires edits by Requestor" instrumentIds="3">
+			<operators>equal</operators>
+		</field>	    
+	    <field id="ai_sendBackNotes" name="Send back notes (required)" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field> -->	    
+	</section>
+	    
+<!-- Section : Bid Bond -->
+	<section id="bb" name="Bid Bond" instrumentIds="3">
+		<field id="bb_exactProjDesc" name="Exact Project Description" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>		     
+	    <field id="bb_invitationOrBidNo" name="Project, Invitation or Bid Number" instrumentIds="3">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>		     
+	    <field id="bb_obligationCity" name="City of Obligation" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>		     
+	    <field id="bb_obligationCountryOrstate" name="State/Country of Obligation" instrumentIds="3">
+			<operators>equal</operators>
+		</field>		     
+	    <field id="bb_bidDt" name="Bid Date" instrumentIds="3" dataType="date">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>		     
+	    <field id="bb_estStartDt" name="Estimated Start Date" instrumentIds="3" dataType="date">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>		     
+	    <field id="bb_estCompletionDt" name="Estimated Completion Date" instrumentIds="3" dataType="date">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>		     
+	    <field id="bb_estBidAmount" name="Estimated Bid Amount" instrumentIds="3">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>		     
+	    <field id="bb_bidBondAmount" name="Bid Bond Amount" instrumentIds="3">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>		     
+	    <field id="bb_USDBidBondAmt" name="USD Bid Bond Amount" instrumentIds="3">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>		     
+	    <field id="bb_currencyCd" name="Currency Code" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>		     
+	    <field id="bb_warrantyTerm" name="Warranty Term (Months)" instrumentIds="3">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>		     
+	    <field id="bb_needByDt" name="Need By Date" instrumentIds="3" dataType="date">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>		     
+	    <field id="bb_otherInfo" name="Other Information" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>		     
+	    <field id="bb_bondFormType" name="Type of Bond Form" instrumentIds="3">
+			<operators>equal</operators>
+		</field>		     
+	</section>    
+
+<!-- Section : Contract Bond -->	    
+	<section id="cb" name="Contract Bond" instrumentIds="3">
+		<field id="cb_exactProjDesc" name="Exact Project Description" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="cb_invitationOrBidNo" name="Project, Invitation or Bid Number" instrumentIds="3">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="cb_obligationCity" name="City of Obligation" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="cb_obligationCountryOrstate" name="State/Country of Obligation" instrumentIds="3">
+			<operators>equal</operators>
+		</field>
+		<field id="cb_effectiveDate" name="Effective Date" instrumentIds="3" dataType="date">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="cb_expirationDate" name="Expiration Date" instrumentIds="3" dataType="date">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="cb_contractDate" name="Contract Date" instrumentIds="3" dataType="date">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="cb_estCompletionDate" name="Estimated Completion Date" instrumentIds="3" dataType="date">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="cb_perfBondAmount" name="Performance Bond Amount" instrumentIds="3">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="cb_currencyCode" name="Currency Code" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="cb_contractAmount" name="Contract Amount" instrumentIds="3">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="cb_USDContractAmount" name="USD Contract Amount" instrumentIds="3">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="cb_liquidatedDamages" name="Liquidated Damages (How much per pay?)" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="cb_warrantyTerm" name="Warranty Term (Months)" instrumentIds="3">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="cb_needByDate" name="Need By Date" instrumentIds="3" dataType="date">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="cb_otherInfo" name="Other Information" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="cb_bondFormType" name="Type of Bond Form" instrumentIds="3">
+			<operators>equal</operators>
+		</field>		
+	</section>
+	
+<!-- Section : Custom Bond -->	    
+	<section id="cstmb" name="Custom Bond" instrumentIds="3">		
+		<field id="cstmb_description" name="Description" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="cstmb_importer" name="Importer" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="cstmb_activityCd" name="Activity Code" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="cstmb_bondAmount" name="Bond Amount" instrumentIds="3">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="cstmb_USDbondAmount" name="USD Bond Amount" instrumentIds="3">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="cstmb_currencyCd" name="Currency Code" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="cstmb_effectiveDate" name="Desired Effective Date" instrumentIds="3" dataType="date">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="cstmb_expirationDate" name="Desired Expiration Date" instrumentIds="3" dataType="date">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="cstmb_obligationState" name="State of Obligation" instrumentIds="3">
+			<operators>equal</operators>
+		</field>
+		<field id="cstmb_needByDate" name="Need By Date" instrumentIds="3" dataType="date">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="cstmb_otherInfo" name="Other Information" instrumentIds="3">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+	</section>
+	      
+	
+<!-- Section : License Bond -->	    
+	<section id="lb" name="License Bond" instrumentIds="3">
+		<!-- <field id="lb_default" name="Default" instrumentIds="3">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>		
+	    <field id="lb_customObligeeFormat" name="Custom Obligee Format" instrumentIds="3">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field> -->
+		<field id="lb_description" name="Description" instrumentIds="3">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="lb_bondAmount" name="Bond Amount" instrumentIds="3">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="lb_usdBondAmount" name="USD Bond Amount" instrumentIds="3">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="lb_currencyCode" name="Currency Code" instrumentIds="3">
+			<operators>equal</operators>
+		</field>
+		<field id="lb_effectiveDate" name="Effective Date" instrumentIds="3">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="lb_expirationDate" name="Expiration Date" instrumentIds="3">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="lb_obligationCountryOrState" name="State/country of obligation" instrumentIds="3">
+			<operators>equal</operators>
+		</field>
+		<field id="lb_needByDate" name="Need by Date" instrumentIds="3">
+			<operators>less than</operators>
+			<operators>less than or equal</operators>
+			<operators>in between</operators>
+			<operators>greater than</operators>
+			<operators>greater than or equal</operators>
+		</field>
+		<field id="lb_otherInformation" name="Other Information" instrumentIds="3">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="lb_bondFormType" name="Type of bond form" instrumentIds="3">
+			<operators>equal</operators>
+		</field>			
+	</section> 
+     
+
+<!-- Section : Business Contact Person -->	 
+     <section id="bcp" name="Business Contact Person" instrumentIds="4">
+     	<field id="bcp_contactName" name="Contact Name" instrumentIds="4">
+     		<operators>equal</operators>
+     		<operators>like</operators>
+     	</field>
+     	<!-- <field id="bcp_addContactPerson" name="add contact person" instrumentIds="4">
+     		<operators>equal</operators>
+     		<operators>like</operators>
+     	</field> -->
+     	<!-- <field id="bcp_contactNameOpt" name="Contact Name - optional" instrumentIds="4">
+     		<operators>equal</operators>
+     		<operators>like</operators>
+     	</field> -->
+     	<!-- <field id="bcp_requiresEdits" name="Fields in this section requires edits by Requestor" instrumentIds="4">
+     		<operators>equal</operators>
+     		<operators>like</operators>
+     	</field>
+     	<field id="bcp_sendBackNotes" name="Send back notes (required)" instrumentIds="4">
+     		<operators>equal</operators>
+     		<operators>like</operators>
+     	</field> -->
+     </section>
+     
+<!-- Section : Issuing Bank  -->
+	 <section id="ib" name="Issuing Bank" instrumentIds="4">
+     	<field id="ib_bankName" name="bank Name" instrumentIds="4">
+     		<operators>equal</operators>
+     		<operators>like</operators>
+     	</field>
+    	<field id="ib_letterOfCreditNum" name="Letter of Credit Number (if available)" instrumentIds="4">
+     		<operators>equal</operators>
+     		<operators>like</operators>
+     	</field>
+    	<field id="ib_bankIdenCode" name="Bank Identifier Code (BIC)" instrumentIds="4">
+     		<operators>equal</operators>
+     		<operators>like</operators>
+     	</field>
+    	<!-- <field id="ib_requiresEdits" name="Fields in this section requires edits by Requestor" instrumentIds="4">
+     		<operators>equal</operators>
+     	</field>
+    	<field id="ib_sendBackNotes" name="Send back notes (required)" instrumentIds="4">
+     		<operators>equal</operators>
+     		<operators>like</operators>
+     	</field> -->
+	</section>
+     
+<!-- Section : Applicant in DLOC -->
+	<section id="dlocAppl" name="Applicant" instrumentIds="4">
+		
+		<field id="dloc_applicantName" name="Applicant name" instrumentIds="4">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="dloc_applicantAddress1" name="Address 1" instrumentIds="4">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="dloc_applicantAddress2" name="Address 2" instrumentIds="4">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="dloc_applicantCity" name="City" instrumentIds="4">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="dloc_applicantStateProvince" name="State/Province" instrumentIds="4">
+			<operators>equal</operators>
+		</field>
+		<field id="dloc_applicantZIPCode" name="ZIP/Postal code" instrumentIds="4">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="dloc_applicantCountry" name="Country" instrumentIds="4">
+			<operators>equal</operators>
+		</field>
+		<field id="dloc_applicantRefValue1" name="GE Principal reference" instrumentIds="4">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<!-- 
+		<field id="dloc_applicantRefValue2" name="GE Principal reference <2> - optional" instrumentIds="4">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="dloc_applicantRefValue3" name="GE Principal reference <3> - optional" instrumentIds="4">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		 -->
+		
+		<!-- <field id="dloc_applicantRequiresEdits" name="Fields in this section requires edits by Requestor" instrumentIds="4">
+			<operators>equal</operators>
+		</field>
+		<field id="dloc_applicantSendBackNotes" name="Send back notes (required)" instrumentIds="4">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field> -->
+	</section>
+<!-- Section : Customer/Beneficiary in DLOC -->
+	<section id="dlocCust" name="Customer/Beneficiary" instrumentIds="4">
+		<!-- <field id="dloc_customerLeName" name="Legal Entity name" instrumentIds="4">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="dloc_customerLeGoldId" name="Legal Entity GOLD ID" instrumentIds="4">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field> -->
+		<field id="dloc_customerName" name="Customer/Beneficiary name" instrumentIds="4">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="dloc_customerAddress1" name="Customer/Beneficiary Address 1" instrumentIds="4">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="dloc_customerAddress2" name="Customer/Beneficiary Address 2" instrumentIds="4">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="dloc_customerCity" name="Customer/Beneficiary City" instrumentIds="4">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="dloc_customerStateProvince" name="Customer/Beneficiary State/Province" instrumentIds="4">
+			<operators>equal</operators>
+		</field>
+		<field id="dloc_customerZIPCode" name="Customer/Beneficiary ZIP/Postal code" instrumentIds="4">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="dloc_customerCountry" name="Customer/Beneficiary Country" instrumentIds="4">
+			<operators>equal</operators>
+		</field>
+		<field id="dloc_customerRefValue1" name="Customer/Beneficiary reference" instrumentIds="4">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<!-- 
+		<field id="dloc_customerRefValue2" name="GE Principal reference <2> - optional" instrumentIds="4">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="dloc_customerRefValue3" name="GE Principal reference <3> - optional" instrumentIds="4">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		 -->
+		
+		<!-- <field id="dloc_customerRequiresEdits" name="Fields in this section requires edits by Requestor" instrumentIds="4">
+			<operators>equal</operators>
+		</field>
+		<field id="dloc_customerSendBackNotes" name="Send back notes (required)" instrumentIds="4">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field> -->
+	</section>
+	
+<!-- Section : Transaction details in DLOC -->    
+	<section id="txd" name="Instrument/Transaction Details" instrumentIds="4">
+		<field id="txd_projDesc" name="Project description/goods being sold" instrumentIds="4">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="txd_issuanceCountry" name="Country of issuance" instrumentIds="4">
+			<operators>equal</operators>
+		</field>
+		<field id="txd_contractAmt" name="Contract amount" instrumentIds="4">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<field id="txd_contractCur" name="Contract currency" instrumentIds="4">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="txd_docLCCur" name="Documentary LC currency" instrumentIds="4">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="txd_docLCAmt" name="Documentary LC amount" instrumentIds="4">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<field id="txd_shipmentOrigin" name="Shipment origin country" instrumentIds="4">
+			<operators>equal</operators>
+		</field>
+		<!-- <field id="txd_shipmentOrigin1" name="Shipment origin country 1" instrumentIds="4">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="txd_shipmentOrigin2" name="Shipment origin country 2" instrumentIds="4">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field> -->
+		<field id="txd_shipmentDestCountry" name="Shipment destination country" instrumentIds="4">
+			<operators>equal</operators>
+		</field>
+		<field id="txd_goodsOrigin" name="Origin of goods" instrumentIds="4">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<!-- <field id="txd_goodsOrigin1" name="Origin of goods 1" instrumentIds="4">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="txd_goodsOrigin2" name="Origin of goods 2" instrumentIds="4">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field> -->
+		<field id="txd_USContentPercent" name="Percent U.S. content" instrumentIds="4">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="txd_LCPaymentTerm" name="LC payment terms" instrumentIds="4">
+			<operators>equal</operators>
+		</field>
+		<field id="txd_othPaymentDesc" name="Other payment terms description" instrumentIds="4">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="txd_confirmationType" name="Confirmation type" instrumentIds="4">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="txd_bankCharges" name="Bank charges" instrumentIds="4">
+			<operators>equal</operators>
+		</field>
+		<!-- <field id="txd_requiresEdits" name="Fields in this section requires edits by Requestor" instrumentIds="4">
+			<operators>like</operators>
+		</field>
+		<field id="txd_sendBackNotes" name="Send back notes (required)" instrumentIds="4">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field> -->
+	</section>
+     
+<!-- Section : Payment Schedule -->
+     <section id="ps" name="Payment Schedule" instrumentIds="4">
+     	<field id="ps_validLCMonths" name="Estimated number of months LC is valid" instrumentIds="4">
+     		<operators>equal</operators>
+     		<operators>like</operators>
+     	</field>
+     	<field id="ps_issueDt" name="Approximate issue date" instrumentIds="4" dataType="date">
+     		<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+     	</field>
+     	<field id="ps_estAmt" name="Estimated Payment Amount" instrumentIds="4">
+     		<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+     	</field>
+     	<field id="ps_estMonths" name="Estimated Months from Issue" instrumentIds="4">
+     		<operators>equal</operators>
+     		<operators>like</operators>
+     	</field>
+     	<field id="ps_estDt" name="Estimated Payment Date" instrumentIds="4" dataType="date">
+     		<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+     	</field>
+     	<!-- <field id="ps_splInstructions" name="Special instructions - optional" instrumentIds="4">
+     		<operators>equal</operators>
+     		<operators>like</operators>
+     	</field> -->
+     	<!-- <field id="ps_requiresEdits" name="Fields in this section requires edits by Requestor" instrumentIds="4">
+     		<operators>equal</operators>
+     		<operators>like</operators>
+     	</field>
+     	<field id="ps_sendBackNotes" name="Send back notes (required)" instrumentIds="4">
+     		<operators>equal</operators>
+     		<operators>like</operators>
+     	</field> -->
+     </section>
+     
+<!-- Section : Documentary Letter of Credit Confirmation Bid Memo Details -->
+	 <section id="dlocbm" name="Documentary Letter of Credit Confirmation Bid Memo Details" instrumentIds="4">
+     	<field id="dlocbm_bidMemoCreated" name="Date bid memo created" instrumentIds="4" dataType="date">
+     		<operators>equal</operators>
+     		<operators>like</operators>
+     	</field>
+        <field id="dlocbm_expirationDate" name="Expiration date" instrumentIds="4" dataType="date">
+     		<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+     	</field>
+        <field id="dlocbm_expirationTime" name="Expiration time" instrumentIds="4">
+     		<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+     	</field>
+	</section>
+   
+<!-- Section : Documentation Upload -->      
+	 <section id="du" name="Documentation Upload" instrumentIds="4">
+     	<!-- <field id="du_actions" name="Actions" instrumentIds="4">
+     		<operators>equal</operators>
+     		<operators>like</operators>
+    	</field>   -->
+   		<field id="du_docType" name="Document Type" instrumentIds="4">
+     		<operators>equal</operators>
+     		<operators>like</operators>
+    	</field>  
+        <field id="du_confirmRefNumber" name="Confirmation Reference Number" instrumentIds="4">
+     		<operators>equal</operators>
+     		<operators>like</operators>
+    	</field>  
+        <field id="du_confirmDate" name="Confirmation Date" instrumentIds="4" dataType="date">
+     		<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+    	</field>  
+        <field id="du_issueDescription" name="Issuance Description" instrumentIds="4">
+     		<operators>equal</operators>
+     		<operators>like</operators>
+    	</field>  
+        <!-- <field id="du_documentation" name="Documentation" instrumentIds="4">
+     		<operators>equal</operators>
+     		<operators>like</operators>
+    	</field>   -->
+        <!-- <field id="du_needCopyPaste" name="Need to copy and paste?" instrumentIds="4">
+     		<operators>equal</operators>
+     		<operators>like</operators>
+    	</field>  
+        <field id="du_docLOC" name="Documentary Letter of Credit Confirmation" instrumentIds="4">
+     		<operators>equal</operators>
+     		<operators>like</operators>
+    	</field>   -->
+	</section>
+
+<!-- Section : Indicative Pricing Information Completed By -->
+	<section id="ipic" name="Indicative Pricing Information Completed By" instrumentIds="4">
+		<!-- 	
+		<field id="ipic_name" name="Name:<System generated value>" instrumentIds="4">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		 -->
+		<field id="ipic_expirationDate" name="Pricing Expiration Date" instrumentIds="4" dataType="date">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<field id="ipic_expirationTime" name="Pricing Expiration Time" instrumentIds="4">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+	</section>
+    
+<!-- Section : Confirmation Fees -->
+	<section id="cf" name="Confirmation Fees" instrumentIds="4">
+		<field id="cf_FeeStructure" name="Select fee structure" instrumentIds="4">
+			<operators>equal</operators>
+		</field>
+		<field id="cf_Variable" name="Variable" instrumentIds="4">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+		<field id="cf_OtherFee" name="Other Fees (whole amount)" instrumentIds="4">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<!-- <field id="cf_AdditionalComment" name="Additional comments" instrumentIds="4">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field> -->
+</section>
+  
+<!-- Section : Amendment Expiration dates -->
+	<section id="aed" name="Amendment Expiration dates" instrumentIds="5">
+		<field id="aed_currExpDate" name="Current Expiration Date" instrumentIds="5" dataType="date">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<field id="aed_origExpDate" name="Original Expiration Date" instrumentIds="5" dataType="date">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<field id="aed_currUSExpDate" name="Current US Expiration Date" instrumentIds="5" dataType="date">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<field id="aed_origUSExpDate" name="Original US Expiration date" instrumentIds="5" dataType="date">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<field id="aed_revisedExpDateTA" name="Revised Expiration Date" instrumentIds="5" dataType="date">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<!-- <field id="aed_origExpDateTA" name="Original Expiration Date" instrumentIds="5" dataType="date">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field> -->
+	</section>
+
+<!-- Section : Amendment Other Changes -->
+	<!-- <section id="aoc" name="Amendment Other Changes" instrumentIds="5">
+		<field id="aoc_otherChanges" name="Other Changes" instrumentIds="5">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field>
+	</section> -->	
+
+<!-- Section : Instrument Amount Currency -->
+	<section id="iac" name="Instrument Amount Currency" instrumentIds="5">
+		<field id="iac_origInstAmt" name="Original Instrument Amount" instrumentIds="5">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		 
+		<field id="iac_amountIncreaseDecrease" name="Amount Increased/Decreased" instrumentIds="5">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<!-- <field id="iac_operation" name="Operation" instrumentIds="5">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field> -->
+		
+		<!-- <field id="iac_revisedAmt" name="Revised Amount" instrumentIds="5">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field> -->
+		<field id="iac_revisedInstrumentAmt" name="Revised Instrument Amount" instrumentIds="5">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<!-- <field id="iac_revisedUsdAmt" name="Revised USD Amount" instrumentIds="5">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field> -->
+		<field id="iac_revisedUSDEquiAmt" name="Revised USD Equivalent Amount" instrumentIds="5">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<!-- <field id="iac_newInstAmt" name="New Instrument Amount" instrumentIds="5">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field> -->
+		<!-- <field id="iac_newInstrumentCurrCode" name="New Instrument Currency Code" instrumentIds="5">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field> -->
+		<field id="iac_newInstrumentCurr" name="New Instrument Currency" instrumentIds="5">
+			<operators>equal</operators>
+		</field>
+		
+		<field id="iac_currentInstrumentAmount" name="Current Instrument Amount" instrumentIds="5">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+	</section>	
+
+<!-- Section : Rider Bond Information  -->
+	<section id="rd" name="Rider Bond Information" instrumentIds="6">
+		<field id="rd_originalBondAmt" name="Original Bond Amount" instrumentIds="6">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<field id="rd_currentBondAmt" name="Current Bond Amount" instrumentIds="6">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<field id="rd_revisedBondAmt" name="Revised Bond Amount" instrumentIds="6">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<!-- <field id="rd_operation" name="Operation" instrumentIds="6">
+			<operators>equal</operators>
+			<operators>like</operators>
+		</field> -->
+		<field id="rd_amtOfIncreaseDecrease" name="Amount of Increase/Decrease" instrumentIds="6">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<field id="rd_originalContractAmt" name="Original Contract Amount" instrumentIds="6">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<field id="rd_revisedContractAmt" name="Revised Contract Amount" instrumentIds="6">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<field id="rd_revisedUSDEquiContractAmt" name="USD Equivalent Contract Amount" instrumentIds="6">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+	</section>
+
+<!-- Section : Rider Expiration dates -->
+	<section id="red" name="Rider Expiration dates" instrumentIds="6">
+		<field id="red_currExpDate" name="Current Expiration Date" instrumentIds="6" dataType="date">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<field id="red_origExpDate" name="Original Expiration Date" instrumentIds="6" dataType="date">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<field id="red_revisedExpDate" name="Revised Expiration Date" instrumentIds="6" dataType="date">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+	</section>
+
+	<!-- Section : Bundle -->
+	<section id="bndl" name="Bundle" instrumentIds="1 2 4">
+		<field id="bndl_Id" name="Bundle Id" instrumentIds="1 2 4">
+			<operators>equal</operators>
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+	</section>
+
+	<!-- Section : Linked -->
+	<section id="lnk" name="Linked" instrumentIds="1 2 3 4">
+		<field id="lnk_Id" name="Link Id" instrumentIds="1 2 3 4">
+			<operators>equal</operators>
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+	</section>
+	
+	<!-- Section : APM -->
+	<section id="apm" name="Fees" instrumentIds="1 2">
+		<!-- <field id="apm_paymentPeriod" name="select payment period" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field>
+		<field id="apm_currencyCode" name="Currency Code" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="apm_fxRate" name="FX Rate" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="apm_fxRateSource" name="FX Rate Source" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field> -->
+		<!-- <field id="apm_fxRateDate" name="FX Rate Date" instrumentIds="1 2" dataType="date">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<field id="apm_startDate" name="Payment Period Start Date" instrumentIds="1 2" dataType="date">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<field id="apm_endDate" name="Payment Period End Date" instrumentIds="1 2" dataType="date">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<field id="apm_revakueDate" name="FX Rate Revalue Date" instrumentIds="1 2" dataType="date">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field> -->
+		<!-- <field id="apm_cutoffDate" name="Payment Period Cutoff Date" instrumentIds="1 2" dataType="date">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<field id="apm_minAmountUSD" name="Min Payment Amount (USD Equivalent)" instrumentIds="1 2">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>  -->
+		
+		<!-- <field id="apm_dayCount" name="Day Count" instrumentIds="1 2">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field> -->
+		<!-- <field id="apm_ibsFile" name="IBS File" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		
+		<field id="apm_webCashFile" name="Web Cash File" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="apm_runCompletionDate" name="Run Completion Date" instrumentIds="1 2" dataType="date">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<field id="apm_completedBy" name="Completed By" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="apm_EqUSDValue" name="Equivalent USD Value" instrumentIds="1 2">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field> -->
+		<!-- <field id="apm_currency" name="Currency" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="apm_rateDirection" name="Rate Direction" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field>
+		<field id="apm_tickerSymbol" name="Bloomberg Ticker Symbol" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field> -->
+		<!-- <field id="apm_decimalPrecision" name="Decimal Precision" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field>
+		<field id="apm_paymentCurrencyAllowed" name="Payment Currency Allowed" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="apm_bucCodeOptnl" name="BUC Code - Optional" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="apm_adnOptnl" name="ADN - Optional" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="apm_narrowSearch" name="Narrow your search for a payment period by using the dropdown year range below" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field> -->
+		
+		
+		<field id="apm_chargeType" name="Charge Type" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field>
+		<field id="apm_numberOfDays" name="Number of Days" instrumentIds="1 2">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<field id="apm_USRateArrears" name="US BPs rate in arrears" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="apm_USRateAdvance" name="US BPs rate in advance" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="apm_USFlatFeePA" name="US Flat Fee P.A" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="apm_USFlatFeeLife" name="US Flat Fee Life" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="apm_partialPeriodAmount" name="Partial Period Amount" instrumentIds="1 2">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<field id="apm_amendmentUS" name="Amendment - U.S." instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<!-- <field id="apm_totalAmendmentUS" name="Total amendment U.S." instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="apm_totalPaymentUS" name="Total payment U.S." instrumentIds="1 2">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field> -->
+		
+		
+		<field id="apm_amendmentForeign" name="Amendment - Foreign" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<!-- <field id="apm_totalAmendmentForeign" name="Total amendment Foreign" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="apm_totalPaymentForeign" name="Total payment Foreign " instrumentIds="1 2">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field> -->
+		
+		<field id="apm_lineItem" name="Line Item Type" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="apm_VATTaxes" name="VAT Taxes" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="apm_stampTaxes" name="Stamp Taxes" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="apm_incidental" name="Incidental" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="apm_other" name="Other" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="apm_oneTime" name="One Time" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		
+		<field id="apm_startPeriodUS" name="Start Period U.S." instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="apm_endPeriodUS" name="End Period U.S." instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		
+		<field id="apm_startPeriodForeign" name="Start Period Foreign" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="apm_endPeriodForeign" name="End Period Foreign" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		
+		<field id="apm_foreignBPRateArrears" name="Foreign  BPs Rate in Arrears" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="apm_foreignBPRateAdvance" name="Foreign  BPs Rate in Advance" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="apm_foreignFlatFeePA" name="Foreign  Flat Fee PA" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="apm_foreignFlatFeeLife" name="Foreign  Flat Fee Life" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		
+		<!-- <field id="apm_calculateFees" name="Calculate Fees" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field> -->
+		<field id="apm_bankName" name="Bank Name" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<!-- <field id="apm_BUCADNError" name="BUC/ADN Error" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="apm_paymentCurrency" name="Payment Currency" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field> -->
+		
+		<!-- <field id="apm_totalPaymentAmount" name="Total Payment Amount" instrumentIds="1 2">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<field id="apm_totalUSDEq" name="Total USD Equivalent" instrumentIds="1 2">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<field id="apm_numberOfPayments" name="Number of payments" instrumentIds="1 2">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<field id="apm_BUC" name="BUC" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+
+		<field id="apm_ADN" name="ADN" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field> -->
+		
+		
+		<!-- <field id="apm_ALOCRecordNum" name="ALOC Record Number" instrumentIds="1 2">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		
+		<field id="apm_IBSErrorNoti" name="IBS Error Notification" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="apm_IBSChargeCode" name="IBS Charge Code Contact" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="apm_GERequestor" name="GE Requestor Name" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		
+		<field id="apm_reviewPaidFees" name="Review previously paid fees" instrumentIds="1 2">
+			<operators>equal</operators>
+		</field> -->
+		
+		<field id="apm_paymentId" name="Payment ID" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		
+		<field id="apm_bankrefNumber" name="Bank Reference Number" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<field id="apm_paymentAmount" name="Payment Amount" instrumentIds="1 2">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<field id="apm_paymentDate" name="Payment Date" instrumentIds="1 2" dataType="date">
+			<operators>greater than</operators>
+     		<operators>greater than or equal</operators>
+     		<operators>in between</operators>
+     		<operators>less than</operators>
+     		<operators>less than or equal</operators>
+		</field>
+		<field id="apm_applicantPrincipalName" name="Applicant/Principal Name" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field>
+		<!-- <field id="apm_beneficiaryObligeeName" name="Beneficiary/Obligee Name" instrumentIds="1 2">
+			<operators>like</operators>
+			<operators>equal</operators>
+		</field> -->
+		
+	</section>
+	
+	
+	
+</adhoc-field-config>

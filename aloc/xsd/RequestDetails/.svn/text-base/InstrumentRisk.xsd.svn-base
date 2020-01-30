@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/InstrumentRisk.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/InstrumentRisk.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="InstrumentRisk">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Op_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="Noti_Clause_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Cure_Period_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Cure_Period_Value" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Dr_Down-Appr_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Contr_Req_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Contr_Req_Reason" type="xs:string" minOccurs="0"/>
+				<xs:element name="No_Of_Days" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Comply_Ctr_Rqmt" type="xs:string" minOccurs="0"/>
+				<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+				<xs:element name="Requires_Edits" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Send_Back_Notes" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

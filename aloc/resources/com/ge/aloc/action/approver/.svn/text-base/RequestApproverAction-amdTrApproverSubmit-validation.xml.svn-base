@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+
+	<field name="requestDetails.tresuryDelegation.approverSso">
+		<field-validator type="required">
+			<message key="error.required.requestDetails.treasuryApprover" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[(requestDetails.tresuryDelegation.approverSso != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.treasuryApprover" />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.comments">
+		<field-validator type="requiredstring">
+			<message key="error.required.requestDetails.trComments" />
+		</field-validator>
+	</field>
+	
+	<!-- <field name="actionType">
+		<field-validator type="required">
+			<message key="error.required.requestDetails.approveOrReject" />
+		</field-validator>
+	</field>
+		
+	<field name="requestDetails.actionDetails.reasonForRejection">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requestDetails.actionType == 4) || (requestDetails.actionType != "")) || (requestDetails.actionDetails.reasonForRejection != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.reasonForRejection" />
+		</field-validator>
+	
+	</field> -->
+	
+</validators>

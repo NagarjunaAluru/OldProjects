@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/BankDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/BankDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="BankDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Site_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Site_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Address" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="City" type="xs:string" minOccurs="0"/>
+				<xs:element name="State_Province" type="xs:string" minOccurs="0"/>
+				<xs:element name="State_Province_Cd" type="xs:string" minOccurs="0"/>
+				<xs:element name="ZIP_PostalCode" type="xs:string" minOccurs="0"/>
+				<xs:element name="Country" type="xs:string" minOccurs="0"/>
+				<xs:element name="Country_Cd" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank_Identifier_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="OpCode" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank_MDM_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/manager/impl
+END
+SearchManagerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/manager/impl/SearchManagerTest.java
+END
+ALOCAttachmentManagerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/manager/impl/ALOCAttachmentManagerTest.java
+END
+ReferenceDataManagerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/manager/impl/ReferenceDataManagerTest.java
+END
+LookupManagerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/manager/impl/LookupManagerTest.java
+END
+SiteDetailsManagerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/manager/impl/SiteDetailsManagerTest.java
+END
+AllManagerTests.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/manager/impl/AllManagerTests.java
+END
+CreateBundleManagerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/manager/impl/CreateBundleManagerTest.java
+END
+ReportsManagerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/manager/impl/ReportsManagerTest.java
+END
+RequestDetailsManagerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/manager/impl/RequestDetailsManagerTest.java
+END
+LinkTransactionManagerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/manager/impl/LinkTransactionManagerTest.java
+END
+RequestDetailsSectionManagerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/manager/impl/RequestDetailsSectionManagerTest.java
+END

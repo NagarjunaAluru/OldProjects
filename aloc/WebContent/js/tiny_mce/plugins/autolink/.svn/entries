@@ -1,0 +1,52 @@
+8
+
+dir
+56
+https://openge.ge.com/svn/treasury_aloc/trunk/source/web/sunone_codebase/aloc/WebContent/js/tiny_mce/plugins/autolink
+https://openge.ge.com/svn/treasury_aloc
+
+
+
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+720fd033-fee8-473a-95ce-a3690b27228b
+
+editor_plugin.js
+file
+
+
+
+
+2014-12-17T16:04:20.158569Z
+5091233229ffe517f075b787c5f388a6
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+editor_plugin_src.js
+file
+
+
+
+
+2014-12-17T16:04:20.164569Z
+f03a8ec9ad17bd53f897a525e3cc30f7
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+

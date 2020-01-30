@@ -1,0 +1,1050 @@
+@charset "utf-8";
+/* CSS Document */
+#nav {
+    display:inline;
+    text-align:left;
+    position:relative;
+    list-style-type:none;
+	margin:0px!important;
+}
+#nav ul {
+	margin:0px!important;
+}
+#nav > li {
+    float:left;
+    padding:0;
+	margin:0px!important;
+    position:relative;
+}
+#nav > li > a {
+    border:1px solid transparent;
+    color:#4F4F4F;
+    display:block;
+    padding:3px 10px;
+    position:relative;
+    text-decoration:none;
+	width:60%;
+}
+#nav > li > a:hover {
+    background-color:#e4ecf4;
+    border-color:#999
+}
+#nav > li.selected  > a {
+    background-color:#FFFFFF;
+    border-color:#999999 #999999 #FFFFFF;
+    z-index:9999;
+}
+#nav li div {
+    position:relative;
+}
+#nav li div div {
+    background-color:#FFFFFF;
+    border:1px solid #999999;
+    padding:12px 0;
+    display:none;
+    font-size:11px;
+    margin:0;
+    position:absolute;
+    top:-1px;
+    z-index:1;
+    width:240px;
+}
+#nav li div div.wrp2 {
+    width:380px;
+}
+#nav .sep {
+    left:190px;
+    border-left:1px solid #E3E3E3;
+    bottom:0;
+    height:auto;
+    margin:15px 0;
+    position:absolute;
+    top:0;
+    width:1px;
+}
+#nav li div ul {
+    padding-left:10px;
+    padding-right:10px;
+    position:relative;
+    width:220px;
+    float:left;
+    list-style-type:none;
+}
+#nav li div ul li {
+    margin:0;
+    padding:0;
+}
+#nav li ul ul {
+    padding:0 0 8px;
+}
+#nav li ul ul li {
+    margin:0;
+    padding:0;
+}
+#nav li ul ul li a {
+    color:#0060A6;
+    display:block;
+    margin-bottom:1px;
+    padding:3px 5px;
+    text-decoration:none;
+    font-size:0.9em;
+	border-bottom:1px solid #ccc;
+}
+#nav li ul ul li a:hover{
+    background-color:#276287;
+    color:#fff;
+}
+/* NAV ENDS HERE */
+.nav-tabs > li > a{
+	background: none repeat scroll 0 0 #A6C2D6;
+	color: #FFFFFF;
+    position: relative;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+    margin-right: 4px;
+    padding: 10px 10px;
+}
+.nav-tabs > li > a:hover {
+	background: #376a97;
+	border: 1px solid #376a97;
+}
+
+.txtRight {text-align:right!important;}
+
+#bundleBox {
+	border:0px solid #666;
+	width:100%;
+	margin:0px;
+	padding:0px;
+}
+#bundleBox .trBg {
+	border:0px solid red;
+	width:100%;
+	margin:0px;
+	background:#000!important;
+}
+#bundleBox .leftColBB {
+	border:0px solid red;
+	width:350px;
+	margin:0px;
+	float:left;
+	margin-bottom:10px;
+}
+#bundleBox .midColBB {
+	border:0px solid red;
+	width:300px;
+	margin:0px;
+	float:left;
+	margin-bottom:10px;
+}
+#bundleBox .rightColBB {
+	border:0px solid red;
+	width:200px;
+	margin:0px;
+	float:right;
+	margin-bottom:10px;
+}
+
+
+
+/*Toggle for Each Row - First TAB*/
+       
+table tr.srtr1 {background-color:#f4f5f7!important;}
+table tr.srtr2 {background-color:#f4f5f7;}
+table div.arrow { background:transparent url(../../img/arrows.png) no-repeat scroll 0px -20px; width:20px; height:20px; display:block; cursor:pointer;}
+
+#arrow {
+	float:left;
+	margin:0px 5px 5px 0px;
+}
+
+table div.up {background:transparent url(../../img/arrows.png); background-position:20px -20px; width:20px; height:20px; display:block; cursor:pointer;}
+table div.down {background:transparent url(../../img/arrows.png); background-position:20px 0px; width:20px; height:20px; display:block; cursor:pointer;}
+
+table div.pencilNotClicked {background:transparent url(../../img/edit-leg2.gif); no-repeat; width:18px; height:17px; display:block; cursor:pointer;}
+table div.pencilClicked {background:transparent url(../../img/edit-selected.gif); width:18px; height:20px; display:block; cursor:pointer;}
+table div.exportToExcel {background:transparent url(../../img/excel.gif); no-repeat; width:18px; height:17px; cursor:pointer;}
+
+
+/*dropdown menu Div hide and show*/
+#dropdownBB ul {
+    margin: 0px;
+    padding: 0;
+    list-style: none;
+}
+#dropdownBB li {
+    display: block;
+    position: relative;
+    float: left;
+	list-style:none;
+}
+#dropdownBB li ul {
+    display: none;
+	width:600px;
+	height:auto;
+	padding:10px;
+	background:#fff;
+	border-radius:5px;
+	z-index:9999;
+}
+#dropdownBB ul li a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 0px;
+	/*padding: 5px 15px 5px 15px;*/
+    margin-left: 1px;
+    white-space: nowrap;
+	text-decoration:underline;
+}
+#dropdownBB ul li a:hover {
+	background: #fff;
+}
+/*#dropdownBB li:hover ul {
+    display: block;
+    position: absolute;
+}*/
+#dropdownBB li:hover li {
+    float: none;
+    font-size: 11px;
+}
+#dropdownBB li:hover a { background: #fff; }
+#dropdownBB li:hover li a:hover {
+    background: #fff;
+}
+
+.uppercase { text-transform:uppercase; }
+
+
+
+/* .popBox {
+	width:600px;
+	height:auto;
+	border:1px solid white;
+	background:#fff;
+	position:absolute;
+	z-index:9999;
+	padding:5px;
+	border-radius:5px;
+} */
+.popBox {
+	width:670px;
+	height:auto;
+	border:2px solid #000;
+	background:#ccc;
+	position:absolute;  
+	display: none;
+	padding: 10px;
+	margin-top:20px;
+	margin-left:-300px;
+	z-index:9999;
+}
+.popBox:after {
+	content:'';
+	display:block;
+	position:absolute;
+	top:-40px;
+	left:45%; /*should be set to -border-width x 2 */
+	/* width:0;
+	height:0; */
+	border-color: transparent transparent black transparent; /*border color should be same as div div background color*/
+	border-style: solid;
+	border-width: 20px;
+}
+
+.ltPopBox {
+	width:670px;
+	height:auto;
+	border:2px solid #000;
+	background:#f1f9ff;
+	position:absolute;  
+	display: none;
+	padding: 10px;
+	margin-top:20px;
+	margin-left:-400px;
+	z-index:9999;
+}
+.ltPopBox:after {
+	content:'';
+	display:block;
+	position:absolute;
+	top:-40px;
+	left:60%; /*should be set to -border-width x 2 */
+	/* width:0;
+	height:0; */
+	border-color: transparent transparent black transparent; /*border color should be same as div div background color*/
+	border-style: solid;
+	border-width: 20px;
+}
+.linkTransactionTable{
+	border-right: #819eb6 1px solid;
+}
+/* SITE MESSAGE */
+#siteMsg {
+	width:940px;
+	padding:0px;
+	border-radius:5px;
+	background:#dfe9d8;
+	border:1px solid #5d8f3e;
+	margin:10px auto 10px auto;
+	position:relative;
+}
+
+/* FILTER */
+/* .filterMsg {
+	width:auto;
+	padding:10px;
+	font-size:18px;
+	background:#f2f2f2;
+	border:1px dashed #ccc;
+	margin:10px auto 10px auto;
+} */
+.filterMsg {
+	width:auto;
+	padding:0px 10px 10px 10px;
+	background:#f9f9f9;
+	border:1px dashed #ccc;
+	margin:10px auto 10px auto;
+}
+
+/* DEFAULT VIEW */
+#defaultReqView {
+	width:240px;
+	float:right;
+	padding:0px;
+	background:none;
+	border:0px dashed #ccc;
+	margin:5px auto -25px auto;
+	text-align:right;
+}
+
+/* DEFAULT VIEW */
+#defaultTreasuryView {
+	width:240px;
+	float:right;
+	padding:0px;
+	background:none;
+	border:0px dashed #ccc;
+	margin:5px auto 5px auto;
+	text-align:right;
+}
+
+/* LINE SECTION */
+/* FOR RED SECTION */
+td#bidsRow  {
+	background: url(../../img/bids-bkg.png) top left repeat-y!important;
+}
+tr.bidsRowInner {
+	background:#ffcccc url(../../img/bids-bkg.png) top left repeat-y!important;
+}
+tr.bidsRowInner td.bidsRowColor {
+	background:#ffcccc url(../../img/bids-bkg.png) top left repeat-y!important;
+	padding:0px!important;
+}
+
+/* FOR BLUE SECTION */
+td#perforRow {
+	background: url(../../img/perfor-bkg.png) top left repeat-y!important;
+}
+tr.perforRowInner {
+	background:#cdcdff url(../../img/perfor-bkg.png) top left repeat-y!important;
+}
+tr.perforRowInner td.perforRowColor {
+	background:#cdcdff url(../../img/perfor-bkg.png) top left repeat-y!important;
+	padding:0px!important;
+}
+
+
+/* FOR GREEN SECTION */
+td#advanceRow {
+	background: url(../../img/advance-bkg.png) top left repeat-y!important;
+}
+tr.advanceRowInner {
+	background:#cce6cc url(../../img/advance-bkg.png) top left repeat-y!important;
+}
+tr.advanceRowInner td.advanceRowColor {
+	background:#cce6cc url(../../img/advance-bkg.png) top left repeat-y!important;
+	padding:0px!important;
+}
+
+/* FOR GREY SECTION */
+td#financialRow {
+	background: url(../../img/financial-bkg.png) top left repeat-y!important;
+}
+tr.financialRowInner {
+	background:#ddd url(../../img/financial-bkg.png) top left repeat-y!important;
+}
+tr.financialRowInner td.financialRowColor {
+	background:#ddd url(../../img/financial-bkg.png) top left repeat-y!important;
+	padding:0px!important;
+}
+/* FOR ORANGE SECTION */
+td#docRow {
+	background: url(../../img/doc-bkg.png) top left repeat-y!important;
+}
+tr.docRowInner {
+	background:#f4d9b1 url(../../img/doc-bkg.png) top left repeat-y!important;
+}
+tr.docRowInner td.docRowColor {
+	background:#f4d9b1 url(../../img/doc-bkg.png) top left repeat-y!important;
+	padding:0px!important;
+}
+
+/* FOR NO PURPOSE SECTION */
+td#noPurposeRow {
+	background: top left repeat-y!important;
+}
+tr.noPurposeRowInner {
+	background:#f1f9ff top left repeat-y!important;
+}
+tr.noPurposeRowInner td.noPurposeRowColor {
+	background:#f1f9ff top left repeat-y!important;
+	padding:0px!important;
+}
+
+.innerDiv {
+	width:98%;
+	margin:10px auto;
+	border:0px solid black;
+}
+
+
+/* COLUMN DIV */
+#report-details-container{margin:0px; padding:0px; width: 100%; border:none;}
+#report-details-container h3 { border:none; font-family:"GE Inspira"; margin:0px 0px 10px 0px!important; }
+#report-details{margin:0px 10px 0px 0px; padding:0px; width: 283px; float: left; text-align: left;  border:0px solid yellow;}
+#report-details-inner {margin:0px; padding:0px; width: 100%; border:none;}
+#report-details-inner .left-col-rdi {margin:0px 0px 2px 0px; padding:0px; width: 120px; float: left; text-align: right; font-size: 10px; font-weight: bold; 
+border:0px solid white;}
+#report-details-inner .right-col-rdi {margin:0px 0px 2px 0px; padding:0px; width: 140px; float: right; text-align: left; font-size: 10px; font-weight: normal;  border:none;}
+
+.left-col-rdi1 {margin:0px 0px 2px 0px; padding:0px; width: 100px; float: left; font-size: 11px; font-weight: normal;}
+.right-col-rdi1 {margin:0px 0px 2px 0px; padding:0px; width: 120px; float: right; font-size: 11px; font-weight: normal;}
+
+/* BUNDLE AND LINKING SECTION DIV */
+#redSection {
+	/* background:#990000; */
+	border:1px solid #990000;
+	width:100%;
+	position:relative;
+}
+#blueSection {
+	/* background:#3333ff; */
+	border:1px solid #3333ff;
+	width:100%;
+	position:relative;
+}
+#greenSection {
+	/* background:#339933; */
+	border:1px solid #339933;
+	width:100%;
+	position:relative;
+}
+#graySection {
+	/* background:#333; */
+	border:1px solid #333;
+	width:100%;
+	position:relative;
+}
+#orangeSection {
+	/* background:#fc9905; */
+	border:1px solid #fc9905;
+	width:100%;
+	position:relative;
+}
+#noInstrPurposeSection {
+	background:#819EB6;
+	border:1px solid #819EB6;
+	width:100%;
+	position:relative;
+}
+
+.innerBS {
+	border:0px solid #fff;
+	width:98%;
+	margin:8px auto;
+}
+.innerBS a  {
+	text-decoration:none;
+	color:#333;
+}
+
+.innerBankBS {
+	border:0px solid #fff;
+	width:98%;
+	margin:8px auto;
+}
+.innerBankBS a  {
+	text-decoration:none;
+	color:#000;
+}
+
+#create {
+	width:200px;
+	border:0px solid #fff;
+	float:left;
+	padding-left:30px;
+	padding-top:2px;
+	padding-bottom:2px;
+	color:#fff;
+	background:url(../../img/create-ico.png) left center no-repeat;
+}
+#linkto {
+	width:200px;
+	border:0px solid red;
+	float:left;
+	padding-left:30px;
+	padding-top:2px;
+	padding-bottom:2px;
+	color:#fff;
+	background:url(../../img/link-to-ico.png) left center no-repeat;
+}
+#closeRequest {
+	width:200px;
+	border:0px solid red;
+	float:left;
+	padding-left:30px;
+	padding-top:2px;
+	padding-bottom:2px;
+	color:#fff;
+	background:url(../../img/closeRequest-ico.png) left center no-repeat;
+}
+#deleteRequest {
+	width:190px;
+	border:0px solid red;
+	float:left;
+	padding-left:30px;
+	padding-top:2px;
+	padding-bottom:2px;
+	color:#fff;
+	background:url(../../img/deleteRequest-ico.png) left center no-repeat;
+}
+#deleteRequestB {
+	width:190px;
+	border:0px solid red;
+	float:left;
+	padding-left:30px;
+	padding-top:2px;
+	padding-bottom:2px;
+	color:#fff;
+	background:url(../../img/deleteRequest-ico.png) left center no-repeat;
+}
+#blankBox {
+	width:200px;
+	border:0px solid red;
+	float:left;
+	padding-left:30px;
+	padding-top:2px;
+	padding-bottom:2px;
+	color:#fff;
+	background:none;
+}
+
+
+/* GLANCE */
+#glance {
+	width:100%;
+	padding:10px;
+	background:#f2f2f2;
+	border:1px solid #ccc;
+	border-width:1px 0px;
+	margin:0px 0px 10px -10px;
+	text-transform:uppercase;
+	font-size:11px;
+	line-height:12px;
+}
+#glance h3 {
+	margin:-5px 0px 6px 0px;
+	color:#336699;
+	font-weight:bold;
+	font-size:15px;
+	font-family:Arial, Helvetica, sans-serif;
+	cursor:pointer;
+}
+#glance p {
+	margin:0px 0px 0px 0px;
+	color:#333;
+	font-weight:normal;
+	font-size:10px;
+	clear:both;
+	text-transform:capitalize;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+#glance p a{
+	margin:0px 0px 0px 0px;
+	color:#333;
+	font-weight:normal;
+	font-size:10px;
+	clear:both;
+	text-transform:capitalize;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+#glance .txtBids {
+	font-size:18px;
+	font-weight:bold;
+	color:#950a00;
+	margin-right:12px;
+	font-family:"GE Inspira";
+	float:left;
+	height:80%;
+	border:0px solid blue;
+}
+#glance .txtPerformance {
+	color:#0e30ff;
+	font-size:18px;
+	font-weight:bold;
+	margin-right:12px;
+	font-family:"GE Inspira";
+	float:left;
+	height:80%;	
+	border:0px solid blue;
+}
+#glance .txtApayment {
+	color:#399926;
+	font-size:18px;
+	font-weight:bold;
+	margin-right:12px;
+	font-family:"GE Inspira";
+	float:left;
+	height:80%;	
+	border:0px solid blue;
+}
+#glance .txtFinancial {
+	font-size:18px;
+	font-weight:bold;
+	margin-right:12px;
+	font-family:"GE Inspira";
+	float:left;
+	height:80%;	
+	border:0px solid blue;
+	color:#333;
+}
+#glance .txtDOC {
+	font-size:18px;
+	font-weight:bold;
+	margin-right:12px;
+	font-family:"GE Inspira";
+	float:left;
+	height:80%;	
+	border:0px solid blue;
+	color:#ff9900;
+}
+#glance .boxGlance {
+	width:156px;
+	height:50px;
+	padding:10px;
+	background:#e4e4e4;
+	/*border-left:5px solid #950a00;*/
+	border:1px solid #cccccc;
+	margin:0px 10px 0px 0px;
+	float:left;
+	cursor:pointer;
+}
+
+#glance .brokerBoxGlance {
+	width:281.1px;
+	height:50px;
+	padding:10px;
+	background:#e4e4e4;
+	/*border-left:5px solid #950a00;*/
+	border:1px solid #cccccc;
+	margin:0px 10px 0px 0px;
+	float:left;
+	cursor:pointer;
+}
+#glance .bids {
+	width:100%;
+	height:100%;
+	padding:0px;
+	border:0px solid #cccccc;
+	margin:0px;
+}
+#glance .bids .colorBids {
+	width:6px;
+	height:100%;
+	padding:0px;
+	background:#950a00;
+	float:left;
+}
+#glance .bids .contentBids {
+	width:140px;
+	height:100%;
+	padding:0px;
+	float:right;
+	border:0px solid blue;
+}
+#glance .bids .contentBrokerBids {
+	width:265px;
+	height:100%;
+	padding:0px;
+	float:right;
+	border:0px solid blue;
+}
+#glance .performance {
+	width:100%;
+	height:100%;
+	padding:0px;
+	border:0px solid #cccccc;
+	margin:0px;
+	/*border-left:5px solid #0e30ff;*/
+	margin:0px 10px 0px 0px;
+	float:left;
+}
+#glance .performance .colorPerformance {
+	width:6px;
+	height:100%;
+	padding:0px;
+	background:#0e30ff;
+	float:left;
+}
+#glance .performance .contentPerformance {
+	width:140px;
+	height:100%;
+	padding:0px;
+	float:right;
+	font-size:11px;
+	border:0px solid blue;
+}
+#glance .performance .contentBrokerPerformance {
+	width:265px;
+	height:100%;
+	padding:0px;
+	float:right;
+	font-size:11px;
+	border:0px solid blue;
+}
+#glance .apayment {
+	width:100%;
+	height:100%;
+	padding:0px;
+	border:0px solid #cccccc;
+	margin:0px;
+	/*border-left:5px solid #0e30ff;*/
+	margin:0px 10px 0px 0px;
+	float:left;
+}
+#glance .apayment .colorApayment {
+	width:6px;
+	height:100%;
+	padding:0px;
+	background:#399926;
+	float:left;
+}
+#glance .apayment .contentApayment {
+	width:140px;
+	height:100%;
+	padding:0px;
+	float:right;
+	font-size:11px;
+	border:0px solid blue;
+}
+#glance .apayment .contentBrokerApayment {
+	width:265px;
+	height:100%;
+	padding:0px;
+	float:right;
+	font-size:11px;
+	border:0px solid blue;
+}
+#glance .financial {
+	width:100%;
+	height:100%;
+	padding:0px;
+	border:0px solid #cccccc;
+	margin:0px;
+	/*border-left:5px solid #0e30ff;*/
+	margin:0px 10px 0px 0px;
+	float:left;
+}
+#glance .financial .colorFinancial {
+	width:6px;
+	height:100%;
+	padding:0px;
+	background:#333;
+	float:left;
+}
+#glance .financial .contentFinancial {
+	width:140px;
+	height:100%;
+	padding:0px;
+	float:right;
+	font-size:11px;
+	border:0px solid blue;
+}
+#glance .doc {
+	width:100%;
+	height:100%;
+	padding:0px;
+	border:0px solid #cccccc;
+	margin:0px;
+	/*border-left:5px solid #0e30ff;*/
+	margin:0px 10px 0px 0px;
+	float:left;
+}
+#glance .doc .colorDOC {
+	width:6px;
+	height:100%;
+	padding:0px;
+	background:#ff9900;
+	float:left;
+}
+#glance .doc .contentDOC {
+	width:140px;
+	height:100%;
+	padding:0px;
+	float:right;
+	font-size:11px;
+	border:0px solid blue;
+}
+#glance .rejected {
+	width:152px;
+	height:70px;
+	padding:10px;
+	background:#f2f2f2;
+	/*border-left:5px solid #000;*/
+	border:1px solid #cccccc;
+	margin:0px 10px 0px 0px;
+	float:left;
+}
+
+.leftImg {	float:left; margin-right:10px;}
+.actionImg { cursor:pointer;}
+
+.createBundle {
+	font-size:12px;
+}
+.newRequest {
+	font-size:11px;
+}
+
+.bundleTxt {
+	font-size:12px;
+	padding:0px 0px 0px 5px;
+}
+
+#siteMsg .sucessMsg {
+	width:905px; 
+	padding:8px 0px 8px 35px;
+	font-size:14px;
+	color:#fff;
+	background:#5d8f3e url(../../img/sucessMsg.png) left center no-repeat;
+	margin:0px;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+}
+#siteMsg .sucessContent {
+	width:905px;
+	padding:8px;
+	font-weight:bold;
+	color:#000;
+	background:#dfe9d8;
+	border:0px solid #5d8f3e;
+	margin:0px;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+}
+
+.successclose{
+	color:#fff;
+	font-weight:bold;
+	font-size:14px;
+	padding:8px;
+}
+.errorClose{
+	color:#fff;
+	font-weight:bold;
+	font-size:14px;
+	padding:8px;
+}
+.acc_container1 table tr, .acc_container2 table tr, .acc_container3 table tr, .acc_container4 table tr, .acc_container5 table tr, .acc_container6 table tr, .acc_container7 table tr { background:none!important;}
+
+/* CSS Document Glance Sprite
+
+.glance_Bids {
+	background:url(../../img/glance-color-sprite.jpg) top left no-repeat;
+	width:5px;
+	height:20px;
+}
+.glance_Performance {
+	background:url(../../img/glance-color-sprite.jpg) -5px 0px no-repeat;
+	width:5px;
+	height:20px;
+}
+.glance_Retention {
+	background:url(../../img/glance-color-sprite.jpg) -5px 0px no-repeat;
+	width:5px;
+	height:20px;
+}
+.glance_Other {
+	background:url(../../img/glance-color-sprite.jpg) -5px 0px no-repeat;
+	width:5px;
+	height:20px;
+}
+.glance_Financial {
+	background:url(../../img/glance-color-sprite.jpg) -10px 0px no-repeat;
+	width:5px;
+	height:20px;
+}
+
+.glance_AdvancePayment {
+	background:url(../../img/glance-color-sprite.jpg) -15px 0px no-repeat;
+	width:5px;
+	height:20px;
+}
+
+.glance_Rejected {
+	background:url(../../img/glance-color-sprite.jpg) -20px 0px no-repeat;
+	width:5px;
+	height:20px;
+}
+*/
+.linkdivBundleRed{ background-color:#950a00!important; width:220px; height:auto; border:0px solid white; padding:5px; margin-top: -90px; position: absolute; left: 230px;}
+.linkdivBundleBlue{ background-color:#0e30ff!important; width:220px; height:auto; border:0px solid white; padding:5px; margin-top: -90px; position: absolute; left: 230px;}
+.linkdivBundleGreen{ background-color:#399926!important; width:220px; height:auto; border:0px solid white; padding:5px; margin-top: -90px; position: absolute; left: 230px;}
+.linkdivBundleOrange{ background-color:#ff9900!important; width:220px; height:auto; border:0px solid white; padding:5px; margin-top: -90px; position: absolute; left: 230px;}
+.linkdivBundleGrey{ background-color:#333!important; width:220px; height:auto; border:0px solid white; padding:5px; margin-top: -90px; position: absolute; left: 230px;}
+.linkdivBundleNoIP{ background-color:#819EB6!important; width:220px; height:auto; border:0px solid white; padding:5px; margin-top: -90px; position: absolute; left: 230px;}
+
+.linkdivRed{ background-color:#950a00!important; width:220px; height:auto; border:0px solid white; padding:5px; margin-top: -80px; margin-left: -2px; position: absolute; left: 6px;}
+.linkdivBlue{ background-color:#0e30ff!important; width:220px; height:auto; border:0px solid white; padding:5px; margin-top: -80px; margin-left: -2px; position: absolute; left: 6px;}
+.linkdivGreen{ background-color:#399926!important; width:220px; height:auto; border:0px solid white; padding:5px; margin-top: -80px; margin-left: -2px; position: absolute; left: 6px;}
+.linkdivOrange{ background-color:#ff9900!important; width:220px; height:auto; border:0px solid white; padding:5px; margin-top: -80px; margin-left: -2px; position: absolute; left: 6px;}
+.linkdivGrey{ background-color:#333!important; width:220px; height:auto; border:0px solid white; padding:5px; margin-top: -80px; margin-left: -2px; position: absolute; left: 6px;}
+.linkdivNoIP{ background-color:#819EB6!important; width:220px; height:auto; border:0px solid white; padding:5px; margin-top: -80px; margin-left: -2px; position: absolute; left: 6px;}
+
+.linkShow{ 
+	width:175px; 
+	height:auto; 
+	border:2px solid #000;
+	background:#f1f9ff;
+	position: absolute;
+	padding:10px; 
+	margin-left: 5px; 
+	z-index:9999;
+}
+.linkShowWOB{
+	left: 6px;
+}
+.linkShowWB{
+	left: 230px;
+}
+.linkShow:after{
+	content:'';
+	display:block;
+	position:absolute;
+	top:86px;
+	left:10%; 
+	border-color: black transparent transparent transparent; 
+	border-style: solid;
+	border-width: 15px;
+}
+/* Search Sort */
+#searchSort {
+	border:0px solid red;
+	width:100%;
+	margin-bottom:10px;
+}
+#searchSort select {
+	width:50px!important;
+}
+#searchSort .leftColSort {
+	border:0px solid red;
+	width:300px;
+	float:left;
+}
+#searchSort .rightColSort {
+	border:0px solid red;
+	width:300px;
+	float:right;
+	text-align:right;
+	vertical-align: middle;
+}
+
+/* Expand Advance Search */
+#basicSearch div.arrow { background:transparent url(../../img/arrows.png) no-repeat scroll 0px -20px; width:20px; height:20px; display:block; cursor:pointer;}
+
+#basicSearch div.up {background:transparent url(../../img/arrows.png); background-position:20px -20px; width:20px; height:20px; display:block; cursor:pointer;}
+#basicSearch div.down {background:transparent url(../../img/arrows.png); background-position:20px 0px; width:20px; height:20px; display:block; cursor:pointer;}
+
+/* Expand At a Glance */
+#glance div.arrow { background:transparent url(../../img/arrows.png) no-repeat scroll 0px -20px; width:25px; height:20px; display:block; cursor:pointer;}
+
+
+#glance div.up {background:transparent url(../../img/arrows.png); background-position:20px -20px; width:25px; height:20px; display:block; cursor:pointer;}
+#glance div.down {background:transparent url(../../img/arrows.png); background-position:20px 0px; width:25px; height:20px; display:block; cursor:pointer;}
+
+.submitLink {
+	background-color: transparent;
+	color:#004488;
+    text-decoration: none;
+    border:none;
+}
+
+.submitLink:hover {
+  color: #00438a;
+  text-decoration: underline;
+}
+
+.submitLink1 {
+	background-color: transparent;
+	color:#004488;
+    text-decoration: none;
+    border:none;
+    font-size: 11px;
+}
+
+.submitLink1:hover {
+  color: #00438a;
+  text-decoration: underline;
+}
+
+.expandRequestLink {
+	color:#000;
+}
+
+.defaultViewMsg {
+	position:relative;
+	width:940px;
+	padding:0px;
+	border-radius:5px;
+	background:#dfe9d8;
+	border:1px solid #5d8f3e;
+	margin:10px auto 10px auto;
+}
+.defaultViewMsg .defaultViewSuccessMsg {
+	width:905px;
+	padding:0px 0px 0px 35px;
+	font-size:14px;
+	color:#fff;
+	font-weight:bold;
+	background:#5d8f3e left center no-repeat;
+	margin:0px;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+}
+.defaultViewMsg .defaultSucessContent {
+	width:905px;
+	padding:8px;
+	font-weight:bold;
+	color:#000;
+	background:#dfe9d8;
+	border:0px solid #5d8f3e;
+	margin:0px;
+	border-bottom-left-radius:5px;
+	border-bottom-right-radius:5px;
+}
+
+#dvLoading {
+   background:#000 url(../../img/loading.gif) no-repeat center center;
+   position: fixed;
+   left: 0px;
+   top: 0px;
+   width: 100%; 
+   height: 100%;
+   z-index: 9999;
+   opacity:0.5;
+   filter:Alpha(opacity=50);
+}

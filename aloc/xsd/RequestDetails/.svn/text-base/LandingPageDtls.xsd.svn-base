@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/LandingPageDtls.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/LandingPageDtls.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd" schemaLocation="MsgHeader.xsd"/>
+	<xs:element name="LandingPageDtls">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Pending_My_Approval_Num" type="xs:double" minOccurs="0"/>
+				<xs:element name="Track_In_Flight_Requests_Num" type="xs:double" minOccurs="0"/>
+				<xs:element name="Issuer_Ref_Num" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bond_Ref_Num" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Aloc_Record_Num" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Aloc_Record_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank_Ref_Num" type="xs:string" minOccurs="0"/>
+				<xs:element name="Pending_Bid_Reply_Num" type="xs:double" minOccurs="0"/>
+				<xs:element name="Pending_Issuance_Num" type="xs:double" minOccurs="0"/>
+				<xs:element name="Pending_Rider_Num" type="xs:double" minOccurs="0"/>
+				<xs:element name="Pending_Amendment_Num" type="xs:double" minOccurs="0"/>
+                <xs:element name="Reports_Access_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns0:Msg_Header" minOccurs="0"/>
+				<xs:element name="User_Announcements" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Role_Id" type="xs:int" minOccurs="0"/>
+							<xs:element name="User_Sso" type="xs:string" minOccurs="0"/>
+							<xs:element name="User_Announcement_Id" type="xs:int" minOccurs="0"/>
+							<xs:element name="Message" type="xs:string" minOccurs="0"/>
+							<xs:element name="Ge_Library_Reference" type="xs:string" minOccurs="0"/>
+							<xs:element name="Ge_File_Id" type="xs:string" minOccurs="0"/>
+							<xs:element name="Ge_Folder_Id" type="xs:string" minOccurs="0"/>
+							<xs:element name="Attachment_Id" type="xs:int" minOccurs="0"/>
+							<xs:element name="Attachment_Name" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/action/dashboard
+END
+BundleDashboardActionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/action/dashboard/BundleDashboardActionTest.java
+END
+DashboardBaseActionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/action/dashboard/DashboardBaseActionTest.java
+END
+AllDashboardActionTests.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/action/dashboard/AllDashboardActionTests.java
+END
+BidProcessDashboardActionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/action/dashboard/BidProcessDashboardActionTest.java
+END
+DashboardRefDataActionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/action/dashboard/DashboardRefDataActionTest.java
+END

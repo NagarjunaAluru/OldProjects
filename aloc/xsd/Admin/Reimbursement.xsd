@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/Admin/Reimbursement.xsd"
+	 xmlns:ns2="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/Admin/ReimburseList.xsd"
+	 xmlns:ns3="http://treasury.ge.com/schemas/ALOC/RequestDetails/AuditLog.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/Admin/Reimbursement.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd" schemaLocation="../RequestDetails/MsgHeader.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/Admin/ReimburseList.xsd" schemaLocation="ReimburseList.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/AuditLog.xsd" schemaLocation="../RequestDetails/AuditLog.xsd"/>
+	<xs:element name="Reimbursement">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Op_Code" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns2:Msg_Header" minOccurs="0"/>
+				<xs:element ref="ReimbursementAgreement" minOccurs="0"/>
+				<xs:element ref="ns0:ReimburseList" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Transactions" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Records" type="xs:int" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Update_Status" type="xs:string" minOccurs="0"/>
+				<xs:element name="Site_Name" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Default_Opcode" type="xs:string" minOccurs="0"/>
+				<xs:element name="Request_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element ref="ns3:Audit_Log" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReimbursementAgreement">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Reimbursement_Agreement_id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Reimbursement_Agreement_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Agreement_Enabled_Disabled" type="xs:string" minOccurs="0"/>
+				<xs:element name="Agreement_Text" type="xs:string" minOccurs="0"/>
+				<xs:element name="Deafult_Agreement" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Deafult_Agreement_Type" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

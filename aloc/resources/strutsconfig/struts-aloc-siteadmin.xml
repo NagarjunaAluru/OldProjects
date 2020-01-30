@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="siteadmin" extends="struts-aloc-base" namespace="/int/siteadmin">
+	
+		<action name="openSiteAdminPage" class="siteAdminAction" method="openSiteAdminPage">
+			<result name="openSiteAdminPage">/jsp/siteadmin/treasuryBusinessAdmin.jsp</result>
+		</action>
+	
+	    <action name="createSite" class="siteAdminAction" method="createSite">
+	    	<result name="input">/jsp/siteadmin/createSite.jsp</result>
+	    	<result name="success" type="chain">
+				<param name="actionName">openActiveSite</param>
+			</result>
+			<result name="openActiveSite">/jsp/siteadmin/createSite.jsp</result>
+		</action>
+		
+		 <action name="createBankSite" class="siteAdminAction" method="createBankSite">
+	    	<result name="input">/jsp/siteadmin/createSite.jsp</result>
+	    	<result name="success" type="chain">
+				<param name="actionName">openActiveSite</param>
+			</result>
+			<result name="openActiveSite">/jsp/siteadmin/createSite.jsp</result>
+		</action>
+		
+		<action name="*Section" class="manageSiteAction" method="{1}Section">
+			<result name="input">/jsp/siteadmin/siteSection.jsp</result>
+			<result name="openActiveSite">/jsp/siteadmin/siteSection.jsp</result>
+			<result name="sectionControllerPage">/jsp/siteadmin/siteSection.jsp</result>
+			<result name="success">/jsp/common/home.jsp</result>
+		</action>
+		
+		<action name="*CustomField" class="manageSiteAction" method="{1}CustomField">
+			<result name="success">/jsp/siteadmin/siteSection.jsp</result>
+		</action>
+		
+		<action name="*ParentSites" class="referenceDataAction" method="{1}ParentSites">
+			<result name="success">/jsp/siteadmin/siteSection.jsp</result>
+			<result name="childSites">/jsp/siteadmin/common/showChildSites.jsp</result>
+		</action>
+		
+		<action name="*Valid" class="referenceDataAction" method="{1}Valid" />
+		
+		<action name="cancel">
+			<result name="success" type="chain">
+				<param name="actionName">treasuryAdminPortal</param>
+				<param name="namespace">/int/admin</param>
+			</result>
+		</action>
+		
+		<action name="createGroup" class="manageSiteAction" method="createGroup">
+			<result name="success">/jsp/siteadmin/common/showGroups.jsp</result>
+		</action>
+		
+		<action name="deleteGroup" class="manageSiteAction" method="deleteGroup">
+			<result name="success">/jsp/siteadmin/common/createDelegateConfig.jsp</result>
+		</action>
+		
+		<action name="saveGroupApprovers" class="manageSiteAction" method="saveGroupApprovers">
+			<result name="success">/jsp/siteadmin/siteSection.jsp</result>
+		</action>
+		
+		<action name="*BusinessAdmin" class="siteAdminAction" method="{1}BusinessAdmin">
+			<result name="openBusinessAdmin">/jsp/siteadmin/businessSiteAdmin.jsp</result>
+			<result name="openBusinessAdminDetails">/jsp/siteadmin/common/businessAdminSections.jsp</result>
+			<result name="copySite">/jsp/siteadmin/siteSection.jsp</result>
+		</action>
+		
+		<action name="delegationConfig" class="manageSiteAction" method="delegationConfig">
+			<result name="success">/jsp/siteadmin/common/delegationIntrument.jsp</result>
+		</action>
+		
+		<action name="addGroup" class="manageSiteAction" method="addGroup">
+			<result name="success">/jsp/siteadmin/common/addDelegationGroup.jsp</result>
+		</action>
+		
+		<action name="getSiteNames" class="referenceDataAction" method="getSiteNames">
+			<result name="success">/jsp/siteadmin/treasuryBusinessAdmin.jsp</result>
+		</action>
+		
+		<action name="getCopySiteDetails" class="manageSiteAction" method="getCopySiteDetails">
+			<result name="copySite">/jsp/siteadmin/siteSectionsCommon.jsp</result>
+		</action>
+		
+		<action name="saveBusinessDelegates" class="businessAdminAction" method="saveBusinessDelegates">
+			<result name="success">/jsp/siteadmin/common/delegates.jsp</result>
+			<result name="showGroups">/jsp/siteadmin/common/siteDelegateConfig.jsp</result>
+		</action>
+		
+		<action name="getCurrentApprovers" class="businessAdminAction" method="getCurrentApprovers">
+			<result name="currentDelegates">/jsp/siteadmin/common/currentDelegates.jsp</result>
+		</action>
+		
+		<action name="*Sites" class="referenceDataAction" method="{1}Sites">
+			<result name="success">/jsp/siteadmin/siteSection.jsp</result>
+		</action>
+		
+		<action name="getModifySiteDetails" class="manageSiteAction" method="getModifySiteDetails">
+			<result name="modifySite">/jsp/siteadmin/siteSectionsCommon.jsp</result>
+		</action>
+		
+		<action name="openCreateSite" class="siteAdminAction" method="openCreateSite">
+			<result name="openCreateSite">/jsp/siteadmin/siteSectionsCommon.jsp</result>
+		</action>
+		
+		<action name="refreshSiteTypeDetails">
+			<result>/jsp/siteadmin/common/createSiteDetails.jsp</result>
+		</action>
+		
+	</package>
+</struts>

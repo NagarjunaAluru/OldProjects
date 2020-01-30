@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/TreasuryDelegationApprovers.xsd"
+	 targetNamespace="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/TreasuryDelegationApprovers.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="TreasuryDelegationApprovers">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TreasuryDelegationGroup" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Approval_Level_Required" type="xs:int" minOccurs="0"/>
+				<xs:element ref="TreasuryApproverLevel" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TreasuryDelegationGroup">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Group_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Group_id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Stage_Name" type="xs:string" minOccurs="0"/>
+				<xs:element ref="TreasuryGroupApprover" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TreasuryGroupApprover">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="App_First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="App_Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Ssso_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Approver_Level_Id" type="xs:int" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TreasuryApproverLevel">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Sso_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Level_Id" type="xs:int" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

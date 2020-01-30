@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/dao/impl/admin
+END
+ChangeRequestOwnershipDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/dao/impl/admin/ChangeRequestOwnershipDAO.java
+END
+RecordsRetentionMgmtDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/dao/impl/admin/RecordsRetentionMgmtDAO.java
+END
+ReimbursementAgreementMgmtDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/dao/impl/admin/ReimbursementAgreementMgmtDAO.java
+END
+StandardFormatMgmtDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/dao/impl/admin/StandardFormatMgmtDAO.java
+END
+UserAnnouncementMgmtDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/dao/impl/admin/UserAnnouncementMgmtDAO.java
+END
+SuretyNameMgmtDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/dao/impl/admin/SuretyNameMgmtDAO.java
+END
+BlockBUCDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/dao/impl/admin/BlockBUCDAO.java
+END
+PoleNameMgmtDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/dao/impl/admin/PoleNameMgmtDAO.java
+END
+SwiftMessageMonitoringDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/dao/impl/admin/SwiftMessageMonitoringDAO.java
+END
+AmendmentWorkflowMgmtDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/dao/impl/admin/AmendmentWorkflowMgmtDAO.java
+END

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http:///treasury.ge.com/schemas/ALOC/adhoc-report-field-config" 
+	jaxb:version="2.0" 
+	elementFormDefault="qualified" 
+	xmlns="http://www.w3.org/2001/XMLSchema" 
+	xmlns:tns="http:///treasury.ge.com/schemas/ALOC/adhoc-report-field-config" 
+	xmlns:jaxb="http://java.sun.com/xml/ns/jaxb">
+
+    <element name="adhoc-field-config">
+    	<complexType>
+	    	<sequence>
+	    		<element ref="tns:section" minOccurs="0" maxOccurs="unbounded" />
+	    	</sequence>
+	    </complexType>
+    </element>
+
+   	<element name="section">
+		<complexType>
+			<sequence>
+				<element ref="tns:field" minOccurs="1" maxOccurs="unbounded"/>
+			</sequence>
+			<attribute name="id" type="ID" use="required"/>
+			<attribute name="name" type="string" use="required" />
+			<attribute name="instrumentIds" default="1 2 3 4 5 6">
+				<simpleType>
+					<list itemType="tns:instrumentId"/>
+				</simpleType>
+			</attribute>
+		</complexType>
+	</element>
+	
+	<element name="field">
+		<complexType>
+			<sequence>
+				<element name="operators" type="tns:operator" minOccurs="1" maxOccurs="unbounded"/>
+			</sequence>
+			<attribute name="id" type="ID" use="required"/>
+			<attribute name="name" type="string" use="required" />
+			<attribute name="instrumentIds" default="1 2 3 4 5 6">
+				<simpleType>
+					<list itemType="tns:instrumentId"/>
+				</simpleType>
+			</attribute>
+			<attribute name="dataType" type="tns:dataType" default="string" />
+		</complexType>
+	</element>
+
+    <simpleType name="operator">
+   		<annotation>
+            <appinfo>
+                <jaxb:typesafeEnumClass name="Operator"/>
+            </appinfo>
+           </annotation>
+  			<restriction base="string">
+  				<enumeration value="like" />
+  				<enumeration value="equal" />
+  				<enumeration value="less than" />
+  				<enumeration value="less than or equal" />
+  				<enumeration value="greater than" />
+  				<enumeration value="greater than or equal" />
+  				<enumeration value="in between" />
+  			</restriction>
+   	</simpleType>
+   	
+   	<simpleType name="dataType">
+   		<annotation>
+            <appinfo>
+                <jaxb:typesafeEnumClass name="DataType"/>
+            </appinfo>
+           </annotation>
+  			<restriction base="string">
+  				<enumeration value="string" />
+  				<enumeration value="int" />
+  				<enumeration value="integer" />
+  				<enumeration value="decimal" />
+  				<enumeration value="date" />
+  				<enumeration value="datetime" />
+  			</restriction>
+   	</simpleType>
+
+    
+    <simpleType name="instrumentId">
+        <restriction base="integer">
+	       <minInclusive value="1" />
+	       <maxInclusive value="6" />
+        </restriction>
+    </simpleType>
+    
+    
+</schema>

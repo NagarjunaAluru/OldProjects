@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+
+	 <field name="requestDetails.bidOrOptFlag">
+		<field-validator type="required">
+			<message key="error.required.requestDetails.bidOptionSelection" />
+		</field-validator>
+	</field>
+	<field name="requestDetails.bidReplyDetails.bidExpirationDate">
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">
+        	<![CDATA[((requestDetails.bidOrOptFlag != "Bid") ||  (requestDetails.bidReplyDetails.bidExpirationDate != null))]]>
+      	</param>
+      	<message key="error.required.requestDetails.bidExpirationDate" />
+      	</field-validator>
+      	<field-validator type="fieldexpression">
+		<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@validateBidExpirationDate(requestDetails.bidReplyDetails.bidExpirationDate,requestDetails.bidOrOptFlag)</param>
+			<message key="error.required.requestDetails.bgBidExpirationDateInvalid" />
+		</field-validator>
+	</field> 
+	<field name="bidHours">
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">
+        	<![CDATA[((requestDetails.bidOrOptFlag != "Bid") || (bidHours !=null && bidHours !="") )]]>
+      	</param>
+			<message key="error.required.requestDetails.bidExpirationHour" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requestDetails.bidOrOptFlag != "Bid") || ((bidHours > 0) && (bidHours <= 12)))]]>
+      	</param>
+			<message key="error.required.requestDetails.bgBidExpirationHourInvalid" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+		<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@validateBidExpirationTime(requestDetails.bidReplyDetails.bidExpirationDate,requestDetails.bidOrOptFlag,bidHours,bidMinutes,bidPeriod)</param>
+			<message key="error.required.requestDetails.bgBidExpirationTimeInvalid" />
+		</field-validator>
+	</field>
+	<field name="bidMinutes">
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">
+        	<![CDATA[((requestDetails.bidOrOptFlag != "Bid") || (bidMinutes !=null && bidMinutes != ""))]]>
+      	</param>
+			<message key="error.required.requestDetails.bidExpirationMinute" />
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requestDetails.bidOrOptFlag != "Bid") || ((bidMinutes !=null && bidMinutes !="") && bidMinutes >= 0 && bidMinutes < 60))]]>
+      	</param>
+			<message key="error.required.requestDetails.bgBidExpirationMinuteInvalid" />
+		</field-validator>
+		
+	</field> 
+	
+ 	<field name="requestDetails.bidReplyDetails.issuanceTypeFlag">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requestDetails.bidOrOptFlag != "Bid") || requestDetails.bidReplyDetails.issuanceRequired==false || requestDetails.bidReplyDetails.issuanceRequired!=true || requestDetails.bidReplyDetails.issuanceTypeFlag!=null)]]>
+      	</param>
+			<message key="error.required.requestDetails.pricingIssuanceSelection" />
+		</field-validator>
+	</field>
+	<field name="requestDetails.bidReplyDetails.notes">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requestDetails.bidOrOptFlag != "Bid") ||  ((requestDetails.bidReplyDetails.notes != null) && (requestDetails.bidReplyDetails.notes != "")))]]>
+      	</param>
+			<message key="error.required.requestDetails.issuanceNotes" />
+		</field-validator>
+	</field> 
+	
+	<field name="requestDetails.issuingBankDetails.USExpirationDate">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[requestDetails.bidOrOptFlag != "Bid" || requestDetails.issuingBankDetails.USExpirationDate == null || @com.ge.aloc.util.ALOCCommonHelper@compareTwoDates(requestDetails.issuingBankDetails.USExpirationDate,requestDetails.instrumentDetails.expiryDt) != false]]>
+			</param>
+			<message key="error.required.issuingBankDetails.bidreplyUSExpirationDateInvalid"/>
+		</field-validator>
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requestDetails.bidOrOptFlag != "Bid") || ((requestDetails.USExpirationDateRequired == null) || (requestDetails.USExpirationDateRequired != true) || (requestDetails.issuingBankDetails.USExpirationDate != null)))]]>
+      	</param>
+		<message key="error.required.issuingBankDetails.usExpirationDate" />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.actionDetails.reasonForOptingOut">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requestDetails.bidOrOptFlag != "Optout") ||  (requestDetails.actionDetails.reasonForOptingOut != ""))]]>
+      	</param>
+			<message key="error.required.actionDetails.reasonForOptingOut" />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.preAgreedPricingDetails.oneTimeFeesDetails.acceptPricingDetailsFlag">
+		<field-validator type="fieldexpression">
+		<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@validatepreAgreedPricingDetails(requestDetails.bidOrOptFlag)</param>
+		<message key="error.required.requestDetails.pricingDetails" />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.preAgreedPricingDetails.oneTimeFeesDetails.reasonForRejection">
+		<field-validator type="fieldexpression">
+		<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@validateReasonForRejection()</param>
+		<message key="error.required.actionDetails.reasonforRejection" />
+		</field-validator>
+	</field>
+	
+	<field name="bankName">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((requestDetails.bidOrOptFlag != "Bid") || (bankName !=null && bankName.trim() !="" && bankSelection!=null && bankSelection.trim() !="") || ((bankName ==null || bankName.trim() =="") && bankSelection!=null && bankSelection.trim() !=""))]]>
+      		</param>
+			<message key="error.required.dlocBidReply.bankNameLookup"/>
+		</field-validator>
+	</field>
+	
+	<field name="bankCountryCd">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((requestDetails.bidOrOptFlag != "Bid") || (bankCountryCd !=null && bankCountryCd.trim() !="" && bankSelection!=null && bankSelection.trim() !="") || ((bankCountryCd ==null || bankCountryCd.trim() =="") && bankSelection!=null && bankSelection.trim() !=""))]]>
+      		</param>
+			<message key="error.required.requestDetails.bankCountry"/>
+		</field-validator>
+	</field>
+	
+	<field name="bankCity">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((requestDetails.bidOrOptFlag != "Bid") || (bankCity !=null && bankCity.trim() !="" && bankSelection!=null && bankSelection.trim() !="") || ((bankCity ==null || bankCity.trim() =="") && bankSelection!=null && bankSelection.trim() !=""))]]>
+      		</param>
+			<message key="error.required.requestDetails.bankCity"/>
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.bidReplyDetails.issuanceTypeFlag">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[(requestDetails.bidOrOptFlag != "Bid") || ((requestDetails.bidReplyDetails.issuanceTypeFlag != null && requestDetails.bidReplyDetails.issuanceTypeFlag != ""))]]>
+		</param>
+		<message key="error.required.requestDetails.issuanceTypeFlag" />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.pricingDetails.allInCommissionsId">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+	        	<![CDATA[((requestDetails.bidOrOptFlag != "Bid") || (requestDetails.additionalInstrumentDetails.requestForProposal != false)) || ((requestDetails.pricingDetails.allInCommissionsId !=null) || (requestDetails.pricingDetails.localCommissionsId != null))]]>
+	      	</param>
+      	<message key="error.required.requestDetails.allInCommissionsLocalCommissinsRequired" />
+     	</field-validator>
+     </field>
+     
+     <field name="requestDetails.pricingDetails.localCommissionsId">
+     	<field-validator type="fieldexpression">
+			<param name="expression">
+	        	<![CDATA[((requestDetails.bidOrOptFlag != "Bid") || (requestDetails.additionalInstrumentDetails.requestForProposal != false)) || ((requestDetails.pricingDetails.allInCommissionsId !=null) || (requestDetails.pricingDetails.localCommissionsId != null))]]>
+	      	</param>
+      	<message key="error.required.requestDetails.allInCommissionsLocalCommissinsRequired" />
+     	</field-validator>
+     </field>
+     
+	<field name="allInCommissionsValue">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+	        	<![CDATA[(((requestDetails.bidOrOptFlag != "Bid") || (requestDetails.additionalInstrumentDetails.isRequestForProposal() != null
+				&& requestDetails.getAdditionalInstrumentDetails().isRequestForProposal())) || ((requestDetails.pricingDetails == null) || ((requestDetails.pricingDetails.allInCommissionsId ==null) || (requestDetails.pricingDetails.allInCommissionsId !=1) || (allInCommissionsValue !=null && allInCommissionsValue !="")))) ]]>
+	      	</param>
+	      	<message>
+      			${getText("error.required.requestDetails.allInRateArrearsMandatory", {'All-In Commissions :'})}
+            </message>
+      	</field-validator>
+      	<field-validator type="fieldexpression">
+			<param name="expression">
+	        	<![CDATA[(((requestDetails.bidOrOptFlag != "Bid") || (requestDetails.additionalInstrumentDetails.isRequestForProposal() != null
+				&& requestDetails.getAdditionalInstrumentDetails().isRequestForProposal())) || ((requestDetails.pricingDetails == null) || ((requestDetails.pricingDetails.allInCommissionsId ==null) || (requestDetails.pricingDetails.allInCommissionsId !=2) || (allInCommissionsValue !=null && allInCommissionsValue !="")))) ]]>
+	      	</param>
+	      	<message>
+      			${getText("error.required.requestDetails.allInRateadvanceMandatory", {'All-In Commissions :'})}
+            </message>
+      	</field-validator>
+      	<field-validator type="fieldexpression">
+			<param name="expression">
+	        	<![CDATA[(((requestDetails.bidOrOptFlag != "Bid") || (requestDetails.additionalInstrumentDetails.isRequestForProposal() != null
+				&& requestDetails.getAdditionalInstrumentDetails().isRequestForProposal())) || ((requestDetails.pricingDetails == null) || ((requestDetails.pricingDetails.allInCommissionsId ==null) || (requestDetails.pricingDetails.allInCommissionsId !=3) || (allInCommissionsValue !=null && allInCommissionsValue !="")))) ]]>
+	      	</param>
+	      		<message>
+      			${getText("error.required.requestDetails.flatFeeAnnumMandatory", {'All-In Commissions :'})}
+            </message>
+      	</field-validator>
+      	<field-validator type="fieldexpression">
+			<param name="expression">
+	        	<![CDATA[(((requestDetails.bidOrOptFlag != "Bid") || (requestDetails.additionalInstrumentDetails.isRequestForProposal() != null
+				&& requestDetails.getAdditionalInstrumentDetails().isRequestForProposal())) || ((requestDetails.pricingDetails == null) || ((requestDetails.pricingDetails.allInCommissionsId ==null) || (requestDetails.pricingDetails.allInCommissionsId !=4) || (allInCommissionsValue !=null && allInCommissionsValue !="")))) ]]>
+	      	</param>
+	      	<message>
+      			${getText("error.required.requestDetails.flatFeeAdvanceMandatory", {'All-In Commissions :'})}
+            </message>
+      	</field-validator>
+		<field-validator type="fieldexpression">
+      		<param name="expression">
+	        	<![CDATA[(((requestDetails.bidOrOptFlag != "Bid") || (requestDetails.additionalInstrumentDetails.isRequestForProposal() != null
+				&& requestDetails.getAdditionalInstrumentDetails().isRequestForProposal())) || ((requestDetails.pricingDetails.allInCommissionsId !=null && requestDetails.pricingDetails.allInCommissionsId != 1) || (allInCommissionsValue !=null && @com.ge.aloc.util.ALOCCommonHelper@isValidDecimalFourteen(allInCommissionsValue))))]]>
+	      	</param>
+			<message>
+      			${getText("error.required.requestDetails.allInRateArrearsInvalid", {'All-In Commissions :'})}
+            </message>
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+      		<param name="expression">
+	        	<![CDATA[(((requestDetails.bidOrOptFlag != "Bid") || (requestDetails.additionalInstrumentDetails.isRequestForProposal() != null
+				&& requestDetails.getAdditionalInstrumentDetails().isRequestForProposal())) || ((requestDetails.pricingDetails.allInCommissionsId !=null && requestDetails.pricingDetails.allInCommissionsId != 2) || (allInCommissionsValue !=null && @com.ge.aloc.util.ALOCCommonHelper@isValidDecimalFourteen(allInCommissionsValue))))]]>
+	      	</param>
+			<message>
+      			${getText("error.required.requestDetails.allInRateadvanceInvalid", {'All-In Commissions :'})}
+            </message>
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+      		<param name="expression">
+	        	<![CDATA[(((requestDetails.bidOrOptFlag != "Bid") || (requestDetails.additionalInstrumentDetails.isRequestForProposal() != null
+				&& requestDetails.getAdditionalInstrumentDetails().isRequestForProposal())) || ((requestDetails.pricingDetails.allInCommissionsId !=null && requestDetails.pricingDetails.allInCommissionsId != 3) || (allInCommissionsValue !=null && @com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(allInCommissionsValue))))]]>
+	      	</param>
+			<message>
+      			${getText("error.required.requestDetails.flatFeeAnnumInvalid", {'All-In Commissions :'})}
+            </message>
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+      		<param name="expression">
+	        	<![CDATA[(((requestDetails.bidOrOptFlag != "Bid") || (requestDetails.additionalInstrumentDetails.isRequestForProposal() != null
+				&& requestDetails.getAdditionalInstrumentDetails().isRequestForProposal())) || ((requestDetails.pricingDetails.allInCommissionsId !=null && requestDetails.pricingDetails.allInCommissionsId != 4) || (allInCommissionsValue !=null && @com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(allInCommissionsValue))))]]>
+	      	</param>
+			<message>
+      			${getText("error.required.requestDetails.flatFeeAdvanceInvalid", {'All-In Commissions :'})}
+            </message>
+		</field-validator>
+    </field>
+    
+   <field name="localCommissionsValue">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[(((requestDetails.bidOrOptFlag != "Bid") || (requestDetails.additionalInstrumentDetails.isRequestForProposal() != null
+				&& requestDetails.getAdditionalInstrumentDetails().isRequestForProposal())) || ((requestDetails.pricingDetails.localCommissionsId ==null) || (requestDetails.pricingDetails.localCommissionsId !=1) || (localCommissionsValue !=null && localCommissionsValue !=""))) ]]>
+	      	</param>
+	      <message>${getText("error.required.requestDetails.allInRateArrearsMandatory", {'Local Commissions :'})}</message>
+      	</field-validator>
+      	<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[(((requestDetails.bidOrOptFlag != "Bid") || (requestDetails.additionalInstrumentDetails.isRequestForProposal() != null
+				&& requestDetails.getAdditionalInstrumentDetails().isRequestForProposal())) || ((requestDetails.pricingDetails.localCommissionsId ==null) || (requestDetails.pricingDetails.localCommissionsId !=2) || (localCommissionsValue !=null && localCommissionsValue !=""))) ]]>
+	      	</param>
+	      	<message>
+      			${getText("error.required.requestDetails.allInRateadvanceMandatory", {'Local Commissions :'})}
+            </message>
+      	</field-validator>
+      	<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[(((requestDetails.bidOrOptFlag != "Bid") || (requestDetails.additionalInstrumentDetails.isRequestForProposal() != null
+				&& requestDetails.getAdditionalInstrumentDetails().isRequestForProposal())) || ((requestDetails.pricingDetails.localCommissionsId ==null) || (requestDetails.pricingDetails.localCommissionsId !=3) || (localCommissionsValue !=null && localCommissionsValue !=""))) ]]>
+	      	</param>
+	      	<message>
+      			${getText("error.required.requestDetails.flatFeeAnnumMandatory", {'Local Commissions :'})}
+            </message>
+      	</field-validator>
+      	<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[(((requestDetails.bidOrOptFlag != "Bid") || (requestDetails.additionalInstrumentDetails.isRequestForProposal() != null
+				&& requestDetails.getAdditionalInstrumentDetails().isRequestForProposal())) || ((requestDetails.pricingDetails.localCommissionsId ==null) || (requestDetails.pricingDetails.localCommissionsId !=4) || (localCommissionsValue !=null && localCommissionsValue !=""))) ]]>
+	      	</param>
+	      	<message>
+      			${getText("error.required.requestDetails.flatFeeAdvanceMandatory", {'Local Commissions :'})}
+            </message>
+      	</field-validator>
+      	
+      	<field-validator type="fieldexpression">
+      		<param name="expression">
+	        	<![CDATA[(((requestDetails.bidOrOptFlag != "Bid") || (requestDetails.additionalInstrumentDetails.isRequestForProposal() != null
+				&& requestDetails.getAdditionalInstrumentDetails().isRequestForProposal())) || ((requestDetails.pricingDetails.localCommissionsId !=null && requestDetails.pricingDetails.localCommissionsId != 1) || (localCommissionsValue !=null && @com.ge.aloc.util.ALOCCommonHelper@isValidDecimalFourteen(localCommissionsValue))))]]>
+	      	</param>
+			<message>
+      			${getText("error.required.requestDetails.allInRateArrearsInvalid", {'Local Commissions :'})}
+            </message>
+		</field-validator>
+		
+      	<field-validator type="fieldexpression">
+      		<param name="expression">
+	        	<![CDATA[(((requestDetails.bidOrOptFlag != "Bid") || (requestDetails.additionalInstrumentDetails.isRequestForProposal() != null
+				&& requestDetails.getAdditionalInstrumentDetails().isRequestForProposal())) || ((requestDetails.pricingDetails.localCommissionsId !=null && requestDetails.pricingDetails.localCommissionsId != 2) || (localCommissionsValue !=null && @com.ge.aloc.util.ALOCCommonHelper@isValidDecimalFourteen(localCommissionsValue))))]]>
+	      	</param>
+			<message>
+      			${getText("error.required.requestDetails.allInRateadvanceInvalid", {'Local Commissions :'})}
+            </message>
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+      		<param name="expression">
+	        	<![CDATA[(((requestDetails.bidOrOptFlag != "Bid") || (requestDetails.additionalInstrumentDetails.isRequestForProposal() != null
+				&& requestDetails.getAdditionalInstrumentDetails().isRequestForProposal())) || ((requestDetails.pricingDetails.localCommissionsId !=null && requestDetails.pricingDetails.localCommissionsId != 3) || (localCommissionsValue !=null && @com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(localCommissionsValue))))]]>
+	      	</param>
+			<message>
+      			${getText("error.required.requestDetails.allInRateadvanceInvalid", {'Local Commissions :'})}
+            </message>
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+      		<param name="expression">
+	        	<![CDATA[(((requestDetails.bidOrOptFlag != "Bid") || (requestDetails.additionalInstrumentDetails.isRequestForProposal() != null
+				&& requestDetails.getAdditionalInstrumentDetails().isRequestForProposal())) || ((requestDetails.pricingDetails.localCommissionsId !=null && requestDetails.pricingDetails.localCommissionsId != 4) || (localCommissionsValue !=null && @com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(localCommissionsValue))))]]>
+	      	</param>
+			<message>
+      			${getText("error.required.requestDetails.allInRateadvanceInvalid", {'Local Commissions :'})}
+            </message>
+		</field-validator>
+    </field>
+        
+</validators>

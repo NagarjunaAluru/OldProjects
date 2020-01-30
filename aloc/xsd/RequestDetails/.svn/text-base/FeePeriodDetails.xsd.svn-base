@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/APM/FeePeriodDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/APM/FeePeriodDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="FeePeriodDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="APM_Config_ID" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Period_Start_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Period_End_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Period_Cutt_Off_Date" type="xs:dateTime" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

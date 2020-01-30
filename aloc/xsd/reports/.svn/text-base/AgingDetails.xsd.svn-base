@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/Reports/AgingDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/Reports/AgingDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="AgingDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Applicant_Principal_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Beneficiary_Obligee" type="xs:string" minOccurs="0"/>
+				<xs:element name="Beneficiary_Obligee_Country" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instrument_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instrument_Purpose" type="xs:string" minOccurs="0"/>
+				<xs:element name="Gold_ID" type="xs:string" minOccurs="0"/>
+				<xs:element name="GE_Applicant_Reference1" type="xs:string" minOccurs="0"/>
+				<xs:element name="Beneficiary_Reference1" type="xs:string" minOccurs="0"/>
+				<xs:element name="Countryof_Issuance" type="xs:string" minOccurs="0"/>
+				<xs:element name="In_Bundle_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="In_GB_App_Princ_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="In_GB_Ben_Oblig_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="In_GB_Ben_Oblig_Country" type="xs:string" minOccurs="0"/>
+				<xs:element name="In_GB_Inst_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="In_GB_Inst_Purp" type="xs:string" minOccurs="0"/>
+				<xs:element name="In_GB_Gold_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="In_GB_Site_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="In_GB_GE_App_Ref1" type="xs:string" minOccurs="0"/>
+				<xs:element name="In_GB_Ben_Ref1" type="xs:string" minOccurs="0"/>
+				<xs:element name="In_GB_Country_Of_Issue" type="xs:string" minOccurs="0"/>
+				<xs:element name="In_GB_Bundle_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="In_Aging_Months" type="xs:string" minOccurs="0"/>
+				<xs:element name="Aging_User_SSO" type="xs:string" minOccurs="0"/>
+				<xs:element name="Incremental_Num_Of_Months" type="xs:string" minOccurs="0"/>
+				<xs:element name="ALOC_Record" type="xs:string" minOccurs="0"/>
+				<xs:element name="Site_ID" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Applicant_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuer" type="xs:string" minOccurs="0"/>
+				<xs:element name="Beneficiary_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bene_Country" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuance_Date" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instrument_Amount" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instrument_Currency" type="xs:string" minOccurs="0"/>
+				<xs:element name="Expiration_Date" type="xs:string" minOccurs="0"/>
+				<xs:element name="OrigEcon_Expiration_Date" type="xs:string" minOccurs="0"/>
+				<xs:element name="Max_Aging_Months" type="xs:string" minOccurs="0"/>
+                <xs:element name="Requestor_Name" type="xs:string" minOccurs="0"/>
+                <xs:element name="Requestor_Sso" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

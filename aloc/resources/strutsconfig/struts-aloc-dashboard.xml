@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="dashboard" extends="struts-aloc-base" namespace="/int/dashboard">
+		<action name="displayMyTransactionDashboard" class="commonDashboardAction" method="display">
+			<result name="success">/jsp/dashboard/baseDashboard.jsp</result>
+			<param name="dashboardViewType">MYTRANSACTIONS</param>
+		</action>
+		
+		<action name="displayAllRequestDashboard" class="commonDashboardAction" method="display">
+			<result name="success">/jsp/dashboard/baseDashboard.jsp</result>
+			<param name="dashboardViewType">ALLREQUESTS</param>
+		</action>
+		
+		<action name="displayDraftDashboard" class="commonDashboardAction" method="display">
+			<result name="success">/jsp/dashboard/baseDashboard.jsp</result>
+			<param name="dashboardViewType">DRAFTS</param>
+		</action>
+		
+		<action name="displayModelDashboard" class="commonDashboardAction" method="display">
+			<result name="success">/jsp/dashboard/baseDashboard.jsp</result>
+			<param name="dashboardViewType">MODEL</param>
+		</action>
+		
+		<action name="displayBundleDashboard" class="commonDashboardAction" method="display">
+			<result name="success">/jsp/dashboard/baseDashboard.jsp</result>
+			<param name="dashboardViewType">BUNDLES</param>
+		</action>
+		
+		<action name="getAllRequestInfoForSelBundle" class="commonDashboardAction" method="getAllRequestInfoForSelBundle" >
+			<result name="success">/jsp/dashboard/common/BundleDashboardExpand.jsp</result>
+			<param name="dashboardViewType">BUNDLEREQ</param>
+		</action>
+		
+		<action name="displayBidTreasuryDashboard" class="commonDashboardAction" method="display">
+			<result name="success">/jsp/dashboard/baseDashboard.jsp</result>
+			<param name="dashboardViewType">TREASURYBIDPROCESS</param>
+		</action>
+		
+		<action name="displayBankBidProcessDashboard" class="commonDashboardAction" method="display">
+			<result name="success">/jsp/dashboard/baseDashboard.jsp</result>
+			<param name="dashboardViewType">BANKBIDPROCESS</param>
+		</action>
+		
+		<action name="displayBankPendingIssDashboard" class="commonDashboardAction" method="display">
+			<result name="success">/jsp/dashboard/baseDashboard.jsp</result>
+			<param name="dashboardViewType">TREASURYBANKPENDINGINCE</param>
+		</action>
+		
+		<action name="displayBankHistTransDashboard" class="commonDashboardAction" method="display">
+			<result name="success">/jsp/dashboard/baseDashboard.jsp</result>
+			<param name="dashboardViewType">TREASURYBANKHIST</param>
+		</action>		
+		
+		<action name="displayBrokerBidProcessDashboard" class="commonDashboardAction" method="display">
+			<result name="success">/jsp/dashboard/baseDashboard.jsp</result>
+			<param name="dashboardViewType">TREASURYBROKERBIDPROCESS</param>
+		</action>
+		
+		<action name="displayBrokerPendingIssDashboard" class="commonDashboardAction" method="display">
+			<result name="success">/jsp/dashboard/baseDashboard.jsp</result>
+			<param name="dashboardViewType">TREASURYBROKERPENDINGINCE</param>
+		</action>
+		
+		<action name="displayBrokerHistTransDashboard" class="commonDashboardAction" method="display">
+			<result name="success">/jsp/dashboard/baseDashboard.jsp</result>
+			<param name="dashboardViewType">TREASURYBROKERHIST</param>
+		</action>	
+		
+		<action name="displayDashboard" class="commonDashboardAction" method="display">
+			<result name="success">/jsp/dashboard/baseDashboard.jsp</result>
+		</action>
+				
+		<action name="saveDefaultView" class="commonDashboardAction" method="saveDefaultView">
+		</action>
+		
+		<action name="manageBundle" class="commonSearchAction" method="manageBundleSearch">
+			<result name="success">/jsp/dashboard/searchResult.jsp</result>
+			<param name="dashboardViewType">BUNDLES</param>
+		</action>
+		
+		<action name="displayBankPendingAmendmentDashboard" class="commonSearchAction" method="displayPendingAmendmentRider">
+			<result name="success">/jsp/dashboard/baseDashboard.jsp</result>
+			<param name="dashboardViewType">TREASURYBANKPENDINGINCE</param>
+		</action>
+		
+		<action name="displayBrokerPendingRiderDashboard" class="commonSearchAction" method="displayPendingAmendmentRider">
+			<result name="success">/jsp/dashboard/baseDashboard.jsp</result>
+			<param name="dashboardViewType">TREASURYBROKERPENDINGINCE</param>
+		</action>
+		
+		<action name="basicSearch" class="commonSearchAction" method="basicSearch">
+			<result name="success">/jsp/dashboard/searchResult.jsp</result>
+		</action>
+		
+		<action name="advanceSearch" class="commonSearchAction" method="advanceSearch">
+			<result name="success">/jsp/dashboard/searchResult.jsp</result>
+		</action>
+		
+		<action name="addInstrumentPurpose" class="commonSearchAction" method="addElements">
+			<result name="success">/jsp/dashboard/common/addInstrumentPurpose.jsp</result>
+		</action>
+		
+		<action name="addIssuanceCountry" class="commonSearchAction" method="addElements">
+			<result name="success">/jsp/dashboard/common/addIssuanceCountry.jsp</result>
+		</action>
+		<action name="addApmIssuanceCountry" class="commonSearchAction" method="addElements">
+			<result name="success">/jsp/dashboard/common/addApmIssuanceCountry.jsp</result>
+		</action>
+		
+		<action name="addInstrumentCurrency" class="commonSearchAction" method="addElements">
+			<result name="success">/jsp/dashboard/common/addInstrumentCurrency.jsp</result>
+		</action>
+		
+		<action name="addPole" class="commonSearchAction" method="addElements">
+			<result name="success">/jsp/dashboard/common/addPole.jsp</result>
+		</action>
+		
+		<action name="addPaymentCurrency" class="commonSearchAction" method="addElements">
+			<result name="success">/jsp/dashboard/common/addPaymentCurrency.jsp</result>
+		</action>
+		
+		<action name="addApmPaymentCurrency" class="commonSearchAction" method="addElements">
+			<result name="success">/jsp/dashboard/common/addApmPaymentCurrency.jsp</result>
+		</action>
+		
+		<action name="addSubBond" class="commonSearchAction" method="addElements">
+			<result name="success">/jsp/dashboard/common/addSubBond.jsp</result>
+		</action>
+		<action name="deleteRequestModel" class="dashboardRefDataAction" method="deleteRequestModel">
+			<result name="success">/jsp/dashboard/common/deleteSelectedRequestModel.jsp</result>
+		</action>
+		
+		<action name="deleteRequest" class="dashboardRefDataAction" method="deleteRequest">
+			<result name="success" type="chain">displayDashboard</result>
+		</action>
+		
+		<action name="enableModel" class="commonDashboardAction" method="enableModel">
+			<result name="success" type="redirectAction">
+                <param name="actionName">displayModelDashboard</param>
+                <param name="namespace">/int/dashboard</param>
+            </result>
+         </action>
+		
+		<action name="disableModel" class="commonDashboardAction" method="disableModel">
+			<result name="success" type="redirectAction">
+                <param name="actionName">displayModelDashboard</param>
+                <param name="namespace">/int/dashboard</param>
+            </result>
+         </action>
+		
+		<action name="deleteModel" class="commonDashboardAction" method="deleteModel">
+			<result name="success" type="redirectAction">
+                <param name="actionName">displayModelDashboard</param>
+                <param name="namespace">/int/dashboard</param>
+            </result>
+         </action>
+		
+		<action name="getGlanceDetails" class="commonDashboardAction" method="getGlanceDetails">
+			<result name="success">/jsp/dashboard/baseDashboard.jsp</result>
+		</action>	
+		
+		<action name="getTreasuryBidRequestContactInfo" class="dashboardRefDataAction" method="getTreasuryBidRequestContactInfo">
+			<result name="success">/jsp/dashboard/common/BidTreasuryDashboardExpand.jsp</result>
+		</action>			
+		
+		<action name="selectWinnerRequests" class="dashboardRefDataAction" method="selectWinnerRequests">
+			<result name="success">/jsp/common/requestsForBidProcessModal.jsp</result>
+		</action>	
+		
+		<action name="selectWinnerFromBidprocess" class="dashboardRefDataAction" method="selectWinnerRequests">
+			<result name="success">/jsp/dashboard/common/selectWinnerFromBidProcess.jsp</result>
+		</action>
+		
+		<action name="getLinkedTransactionsCount" class="dashboardRefDataAction" method="getLinkedTransactionsCount">
+			<result name="success">/jsp/dashboard/common/linkedTransactionCount.jsp</result>
+		</action>
+		
+		<action name="getAllIssuingBanks" class="commonSearchAction" method="getAllIssuingBanks">
+			<result name="success">/jsp/dashboard/common/bankDetailPanel.jsp</result>
+		</action>
+		
+		<action name="getAllSuretyNames" class="commonSearchAction" method="getAllSuretyNames">
+			<result name="success">/jsp/dashboard/common/suretyCompName.jsp</result>
+		</action>
+	</package>
+</struts>

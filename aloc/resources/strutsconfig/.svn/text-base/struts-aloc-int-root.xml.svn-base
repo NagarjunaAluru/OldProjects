@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="root" extends="struts-aloc-base" namespace="/int">
+		
+		<action name="home" class="homePageAction">
+			<result name="businessHomePage">/jsp/common/businessLandingPage.jsp</result>	
+			<result name="treasuryHomePage">/jsp/common/treasuryLandingPage.jsp</result>
+			<result name="rolesNotFound">/jsp/common/rolesNotFoundPage.jsp</result>
+			<result name="emailRequest" type="chain">
+				<param name="actionName">openRequest</param>
+				<param name="requestId">${requestId}</param>
+				<param name="stage">${stage}</param>
+				<param name="stageName">${stageName}</param>
+				<param name="instrumentId">${instrumentId}</param>
+				<param name="queueName">${queueName}</param>
+				<param name="procedureName">${procedureName}</param>
+				<param name="wfid">${wfid}</param>
+				<param name="amendmentId">${amendmentId}</param>
+			</result>			
+		</action>
+		
+		<action name="logout" class="com.hydus.hwf.security.struts2.LogoutAction">
+			<result name="success" type="redirect">
+				<param name="location">http://corpt605.corporate.ge.com:8887/logoff/logoff.jsp</param>
+			</result>
+		</action>
+		
+		<action name="login" class="com.hydus.hwf.security.struts2.LoginAction">
+			<result name="loginPage">/jsp/common/login.jsp</result>
+		</action>
+		
+		<action name="validateAmendmentRider" class="validateAmendmentRiderAction"/>
+		<action name="validateCloseTransaction" class="validateCloseTransactionAction"/>
+		
+		<action name="*RefData" class="referenceDataAction" method="get{1}" />
+		
+		<action name="ActionLogDashboardRefData" class="dashboardRefDataAction" method="getActionLog" >
+			<result name="actionLogSuccess">/jsp/dashboard/common/actionLogPopup.jsp</result>
+		</action>
+		
+		<action name="RequestContactInfoDashboardRefData" class="dashboardRefDataAction" method="getRequestContactInfo" >
+			<result name="MyTransactionTab">/jsp/dashboard/common/MyTransactionExpand.jsp</result>
+			<result name="DraftTab">/jsp/dashboard/common/DraftDashboardExpand.jsp</result>
+			<result name="AllRequestTab">/jsp/dashboard/common/AllRequestExpand.jsp</result>
+			<result name="BankBidTab">/jsp/dashboard/common/BidBankDashboardExpand.jsp</result>
+			<result name="BankPendingIssTab">/jsp/dashboard/common/BankPendingIssuanceExpand.jsp</result>
+			<result name="BankHistoricTransTab">/jsp/dashboard/common/BankHistoricalTransactionsExpand.jsp</result>
+		</action>
+		
+		<action name="addAttachment">
+			<result name="success">/jsp/common/attachments/add-attachment.jsp</result>
+		</action>
+		
+		<action name="addInstrDocAttachment">
+			<result name="success">/jsp/common/attachments/add-instrument-documentation.jsp</result>
+		</action>
+		
+		<action name="addPayment">
+			<result name="success">/jsp/common/request/additionalPaymentSchedule.jsp</result>
+		</action>
+		<action name="addAutoIncrease">
+			<result name="success">/jsp/common/request/autoIncrease.jsp</result>
+		</action>
+		
+		<action name="multiTabsIssue" class="approverAction" method="multiTabError"/>
+		
+		<action name="openRequest" class="openRequestAction">
+			<result name="requestor" type="chain">
+				<param name="actionName">openRequest</param>
+				<param name="namespace">/int/requestor</param>
+			</result>
+			<result name="amendmentRequestor" type="chain">
+				<param name="actionName">openAmendmentRequest</param>
+				<param name="namespace">/int/requestor</param>
+			</result>
+			<result name="riderRequestor" type="chain">
+				<param name="actionName">openRiderRequest</param>
+				<param name="namespace">/int/requestor</param>
+			</result>
+			<result name="businessapprover" type="chain">
+				<param name="actionName">businessapprover</param>
+				<param name="namespace">/int/approver</param>
+			</result>
+			<result name="treasuryAnalyst" type="chain">
+				<param name="actionName">treasuryAnalyst</param>
+				<param name="namespace">/int/approver</param>
+			</result>
+			<result name="treasuryApprover" type="chain">
+				<param name="actionName">treasuryApprover</param>
+				<param name="namespace">/int/approver</param>
+			</result>
+			<result name="treasuryBidMemo" type="chain">
+				<param name="actionName">treasuryBidMemo</param>
+				<param name="namespace">/int/approver</param>
+			</result>
+			<result name="postAward" type="chain">
+				<param name="actionName">postAward</param>
+				<param name="namespace">/int/approver</param>
+			</result>
+			<result name="treasuryBidReply" type="chain">
+				<param name="actionName">treasuryBidReply</param>
+				<param name="namespace">/int/approver</param>
+			</result>
+			<result name="treasuryBidIssue" type="chain">
+				<param name="actionName">treasuryBidIssue</param>
+				<param name="namespace">/int/approver</param>
+			</result>
+			<result name="Taxonomy" type="chain">
+				<param name="actionName">taxonomy</param>
+				<param name="namespace">/int/approver</param>
+			</result>
+			<result name="issuer" type="chain">
+				<param name="actionName">openIssuer</param>
+				<param name="namespace">/int/approver</param>
+			</result>
+			<result name="closure" type="chain">
+				<param name="actionName">openClosure</param>
+				<param name="namespace">/int/approver</param>
+			</result>
+			<result name="treasuryBidAward" type="chain">
+				<param name="actionName">treasuryBidAward</param>
+				<param name="namespace">/int/approver</param>
+			</result>
+			<result name="reRequest" type="chain">
+				<param name="actionName">openReRequest</param>
+				<param name="namespace">/int/requestor</param>
+			</result>
+		</action> 	
+		
+		<!-- ========================== LOOKUP URLS ===============================  -->
+		<action name="*Lookup" class="lookupAction" method="get{1}">
+			<result name="legalEntityLookupPage">/jsp/common/lookup/legalLookup.jsp</result>
+			<result name="nameAddressLookupPage">/jsp/common/lookup/nameAddressLookup.jsp</result>
+			<result name="businessContactPersonLookupPage">/jsp/common/lookup/businessContactPersonLookup.jsp</result>
+			<result name="geReferenceLookupPage">/jsp/common/lookup/geReferenceLookup.jsp</result>
+			<result name="bankDetailsLookupPage">/jsp/common/lookup/bankDetailsLookup.jsp</result>
+			<result name="requestorLookupPage">/jsp/common/lookup/requestorLookup.jsp</result>
+			<result name="userDetailsLookupPage">/jsp/common/lookup/userDetailsLookup.jsp</result>
+		</action>
+		
+		<!-- ========================== Taxonomy ===============================  -->
+		<action name="*Taxonomy" class="approverAction" method="get{1}">
+			<result name="BankGuaranteeRequestPage">/jsp/requestor/texonomy/bgAndLocTaxonomy.jsp</result>
+			<result name="LOCRequestPage">/jsp/requestor/texonomy/bgAndLocTaxonomy.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/requestor/texonomy/dLocTaxonomy.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/requestor/texonomy/suretBondTaxonomy.jsp</result>
+			<result name="RiderRequestPage">/jsp/requestor/texonomy/RiderTaxonomy.jsp</result>
+			<result name="AmendmentRequestPage">/jsp/requestor/texonomy/amendmentTaxonomy.jsp</result>
+			<result name="AutoAmendmentRequestPage">/jsp/requestor/texonomy/autoGeneratedAmendment.jsp</result>
+		</action>
+		
+		<action name="updateTaxonomyRequest" class="approverAction" method="updateTaxonomy">
+			<result name="BankGuaranteeRequestPage" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/int/dashboard</param>
+            </result>
+            <result name="LOCRequestPage" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/int/dashboard</param>
+            </result>
+            <result name="DocumentLOCRequestPage" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/int/dashboard</param>
+            </result>
+            <result name="SuretyBondRequestPage" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/int/dashboard</param>
+            </result>
+            
+			<result name="input">/jsp/requestor/texonomy/bgAndLocTaxonomy.jsp</result>
+			<result name="dLocInput">/jsp/requestor/texonomy/dLocTaxonomy.jsp</result>
+			<result name="sbInput">/jsp/requestor/texonomy/suretBondTaxonomy.jsp</result>
+		</action>
+		
+		<action name="getReportingData" class="approverAction" method="getReportingData">
+			<result name="BankGuaranteeRequestPage">/jsp/requestor/texonomy/bgAndLocTaxonomy.jsp</result>
+			<result name="LOCRequestPage">/jsp/requestor/texonomy/bgAndLocTaxonomy.jsp</result>
+		</action>
+		
+		<action name="updateReportingData" class="approverAction" method="updateReportingData">
+            <result name="BankGuaranteeRequestPage">/jsp/requestor/texonomy/bgAndLocTaxonomy.jsp</result>
+            <result name="LOCRequestPage">/jsp/requestor/texonomy/bgAndLocTaxonomy.jsp</result>
+			<result name="input">/jsp/requestor/texonomy/bgAndLocTaxonomy.jsp</result>
+		</action>
+		
+		<action name="saveCurrBankFees" class="approverAction" method="saveCurrBankFees">
+			<result name="BankGuaranteeRequestPage">/jsp/requestor/texonomy/bgAndLocTaxonomy.jsp</result>
+			<result name="LOCRequestPage">/jsp/requestor/texonomy/bgAndLocTaxonomy.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/requestor/texonomy/dLocTaxonomy.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/requestor/texonomy/suretBondTaxonomy.jsp</result>
+			
+			<result name="success" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/int/dashboard</param>
+            </result>
+		</action>
+		
+		<action name="cancelTaxonomy" class="approverAction" method="cancel">
+			<result name="success" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/int/dashboard</param>
+            </result>
+		</action>
+		
+		<action name="openFeePaymentRun" class="apmDetailsAction" method="openFeePaymentRun">
+			<result name="success">/jsp/requestor/apm/apmFeePaymentRun.jsp</result>
+		</action>
+		
+		<action name="taxonomyPDFReport" class="approverAction" method="downloadPDFFile"/>		
+		<action name="requestCheckListPDF" class="homePageGenericAction" method="downloadRequestCheckListPDF"/>
+		<action name="downloadResourcePDF" class="homePageGenericAction" method="downloadGlossaryUserManualPDF"/>
+		
+		<action name="contactUs" class="homePageGenericAction" method="getContactUs">
+			<result name="success">/jsp/common/contactUs.jsp</result>
+		</action>
+		
+		<action name="help" class="homePageGenericAction" method="getHelpPage">
+			<result name="success">/jsp/common/help.jsp</result>
+		</action>
+		
+		<action name="downloadHelpPDF" class="homePageGenericAction" method="downloadHelpPDF">
+			<result name="input">/jsp/common/help.jsp</result>
+		</action>
+	</package>
+	
+	<!-- This packages maps actions related to attachment operations -->
+	<package name="attachments" extends="struts-aloc-json-base" namespace="/int/atmt">
+		<global-results>
+			<result name="error" type="json">
+				<param name="noCache">true</param>
+ 				<param name="excludeNullProperties">true</param>
+ 				<!-- <param name="statusCode">500</param> -->
+				<param name="contentType">text/html</param>
+				<param name="includeProperties">
+					^status$,
+					^errorCode$,
+					^errorMsg$,
+					^typeId$,
+					^attachment\.attachmentName$,
+					^attachment\.attachmentTypeId$,
+					^attachment\.geFileId$,
+					^attachment\.attachmentOriginalName
+				</param>
+			</result>
+			
+			<result name="success" type="json">
+					<param name="noCache">true</param>
+					<param name="excludeNullProperties">true</param>
+					<param name="contentType">text/html</param>
+		       		<param name="includeProperties">
+						^status$,
+						^index$,
+						^typeId$,
+						^formatId$,
+						^attachment\.attachmentName$,
+						^attachment\.attachmentTypeId$,
+						^attachment\.geFileId$,
+						^attachment\.attachmentOriginalName
+					</param>
+		       </result>
+		</global-results>
+	
+		<action name="upload" class="attachmentAction" method="upload" />	
+		<action name="closureDelete" class="attachmentAction" method="delete"/>
+		<action name="delete" class="attachmentAction" method="delete">
+			 <result name="otherAttachmentSuccess">/jsp/common/attachmentRefresh.jsp</result>
+			 <result name="issuerAttachmentSuccess">/jsp/common/issuanceAttachmentRefresh.jsp</result>
+			 <result name="closureAttachmentSuccess">/jsp/common/closureAttachments.jsp</result>			 
+		</action>	
+		
+		<action name="download" class="attachmentAction" method="download" />	
+		
+	</package>
+</struts>

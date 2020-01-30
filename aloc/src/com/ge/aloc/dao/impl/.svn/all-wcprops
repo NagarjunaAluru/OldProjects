@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/dao/impl
+END
+CreateBundleDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/dao/impl/CreateBundleDAO.java
+END
+RequestDetailsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/dao/impl/RequestDetailsDAO.java
+END
+LinkTransactionDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/dao/impl/LinkTransactionDAO.java
+END
+RequestDetailsSectionDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/dao/impl/RequestDetailsSectionDAO.java
+END
+SearchDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/dao/impl/SearchDAO.java
+END
+ReferenceDataDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/dao/impl/ReferenceDataDAO.java
+END
+LookupDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/dao/impl/LookupDAO.java
+END
+SiteDetailsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/dao/impl/SiteDetailsDAO.java
+END

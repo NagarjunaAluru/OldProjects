@@ -1,0 +1,3 @@
+java.util.Calendar=com.hydus.hwf.struts2.typeconverters.CalendarConverter
+java.math.BigDecimal=com.hydus.hwf.struts2.typeconverters.BigDecimalConverter
+java.math.BigInteger=com.ge.aloc.util.BigIntegerConverter

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<field name="notiClauseFlag">
+		<field-validator type="required">
+			<message key="error.required.requestDetails.notiClauseFlag" />
+		</field-validator>
+	</field>
+	
+	<field name="curePeriodFlag">
+		<field-validator type="required">
+			<message key="error.required.requestDetails.curePeriodFlag" />
+		</field-validator>
+	</field>
+	
+	<field name="curePeriodValue">
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">
+        	<![CDATA[((curePeriodFlag == false) || (curePeriodFlag != true)) || (curePeriodValue != null && curePeriodValue != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.curePeriodValue" />
+		</field-validator>
+		<field-validator type="regex">
+            <param name="expression"><![CDATA[^\d*$]]></param>
+         <message key="error.required.requestDetails.validcurePeriodValue" />
+         </field-validator>
+	</field>
+	
+	<field name="drDownApprFlag">
+		<field-validator type="required">
+			<message key="error.required.requestDetails.drDownApprFlag" />
+		</field-validator>
+	</field>
+	
+	<field name="contrReqFlag">
+		<field-validator type="required">
+			<message key="error.required.requestDetails.contrReqFlag" />
+		</field-validator>
+	</field>
+	<field name="contrReqReason">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((contrReqFlag == true) || (contrReqFlag != false)) || (contrReqReason != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.contrReqReason" />
+		</field-validator>
+	</field>
+	<field name="sendBackNotes">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requiresEdits == false) || (requiresEdits != true)) || (sendBackNotes != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.sendBackNotes" />
+		</field-validator>
+	</field>
+	
+</validators>

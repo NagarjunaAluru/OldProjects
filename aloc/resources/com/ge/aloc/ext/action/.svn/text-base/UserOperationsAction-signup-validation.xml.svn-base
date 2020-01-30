@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+  		
+<validators>
+	<field name="easDetails.EASContactDetails.firstName">
+		<field-validator type="requiredstring">
+			<message key="error.required.signUp.firstNameMandatory" />
+		</field-validator>
+	</field>
+	
+	<field name="easDetails.EASContactDetails.lastName">
+		<field-validator type="requiredstring">
+			<message key="error.required.signUp.lastNameMandatory" />
+		</field-validator>
+	</field>
+	
+	<field name="easDetails.EASContactDetails.emailAddress">  
+		 <field-validator type="requiredstring" short-circuit="true">  
+             <message key="error.required.signUp.emailMandatory" />
+        </field-validator>  
+        
+        <field-validator type="email" >  
+             <message key="error.required.signUp.emailInvalid" />
+        </field-validator>  
+    </field>
+    
+    <field name="confirmEmail">  
+		 <field-validator type="requiredstring" short-circuit="true">  
+             <message key="error.required.signUp.confirmEmailMandatory" />
+        </field-validator>  
+        
+        <field-validator type="fieldexpression">
+			<param name="expression">
+	        	<![CDATA[(easDetails.EASContactDetails.emailAddress == confirmEmail)]]>
+	      	</param>
+			<message key="error.required.signUp.mailConfirmMailSame" />
+		</field-validator> 
+    </field>
+    
+    <field name="easDetails.EASBankDetails.bankName">
+		<field-validator type="requiredstring">
+			<message key="error.required.signUp.bankNameMandatory" />
+		</field-validator>
+	</field>
+	
+	<field name="easDetails.EASBankDetails.roleName">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[(easDetails.EASBankDetails.roleName == "BankOperations" || easDetails.EASBankDetails.roleName == "BankReadOnly" || easDetails.EASBankDetails.roleName == "SuretyBrokerOperations" || easDetails.EASBankDetails.roleName == "SuretyBrokerReadOnly")]]>
+      	</param>
+		<message key="error.required.signUp.roleMandatory" />
+		</field-validator>
+	</field>
+	
+	<field name="easDetails.EASCredentials.userId">
+		<field-validator type="requiredstring">
+			<message key="error.required.signUp.userIdMandatory" />
+		</field-validator>
+	</field>
+	
+	<field name="password">
+		<field-validator type="requiredstring" short-circuit="true">
+			<message key="error.required.signUp.passwordMandatory" />
+		</field-validator>
+		
+	    <field-validator type="regex" short-circuit="true">
+	        <param name="expression"><![CDATA[^[A-Za-z][A-Za-z0-9\.@\-_]{6,13}[A-Za-z]$]]></param>
+	        <message key="error.required.signUp.passwordInvalid" />
+	    </field-validator>
+	    
+	    <field-validator type="fieldexpression">
+			<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@validatePassword(password)</param>
+			<message key="error.required.signUp.passwordInvalid" />
+		</field-validator>
+	</field>
+	
+	<field name="confirmPassword">
+		<field-validator type="requiredstring" short-circuit="true">
+			<message key="error.required.signUp.confirmPasswordMandatory" />
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+			<param name="expression">
+	        	<![CDATA[(password == confirmPassword)]]>
+	      	</param>
+			<message key="error.required.signUp.passwordConfirmPassSame" />
+		</field-validator>
+	</field>
+	
+    <field name="termsAccepted">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[termsAccepted == true]]>
+      		</param>
+			<message key="error.required.sgnUp.termsMandatory" />
+		</field-validator>
+	</field>
+	
+</validators>

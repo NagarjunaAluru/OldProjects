@@ -1,0 +1,73 @@
+<class-diagram version="1.0.11" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.action.ReferenceDataAction" project="aloc" 
+    file="/aloc/src/com/ge/aloc/action/ReferenceDataAction.java" binary="false">    
+    <position height="-1" width="-1" x="114" y="84"/>    
+    <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="2" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.manager.IReferenceDataManager" 
+    project="aloc" file="/aloc/src/com/ge/aloc/manager/IReferenceDataManager.java" binary="false">    
+    <position height="-1" width="-1" x="471" y="71"/>    
+    <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="3" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.manager.impl.ReferenceDataManager" 
+    project="aloc" file="/aloc/src/com/ge/aloc/manager/impl/ReferenceDataManager.java" binary="false">    
+    <position height="-1" width="-1" x="463" y="228"/>    
+    <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="4" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.dao.IReferenceDataDAO" project="aloc" 
+    file="/aloc/src/com/ge/aloc/dao/IReferenceDataDAO.java" binary="false">    
+    <position height="-1" width="-1" x="470" y="387"/>    
+    <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="5" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.dao.impl.ReferenceDataDAO" project="aloc" 
+    file="/aloc/src/com/ge/aloc/dao/impl/ReferenceDataDAO.java" binary="false">    
+    <position height="-1" width="-1" x="476" y="518"/>    
+    <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <association id="6">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="7" name="referenceDataDAO"/>      
+      <multiplicity id="8" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="9">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
+  <realization id="10">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <association id="11">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="12" name="referenceDataManager"/>      
+      <multiplicity id="13" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
+    visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="admin" extends="struts-aloc-base" namespace="/int/admin">
+	
+	<action name="*Surety" class="suretyNameMgmtAction" method="{1}Surety">
+			<result name="openDeleteSuccess">/jsp/admin/suretyCompNameMgmt.jsp</result>
+			<result name="addEditSuccess">/jsp/admin/suretyCompNameRecord.jsp</result>
+			<result name="updateCancelSuccess">/jsp/admin/suretyNameReadOnlyRecord.jsp</result>
+			<result name="input">/jsp/admin/suretyCompNameRecord.jsp</result>
+	</action>
+	
+	<action name="*Pole" class="poleNameMgmtAction" method="{1}Pole">
+		<result name="openDeletePoleSuccess">/jsp/admin/poleNameMgmt.jsp</result>
+		<result name="addPoleSuccess">/jsp/admin/poleNameRecord.jsp</result>
+		<result name="updateCancelPoleSuccess">/jsp/admin/poleNameReadOnlyRecord.jsp</result>
+		<result name="input">/jsp/admin/poleNameRecord.jsp</result>
+	</action>		
+			
+	<action name="*FeeHistory" class="feeHistoryAction" method="{1}FeeHistory">
+		<result name="success">/jsp/admin/FeeHistory.jsp</result>
+		<result name="defViewPage">/jsp/admin/feeHistorySummaryDet.jsp</result>
+		<result name="download" type="stream">
+		    <param name="contentDisposition">attachment;filename=report.xls</param>
+		    <param name="contentType">application/vnd.ms-excel</param>
+		    <param name="inputName">inputStream</param>
+		    <param name="bufferSize">1024</param>
+		</result>
+	</action>
+	
+	<action name="basicFHSearch" class="commonSearchAction" method="basicFHSearch">
+		<result name="success">/jsp/admin/feeHistorySummaryDet.jsp</result>
+	</action>
+	
+	<action name="advanceFHSearch" class="commonSearchAction" method="advanceFHSearch">
+		<result name="success">/jsp/admin/feeHistorySummaryDet.jsp</result>
+	</action>
+	
+	<action name="downloadFHSearchResults" class="feeHistoryAction" method="downloadFHSearchResults">
+	 <result name="download" type="stream">
+		    <param name="contentDisposition">attachment;filename=report.xls</param>
+		    <param name="contentType">application/vnd.ms-excel</param>
+		    <param name="inputName">inputStream</param>
+		    <param name="bufferSize">1024</param>
+	 </result>
+	</action>
+	
+	<action name="getBondSubTypes" class="referenceDataAction" method="getAdminBondSubTypes">
+		<result name="success">/jsp/admin/treasuryAdminStdFormatMgmt.jsp</result>
+	</action>
+		
+	<action name="treasuryAdminPortal" class="com.ge.aloc.action.admin.TreasuryAdminPortalAction">			
+		<result name="success">/jsp/admin/treasuryAdminPortal.jsp</result>
+	</action>
+	
+	<action name="openReimbursementAgreement" class="reimbursementAgreementAction" method="openReimbursementAgreement">
+		 <result name="success">/jsp/admin/reimbursementAgreementMgmt.jsp</result>					
+	</action>
+	
+	<action name="openReimbursementPage" class="reimbursementAgreementAction" method="openReimbursementPage">
+		 <result name="openReimbursementPage">/jsp/admin/reimbursementAgreement.jsp</result>					
+	</action>
+	
+	<action name="submitReimbursementAgreement" class="reimbursementAgreementAction" method="createOrUpdateAgreement">
+			<result name="success" type="chain">
+				<param name="actionName">treasuryAdminPortal</param>
+				<param name="namespace">/int/admin</param>
+			 </result>
+			<result name="input">/jsp/admin/reimbursementAgreementMgmt.jsp</result>					
+	</action>	
+	<action name="createOrUpdateAgreement" class="reimbursementAgreementAction" method="createOrUpdateAgreement">
+			<result name="success" type="chain">
+				<param name="actionName">treasuryAdminPortal</param>
+				<param name="namespace">/int/admin</param>
+			 </result>
+			<result name="input">/jsp/admin/reimbursementAgreementMgmt.jsp</result>					
+	</action>	
+
+	 <action name="reimbursementAgreementDetails" class="reimbursementAgreementAction" method="loadReimbursementAgreementDetails">
+		 <result name="success">/jsp/admin/reimbursementAgreementMgmt.jsp</result>		
+	</action>
+
+	<action name="*Management" class="standardFormatMgmtAction" method="{1}Management">
+		 <result name="success">/jsp/admin/treasuryAdminStdFormatMgmt.jsp</result>		
+	</action>
+
+	<action name="standardFormatManagement" class="standardFormatMgmtAction" method="standardFormatManagement">
+			<result name="success" type="chain">
+				<param name="actionName">treasuryAdminPortal</param>
+				<param name="namespace">/int/admin</param>
+			 </result>
+			<result name="input">/jsp/admin/treasuryAdminStdFormatMgmt.jsp</result>					
+	</action>	
+	
+	<action name="submitStandardFormatManagement" class="standardFormatMgmtAction" method="standardFormatManagement">
+			<result name="success" type="chain">
+				<param name="actionName">treasuryAdminPortal</param>
+				<param name="namespace">/int/admin</param>
+			 </result>		
+			<result name="input">/jsp/admin/treasuryAdminStdFormatMgmt.jsp</result>					
+	</action>	
+	
+	<action name="downloadFormat" class="standardFormatMgmtAction" method="updatedGeStandardFormatFile">
+		 <result name="download" type="stream" >
+			<param name="inputName">inputStream</param>
+	    	<param name="bufferSize">1024</param>
+		 </result>
+	</action>	
+	<action name="*Announcement" class="userAnnouncementMgmtAction" method="{1}Announcement">
+		 <result name="activeAnnouncements">/jsp/admin/activeAnnouncements.jsp</result>		
+		 <result name="treasuryAdminPortal" type="chain">
+				<param name="actionName">treasuryAdminPortal</param>
+				<param name="namespace">/int/admin</param>
+		 </result>
+		 <result name="userAnnouncement">/jsp/admin/userAnnouncementManagement.jsp</result>
+		<result name="input">/jsp/admin/userAnnouncementManagement.jsp</result>	
+	</action>
+
+	<action name="previewUserAnnouncement" class="userAnnouncementMgmtAction" method="previewUserAnnouncement">	
+		<result name="userAnnouncement">/jsp/admin/userAnnouncementManagement.jsp</result>				
+	</action>
+	
+	<action name="userAnnouncementHyperlinks">
+		 <result name="success">/jsp/admin/userMgmtHyperlinks.jsp</result>
+	</action>
+
+	<action name="*SwiftMessageMonitoring" class="swiftMessageMonitoringAction" method="{1}SwiftMessage">
+		 <result name="swiftMsgMonitor">/jsp/admin/swiftMessageMonitoring.jsp</result>
+		 <result name="reSend">/jsp/admin/swiftMessageSearchResult.jsp</result>	
+		 <result name="swiftSearch">/jsp/admin/swiftMessageSearchResult.jsp</result>	
+	</action>
+	
+	
+	<action name="openAmendmentWorkflowMgmt" class="amendmentWorkflowMgmtAction" method="open">
+		 <result name="amendmentWorkflowMgmt">/jsp/admin/amendmentWorkflowManagement.jsp</result>	
+	</action>
+	
+	<action name="saveAmendmentWorkflowMgmt" class="amendmentWorkflowMgmtAction" method="save">
+		 <result name="success" type="chain">
+				<param name="actionName">treasuryAdminPortal</param>
+				<param name="namespace">/int/admin</param>
+		 </result>
+		 <result name="input">/jsp/admin/amendmentWorkflowManagement.jsp</result>			
+	</action>
+	<action name="openfullAuditLog" class="amendmentWorkflowMgmtAction" method="fullAuditLog">
+		 <result name="success">/jsp/admin/amdWorkFlowMgmtAuditLog.jsp</result>			
+	</action>
+	
+	<action name="openRecordsRetentionManagement" class="recordsRetentionMgmtAction" method="open">
+		 <result name="recordsRetention">/jsp/admin/recordsRetentionManagement.jsp</result>	
+		 <result name="recordsRetentionAppr">/jsp/admin/recordsRetentionMgmtApprove.jsp</result>		
+	</action>
+	<action name="saveRecordRetention" class="recordsRetentionMgmtAction" method="modify">
+		 <result name="treasuryAdminPortal" type="chain">
+			<param name="actionName">treasuryAdminPortal</param>
+			<param name="namespace">/int/admin</param>
+		 </result>
+		 <result name="recordsRetention">/jsp/admin/recordsRetentionManagement.jsp</result>		
+		 <result name="input">/jsp/admin/recordsRetentionManagement.jsp</result>		
+	</action>
+	
+	<action name="submitRecordRetention" class="recordsRetentionMgmtAction" method="submit">
+		 <result name="treasuryAdminPortal" type="chain">
+			<param name="actionName">treasuryAdminPortal</param>
+			<param name="namespace">/int/admin</param>
+		 </result>
+		 <result name="recordsRetention">/jsp/admin/recordsRetentionMgmtApprove.jsp</result>			
+		 <result name="input">/jsp/admin/recordsRetentionMgmtApprove.jsp</result>		
+	</action>
+	
+	<action name="retentionfullAuditLog" class="recordsRetentionMgmtAction" method="fullAuditLog">
+		 <result name="success">/jsp/admin/recirdsRetentionFullAuditLog.jsp</result>			
+	</action>
+	
+	<action name="openPurgeReport" class="recordsRetentionMgmtAction" method="openRecordsPurgeReport">
+		 <result name="openRecordsPurgeReport">/jsp/admin/recordsPurgeReport.jsp</result>		
+	</action>
+	
+	<action name="sendRectention" class="recordsRetentionMgmtAction" method="sendRecordRetentionMgmt">
+		 <result name="treasuryAdminPortal">/jsp/admin/recordsPurgeReport.jsp</result>	
+		 <result name="input">/jsp/admin/recordsPurgeReport.jsp</result>		
+	</action>
+	
+	<action name="backtoWorkFlowMgmt" class="amendmentWorkflowMgmtAction" method="back">
+		 <result name="success">/jsp/admin/amendmentWorkflowManagement.jsp</result>		
+	</action>
+	
+	<action name="cancelAmendmentWorkflowMgmt" class="amendmentWorkflowMgmtAction" method="cancel">
+		 <result name="success" type="chain">
+				<param name="actionName">treasuryAdminPortal</param>
+				<param name="namespace">/int/admin</param>
+		 </result>	
+	</action>
+	<action name="getSites" class="referenceDataAction" method="getSites">
+		<result name="success">/jsp/dashboard/common/siteSelectionInAdavnceSearch.jsp</result>
+	</action>
+	
+	<action name="downloadAttachment" class="userAnnouncementMgmtAction" method="downloadAttachment">
+		 <result name="download" type="stream" >
+			<param name="inputName">inputStream</param>
+	    	<param name="bufferSize">1024</param>
+		 </result>
+	</action>	
+	<action name="*BUC" class="blockBUCAction" method="{1}BUC">
+		<result name="success">/jsp/admin/blockBUC.jsp</result>
+		<result name="searchSuccess">/jsp/admin/blockBUCADNSelection.jsp</result>
+		<result name="input">/jsp/admin/blockBUC.jsp</result>
+		<result name="unBlockSuccess">/jsp/admin/unBlockBUCADN.jsp</result>
+		<result name="addBlockBUCSuccess">/jsp/admin/blockBUCRecord.jsp</result>
+	</action>
+	
+	<action name="openChangeRequestOwnership" class="changeRequestOwnershipAction" method="openChangeRequestOwnership">
+		<result name="success">/jsp/admin/changeRequestOwnership.jsp</result>
+	</action>
+	
+	<action name="searchSelOwnerRequestDetails" class="changeRequestOwnershipAction" method="searchSelOwnerRequestDetails">
+		<result name="success">/jsp/admin/selectNewRequestOwnership.jsp</result>
+	</action>
+	
+	<action name="changeSelectedRequestsOwnership" class="changeRequestOwnershipAction" method="changeSelectedRequestsOwnership">
+		 <result name="treasuryAdminPortal" type="chain">
+				<param name="actionName">treasuryAdminPortal</param>
+				<param name="namespace">/int/admin</param>
+		 </result>
+		 <result name="input">/jsp/admin/changeRequestOwnership.jsp</result>		
+	</action>
+</package>
+
+<package name="userAnnouncementAttachments" extends="struts-aloc-json-base" namespace="/int/admin">	
+			<global-results>
+				<result name="error" type="json">
+					<param name="noCache">true</param>
+	 				<param name="excludeNullProperties">true</param>
+	 				<!-- <param name="statusCode">500</param> -->
+					<param name="contentType">text/html</param>
+					<param name="includeProperties">
+						^status$,
+						^errorCode$,
+						^errorMsg$,											
+						^attachment\.attachmentName$,
+						^attachment\.attachmentTypeId$,
+						^attachment\.geFileId$,
+						^attachment\.attachmentOriginalName
+					</param>
+				</result>
+				
+				<result name="success" type="json">
+						<param name="noCache">true</param>
+						<param name="excludeNullProperties">true</param>
+						<param name="contentType">text/html</param>
+			       		<param name="includeProperties">
+							^status$,
+							^index$,
+							^typeId$,							
+							^attachment\.attachmentName$,
+							^attachment\.attachmentTypeId$,
+							^attachment\.geFileId$,
+							^attachment\.attachmentOriginalName
+						</param>
+			       </result>
+			</global-results>
+			<action name="uploadUserAnnouncementAtmt" class="userAnnouncementMgmtAction" method="saveUserAnnouncementAttchments"/>		
+			<action name="deleteUserAnnouncementAtmt" class="userAnnouncementMgmtAction" method="deleteUserAnnouncementAtmt">
+				<result name="success">/jsp/admin/userAnnouncementAttachment.jsp</result> 
+			</action>
+		</package>		
+</struts>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<field name="updatedBUCVal">
+		<field-validator type="fieldexpression">
+		<param name="expression"><![CDATA[(updatedBUCVal !=null && updatedBUCVal !="")]]></param>
+      	<message key="error.required.blockBUCMgmt.buc" />
+      	</field-validator>
+    </field>
+    
+    <field name="updatedADNVal">
+		<field-validator type="fieldexpression">
+		<param name="expression"><![CDATA[(updatedADNVal !=null && updatedADNVal !="")]]></param>
+      	<message key="error.required.blockBUCMgmt.adn" />
+      	</field-validator>
+    </field>
+    
+	<field name="bucAdnList">
+		<field-validator type="fieldexpression">
+		<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@validateBucAdnUpdatedList(bucAdnList)</param> 
+      	<message key="error.required.apmDetails.bucAndAdn" />
+      	</field-validator>
+	</field>
+</validators>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	
+	<!-- <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+	  <property name="beanNames"><value>*</value></property>
+	  <property name="interceptorNames">
+	    <list>
+	      <value>methodDebugInterceptor</value>
+	    </list>
+	  </property>
+	</bean> -->
+	
+	<bean id="serviceClientAwareInterceptor" class="com.ge.aloc.action.interceptors.ServiceClientAwareInterceptor">
+		<property name="serviceClient" ref="applicationServiceClient" />
+	</bean>
+	
+	<bean id="requestDetailsBOAwareInterceptor" class="com.ge.aloc.action.interceptors.RequestDetailsBOAwareIntercepter" />
+	
+	<bean id="userStatusCheckInterceptor" class="com.ge.aloc.ext.action.interceptors.UserStatusCheckInterceptor" />
+</beans>
+

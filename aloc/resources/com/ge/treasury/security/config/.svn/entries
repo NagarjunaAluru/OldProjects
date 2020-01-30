@@ -1,0 +1,52 @@
+8
+
+dir
+56
+https://openge.ge.com/svn/treasury_aloc/trunk/source/web/sunone_codebase/aloc/resources/com/ge/treasury/security/config
+https://openge.ge.com/svn/treasury_aloc
+
+
+
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+720fd033-fee8-473a-95ce-a3690b27228b
+
+AuthConnClientConfig.properties
+file
+
+
+
+
+2014-12-17T16:04:58.386569Z
+7c63d4632da079084c49219a720c70f0
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+SecFWConfig.properties
+file
+
+
+
+
+2014-12-17T16:04:58.393569Z
+5589471d856c77215c792f1bd81f52a8
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+

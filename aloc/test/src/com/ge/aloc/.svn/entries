@@ -1,0 +1,250 @@
+8
+
+dir
+56
+https://openge.ge.com/svn/treasury_aloc/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc
+https://openge.ge.com/svn/treasury_aloc
+
+
+
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+720fd033-fee8-473a-95ce-a3690b27228b
+
+validator
+dir
+
+SiteTypeTest.java
+file
+
+
+
+
+2014-12-17T16:03:49.985569Z
+39c3f402d26c40ece2b1bba6e01bfd19
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+common
+dir
+
+StaticDataFactoryTest.java
+file
+
+
+
+
+2014-12-17T16:03:50.002569Z
+233878f392ff35a5bee0186da8431dd6
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+OpCodeTest.java
+file
+
+
+
+
+2014-12-17T16:03:49.992569Z
+417131d2143567c7ab086b4407e43435
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+InstrumentTypeTest.java
+file
+
+
+
+
+2014-12-17T16:03:50.027569Z
+ffcac9516556237a8d9141727d04b1cc
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+GoveringRuleTypeTest.java
+file
+
+
+
+
+2014-12-17T16:03:50.016569Z
+7f9bbe5a621f0c175c96c5c2091d8356
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+RequestDetailsBOSupportTest.java
+file
+
+
+
+
+2014-12-17T16:03:50.039569Z
+e7564a4c69272dc0d92588a87178ac41
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+MasterDataFactoryTest.java
+file
+
+
+
+
+2014-12-17T16:03:50.051569Z
+8f7e623ef860bba16d15af416dd81ab0
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+exception
+dir
+
+ActionTypeTest.java
+file
+
+
+
+
+2014-12-17T16:03:50.063569Z
+6768457a2f43e401194370db9f20850d
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+bo
+dir
+
+ext
+dir
+
+dao
+dir
+
+ALOCContextTest.java
+file
+
+
+
+
+2014-12-17T16:03:50.075569Z
+000d9a12cb0dcebf342102825ba967e5
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+DashboardViewTypeTest.java
+file
+
+
+
+
+2014-12-17T16:03:50.085569Z
+5dcbf6af4300bf3d8aa262c610d9bd9e
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+AddressTypeTest.java
+file
+
+
+
+
+2014-12-17T16:03:50.092569Z
+e6da381f85d557a185261ce54c7c36e2
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+RequestDetailsData.java
+file
+
+
+
+
+2014-12-17T16:03:50.099569Z
+5980cd0365f3dcfd7a02f5bf138ae650
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+view
+dir
+
+manager
+dir
+
+AttachmentTypeTest.java
+file
+
+
+
+
+2014-12-17T16:03:50.108569Z
+6b6e5c93d5277ae0ef9b7aea528eb9c4
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+AtmtPermTypeTest.java
+file
+
+
+
+
+2014-12-17T16:03:50.115569Z
+07ebea179c3bfa5e7d60d4c4b9b75716
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+AllTests.java
+file
+
+
+
+
+2014-12-17T16:03:50.121569Z
+91ee60ee94ab396a4bcaed82b6ffe4f8
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+util
+dir
+
+action
+dir
+
+WorkflowStageTest.java
+file
+
+
+
+
+2014-12-17T16:03:50.128569Z
+022365c9b76448a0a9ccbd0e176eba30
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+

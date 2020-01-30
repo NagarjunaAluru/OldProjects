@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/AuditLog.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/AuditLog.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="Audit_Log">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Aloc_Record_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Field_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Old_Value" type="xs:string" minOccurs="0"/>
+				<xs:element name="New_Value" type="xs:string" minOccurs="0"/>
+				<xs:element name="Audit_Creator" type="xs:string" minOccurs="0"/>
+				<xs:element name="Audit_Created_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Author" type="xs:string" minOccurs="0"/>
+				<xs:element name="Author_First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Author_Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Transaction_Complete_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Amendment_Rider_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Agreement_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Update_Reporting_Flag" type="xs:string" minOccurs="0"/>
+                <xs:element name="Reason_For_Change" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Audit_Search">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="From_date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="To_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Attribute_Changed" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Action_Taken_By" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DrawDown_Values">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Action_Taken_By" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Attribute_Changed" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Action_Taken_By">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Sso_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Last_Name" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Audit_Log_Info">
+		<xs:sequence>
+			<xs:element ref="Audit_Log" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="DrawDown_Values" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="Audit_Search" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

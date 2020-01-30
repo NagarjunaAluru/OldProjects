@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<field name="comBidReplies.currentWinningBank.allinComissions.allinCommissionId">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+	        	<![CDATA[((comBidReplies.currentWinningBank.allinComissions.allinCommissionId !=null) || (comBidReplies.currentWinningBank.localComissions.localCommissionId != null))]]>
+	      	</param>
+      	<message key="error.required.requestDetails.allInCommissionsLocalCommissinsRequired" />
+     	</field-validator>
+     </field>
+     
+     <field name="comBidReplies.currentWinningBank.localComissions.localCommissionId">
+     	<field-validator type="fieldexpression">
+			<param name="expression">
+	        	<![CDATA[((comBidReplies.currentWinningBank.allinComissions.allinCommissionId !=null) || (comBidReplies.currentWinningBank.localComissions.localCommissionId != null))]]>
+	      	</param>
+      	<message key="error.required.requestDetails.allInCommissionsLocalCommissinsRequired" />
+     	</field-validator>
+     </field>
+	<field name="allInCommissionsValue">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+	        	<![CDATA[(comBidReplies.currentWinningBank.allinComissions.allinCommissionId ==null) || (comBidReplies.currentWinningBank.allinComissions.allinCommissionId !=1) || (allInCommissionsValue !=null && allInCommissionsValue !="") ]]>
+	      	</param>
+	      	<message>
+      			${getText("error.required.requestDetails.allInRateArrearsMandatory", {'All-In Commissions :'})}
+            </message>
+      	</field-validator>
+      	<field-validator type="fieldexpression">
+			<param name="expression">
+	        	<![CDATA[(comBidReplies.currentWinningBank.allinComissions.allinCommissionId ==null) || (comBidReplies.currentWinningBank.allinComissions.allinCommissionId !=2) || (allInCommissionsValue !=null && allInCommissionsValue !="") ]]>
+	      	</param>
+	      	<message>
+      			${getText("error.required.requestDetails.allInRateadvanceMandatory", {'All-In Commissions :'})}
+            </message>
+      	</field-validator>
+      	<field-validator type="fieldexpression">
+			<param name="expression">
+	        	<![CDATA[(comBidReplies.currentWinningBank.allinComissions.allinCommissionId ==null) || (comBidReplies.currentWinningBank.allinComissions.allinCommissionId !=3) || (allInCommissionsValue !=null && allInCommissionsValue !="") ]]>
+	      	</param>
+	      	<message>
+      			${getText("error.required.requestDetails.flatFeeAnnumMandatory", {'All-In Commissions :'})}
+            </message>
+      	</field-validator>
+      	<field-validator type="fieldexpression">
+			<param name="expression">
+	        	<![CDATA[(comBidReplies.currentWinningBank.allinComissions.allinCommissionId ==null) || (comBidReplies.currentWinningBank.allinComissions.allinCommissionId !=4) || (allInCommissionsValue !=null && allInCommissionsValue !="") ]]>
+	      	</param>
+	      	<message>
+      			${getText("error.required.requestDetails.flatFeeAdvanceMandatory", {'All-In Commissions :'})}
+            </message>
+      	</field-validator>
+      	
+      	<field-validator type="fieldexpression">
+      		<param name="expression">
+	        	<![CDATA[(comBidReplies.currentWinningBank.allinComissions.allinCommissionId !=null && comBidReplies.currentWinningBank.allinComissions.allinCommissionId != 1) || (allInCommissionsValue !=null && @com.ge.aloc.util.ALOCCommonHelper@isValidDecimalFourteen(allInCommissionsValue))]]>
+	      	</param>
+			<message>
+      			${getText("error.required.requestDetails.allInRateArrearsInvalid", {'All-In Commissions :'})}
+            </message>
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+      		<param name="expression">
+	        	<![CDATA[(comBidReplies.currentWinningBank.allinComissions.allinCommissionId !=null && comBidReplies.currentWinningBank.allinComissions.allinCommissionId != 2) || (allInCommissionsValue !=null && @com.ge.aloc.util.ALOCCommonHelper@isValidDecimalFourteen(allInCommissionsValue))]]>
+	      	</param>
+			<message>
+      			${getText("error.required.requestDetails.allInRateadvanceInvalid", {'All-In Commissions :'})}
+            </message>
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+      		<param name="expression">
+	        	<![CDATA[(comBidReplies.currentWinningBank.allinComissions.allinCommissionId !=null && comBidReplies.currentWinningBank.allinComissions.allinCommissionId != 3) || (allInCommissionsValue !=null && @com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(allInCommissionsValue))]]>
+	      	</param>
+			<message>
+      			${getText("error.required.requestDetails.flatFeeAnnumInvalid", {'All-In Commissions :'})}
+            </message>
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+      		<param name="expression">
+	        	<![CDATA[(comBidReplies.currentWinningBank.allinComissions.allinCommissionId !=null && comBidReplies.currentWinningBank.allinComissions.allinCommissionId != 4) || (allInCommissionsValue !=null && @com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(allInCommissionsValue))]]>
+	      	</param>
+			<message>
+      			${getText("error.required.requestDetails.flatFeeAdvanceInvalid", {'All-In Commissions :'})}
+            </message>
+		</field-validator>
+    </field>
+    
+    <field name="localCommissionsValue">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+	        	<![CDATA[(comBidReplies.currentWinningBank.localComissions.localCommissionId ==null) || (comBidReplies.currentWinningBank.localComissions.localCommissionId !=1) || (localCommissionsValue !=null && localCommissionsValue !="") ]]>
+	      	</param>
+	      	<message>
+      			${getText("error.required.requestDetails.allInRateArrearsMandatory", {'Local Commissions :'})}
+            </message>
+      	</field-validator>
+      	<field-validator type="fieldexpression">
+			<param name="expression">
+	        	<![CDATA[(comBidReplies.currentWinningBank.localComissions.localCommissionId ==null) || (comBidReplies.currentWinningBank.localComissions.localCommissionId !=2) || (localCommissionsValue !=null && localCommissionsValue !="") ]]>
+	      	</param>
+	      	<message>
+      			${getText("error.required.requestDetails.allInRateadvanceMandatory", {'Local Commissions :'})}
+            </message>
+      	</field-validator>
+      	<field-validator type="fieldexpression">
+			<param name="expression">
+	        	<![CDATA[(comBidReplies.currentWinningBank.localComissions.localCommissionId ==null) || (comBidReplies.currentWinningBank.localComissions.localCommissionId !=3) || (localCommissionsValue !=null && localCommissionsValue !="") ]]>
+	      	</param>
+	      	<message>
+      			${getText("error.required.requestDetails.flatFeeAnnumMandatory", {'Local Commissions :'})}
+            </message>
+      	</field-validator>
+      	<field-validator type="fieldexpression">
+			<param name="expression">
+	        	<![CDATA[(comBidReplies.currentWinningBank.localComissions.localCommissionId ==null) || (comBidReplies.currentWinningBank.localComissions.localCommissionId !=4) || (localCommissionsValue !=null && localCommissionsValue !="") ]]>
+	      	</param>
+	      	<message>
+      			${getText("error.required.requestDetails.flatFeeAdvanceMandatory", {'Local Commissions :'})}
+            </message>
+      	</field-validator>
+      	
+      	<field-validator type="fieldexpression">
+      		<param name="expression">
+	        	<![CDATA[(comBidReplies.currentWinningBank.localComissions.localCommissionId !=null && comBidReplies.currentWinningBank.localComissions.localCommissionId != 1) || (localCommissionsValue !=null && @com.ge.aloc.util.ALOCCommonHelper@isValidDecimalFourteen(localCommissionsValue))]]>
+	      	</param>
+			<message>
+      			${getText("error.required.requestDetails.allInRateArrearsInvalid", {'Local Commissions :'})}
+            </message>
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+      		<param name="expression">
+	        	<![CDATA[(comBidReplies.currentWinningBank.localComissions.localCommissionId !=null && comBidReplies.currentWinningBank.localComissions.localCommissionId != 2) || (localCommissionsValue !=null && @com.ge.aloc.util.ALOCCommonHelper@isValidDecimalFourteen(localCommissionsValue))]]>
+	      	</param>
+			<message>
+      			${getText("error.required.requestDetails.allInRateadvanceInvalid", {'Local Commissions :'})}
+            </message>
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+      		<param name="expression">
+	        	<![CDATA[(comBidReplies.currentWinningBank.localComissions.localCommissionId !=null && comBidReplies.currentWinningBank.localComissions.localCommissionId != 3) || (localCommissionsValue !=null && @com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(localCommissionsValue))]]>
+	      	</param>
+			<message>
+      			${getText("error.required.requestDetails.flatFeeAnnumInvalid", {'Local Commissions :'})}
+            </message>
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+      		<param name="expression">
+	        	<![CDATA[(comBidReplies.currentWinningBank.localComissions.localCommissionId !=null && comBidReplies.currentWinningBank.localComissions.localCommissionId != 4) || (localCommissionsValue !=null && @com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(localCommissionsValue))]]>
+	      	</param>
+			<message>
+      			${getText("error.required.requestDetails.flatFeeAdvanceInvalid", {'Local Commissions :'})}
+            </message>
+		</field-validator>
+    </field>
+	
+	<field name="comBidReplies.currentWinningBank.allinComissions.allinLastPaidDate">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((comBidReplies.currentWinningBank.allinComissions.allinLPDChangeRequire == false) || (comBidReplies.currentWinningBank.allinComissions.allinLPDChangeRequire != true)) || (comBidReplies.currentWinningBank.allinComissions.allinLastPaidDate != null)]]>
+      	</param>
+			<message>
+      			${getText("error.required.requestDetails.lastPaidDate", {'All-In Commissions :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="comBidReplies.currentWinningBank.localComissions.localLastPaidDate">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((comBidReplies.currentWinningBank.localComissions.localLPDChangeRequire == false) || (comBidReplies.currentWinningBank.localComissions.localLPDChangeRequire != true)) || (comBidReplies.currentWinningBank.localComissions.localLastPaidDate != null)]]>
+      	</param>
+			<message>
+      			${getText("error.required.requestDetails.lastPaidDate", {'Local Commissions :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="comBidReplies.currentWinningBank.winningBankComments">
+		<field-validator type="requiredstring">
+			<message key="error.required.taxonomy.comments" />
+		</field-validator>
+	</field>
+	
+</validators>

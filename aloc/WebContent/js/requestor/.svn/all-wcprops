@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/js/requestor
+END
+postAward.js
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/js/requestor/postAward.js
+END
+suretyRequestor.js
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/js/requestor/suretyRequestor.js
+END
+suretyBondReqCounter.js
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/js/requestor/suretyBondReqCounter.js
+END
+addReference.js
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/js/requestor/addReference.js
+END
+auditLog.js
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/js/requestor/auditLog.js
+END
+buContactperson.js
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/js/requestor/buContactperson.js
+END
+apmCurrencySetup.js
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/js/requestor/apmCurrencySetup.js
+END
+lookup.js
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/js/requestor/lookup.js
+END
+bidReply.js
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/js/requestor/bidReply.js
+END
+issuance.js
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/js/requestor/issuance.js
+END
+bidMemo.js
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/js/requestor/bidMemo.js
+END
+calculateFeeExpand.js
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/js/requestor/calculateFeeExpand.js
+END
+bidAward.js
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/js/requestor/bidAward.js
+END
+apm.js
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/js/requestor/apm.js
+END
+payment.js
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/js/requestor/payment.js
+END
+fieldCounter.js
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/js/requestor/fieldCounter.js
+END
+requestor.js
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/js/requestor/requestor.js
+END
+dlocRequiredCount.js
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/js/requestor/dlocRequiredCount.js
+END
+dlocRequestor.js
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/js/requestor/dlocRequestor.js
+END
+addBcpReference.js
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/js/requestor/addBcpReference.js
+END
+createRequestPopup.js
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/js/requestor/createRequestPopup.js
+END
+bgRequiredCount.js
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/js/requestor/bgRequiredCount.js
+END
+bgRequestor.js
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/js/requestor/bgRequestor.js
+END

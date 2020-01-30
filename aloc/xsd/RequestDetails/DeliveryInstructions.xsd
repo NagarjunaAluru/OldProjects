@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/DeliveryInstructions.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/ALOCCommon.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/DeliveryInstructions.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/ALOCCommon.xsd" schemaLocation="ALOCCommon.xsd"/>
+	<xs:element name="DeliveryInstructions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Op_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="Delivery_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Ecopy_Myself" type="xs:string" minOccurs="0"/>
+				<xs:element name="Ecopy_Other_GEPerson" type="xs:string" minOccurs="0"/>
+				<xs:element ref="Recipient" minOccurs="0"/>
+				<xs:element name="Company_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Address_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Title" type="xs:string" minOccurs="0"/>
+				<xs:element name="Address1" type="xs:string" minOccurs="0"/>
+				<xs:element name="Address2" type="xs:string" minOccurs="0"/>
+				<xs:element name="City" type="xs:string" minOccurs="0"/>
+				<xs:element name="State_Province_Cd" type="xs:string" minOccurs="0"/>
+				<xs:element name="State_Province" type="xs:string" minOccurs="0"/>
+				<xs:element name="ZIP_Postalcode" type="xs:string" minOccurs="0"/>
+				<xs:element name="Country_Cd" type="xs:string" minOccurs="0"/>
+				<xs:element name="Country" type="xs:string" minOccurs="0"/>
+				<xs:element name="Phone_No" type="xs:string" minOccurs="0"/>
+				<xs:element name="Special_Instructions" type="xs:string" minOccurs="0"/>
+				<xs:element name="Delivery_Designation_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns0:ActionDetails" minOccurs="0"/>
+				<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+				<xs:element name="Requires_Edits" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Send_Back_Notes" type="xs:string" minOccurs="0"/>
+				<xs:element name="Use_Previous_Address" type="xs:string" minOccurs="0"/>
+				<xs:element name="Change_Flag" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Recipient">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Recipient_First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Recipient_Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Recipient_Sso_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Recipient_Email" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/APM/FeeSummary.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/APM/FeeSummary.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="FeeSummary">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Currency_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="Total_Payment" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Total_US" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Total_Foreign" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Total_Other" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Total_Payment_String" type="xs:string" minOccurs="0"/>
+				<xs:element name="Total_US_String" type="xs:string" minOccurs="0"/>
+				<xs:element name="Total_Foreign_String" type="xs:string" minOccurs="0"/>
+				<xs:element name="Total_Other_String" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

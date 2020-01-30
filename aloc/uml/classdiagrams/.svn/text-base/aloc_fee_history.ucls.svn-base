@@ -1,0 +1,73 @@
+<class-diagram version="1.0.11" icons="true" automaticImage="JPEG" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.action.apm.FeeHistoryAction" project="aloc" 
+    file="/aloc/src/com/ge/aloc/action/apm/FeeHistoryAction.java" binary="false">    
+    <position height="367" width="267" x="-79" y="-70"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="2" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.manager.apm.IFeeHistoryManager" 
+    project="aloc" file="/aloc/src/com/ge/aloc/manager/apm/IFeeHistoryManager.java" binary="false">    
+    <position height="78" width="175" x="230" y="-40"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="3" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.manager.impl.apm.FeeHistoryManager" 
+    project="aloc" file="/aloc/src/com/ge/aloc/manager/impl/apm/FeeHistoryManager.java" binary="false">    
+    <position height="-1" width="-1" x="339" y="144"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="4" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.dao.apm.IFeeHistoryDAO" project="aloc" 
+    file="/aloc/src/com/ge/aloc/dao/apm/IFeeHistoryDAO.java" binary="false">    
+    <position height="78" width="196" x="230" y="254"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="5" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.dao.impl.apm.FeeHistoryDAO" project="aloc" 
+    file="/aloc/src/com/ge/aloc/dao/impl/apm/FeeHistoryDAO.java" binary="false">    
+    <position height="-1" width="-1" x="335" y="422"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <association id="6">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="7" name="feeHistoryDAO"/>      
+      <multiplicity id="8" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="9">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <association id="10">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="11" name="feeHistoryManager"/>      
+      <multiplicity id="12" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="13">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

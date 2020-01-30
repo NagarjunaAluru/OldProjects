@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/SearchPaymentDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/SearchPaymentDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="SearchPaymentDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Payment_Bank" minOccurs="0"/>
+				<xs:element ref="Payment_Id" minOccurs="0"/>
+				<xs:element name="Payment_From_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Payment_To_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Payment_Currency_Cd" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Payment_Bank" type="xs:string"/>
+	<xs:element name="Payment_Id" type="xs:integer"/>
+</xs:schema>

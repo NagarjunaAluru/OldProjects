@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/IndicativePricingCompletedDetails.xsd"
+	 targetNamespace="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/IndicativePricingCompletedDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="IndicativePricingCompletedDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="PricingExpirationDateTime" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="PricingExpirationTime" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

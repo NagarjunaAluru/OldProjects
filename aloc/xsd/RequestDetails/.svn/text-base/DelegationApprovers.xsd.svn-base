@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/DelegationApprovers.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/DelegationApprovers.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd" schemaLocation="MsgHeader.xsd"/>
+	<xs:element name="DelegationApprovers">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="DelegationGroup" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="ALOC_Request_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Approval_Level_Required" type="xs:int" minOccurs="0"/>
+				<xs:element ref="ApproverLevel" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Instrument_Type" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DelegationGroup">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Group_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Group_id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Stage_Name" type="xs:string" minOccurs="0"/>
+				<xs:element ref="GroupApprover" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GroupApprover">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="App_First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="App_Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Ssso_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Approver_Level_Id" type="xs:int" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ApproverLevel">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Sso_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Level_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Approved_Date" type="xs:dateTime" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

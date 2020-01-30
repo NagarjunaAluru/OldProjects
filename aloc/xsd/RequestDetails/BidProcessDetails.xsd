@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/BidProcessDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/BidProcessDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="BidProcessDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Transaction_State" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bid_State" type="xs:string" minOccurs="0"/>
+				<xs:element name="ALOC_Record_No" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Bids_Received" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Bid_Update_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Last_Treasury_Appr" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instr_Exp_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Eco_Expr_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Applicant_Principal_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bene_Obligee_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instr_Amt" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Instr_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instr_Sub_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instr_Currency" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bid_Reply_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Re_ship_Bank_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank_Br_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Request_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Bank_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Last_Treasury_Approver" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

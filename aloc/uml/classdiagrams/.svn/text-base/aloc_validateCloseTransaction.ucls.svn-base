@@ -1,0 +1,75 @@
+<class-diagram version="1.0.11" icons="true" automaticImage="JPEG" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.action.common.ValidateCloseTransactionAction" 
+    project="aloc" file="/aloc/src/com/ge/aloc/action/common/ValidateCloseTransactionAction.java" binary="false">    
+    <position height="-1" width="-1" x="217" y="124"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="2" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.dao.impl.common.ValidateCloseTransactionDAO" 
+    project="aloc" file="/aloc/src/com/ge/aloc/dao/impl/common/ValidateCloseTransactionDAO.java" binary="false">    
+    <position height="95" width="224" x="439" y="389"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="3" corner="BOTTOM_RIGHT" language="java" 
+    name="com.ge.aloc.manager.common.IValidateCloseTransactionManager" project="aloc" 
+    file="/aloc/src/com/ge/aloc/manager/common/IValidateCloseTransactionManager.java" binary="false">    
+    <position height="-1" width="-1" x="598" y="98"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="4" corner="BOTTOM_RIGHT" language="java" 
+    name="com.ge.aloc.manager.impl.common.ValidateCloseTransactionManager" project="aloc" 
+    file="/aloc/src/com/ge/aloc/manager/impl/common/ValidateCloseTransactionManager.java" binary="false">    
+    <position height="-1" width="-1" x="627" y="279"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="5" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.dao.common.IValidateCloseTransactionDAO" 
+    project="aloc" file="/aloc/src/com/ge/aloc/dao/common/IValidateCloseTransactionDAO.java" binary="false">    
+    <position height="-1" width="-1" x="127" y="394"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <association id="6">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="7" name="validateCloseTransactionManager"/>      
+      <multiplicity id="8" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="9">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="3"/>  
+  </realization>  
+  <association id="10">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="11" name="validateCloseTransactionDAO"/>      
+      <multiplicity id="12" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="13">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

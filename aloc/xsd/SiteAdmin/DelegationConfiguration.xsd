@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/SiteAdmin/DelegationConfiguration.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/ALOCCommon.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/SiteAdmin/DelegationConfiguration.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/ALOCCommon.xsd" schemaLocation="../RequestDetails/ALOCCommon.xsd"/>
+	<xs:element name="DelegationConfiguration">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Approval_Group_Configuration" minOccurs="0"/>
+				<xs:element ref="Delegation_Config" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="OpCode" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns0:ActionDetails" minOccurs="0"/>
+				<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Delegation_Config">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Delegation_Config_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element ref="Instrument" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Instr_Amt" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Instr_Base_Amt" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Instr_End_Amt" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Notification_Caluse_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Cure_PeriodIndicator_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="GE_App_Draw_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="GE_ProposedDoc_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Customer_Proposal_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element ref="Group_Assignment" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="OpCode" type="xs:string" minOccurs="0"/>
+				<xs:element name="Row_Num" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Instrument">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Instr" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instr_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Instrument_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="OpCode" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Group_Assignment">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Group_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Group_id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Group_Level" type="xs:int" minOccurs="0"/>
+				<xs:element name="OpCode" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Approver">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="App_First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="App_Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Ssso_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Group_Appr_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="OpCode" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Group">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Group_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Group_Desc" type="xs:string" minOccurs="0"/>
+				<xs:element name="OpCode" type="xs:string" minOccurs="0"/>
+				<xs:element name="Group_Id" type="xs:int" minOccurs="0"/>
+				<xs:element ref="Approver" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Approval_Group_Configuration">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Group" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

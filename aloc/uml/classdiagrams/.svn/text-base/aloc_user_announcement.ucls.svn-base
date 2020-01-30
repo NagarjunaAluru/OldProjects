@@ -1,0 +1,73 @@
+<class-diagram version="1.0.11" icons="true" automaticImage="JPEG" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.action.admin.UserAnnouncementMgmtAction" 
+    project="aloc" file="/aloc/src/com/ge/aloc/action/admin/UserAnnouncementMgmtAction.java" binary="false">    
+    <position height="231" width="312" x="-85" y="-11"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="2" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.manager.admin.IUserAnnouncementMgmtManager" 
+    project="aloc" file="/aloc/src/com/ge/aloc/manager/admin/IUserAnnouncementMgmtManager.java" binary="false">    
+    <position height="112" width="256" x="272" y="1"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="3" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.manager.impl.admin.UserAnnouncementMgmtManager" 
+    project="aloc" file="/aloc/src/com/ge/aloc/manager/impl/admin/UserAnnouncementMgmtManager.java" binary="false">    
+    <position height="180" width="336" x="272" y="135"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="4" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.dao.admin.IUserAnnouncementMgmtDAO" 
+    project="aloc" file="/aloc/src/com/ge/aloc/dao/admin/IUserAnnouncementMgmtDAO.java" binary="false">    
+    <position height="112" width="272" x="-83" y="352"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="5" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.dao.impl.admin.UserAnnouncementMgmtDAO" 
+    project="aloc" file="/aloc/src/com/ge/aloc/dao/impl/admin/UserAnnouncementMgmtDAO.java" binary="false">    
+    <position height="129" width="339" x="263" y="378"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <realization id="6">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <association id="7">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="8" name="userAnnouncementMgmtManager"/>      
+      <multiplicity id="9" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="10">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="11" name="userAnnouncementMgmtDAO"/>      
+      <multiplicity id="12" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="13">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

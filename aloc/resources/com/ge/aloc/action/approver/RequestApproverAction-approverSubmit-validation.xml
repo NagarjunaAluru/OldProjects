@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+
+	<field name="requestDetails.buDelegation.buApprover.approverSso">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[ (actionType != 4 || requestDetails.WFDetails.WFStage != "BUSAPROV"  || @com.ge.aloc.util.ALOCCommonHelper@approverSizeValidation() != true) || (requestDetails.buDelegation.buApprover.approverSso != null && requestDetails.buDelegation.buApprover.approverSso != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.businessApprover" />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.tresuryDelegation.approverSso">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[ (actionType != 4 || requestDetails.WFDetails.WFStage != "TREAPROV" || @com.ge.aloc.util.ALOCCommonHelper@approverSizeValidation() != true) || (requestDetails.tresuryDelegation.approverSso !=null && requestDetails.tresuryDelegation.approverSso != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.treasuryApprover" />
+		</field-validator>
+	</field>
+		
+	<field name="requestDetails.actionDetails.reasonForRejection">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[ (actionType != 5) || (requestDetails.actionDetails.reasonForRejection != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.reasonForRejection" />
+		</field-validator>
+	
+	</field>
+	
+	<field name="requestDetails.amendment.infoTransPlatFormSelection">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[ (requestDetails.instrumentTypeId != 5 || actionType != 4 || requestDetails.WFDetails.WFStage != "TREAPROV" || @com.ge.aloc.util.ALOCCommonHelper@approverSizeValidation() != false) || (requestDetails.amendment.infoTransPlatFormSelection !=null && requestDetails.amendment.infoTransPlatFormSelection != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.infoTransPlatFormSelection" />
+		</field-validator>
+	</field>
+	
+</validators>

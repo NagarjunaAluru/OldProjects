@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/Reports/UserReportDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/Reports/UserReportDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="UserReportDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="SiteID" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="SSOUserID" type="xs:string" minOccurs="0"/>
+				<xs:element name="Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="UserRole" type="xs:string" minOccurs="0"/>
+				<xs:element name="Status" type="xs:string" minOccurs="0"/>
+				<xs:element name="User_Report_User_SSO" type="xs:string" minOccurs="0"/>
+				<xs:element name="UserGroups" type="xs:string" minOccurs="0"/>
+                                      <xs:element name="Issuer" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

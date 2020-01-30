@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="reports" extends="struts-aloc-base" namespace="/int/reports">
+		
+		<!-- ALOC report onload Action calls -->
+		<action name="loadContingentReport" class="reportDetailAction" method="loadContingentReport" >
+			<param name="reportName">Contingent Report</param>
+			<result name="success">/jsp/reports/contigentReport.jsp</result>
+		</action>
+		
+		<action name="resetSiteNames" class="reportDetailAction" method="resetSitesValues" >
+			<result name="success">/jsp/reports/siteSelectionReports.jsp</result>
+		</action>
+		
+		<action name="resetBankNames" class="reportDetailAction" method="resetBankNamesBidSuccess" >
+			<result name="success">/jsp/reports/bankSelectionReports.jsp</result>
+		</action>
+		
+		<action name="assignInsuanceValuesReports" class="reportDetailAction" method="assignInsuanceValues" >
+			<param name="reportName">Issuance and Expiration Report</param>
+			<result name="success">/jsp/reports/issuanceExpirationReport.jsp</result>
+		</action>
+		
+		<action name="loadCycleTimeReports" class="reportDetailAction" method="loadCycleTimeReport" >
+			<param name="reportName">Cycle Time Report</param>
+			<result name="success">/jsp/reports/cycleTimeReport.jsp</result>
+		</action>
+		
+		<action name="bidSuccessReports" class="reportDetailAction" method="loadBidSuccessReport" >
+			<param name="reportName">Bid Success Report</param>
+			<result name="success">/jsp/reports/bidSuccessReport.jsp</result>
+		</action>
+		
+		<action name="feesPaidReports" class="reportDetailAction" method="onloadFeesPaidReport" >
+			<param name="reportName">Fees Paid Report</param>
+			<result name="success">/jsp/reports/feesPaidReport.jsp</result>
+		</action>
+		
+		<action name="averageFeePaid" class="reportDetailAction" method="loadAverageFeeDetails">
+			<param name="reportName">Avg Fees Paid Report</param>
+			<result name="success">/jsp/reports/averageFeePaidReport.jsp</result>
+		</action>
+		
+		<action name="agingReport" class="reportDetailAction" method="loadAgingReport" >
+			<param name="reportName">Aging Report</param>
+			<result name="success">/jsp/reports/agingReport.jsp</result>
+		</action>
+		
+		<!-- loading default as properties required to load  -->
+		<action name="gcfoReport" class="reportDetailAction" method="loadECSOReport">
+			<param name="reportName">GCFO Report</param>
+			<result name="success">/jsp/reports/gcfoReport.jsp</result>		
+		</action>
+		
+		<action name="ecsoReport" class="reportDetailAction" method="loadECSOReport">
+			<param name="reportName">ECSO Report</param>
+			<result name="success">/jsp/reports/ecsoReport.jsp</result>		
+		</action>
+		
+		<action name="userReport" class="reportDetailAction" method="loadContingentReport">
+			<param name="reportName">User Report</param>
+			<result name="success">/jsp/reports/userReport.jsp</result>		
+		</action>
+		
+		<action name="feeprojectionReport" class="reportDetailAction" method="feeProjInfo">
+			<param name="reportName">Fee Projection Report</param>
+			<result name="success">/jsp/reports/feeProjectionReport.jsp</result>		
+		</action>
+		
+		<action name="feeQuotationReport" class="reportDetailAction" method="loadBidSuccessReport">
+			<param name="reportName">Fee Quotation and Forcast Report</param>
+			<result name="success">/jsp/reports/feeQuotationReport.jsp</result>		
+		</action>
+		
+		<action name="getSites" class="reportDetailAction" method="getSitesInfo">
+			<result name="success">/jsp/reports/siteSelectionReports.jsp</result>	
+		</action>
+		
+		<action name="getOtherMORRates" class="reportDetailAction" method="getMORForFeeProjection">
+			<param name="reportName">Fee Projection Report</param>
+		</action>
+		
+		<!-- ALOC report Export to Excel fucntionality -->
+		<action name="exportContingentLiabilityResults" class="reportDetailAction" method="exportContingentReporttoFile" >
+				<param name="reportName">Contingent Report</param>
+				<result name="success">/jsp/reports/contigentReport.jsp</result>
+		</action>
+
+		<action name="exportBidSuccessResults" class="reportDetailAction" method="exportReportDetails" >
+				<param name="reportName">Bid Success Report</param>
+				<result name="success">/jsp/reports/bidSuccessReport.jsp</result>
+		</action>
+		
+		<action name="exportAgingReportResults" class="reportDetailAction" method="exportReportDetails" >
+				<param name="reportName">Aging_Report</param>
+				<result name="success">/jsp/reports/agingReport.jsp</result>
+		</action>
+		
+		<action name="exportIssuanceExpirationReportResults" class="reportDetailAction" method="exportReportDetails" >
+				<param name="reportName">Issuance and Expiration Report</param>
+				<result name="success">/jsp/reports/issuanceExpirationReport.jsp</result>
+				<result name="input">/jsp/reports/issuanceExpirationReport.jsp</result>
+		</action>
+		
+		<action name="exportFeesPaidReportResults" class="reportDetailAction" method="exportReportDetails" >
+				<param name="reportName">Fees Paid Report</param>
+				<result name="success">/jsp/reports/feesPaidReport.jsp</result>
+		</action>
+		
+		<action name="exportAvgFeesPaidDtl" class="reportDetailAction" method="exportReportDetails">
+			<param name="reportName">Avg Fees Paid Report</param>
+			<result name="success">/jsp/reports/averageFeePaidReport.jsp</result>
+		</action>
+		<action name="exportUserReportResults" class="reportDetailAction" method="exportReportDetails" >
+				<param name="reportName">User Report</param>
+				<result name="success">/jsp/reports/userReport.jsp</result>
+		</action>
+		
+		<action name="exportFeeQuotationReportResults" class="reportDetailAction" method="exportReportDetails" >
+				<param name="reportName">Fee Quotation and Forcast Report</param>
+				<result name="success">/jsp/reports/feeQuotationReport.jsp</result>
+		</action>
+		
+		<action name="exportEcsoReportResults" class="reportDetailAction" method="exportReportDetails" >
+				<param name="reportName">ECSO Report</param>
+				<result name="success">/jsp/reports/ecsoReport.jsp</result>
+		</action>
+		
+		<action name="gcfoReportResults" class="reportDetailAction" method="exportReportDetails" >
+				<param name="reportName">GCFO Report</param>
+				<result name="success">/jsp/reports/gcfoReport.jsp</result>
+		</action>
+		
+		<action name="exportCycleTimeReportResults" class="reportDetailAction" method="exportReportDetails" >
+				<param name="reportName">Cycle Time Report</param>
+				<result name="success">/jsp/reports/cycleTimeReport.jsp</result>
+		</action>
+		
+		<action name="exportFeeProjectionReportDtl" class="reportDetailAction" method="exportReportDetails">
+				<param name="reportName">Fee Projection Report</param>
+				<result name="success">/jsp/reports/feeProjectionReport.jsp</result>
+		</action>
+		
+		<!-- ECSO Report functionality -->
+        <action name="addGoldID" class="reportDetailAction" method="addElements">
+			<result name="success">/jsp/reports/addLegalEntity.jsp</result>
+		</action>
+		
+		<action name="addCSOID" class="reportDetailAction" method="addElements">
+			<result name="success">/jsp/reports/addCSOEntity.jsp</result>
+		</action>
+		
+		<action name="addvalueSegments" class="reportDetailAction" method="addElements">
+			<result name="success">/jsp/reports/addValueSegments.jsp</result>
+		</action>
+		
+		<action name="addBankSelection" class="reportDetailAction" method="addElements">
+			<result name="success">/jsp/reports/bankSelectionReports.jsp</result>
+		</action>
+		
+		<action name="addSiteSelection" class="reportDetailAction" method="addElements">
+			<result name="success">/jsp/reports/siteSelectionReports.jsp</result>
+		</action>
+		
+		<!-- Ad-hoc Report actions start here -->
+		<action name="customReport" class="adhocReportAction" method="open">
+			<result name="success">/jsp/reports/adhoc/adhocReport.jsp</result>		
+		</action>
+		<action name="runReport" class="adhocReportAction" method="prepareSpotfireQuery"/>
+		
+		<action name="customReportSearchFields" class="adhocReportAction" method="searchFields" />
+		
+		<action name="customReportRenderFilter" class="adhocReportAction" method="renderFilter">
+			<result name="success">/jsp/reports/adhoc/filtersController.jsp</result>
+		</action>
+		<action name="customReportRenderColumn" class="adhocReportAction" method="renderFilter">
+			<result name="success">/jsp/reports/adhoc/columnsController.jsp</result>
+		</action>
+		
+		<action name="customReportSaveTemplate" class="adhocReportAction" method="saveTemplate" />
+		
+		<action name="viewUserReports" class="adhocReportAction" method="getAvailableReports">
+			<result name="success">/jsp/reports/adhoc/viewAdhocReports.jsp</result>
+			<param name="adhocReportTabType">MYREPORTS</param>
+		</action>
+		
+		<action name="viewPublishedReports" class="adhocReportAction" method="getAvailableReports">
+			<result name="success">/jsp/reports/adhoc/viewAdhocReports.jsp</result>
+			<param name="adhocReportTabType">PUBLISHEDREPORTS</param>
+		</action>
+		
+		<action name="openTemplate" class="adhocReportAction" method="openWithTemplate">
+			<result name="success">/jsp/reports/adhoc/adhocReport.jsp</result>
+		</action>
+		<action name="deleteTemplate" class="adhocReportAction" method="deleteTemplate">
+			<result name="successMyReport" type="chain">viewUserReports</result>
+			<result name="successPublishedReport" type="chain">viewPublishedReports</result>
+		</action>
+		<action name="resetSites" class="adhocReportAction" method="resetSitesAndBanks" >
+			<result name="success">/jsp/reports/adhoc/adhocSiteSelection.jsp</result>
+		</action>
+		
+		<action name="resetBanks" class="adhocReportAction" method="resetSitesAndBanks" >
+			<result name="success">/jsp/reports/adhoc/adhocBankSelection.jsp</result>
+		</action>
+		<!-- Ad-hoc Report actions end here -->
+		
+		<action name="recordCountForBidSuccess" class="reportDetailAction" method="recordsCountDetails" >
+			<param name="reportName">Bid Success Report</param>
+		</action>
+		
+		<action name="recordCountForContingent" class="reportDetailAction" method="recordsCountDetails" >
+			<param name="reportName">Contingent Report</param>
+		</action>
+		
+		<action name="recordCountForIssuance" class="reportDetailAction" method="recordsCountDetails" >
+			<param name="reportName">Issuance and Expiration Report</param>
+		</action>
+		
+		<action name="recordCountForAging" class="reportDetailAction" method="recordsCountDetails" >
+			<param name="reportName">Aging_Report</param>
+		</action>
+		
+		<action name="recordCountForECSO" class="reportDetailAction" method="recordsCountDetails" >
+			<param name="reportName">ECSO Report</param>
+		</action>
+		
+		<action name="recordCountForGCFO" class="reportDetailAction" method="recordsCountDetails" >
+			<param name="reportName">GCFO Report</param>
+		</action>
+		
+		<action name="recordCountForUser" class="reportDetailAction" method="recordsCountDetails" >
+			<param name="reportName">User Report</param>
+		</action>
+		
+		<action name="recordCountForFeesPaid" class="reportDetailAction" method="recordsCountDetails" >
+			<param name="reportName">Fees Paid Report</param>
+		</action>
+		
+		<action name="recordCountForFeeQuotation" class="reportDetailAction" method="recordsCountDetails" >
+			<param name="reportName">Fee Quotation and Forcast Report</param>
+		</action>
+		
+		<action name="recordCountForCycleTime" class="reportDetailAction" method="recordsCountDetails" >
+			<param name="reportName">Cycle Time Report</param>
+		</action>
+		
+		<action name="recordCountForFeeProjection" class="reportDetailAction" method="recordsCountDetails" >
+			<param name="reportName">Fee Projection Report</param>
+		</action>
+		
+		<action name="recordCountForAvgFeesPaid" class="reportDetailAction" method="recordsCountDetails" >
+			<param name="reportName">Avg Fees Paid Report</param>
+		</action>
+		
+	</package>
+</struts>

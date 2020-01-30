@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/WinnigBank.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/WinnigBank.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd" schemaLocation="MsgHeader.xsd"/>
+	<xs:element name="WinningBank">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Bundle_Id" type="xs:double" minOccurs="0"/>
+				<xs:element name="Linked_Transactions" type="xs:double" minOccurs="0"/>
+				<xs:element name="Bank_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Branch_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Company_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Address1" type="xs:string" minOccurs="0"/>
+				<xs:element name="Address2" type="xs:string" minOccurs="0"/>
+				<xs:element name="City" type="xs:string" minOccurs="0"/>
+				<xs:element name="State_Or_Province" type="xs:string" minOccurs="0"/>
+				<xs:element name="Zip" type="xs:string" minOccurs="0"/>
+				<xs:element name="Country" type="xs:string" minOccurs="0"/>
+				<xs:element name="Country_Of_Issuance" type="xs:string" minOccurs="0"/>
+				<xs:element name="Last_Treas_Apprvrs" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Last_Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="First_Name" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Bid_Exp_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element ref="ns0:Msg_Header" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

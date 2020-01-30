@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<field name="formatTypeId">
+		<field-validator type="requiredstring"  short-circuit="true">
+			<param name="trim">true</param>
+			<message key="error.required.requestDetails.format.formatType" />
+		</field-validator>
+	</field>
+	<field name="attachments" >
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@validateFormatDefaultAtmtFileUpload()</param>
+			<message key="error.required.requestDetails.format.attachmentFileUpload" />
+		</field-validator>
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@validateFormatAtmtFileUpload()</param>
+			<message key="error.required.requestDetails.format.fileUpload" />
+		</field-validator>
+	</field>	
+</validators> 

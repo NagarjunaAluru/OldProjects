@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/exception
+END
+NoActiveRequestExceptionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/exception/NoActiveRequestExceptionTest.java
+END
+ALOCRuntimeExceptionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/exception/ALOCRuntimeExceptionTest.java
+END
+ALOCAttachmentExceptionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/exception/ALOCAttachmentExceptionTest.java
+END
+AllExceptionTests.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/exception/AllExceptionTests.java
+END
+ALOCExceptionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/exception/ALOCExceptionTest.java
+END

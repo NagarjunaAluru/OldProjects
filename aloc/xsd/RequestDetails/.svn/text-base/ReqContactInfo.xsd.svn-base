@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/ReqContactInfo.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/AddressDetails.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 xmlns:ns2="http://treasury.ge.com/schemas/ALOC/RequestDetails/BidDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/ReqContactInfo.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/AddressDetails.xsd" schemaLocation="AddressDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd" schemaLocation="MsgHeader.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/BidDetails.xsd" schemaLocation="BidDetails.xsd"/>
+	<xs:element name="ReqContactInfo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Applicant" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="ns0:AddressDtls" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Principal" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="ns0:AddressDtls" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Beneficiary" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="ns0:AddressDtls" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Obligee" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="ns0:AddressDtls"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Tri_Party_Applicant" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="ns0:AddressDtls"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Foreign_Exp_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="US_Exp_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Ge_Ref_Num" type="xs:string" minOccurs="0"/>
+				<xs:element name="Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="User_Sso" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bundle_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Req_Count" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Linked_Transactions" type="xs:double" minOccurs="0"/>
+				<xs:element name="Bank_Reference" type="xs:string" minOccurs="0"/>
+				<xs:element name="Surity_Reference" type="xs:string" minOccurs="0"/>
+				<xs:element name="Date_Submitted" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="USD_Equivalent" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Instrument_Ccy" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instrument_Amt" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Exp_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Aloc_Request_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Aloc_Record_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Ecno_Exp_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Advised" type="xs:string" minOccurs="0"/>
+				<xs:element name="Confirmed" type="xs:string" minOccurs="0"/>
+				<xs:element name="Special_Instructions" type="xs:string" minOccurs="0"/>
+				<xs:element name="Business_Selected_Bank" type="xs:string" minOccurs="0"/>
+				<xs:element name="Ge_Signing_Docs" type="xs:string" minOccurs="0"/>
+				<xs:element name="Country_Of_Advisement" type="xs:string" minOccurs="0"/>
+				<xs:element name="Country_Of_Confirmation" type="xs:string" minOccurs="0"/>
+				<xs:element name="Private_Label" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuing_Bank_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Payment_Terms" type="xs:string" minOccurs="0"/>
+				<xs:element name="Pref_Loc_Doc_Presentaion" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bid_Reply_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Bid_Reply_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Close_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Closure_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Instrument_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instrument_Type_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Instrument_Purpose_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Bond_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bond_Type_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Sub_Bond_Type_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Bond_Sub_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Site_Prefix" type="xs:string" minOccurs="0"/>
+				<xs:element name="Amendment_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Rider_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="AmdRiderExist" type="xs:string" minOccurs="0"/>
+				<xs:element name="Delete_Allow" type="xs:string" minOccurs="0"/>
+				<xs:element name="Payments_Paid" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns1:Msg_Header" minOccurs="0"/>
+				<xs:element ref="ns2:BidDetails" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

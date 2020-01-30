@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/bo
+END
+IndicativePricingCompletedDetailsBOTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/bo/IndicativePricingCompletedDetailsBOTest.java
+END
+RequestDetailsBOTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/bo/RequestDetailsBOTest.java
+END
+TimeBOTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/bo/TimeBOTest.java
+END
+BidReplyDetailsBOTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/bo/BidReplyDetailsBOTest.java
+END
+DelegationConfigBOTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/bo/DelegationConfigBOTest.java
+END
+BidMemoDetailsBOTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/bo/BidMemoDetailsBOTest.java
+END
+AbstractModelTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/bo/AbstractModelTest.java
+END
+DelegationConfigurationBOTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/bo/DelegationConfigurationBOTest.java
+END
+AttachmentBOTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/bo/AttachmentBOTest.java
+END
+FormatBOTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/bo/FormatBOTest.java
+END
+SiteDetailsBOTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/bo/SiteDetailsBOTest.java
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/action/requestor
+END
+RequestorActionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/action/requestor/RequestorActionTest.java
+END
+RequestorReviewActionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/action/requestor/RequestorReviewActionTest.java
+END
+CreateRequestActionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/action/requestor/CreateRequestActionTest.java
+END

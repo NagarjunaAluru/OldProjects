@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/APM/FeesPeriodDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/APM/FeesPeriodDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="FeesPeriodDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Start_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="End_Date" type="xs:dateTime" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

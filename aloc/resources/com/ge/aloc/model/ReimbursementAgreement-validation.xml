@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<field name="reimbursementAgreementName">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[(reimbursementAgreementId !="-1" && reimbursementAgreementName !="") || (reimbursementAgreementId =="-1" && reimbursementAgreementName !="")]]>
+      		</param>
+			<message key="error.required.reimbursementAgreemnet.agrNameLabel"/>
+		</field-validator>
+	</field>	
+	 <field name="agreementText">
+		<field-validator type="fieldexpression">
+					<param name="expression">
+						<![CDATA[(agreementText != null  && agreementText !="")]]>
+					</param>
+					<message key="error.required.reimbursementAgreemnet.agreementText" />
+	    </field-validator>
+	</field>
+	<field name="agreementEnabledDisabled">
+		<field-validator type="fieldexpression">
+					<param name="expression">
+						<![CDATA[agreementEnabledDisabled !=null && (agreementEnabledDisabled != "Enabled" || agreementEnabledDisabled != "Disabled")]]>
+					</param>
+					<message key="error.required.reimbursementAgreemnet.agreementEnabledDisabled" />
+		</field-validator>
+	</field>
+	<field name="deafultAgreement"> 
+		<field-validator type="fieldexpression">
+					<param name="expression">
+						 <![CDATA[deafultAgreement != null ]]>
+					</param>
+					<message key="error.required.reimbursementAgreemnet.defaultAgreement" />
+		</field-validator>
+	</field>	
+	<field name="deafultAgreementType">
+		<field-validator type="fieldexpression">
+					<param name="expression">
+						<![CDATA[deafultAgreement != true  || (deafultAgreementType !=null)]]>
+					</param>
+					<message key="error.required.reimbursementAgreemnet.siteSelectionType" />
+		</field-validator>
+	</field>
+</validators>

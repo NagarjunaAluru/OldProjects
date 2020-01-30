@@ -1,0 +1,52 @@
+8
+
+dir
+56
+https://openge.ge.com/svn/treasury_aloc/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/dao/impl/reports
+https://openge.ge.com/svn/treasury_aloc
+
+
+
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+720fd033-fee8-473a-95ce-a3690b27228b
+
+AdhocDAO.java
+file
+
+
+
+
+2014-12-17T16:04:02.368569Z
+14ef1f2853cb87f07ff4543fe4fef482
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+ReportsDAO.java
+file
+
+
+
+
+2014-12-17T16:04:02.375569Z
+66c38cc0669fdee2451e6863a47924d2
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+

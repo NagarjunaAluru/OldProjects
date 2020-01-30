@@ -1,0 +1,52 @@
+8
+
+dir
+56
+https://openge.ge.com/svn/treasury_aloc/trunk/source/web/sunone_codebase/aloc/WebContent/js/bootstrap
+https://openge.ge.com/svn/treasury_aloc
+
+
+
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+720fd033-fee8-473a-95ce-a3690b27228b
+
+bootstrap.js
+file
+
+
+
+
+2014-12-17T16:04:34.235569Z
+e0fbcfcc90ee07ce3814e015deb2f757
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+bootstrap.min.js
+file
+
+
+
+
+2014-12-17T16:04:34.243569Z
+3e1cb4b7776218b675347f35bacaa8f3
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+

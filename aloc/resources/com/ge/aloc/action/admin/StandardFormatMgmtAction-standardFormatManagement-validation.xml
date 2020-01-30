@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>	
+	<field name="standardFormatMaster.standardFormatInstrumentTypeId">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+			   <![CDATA[standardFormatMaster.standardFormatInstrumentTypeId != "-1"]]>
+			</param>
+			<message key="error.required.standardFormatMgmt.instrumentTypeId" />
+		</field-validator>
+	</field>
+	<field name="standardFormatMaster.standardFormatPurpusId">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+			   <![CDATA[(standardFormatMaster.standardFormatInstrumentTypeId !="3" && standardFormatMaster.standardFormatPurpusId != null) || ((standardFormatMaster.standardFormatInstrumentTypeId =="3" || standardFormatMaster.standardFormatInstrumentTypeId =="4") && standardFormatMaster.standardFormatPurpusId == null)]]>
+			</param>
+			<message key="error.required.standardFormatMgmt.instrumentPurpose" />
+		</field-validator>
+	</field>
+	<field name="standardFormatMaster.standardFormatBondTypeId" >
+		<field-validator type="fieldexpression"  short-circuit="true">
+			<param name="expression">
+			   <![CDATA[(standardFormatMaster.standardFormatInstrumentTypeId =="3" &&  standardFormatMaster.standardFormatBondTypeId != null) || (standardFormatMaster.standardFormatInstrumentTypeId !="3" &&  standardFormatMaster.standardFormatBondTypeId == null)]]>				  
+			</param>
+			<message key="error.required.standardFormatMgmt.bondType" />
+		</field-validator>
+	</field>
+	<field name="standardFormatMaster.standardFormatSubBondTypeId">
+		<field-validator type="fieldexpression"  short-circuit="true">
+			<param name="expression">
+			   <![CDATA[standardFormatMaster.standardFormatBondTypeId ==null || ((standardFormatMaster.standardFormatBondTypeId == "2" && standardFormatMaster.standardFormatSubBondTypeId != "") || (standardFormatMaster.standardFormatBondTypeId != "2" && standardFormatMaster.standardFormatSubBondTypeId == null))]]>
+			</param>
+			<message key="error.required.standardFormatMgmt.subBondType" />
+		</field-validator>
+	</field>
+			
+		   <field name="standardFormatMaster.standardFormatFormat">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+			   <![CDATA[standardFormatMaster.standardFormatFormat != ""]]>
+			</param>
+			<message key="error.required.standardFormatMgmt.messagecontent" />
+		</field-validator>
+	</field>				
+</validators>

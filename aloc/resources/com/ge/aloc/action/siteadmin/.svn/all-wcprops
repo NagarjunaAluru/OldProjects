@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/siteadmin
+END
+ManageSiteAction-validateAndSaveSection-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/siteadmin/ManageSiteAction-validateAndSaveSection-validation.xml
+END
+SiteAdminAction-createBankSite-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/siteadmin/SiteAdminAction-createBankSite-validation.xml
+END
+SiteAdminAction-createSite-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/siteadmin/SiteAdminAction-createSite-validation.xml
+END

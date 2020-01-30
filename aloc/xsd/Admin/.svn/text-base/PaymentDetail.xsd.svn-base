@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/Admin/PaymentDetail.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/Admin/PaymentDetail.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd" schemaLocation="../RequestDetails/MsgHeader.xsd"/>
+	<xs:element name="Payment_Detail">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Op_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="Payment_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="ALOC_Record_Number" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank_Reference_Number" type="xs:string" minOccurs="0"/>
+				<xs:element name="GE_Applicant" type="xs:string" minOccurs="0"/>
+				<xs:element name="Tri_Party_Applicant" type="xs:string" minOccurs="0"/>
+				<xs:element name="Beneficiary_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Payment_Currency" type="xs:string" minOccurs="0"/>
+				<xs:element name="Payment_Amount" type="xs:string" minOccurs="0"/>
+				<xs:element name="Payment_Date" type="xs:string" minOccurs="0"/>
+				<xs:element name="USD_Payment_Amount" type="xs:string" minOccurs="0"/>
+				<xs:element name="US_Fee_Total" type="xs:string" minOccurs="0"/>
+				<xs:element name="Foreign_Fee_Total" type="xs:string" minOccurs="0"/>
+				<xs:element name="Period_Fee_Credits" type="xs:string" minOccurs="0"/>
+				<xs:element name="Period_Amendment_Fees" type="xs:string" minOccurs="0"/>
+				<xs:element name="Other_Fees" type="xs:string" minOccurs="0"/>
+				<xs:element name="One_Time_Fees" type="xs:string" minOccurs="0"/>
+				<xs:element name="Model_ID" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

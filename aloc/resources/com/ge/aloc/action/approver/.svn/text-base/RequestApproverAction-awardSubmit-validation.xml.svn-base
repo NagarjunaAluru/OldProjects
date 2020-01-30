@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+
+	<field name="requestDetails.actionDetails.reasonForOptingOut">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[(returnReason == null) || (requestDetails.actionDetails.reasonForOptingOut != "" && requestDetails.actionDetails.reasonForOptingOut != null)]]>
+		</param>
+		<message key="error.required.suretybond.awardOptOut"/>
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.actionDetails.reasonForRejection">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[(actionType != 3) || (requestDetails.actionDetails.reasonForRejection != "")]]>
+		</param>
+		<message key="error.required.requestDetails.sendBackNotes"/>
+		</field-validator>
+	</field>
+
+</validators>
+
+

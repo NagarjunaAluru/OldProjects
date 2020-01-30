@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/PreviewDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/PreviewDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="PreviewDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Bundle_Details" type="xs:string" minOccurs="0"/>
+				<xs:element name="Linked_Transaction_Info" type="xs:string" minOccurs="0"/>
+				<xs:element ref="Winning_Bank_Dtls" minOccurs="0"/>
+				<xs:element name="Applicant_Principal" type="xs:string" minOccurs="0"/>
+				<xs:element name="Division" type="xs:string" minOccurs="0"/>
+				<xs:element name="Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Address1" type="xs:string" minOccurs="0"/>
+				<xs:element name="Address2" type="xs:string" minOccurs="0"/>
+				<xs:element name="City" type="xs:string" minOccurs="0"/>
+				<xs:element name="State_Province" type="xs:string" minOccurs="0"/>
+				<xs:element name="Zip" type="xs:string" minOccurs="0"/>
+				<xs:element name="Country" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instr_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instr_Sub_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="ALOC_Record_No" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Bene_Obligee_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instr_Amt" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Instr_Currency" type="xs:string" minOccurs="0"/>
+				<xs:element name="Tot_USD_Equi_Bundle" type="xs:string" minOccurs="0"/>
+				<xs:element name="GE_Ref_Field" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Winning_Bank_Dtls">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Winning_Bank_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuing_Bank_Br" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank_Reference_Number" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

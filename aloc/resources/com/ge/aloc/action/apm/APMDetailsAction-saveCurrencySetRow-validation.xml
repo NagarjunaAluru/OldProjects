@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+
+	<field name="currencySetup.currencyCode">
+		<field-validator type="fieldexpression">
+		<param name="expression"><![CDATA[(currencySetup.currencyCode !=null && currencySetup.currencyCode !="")]]></param>
+      	<message key="error.required.apmDetails.currencySetup.required" />
+      	</field-validator>
+	</field>
+	
+	<field name="currencySetup.rateDirection">
+		<field-validator type="fieldexpression">
+		<param name="expression"><![CDATA[(currencySetup.rateDirection !=null && currencySetup.rateDirection !="")]]></param>
+      	<message key="error.required.apmDetails.currencySetup.required" />
+      	</field-validator>
+	</field>
+	
+	<field name="currencySetup.tickerSymbol">
+		<field-validator type="fieldexpression">
+		<param name="expression"><![CDATA[(currencySetup.tickerSymbol !=null && currencySetup.tickerSymbol !="")]]></param>
+      	<message key="error.required.apmDetails.currencySetup.required" />
+      	</field-validator>
+    </field>
+	
+	<field name="currencySetup.decimalPrecision">
+		<field-validator type="required">
+			<message key="error.required.apmDetails.currencySetup.required" />
+		</field-validator>
+	</field>
+	
+	<field name="currencySetup.APMPaymentCurrencyFlag">
+		<field-validator type="fieldexpression">
+		<param name="expression"><![CDATA[(currencySetup.APMPaymentCurrencyFlag !=null && currencySetup.APMPaymentCurrencyFlag !="")]]></param>
+      	<message key="error.required.apmDetails.currencySetup.required" />
+      	</field-validator>
+	</field>
+	
+	<field name="currencySetup.BUC">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression"><![CDATA[(currencySetup.APMPaymentCurrencyFlag !="Yes") || (currencySetup.BUC !=null && currencySetup.BUC !="")]]></param>
+      		<message key="error.required.apmDetails.currencySetup.required" />
+      	</field-validator>
+      	
+      	<field-validator type="stringlength">
+			<param name="minLength">6</param>
+			<message key="error.required.apmDetails.currencySetup.minchar"/>
+		</field-validator>
+	</field>
+	
+	<field name="currencySetup.ADN">
+		<field-validator type="fieldexpression">
+			<param name="expression"><![CDATA[(currencySetup.APMPaymentCurrencyFlag !="Yes") || (currencySetup.ADN !=null && currencySetup.ADN !="")]]></param>
+      		<message key="error.required.apmDetails.currencySetup.required" />
+      	</field-validator>
+	</field>
+</validators>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/Resources/Schemas/RequestDetails/FormatTemplate.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/Resources/Schemas/RequestDetails/FormatTemplate.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd" schemaLocation="MsgHeader.xsd"/>
+	<xs:element name="FormatTemplate">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ns0:Msg_Header" minOccurs="0"/>
+				<xs:element name="Request_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Format_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Format_value" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instrument_Purpus_Id" type="xs:integer" minOccurs="0"/>
+                <xs:element name="Bond_Type_Id" type="xs:integer" minOccurs="0"/>
+                <xs:element name="Sub_Bond_Type_Id" type="xs:integer" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

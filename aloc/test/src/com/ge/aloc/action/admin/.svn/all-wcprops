@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/action/admin
+END
+SuretyNameMgmtActionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/action/admin/SuretyNameMgmtActionTest.java
+END
+SwiftMessageMonitoringActionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/action/admin/SwiftMessageMonitoringActionTest.java
+END
+ReimbursementAgreementActionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/action/admin/ReimbursementAgreementActionTest.java
+END
+RecordsRetentionMgmtActionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/action/admin/RecordsRetentionMgmtActionTest.java
+END
+StandardFormatMgmtActionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/action/admin/StandardFormatMgmtActionTest.java
+END
+UserAnnouncementMgmtActionTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/action/admin/UserAnnouncementMgmtActionTest.java
+END

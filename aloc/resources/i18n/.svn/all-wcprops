@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/i18n
+END
+SiteAdmin-validation.properties
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/i18n/SiteAdmin-validation.properties
+END
+RequestDetails-validation.properties
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/i18n/RequestDetails-validation.properties
+END
+ALOCRequest.properties
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/i18n/ALOCRequest.properties
+END
+ext-validation.properties
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/i18n/ext-validation.properties
+END
+SiteAdmin.properties
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/i18n/SiteAdmin.properties
+END
+ApplicationResources.properties
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/i18n/ApplicationResources.properties
+END
+ExternalUserManagement.properties
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/i18n/ExternalUserManagement.properties
+END
+TreasuryAdmin-validation.properties
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/i18n/TreasuryAdmin-validation.properties
+END
+ext.properties
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/i18n/ext.properties
+END
+DashboardResources.properties
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/i18n/DashboardResources.properties
+END
+TreasuryAdminResources.properties
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/i18n/TreasuryAdminResources.properties
+END
+requestpdf.properties
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/i18n/requestpdf.properties
+END
+LinkTransaction.properties
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/i18n/LinkTransaction.properties
+END

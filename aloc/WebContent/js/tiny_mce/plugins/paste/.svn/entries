@@ -1,0 +1,82 @@
+8
+
+dir
+56
+https://openge.ge.com/svn/treasury_aloc/trunk/source/web/sunone_codebase/aloc/WebContent/js/tiny_mce/plugins/paste
+https://openge.ge.com/svn/treasury_aloc
+
+
+
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+720fd033-fee8-473a-95ce-a3690b27228b
+
+editor_plugin.js
+file
+
+
+
+
+2014-12-17T16:04:28.240569Z
+e7e3089339dc85691bed70d81734accd
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+pasteword.htm
+file
+
+
+
+
+2014-12-17T16:04:28.248569Z
+8b9459b98f9a70ed684832326bf1cdf6
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+langs
+dir
+
+editor_plugin_src.js
+file
+
+
+
+
+2014-12-17T16:04:28.255569Z
+03eedc4d1f03ee650ad6959022b412aa
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+pastetext.htm
+file
+
+
+
+
+2014-12-17T16:04:28.264569Z
+8f217769e59a5dd67843c7c17c842f41
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+js
+dir
+

@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<authorization xmlns:hwf="HWF/authorization/hwf-authorization_1.0"
+	xmlns="HWF/authorization/hwf-authorization_1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="HWF/authorization/hwf-authorization_1.0 hwf-authorization_1_0.xsd ">
+	<permissions>
+		
+		<!-- Default Access; The following permissions will be granted to all logged-in users -->
+	   	<web-resource name="logout" default="true">
+	  		<URI>/int/logout.action</URI>
+	   	</web-resource>
+	   	
+	   	<web-resource name="home" default="true">
+	  		<URI>/int/home.action</URI>
+	   	</web-resource>
+	   	
+	   	<web-resource name="OpenRequest" default="true">
+  			<URI>/int/openRequest.action</URI>
+	   	</web-resource>
+	   	
+	   	<web-resource name="ReferenceData" default="true">
+  			<URI>/int/*RefData.action</URI>
+	   	</web-resource>
+	   	
+	   	<web-resource name="LookupAction" default="true">
+  			<URI>/int/*Lookup.action</URI>
+	   	</web-resource>
+	   	<web-resource name="contactUs" default="true">
+	  		<URI>/int/contactUs.action</URI>
+	   	</web-resource>
+	   	<web-resource name="help" default="true">
+	  		<URI>/int/help.action</URI>
+	   	</web-resource>
+	   	<web-resource name="resource" default="true">
+	  		<URI>/int/downloadResourcePDF.action</URI>
+	   	</web-resource>
+	   	<web-resource name="ValidateAction" default="true">
+  			<URI>/int/validate*.action</URI>
+	   	</web-resource>
+	   	
+	   	<web-resource name="dashboard" default="true">
+	  		<URI>/int/dashboard/*.action</URI>
+	   	</web-resource>
+	   	<web-resource name="getSites" default="true">
+	  		<URI>/int/admin/getSites.action</URI>
+	   	</web-resource>
+	   	<web-resource name="downloadAttachment" default="true">
+	  		<URI>/int/admin/downloadAttachment.action</URI>
+	   	</web-resource>
+	   	<web-resource name="exportInvoice" default="true">
+	  		<URI>/int/admin/exportInvoiceFeeHistory.action</URI>
+	   	</web-resource>
+	   	<web-resource name="getYearlist" default="true">
+	  		<URI>/int/apm/getYearlist.action</URI>
+	   	</web-resource>
+	   	<web-resource name="getRateHistory" default="true">
+	  		<URI>/int/apm/*Rate*.action</URI>
+	   	</web-resource>
+	   	<web-resource name="downloadRates" default="true">
+	  		<URI>/int/apm/downloadResultExport.action</URI>
+	   	</web-resource>
+	   	<web-resource name="searchFeeHistory" default="true">
+	  		<URI>/int/admin/searchFeeHistory.action</URI>
+	   	</web-resource>
+	   	<web-resource name="searchTypesFeeHistory" default="true">
+	  		<URI>/int/admin/*FHSearch.action</URI>
+	   	</web-resource>
+	   	<web-resource name="getFHFeeSummary" default="true">
+	  		<URI>/int/apm/getFHFeeSummary.action</URI>
+	   	</web-resource>
+	   	<web-resource name="viewFullRequest" default="true">
+	  		<URI>/int/apm/viewFullRequest.action</URI>
+	   	</web-resource>
+	   	<web-resource name="downloadRequestPDF" default="true">
+	  		<URI>/int/approver/downloadRequestPDF.action</URI>
+	   	</web-resource>
+	   	<web-resource name="dashboardActionLogRefData" default="true">
+	  		<URI>/int/ActionLogDashboardRefData.action</URI>
+	   	</web-resource>
+	   		   		  
+	   	<web-resource name="requestCheckListPDF" default="true">
+	  		<URI>/int/requestCheckListPDF.action</URI>
+	   	</web-resource>
+	   	
+	   	<web-resource name="downloadHelpPDF" default="true">
+	  		<URI>/int/downloadHelpPDF.action</URI>
+	   	</web-resource>
+	   	
+	   	<web-resource name="taxonomy" default="true">
+	  		<URI>/int/*Taxonomy.action</URI>
+	   	</web-resource>
+	   	
+	   	<web-resource name="reportingData" default="true">
+	  		<URI>/int/*ReportingData.action</URI>
+	   	</web-resource>
+	   	
+	   	<web-resource name="saveCurrBankFees" default="true">
+	  		<URI>/int/saveCurrBankFees.action</URI>
+	   	</web-resource>
+	   	<web-resource name="taxonomyPDFReport" default="true">
+	  		<URI>/int/taxonomyPDFReport.action</URI>
+	   	</web-resource>
+	   	<web-resource name="openFeePaymentRun" default="true">
+	  		<URI>/int/openFeePaymentRun.action</URI>
+	   	</web-resource>
+	   	
+	    <web-resource name="Reports" default="true">
+	  		<URI>/int/reports/*.action</URI>  		
+	   	</web-resource>
+	   	
+	   	<web-resource name="getFullAuditAndActionLog" default="true">
+  			<URI>/int/approver/getFullAuditAndActionLog.action</URI>
+	   	</web-resource>
+	   	
+	   	<web-resource name="auditandActionSearch" default="true">
+  			<URI>/int/approver/auditandActionSearch.action</URI>
+	   	</web-resource>
+	   	
+	   	<web-resource name="multiTabError" default="true">
+	  		<URI>/int/multiTabsIssue.action</URI>
+	   	</web-resource>
+	   	
+	   	
+	    <!-- Permissions for Treasury Admin  Resources -->
+	    <web-resource name="treasuryAdmin">	    
+	  		<URI>/int/admin/*.action</URI>	
+	  		<principalsRef>
+	    		<principalRef ref="TreasuryApprover"/>
+	    		<principalRef ref="TreasuryAnalyst"/>  
+	    		<principalRef ref="SiteAdmin"/>
+	    		<principalRef ref="Requestor"/>
+	    		<principalRef ref="Approver"/>
+	    		<principalRef ref="ReadOnly"/>		
+	    	</principalsRef>  	
+	   	</web-resource>
+	   	
+	   		<!-- Attachment Permissions -->
+	   	<web-resource name="attachmentDownload" default="true">
+	  		<URI>/int/atmt/download*.action</URI>  		
+	   	</web-resource>
+	   	
+	   	<web-resource name="attachmentUpload">
+	  		<URI>/int/atmt/upload.action</URI>
+	  		<principalsRef>
+	    		<principalRef ref="Requestor"/>
+	    		<principalRef ref="TreasuryAnalyst"/>	
+	    		<principalRef ref="TreasuryApprover"/>
+	    		<principalRef ref="SiteAdmin"/>
+	    		<principalRef ref="BankOperations"/>
+	    		<principalRef ref="SuretyBrokerOperations"/>	    		
+	    	</principalsRef> 
+	   	</web-resource>
+	   	
+	   	<web-resource name="attachmentDelete">
+	  		<URI>/int/atmt/delete.action</URI>
+	  		<principalsRef>
+	    		<principalRef ref="Requestor"/>
+	    		<principalRef ref="TreasuryAnalyst"/>	
+	    		<principalRef ref="TreasuryApprover"/>
+	    		<principalRef ref="SiteAdmin"/>
+	    		<principalRef ref="BankOperations"/>
+	    		<principalRef ref="SuretyBrokerOperations"/>
+	    	</principalsRef> 
+	   	</web-resource>
+	   	
+	   	<web-resource name="closureAttachmentDelete">
+	  		<URI>/int/atmt/closureDelete.action</URI>
+	  		<principalsRef>
+	    		<principalRef ref="Requestor"/>
+	    		<principalRef ref="TreasuryAnalyst"/>	
+	    		<principalRef ref="TreasuryApprover"/>
+	    		<principalRef ref="SiteAdmin"/>
+	    		<principalRef ref="BankOperations"/>
+	    		<principalRef ref="SuretyBrokerOperations"/>
+	    	</principalsRef> 
+	   	</web-resource>
+	   	
+	   	
+	   	<web-resource name="apm">	   	
+	  		<URI>/int/apm/*.action</URI>
+	  			<principalsRef>
+	    		<principalRef ref="TreasuryApprover"/>
+	    		<principalRef ref="TreasuryAnalyst"/>	
+	    	</principalsRef>  	
+	   	</web-resource>	   		
+	   	   		   		   		   		   			   	
+	   	<!-- Attachment permissions  -->
+	   	<web-resource name="AddAttachment">
+	  		<URI>/int/addAttachment.action</URI>
+	  		
+	  		<principalsRef>
+	    		<principalRef ref="Requestor"/>
+	    		<principalRef ref="TreasuryAnalyst"/>
+	    		<principalRef ref="TreasuryApprover"/>
+	    		<principalRef ref="SiteAdmin"/>
+	    	</principalsRef>
+	   	</web-resource>
+	   	
+	   	<web-resource name="AddInstrumentDocAttachment">
+	  		<URI>/int/addInstrDocAttachment.action</URI>
+	  		<principalsRef>
+	  			<principalRef ref="TreasuryAnalyst"/>	    	
+	  			<principalRef ref="TreasuryApprover"/>	
+	    		<principalRef ref="BankOperations"/>
+	    	</principalsRef>
+	   	</web-resource>
+	   	
+	   	<!-- Payment add permission  -->
+	   	<web-resource name="AddPayment">
+	  		<URI>/int/addPayment.action</URI>
+	  		
+	  		<principalsRef>
+	    		<principalRef ref="Requestor"/>
+	    		<principalRef ref="TreasuryApprover"/>
+	    		<principalRef ref="TreasuryAnalyst"/>
+	    		<principalRef ref="SiteAdmin"/>
+	    	</principalsRef>
+	   	</web-resource>
+	   
+	   <web-resource name="DownloadResources">
+	  		<URI>/int/requestor/downloadAttachment.action</URI>	  		
+	  		<principalsRef>
+	    		<principalRef ref="Requestor"/>
+	    		<principalRef ref="TreasuryAnalyst"/>
+	    		<principalRef ref="TreasuryApprover"/>	    				
+				<principalRef ref="Approver"/>
+				<principalRef ref="BankOperations"/>
+				<principalRef ref="SiteAdmin"/>
+				<principalRef ref="ReadOnly"/>
+	    	</principalsRef>
+	   	</web-resource>
+	   	<!-- Add Auto Increse Permission  -->
+	   	<web-resource name="AutoIncrese">
+	  		<URI>/int/addAutoIncrease.action</URI>
+	  		
+	  		<principalsRef>
+	    		<principalRef ref="Requestor"/>
+	    		<principalRef ref="TreasuryAnalyst"/>
+	    		<principalRef ref="TreasuryApprover"/>
+	    		<principalRef ref="SiteAdmin"/>
+	    	</principalsRef>
+	   	</web-resource>
+	   	
+	   	<!-- Permissions for Requestor Resources -->
+	   	<web-resource name="RequestorResources">
+	  		<URI>/int/requestor/*.action</URI>
+	  		
+	  		<principalsRef>
+	    		<principalRef ref="Requestor"/>
+	    		<principalRef ref="TreasuryAnalyst"/>
+	    		<principalRef ref="TreasuryApprover"/>
+	    		<principalRef ref="SiteAdmin"/>
+	    	</principalsRef>
+	   	</web-resource>
+	   	
+	   	<!-- Permissions for Taxonomy Update Resources -->
+	   	<web-resource name="TaxonomyResources">
+	  		<URI>/int/*Taxonomy*.action</URI>
+	  		<principalsRef>
+	    		<principalRef ref="Requestor"/>
+	    		<principalRef ref="TreasuryAnalyst"/>
+	    		<principalRef ref="TreasuryApprover"/>
+	    		<principalRef ref="SiteAdmin"/>
+	    	</principalsRef>
+	   	</web-resource>
+	   	
+	   	<!-- Permissions for Model Request Resources -->
+	   	<web-resource name="ModelRequestResources">
+	  		<URI>/int/requestor/*Model*.action</URI>
+	  		<principalsRef>
+	  			<principalRef ref="SiteAdmin"/>
+	    		<principalRef ref="Approver"/>
+	    	</principalsRef>	  		
+	  	</web-resource>
+	  	
+	  	<web-resource name="EditModelResources">
+	  		<URI>/int/requestor/getBondSubTypes.action</URI>
+	  		<principalsRef>
+	  			<principalRef ref="SiteAdmin"/>
+	    	</principalsRef>	  		
+	  	</web-resource>
+	   	
+	   	<!-- Permissions for Approver Resources -->
+	   	<web-resource name="ApproverResources">
+	  		<URI>/int/approver/*.action</URI>
+	  		
+	  		<principalsRef>
+	    		<principalRef ref="Approver"/>
+	    		<principalRef ref="TreasuryAnalyst"/>
+	    		<principalRef ref="TreasuryApprover"/>
+	    		<principalRef ref="BankOperations"/>
+	    		<principalRef ref="SuretyBrokerOperations"/>
+	    	</principalsRef>
+	   	</web-resource>
+	   	
+	   	<web-resource name="generateFormatDoc" default="true">
+  			<URI>/int/approver/generateFormatDoc.action</URI>
+	   	</web-resource>
+
+	   	<!-- Permissions for SiteAdmin Resources -->
+	   	<web-resource name="SiteAdminResources">
+	  		<URI>/int/siteadmin/*.action</URI>
+	  		
+	  		<principalsRef>
+	    		<principalRef ref="SiteAdmin"/>
+	    		<principalRef ref="Requestor"/>
+	    		<principalRef ref="Approver"/>
+	    		<principalRef ref="ReadOnly"/>
+	    		<principalRef ref="TreasuryAnalyst"/>
+	    		<principalRef ref="TreasuryApprover"/>
+	    	</principalsRef>
+	   	</web-resource>
+	   	
+	   	<!-- Permissions for Business SiteAdmin Resources -->
+	   	<web-resource name="BusinessSiteAdminResources">
+	  		<URI>/int/bussiteadmin/*.action</URI>
+	  		
+	  		<principalsRef>
+	    		<principalRef ref="SiteAdmin"/>
+	    	</principalsRef>
+	   	</web-resource>
+	   	
+	   	<!-- Permissions for TreasuryAdmin Resources -->
+	   	<web-resource name="TreasuryAdminResources">
+	  		<URI>/int/treasuryadmin/*.action</URI>
+	  		
+	  		<principalsRef>
+	    		<principalRef ref="TreasuryApprover"/>
+	    		<principalRef ref="TreasuryAnalyst"/>
+	    	</principalsRef>
+	   	</web-resource>
+	   	
+	   	<!-- Permissions for Linked Resources -->
+	   	<web-resource name="LinkedResources">
+	  		<URI>/int/linkto/*.action</URI>
+	  		
+	  		<principalsRef>
+	    		<principalRef ref="Requestor"/>
+	    		<principalRef ref="TreasuryAnalyst"/>
+	    		<principalRef ref="TreasuryApprover"/>
+	    		<principalRef ref="SiteAdmin"/>
+	    		<principalRef ref="Approver"/>
+	    	</principalsRef>
+	   	</web-resource>
+	   	<!-- Permissions for Bundle Resources -->
+	   	<web-resource name="BundleResources">
+	  		<URI>/int/bundle/*.action</URI>
+	  		
+	  		<principalsRef>
+	    		<principalRef ref="Requestor"/>
+	    		<principalRef ref="Approver"/>
+		    	<principalRef ref="SiteAdmin"/>
+	    		<principalRef ref="TreasuryAnalyst"/>
+	    		<principalRef ref="TreasuryApprover"/>
+	    	</principalsRef>
+	   	</web-resource>
+	   	<!-- Permissions for Report Resources -->
+	   	<web-resource name="ReportResources">
+	  		<URI>/int/reports/*.action</URI>
+	  		
+	  		<principalsRef>
+	    		<principalRef ref="TreasuryAnalyst"/>
+	    		<principalRef ref="TreasuryApprover"/>
+	    		<principalRef ref="SiteAdmin"/>
+	    	</principalsRef>
+	   	</web-resource>
+
+	   	<!-- Role based business component permissions -->
+	   	<domain name="BusinessAccess" default="true">
+	   		<!-- Request Creation Menu Item in header  -->
+	   		<component name="RequestCreation">
+	   			<principalsRef>
+	    			<principalRef ref="Requestor"/>
+		    		<principalRef ref="TreasuryAnalyst"/>
+		    		<principalRef ref="TreasuryApprover"/>
+		    		<principalRef ref="SiteAdmin"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<!-- Taxonomy Update Fields Access -->
+	   		<component name="TaxonomyUpdateAccess">
+	   			<principalsRef>
+	    			<principalRef ref="Requestor"/>
+		    		<principalRef ref="TreasuryAnalyst"/>
+		    		<principalRef ref="TreasuryApprover"/>
+		    		<principalRef ref="SiteAdmin"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<!-- Admin Portal Page Access  -->
+	   		<component name="AdminPortalView">
+	   			<principalsRef>
+		    		<principalRef ref="TreasuryAnalyst"/>
+		    		<principalRef ref="TreasuryApprover"/>
+		    		<principalRef ref="SiteAdmin"/>
+		    		<principalRef ref="Requestor"/>
+		    		<principalRef ref="Approver"/>
+		    		<principalRef ref="ReadOnly"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<!-- Rate History Page Access  -->
+	   		<component name="RateHistoryView">
+	   			<principalsRef>
+	   				<principalRef ref="Requestor"/>
+		    		<principalRef ref="TreasuryAnalyst"/>
+		    		<principalRef ref="TreasuryApprover"/>
+		    		<principalRef ref="SiteAdmin"/>
+		    		<principalRef ref="Approver"/>
+		    		<principalRef ref="BankOperations"/>
+		    		<principalRef ref="BankReadOnly"/>
+		    	</principalsRef>
+	   		</component>
+	   		<!-- All Roles -->
+	   		<component name="AllRolesView">
+	   			<principalsRef>
+	   				<principalRef ref="Requestor"/>
+		    		<principalRef ref="TreasuryAnalyst"/>
+		    		<principalRef ref="TreasuryApprover"/>
+		    		<principalRef ref="SiteAdmin"/>
+		    		<principalRef ref="Approver"/>
+		    		<principalRef ref="ReadOnly"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<!-- CreateAmendmentRiderView Page Access  -->
+	   		<component name="CreateRequestAmendmentRiderView">
+	   			<principalsRef>
+	   				<principalRef ref="Requestor"/>
+		    		<principalRef ref="TreasuryAnalyst"/>
+		    		<principalRef ref="TreasuryApprover"/>
+		    		<principalRef ref="SiteAdmin"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<!-- BusinessTrackInFlights Page Access  -->
+	   		<component name="BusinessTrackInFlights">
+	   			<principalsRef>
+	   				<principalRef ref="Requestor"/>
+		    		<principalRef ref="TreasuryAnalyst"/>
+		    		<principalRef ref="TreasuryApprover"/>
+		    		<principalRef ref="SiteAdmin"/>
+		    		<principalRef ref="Approver"/>
+		    		<principalRef ref="ReadOnly"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<component name="TransactionHistoryView">
+	   			<principalsRef>
+	   				<principalRef ref="Requestor"/>
+		    		<principalRef ref="TreasuryAnalyst"/>
+		    		<principalRef ref="TreasuryApprover"/>
+		    		<principalRef ref="SiteAdmin"/>
+		    		<principalRef ref="BankOperations"/>
+		    		<principalRef ref="BankReadOnly"/>
+		    		<principalRef ref="SuretyBrokerOperations"/>
+		    		<principalRef ref="SuretyBrokerReadOnly"/>
+		    		<principalRef ref="ReadOnly"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<!-- Business ReadOnly TrackInFlights Page Access  -->
+	   		<component name="BusinessReadOnlyTrackInFlights">
+	   			<principalsRef>
+	   				<principalRef ref="ReadOnly"/>		    		
+		    	</principalsRef>
+	   		</component>
+	   		<!--  Site Creation links -->
+	   		<component name="SiteAdminAccess">
+	   			<principalsRef>
+		    		<principalRef ref="TreasuryAnalyst"/>
+		    		<principalRef ref="TreasuryApprover"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<component name="IssuanceTabAccess">
+	   			<principalsRef>
+	   				<principalRef ref="Requestor"/>
+	   				<principalRef ref="SiteAdmin"/>
+	   				<principalRef ref="Approver"/>
+	   				<principalRef ref="ReadOnly"/>
+		    		<principal id="TreasuryAnalyst" name="TreasuryAnalyst" />
+					<principal id="TreasuryApprover" name="TreasuryApprover" />
+					<principal id="BankOperations" name="BankOperations" />
+					<principal id="BankReadOnly" name="BankReadOnly" />
+					<principal id="SuretyBrokerOperations" name="SuretyBrokerOperations" />
+					<principal id="SuretyBrokerReadOnly" name="SuretyBrokerReadOnly" />
+					<principal id="treasuryAdmin" name="treasuryAdmin" />
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<!--  Model links -->
+	   		<component name="ModelAccess">
+	   			<principalsRef>
+		    		<principalRef ref="TreasuryAnalyst"/>
+		    		<principalRef ref="TreasuryApprover"/>
+		    		<principalRef ref="SiteAdmin"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<component name="ChangeOwnerAccess">
+	   			<principalsRef>
+		    		<principalRef ref="TreasuryAnalyst"/>
+		    		<principalRef ref="TreasuryApprover"/>
+		    		<principalRef ref="SiteAdmin"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<!-- Only Business Site Admin Link  -->
+	   		<component name="BusinessSiteAdminAccess">
+	   			<principalsRef>
+		    		<principalRef ref="SiteAdmin"/>
+		    		<principalRef ref="Requestor"/>
+		    		<principalRef ref="Approver"/>
+		    		<principalRef ref="ReadOnly"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<!-- Request Creation Menu Item in header  -->
+	   		<component name="ReportsView">
+	   			<principalsRef>
+	    			<principalRef ref="TreasuryAnalyst"/>
+	    			<principalRef ref="TreasuryApprover"/>
+	    			<principalRef ref="SiteAdmin"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<!--My Transaction Dashboard display based on Role -->
+	   		<component name="MyTransactionsDashBoardAccess">
+	   			<principalsRef>
+		    		<principalRef ref="Requestor"/>
+		    		<principalRef ref="Approver"/>
+		    		<principalRef ref="SiteAdmin"/>
+		    		<principalRef ref="TreasuryAnalyst"/>
+		    		<principalRef ref="TreasuryApprover"/>
+		    	</principalsRef>
+	   		</component>
+	   		<!--  All Request Dashboard display based on Role -->
+	   		<component name="AllRequestsDashBoardAccess">
+	   			<principalsRef>
+		    		<principalRef ref="Requestor"/>
+		    		<principalRef ref="Approver"/>
+		    		<principalRef ref="SiteAdmin"/>
+		    		<principalRef ref="ReadOnly"/>
+		    		<principalRef ref="TreasuryAnalyst"/>
+		    		<principalRef ref="TreasuryApprover"/>
+		    	</principalsRef>
+	   		</component>
+	   		<!--  Draft Dashboard display based on Role -->
+	   		<component name="DraftDashBoardAccess">
+	   			<principalsRef>
+		    		<principalRef ref="Requestor"/>
+		    		<principalRef ref="Approver"/>
+		    		<principalRef ref="TreasuryAnalyst"/>
+		    		<principalRef ref="TreasuryApprover"/>
+		    		<principalRef ref="SiteAdmin"/>
+		    	</principalsRef>
+	   		</component>
+	   		<!--  Model Dashboard display based on Role -->
+	   		<component name="ModelDashBoardAccess">
+	   			<principalsRef>
+		    		<principalRef ref="Requestor"/>
+		    		<principalRef ref="Approver"/>
+		    		<principalRef ref="SiteAdmin"/>
+		    		<principalRef ref="TreasuryAnalyst"/>
+		    		<principalRef ref="TreasuryApprover"/>
+		    	</principalsRef>
+	   		</component>
+	   		<!--  Bundle Dashboard display based on Role -->
+	   		<component name="BundleDashBoardAccess">
+	   			<principalsRef>
+		    		<principalRef ref="Requestor"/>
+		    		<principalRef ref="Approver"/>
+		    		<principalRef ref="SiteAdmin"/>
+		    		<principalRef ref="TreasuryAnalyst"/>
+		    		<principalRef ref="TreasuryApprover"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<!--  BidProcessTreasury Dashboard display based on Role -->
+	   		<component name="BidProcessTreasuryDashBoardAccess">
+	   			<principalsRef>
+	   				<principalRef ref="TreasuryAnalyst"/>
+		    		<principalRef ref="TreasuryApprover"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<!-- Bank Dashboard Access -->
+	   		<component name="BankDashBoardAccess">
+	   			<principalsRef>
+		    		<principalRef ref="BankOperations"/>
+		    		<principalRef ref="BankReadOnly"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<!-- Broker Dashboard Access -->
+	   		<component name="BrokerDashBoardAccess">
+	   			<principalsRef>
+		    		<principalRef ref="SuretyBrokerOperations"/>
+		    		<principalRef ref="SuretyBrokerReadOnly"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<!-- DefaultView Dashboard Access -->
+	   		<component name="DefaultViewReqAccess">
+	   			<principalsRef>
+		    		<principalRef ref="Requestor"/>
+		    		<principalRef ref="Approver"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<component name="DefaultViewTreasuryAccess">
+	   			<principalsRef>
+		    		<principalRef ref="TreasuryAnalyst"/>
+		    		<principalRef ref="TreasuryApprover"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<!--My Transaction Dashboard display based on Role -->
+	   		<component name="TransactionsHistoryAccess">
+	   			<principalsRef>
+		    		<principalRef ref="TreasuryAnalyst"/>
+		    		<principalRef ref="TreasuryApprover"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<!-- Business Dashboard Access -->
+	   		<component name="BusinessDashboardAccess">
+	   			<principalsRef>
+		    		<principalRef ref="Requestor"/>
+		    		<principalRef ref="Approver"/>
+		    		<principalRef ref="SiteAdmin"/>
+		    		<principalRef ref="ReadOnly"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<!-- Issuance Report Access -->
+	   		<component name="IssuanceGEUserAccess">
+	   			<principalsRef>
+		    		<principalRef ref="Requestor"/>
+		    		<principalRef ref="Approver"/>
+		    		<principalRef ref="SiteAdmin"/>
+		    		<principalRef ref="ReadOnly"/>
+		    		<principalRef ref="TreasuryAnalyst"/>
+		    		<principalRef ref="TreasuryApprover"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<component name="IssuanceBankUserAccess">
+	   			<principalsRef>
+		    		<principalRef ref="BankOperations"/>
+		    		<principalRef ref="BankReadOnly"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<!-- Business Dashboard Access -->
+	   		<component name="TreasuryDashboardAccess">
+	   			<principalsRef>
+		    		<principalRef ref="TreasuryAnalyst"/>
+		    		<principalRef ref="TreasuryApprover"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<!-- GE Users -->
+	   		<component name="GEUsersAccess">
+	   			<principalsRef>
+		    		<principalRef ref="Requestor"/>
+		    		<principalRef ref="Approver"/>
+		    		<principalRef ref="TreasuryAnalyst"/>
+		    		<principalRef ref="TreasuryApprover"/>
+		    		<principalRef ref="SiteAdmin"/>
+		    	</principalsRef>
+	   		</component>
+
+	   		<!-- Attachment Access -->
+	   		<component name="AttachmentsAccess">
+	   			<principalsRef>
+	   				<principalRef ref="Requestor"/>
+		    		<principalRef ref="Approver"/>
+		    		<principalRef ref="SiteAdmin"/>
+		    		<principalRef ref="ReadOnly"/>
+		    		<principalRef ref="TreasuryAnalyst"/>
+		    		<principalRef ref="TreasuryApprover"/>		    		
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<!-- Not Bank Broker ReadOnly Access -->
+	   		<component name="NotBankBrokerReadOnly">
+	   			<principalsRef>
+		    		<principalRef ref="BankOperations"/>
+		    		<principalRef ref="SuretyBrokerOperations"/>
+		    		<principalRef ref="TreasuryAnalyst"/>
+		    		<principalRef ref="TreasuryApprover"/>		    		
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<!-- Bank Broker ReadOnly Access -->
+	   		<component name="BankBrokerReadOnly">
+	   			<principalsRef>
+		    		<principalRef ref="BankReadOnly"/>
+		    		<principalRef ref="SuretyBrokerReadOnly"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<component name="DeleteRequestAccess">
+	   			<principalsRef>
+		    		<principalRef ref="Requestor"/>
+		    		<principalRef ref="SiteAdmin"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<!--  Current Bank Fee links -->
+	   		<component name="CurrentBankFeeAccess">
+	   			<principalsRef>
+		    		<principalRef ref="TreasuryAnalyst"/>
+		    		<principalRef ref="TreasuryApprover"/>
+		    		<principalRef ref="Approver"/>
+		    		<principalRef ref="Requestor"/>
+		    		<principalRef ref="SiteAdmin"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   	</domain>
+	</permissions>
+	
+	<principals>
+		<principal id="Requestor" name="Requestor" />
+		<principal id="Approver" name="Approver" />
+		<principal id="ReadOnly" name="ReadOnly" />
+		<principal id="TreasuryAnalyst" name="TreasuryAnalyst" />
+		<principal id="TreasuryApprover" name="TreasuryApprover" />
+		<principal id="BankOperations" name="BankOperations" />
+		<principal id="BankReadOnly" name="BankReadOnly" />
+		<principal id="SuretyBrokerOperations" name="SuretyBrokerOperations" />
+		<principal id="SuretyBrokerReadOnly" name="SuretyBrokerReadOnly" />
+		<principal id="SiteAdmin" name="SiteAdmin" />
+		<principal id="treasuryAdmin" name="treasuryAdmin" />
+		<principal id="apm" name="apm" />
+	</principals>
+</authorization>
+ 

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/SiteAdminStaticData.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/ParentSiteDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/SiteAdminStaticData.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/ParentSiteDetails.xsd" schemaLocation="ParentSiteDetails.xsd"/>
+	<xs:element name="SiteAdminStaticData">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="SitesList" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Site_Id" type="xs:integer" minOccurs="0"/>
+							<xs:element name="Site_Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="SiteType_Id" type="xs:integer" minOccurs="0"/>
+							<xs:element name="SiteType_Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="Site_Prefix" type="xs:string" minOccurs="0"/>
+							<xs:element name="Site_Description" type="xs:string" minOccurs="0"/>
+							<xs:element name="Site_Code" type="xs:string" minOccurs="0"/>
+							<xs:element name="Designation" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="ns0:ParentSiteDetails" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

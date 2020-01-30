@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/admin
+END
+IChangeRequestOwnershipManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/admin/IChangeRequestOwnershipManager.java
+END
+IRecordsRetentionMgmtManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/admin/IRecordsRetentionMgmtManager.java
+END
+IReimbursementAgreementMgmtManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/admin/IReimbursementAgreementMgmtManager.java
+END
+IStandardFormatMgmtManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/admin/IStandardFormatMgmtManager.java
+END
+IUserAnnouncementMgmtManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/admin/IUserAnnouncementMgmtManager.java
+END
+ISuretyNameMgmtManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/admin/ISuretyNameMgmtManager.java
+END
+IBlockBUCManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/admin/IBlockBUCManager.java
+END
+IPoleNameMgmtManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/admin/IPoleNameMgmtManager.java
+END
+ISwiftMessageMonitoringManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/admin/ISwiftMessageMonitoringManager.java
+END
+IAmendmentWorkflowMgmtManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/admin/IAmendmentWorkflowMgmtManager.java
+END

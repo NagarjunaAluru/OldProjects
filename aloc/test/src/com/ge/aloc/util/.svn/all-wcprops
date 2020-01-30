@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/util
+END
+AttachmentBOListTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/util/AttachmentBOListTest.java
+END
+ALOCCommonHelperTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/util/ALOCCommonHelperTest.java
+END
+AllUtilTests.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/util/AllUtilTests.java
+END
+JSONHelperTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/util/JSONHelperTest.java
+END
+SiteAdminHelperTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/util/SiteAdminHelperTest.java
+END
+DelegationConfigBOListTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/util/DelegationConfigBOListTest.java
+END

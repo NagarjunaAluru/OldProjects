@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+
+<struts>
+	<package name="linkTo" extends="struts-aloc-base" namespace="/int/linkto">
+		<action name="loadLinkTransactions" class="com.ge.aloc.action.LinkTransactionAction" method="loadLinkTransactions">
+			<result name="success">/jsp/common/linkTo.jsp</result>
+		</action>		
+		<action name="*Transaction" class="com.ge.aloc.action.LinkTransactionAction" method="{1}Transaction">
+			<result name="success" type="chain">
+				<param name="actionName">displayDashboard</param>
+				<param name="namespace">/int/dashboard</param>
+			</result>				
+		</action>	
+		<action name="addlinkTransactions" class="com.ge.aloc.action.LinkTransactionAction" method="linkTransaction">
+			<result name="success">/jsp/dashboard/common/requestForLinkTransaction.jsp</result>				
+		</action>	
+		<action name="loadlinkTransactions" class="com.ge.aloc.action.LinkTransactionAction" method="loadLinkTransactions">
+			<result name="success">/jsp/dashboard/common/requestForLinkTransaction.jsp</result>				
+		</action>		
+		<action name="trasactionsAdvanceSearch" class="com.ge.aloc.action.LinkTransactionAction" method="trasactionsAdvanceSearch">
+			<result name="success">/jsp/common/linkTo.jsp</result>
+			<param name="actionCode">4</param>
+		</action>				
+	</package>
+	
+	<package name="addOrCreateBundle" extends="struts-aloc-base" namespace="/int/bundle">		
+		<action name="loadBundleList" class="com.ge.aloc.action.CreateBundleAction" method="loadBundleList">
+			<result name="success">/jsp/dashboard/common/addToBundle.jsp</result>
+		</action>		
+		<action name="*Bundle" class="com.ge.aloc.action.CreateBundleAction" method="{1}Bundle">
+			<result name="modal">/jsp/dashboard/common/requestsForBundleModal.jsp</result>
+			<result name="success" type="chain">
+				<param name="actionName">displayBundleDashboard</param>
+			</result>
+		</action> 	
+		
+		<action name="displayBundleDashboard" class="commonDashboardAction" method="display">
+			<result name="success">/jsp/dashboard/baseDashboard.jsp</result>
+			<param name="dashboardViewType">BUNDLES</param> 
+		</action>
+	</package>
+</struts>

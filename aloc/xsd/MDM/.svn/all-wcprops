@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/MDM
+END
+UserDataResp.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/MDM/UserDataResp.xsd
+END
+IBSDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/MDM/IBSDetails.xsd
+END
+UserDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/MDM/UserDetails.xsd
+END
+RatesRequest.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/MDM/RatesRequest.xsd
+END
+UserDataReqst.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/MDM/UserDataReqst.xsd
+END
+MDM.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/MDM/MDM.xsd
+END

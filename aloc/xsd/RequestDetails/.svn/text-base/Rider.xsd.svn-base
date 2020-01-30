@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/Rider.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/Principal.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ALOC/RequestDetails/Obligee.xsd"
+	 xmlns:ns2="http://treasury.ge.com/schemas/ALOC/RequestDetails/RiderBondInformation.xsd"
+	 xmlns:ns3="http://treasury.ge.com/schemas/ALOC/RequestDetails/ExpiryDate.xsd"
+	 xmlns:ns4="http://treasury.ge.com/schemas/ALOC/RequestDetails/DeliveryInstructions.xsd"
+	 xmlns:ns5="http://treasury.ge.com/schemas/ALOC/RequestDetails/ALOCCommon.xsd"
+	 xmlns:ns6="http://treasury.ge.com/schemas/ALOC/RequestDetails/Attachments.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/Rider.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/Principal.xsd" schemaLocation="PrincipalDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/Obligee.xsd" schemaLocation="ObligeeAddress.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/RiderBondInformation.xsd" schemaLocation="RiderBondInformation.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/ExpiryDate.xsd" schemaLocation="ExpiryDate.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/DeliveryInstructions.xsd" schemaLocation="DeliveryInstructions.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/ALOCCommon.xsd" schemaLocation="ALOCCommon.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/Attachments.xsd" schemaLocation="Attachments.xsd"/>
+	<xs:complexType name="Rider">
+		<xs:sequence>
+			<xs:element name="Op_Code" type="xs:string" minOccurs="0"/>
+			<xs:element name="Request_Id" type="xs:integer" minOccurs="0"/>
+			<xs:element name="Bank_Reference_Number" type="xs:string" minOccurs="0"/>
+			<xs:element name="Rider_Request_Id" type="xs:string" minOccurs="0"/>
+			<xs:element name="Instrument_Type" type="xs:string" minOccurs="0"/>
+			<xs:element name="Instrument_Type_Id" type="xs:string" minOccurs="0"/>
+			<xs:element name="Trigger_Type" type="xs:string" minOccurs="0"/>
+			<xs:element ref="ns0:Principal" minOccurs="0"/>
+			<xs:element ref="ns1:Obligee" minOccurs="0"/>
+			<xs:element ref="ns3:ExpiryDate" minOccurs="0"/>
+			<xs:element ref="ns2:RiderBondInformation" minOccurs="0"/>
+			<xs:element ref="ns6:Attachment" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="ns4:DeliveryInstructions" minOccurs="0"/>
+			<xs:element ref="ns5:ActionDetails" minOccurs="0"/>
+			<xs:element name="Rider_Workflow_Amt" type="xs:decimal" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

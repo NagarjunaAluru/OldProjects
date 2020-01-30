@@ -1,0 +1,215 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin
+END
+poleNameMgmt.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/poleNameMgmt.jsp
+END
+swiftMessageSearchResult.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/swiftMessageSearchResult.jsp
+END
+recordsRetentionManagement.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/recordsRetentionManagement.jsp
+END
+changeRequestOwnership.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/changeRequestOwnership.jsp
+END
+poleNameReadOnlyRecord.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/poleNameReadOnlyRecord.jsp
+END
+reimbursementAgreementMgmt.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/reimbursementAgreementMgmt.jsp
+END
+recirdsRetentionFullAuditLog.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/recirdsRetentionFullAuditLog.jsp
+END
+treasuryAdminStdFormatMgmt.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/treasuryAdminStdFormatMgmt.jsp
+END
+amendmentWorkflowManagement.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/amendmentWorkflowManagement.jsp
+END
+recordsPurgeReport.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/recordsPurgeReport.jsp
+END
+selectNewRequestOwnership.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/selectNewRequestOwnership.jsp
+END
+treasuryAdminPortal.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/treasuryAdminPortal.jsp
+END
+unBlockBUCADN.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/unBlockBUCADN.jsp
+END
+suretyCompNameRecord.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/suretyCompNameRecord.jsp
+END
+amdWorkFlowMgmtAuditLog.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/amdWorkFlowMgmtAuditLog.jsp
+END
+userMgmtHyperlinks.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/userMgmtHyperlinks.jsp
+END
+blockBUCADNSelection.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/blockBUCADNSelection.jsp
+END
+FeeHistory.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/FeeHistory.jsp
+END
+blockBUCRecord.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/blockBUCRecord.jsp
+END
+swiftBasicSearch.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/swiftBasicSearch.jsp
+END
+blockBUC.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/blockBUC.jsp
+END
+userAnnouncementManagement.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/userAnnouncementManagement.jsp
+END
+suretyNameReadOnlyRecord.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/suretyNameReadOnlyRecord.jsp
+END
+feeHistorySummaryDet.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/feeHistorySummaryDet.jsp
+END
+poleNameRecord.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/poleNameRecord.jsp
+END
+userMgmtAttachments.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/userMgmtAttachments.jsp
+END
+suretyCompNameMgmt.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/suretyCompNameMgmt.jsp
+END
+basicSearchInFeeHistory.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/basicSearchInFeeHistory.jsp
+END
+userAnnouncementAttachment.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/userAnnouncementAttachment.jsp
+END
+treasuryAdminExitPopup.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/treasuryAdminExitPopup.jsp
+END
+swiftMessageMonitoring.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/swiftMessageMonitoring.jsp
+END
+reimbursementAgreement.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/reimbursementAgreement.jsp
+END
+activeAnnouncements.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/activeAnnouncements.jsp
+END
+ReimbursementAuditLog.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/ReimbursementAuditLog.jsp
+END
+recordsRetentionMgmtApprove.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/admin/recordsRetentionMgmtApprove.jsp
+END

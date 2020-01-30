@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/APM/FXRateHistory.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/APM/FeePeriodDetails.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ALOC/APM/GetFXRates.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/APM/FXRateHistory.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/APM/FeePeriodDetails.xsd" schemaLocation="FeePeriodDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/APM/GetFXRates.xsd" schemaLocation="GetFXRates.xsd"/>
+	<xs:element name="FXRateHistory">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="OpCode" type="xs:string" minOccurs="0"/>
+				<xs:element name="From_Year" type="xs:integer" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="To_Year" type="xs:integer" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns0:FeePeriodDetails" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns1:GetFXRates" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://www.tibco.com/schemas/ALOC/Resources/Schemas/Admin/BlockBusinessUnitCodeMaster.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 xmlns:ns1="http://www.tibco.com/schemas/ALOC/Resources/Schemas/Admin/BlockBusinessUnitCodeBank.xsd"
+	 targetNamespace="http://www.tibco.com/schemas/ALOC/Resources/Schemas/Admin/BlockBusinessUnitCodeMaster.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd" schemaLocation="../RequestDetails/MsgHeader.xsd"/>
+	<xs:import namespace="http://www.tibco.com/schemas/ALOC/Resources/Schemas/Admin/BlockBusinessUnitCodeBank.xsd" schemaLocation="BlockBusinessUnitCodeBank.xsd"/>
+	<xs:element name="BlockBusinessUnitCodeMaster">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Op_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="BlockBUCMasterId" type="xs:long" minOccurs="0"/>
+				<xs:element name="BlockBUCId" type="xs:long" minOccurs="0"/>
+				<xs:element name="BlockBUCName" type="xs:string" minOccurs="0"/>
+				<xs:element name="BlockBUC" type="xs:string" minOccurs="0"/>
+				<xs:element name="BlockBUCNotes" type="xs:string" minOccurs="0"/>
+				<xs:element name="BlockBUCDateBlocked" type="xs:string" minOccurs="0"/>
+				<xs:element name="BlockBUCBlockedbySSO" type="xs:string" minOccurs="0"/>
+				<xs:element name="BlockBUCFirstName" type="xs:string" minOccurs="0"/>
+				<xs:element name="BlockBUCLastName" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns0:Msg_Header"/>
+				<xs:element ref="ns1:BlockBusinessUnitCodeBank" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

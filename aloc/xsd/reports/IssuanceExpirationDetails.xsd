@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/Reports/IssuanceExpirationDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/Reports/IssuanceExpirationDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="IssuanceExpirationDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="IN_Exp_Start_Dt" type="xs:string" minOccurs="0"/>
+				<xs:element name="IN_Exp_End_Dt" type="xs:string" minOccurs="0"/>
+				<xs:element name="IN_Issuance_Start_Dt" type="xs:string" minOccurs="0"/>
+				<xs:element name="IN_Issuance_End_Dt" type="xs:string" minOccurs="0"/>
+				<xs:element name="IN_Instr_Amt_From" type="xs:string" minOccurs="0"/>
+				<xs:element name="IN_Instr_Amt_To" type="xs:string" minOccurs="0"/>
+				<xs:element name="IN_MOR_Bloomberg_Rate" type="xs:string" minOccurs="0"/>
+				<xs:element name="IN_User_SSO" type="xs:string" minOccurs="0"/>
+				<xs:element name="SiteID" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="ALOC_Record_Number" type="xs:string" minOccurs="0"/>
+				<xs:element name="Beneficiary_Obligee_Name" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Beneficiary_Obligee_Country" type="xs:string" minOccurs="0"/>
+				<xs:element name="Country_of_Issuance" type="xs:string" minOccurs="0"/>
+				<xs:element name="Applicant_Principal" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Thirdparty_Applicant" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Instrument_Currency" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instrument_Amount" type="xs:string" minOccurs="0"/>
+				<xs:element name="USD_Amount" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="FXRate_month_MOR" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuance_Date" type="xs:string" minOccurs="0"/>
+				<xs:element name="US_Expiration_Date" type="xs:string" minOccurs="0"/>
+				<xs:element name="Foreign_ExpDate" type="xs:string" minOccurs="0"/>
+				<xs:element name="Economic_ExpDate" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuer" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuing_Bank_Branch" type="xs:string" minOccurs="0"/>
+				<xs:element name="Current_Contact_Name_SSO" type="xs:string" minOccurs="0"/>
+				<xs:element name="Current_Contact_SSO" type="xs:string" minOccurs="0"/>
+				<xs:element name="Requestor" type="xs:string" minOccurs="0"/>
+				<xs:element name="Requestor_SSO" type="xs:string" minOccurs="0"/>
+				<xs:element name="GE_Reference" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instrument_Type" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Instrument_Purpose" type="xs:string" minOccurs="0"/>
+				<xs:element name="SiteType" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="BUC" type="xs:string" minOccurs="0"/>
+				<xs:element name="A.D.N" type="xs:string" minOccurs="0"/>
+				<xs:element name="CurrentContact" type="xs:string" minOccurs="0"/>
+				<xs:element name="IssuerReference" type="xs:string" minOccurs="0"/>
+				<xs:element name="In_Cust_Ref" type="xs:string" minOccurs="0"/>
+                                   <xs:element name="INMORBLOOMBERGFLAG" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

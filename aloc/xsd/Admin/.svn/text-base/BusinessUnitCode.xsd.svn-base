@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/Admin/BusinessUnitCode.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/Admin/BusinessUnitCode.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd" schemaLocation="../RequestDetails/MsgHeader.xsd"/>
+	<xs:element name="BusinessUnitCode">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Block_BUC_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="BUC" type="xs:string" minOccurs="0"/>
+				<xs:element name="ADN" type="xs:string" minOccurs="0"/>
+				<xs:element name="Notes" type="xs:string" minOccurs="0"/>
+				<xs:element name="Date_Blocked" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Blocked_By_Sso" type="xs:string" minOccurs="0"/>
+				<xs:element name="Blocked_By_First_Nm" type="xs:string" minOccurs="0"/>
+				<xs:element name="Blocked_By_Last_Nm" type="xs:string" minOccurs="0"/>
+				<xs:element name="Blocked_By_Phone" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns0:Msg_Header" minOccurs="0"/>
+				<xs:element name="BUC_Opcode" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

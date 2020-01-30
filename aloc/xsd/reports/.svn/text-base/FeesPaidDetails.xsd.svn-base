@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/Reports/FeesPaidDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/Reports/FeesPaidDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="FeesPaidDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Payment_Start_Dt" type="xs:string" minOccurs="0"/>
+				<xs:element name="Payment_End_Dt" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuance_Start_Dt" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuance_End_Dt" type="xs:string" minOccurs="0"/>
+				<xs:element name="App_Princpl_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Geref1" type="xs:string" minOccurs="0"/>
+				<xs:element name="Cntry_Issue" type="xs:string" minOccurs="0"/>
+				<xs:element name="Gb_Issuer" type="xs:string" minOccurs="0"/>
+				<xs:element name="Gb_Business_Site" type="xs:string" minOccurs="0"/>
+				<xs:element name="Gb_Cntry_Issue" type="xs:string" minOccurs="0"/>
+				<xs:element name="Gb_Applicant" type="xs:string" minOccurs="0"/>
+				<xs:element name="Gb_Geref1" type="xs:string" minOccurs="0"/>
+				<xs:element name="Gb_Bank_Ref" type="xs:string" minOccurs="0"/>
+				<xs:element name="Mor_Rate" type="xs:string" minOccurs="0"/>
+				<xs:element name="FeesPaid_User_SSO" type="xs:string" minOccurs="0"/>
+				<xs:element name="ALOC_Record_Number" type="xs:string" minOccurs="0"/>
+				<xs:element name="GE_Reference" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank_Reference_Number" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuer" type="xs:string" minOccurs="0"/>
+				<xs:element name="Amount_Of_Fee" type="xs:string" minOccurs="0"/>
+				<xs:element name="Country_Of_Issuance" type="xs:string" minOccurs="0"/>
+				<xs:element name="Fee_Currency" type="xs:string" minOccurs="0"/>
+				<xs:element name="USD_Equins_Amount" type="xs:string" minOccurs="0"/>
+				<xs:element name="USD_Equivalent_Amount" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Business_Site" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Issuance_Date" type="xs:string" minOccurs="0"/>
+				<xs:element name="Payment_Date" type="xs:string" minOccurs="0"/>
+				<xs:element name="Payment_ID" type="xs:string" minOccurs="0"/>
+				<xs:element name="US_PA_Arrears_BPS_Fee" type="xs:string" minOccurs="0"/>
+				<xs:element name="US_PA_In_Advance" type="xs:string" minOccurs="0"/>
+				<xs:element name="US_Flat_Fee_PA_In_Advance" type="xs:string" minOccurs="0"/>
+				<xs:element name="US_Flat_Fee_Life_In_Advance" type="xs:string" minOccurs="0"/>
+				<xs:element name="Foreign_Rate_PA_Arrears" type="xs:string" minOccurs="0"/>
+				<xs:element name="Foreign_Rate_PA_In_Advance" type="xs:string" minOccurs="0"/>
+				<xs:element name="Foreign_Flat_Fee_PA_In_Advance" type="xs:string" minOccurs="0"/>
+				<xs:element name="Foreign_Flat_Fee_Life_In_Advance" type="xs:string" minOccurs="0"/>
+				<xs:element name="US_Amendment_Fees" type="xs:string" minOccurs="0"/>
+				<xs:element name="Foreign_Amendment_Fees" type="xs:string" minOccurs="0"/>
+				<xs:element name="Other_Fees" type="xs:string" minOccurs="0"/>
+                                      <xs:element name="Requestor_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Requestor_Sso" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

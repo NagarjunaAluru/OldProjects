@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/WFDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/WFDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="WFDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="WF_ID" type="xs:string" minOccurs="0"/>
+				<xs:element name="Queue_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="WF_Stage" type="xs:string" minOccurs="0"/>
+				<xs:element name="Procedure_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="WF_Stage_ID" type="xs:integer" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

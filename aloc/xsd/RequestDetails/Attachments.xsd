@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/Attachments.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/Attachments.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="Attachment">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Op_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="Attachment_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Attachment_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Attachment_Original_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Attachment_Type_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Attachment_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Action_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Ge_Library_Reference" type="xs:string" minOccurs="0"/>
+				<xs:element name="Attached_By_SSOID" type="xs:string" minOccurs="0"/>
+				<xs:element name="Ge_File_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Ge_Folder_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Delete_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+				<xs:element name="Amendment_Details_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element ref="AttachmentPermission" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Requires_Edits" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Send_Back_Notes" type="xs:string" minOccurs="0"/>
+				<xs:element name="Wf_Stage_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Wf_Stage_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Attachment_Desc" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuance_Doc_Type_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Issuance_Doc_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuance_Bank_Ref_No" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuance_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Issuance_Desc" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuance_Document" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuance_Doc_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="APM_Config_Id" type="xs:integer" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="AttachmentCollection">
+		<xs:sequence>
+			<xs:element ref="Attachment" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="AttachmentPermission">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Permission_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Permission_Name" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

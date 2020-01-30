@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/Admin/RequestorLookUp.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/Admin/RequestorLookUp.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="RequestorLookUp">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Requestor_Lookup_Details" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="Requestor_Field" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Requestor_Lookup_Details">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Requestor_Lookup_Sso" type="xs:string" minOccurs="0"/>
+				<xs:element name="Requestor_Lookup_First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Requestor_Lookup_Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Requestor_Lookup_Email_Address" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

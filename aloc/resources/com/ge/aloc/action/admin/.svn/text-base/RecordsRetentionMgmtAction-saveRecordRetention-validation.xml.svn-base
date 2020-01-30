@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<field name="recordRetention.yearsAfterExpiry">
+		<field-validator type="required" short-circuit="true">
+            <message key="error.required.recordsRetentionMgmt.expirationDateForPurge" />
+        </field-validator>
+        <field-validator type="int" short-circuit="false">
+            <param name="min">1</param>
+            <param name="max">100</param>
+            <message key="error.required.recordsRetentionMgmt.expirationDateForPurgeRange" />
+        </field-validator>
+	</field>
+	
+	<field name="recordRetention.scheduleFrequencyFlag">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[((recordRetention.scheduleFrequencyFlag) == true) || ((recordRetention.scheduleFrequencyFlag) == false)]]>
+			</param>
+			<message key="error.required.recordsRetentionMgmt.scheduleFrequency" />
+		</field-validator>
+	</field>
+	
+	<field name="recordRetention.scheduleFrequencyID">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[(recordRetention.scheduleFrequencyFlag != true) || (recordRetention.scheduleFrequencyID  !="" && recordRetention.scheduleFrequencyID !=null )]]>
+			</param>
+			<message key="error.required.recordsRetentionMgmt.recurringScheduleFrequency" />
+		</field-validator>
+	</field>
+	
+	<field name="recordRetention.oneTimeRunDate">
+		<field-validator type="fieldexpression" short-circuit="true">
+				<param name="expression"><![CDATA[(recordRetention.scheduleFrequencyFlag  != false || (recordRetention.oneTimeRunDate!=null))]]></param>
+		      	<message key="error.required.recordsRetentionMgmt.oneTimeRunDate" />
+	      	</field-validator>
+	      	
+	      	<field-validator type="fieldexpression">
+				<param name="expression"><![CDATA[(recordRetention.scheduleFrequencyFlag != false) || ((recordRetention.oneTimeRunDate).compareTo(@com.ge.aloc.util.ALOCCommonHelper@getCurrentDateWithOutTime()) != -1)]]></param>
+		      	<message key="error.required.recordsRetentionMgmt.oneTimeRunDateValid" />
+	      	</field-validator>
+	</field>
+	
+</validators>

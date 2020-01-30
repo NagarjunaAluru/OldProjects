@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/GetFeeHistoryDetails.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/FeeHistory.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/GetFeeHistoryDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/FeeHistory.xsd" schemaLocation="FeeHistory.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd" schemaLocation="MsgHeader.xsd"/>
+	<xs:element name="GetFeeHistoryDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ns0:FeeHistory" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Request_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element ref="ns1:Msg_Header" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/Inbox.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/RequestDetails.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ALOC/RequestDetails/GlanceDetails.xsd"
+	 xmlns:ns2="http://treasury.ge.com/schemas/ALOC/RequestDetails/UserInfo.xsd"
+	 xmlns:ns3="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 xmlns:ns4="http://treasury.ge.com/schemas/ALOC/RequestDetails/BidProcess.xsd"
+	 xmlns:ns5="http://treasury.ge.com/schemas/ALOC/RequestDetails/DashBoard.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/Inbox.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/RequestDetails.xsd" schemaLocation="RequestDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/GlanceDetails.xsd" schemaLocation="GlanceDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/UserInfo.xsd" schemaLocation="UserInfo.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd" schemaLocation="MsgHeader.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/BidProcess.xsd" schemaLocation="BidProcess.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/DashBoard.xsd" schemaLocation="DashBoard.xsd"/>
+	<xs:element name="Inbox">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="MyTransactions" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="ns5:DashBoard" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="AllRequests" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="ns5:DashBoard" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Drafts" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="ns5:DashBoard" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Models" type="ns0:RequestDetailsCollectionType" minOccurs="0"/>
+				<xs:element name="Bundle" type="ns0:RequestDetailsCollectionType" minOccurs="0"/>
+				<xs:element ref="ns1:GlanceDetails" minOccurs="0"/>
+				<xs:element ref="ns2:User_Info" minOccurs="0"/>
+				<xs:element ref="ns3:Msg_Header" minOccurs="0"/>
+				<xs:element name="Default_View" type="xs:string" minOccurs="0"/>
+				<xs:element name="BankBidProcess" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="ns4:BidProcess" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="TreasuryBidProcess" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="ns4:BidProcess" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="PendingIssuance" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="ns5:DashBoard" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="HistroricalTransactions" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="ns5:DashBoard" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="InboxUserAnnouncements" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Role_Id" type="xs:int" minOccurs="0"/>
+							<xs:element name="User_Sso" type="xs:string" minOccurs="0"/>
+							<xs:element name="User_Announcement_Id" type="xs:int" minOccurs="0"/>
+							<xs:element name="Message" type="xs:string" minOccurs="0"/>
+							<xs:element name="Ge_Library_Reference" type="xs:string" minOccurs="0"/>
+							<xs:element name="Ge_File_Id" type="xs:string" minOccurs="0"/>
+							<xs:element name="Ge_Folder_Id" type="xs:string" minOccurs="0"/>
+							<xs:element name="Attachment_Id" type="xs:int" minOccurs="0"/>
+							<xs:element name="Attachment_Name" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DashBoardTabsCount" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="My_Trans_Count" type="xs:integer" minOccurs="0"/>
+							<xs:element name="All_Requests_Count" type="xs:integer" minOccurs="0"/>
+							<xs:element name="Treas_Bid_Proc_Count" type="xs:integer" minOccurs="0"/>
+							<xs:element name="Drafts_Count" type="xs:integer" minOccurs="0"/>
+							<xs:element name="Bundles_Count" type="xs:integer" minOccurs="0"/>
+							<xs:element name="Models_Count" type="xs:integer" minOccurs="0"/>
+							<xs:element name="Bank_Bid_Proc_Count" type="xs:integer" minOccurs="0"/>
+							<xs:element name="Bank_Pending_Issuance_Count" type="xs:integer" minOccurs="0"/>
+							<xs:element name="Bank_Hist_Trans_Count" type="xs:integer" minOccurs="0"/>
+							<xs:element name="Broker_Bid_Proc_Count" type="xs:integer" minOccurs="0"/>
+							<xs:element name="Broker_Pending_Issuance_Count" type="xs:integer" minOccurs="0"/>
+							<xs:element name="Broker_Hist_Trans_Count" type="xs:integer" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/dao/apm
+END
+IAPMDetailsDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/dao/apm/IAPMDetailsDAO.java
+END
+IFeeHistoryDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/dao/apm/IFeeHistoryDAO.java
+END

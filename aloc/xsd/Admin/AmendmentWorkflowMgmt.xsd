@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/Admin/AmendmentWorkflowMgmt.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ALOC/RequestDetails/AuditLog.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/Admin/AmendmentWorkflowMgmt.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd" schemaLocation="../RequestDetails/MsgHeader.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/AuditLog.xsd" schemaLocation="../RequestDetails/AuditLog.xsd"/>
+	<xs:element name="AmendmentWorkflowMgmt">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Op_Code" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns0:Msg_Header" minOccurs="0"/>
+				<xs:element name="Amendment_Amount" type="xs:decimal" minOccurs="0"/>
+				<xs:element ref="ns1:Audit_Log" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

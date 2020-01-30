@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/Principal.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ALOC/RequestDetails/AddressDetails.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/ALOCCommon.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/Principal.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/AddressDetails.xsd" schemaLocation="AddressDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/ALOCCommon.xsd" schemaLocation="ALOCCommon.xsd"/>
+	<xs:element name="Principal">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Op_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="Le_Gold_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Le_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Principle_Info_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Ge_Division_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Ge_Division_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="AddressDtls" type="ns1:AddressDtlsType" minOccurs="0"/>
+				<xs:element name="Province_Of_Incorporation" type="xs:string" minOccurs="0"/>
+				<xs:element name="Business_Id" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns0:Ref_Details" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Principal_Bu_Unite_cd" type="xs:string" minOccurs="0"/>
+				<xs:element name="Principal_Acc_Dist_No" type="xs:string" minOccurs="0"/>
+				<xs:element name="IBS_Syst_Msg" type="xs:string" minOccurs="0"/>
+				<xs:element name="IBS_Msg_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="IBS_User_Sso" type="xs:string" minOccurs="0"/>
+				<xs:element name="IBS_First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="IBS_Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="IBS_Phone_No" type="xs:string" minOccurs="0"/>
+				<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+				<xs:element name="Requires_Edits" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Send_Back_Notes" type="xs:string" minOccurs="0"/>
+				<xs:element name="Change_Flag" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

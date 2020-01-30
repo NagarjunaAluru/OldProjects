@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/APM/CreditAndCarryOverReport.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/APM/CreditAndCarryOverReport.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="CreditAndCarryOverReport">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Bank_MDM_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="ALOC_Record_Number" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Site_Prefix" type="xs:string" minOccurs="0"/>
+				<xs:element name="Credit_Amount" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Carry_Over_Amount" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Aloc_Record_Id" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

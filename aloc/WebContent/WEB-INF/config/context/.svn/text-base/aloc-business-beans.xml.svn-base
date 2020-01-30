@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"	
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd	
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-2.5.xsd
+	http://www.springframework.org/schema/util 
+	http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+	
+	<context:property-placeholder location="classpath:/aloc.properties"/>
+	
+	<!--  DAO Declarations -->
+	<bean id="requestDetailsDAO" class="com.ge.aloc.dao.impl.RequestDetailsDAO">
+		<property name="serviceClient" ref="applicationServiceClient" />
+	</bean>
+	
+	<bean id="requestDetailsSectionDAO" class="com.ge.aloc.dao.impl.RequestDetailsSectionDAO">
+		<property name="serviceClient" ref="applicationServiceClient" />
+	</bean>
+	<bean id="siteDetailsDAO" class="com.ge.aloc.dao.impl.SiteDetailsDAO">
+		<property name="serviceClient" ref="applicationServiceClient" />
+	</bean>
+	
+	<bean id="blockBUCDAO" class="com.ge.aloc.dao.impl.admin.BlockBUCDAO">
+		<property name="serviceClient" ref="applicationServiceClient" />
+	</bean>
+
+	<bean id="lookupDAO" class="com.ge.aloc.dao.impl.LookupDAO">
+		<property name="serviceClient" ref="applicationServiceClient" />
+	</bean>
+	
+	<bean id="referenceDataDAO" class="com.ge.aloc.dao.impl.ReferenceDataDAO">
+		<property name="serviceClient" ref="applicationServiceClient" />
+	</bean>
+	
+	<bean id="dashboardRefDataDAO" class="com.ge.aloc.dao.impl.dashboard.DashboardRefDataDAO">
+		<property name="serviceClient" ref="applicationServiceClient" />
+	</bean>
+	
+	<bean id="linkTransactionDAO" class="com.ge.aloc.dao.impl.LinkTransactionDAO">
+		<property name="serviceClient" ref="applicationServiceClient" />
+	</bean>
+	
+	<bean id="createBundleDAO" class="com.ge.aloc.dao.impl.CreateBundleDAO">
+		<property name="serviceClient" ref="applicationServiceClient" />
+	</bean>
+	
+	<bean id="suretyNameMgmtDAO" class="com.ge.aloc.dao.impl.admin.SuretyNameMgmtDAO">
+		<property name="serviceClient" ref="applicationServiceClient" />
+	</bean>
+	
+	<bean id="poleNameMgmtDAO" class="com.ge.aloc.dao.impl.admin.PoleNameMgmtDAO">
+		<property name="serviceClient" ref="applicationServiceClient" />
+	</bean>
+	
+	<bean id="feeHistoryDAO" class="com.ge.aloc.dao.impl.apm.FeeHistoryDAO">
+		<property name="serviceClient" ref="applicationServiceClient" />
+	</bean>
+	<bean id="standardFormatMgmtDAO" class="com.ge.aloc.dao.impl.admin.StandardFormatMgmtDAO">
+		<property name="serviceClient" ref="applicationServiceClient" />
+	</bean>	
+	
+	<bean id="reimbursementAgreementMgmtDAO" class="com.ge.aloc.dao.impl.admin.ReimbursementAgreementMgmtDAO">
+		<property name="serviceClient" ref="applicationServiceClient" />
+	</bean>	
+	
+	<bean id="apmDetailsDAO" class="com.ge.aloc.dao.impl.apm.APMDetailsDAO">
+		<property name="serviceClient" ref="applicationServiceClient" />
+	</bean>
+	
+	<bean id="userAnnouncementMgmtDAO" class="com.ge.aloc.dao.impl.admin.UserAnnouncementMgmtDAO">
+		<property name="serviceClient" ref="applicationServiceClient" />
+	</bean>
+	
+	<bean id="recordRetentionMgmtDAO" class="com.ge.aloc.dao.impl.admin.RecordsRetentionMgmtDAO">
+		<property name="serviceClient" ref="applicationServiceClient" />
+	</bean>
+	
+	<bean id="amendmentWorkflowMgmtDAO" class="com.ge.aloc.dao.impl.admin.AmendmentWorkflowMgmtDAO">
+		<property name="serviceClient" ref="applicationServiceClient" />
+	</bean>
+	
+	<bean id="swiftMessageMonitoringDAO" class="com.ge.aloc.dao.impl.admin.SwiftMessageMonitoringDAO">
+		<property name="serviceClient" ref="applicationServiceClient" />
+	</bean>
+	
+	<bean id="changeRequestOwnershipDAO" class="com.ge.aloc.dao.impl.admin.ChangeRequestOwnershipDAO">
+		<property name="serviceClient" ref="applicationServiceClient" />
+	</bean>
+	
+	<!-- =================== Common Dashboard DAO ==================== -->
+	<bean id="commonDashboardDAO" class="com.ge.aloc.dao.impl.dashboard.DashboardDAO">
+		<property name="serviceClient" ref="applicationServiceClient" />
+	</bean>
+	
+	<bean id="searchDAO" class="com.ge.aloc.dao.impl.SearchDAO">
+		<property name="serviceClient" ref="applicationServiceClient" />
+	</bean>
+	
+	<!-- =================== Home Page DAO ==================== -->
+	<bean id="homePageDAO" class="com.ge.aloc.dao.impl.common.HomePageDAO">
+		<property name="serviceClient" ref="applicationServiceClient" />
+	</bean>
+	
+	<!-- ############################### Manager Declarations ###############################-->
+	<bean id="requestDetailsManager" class="com.ge.aloc.manager.impl.RequestDetailsManager">
+		<property name="requestDetailsDAO" ref="requestDetailsDAO" />
+	</bean>
+	
+	<bean id="requestDetailsSectionManager" class="com.ge.aloc.manager.impl.RequestDetailsSectionManager">
+		<property name="requestDetailsSectionDAO" ref="requestDetailsSectionDAO" /> 
+		<property name="alocAttachmentManager" ref="alocAttachmentManager" />
+	</bean>
+	
+	<bean id="siteDetailsManager" class="com.ge.aloc.manager.impl.SiteDetailsManager">
+		<property name="siteDetailsDAO" ref="siteDetailsDAO" />
+	</bean>	
+	
+	<bean id="blockBUCManager" class="com.ge.aloc.manager.impl.admin.BlockBUCManager">
+		<property name="blockBUCDAO" ref="blockBUCDAO" />
+	</bean>
+	
+	<bean id="lookupManager" class="com.ge.aloc.manager.impl.LookupManager">
+		<property name="lookupDAO" ref="lookupDAO" />
+	</bean>
+	
+	<bean id="amendmentWorkflowManager" class="com.ge.aloc.manager.impl.admin.AmendmentWorkflowMgmtManager">
+		<property name="amendmentWorkflowMgmtDAO" ref="amendmentWorkflowMgmtDAO" />
+	</bean>
+	
+	<bean id="changeRequestOwnershipManager" class="com.ge.aloc.manager.impl.admin.ChangeRequestOwnershipManager">
+		<property name="changeRequestOwnershipDAO" ref="changeRequestOwnershipDAO" />
+	</bean>
+	
+	<bean id="alocAttachmentManager" class="com.ge.aloc.manager.impl.ALOCAttachmentManager">
+		<property name="attachmentManager" ref="attachmentManager" />
+		<property name="repositoryRootFolderId" value="${aloc.gelib.defaultFolderId}"/>		
+	</bean>
+	
+	<bean id="referenceDataManager" class="com.ge.aloc.manager.impl.ReferenceDataManager">
+		<property name="referenceDataDAO" ref="referenceDataDAO" />
+	</bean>
+	
+	<bean id="dashboardRefDataManager" class="com.ge.aloc.manager.impl.dashboard.DashboardRefDataManager">
+		<property name="dashboardRefDataDAO" ref="dashboardRefDataDAO" />
+	</bean>
+	
+	<bean id="linkTransactionManager" class="com.ge.aloc.manager.impl.LinkTransactionManager">
+		<property name="linkTransactionDAO" ref="linkTransactionDAO" />
+	</bean>
+	
+	<bean id="createBundleManager" class="com.ge.aloc.manager.impl.CreateBundleManager">
+		<property name="createBundleDAO" ref="createBundleDAO" />
+	</bean>
+	
+	<bean id="suretyNameManager" class="com.ge.aloc.manager.impl.admin.SuretyNameMgmtManager">
+		<property name="suretyNameMgmtDAO" ref="suretyNameMgmtDAO" />
+	</bean>
+	
+	<bean id="poleNameManager" class="com.ge.aloc.manager.impl.admin.PoleNameMgmtManager">
+		<property name="poleNameMgmtDAO" ref="poleNameMgmtDAO" />
+	</bean>
+	
+	<bean id="feeHistoryManager" class="com.ge.aloc.manager.impl.apm.FeeHistoryManager">
+		<property name="feeHistoryDAO" ref="feeHistoryDAO" />
+	</bean>
+
+	<bean id="standardFormatMgmtManager" class="com.ge.aloc.manager.impl.admin.StandardFormatMgmtManager">
+		<property name="standardFormatMgmtDAO" ref="standardFormatMgmtDAO" />
+	</bean>
+	
+	<bean id="reimbursementAgreementMgmtManager" class="com.ge.aloc.manager.impl.admin.ReimbursementAgreementMgmtManager">
+		<property name="reimbursementAgreementMgmtDAO" ref="reimbursementAgreementMgmtDAO" />
+	</bean>
+	
+	<bean id="apmDetailsManager" class="com.ge.aloc.manager.impl.apm.APMDetailsManager">
+		<property name="alocAttachmentManager" ref="alocAttachmentManager" />	
+		<property name="apmDetailsDAO" ref="apmDetailsDAO" />
+	</bean>
+	
+	<bean id="userAnnouncementMgmtManager" class="com.ge.aloc.manager.impl.admin.UserAnnouncementMgmtManager">
+		<property name="userAnnouncementMgmtDAO" ref="userAnnouncementMgmtDAO" />
+		<property name="alocAttachmentManager" ref="alocAttachmentManager" />
+	</bean>	
+	
+	<bean id="recordsRetentionManager" class="com.ge.aloc.manager.impl.admin.RecordsRetentionMgmtManager">
+		<property name="recordRetentionMgmtDAO" ref="recordRetentionMgmtDAO" />
+	</bean>	
+	
+	<bean id="swiftMessageMonitoringManager" class="com.ge.aloc.manager.impl.admin.SwiftMessageMonitoringManager">
+		<property name="swiftMessageMonitoringDAO" ref="swiftMessageMonitoringDAO" />
+	</bean>
+	
+	
+	<!-- ============== Reports DAO ==========================  -->
+	<bean id="reportsDAO" class="com.ge.aloc.dao.impl.reports.ReportsDAO">
+		<property name="serviceClient" ref="applicationServiceClient" />
+	</bean>
+	
+	<!-- ================ Ad-hoc DAO ============================= -->
+	<bean id="adhocDAO" class="com.ge.aloc.dao.impl.reports.AdhocDAO">
+		<property name="serviceClient" ref="applicationServiceClient" />
+	</bean>
+	
+	<!-- =================== Reports =============================== -->
+	
+	<bean id="reportsManager" class="com.ge.aloc.manager.impl.ReportsManager">
+		<property name="reportsDAO" ref="reportsDAO"></property>
+	</bean>
+	
+	<bean id="adhocReportFieldMngr" class="com.ge.aloc.reports.adhoc.FieldManager" init-method="init" />
+	<bean id="adhocReportManager" class="com.ge.aloc.manager.impl.AdhocReportManager">
+		<property name="adhocDAO" ref="adhocDAO"></property>
+	</bean>
+		
+	<!-- =================== Common Dashboard ==================== -->
+	<bean id="dashboardManager" class="com.ge.aloc.manager.impl.dashboard.DefaultDashboardManager">
+		<property name="commonDashboardDAO" ref="commonDashboardDAO" />
+	</bean>
+	
+	<bean id="searchManager" class="com.ge.aloc.manager.impl.SearchManager">
+		<property name="searchDAO" ref="searchDAO" />
+	</bean>
+
+	<!-- ===================== Home Page Manager ======================== -->
+	<bean id="homePageManager" class="com.ge.aloc.manager.impl.common.HomePageManager">
+		<property name="homePageDAO" ref="homePageDAO" />
+	</bean>
+	<!-- ===================== Validate Amendment Rider Manager and DAO ======================== -->
+	<bean id="validateAmendmentRiderManager" class="com.ge.aloc.manager.impl.common.ValidateAmendmentRiderManager">
+		<property name="validateAmendmentRiderDAO" ref="validateAmendmentRiderDAO" />
+	</bean> 
+	<bean id="validateAmendmentRiderDAO" class="com.ge.aloc.dao.impl.common.ValidateAmendmentRiderDAO">
+		<property name="serviceClient" ref="applicationServiceClient" />
+	</bean>
+	<!-- ===================== Validate Close Transaction Manager and DAO ======================== -->
+	<bean id="validateCloseTransactionManager" class="com.ge.aloc.manager.impl.common.ValidateCloseTransactionManager">
+		<property name="validateCloseTransactionDAO" ref="validateCloseTransactionDAO" />
+	</bean> 
+	<bean id="validateCloseTransactionDAO" class="com.ge.aloc.dao.impl.common.ValidateCloseTransactionDAO">
+		<property name="serviceClient" ref="applicationServiceClient" />
+	</bean>
+	
+	<!-- Lookup Factories  -->
+	<bean id="staticDataFactory" class="com.ge.aloc.StaticDataFactory">
+		<property name="lookupDAO" ref="lookupDAO" />
+		<property name="referenceDataManager" ref="referenceDataManager" />
+	</bean>
+	
+	<bean id="masterDataFactory" class="com.ge.aloc.MasterDataFactory">
+		<property name="lookupDAO" ref="lookupDAO" />
+	</bean>
+
+	<bean class="org.springframework.web.context.support.ServletContextAttributeExporter">
+		<property name="attributes">
+			<map>
+				<entry key="com.ge.aloc.StaticDataFactory">
+					<ref bean="staticDataFactory" />
+				</entry>
+				<entry key="com.ge.aloc.MasterDataFactory">
+					<ref bean="masterDataFactory" />
+				</entry>
+			</map>
+		</property>
+	</bean> 
+</beans>
+

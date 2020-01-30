@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc
+END
+SiteTypeTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/SiteTypeTest.java
+END
+StaticDataFactoryTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/StaticDataFactoryTest.java
+END
+OpCodeTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/OpCodeTest.java
+END
+InstrumentTypeTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/InstrumentTypeTest.java
+END
+GoveringRuleTypeTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/GoveringRuleTypeTest.java
+END
+RequestDetailsBOSupportTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/RequestDetailsBOSupportTest.java
+END
+MasterDataFactoryTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/MasterDataFactoryTest.java
+END
+ActionTypeTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/ActionTypeTest.java
+END
+ALOCContextTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/ALOCContextTest.java
+END
+DashboardViewTypeTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/DashboardViewTypeTest.java
+END
+AddressTypeTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/AddressTypeTest.java
+END
+RequestDetailsData.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/RequestDetailsData.java
+END
+AttachmentTypeTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/AttachmentTypeTest.java
+END
+AllTests.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/AllTests.java
+END
+AtmtPermTypeTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/AtmtPermTypeTest.java
+END
+WorkflowStageTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/WorkflowStageTest.java
+END

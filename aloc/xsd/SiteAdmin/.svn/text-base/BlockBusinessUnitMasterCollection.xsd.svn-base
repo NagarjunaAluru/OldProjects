@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://www.tibco.com/schemas/ALOC/Resources/Schemas/Admin/BlockBusinessUnitMasterCollection.xsd"
+	 xmlns:ns0="http://www.tibco.com/schemas/ALOC/Resources/Schemas/Admin/BlockBusinessUnitCodeMaster.xsd"
+	 targetNamespace="http://www.tibco.com/schemas/ALOC/Resources/Schemas/Admin/BlockBusinessUnitMasterCollection.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.tibco.com/schemas/ALOC/Resources/Schemas/Admin/BlockBusinessUnitCodeMaster.xsd" schemaLocation="BlockBusinessUnitCodeMaster.xsd"/>
+	<xs:element name="BlockBusinessUnitMasterCollection">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ns0:BlockBusinessUnitCodeMaster" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

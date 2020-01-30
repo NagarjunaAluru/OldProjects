@@ -1,0 +1,1589 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model
+END
+ShipmentOrigin.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ShipmentOrigin.java
+END
+PricingDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/PricingDetails.java
+END
+FeeProjectionDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/FeeProjectionDetails.java
+END
+ContactUs.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ContactUs.java
+END
+DeliveryInstructions.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/DeliveryInstructions.java
+END
+TreasuryGroupApprover.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/TreasuryGroupApprover.java
+END
+BankFeePaymentSetup.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BankFeePaymentSetup.java
+END
+MsgHeaderInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/MsgHeaderInfo.java
+END
+ParentSite.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ParentSite.java
+END
+EASDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/EASDetails.java
+END
+Reimbursement.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/Reimbursement.java
+END
+ApplicantDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ApplicantDetails.java
+END
+RefDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/RefDetails.java
+END
+GCFODetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/GCFODetails.java
+END
+Filter.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/Filter.java
+END
+CompetingBankDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/CompetingBankDetails.java
+END
+FeeHistoryDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/FeeHistoryDetails.java
+END
+BankSwift.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BankSwift.java
+END
+SearchInstrDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/SearchInstrDetails.java
+END
+BlockBusinessUnitCodeBank.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BlockBusinessUnitCodeBank.java
+END
+ObjectFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ObjectFactory.java
+END
+BlockBusinessUnitMasterCollection.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BlockBusinessUnitMasterCollection.java
+END
+PostBidReplyFeeAdjustment.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/PostBidReplyFeeAdjustment.java
+END
+BlockBusinessUnitCodeMaster.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BlockBusinessUnitCodeMaster.java
+END
+AmendmentDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/AmendmentDetails.java
+END
+BankSWIFTConfiguration.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BankSWIFTConfiguration.java
+END
+BuApprover.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BuApprover.java
+END
+BeneficiaryDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BeneficiaryDetails.java
+END
+ApproverLevel.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ApproverLevel.java
+END
+ReimburseList.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ReimburseList.java
+END
+ApprovalGroupConfiguration.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ApprovalGroupConfiguration.java
+END
+GlanceDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/GlanceDetails.java
+END
+BankFeeDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BankFeeDetails.java
+END
+AttachmentPermission.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/AttachmentPermission.java
+END
+AuditLog.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/AuditLog.java
+END
+GetFXRates.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/GetFXRates.java
+END
+TpBuContactPerson.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/TpBuContactPerson.java
+END
+ReferenceNumberValidation.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ReferenceNumberValidation.java
+END
+SBLC.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/SBLC.java
+END
+package-info.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/package-info.java
+END
+Attachment.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/Attachment.java
+END
+Requestor.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/Requestor.java
+END
+TransactionDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/TransactionDetails.java
+END
+AgingDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/AgingDetails.java
+END
+ConfirmationFees.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ConfirmationFees.java
+END
+PoleNameList.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/PoleNameList.java
+END
+Group.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/Group.java
+END
+PoleNameManagement.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/PoleNameManagement.java
+END
+PublishedReports.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/PublishedReports.java
+END
+ActRoleSelection.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ActRoleSelection.java
+END
+OtherFee.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/OtherFee.java
+END
+SwiftMonitoring.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/SwiftMonitoring.java
+END
+AlocUserData.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/AlocUserData.java
+END
+BankPayment.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BankPayment.java
+END
+ParticipantBank.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ParticipantBank.java
+END
+IssuingBank.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/IssuingBank.java
+END
+RiderBondInformation.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/RiderBondInformation.java
+END
+SiteAdminStaticData.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/SiteAdminStaticData.java
+END
+PreAgreedPricingDetailsType.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/PreAgreedPricingDetailsType.java
+END
+SuretyMasterCollection.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/SuretyMasterCollection.java
+END
+RequestorLookUp.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/RequestorLookUp.java
+END
+PoleCountry.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/PoleCountry.java
+END
+APMDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/APMDetails.java
+END
+EntityCollection.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/EntityCollection.java
+END
+FeesDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/FeesDetails.java
+END
+AdditionalPayments.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/AdditionalPayments.java
+END
+BidProcess.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BidProcess.java
+END
+PaymentScheduleDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/PaymentScheduleDetails.java
+END
+RequestStatusDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/RequestStatusDetails.java
+END
+MyReports.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/MyReports.java
+END
+WinningBank.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/WinningBank.java
+END
+SearchBankDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/SearchBankDetails.java
+END
+FeeQuotationDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/FeeQuotationDetails.java
+END
+RetentionRecipient.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/RetentionRecipient.java
+END
+WinningBankDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/WinningBankDetails.java
+END
+Entity.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/Entity.java
+END
+Resultsets.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/Resultsets.java
+END
+NameValue.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/NameValue.java
+END
+BeneficiaryObligeeDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BeneficiaryObligeeDetails.java
+END
+MyTransactions.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/MyTransactions.java
+END
+BankDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BankDetails.java
+END
+GetAmendmentRiders.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/GetAmendmentRiders.java
+END
+UserInformation.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/UserInformation.java
+END
+TreasuryApproverLevel.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/TreasuryApproverLevel.java
+END
+ActiveAnnouncement.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ActiveAnnouncement.java
+END
+BondDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BondDetails.java
+END
+CurrentRequestor.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/CurrentRequestor.java
+END
+BidSuccessDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BidSuccessDetails.java
+END
+SelectedSites.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/SelectedSites.java
+END
+AlocUserDataResp.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/AlocUserDataResp.java
+END
+RecordRetentionList.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/RecordRetentionList.java
+END
+ActionSearch.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ActionSearch.java
+END
+ActionDrawDownValues.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ActionDrawDownValues.java
+END
+SelectedBanks.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/SelectedBanks.java
+END
+RoleSelection.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/RoleSelection.java
+END
+ReimbursementAgreementType.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ReimbursementAgreementType.java
+END
+CurrencySetup.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/CurrencySetup.java
+END
+AddressDtls.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/AddressDtls.java
+END
+Principal.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/Principal.java
+END
+CurrentBankFees.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/CurrentBankFees.java
+END
+BusinessUnitCodeList.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BusinessUnitCodeList.java
+END
+IBSDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/IBSDetails.java
+END
+FeeSummaryDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/FeeSummaryDetails.java
+END
+FeeRequestSummary.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/FeeRequestSummary.java
+END
+RequestorSearchRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/RequestorSearchRequest.java
+END
+PaymentDetail.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/PaymentDetail.java
+END
+LandingPageDtls.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/LandingPageDtls.java
+END
+DelegationConfiguration.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/DelegationConfiguration.java
+END
+SuretyMaster.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/SuretyMaster.java
+END
+Instrument.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/Instrument.java
+END
+EASBankDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/EASBankDetails.java
+END
+FXRateHistory.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/FXRateHistory.java
+END
+UpdateReporting.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/UpdateReporting.java
+END
+BUCAndADN.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BUCAndADN.java
+END
+RateTypes.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/RateTypes.java
+END
+CycleTimeDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/CycleTimeDetails.java
+END
+UserDetailsType.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/UserDetailsType.java
+END
+AvailableSites.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/AvailableSites.java
+END
+UserAnnouncement.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/UserAnnouncement.java
+END
+RequestorLookupDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/RequestorLookupDetails.java
+END
+InstrReporting.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/InstrReporting.java
+END
+ActionTakenBy.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ActionTakenBy.java
+END
+ADHOCReports.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ADHOCReports.java
+END
+RequestorTransaction.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/RequestorTransaction.java
+END
+AvailableBanks.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/AvailableBanks.java
+END
+OnetimeFees.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/OnetimeFees.java
+END
+RecordRetention.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/RecordRetention.java
+END
+Obligee.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/Obligee.java
+END
+MappingInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/MappingInfo.java
+END
+Template.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/Template.java
+END
+TreasuryDelegationApprovers.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/TreasuryDelegationApprovers.java
+END
+MDM.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/MDM.java
+END
+AutoIncDec.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/AutoIncDec.java
+END
+ActionLog.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ActionLog.java
+END
+RequestorTrasactionsReply.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/RequestorTrasactionsReply.java
+END
+AverageFeesPaidDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/AverageFeesPaidDetails.java
+END
+AmendmentInstrumentAmountCurr.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/AmendmentInstrumentAmountCurr.java
+END
+IssuanceExpirationDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/IssuanceExpirationDetails.java
+END
+BusinessUnitCode.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BusinessUnitCode.java
+END
+AmendmentWorkflowMgmt.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/AmendmentWorkflowMgmt.java
+END
+Format.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/Format.java
+END
+FeesPeriodDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/FeesPeriodDetails.java
+END
+IssunaceDocType.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/IssunaceDocType.java
+END
+ReportsDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ReportsDetails.java
+END
+ReimbursementAgreement.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ReimbursementAgreement.java
+END
+OneTimeFeesDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/OneTimeFeesDetails.java
+END
+BuContactPerson.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BuContactPerson.java
+END
+FormatAuditTrail.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/FormatAuditTrail.java
+END
+BondReqDtls.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BondReqDtls.java
+END
+GroupAssignment.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/GroupAssignment.java
+END
+CreditAndCarryOverReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/CreditAndCarryOverReport.java
+END
+EASCredentials.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/EASCredentials.java
+END
+PreviewDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/PreviewDetails.java
+END
+AlocUserInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/AlocUserInfo.java
+END
+SwiftDashBoard.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/SwiftDashBoard.java
+END
+SiteAdmin.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/SiteAdmin.java
+END
+BundleDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BundleDetails.java
+END
+UserReportDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/UserReportDetails.java
+END
+DashBoard.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/DashBoard.java
+END
+IndicativePricingCompletedDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/IndicativePricingCompletedDetails.java
+END
+AttachmentCollection.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/AttachmentCollection.java
+END
+Search.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/Search.java
+END
+Rider.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/Rider.java
+END
+DrawDownValues.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/DrawDownValues.java
+END
+SiteType.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/SiteType.java
+END
+ActiveAnnoucement.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ActiveAnnoucement.java
+END
+RiderDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/RiderDetails.java
+END
+DelegationApprovers.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/DelegationApprovers.java
+END
+StaticDataManagement.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/StaticDataManagement.java
+END
+ExpiryDate.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ExpiryDate.java
+END
+PreAgreedPricingDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/PreAgreedPricingDetails.java
+END
+PoleCountryAssociation.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/PoleCountryAssociation.java
+END
+BidReplyDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BidReplyDetails.java
+END
+DeligationApprovers.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/DeligationApprovers.java
+END
+WFDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/WFDetails.java
+END
+ProcessMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ProcessMapper.java
+END
+FeeCalculationDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/FeeCalculationDetails.java
+END
+FormatTemplate.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/FormatTemplate.java
+END
+OpenEmailLink.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/OpenEmailLink.java
+END
+AuditSearch.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/AuditSearch.java
+END
+RequestDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/RequestDetails.java
+END
+BondInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BondInfo.java
+END
+MsgHeader.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/MsgHeader.java
+END
+InvoiceDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/InvoiceDetails.java
+END
+BuDelegation.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BuDelegation.java
+END
+LinkDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/LinkDetails.java
+END
+FeePaidDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/FeePaidDetails.java
+END
+SearchPaymentDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/SearchPaymentDetails.java
+END
+TransactionParties.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/TransactionParties.java
+END
+CustomizedSiteReferences.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/CustomizedSiteReferences.java
+END
+InstrumentDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/InstrumentDetails.java
+END
+BookMarkMaster.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BookMarkMaster.java
+END
+BidmemoDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BidmemoDetails.java
+END
+IssuingBankDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/IssuingBankDetails.java
+END
+GoodsOrigin.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/GoodsOrigin.java
+END
+ActionDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ActionDetails.java
+END
+AuditLogInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/AuditLogInfo.java
+END
+FeePaymentRunDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/FeePaymentRunDetails.java
+END
+EASContactDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/EASContactDetails.java
+END
+WinningBankDtls.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/WinningBankDtls.java
+END
+Column.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/Column.java
+END
+ECSODetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ECSODetails.java
+END
+ActSiteSelection.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ActSiteSelection.java
+END
+BidProcessDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BidProcessDetails.java
+END
+BidDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BidDetails.java
+END
+FeeDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/FeeDetails.java
+END
+RequestSummary.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/RequestSummary.java
+END
+ModelDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ModelDetails.java
+END
+Amendment.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/Amendment.java
+END
+CurrentWinningBank.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/CurrentWinningBank.java
+END
+WinnerDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/WinnerDetails.java
+END
+TrModelDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/TrModelDetails.java
+END
+ProjDescription.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ProjDescription.java
+END
+ReqContactInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ReqContactInfo.java
+END
+BuRequestor.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BuRequestor.java
+END
+CumulativeFeeAdjustments.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/CumulativeFeeAdjustments.java
+END
+FullSummary.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/FullSummary.java
+END
+FeeHistory.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/FeeHistory.java
+END
+StandardFormatMaster.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/StandardFormatMaster.java
+END
+SearchDates.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/SearchDates.java
+END
+GetFeeHistoryDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/GetFeeHistoryDetails.java
+END
+DelegationGroup.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/DelegationGroup.java
+END
+BookMarkMasterCollection.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BookMarkMasterCollection.java
+END
+SiteCustom.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/SiteCustom.java
+END
+DelegationConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/DelegationConfig.java
+END
+APMSearch.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/APMSearch.java
+END
+GroupApprover.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/GroupApprover.java
+END
+PaymentDetailCollection.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/PaymentDetailCollection.java
+END
+IBS.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/IBS.java
+END
+FeeSummary.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/FeeSummary.java
+END
+Inbox.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/Inbox.java
+END
+USForeignFee.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/USForeignFee.java
+END
+Recipient.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/Recipient.java
+END
+UserDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/UserDetails.java
+END
+TreasuryDelegationGroup.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/TreasuryDelegationGroup.java
+END
+FormatAuditTrailCollection.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/FormatAuditTrailCollection.java
+END
+FXRateHistoryAndCurrencySetup.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/FXRateHistoryAndCurrencySetup.java
+END
+ChangeRequestor.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ChangeRequestor.java
+END
+AdditionalInstrumentDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/AdditionalInstrumentDetails.java
+END
+FeePeriodDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/FeePeriodDetails.java
+END
+SiteSelection.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/SiteSelection.java
+END
+AutoExtendClause.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/AutoExtendClause.java
+END
+InfoTransPlatFormSelection.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/InfoTransPlatFormSelection.java
+END
+ContingentliabilityDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ContingentliabilityDetails.java
+END
+SearchReqDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/SearchReqDetails.java
+END
+TpApplicantDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/TpApplicantDetails.java
+END
+FeesPaidDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/FeesPaidDetails.java
+END
+TransferFees.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/TransferFees.java
+END
+Approver.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/Approver.java
+END
+LocalComissions.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/LocalComissions.java
+END
+InstrumentRisk.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/InstrumentRisk.java
+END
+Customer.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/Customer.java
+END
+ObligeeRef.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ObligeeRef.java
+END
+AllinComissions.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/AllinComissions.java
+END
+TresuryDelegation.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/TresuryDelegation.java
+END
+RequestDetailsCollectionType.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/RequestDetailsCollectionType.java
+END
+RequestFeeDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/RequestFeeDetails.java
+END
+Rates.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/Rates.java
+END
+BankInformation.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/BankInformation.java
+END
+ParentSiteDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ParentSiteDetails.java
+END
+PaymentPeriodDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/PaymentPeriodDetails.java
+END
+ProposedBankBranchConfirmDetails.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ProposedBankBranchConfirmDetails.java
+END
+UserInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/UserInfo.java
+END
+ContactUsDtls.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/model/ContactUsDtls.java
+END

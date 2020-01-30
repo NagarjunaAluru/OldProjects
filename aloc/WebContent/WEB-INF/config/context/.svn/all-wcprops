@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/WEB-INF/config/context
+END
+aloc-common-beans.xml
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/WEB-INF/config/context/aloc-common-beans.xml
+END
+hwf-beans.xml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/WEB-INF/config/context/hwf-beans.xml
+END
+aloc-ext-business-beans.xml
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/WEB-INF/config/context/aloc-ext-business-beans.xml
+END
+aloc-business-beans.xml
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/WEB-INF/config/context/aloc-business-beans.xml
+END
+aloc-ext-action-beans.xml
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/WEB-INF/config/context/aloc-ext-action-beans.xml
+END
+aloc-action-beans.xml
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/WEB-INF/config/context/aloc-action-beans.xml
+END

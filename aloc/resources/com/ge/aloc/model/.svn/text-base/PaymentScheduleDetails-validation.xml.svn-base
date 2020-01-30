@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<field name="validLCMonths">
+		<field-validator type="requiredstring" short-circuit="true">
+			<param name="trim">true</param>
+			<message key="error.required.requestDetails.validLCMonths" />
+		</field-validator>
+		<field-validator type="regex">
+            <param name="expression"><![CDATA[^\d*$]]></param>
+         <message key="error.required.requestDetails.validDataLCMonths" />
+         </field-validator>
+	</field>
+	
+	<field name="issueDt">
+		<field-validator type="required" short-circuit="true">
+			<message key="error.required.requestDetails.approximateIssueDt" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">issueDt.compareTo(@com.ge.aloc.util.ALOCCommonHelper@getCurrentDateWithOutTime()) != -1</param>
+			<message key="error.required.requestDetails.issueDtValid" />
+		</field-validator>
+	</field>
+	
+	<field name="additionalPayments">
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@paymentScheduleMandatory()</param>
+			<message key="error.required.requestDetails.allMandatoryInPaymentschedule" />
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+		<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@paymentScheduleAmountValidation()</param>
+			<message key="error.required.requestDetails.paymentscheduleAmountValidation" />
+		</field-validator>
+	</field>
+	
+	<field name="sendBackNotes">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requiresEdits == false) || (requiresEdits != true)) || (sendBackNotes != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.sendBackNotes" />
+		</field-validator>
+	</field>
+	
+</validators>

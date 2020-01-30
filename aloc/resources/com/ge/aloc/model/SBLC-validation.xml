@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<field name="USIssuanceFlag">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[(USIssuanceFlag == true) || (USIssuanceFlag == false)]]>
+      	</param>
+			<message key="error.required.requestDetails.sblcIssued" />
+		</field-validator>
+	</field>
+	
+	<field name="creditReqCnfmFlag">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((creditReqCnfmFlag == true) || (creditReqCnfmFlag == false))]]>
+      	</param>
+			<message key="error.required.requestDetails.sblcRequireConfirmation" />
+		</field-validator>
+	</field>
+	
+	<field name="creditCnfmCountryId">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((creditReqCnfmFlag == false) || (creditReqCnfmFlag != true)) || (creditCnfmCountryId != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.sblcConfirmedCountry" />
+		</field-validator>
+	</field>
+	
+	<field name="creditReqAdviseFlag">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((creditReqCnfmFlag == true) || (creditReqCnfmFlag != false)) || ((creditReqAdviseFlag == true) || (creditReqAdviseFlag == false))]]>
+      	</param>
+			<message key="error.required.requestDetails.sblcRequireAdvisement" />
+		</field-validator>
+	</field>
+	
+	<field name="creditAdviseCountryId">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+			<![CDATA[((creditReqCnfmFlag != false) || (creditReqAdviseFlag == false) || (creditReqAdviseFlag != true)) || (creditAdviseCountryId != "")]]>
+        	</param>
+			<message key="error.required.requestDetails.sblcCreditAdviceIn" />
+		</field-validator>
+	</field>
+	
+	<field name="sendBackNotes">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requiresEdits == false) || (requiresEdits != true)) || (sendBackNotes != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.sendBackNotes" />
+		</field-validator>
+	</field>
+</validators>

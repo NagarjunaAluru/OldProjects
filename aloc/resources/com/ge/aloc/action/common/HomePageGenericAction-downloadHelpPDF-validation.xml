@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+
+	<field name="downloadDocs">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[(downloadDocs != null && @com.ge.aloc.util.ALOCCommonHelper@validatelist(downloadDocs))]]>
+      	</param>
+			<message key="error.required.requestDetails.selectdocument" />
+		</field-validator>
+	</field>
+	
+</validators>

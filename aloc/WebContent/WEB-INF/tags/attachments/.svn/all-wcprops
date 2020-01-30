@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/WEB-INF/tags/attachments
+END
+formatAttachments.tag
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/WEB-INF/tags/attachments/formatAttachments.tag
+END
+requestAttachments.tag
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/WEB-INF/tags/attachments/requestAttachments.tag
+END

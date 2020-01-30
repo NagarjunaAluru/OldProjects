@@ -1,0 +1,125 @@
+<!-- SiteMinder Encoding=ISO-8859-1; -->
+@username=%USER%
+@smretries=0
+@TARGET=https://qa.gealoc.com/ALOC/ext/home.action
+<html>
+<head>
+<title>SSO login for ALOC</title>
+<link href="https://qa.gealoc.com/ALOC/ext/public/css/bootstrap/bootstrap.css" rel="stylesheet">
+<link href="https://qa.gealoc.com/ALOC/ext/public/css/common/site.css" rel="stylesheet">
+<link href="https://qa.gealoc.com/ALOC/ext/public/css/common/section.css" rel="stylesheet">
+</head>
+<SCRIPT LANGUAGE=javascript>
+
+    function fnfocus(){
+		document.login.USER.value = "";
+		document.login.PASSWORD.value = "";
+		document.login.elements["USER"].focus();
+    }	
+	
+    function fnsubmit(){		
+					
+	if (document.login.USER.value != "" && document.login.PASSWORD.value != "" ) {
+		document.login.USER.value = 'ALOC:' + document.login.USER.value;
+		document.login.submit();
+	}
+	else {
+		alert("Enter both SSO User ID and Password");
+		fnfocus();
+		return false;
+	}
+    }	
+
+</SCRIPT>
+
+<body onload="javascript:fnfocus()">
+	<div class="container main">
+		<div class="form-mod">
+			<div class="row lastrow">
+				<div class="span12">
+				<div class="mar20">
+					<div id="logobar">
+						<div class="left" id="logo"></div>
+						<p class="logotext left">imagination at work</p>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="form-mod mar20">
+			<div class="clear"></div>
+            <h1 class="login">Welcome to GE Single Sign On</h1>
+			<br />
+			
+			<div class="row">
+				<div class="span7a">
+					<img src="https://qa.gealoc.com/ALOC/ext/public/img/bg1.jpg" />
+				</div>
+				
+				<div class="span4a left">
+					<div id="logindiv">
+					<div class="clear"></div>
+						<div class="row lastrow">
+							<div class="span3">
+								<label>SSO LOGIN</label>
+							</div>
+						</div>
+						
+						<form name=login target=_top method=post onSubmit="javascript:fnsubmit();return false;">
+
+							<input type=hidden name=target value="$$target$$">
+							<input type=hidden name=smquerydata value="$$smquerydata$$">
+							<input type=hidden name=smauthreason value="$$smauthreason$$">
+							<input type=hidden name=smagentname value="$$smagentname$$">
+							<input type=hidden name=postpreservationdata value="$$postpreservationdata$$">
+							
+							<div class="row smallrow">
+								<div class="span1aa left"><label>User ID</label></div>
+								<div class="span2bb left">
+									<input class=span2bb type=text name=USER value="" autocomplete=OFF>	
+								</div>
+							</div>
+							
+							<div class="row smallrow">
+								<div class="span1aa left"><label>Password</label></div>
+								<div class="span2bb left">
+									<input class=span2bb type=password name=PASSWORD autocomplete=OFF>
+								</div>
+							</div>
+							
+							<div class="row smallrow">
+								<div class="span1aa left">&nbsp;</div>
+								<div class="span3c left">
+									<a href="https://qa.gealoc.com/ALOC/ext/public/forgotUserIdOrPasswordPage.action">Forgot your User ID or Password?</a>
+								</div>
+							</div>
+							
+							<div class="row smallrow">
+								<div class="span1aa left">&nbsp;</div>
+								<div class="span2bb left">
+									<input type="submit" value="Log In" id="submit1" name="submit1" class="btn btn-login">
+								</div>
+							</div>
+							
+						</form>
+						
+						<hr />
+						<div class="row smallrow">
+							<div class="span3">
+								<label>NEW HELP?</label>
+								<a href="https://qa.gealoc.com/ALOC/ext/public/signupPage.action">Sign Up Now!</a><br />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="clear"></div>
+			<hr />
+			&copy; 2013 General Electric Company
+			<br /><br />
+		</div>
+	</div>
+</body>
+</html>

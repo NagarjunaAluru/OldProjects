@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+		<field name="firstpaymentperiod.paymentPeriodStartDate">
+			<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression"><![CDATA[(firstpaymentperiod.paymentPeriodStartDate !=null)]]></param>
+	      	<message key="error.required.firstpaymentperiod.paymentPeriodStartDate" />
+	      	</field-validator>
+	      	<field-validator type="fieldexpression">
+			<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@validateStartDate(firstpaymentperiod.paymentPeriodStartDate)</param> 
+	      	<message key="error.required.firstpaymentperiod.paymentPeriodStartDateRange" />
+	      	</field-validator>
+	  </field>
+	  <field name="firstpaymentperiod.paymentPeriodEndDate">
+			<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression"><![CDATA[(firstpaymentperiod.paymentPeriodEndDate !=null)]]></param>
+	      	<message key="error.required.firstpaymentperiod.paymentPeriodStartDate" />
+	      	</field-validator>
+	      	<field-validator type="fieldexpression">
+			<param name="expression"><![CDATA[(firstpaymentperiod.paymentPeriodEndDate).compareTo(firstpaymentperiod.paymentPeriodStartDate)>0]]></param>
+	      	<message key="error.required.firstpaymentperiod.paymentPeriodEndDateRange" />
+	      	</field-validator>
+	  </field>
+	  <field name="firstpaymentperiod.FXRateRevalueDate">
+			<field-validator type="fieldexpression" short-circuit="true">
+				<param name="expression"><![CDATA[(firstpaymentperiod.FXRateRevalueDate !=null)]]></param>
+		      	<message key="error.required.firstpaymentperiod.paymentPeriodStartDate" />
+	      	</field-validator>
+	      	
+	      	<field-validator type="fieldexpression">
+				<param name="expression"><![CDATA[((firstpaymentperiod.FXRateRevalueDate).compareTo(firstpaymentperiod.paymentPeriodStartDate)>0) && ((firstpaymentperiod.paymentPeriodEndDate).compareTo(firstpaymentperiod.FXRateRevalueDate)>0)]]></param>
+		      	<message key="error.required.firstpaymentperiod.FXRateRevalueDateRange" />
+	      	</field-validator>
+	    </field>
+	  
+	  <field name="firstpaymentperiod.paymentPeriodCutoffDate">
+			<field-validator type="fieldexpression">
+			<param name="expression"><![CDATA[(firstpaymentperiod.paymentPeriodCutoffDate !=null)]]></param>
+	      	<message key="error.required.firstpaymentperiod.paymentPeriodStartDate" />
+	      	</field-validator>
+	  </field>
+	  <field name="firstpaymentperiod.minPaymentAmountUSD">
+			<field-validator type="fieldexpression">
+			<param name="expression"><![CDATA[(firstpaymentperiod.minPaymentAmountUSD !=null)]]></param>
+	      	<message key="error.required.firstpaymentperiod.paymentPeriodStartDate" />
+	      	</field-validator>
+	  </field>
+	  <field name="firstpaymentperiod.dayCount">
+			<field-validator type="fieldexpression">
+			<param name="expression"><![CDATA[(firstpaymentperiod.dayCount !=null)]]></param>
+	      	<message key="error.required.firstpaymentperiod.paymentPeriodStartDate" />
+	      	</field-validator>
+	  </field>
+	  
+	 
+	
+	
+</validators>

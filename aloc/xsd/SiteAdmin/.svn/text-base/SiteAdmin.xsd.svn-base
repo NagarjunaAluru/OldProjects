@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/SiteAdmin/SiteAdmin.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ALOC/RequestDetails/ALOCCommon.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/SiteAdmin/DelegationConfiguration.xsd"
+	 xmlns:ns2="http://treasury.ge.com/schemas/ALOC/SiteAdmin/BankSWIFTConfiguration.xsd"
+	 xmlns:ns3="http://treasury.ge.com/schemas/ALOC/SiteAdmin/BankFeePaymentSetup.xsd"
+	 xmlns:ns5="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 xmlns:ns4="http://treasury.ge.com/schemas/ALOC/RequestDetails/DeliveryInstructions.xsd"
+	 xmlns:ns6="http://treasury.ge.com/schemas/ALOC/RequestDetails/BankDetails.xsd"
+	 xmlns:ns7="http://treasury.ge.com/schemas/ALOC/SiteAdmin/IBS.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/SiteAdmin/SiteAdmin.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/ALOCCommon.xsd" schemaLocation="../RequestDetails/ALOCCommon.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/SiteAdmin/DelegationConfiguration.xsd" schemaLocation="DelegationConfiguration.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/SiteAdmin/BankSWIFTConfiguration.xsd" schemaLocation="BankSWIFTConfiguration.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/SiteAdmin/BankFeePaymentSetup.xsd" schemaLocation="BankFeePaymentSetup.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd" schemaLocation="../RequestDetails/MsgHeader.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/DeliveryInstructions.xsd" schemaLocation="../RequestDetails/DeliveryInstructions.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/BankDetails.xsd" schemaLocation="../RequestDetails/BankDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/SiteAdmin/IBS.xsd" schemaLocation="IBS.xsd"/>
+	<xs:element name="SiteAdmin">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Site_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Request_Check" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Site_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Site_Prefix" type="xs:string" minOccurs="0"/>
+				<xs:element name="Description" type="xs:string" minOccurs="0"/>
+				<xs:element ref="Site_Type" minOccurs="0"/>
+				<xs:element ref="Parent_Site" minOccurs="0"/>
+				<xs:element name="Parent_Description" type="xs:string" minOccurs="0"/>
+				<xs:element name="Parent_Prefix" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns6:BankDetails" minOccurs="0"/>
+				<xs:element name="Le_Gold_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Le_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Le_MDM_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Header_Site_Only" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Group_Email_Address" type="xs:string" minOccurs="0"/>
+				<xs:element name="Tri_Party_Enabled" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Private_Label" type="xs:boolean" minOccurs="0"/>
+				<xs:element ref="ns7:IBS" minOccurs="0"/>
+				<xs:element ref="ns4:DeliveryInstructions" minOccurs="0"/>
+				<xs:element ref="Customized_Site_References" minOccurs="0"/>
+				<xs:element ref="ns3:BankFeePaymentSetup" minOccurs="0"/>
+				<xs:element ref="ns0:DelegationConfiguration" minOccurs="0"/>
+				<xs:element ref="ns2:BankSWIFTConfiguration" minOccurs="0"/>
+				<xs:element ref="ns1:ActionDetails" minOccurs="0"/>
+				<xs:element ref="ns5:Msg_Header" minOccurs="0"/>
+				<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+				<xs:element name="OpCode" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Customized_Site_References">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Site_Custom" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns1:ActionDetails" minOccurs="0"/>
+				<xs:element name="Site_Required_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Site_Type">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="SiteType_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="SiteType_Id" type="xs:int" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Parent_Site">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ParentSite_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="ParentSite_Id" type="xs:int" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

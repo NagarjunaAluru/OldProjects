@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/SearchDates.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/SearchDates.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="SearchDates">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Issue_From_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Issue_To_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Expiry_From_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Expiry_To_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Creation_From_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Creation_To_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Econo_Expiry_From_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Econo_Expiry_To_Dt" type="xs:dateTime" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

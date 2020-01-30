@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/Admin/UserAnnouncement.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ALOC/RequestDetails/Attachments.xsd"
+	 xmlns:ns2="http://treasury.ge.com/schemas/ALOC/Admin/RoleSelection.xsd"
+	 xmlns:ns3="http://treasury.ge.com/schemas/ALOC/Admin/ActiveAnnouncement.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/Admin/UserAnnouncement.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd" schemaLocation="../RequestDetails/MsgHeader.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/Attachments.xsd" schemaLocation="../RequestDetails/Attachments.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/Admin/RoleSelection.xsd" schemaLocation="RoleSelection.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/Admin/ActiveAnnouncement.xsd" schemaLocation="ActiveAnnouncement.xsd"/>
+	<xs:element name="UserAnnouncement">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="User_Announcement_ID" minOccurs="0"/>
+				<xs:element name="MessageContent" type="xs:string" minOccurs="0"/>
+				<xs:element ref="DocumentLink" minOccurs="0"/>
+				<xs:element ref="HyperLink" minOccurs="0"/>
+				<xs:element ref="ns1:Attachment" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="SiteSelection" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="StartDate" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="EndDate" type="xs:dateTime" minOccurs="0"/>
+				<xs:element ref="ns0:Msg_Header" minOccurs="0"/>
+				<xs:element ref="ns2:RoleSelection" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Selected_Role" type="xs:int" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns3:ActiveAnnouncement" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="HyperLink" type="xs:string"/>
+	<xs:element name="DocumentLink" type="xs:string"/>
+	<xs:element name="User_Announcement_ID" type="xs:int"/>
+	<xs:element name="SiteSelection" type="xs:decimal"/>
+</xs:schema>

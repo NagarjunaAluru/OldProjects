@@ -1,0 +1,484 @@
+error.required.requestDetails.projDescription=Project Description : Project description is mandatory
+error.required.requestDetails.bidCurrName=Project Description : Bid/Contract currency is mandatory
+error.required.requestDetails.bidContractAmt=Project Description : Bid/Contract amount is mandatory
+error.required.requestDetails.bidContractAmtnotValid=Project Description : Bid/Contract amount is not valid
+error.required.requestDetails.sendBackNotes=Send back notes is mandatory
+error.required.requestDetails.autoIncDec =Instrument Details : Auto Increase/Decrease is mandatory
+error.required.requestDetails.autoIncIndicator =Instrument Details :  auto Increase/Decrease indicator is mandatory
+error.required.requestDetails.autoIncAmt =Instrument Details : auto Increase/Decrease amount is mandatory
+error.required.requestDetails.autoIncDt =Instrument Details : auto Increase/Decrease date is mandatory
+error.required.requestDetails.allMandatory = Instrument Details : All Fields Mandatory
+error.required.requestDetails.autoIncDtvalid = Instrument Details : Auto Increase/Decrease dates must be different
+error.required.requestDetails.autoIncDtTodayvalid =Instrument Details : Auto Increase/Decrease dates must be greater than today date
+error.required.requestDetails.autoIncAmountvalid = Instrument Details : Auto Increase/Decrease amounts must be greater than zero
+
+error.required.requestDetails.name= {0} Name is mandatory
+error.required.requestDetails.phoneNumber={0} Phone Number is mandatory
+error.required.requestDetails.emailAddr={0} Email Address is mandatory
+
+error.required.requestDetails.bankName=Issuing Bank : Bank name is mandatory
+error.required.requestDetails.issuingBankCountry=Issuing Bank : Bank country is mandatory
+error.required.requestDetails.issuingBankCity=Issuing Bank : Bank city is mandatory
+error.required.requestDetails.letterOfCredit = Issuing Bank : Letter of Credit Number should allow letters or - or / only
+error.required.requestDetails.bankCountry= Bank country is mandatory
+error.required.requestDetails.bankCity=Bank city is mandatory
+error.required.requestDetails.bic=Bank Identifier Code is mandatory
+error.required.requestDetails.feeStructure = feeStructure is mandatory
+error.required.requestDetails.feeStructureValue = BPS value is mandatory
+error.required.requestDetails.feeStructureValueAmount = BPS value is invalid 
+
+error.required.requestDetails.addressDtls.name=Name/Address is mandatory
+error.required.requestDetails.legoldId = {0} Legal Entity Gold ID is mandatory
+error.required.requestDetails.refDetails.applicantRefValue=Applicant : GE Applicant Reference is mandatory
+error.required.requestDetails.refDetails.benfiRefValue=Customer/Beneficiary : Customer/Beneficiary reference is mandatory
+
+#Payment Schedule Details Validation messages
+error.required.requestDetails.validLCMonths = Payment Schedule : Estimated Number of months is mandatory
+error.required.requestDetails.validDataLCMonths = Payment Schedule : Estimated Number of months should contain digits only
+error.required.requestDetails.approximateIssueDt =Payment Schedule : Approximate Requested issue Date is mandatory
+error.required.requestDetails.estAmt = Estimated payment amount is mandatory
+error.required.requestDetails.estMonths = Estimated Months from Issue is mandatory
+error.required.requestDetails.estDt = Estimated payment Date is mandatory
+error.required.requestDetails.issueDtValid = Payment Schedule : Requested Issue Date must be greater than or equal to today date
+error.required.requestDetails.estDtValid = Estimated Date must be greater than or equal to today date
+error.required.requestDetails.allMandatoryInPaymentschedule = Payment Schedule : All Fields Mandatory in Payment schedule table
+error.required.requestDetails.paymentscheduleAmountValidation = Payment Schedule : Estimated Payment amounts should be less than or equal to the Documentary LC Amount
+
+#Transaction Details Validation messages
+error.required.requestDetails.projectDesc = Instrument/Transaction Details : Project description is mandatory
+error.required.requestDetails.contranctAmt = Instrument/Transaction Details : Contract Amount is mandatory
+error.required.requestDetails.contranctAmtInvalid = Instrument/Transaction Details : Contract Amount must be greater than zero
+error.required.requestDetails.contranctCur = Instrument/Transaction Details : Contract Currency is mandatory
+error.required.requestDetails.docLCCur = Instrument/Transaction Details : Documentary LC Currency is mandatory
+error.required.requestDetails.docLCAmt =Instrument/Transaction Details :  Documentary LC Amount is mandatory
+error.required.requestDetails.docLCAmtInvalid =Instrument/Transaction Details : Documentary LC Amount must be greater than zero
+error.required.requestDetails.shipmentOriCountries = Instrument/Transaction Details : Shipment Origin Country is mandatory
+error.required.requestDetails.shipmentDestCountry = Instrument/Transaction Details : Shipment Destination Country is mandatory
+error.required.requestDetails.goodsOrigins = Instrument/Transaction Details : Origin of goods is mandatory
+error.required.requestDetails.usContentPercent = Instrument/Transaction Details : Percent U.S. content is mandatory
+error.required.requestDetails.lcPaymentTerm = Instrument/Transaction Details : LC PaymentTerms is mandatory
+error.required.requestDetails.usdDLOCAmount = Instrument/Transaction Details : USD Documentary LC amount is mandatory
+error.required.requestDetails.lcPaymentTermOther = Instrument/Transaction Details : Other payment terms description
+error.required.requestDetails.confirmationType =Instrument/Transaction Details : Confirmation Type is mandatory
+error.required.requestDetails.bankChargesType = Instrument/Transaction Details :Bank Charges is mandatory
+error.required.requestDetails.refDetails.refValue=GE Reference is mandatory
+error.required.requestDetails.usdEquivalent = USD Documentary LC amount is  mandatory
+
+
+#InstrumentRisk validation messages
+error.required.requestDetails.notiClauseFlag=Instrument Risk : Notification Clause Flag is mandatory
+error.required.requestDetails.curePeriodFlag=Instrument Risk : Cure period Flag is mandatory
+error.required.requestDetails.curePeriodValue=Instrument Risk : Enter a cure period in days
+error.required.requestDetails.validcurePeriodValue=Instrument Risk : Enter a valid cure period in days
+error.required.requestDetails.drDownApprFlag=Instrument Risk : Draw down Flag is mandatory
+error.required.requestDetails.contrReqFlag=Instrument Risk : Contract requirements Flag is mandatory
+error.required.requestDetails.propasalDocFlag=Instrument Risk : GE proposal document Flag is mandatory
+error.required.requestDetails.bidSpecFlag=Instrument Risk : Bid specification Flag is mandatory
+error.required.requestDetails.contrReqReason=Instrument Risk : Enter a valid detailed explanation as to why this instrument does not comply
+
+#InstrumentReporting validation messages
+error.required.requestDetails.poleName=Instrument Reporting Attributes : Pole name is mandatory
+error.required.requestDetails.buProjId= Enter a valid value for project id
+#InstrumentDetails validation messages
+error.required.requestDetails.issuanceCountry= {0} State, Country of issuance  is mandatory
+error.required.requestDetails.instrumentPurposeId= Transaction Parties : Instrument purpose is mandatory
+error.required.requestDetails.instrumentPurposeOther= Transaction Parties : Instrument purpose Other is mandatory
+error.required.requestDetails.instrumentCurrencyId=Instrument Details : Currency of instrument is mandatory
+error.required.requestDetails.instrumentAmt=Instrument Details : Amount of instrument is mandatory
+error.required.requestDetails.instrumentAmtnotValid=Instrument Details : Amount of instrument is not valid
+error.required.requestDetails.approximateUsdAmt=Instrument Details : Approximate USD instrument amount is mandatory
+error.required.requestDetails.maxPossibleExpo=Instrument Details : Maximum Possible exposure is mandatory
+error.required.requestDetails.issueDt=Instrument Details : Requested Issue date is mandatory
+error.required.requestDetails.issueDateNotvalid =Instrument Details : Requested Issue date should be greater than or equal to today date
+error.required.requestDetails.expiryDt=Instrument Details : Expiration date is mandatory
+error.required.requestDetails.expiryDtNotvalid=Instrument Details : Expiration date should be greater than today and greater than or equal to Requested Issue date
+error.required.requestDetails.amendment.UsExpiryDtNotvalid= U.S. expiration date should be greater than or equal to today date
+error.required.requestDetails.econoExpiryDt=Instrument Details : Economic expiration date is mandatory
+error.required.requestDetails.econoExpiryDtNotvalid=Instrument Details : Economic expiration date should be greater than today and less than or equal to Expiration date
+error.required.requestDetails.initialExpiryDt=Instrument Details : Initial expiration date is mandatory
+error.required.requestDetails.initialExpiryDtNotvalid=Instrument Details : Initial expiration date should be greater than or equal to today date
+error.required.requestDetails.autoExtendFlag=Instrument Details :  Auto extend clause is mandatory
+error.required.requestDetails.Nonrenewalnoticeperiod=Instrument Details : Non-renewal notice period is mandatory
+error.required.requestDetails.otherTimeFrame=Instrument Details : Other timeFrame is mandatory
+error.required.requestDetails.validotherTimeFrame=Instrument Details : Enter a valid value for other time frame
+
+
+#Format validation messages
+error.required.requestDetails.format.formatType = Format : Format Selection is mandatory
+error.required.requestDetails.format.attachmentFileUpload =Format : Format File Upload is mandatory
+error.required.requestDetails.format.attachmentPermissions =Format : Format File Permissions are mandatory
+
+#Attachments validation messages
+error.required.requestDetails.attachments.fileUpload = Attachments : Attachments fileupload is mandatory. 
+
+
+#Bond Details validation messages
+error.required.requestDetails.bondType = Bond Type : Bond Type is mandatory
+error.required.requestDetails.projectDescription = Project Description is mandatory
+error.required.requestDetails.instrumentPurpose = Instrument Purpose is mandatory
+error.required.requestDetails.bondSubType = Bond Type : Bond Sub-Type is mandatory
+error.required.requestDetails.other = Other is Mandatory 
+
+#Principal Details validation messages
+error.required.requestDetails.principalInvalidADNBUC=Principal : Accounting Distribution Number and Business Unit Code Combo is Invalid
+error.required.requestDetails.principalInvalidBUCADN=Principal : Business Unit Code and Accounting Distribution Number Combo is Invalid
+error.required.requestDetails.geDivisionName = GE Division Name is mandatory
+error.required.requestDetails.businessId = Business Id is mandatory
+error.required.requestDetails.principalBusinessUniteCode = Principal : Principal Business Unite Code is mandatory
+error.required.requestDetails.principalAccountingDistributionNumber = Principal : Principal Accounting Distribution Number is mandatory
+error.required.requestDetails.creditSupportObligationNumber = Credit Support Obligation Number is mandatory
+error.required.requestDetails.csoApprovalDate = CSO Approval Date is mandatory
+error.required.requestDetails.gePrincipalReference = Principal : GE Principal reference is mandatory
+
+#Obligee Details validation messages
+error.required.requestDetails.obligeeReference = Obligee : Obligee Reference is mandatory
+
+#Bond Requestor Details validation messages
+error.required.requestDetails.contactPersonMandatory =Bond Requestor : Contact Person is mandatory
+error.required.requestDetails.faxNo = Bond Requestor : Fax Number is Mandatory
+error.required.requestDetails.faxNumberMustBeDigits =  Bond Requestor and Mailing Address : Fax number must be in digits.
+
+#Mailing Address validation messages
+error.required.requestDetails.address1 = {0} Address1 is mandatory
+error.required.requestDetails.city = {0} City is mandatory
+error.required.requestDetails.stateOrProvince = State/Province is mandatory
+error.required.requestDetails.zipOrPostalCode ={0} Zip/Postal Code is mandatory
+error.required.requestDetails.zipInFormat = {0} Zip/Postal Code format is not valid
+error.required.requestDetails.country = {0} Country is mandatory
+error.required.requestDetails.countryOfIncorporation = {0} Country of Incorporation is mandatory
+error.required.requestDetails.stateProvinceOfIncorporation = State/Province of Incorporation is mandatory
+error.required.requestDetails.deliveryDesignationFlag = Delivery Instructions : Delivery Designation Flag is mandatory
+error.required.requestDetails.requestorContactFName = Bond Requestor and Mailing Address : Contact First Name is mandatory
+error.required.requestDetails.requestorCompanyName = Bond Requestor and Mailing Address : Company Name is mandatory
+error.required.requestDetails.requestorContactLName = Bond Requestor and Mailing Address : Contact Last Name is mandatory
+
+
+#Bond Information validation messages
+error.required.requestDetails.exactProjectDescription =Bond Information : Project Description is mandatory
+error.required.requestDetails.effectiveDate = {0} Effective Date is mandatory
+error.required.requestDetails.desiredEffectiveDate = Bond Information : Desired Effective Date is mandatory
+error.required.requestDetails.sbExpirationDate = {0} Expiration Date is mandatory
+error.required.requestDetails.desiredExpirationDate = Desired Expiration Date is mandatory
+error.required.requestDetails.contractDate = Bond Information : Contract Date is mandatory
+error.required.requestDetails.estimatedCompletionDate = Bond Information : Estimated Completion Date is mandatory
+error.required.requestDetails.performanceBondAmounts = Bond Information : Performance Bond Amounts is mandatory
+error.required.requestDetails.performanceBondAmountsInvalid = Bond Information : Performance Bond Amount must be greater than zero
+error.required.requestDetails.contractAmount = Bond Information : Contract Amount is mandatory
+error.required.requestDetails.contractAmountInvalid = Bond Information : Contract Amount must be greater than zero
+error.required.requestDetails.contractCurrency = Bond Information : Contract Currency is mandatory
+error.required.requestDetails.usdContractAmount = Bond Information : USD contract amount is mandatory
+error.required.requestDetails.usdPerformanceBondAmount = Bond Information : USD Performance Bond Amount is mandatory
+error.required.requestDetails.usdBondAmount = {0} USD Bond Amount is mandatory
+error.required.requestDetails.warrantyTermMonths = Bond Information : Enter a valid Warranty Term Months
+error.required.requestDetails.warrantyTermMonthsLimit = Bond Information : Warranty Term Months should be in between 1 to 100
+error.required.requestDetails.needByDate =Bond Information/Court Bond Details : Need By Date is mandatory
+error.required.requestDetails.effectiveDateNotvalid = {0} Effective Date should be greater than or equal to today date
+error.required.requestDetails.desiredEffectiveDateNotvalid = Bond Information : Desired Effective Date should be greater than or equal to today date
+error.required.requestDetails.expirationDateGtToday = Bond Information : Expiration Date should be greater than today date
+error.required.requestDetails.expirationDtNotvalid = {0} Expiration date should be greater than today and greater than or equal to Effective date 
+error.required.requestDetails.desiredExpirationDtNotvalid = Desired Expiration date should be greater than today and greater than or equal to Desired Effective date 
+error.required.requestDetails.contractDtNotvalid = Bond Information : Contract date should be greater than or equal to today date
+error.required.requestDetails.estCompletionDtNotvalid =Bond Information : Estimated completion should be greater than or equal to today date
+error.required.requestDetails.needByDtNotvalid =Bond Information/Court Bond Details : Need by date should be greater than or equal to today date
+error.required.requestDetails.county = Court Bond Details : County is mandatory
+
+error.required.requestDetails.Biddate = Bond Information : Bid date is mandatory
+error.required.requestDetails.BiddateDateNotvalid = Bond Information : Bid date should be greater than or equal to today date
+error.required.requestDetails.estimatedStartDate = Bond Information : Estimated Start Date is mandatory
+error.required.requestDetails.estBidAmountMandatory = Bond Information : Estimated Bid Amount is Mandatory
+error.required.requestDetails.estBidcurrencyMandatory = Bond Information : Currency code (For Estimated Bid Amount) is Mandatory
+error.required.requestDetails.estusdBidAmountMAndatory = Bond Information : USD Estimated Bid Amount is mandatory
+error.required.requestDetails.estBidAmountInvalid = Bond Information : Estimated Bid Amount must be greater than zero
+error.required.requestDetails.estimatedStartDateNotvalid = Bond Information : Estimated Start Date should be greater than or equal to today date
+error.required.requestDetails.currencyCode =Bond Information : Currency Code is mandatory
+error.required.requestDetails.importer = Bond Information : Importer# is mandatory
+error.required.requestDetails.activityCode =Bond Information : Activity Code# is mandatory
+error.required.requestDetails.courtOfJurisdiction = Court Bond Details : Court of Jurisdiction is mandatory
+error.required.requestDetails.state = State is mandatory
+error.required.requestDetails.case = Case Number is mandatory
+error.required.requestDetails.dateFiled = Date Filed is mandatory
+error.required.requestDetails.dateFiledNotvalid =  Date Filed should be greater than or equal to today date
+
+error.required.requestDetails.judgementAmount = Judgement Amount is mandatory
+error.required.requestDetails.judgementAmountInvalid = Judgement Amount must be greater than zero
+error.required.requestDetails.bondCurrencyCd = Court Bond Details : Bond currency is mandatory
+error.required.requestDetails.lawFirmName = Attorney Information : Law Firm Name is mandatory
+error.required.requestDetails.attorneyName = Attorney Information : Attorney Name is mandatory
+error.required.requestDetails.attorneyAddress1 = Attorney Information : Attorney Address 1 is mandatory
+error.required.requestDetails.attorneyCity = Attorney Information : Attorney City is mandatory
+error.required.requestDetails.attorneyCountry = Attorney Information : Attorney Country is mandatory
+error.required.requestDetails.attorneyStateProvince = Attorney Information : Attorney State/Province is mandatory
+error.required.requestDetails.attorneyZip/PostalCode = Attorney Information : Attorney Zip/Postal Code is mandatory
+error.required.requestDetails.attorneyZip/PostalCodeInvalid = Attorney Information : Attorney Zip/Postal Code format is not valid
+error.required.requestDetails.attorneyPhoneNumber =Attorney Information : Attorney Phone Number is mandatory
+error.required.requestDetails.attorneyPhoneNumberMustBeDigits = Attorney Information : Attorney Phone Number must be in digits
+error.required.requestDetails.attorneyFaxNumber = Attorney Information : Attorney Fax Number is mandatory
+error.required.requestDetails.attFaxNumberMustBeDigits = Attorney Information : Attorney Fax number must be in digits.
+error.required.requestDetails.attorneyEmail = Attorney Information : Attorney Email is mandatory
+error.required.requestDetails.bondAmounts = {0} Bond Amount is mandatory
+error.required.requestDetails.bondAmountsInvalid = {0} Bond Amount must be greater than zero
+error.required.requestDetails.bidBondAmount = Bond Information : Bid Bond Amount is mandatory
+error.required.requestDetails.bidBondAmountsInvalid = Bond Information : Bid Bond Amount must be greater than zero
+error.required.requestDetails.stateCountryOfObligation = State/Country of Obligation is mandatory
+error.required.requestDetails.stateOfObligation = State of Obligation is mandatory
+
+
+
+#Delivery Instructions validation messages
+error.required.requestDetails.deliverType = Delivery Instructions : Deliver Type is mandatory
+error.required.requestDetails.companyName = Delivery Instructions : Company Name is mandatory
+error.required.requestDetails.recipientsFirstName = Delivery Instructions : Recipients First Name is mandatory
+error.required.requestDetails.recipientsLastName = Delivery Instructions : Recipients Last Name is mandatory
+error.required.requestDetails.title = Title is mandatory
+error.required.requestDetails.phoneNumberMustBeDigits ={0} Phone number must be in digits
+error.required.requestDetails.specialInstructions = Delivery Instructions : Special Instructions is mandatory
+error.required.requestDetails.geRecipient = Delivery Instructions : GE recipient is mandatory
+
+#Transaction Parties validation Messages
+error.required.requestDetails.triPartyRequest = Transaction Parties : Tri-party Request is mandatory
+error.required.requestDetails.privateLabel = Transaction Parties : Private label is mandatory
+error.required.requestDetails.geApplicantReference =Transaction Parties : GE Applicant Reference is mandatory 
+error.required.requestDetails.businessUnitCode =Transaction Parties : Business Unit Code is mandatory
+error.required.requestDetails.accountingDistributionNumber =Transaction Parties : Accounting Distribution Number is mandatory
+error.required.requestDetails.invalidBUCADN=Transaction Parties : Business Unit Code and Accounting Distribution Number Combo is Invalid
+error.required.requestDetails.invalidADNBUC=Transaction Parties : Accounting Distribution Number and Business Unit Code Combo is Invalid
+error.required.requestDetails.customerBeneficiaryReference =Transaction Parties : Customer/Beneficiary Reference is mandatory
+error.required.requestDetails.csoNumber =Transaction Parties : Credit support obligation (CSO) number is mandatory
+error.required.requestDetails.csoDateNotvalid =Transaction Parties : CSO approval date is mandatory
+error.required.requestDetails.certifyFlag =Transaction Parties : Certify Checkbox is mandatory 
+error.required.requestDetails.businessContactPerson=Transaction Parties : Additional GE business Contact Person is Mandatory
+error.required.requestDetails.TPApplicant=Transaction Parties : Applicant Name/Address is Mandatory
+error.required.requestDetails.Triparty=Transaction Parties : Tri-party Name/Address is Mandatory
+error.required.requestDetails.TPCustomer=Transaction Parties : Customer Name/Address is Mandatory
+error.required.requestDetails.principalNameaddress =Principal : Principal Name/Address is Mandatory
+error.required.requestDetails.obligeeNameaddress = Obligee : Name/Address is Mandatory
+error.required.requestDetails.applicantNameaddress = Applicant : Applicant Name/Address is Mandatory
+error.required.requestDetails.beneficiaryNameaddress =Customer/Beneficiary : Customer/Beneficiary Name/Address is Mandatory
+error.required.requestDetails.custlegoldId =Customer/Beneficiary : Legal Entity Gold ID is Mandatory
+error.required.requestDetails.contactPerson=Business contact person : Contact Name is Mandatory
+
+#Standby LOC validation messages
+error.required.requestDetails.sblcIssued= Standby Letter of Credit Conditions : Standby Letter of Credit (SBLC) to be issued in the U.S is mandatory
+error.required.requestDetails.sblcRequireConfirmation=Standby Letter of Credit Conditions : U.S. SBLC require confirmation is mandatory
+error.required.requestDetails.sblcRequireAdvisement =Standby Letter of Credit Conditions : U.S. SBLC require advisement is mandatory
+error.required.requestDetails.sblcConfirmedCountry =Standby Letter of Credit Conditions : country of SBLC to be confirmed in is mandatory
+error.required.requestDetails.sblcCreditIssued =Standby Letter of Credit Conditions : country of Standby Letter of Credit to be issued in is mandatory
+error.required.requestDetails.sblcCreditAdviceIn =Standby Letter of Credit Conditions : country of U.S SBLC to be Advised is mandatory
+
+#Treasury analyst approval messages
+error.required.requestDetails.reimbursementagreement = Reimbursement agreement selection is mandatory
+error.required.requestDetails.issuingBankSelectionFlag = Issuing bank selection is mandatory
+error.required.requestDetails.issuingBankSelectin = Issuing Bank name is mandatory
+error.required.requestDetails.standbyLOCTransferable = Standby letter of credit transferable selection is mandatory
+error.required.requestDetails.suppressWebcash = Suppress webcash selection is mandatory
+error.required.requestDetails.transferFees = Transfer fees selection is mandatory
+error.required.requestDetails.transferFees.comments = Comments are mandatory
+error.required.requestDetails.tresuryDelegation = Treasury approver selection is mandatory 
+error.required.requestDetails.saveAndApprove = Save or Approve selection is mandatory
+
+#Treasury bid messages
+error.required.requestDetails.bidOptionSelection = Bid option selection is mandatory
+error.required.requestDetails.expirationDate = Expiration date is mandatory
+error.required.requestDetails.bidExpirationDate = Bid Reply Expiration Date is mandatory
+error.required.requestDetails.sbBidExpirationDate = Bid expiration date is mandatory
+error.required.requestDetails.expirationHour = Expiration hour is mandatory
+error.required.requestDetails.bidExpirationHour = Bid Reply Expiration hour is mandatory
+error.required.requestDetails.sbBidExpirationHour = Bid expiration hour is mandatory
+error.required.requestDetails.expirationHourInvalid = Expiration hour value is invalid
+error.required.requestDetails.bidExpirationHourInvalid = Bid expiration hour value is invalid
+error.required.requestDetails.bgBidExpirationHourInvalid = Bid Reply Expiration hour value is invalid
+error.required.requestDetails.expirationMinute = Expiration minute is mandatory
+error.required.requestDetails.bidExpirationMinute = Bid Reply Expiration minute is mandatory
+error.required.requestDetails.sbBidExpirationMinute = Bid expiration minute is mandatory
+error.required.requestDetails.expirationMinuteInvalid = Expiration minute value is invalid
+error.required.requestDetails.bidExpirationMinuteInvalid = Bid expiration minute value is invalid
+error.required.requestDetails.bgBidExpirationMinuteInvalid = Bid Reply Expiration minute value is invalid
+error.required.requestDetails.pricingIssuanceSelection = Issuance selection is mandatory
+error.required.requestDetails.issuanceNotes = Notes are mandatory
+error.required.requestDetails.instrumentType = Instrument Type is mandatory
+error.required.requestDetails.governingRules = Governing Rules is mandatory
+error.required.requestDetails.otherGoverningRules = Other governing rules is mandatory
+error.required.requestDetails.proposalFlag = Is pricing subject to Request for Proposal is mandatory
+error.required.requestDetails.allInCommValue = All-in Commissions Value is mandatory
+error.required.requestDetails.allInRateArrearsMandatory = {0} All-in rate per Annum(P.A.) - arrears Value is mandatory
+error.required.requestDetails.allInRateadvanceMandatory = {0} All-in rate per Annum(P.A.) - in advance Value is mandatory
+error.required.requestDetails.flatFeeAnnumMandatory = {0} Flat fee per Annum(P.A.) - in advance Value is mandatory
+error.required.requestDetails.flatFeeAdvanceMandatory = {0} Flat fee life in advance Value is mandatory
+error.required.requestDetails.allInRateArrearsInvalid = {0} All-in rate per Annum(P.A.) - arrears Value is invalid
+error.required.requestDetails.allInRateadvanceInvalid = {0} All-in rate per Annum(P.A.) - in advance Value is invalid
+error.required.requestDetails.flatFeeAnnumInvalid = {0} Flat fee per Annum(P.A.) - in advance Value is invalid
+error.required.requestDetails.flatFeeAdvanceInvalid = {0} Flat fee life in advance Value is invalid
+error.required.requestDetails.localCommValue = Local Commissions Value is mandatory
+error.required.requestDetails.allInRateArrears = All-in rate Arrears is mandatory
+error.required.requestDetails.allInRateAdvance = All-in rate Advance is mandatory
+error.required.requestDetails.flatFeeAdvance = Flat fee Per Annum Advance is mandatory
+error.required.requestDetails.flatFeeLifeAdvance = Flat fee Life Advance is mandatory
+error.required.requestDetails.vatTaxes = Vat taxes is mandatory
+error.required.requestDetails.stampTaxes = Stamp taxes is mandatory
+error.required.requestDetails.incidentalAdminFee = Incidental Admin Fee is mandatory
+error.required.requestDetails.other = Other is mandatory
+error.required.requestDetails.bankSelection = Bank Selection is mandatory
+error.required.requestDetails.oneBankAllowed = One bank allowed when RFP is selected as Yes
+error.required.requestDetails.comments = Comments is mandatory
+error.required.requestDetails.confirmationFees.otherFeesInvalid = Other Fees Value is invalid
+error.required.requestDetails.expirationDateInvalid = Expiration date should be greater than or equal to today date
+error.required.requestDetails.expirationTimeInvalid = Expiration time should be greater than or equal to current time
+error.required.requestDetails.bgBidExpirationDateInvalid = Bid Reply Expiration date should be greater than or equal to today date
+error.required.requestDetails.bgBidExpirationTimeInvalid = Bid Reply Expiration time should be greater than or equal to current time
+error.required.requestDetails.sbBidExpirationDateInvalid = Bid expiration date should be greater than or equal to today date
+error.required.requestDetails.sbBidExpirationTimeInvalid = Bid expiration time should be greater than or equal to current time
+error.required.requestDetails.dlocBidExpirationDateInvalid = Pricing expiration date should be greater than or equal to today date
+error.required.requestDetails.dlocBidExpirationTimeInvalid = Pricing expiration time should be greater than or equal to current time
+error.required.issuingBankDetails.usExpirationDateInvalid = U.S. Expiration date should be greater than or equal to today date
+error.required.issuingBankDetails.bidreplyUSExpirationDateInvalid = U.S. Expiration date must be greater than or equal to Expiration date
+error.required.requestDetails.allInCommissionsRequired = All-In Commissions is mandatory
+error.required.requestDetails.localCommissionsRequired = Local Commissions is mandatory
+error.required.requestDetails.allInCommissionsLocalCommissinsRequired = Select at least All-In Commissions or Local Commissions
+error.required.requestDetails.doYouWantToChangeLastPaidDate = {0} Do you want to change Last paid date is mandatory
+error.required.requestDetails.lastPaidDate = {0} Last paid date is mandatory 
+
+error.required.requestDetails.pricingDetails =  pricing details is mandatory
+error.required.issuingBankDetails.usExpirationDate = U.S. expiration date is mandatory
+error.required.actionDetails.reasonForOptingOut = Reason for Opting out is mandatory
+error.required.actionDetails.reasonforRejection = Reason for Rejection Comments are mandatory
+error.required.requestDetails.retainBidReply = Retain Previous BidReplies Selection is mandatory
+
+#Amendment Validation Messages
+error.required.requestDetails.amendment.currentInstrAmt = Current Instrument Amount is Mandatory
+error.required.requestDetails.amendment.operation =Instrument Amount/Currency : Amount Increase/Decrease is Mandatory 
+error.required.requestDetails.amendment.revisedUsdAmount =Instrument Amount/Currency : Revised USD Amount is mandatory
+error.required.requestDetails.amendment.newInstrCurr=Instrument Amount/Currency : New Instrument currency is Mandatory
+error.required.requestDetails.amendment.revisedExpiryDate={0} Revised expiration Date is Mandatory
+error.required.requestDetails.amendment.expiryDtNotvalid=Expiration Dates : Expiration date should be greater than or equal to today date
+error.required.requestDetails.amendment.revisedUSExpiryDate=Revised U.S. expiration date is mandatory
+error.required.requestDetails.amendment.otherChanges=Other changes : Other changes is Mandatory
+error.required.requestDetails.amendment.revisedInstrumentAmt=Instrument Amount/Currency : Revised Amount is Mandatory
+error.required.requestDetails.amendment.originalInstrumentAmt=Instrument Amount/Currency : Instrument Original Amount is Mandatory
+error.required.requestDetails.amendment.amtOfIncreaseOrDecrease =Instrument Amount/Currency : Amount of Increase/Decrease is Mandatory 
+error.required.requestDetails.amendment.amtOfIncDecnotValid=Instrument Amount/Currency : Increase/Decrease Amount is invalid
+error.required.requestDetails.amendment.amtOfIncDecMustbeGreaterThanZero=Instrument Amount/Currency : Increase/Decrease Amount Must be greater than Zero
+error.required.requestDetails.amendment.submitbusinessApprover = Business approver is mandatory for submit amendment
+error.required.tParties.triPartyApplicant.name = Transaction Parties : Tri-Party Applicant Name is mandatory
+error.required.tParties.triPartyApplicant.address1 = Transaction Parties : Tri-Party Applicant Address1 is mandatory
+error.required.tParties.triPartyApplicant.city = Transaction Parties : Tri-Party Applicant City is mandatory
+error.required.tParties.triPartyApplicant.state = Transaction Parties : Tri-Party Applicant State/Province is mandatory
+error.required.tParties.triPartyApplicant.ZIPPostalCode = Transaction Parties : Tri-Party Applicant ZIP/Postal code is mandatory
+error.required.tParties.triPartyApplicant.ZIPPostalCodeFormat =Transaction Parties : Tri-Party Zip/Postal Code format is not valid
+error.required.tParties.triPartyApplicant.countryCd = Transaction Parties : Tri-Party Applicant Country is mandatory
+error.required.tParties.Applicant.name = Transaction Parties : Applicant Name is mandatory
+error.required.tParties.Applicant.address1 =Transaction Parties : Applicant Address1 is mandatory
+error.required.tParties.Applicant.city =Transaction Parties : Applicant City is mandatory
+error.required.tParties.Applicant.state =Transaction Parties : Applicant State/Province is mandatory
+error.required.tParties.Applicant.ZIPPostalCode =Transaction Parties : Applicant ZIP/Postal code is mandatory
+error.required.tParties.Applicant.ZIPPostalCodeFormat =Transaction Parties : Applicant Zip/Postal Code format is not valid
+error.required.tParties.Applicant.countryCd =Transaction Parties : Applicant Country is mandatory
+
+error.required.tParties.customer.name =Transaction Parties : Customer/Beneficiary Name is mandatory
+error.required.tParties.customer.address1 =Transaction Parties : Customer/Beneficiary Address1 is mandatory
+error.required.tParties.customer.city =Transaction Parties : Customer/Beneficiary City is mandatory
+error.required.tParties.customer.state =Transaction Parties : Customer/Beneficiary State/Province is mandatory
+error.required.tParties.customer.ZIPPostalCode =Transaction Parties : Customer/Beneficiary ZIP/Postal code is mandatory
+error.required.tParties.customer.ZIPPostalCodeFormat =Transaction Parties : Customer/Beneficiary Zip/Postal Code format is not valid
+error.required.tParties.customer.countryCd =Transaction Parties : Customer/Beneficiary Country is mandatory
+#Surety bond bid messages
+error.required.suretyBondBid.totalPremium = Total Premium is mandatory
+error.required.suretyBondBid.suretyName = Surety name selection is mandatory
+
+#DLOC bid reply messages
+error.required.dlocBidReply.confirmationFeeStructure = Confirmation fee structure selection is mandatory
+error.required.dlocBidReply.pricingExpirationDate = Pricing expiration date is mandatory
+error.required.dlocBidReply.pricingExpirationHour = Pricing expiration hour is mandatory
+error.required.dlocBidReply.pricingExpirationHourInvalid = Pricing expiration hour value is invalid
+error.required.dlocBidReply.pricingExpirationMinute = Pricing expiration minute is mandatory
+error.required.dlocBidReply.pricingExpirationMinuteInvalid = Pricing expiration minute value is invalid
+error.required.dlocBidReply.bankNameLookup = Select bank branch
+
+#Business approver messages
+error.required.requestDetails.businessApprover = Business approver is mandatory
+error.required.requestDetails.submitbusinessApprover = Business approver is mandatory for submit the request
+error.required.requestDetails.prepareBusinessApprover = Business approver is mandatory for Add to bundle
+error.required.requestDetails.approveOrReject = Approve or reject is mandatory
+error.required.requestDetails.reasonForRejection = Reason for return is mandatory
+error.required.requestDetails.trComments = Comments are mandatory
+error.required.requestDetails.treasuryApprover = Treasury approver is mandatory
+error.required.requestDetails.infoTransPlatFormSelection = Information Transmission Platform is mandatory
+error.required.requestDetails.modelNameisMandatory = Model name is mandatory
+error.required.requestDetails.businessReApproval = Business re-approval flag is mandatory
+error.required.requestDetails.businessApproval = Business approval flag is mandatory
+
+error.required.requestDetails.increaseDecrease =Bond Information : Increase/Decrease is mandatory
+error.required.rider.amountIncreaseDecrease = Bond Information : Amount Increase/Decrease is mandatory
+error.required.rider.amountIncreaseDecreaseMustGreaterThanZero = Bond Information : Amount Increase/Decrease is Must be Greater than Zero
+error.required.rider.amountIncreaseDecreaseInvalid =Bond Information : Amount Increase/Decrease is invalid
+error.required.rider.riderRevisedUsdAmount =Bond Information : Revised USD equivalent contract amount is mandatory
+error.required.requestDetails.csoApprovalDateTodayDate = CSO Approval Date should be greater than or equal to today date
+error.required.rider.revisedExpirationDateTodayDate =Expiration Dates : Revised expiration Date should be greater than or equal to today date
+error.required.rider.submitbusinessApprover = Business approver is mandatory for submit surety rider
+
+#APM BUC ADN Update Validation Messages
+error.required.apmDetails.bucAndAdn = Please select atleast one request for BUC and ADN update 
+
+#payment period  Validation Messages
+error.required.firstpaymentperiod.paymentPeriodStartDate=Required
+error.required.firstpaymentperiod.FXRateRevalueDateRange=Revalue Date must be greater than Start Date and less than End Date
+error.required.firstpaymentperiod.paymentPeriodEndDateRange=EndDate must be greater than Start Date
+error.required.firstpaymentperiod.paymentPeriodStartDateRange=should not be any gaps between previous end date and next period start date
+
+#APM Currency Setup Validation Messages
+error.required.apmDetails.currencySetup.required = Required
+error.required.apmDetails.currencySetup.minchar = Minimum 6 Characters
+
+error.required.requestDetails.siteId= Site name is mandatory
+
+error.required.requestDetails.issuanceTypeFlag = Issuance structure is mandatory
+
+error.required.requestDetails.issuanceBankRefNo = Please Enter valid Issuance Bank RefNo.
+error.required.requestDetails.issuanceDate = Please Enter valid Issuance Date.
+error.required.requestDetails.issuanceDesc = Please Enter Issuance Description.
+error.required.requestDetails.issuanceDocument = Please Enter/Copy and Paste the Issuance Document.
+
+#Taxonomy Validation Messages
+error.required.taxonomy.vatTaxesAddAmt = VAT taxes Additional Amount is mandatory
+error.required.taxonomy.stampTaxesAddAmt = Stamp taxes Additional Amount is mandatory
+error.required.taxonomy.incidentalAdminFeeAddAmt = Incidental admin fee Additional Amount is mandatory
+error.required.taxonomy.otherFeeAddAmt = Other Additional Amount is mandatory
+error.required.taxonomy.adjustmentsAddAmt = Adjustments Additional Amount is mandatory
+error.required.taxonomy.comments = Comments is mandatory
+
+error.required.taxonomy.usExpDate = U.S. expiration date is mandatory
+error.required.taxonomy.foreignExpDate = Foreign expiration date is mandatory
+error.required.taxonomy.lastUSPaidDate = Last U.S. paid date is mandatory
+error.required.taxonomy.lastForeignPaidDate = Last foreign paid date is mandatory
+error.required.taxonomy.issuanceDate = Issuance date is mandatory
+error.required.taxonomy.bankReferenceNumber = Bank reference number is mandatory
+error.required.taxonomy.currency = Currency is mandatory
+error.required.taxonomy.osAmountOriginal = O/S amount in original currency is mandatory
+error.required.taxonomy.reasonForChange = Enter reason for change is mandatory
+
+#issuer Validation Messages
+error.required.suretybond.totalpremiumfees = TotalPremium selection is mandatory
+error.required.suretybond.attachmentfields = All fields are mandatory
+error.required.suretybond.issuanceDate= Issuance Date should be greater than Today's date and less than Expiration Date
+error.required.DLOC.issuanceDate= Confirmation Date should be greater than Today's date 
+error.required.suretybond.bankRefNo= Invalid Bank/Surety Reference Number 
+error.required.suretybond.issuanceOptOut= Reason for opting out is mandatory
+error.required.suretybond.issuanceattachment= Document upload/copy paste is mandatory
+error.required.suretybond.suretyId=Surety name is mandatory
+error.required.suretybond.awardOptOut=Reason for return is mandatory
+#closure Validation Messages
+error.required.closureNotes=Closure comments mandatory
+error.required.requestDetails.selectdocument=Please select one document
+error.required.requestDetails.selectedFormatDocument=Format Document not available for this request
+error.required.closure.closureDate=Closure Date is mandatory
+error.required.closure.validateClosureDate = Closure Date must be greater than Issuance Date and less than Expiration Date.
+error.required.closure.validateClosureDateByToday = Closure Date must be less than or equal to today date.
+error.required.closure.closureAttachment= Document upload is mandatory
+error.required.closure.closureUploadDescrition= Closure upload description is mandatory 
+error.required.common.invalidValue = Invalid value
+
+error.required.requestDetails.amdModificationRequired = For Submit Amendment You Must need to modify any of the following fields Expiry Date,Amount,Applicant/ Beneficiary and other changes.
+
+error.required.bidReply.amount = Amount field should allow 14 digits and 2 decimals
+invalid.fieldvalue.requestDetails.bondInfo.warrantyTerm =
+
+error.required.deleteRequest.deleteReason = Delete Reason is mandatory

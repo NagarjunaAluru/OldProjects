@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/ReferenceNumberValidation.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/ReferenceNumberValidation.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd" schemaLocation="MsgHeader.xsd"/>
+	<xs:element name="ReferenceNumberValidation">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Request_Id" minOccurs="0"/>
+				<xs:element ref="Status_Message" minOccurs="0"/>
+				<xs:element ref="Issuance_Doc_Type_Id" minOccurs="0"/>
+				<xs:element ref="Reference_Number" minOccurs="0"/>
+				<xs:element ref="ns0:Msg_Header" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Status_Message" type="xs:string"/>
+	<xs:element name="Issuance_Doc_Type_Id" type="xs:integer"/>
+	<xs:element name="Reference_Number" type="xs:string"/>
+	<xs:element name="Request_Id" type="xs:integer"/>
+</xs:schema>

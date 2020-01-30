@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/reports
+END
+averageFeePaidReport.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/reports/averageFeePaidReport.jsp
+END
+ecsoReport.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/reports/ecsoReport.jsp
+END
+contigentReport.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/reports/contigentReport.jsp
+END
+feeProjectionReport.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/reports/feeProjectionReport.jsp
+END
+siteSelectionReports.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/reports/siteSelectionReports.jsp
+END
+addLegalEntity.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/reports/addLegalEntity.jsp
+END
+addCSOEntity.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/reports/addCSOEntity.jsp
+END
+addValueSegments.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/reports/addValueSegments.jsp
+END
+feeQuotationReport.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/reports/feeQuotationReport.jsp
+END
+bankSelectionReports.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/reports/bankSelectionReports.jsp
+END
+issuanceExpirationReport.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/reports/issuanceExpirationReport.jsp
+END
+gcfoReport.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/reports/gcfoReport.jsp
+END
+cycleTimeReport.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/reports/cycleTimeReport.jsp
+END
+userReport.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/reports/userReport.jsp
+END
+feesPaidReport.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/reports/feesPaidReport.jsp
+END
+agingReport.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/reports/agingReport.jsp
+END
+bidSuccessReport.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/reports/bidSuccessReport.jsp
+END

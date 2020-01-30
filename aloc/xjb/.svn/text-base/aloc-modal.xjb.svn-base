@@ -1,0 +1,39 @@
+<jaxb:bindings xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" 
+				jaxb:version="2.0" 
+				xmlns:xjc= "http://java.sun.com/xml/ns/jaxb/xjc" 
+				jaxb:extensionBindingPrefixes="xjc"
+				xmlns:xs="http://www.w3.org/2001/XMLSchema">
+        
+        
+        <jaxb:bindings schemaLocation="../xsd/RequestDetails/RequestDetails.xsd" node="/xs:schema">
+        	 <jaxb:globalBindings>
+        	 	<xjc:javaType name="java.util.Calendar" xmlType="xs:dateTime" adapter="com.hydus.hwf.jaxb.adapters.XMLDatetimeAsCalendarAdapter" />
+        	 	<xjc:javaType name="java.util.Calendar" xmlType="xs:date" adapter="com.hydus.hwf.jaxb.adapters.XMLDateAsCalendarAdapter" />
+				<xjc:superClass name="com.hydus.hwf.security.JAXBObjectSecureSerializer" />
+				<xjc:serializable uid="1" /> 
+                <xjc:simple/> 
+       		 </jaxb:globalBindings> 
+        </jaxb:bindings>
+</jaxb:bindings> 
+
+
+<!--
+<jxb:bindings version="2.0"
+	xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	
+	<jxb:globalBindings 
+		fixedAttributeAsConstantProperty="true" 
+	/>
+  	
+  	
+  	<jxb:bindings schemaLocation="../xsd/UserDataRequest.xsd" node="/xs:schema/xs:element[@name='UserData']">
+       <jxb:class name="UserDataRequest" />
+    </jxb:bindings>
+  	
+  	<jxb:bindings schemaLocation="../xsd/UserDataResponse.xsd" node="/xs:schema/xs:element[@name='UserData']">
+       <jxb:class name="UserDataResponse" />
+    </jxb:bindings>
+
+</jxb:bindings>
+	    -->

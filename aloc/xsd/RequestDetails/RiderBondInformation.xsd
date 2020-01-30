@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/RiderBondInformation.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/RiderBondInformation.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="RiderBondInformation">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Op_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="Original_Bond_Amt" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Current_Bond_Amt" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Revised_Bond_Amt" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Operation" type="xs:string" minOccurs="0"/>
+				<xs:element name="Amt_Of_Increase_Or_Decrease" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Original_Contract_Amt" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Revised_Contract_Amt" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Revised_USDEqui_Contract_Amt" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Validation_UsdAmount" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Change_Flag" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

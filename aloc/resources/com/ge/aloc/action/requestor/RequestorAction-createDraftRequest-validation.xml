@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>	
+	 <field name="siteId">
+	 	<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required.requestDetails.siteId" />
+		</field-validator> 
+	</field>
+
+    <field name="requestDetails.transactionParties.instrumentPurposeId">
+      <field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requestDetails.instrumentTypeId != 1 && requestDetails.instrumentTypeId != 2) || (requestDetails.transactionParties.instrumentPurposeId != "" && requestDetails.transactionParties.instrumentPurposeId != null))]]>
+      	</param>
+			<message key="error.required.requestDetails.instrumentPurposeId" />
+	  </field-validator>
+	</field>
+    <field name="businessContactPerson">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ (requestDetails.instrumentTypeId != 4 ) || (businessContactPerson != null && businessContactPerson != "" && businessContactPersonSelection != null && businessContactPersonSelection != "") || ((businessContactPerson == null || businessContactPerson.trim() == "") && businessContactPersonSelection!=null && businessContactPersonSelection.trim() !="") ]]>
+			</param>
+			<message key="error.required.requestDetails.contactPerson"></message>
+		</field-validator>
+	</field>
+	 <field name="requestDetails.bondDetails.bondTypeId">
+      <field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requestDetails.instrumentTypeId != 3) || (requestDetails.bondDetails.bondTypeId != "" && requestDetails.bondDetails.bondTypeId != null))]]>
+      	</param>
+			<message key="error.required.requestDetails.bondType" />
+	  </field-validator>
+	</field>
+	
+	<field name="requestDetails.bondDetails.subBondTypeId">
+		<field-validator type="fieldexpression" >
+		<param name="expression">
+        	<![CDATA[((requestDetails.instrumentTypeId != 3) || ((requestDetails.bondDetails.bondTypeId != "2") && (requestDetails.bondDetails.bondTypeId != "3") && (requestDetails.bondDetails.bondTypeId != "4"))) || (requestDetails.bondDetails.subBondTypeId != null &&  requestDetails.bondDetails.subBondTypeId != "")]]>
+      	</param>
+		<message key="error.required.requestDetails.bondSubType" />
+		</field-validator>
+	</field>
+</validators>

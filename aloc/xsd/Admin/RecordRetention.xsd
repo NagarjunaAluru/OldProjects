@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/Admin/RecordRetention.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ALOC/Admin/RecordRetentionList.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/Admin/RecordRetention.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd" schemaLocation="../RequestDetails/MsgHeader.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/Admin/RecordRetentionList.xsd" schemaLocation="RecordRetentionList.xsd"/>
+	<xs:element name="RecordRetention">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Retention_Management_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Years_After_Expiry" type="xs:int" minOccurs="0"/>
+				<xs:element name="Schedule_Frequency_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Schedule_Frequency_ID" type="xs:int" minOccurs="0"/>
+				<xs:element name="OneTime_RunDate" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Approximate_NumberOf_Records" type="xs:string" minOccurs="0"/>
+				<xs:element ref="Retention_Recipient" minOccurs="0"/>
+				<xs:element name="DateRangeOf_Records_Purged" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="NextRun_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Status" type="xs:string" minOccurs="0"/>
+				<xs:element name="Reject_Reason" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns0:Msg_Header" minOccurs="0"/>
+				<xs:element ref="ns1:RecordRetentionList" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Min_Exp_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Record_Retention_AuditLog" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Updated_Dt" type="xs:dateTime" minOccurs="0"/>
+							<xs:element name="Numberof_Years" type="xs:int" minOccurs="0"/>
+							<xs:element name="Schedule_Frequency" type="xs:string" minOccurs="0"/>
+							<xs:element name="Frequency_Months" type="xs:int" minOccurs="0"/>
+							<xs:element name="Onetime_Rundate" type="xs:dateTime" minOccurs="0"/>
+							<xs:element name="Approver_Action" type="xs:string" minOccurs="0"/>
+							<xs:element name="Reason_Return" type="xs:string" minOccurs="0"/>
+							<xs:element name="Approver_Lastname" type="xs:string" minOccurs="0"/>
+							<xs:element name="Approver_Firstname" type="xs:string" minOccurs="0"/>
+							<xs:element name="Audit_Modifier_Firstname" type="xs:string" minOccurs="0"/>
+							<xs:element name="Audit_Modifier_Lastname" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Retention_Recipient">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Recipient_First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Recipient_Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Recipient_Sso_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Recipient_Email" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

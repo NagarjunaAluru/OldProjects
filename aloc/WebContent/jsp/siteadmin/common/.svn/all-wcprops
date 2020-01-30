@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/siteadmin/common
+END
+createDelegateConfig.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/siteadmin/common/createDelegateConfig.jsp
+END
+siteDelegateConfig.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/siteadmin/common/siteDelegateConfig.jsp
+END
+showChildSites.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/siteadmin/common/showChildSites.jsp
+END
+delegates.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/siteadmin/common/delegates.jsp
+END
+createSiteDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/siteadmin/common/createSiteDetails.jsp
+END
+currentDelegates.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/siteadmin/common/currentDelegates.jsp
+END
+delegationConfig.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/siteadmin/common/delegationConfig.jsp
+END
+addDelegationGroup.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/siteadmin/common/addDelegationGroup.jsp
+END
+leDetailsHeaderSite.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/siteadmin/common/leDetailsHeaderSite.jsp
+END
+customizedSiteRereferences.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/siteadmin/common/customizedSiteRereferences.jsp
+END
+createAvailableApprovers.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/siteadmin/common/createAvailableApprovers.jsp
+END
+createCopyCommon.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/siteadmin/common/createCopyCommon.jsp
+END
+modifySiteReadonly.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/siteadmin/common/modifySiteReadonly.jsp
+END
+bankFeePaymentSetup.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/siteadmin/common/bankFeePaymentSetup.jsp
+END
+businessAdminSections.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/siteadmin/common/businessAdminSections.jsp
+END
+defaultDeliveryInstructions.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/siteadmin/common/defaultDeliveryInstructions.jsp
+END
+bankSwiftConfig.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/siteadmin/common/bankSwiftConfig.jsp
+END
+siteSelectedApprovers.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/siteadmin/common/siteSelectedApprovers.jsp
+END
+showGroups.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/siteadmin/common/showGroups.jsp
+END
+delegationIntrument.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/siteadmin/common/delegationIntrument.jsp
+END
+siteSummary.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/siteadmin/common/siteSummary.jsp
+END

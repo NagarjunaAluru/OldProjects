@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/Search.xsd"
+	 xmlns:ns2="http://treasury.ge.com/schemas/ALOC/RequestDetails/SearchReqDetails.xsd"
+	 xmlns:ns5="http://treasury.ge.com/schemas/ALOC/RequestDetails/SearchBankDetails.xsd"
+	 xmlns:ns6="http://treasury.ge.com/schemas/ALOC/RequestDetails/SearchPaymentDetails.xsd"
+	 xmlns:ns7="http://treasury.ge.com/schemas/ALOC/RequestDetails/SearchDates.xsd"
+	 xmlns:ns8="http://treasury.ge.com/schemas/ALOC/RequestDetails/SearchInstrDetails.xsd"
+	 xmlns:ns10="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 xmlns:ns11="http://treasury.ge.com/schemas/ALOC/RequestDetails/RequestDetails.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/DashBoard.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/Search.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/SearchReqDetails.xsd" schemaLocation="SearchReqDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/SearchBankDetails.xsd" schemaLocation="SearchBankDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/SearchPaymentDetails.xsd" schemaLocation="SearchPaymentDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/SearchDates.xsd" schemaLocation="SearchDates.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/SearchInstrDetails.xsd" schemaLocation="SearchInstrDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd" schemaLocation="MsgHeader.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/RequestDetails.xsd" schemaLocation="RequestDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/DashBoard.xsd" schemaLocation="DashBoard.xsd"/>
+	<xs:element name="Search">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Status" type="xs:string" minOccurs="0"/>
+				<xs:element name="Applicant_Or_Principal_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Beneficiary_Or_Obligee_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Tri_Party_Applicant_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Applicant_Country_Cd" type="xs:string" minOccurs="0"/>
+				<xs:element name="Beneficiary_Country_Cd" type="xs:string" minOccurs="0"/>
+				<xs:element name="Pole" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Tri_Party_Applicant_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Private_Label_Applicant_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Business_Contact_FirstName" type="xs:string" minOccurs="0"/>
+				<xs:element name="Business_Contact_LastName" type="xs:string" minOccurs="0"/>
+                <xs:element name="Reference_Value" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns2:SearchReqDetails" minOccurs="0"/>
+				<xs:element ref="ns5:SearchBankDetails" minOccurs="0"/>
+				<xs:element ref="ns7:SearchDates" minOccurs="0"/>
+				<xs:element ref="ns8:SearchInstrDetails" minOccurs="0"/>
+				<xs:element ref="ns6:SearchPaymentDetails" minOccurs="0"/>
+				<xs:element ref="ns11:RequestDetails" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns10:Msg_Header" minOccurs="0"/>
+				<xs:element ref="ns0:DashBoard" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

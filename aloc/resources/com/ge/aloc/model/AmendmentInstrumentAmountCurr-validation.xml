@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<field name="operation">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+			<![CDATA[((amtOfIncreaseOrDecrease == null) || (operation != null && operation !=""))]]>
+			</param>
+			<message key="error.required.requestDetails.amendment.operation" />
+		</field-validator>
+	</field>
+	<field name="amtOfIncreaseOrDecrease">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+			<![CDATA[((operation == null || operation == '') || (amtOfIncreaseOrDecrease != null))]]>
+			</param>
+			<message key="error.required.requestDetails.amendment.amtOfIncreaseOrDecrease" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+			<![CDATA[((operation == null || operation == '') || (amtOfIncreaseOrDecrease > 0))]]>
+			</param>
+			<message key="error.required.requestDetails.amendment.amtOfIncDecMustbeGreaterThanZero" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+			<![CDATA[((operation != 'DECREASE') || (amtOfIncreaseOrDecrease.compareTo(currentInstrumentAmt) != 1))]]>
+			</param>
+			<message key="error.required.requestDetails.amendment.amtOfIncDecnotValid" />
+		</field-validator>
+	</field>
+	<field name="revisedUSDEquiAmt">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+			<![CDATA[((amtOfIncreaseOrDecrease == null && (operation == null || operation == '')) || (revisedUSDEquiAmt != null))]]>
+			</param>
+			<message key="error.required.requestDetails.amendment.revisedUsdAmount" />
+		</field-validator>
+	</field>
+	<field name="newInstrumentCurrCode">
+		<field-validator type="requiredstring">
+			<message key="error.required.requestDetails.amendment.newInstrCurr" />
+		</field-validator>
+	</field>
+	
+	
+	<field name="revisedInstrumentAmt">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[( ((@com.ge.aloc.util.ALOCCommonHelper@getStageId())!=5) || (revisedInstrumentAmt !=null) )]]>
+			</param>
+			<message key="error.required.requestDetails.amendment.revisedInstrumentAmt" />
+		</field-validator>
+	</field>
+	
+	<field name="originalInstrumentAmt">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[( ((@com.ge.aloc.util.ALOCCommonHelper@getStageId())!=5) || (originalInstrumentAmt !=null) )]]>
+			</param>
+			<message key="error.required.requestDetails.amendment.originalInstrumentAmt" />
+		</field-validator>
+	</field>
+	
+</validators>

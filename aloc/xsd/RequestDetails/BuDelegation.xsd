@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/BuDelegation.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/BuDelegation.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="BuDelegation">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Bu_Approver" minOccurs="0"/>
+				<xs:element name="Save_As_Model" type="xs:string" minOccurs="0"/>
+				<xs:element name="Model_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Required_Appr_Levels" type="xs:int" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Bu_Approver">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Approver_Level" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Approver_Sso" type="xs:string" minOccurs="0"/>
+				<xs:element name="Approver_First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Approver_Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Action_Status" type="xs:string" minOccurs="0"/>
+				<xs:element name="Group_Name" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

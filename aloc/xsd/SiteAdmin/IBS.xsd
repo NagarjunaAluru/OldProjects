@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/SiteAdmin/IBS.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/SiteAdmin/IBS.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="IBS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ADN_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="BUC_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="IBS_Message_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="IBS_Message" type="xs:string" minOccurs="0"/>
+				<xs:element name="Validation_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Contact_Person_Details" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="User_SSO" type="xs:string" minOccurs="0"/>
+							<xs:element name="First_Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="Last_Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="Phone" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

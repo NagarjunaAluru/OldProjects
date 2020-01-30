@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/impl/admin
+END
+BlockBUCManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/impl/admin/BlockBUCManager.java
+END
+PoleNameMgmtManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/impl/admin/PoleNameMgmtManager.java
+END
+SwiftMessageMonitoringManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/impl/admin/SwiftMessageMonitoringManager.java
+END
+AmendmentWorkflowMgmtManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/impl/admin/AmendmentWorkflowMgmtManager.java
+END
+ChangeRequestOwnershipManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/impl/admin/ChangeRequestOwnershipManager.java
+END
+RecordsRetentionMgmtManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/impl/admin/RecordsRetentionMgmtManager.java
+END
+ReimbursementAgreementMgmtManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/impl/admin/ReimbursementAgreementMgmtManager.java
+END
+StandardFormatMgmtManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/impl/admin/StandardFormatMgmtManager.java
+END
+UserAnnouncementMgmtManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/impl/admin/UserAnnouncementMgmtManager.java
+END
+SuretyNameMgmtManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/impl/admin/SuretyNameMgmtManager.java
+END

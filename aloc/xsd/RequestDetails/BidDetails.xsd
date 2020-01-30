@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/BidDetails.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/AddressDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/BidDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/AddressDetails.xsd" schemaLocation="AddressDetails.xsd"/>
+	<xs:element name="BidDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Action" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Swfit_flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Apprx_US_Lifetime_Fees" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Apprx_Foreign_Lifetime_Fees" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Apprx_Amendment_Fees" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Apprx_Other_Fees" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Issuing_Br_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bid_Exp_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Bid_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="RelationShip_Bank" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuing_Bank_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bankbid_Reply_comments" type="xs:string" minOccurs="0"/>
+				<xs:element name="Confirmation_Fees" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="RelationShip_Surety" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuing_Surety_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Premium_Fees" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Change_For_Rider" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Other_Fees" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Surety_Comments" type="xs:string" minOccurs="0"/>
+				<xs:element name="Total_Fees" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Bid_Reply_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Bid_Action" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bid_Action_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Bid_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank_Mdm_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element ref="ns0:AddressDtls" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

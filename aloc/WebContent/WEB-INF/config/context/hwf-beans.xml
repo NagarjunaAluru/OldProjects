@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"	
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd	
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-2.5.xsd
+	http://www.springframework.org/schema/util 
+	http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+	
+	<context:property-placeholder location="classpath:/aloc.properties"/>
+	<!-- =======================================================================================================================
+													Transport Beans
+	======================================================================================================================== -->
+
+	<!-- <bean id="applicationServiceTransport" class="com.hydus.hwf.transport.jms.QueueTransport"> -->
+	<bean id="applicationServiceTransport" class="com.ge.aloc.performance.PerfQueueTransport">
+		<property name="configuration">
+			<bean class="com.hydus.hwf.transport.jms.QueueTransportConfiguration">
+				<property name="providerContextFactory" value="com.tibco.tibjms.naming.TibjmsInitialContextFactory" />
+				<property name="serverURL" value="${aloc.ems.serverURL}"/>
+				<property name="jndiUserName" value="${aloc.ems.jndi.username}" />
+				<property name="jndiPassword" value="${aloc.ems.jndi.password}" />
+				<property name="queueConnectionFactory" value="${aloc.ems.queueConnectionFactory}" />
+				<property name="jmsUserName" value="${aloc.ems.jms.username}" />
+				<property name="jmsPassword" value="${aloc.ems.jms.password}" />
+				<property name="destination" value="${aloc.ems.jms.queueName}" />
+				<property name="messageExpiry" value="${aloc.ems.jms.messageExpiry}" />
+				<property name="serviceTimeOut" value="${aloc.ems.jms.serviceTimeOut}" />
+				<property name="maxRetryCount" value="${aloc.ems.jms.maxRetryCount}" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="userinfoServiceTransport" class="com.hydus.hwf.transport.jms.QueueTransport">
+		<property name="configuration">
+			<bean class="com.hydus.hwf.transport.jms.QueueTransportConfiguration">
+				<property name="providerContextFactory" value="com.tibco.tibjms.naming.TibjmsInitialContextFactory" />
+				<property name="serverURL" value="${aloc.ems.serverURL}" />
+				<property name="jndiUserName" value="${aloc.ems.jndi.username}" />
+				<property name="jndiPassword" value="${aloc.ems.jndi.password}" />
+				<property name="queueConnectionFactory" value="${aloc.ems.queueConnectionFactory}" />
+				<property name="jmsUserName" value="${aloc.ems.jms.username}" />
+				<property name="jmsPassword" value="${aloc.ems.jms.password}" />
+				<property name="destination" value="${aloc.ems.userInfo.jms.queueName}" />
+				<property name="messageExpiry" value="${aloc.ems.jms.messageExpiry}" />
+				<property name="serviceTimeOut" value="${aloc.ems.jms.serviceTimeOut}" />
+				<property name="maxRetryCount" value="${aloc.ems.jms.maxRetryCount}" />
+			</bean>
+		</property>
+	</bean>
+	
+	<!-- =======================================================================================================================
+													Service Stub Beans
+	======================================================================================================================== -->
+	 <bean id="applicationServiceStub" class="com.hydus.hwf.bw.service.BWServiceStub">
+	 	<property name="transport" ref="applicationServiceTransport" />
+	 	<property name="bindingService">
+	 		<bean class="com.hydus.hwf.binding.xml.JAXBService">
+	 			<property name="packages" value="com.hydus.hwf.bw.messages.envelop:com.ge.aloc.model" />
+	 		</bean>
+	 	</property>
+	 	<property name="faultHandler">
+	 		<bean class="com.hydus.hwf.bw.service.DefaultFaultHandler" />
+	 	</property>
+	 </bean>
+	 
+	 <bean id="userInfoServiceStub" class="com.hydus.hwf.bw.service.BWServiceStub">
+	 	<property name="transport" ref="userinfoServiceTransport" />
+	 	<property name="bindingService">
+	 		<bean class="com.hydus.hwf.binding.xml.JAXBService">
+	 			<property name="packages" value="com.hydus.hwf.bw.messages.envelop.userinfo" />
+	 		</bean>
+	 	</property>
+	 	<property name="faultHandler">
+	 		<bean class="com.hydus.hwf.bw.service.DefaultFaultHandler" />
+	 	</property>
+	 </bean>
+	 
+	 <!-- =======================================================================================================================
+													Service Client Beans
+	======================================================================================================================== -->
+
+	 <bean id="applicationServiceClient" class="com.hydus.hwf.bw.service.ApplicationServiceClient">
+	 	<property name="serviceStub" ref="applicationServiceStub" />
+	 </bean>
+	 
+	 <bean id="userInfoServiceClient" class="com.hydus.hwf.bw.service.UserInformationServiceClient">
+	 	<property name="serviceStub" ref="userInfoServiceStub" />
+	 	<property name="appId" value="ALOC" />
+	 </bean>
+	 
+	<!-- =======================================================================================================================
+													Servlet Filter Beans
+	======================================================================================================================== -->
+	<!-- Authentication Servlet Filters  -->
+	<bean id="AuthenticationFilter" class="com.hydus.hwf.security.auth.JaasAuthenticationFilter">
+	 	<property name="loginPage" value="/int/login.action" />
+	 	<property name="applicationName" value="aloc-int" />
+	 </bean>
+	 
+	 <bean id="ExtAuthenticationFilter" class="com.hydus.hwf.security.auth.JaasAuthenticationFilter">
+	 	<property name="loginPage" value="/ext/public/login.action" />
+	 	<property name="applicationName" value="aloc-ext" />
+	 </bean>
+	 
+	 <!-- Authorization Servlet Filters  -->
+	 <bean id="URLAuthorizationFilter" class="com.hydus.hwf.security.auth.JaasUrlAuthorizationFilter" />
+	 
+	 <bean id="ExtURLAuthorizationFilter" class="com.hydus.hwf.security.auth.JaasUrlAuthorizationFilter" />
+	 
+	 <!-- UserContext Filter -->
+	 <bean id="UserContextFilter" class="com.hydus.hwf.context.JAASUserContextFilter" />
+	 
+	  <!-- =======================================================================================================================
+													Attachment Related Beans
+	======================================================================================================================== -->
+	 
+	 <!-- Attachments Component -->
+	<bean id="GELibRepository" class="com.ge.aloc.util.ALOCGELibRepository">
+		<property name="applicationId" value="${aloc.gelib.applicationId}" />
+		<property name="defaultUserId" value="${aloc.gelib.app.userId}" />
+		<property name="applicationPassword" value="${aloc.gelib.app.password}" />
+		<property name="localDirectory" value="${aloc.gelib.localDirectory}"/>
+		<property name="defaultFolderId" value="${aloc.gelib.defaultFolderId}"/>
+	</bean>
+	
+	<bean id="attachmentManager" class="com.hydus.hwf.ge.attachments.AttachmentManager">
+		<property name="repository" ref="GELibRepository" />
+	</bean>
+	
+	 <!-- =======================================================================================================================
+													Miscellaneous Beans
+	======================================================================================================================== -->
+	
+	<!-- Global Error Handler -->
+	<bean id="globalErrorHandler" class="com.ge.aloc.common.util.ALOCErrorHandler">
+	  <property name="loggerName" value="com.ge.aloc.errorhandler" />
+	  <property name="bundleName" value="alocerrors" />
+	</bean>
+	 
+	 <!-- Interceptor for method entry and exit logs -->
+	 <bean id="methodDebugInterceptor" class="com.hydus.hwf.spring.interceptors.MethodDebugLoggingInterceptor"/>
+	 
+	<!-- Servlet Context Attributes -->
+	 <bean class="org.springframework.web.context.support.ServletContextAttributeExporter">
+		<property name="attributes">
+			<map>
+				<entry key="com.hydus.hwf.exceptions.IErrorHandler">
+					<ref bean="globalErrorHandler" />
+				</entry>
+				<entry key="aloc-int:com.hydus.hwf.bw.service.IUserInformationServiceClient">
+					<ref bean="userInfoServiceClient" />
+				</entry>
+			</map>
+		</property>
+	</bean> 
+</beans>
+

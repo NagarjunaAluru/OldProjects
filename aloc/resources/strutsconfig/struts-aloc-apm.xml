@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="apm" extends="struts-aloc-base" namespace="/int/apm">
+	
+		<action name="*FeeSummary" class="apmDetailsAction" method="{1}FeeSummaryDetails">
+                <result name="success">/jsp/requestor/apm/feeSummaryDetails.jsp</result>
+        </action>
+		<action name="openFeePaymentRun" class="apmDetailsAction" method="openFeePaymentRun">
+			<result name="success">/jsp/requestor/apm/apmFeePaymentRun.jsp</result>
+		</action>
+		
+		<action name="getCalculateFeesDetails" class="apmDetailsAction" method="getCalculateFeesDetails">
+			<result name="success">/jsp/common/request/apm/apmCalculateFeeTable.jsp</result>
+		</action>
+		
+		<action name="openFXRateHistory" class="apmDetailsAction" method="openFXRateHistory">
+			<result name="success">/jsp/common/request/apm/fxRateperiodSelect.jsp</result>
+		</action>
+		
+		
+		<action name="getYearlist" class="apmDetailsAction" method="getYearlist">
+			<result name="success">/jsp/requestor/apm/apmFXRateHistoryandCurrencySetup.jsp</result>
+		</action>
+		
+		<action name="getFxRates" class="apmDetailsAction" method="getFxRates">
+			<result name="success">/jsp/common/request/apm/showFXRates.jsp</result>
+		</action>
+		
+		<!-- BUC ADN Update Start  -->
+		<action name="getAllBUCADNDetails" class="apmDetailsAction" method="getAllBUCADNDetails">
+			<result name="success">/jsp/common/request/apm/bucADNupdateRequest.jsp</result>
+		</action>
+		
+		<action name="getBUCADNDetails" class="apmDetailsAction" method="getBUCADNDetails">
+			<result name="success">/jsp/common/request/apm/bucADNupdateRequest.jsp</result>
+		</action>
+		
+		<action name="updateBUCADNDetails" class="apmDetailsAction" method="updateBUCADNDetails">
+			<result name="input">/jsp/common/request/apm/bucADNupdateRequest.jsp</result>
+				<result name="success" type="redirectAction">
+				<param name="actionName">getFeePaymentRunCalculateFees</param>
+				<param name="namespace">/int/apm</param>
+			</result>
+		</action>
+		
+		<action name="getFeePaymentRunCalculateFees" class="apmDetailsAction" method="getFeePaymentRunCalculateFees">
+			<result name="success">/jsp/requestor/apm/apmFeePaymentRun.jsp</result>
+		</action>
+		<!-- BUC ADN Update End -->
+		
+		<action name="getCurrencySetUpDetails" class="apmDetailsAction" method="getCurrencySetUpDetails">
+			<result name="success">/jsp/requestor/apm/apmFXRateHistoryandCurrencySetup.jsp</result>
+		</action>
+						
+		<action name="openPaymentPeriod" class="apmDetailsAction" method="openPaymentPeriod">
+			<result name="success">/jsp/common/request/apm/paymentPeriod.jsp</result>
+		</action>
+		
+		<action name="addPaymentPeriodRow" class="apmDetailsAction" method="addPaymentPeriodRow">
+			<result name="success">/jsp/common/request/apm/addPaymentPeriodRow.jsp</result>
+		</action>
+		
+		<action name="editPaymentPeriodRow" class="apmDetailsAction" method="editPaymentPeriodRow">
+			<result name="success">/jsp/common/request/apm/addPaymentPeriodRow.jsp</result>
+		</action>
+		
+		<action name="savePaymentPeriod" class="apmDetailsAction" method="savePaymentPeriod">
+			<result name="success">/jsp/common/request/apm/readOnlyPaymentPeriodRow.jsp</result>
+			<result name="input">/jsp/common/request/apm/addPaymentPeriodRow.jsp</result>
+		</action>
+		
+		<action name="savePaymentPeriodTwo" class="apmDetailsAction" method="savePaymentPeriodTwoRow">
+			
+		</action>
+		
+		<action name="cancelPaymentPeriod" class="apmDetailsAction" method="cancelPaymentPeriod">
+			<result name="success">/jsp/common/request/apm/readOnlyPaymentPeriodRow.jsp</result>
+		</action>
+		
+		<action name="cancelPaymentPeriodTwoRow" class="apmDetailsAction" method="cancelPaymentPeriodTwoRow">
+			<result name="success">/jsp/common/request/apm/readOnlyPaymentPeriodRow.jsp</result>
+		</action>
+		
+		
+		<action name="addCurrencyRow" class="apmDetailsAction" method="addCurrencyRow">
+			<result name="success">/jsp/common/request/apm/addCurrencySetupRow.jsp</result>
+		</action>
+		
+		<action name="editCurrencyRow" class="apmDetailsAction" method="editCurrencyRow">
+			<result name="success">/jsp/common/request/apm/addCurrencySetupRow.jsp</result>
+		</action>
+		
+		<action name="cancelCurrencyRow" class="apmDetailsAction" method="cancelCurrencyRow">
+			<result name="success">/jsp/common/request/apm/readOnlyCurrencySetupRow.jsp</result>
+		</action>
+		
+		<action name="saveCurrencySetRow" class="apmDetailsAction" method="saveCurrencySetRow">
+			<result name="input">/jsp/common/request/apm/addCurrencySetupRow.jsp</result>
+			<result name="success">/jsp/common/request/apm/currencySetup.jsp</result>
+		</action>
+		
+		<action name="deleteCurrencyRow" class="apmDetailsAction" method="deleteCurrencyRow">
+			<result name="success">/jsp/common/request/apm/currencySetup.jsp</result>
+		</action>		
+	
+		
+		<action name="downloadResultExport" class="apmDetailsAction" method="downloadFXRates" />
+		
+		<action name="downloadAPMAttachment" class="apmDetailsAction" method="downloadAPMAttachment" >	
+		
+		 <result name="download" type="stream">
+			    <param name="contentDisposition">attachment;filename=report.xls</param>
+			    <param name="contentType">application/vnd.ms-excel</param>
+			    <param name="inputName">inputStream</param>
+			    <param name="bufferSize">1024</param>
+		 </result>
+		</action>
+		
+		<action name="downloadCSVResultExport" class="apmDetailsAction" method="downloadToCSV">
+		 <result name="download" type="stream">
+			    <param name="contentDisposition">attachment;filename=report.xls</param>
+			    <param name="contentType">application/vnd.ms-excel</param>
+			    <param name="inputName">inputStream</param>
+			    <param name="bufferSize">1024</param>
+		 </result>
+		</action>
+		
+		<action name="creditAndCarryOversExport" class="apmDetailsAction" method="creditAndCarryOversExport">
+			<result name="download" type="stream">
+			    <param name="contentDisposition">attachment;filename=report.xls</param>
+			    <param name="contentType">application/vnd.ms-excel</param>
+			    <param name="inputName">inputStream</param>
+			    <param name="bufferSize">1024</param>
+			</result>
+		</action>
+		
+		<action name="viewFullRequest" class="approverAction" method="openRequest">
+			<result name="BankGuaranteeRequestPage">/jsp/requestor/apm/bgAndLocAPMRequest.jsp</result>
+			<result name="LOCRequestPage">/jsp/requestor/apm/bgAndLocAPMRequest.jsp</result>
+		</action>
+		
+		<action name="getFeeSummaryQuickView" class="apmDetailsAction" method="getFeeSummaryDetails">
+                <result name="success">/jsp/common/request/apm/feeSummaryQuickView.jsp</result>
+        </action>
+		
+		<action name="expandFeeTableDetails" class="apmDetailsAction" method="expandFeeTableDetails">
+                <result name="success">/jsp/common/request/apm/calculateFeeExpandTable.jsp</result>
+        </action>
+        
+        <action name="expandFeeTableDetails" class="apmDetailsAction" method="expandFeeTableDetails">
+                <result name="success">/jsp/common/request/apm/calculateFeeExpandTable.jsp</result>
+        </action>
+        
+         <action name="sendInvoices" class="apmDetailsAction" method="sendInvoices">
+         		<result name="success">/jsp/common/request/apm/apmThirdPartyStatusMsg.jsp</result>
+         </action>
+         <action name="sendWebCashFiles" class="apmDetailsAction" method="sendWebCashFiles">
+         		<result name="success">/jsp/common/request/apm/apmThirdPartyStatusMsg.jsp</result>
+         </action>
+         <action name="completePayment" class="apmDetailsAction" method="completePayment">
+         		<result name="success">/jsp/common/request/apm/apmThirdPartyStatusMsg.jsp</result>
+         </action>
+               
+	</package>
+</struts>

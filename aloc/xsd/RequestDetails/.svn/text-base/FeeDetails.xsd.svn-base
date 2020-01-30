@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/APM/FeeDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/APM/FeeDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="FeeDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Line_Item_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Start_Period" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="End_Period" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Number_Of_Days" type="xs:integer" minOccurs="0"/>
+				<xs:element name="BPs_Rate_In_Arrears" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="BPs_Rate_In_Advance" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Flat_Fee_PA" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Flat_Fee_Life" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Partial_Period_Amount" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="BPs_Rate_In_Arrears_String" type="xs:string" minOccurs="0"/>
+				<xs:element name="BPs_Rate_In_Advance_String" type="xs:string" minOccurs="0"/>
+				<xs:element name="Flat_Fee_PA_String" type="xs:string" minOccurs="0"/>
+				<xs:element name="Flat_Fee_Life_String" type="xs:string" minOccurs="0"/>
+				<xs:element name="Partial_Period_Amount_String" type="xs:string" minOccurs="0"/>
+				<xs:element name="Amendment" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

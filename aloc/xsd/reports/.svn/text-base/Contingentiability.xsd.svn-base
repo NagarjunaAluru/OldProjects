@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="Resultsets">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ResultSet1" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Record1" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="SiteID" type="xs:string" minOccurs="0"/>
+										<xs:element name="Site" type="xs:string" minOccurs="0"/>
+										<xs:element name="ALOCRecord" type="xs:string" minOccurs="0"/>
+										<xs:element name="BankReference" type="xs:string" minOccurs="0"/>
+										<xs:element name="BeneficiaryObligeeName" type="xs:string" minOccurs="0"/>
+										<xs:element name="BeneficiaryObligeeCountry" type="xs:string" minOccurs="0"/>
+										<xs:element name="ApplicantPrincipal" type="xs:string" minOccurs="0"/>
+										<xs:element name="ThirdpartyApplicant" type="xs:string" minOccurs="0"/>
+										<xs:element name="InstrumentCurrency" type="xs:string" minOccurs="0"/>
+										<xs:element name="InstrumentAmount" type="xs:string" minOccurs="0"/>
+										<xs:element name="USDAmount" type="xs:string" minOccurs="0"/>
+										<xs:element name="IssuingBankBranch" type="xs:string" minOccurs="0"/>
+										<xs:element name="FXRateBloomberg" type="xs:string" minOccurs="0"/>
+										<xs:element name="IssuanceDateMMDDYYYY" type="xs:string" minOccurs="0"/>
+										<xs:element name="USExpirationDateMMDDYYYY" type="xs:string" minOccurs="0"/>
+										<xs:element name="ForeignExpDateMMDDYYYY" type="xs:string" minOccurs="0"/>
+										<xs:element name="EconomicExpDateMMDDYYYY" type="xs:string" minOccurs="0"/>
+										<xs:element name="ISSUER" type="xs:string" minOccurs="0"/>
+										<xs:element name="CurrentContactNameSSO" type="xs:string" minOccurs="0"/>
+										<xs:element name="BUC" type="xs:string" minOccurs="0"/>
+										<xs:element name="A.D.N" type="xs:string" minOccurs="0"/>
+										<xs:element name="GEReference" type="xs:string" minOccurs="0"/>
+										<xs:element name="InstrumentType" type="xs:string" minOccurs="0"/>
+										<xs:element name="InstrumentPurpose" type="xs:string" minOccurs="0"/>
+										<xs:element name="SiteType" type="xs:string" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

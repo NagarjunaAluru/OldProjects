@@ -1,0 +1,233 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams
+END
+refereneceData.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/refereneceData.sqd
+END
+uploadAttachment.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/uploadAttachment.sqd
+END
+standardFormatMgmt.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/standardFormatMgmt.sqd
+END
+reimbursementAgreementMgmt.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/reimbursementAgreementMgmt.sqd
+END
+linkTransaction.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/linkTransaction.sqd
+END
+AlocBouncing.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/AlocBouncing.sqd
+END
+accessfilter.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/accessfilter.sqd
+END
+validateAmendmentRider.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/validateAmendmentRider.sqd
+END
+createRequest.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/createRequest.sqd
+END
+apm.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/apm.sqd
+END
+userAnnouncementMgmt.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/userAnnouncementMgmt.sqd
+END
+downloadAttachment.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/downloadAttachment.sqd
+END
+bid_success_report.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/bid_success_report.sqd
+END
+suretyNameMgmt.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/suretyNameMgmt.sqd
+END
+homepage.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/homepage.sqd
+END
+eas_user_operation.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/eas_user_operation.sqd
+END
+bidsuccess.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/bidsuccess.sqd
+END
+createBundle.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/createBundle.sqd
+END
+reports.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/reports.sqd
+END
+databinding.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/databinding.sqd
+END
+search.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/search.sqd
+END
+externalUserMgmt.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/externalUserMgmt.sqd
+END
+swiftMessageMonitoring.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/swiftMessageMonitoring.sqd
+END
+lookup.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/lookup.sqd
+END
+deleteAttachment.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/deleteAttachment.sqd
+END
+submitRequest.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/submitRequest.sqd
+END
+manageSite.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/manageSite.sqd
+END
+recordsRetentionMgmt.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/recordsRetentionMgmt.sqd
+END
+dashboardRefData.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/dashboardRefData.sqd
+END
+businessSite.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/businessSite.sqd
+END
+feeHistory.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/feeHistory.sqd
+END
+poleNameMgmt.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/poleNameMgmt.sqd
+END
+databinding1.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/databinding1.sqd
+END
+validateCloseTransaction.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/validateCloseTransaction.sqd
+END
+dashboard.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/dashboard.sqd
+END
+siteCreate.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/siteCreate.sqd
+END
+request.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/request.sqd
+END
+amendmentworkflowmgmt.sqd
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/uml/sequencediagrams/amendmentworkflowmgmt.sqd
+END

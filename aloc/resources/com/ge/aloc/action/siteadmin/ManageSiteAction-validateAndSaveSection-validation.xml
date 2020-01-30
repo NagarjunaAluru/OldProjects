@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	
+	  <field name="siteAdmin.delegationConfiguration">
+        <field-validator type="conditionalvisitor">
+            <param name="expression">
+                <![CDATA[
+                    sectionId == @com.ge.aloc.view.section.SiteSectionId@CREATE_DELEGATION_CONFIGURATION.getAsString()
+                ]]>
+            </param>
+            <message />
+        </field-validator>
+    </field>
+     <field name="siteAdmin.customizedSiteReferences">
+        <field-validator type="conditionalvisitor">
+            <param name="expression">
+                <![CDATA[
+                    sectionId == @com.ge.aloc.view.section.SiteSectionId@CUSTOMIZED_SITE_REFERENCES.getAsString()
+                ]]>
+            </param>
+            <message />
+        </field-validator>
+    </field>     
+</validators>

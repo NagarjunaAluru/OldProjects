@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<taglib 
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+    version="2.1">
+	
+	<tlib-version>1.0</tlib-version>
+	<short-name>aloc-color-calc</short-name>
+	<uri>aloc-color-calc</uri>
+
+	<function>
+		<name>getRowId</name>
+		<function-class>com.ge.aloc.util.ColorCalculator</function-class>
+		<function-signature>java.lang.String getRowId(java.math.BigInteger, java.math.BigInteger, java.math.BigInteger, java.math.BigInteger)</function-signature>
+	</function>
+	
+	<function>
+		<name>getSectionColor</name>
+		<function-class>com.ge.aloc.util.ColorCalculator</function-class>
+		<function-signature>java.lang.String getSectionColor(java.lang.String)</function-signature>
+	</function>
+	
+	<function>
+		<name>getBundleAttributes</name>
+		<function-class>com.ge.aloc.util.ColorCalculator</function-class>
+		<function-signature>com.ge.aloc.util.ColorCalculator getBundleAttributes(java.math.BigInteger, java.lang.String)</function-signature>
+	</function>
+</taglib>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<field name="phoneNo">
+		<field-validator type="fieldexpression">
+            <param name="expression"><![CDATA[(phoneNo == null || phoneNo == "") || (@com.ge.aloc.util.ALOCCommonHelper@isValidPhoneNumber(phoneNo))]]></param>
+            <message>
+      			${getText("error.required.requestDetails.phoneNumberMustBeDigits", {'Bond Requestor :'})}
+            </message>
+        </field-validator>
+	</field>
+	<field name="faxNo">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[(faxNo == null || faxNo == "") || (@com.ge.aloc.util.ALOCCommonHelper@isValidPhoneNumber(faxNo))]]>
+			</param>
+			<message key="error.required.requestDetails.faxNumberMustBeDigits" />
+		</field-validator>
+	</field>
+	<field name="sendBackNotes">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requiresEdits == false) || (requiresEdits != true)) || (sendBackNotes != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.sendBackNotes" />
+		</field-validator>
+	</field>
+	
+</validators>

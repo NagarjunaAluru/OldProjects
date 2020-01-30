@@ -1,0 +1,52 @@
+8
+
+dir
+56
+https://openge.ge.com/svn/treasury_aloc/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/manager/impl/dashboard
+https://openge.ge.com/svn/treasury_aloc
+
+
+
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+720fd033-fee8-473a-95ce-a3690b27228b
+
+DefaultDashboardManagerTest.java
+file
+
+
+
+
+2014-12-17T16:03:47.252569Z
+633e23832c35de49ed6acefa6e8e2d7f
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+DashboardRefDataManagerTest.java
+file
+
+
+
+
+2014-12-17T16:03:47.262569Z
+818907068828761106f5c6aee6ecb39f
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+

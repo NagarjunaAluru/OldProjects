@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/InstrumentDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/InstrumentDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="InstrumentDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Op_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuance_Country" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuance_Country_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instrument_Currency" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instrument_Currency_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instrument_Amt" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="USD_Equivalent" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Percent_Value_Of_Bid" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Max_Possible_Expo" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issue_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Expiry_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Econo_Expiry_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element ref="Auto_Extend_Clause" minOccurs="0"/>
+				<xs:element name="Initial_Expiry_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Auto_Inc_Dec_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element ref="Auto_Inc_Dec" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+				<xs:element name="Requires_Edits" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Send_Back_Notes" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Auto_Extend_Clause">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Auto_Extend_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Non_Renewal_Period" type="xs:string" minOccurs="0"/>
+				<xs:element name="Other_Time_frame" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Auto_Inc_Dec">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Op_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="Auto_Inc_Dec_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Auto_Inc_Indicator" type="xs:string" minOccurs="0"/>
+				<xs:element name="Auto_Inc_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Auto_Inc_Amt" type="xs:decimal" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

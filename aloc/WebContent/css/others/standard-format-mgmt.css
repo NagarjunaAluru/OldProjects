@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+
+#geStandardFormat {
+	width:99%;
+	padding:5px;
+	background:#f2f2f2;
+	border:0px solid red;
+	margin-bottom:20px;
+	margin-top:-15px;
+}
+#geStandardFormat .row {margin-bottom: 8px;}
+#geStandardFormat .leftBox {
+	width:525px;
+	float:left;
+	border:0px solid red;
+}
+#geStandardFormat .rightBox {
+	width:400px;
+	float:right;
+	border:0px solid red;
+}
+.span8 label { margin-left:-15px; }
+.span140 {
+  width: 140px;
+  background-color: #999;
+}
+.span190 {
+	width:190px;
+	 border:0px solid red;
+}
+
+.span200 {
+	width:230px;	
+	margin-bottom:0px;
+	margin-right:11px;
+	border:0px sopx; red;
+}
+}
+.required-fields-para{font-size: 11px;font-weight:normal;color:#AE2C2C; width:200px; z-index:9999; margin-top:0px; margin-left:455px; position:absolute;}
+.required-fields-para2{font-size: 11px;font-weight:normal;color:#AE2C2C; width:200px; z-index:9999; margin-top:0px; margin-left:770px; position:absolute;}

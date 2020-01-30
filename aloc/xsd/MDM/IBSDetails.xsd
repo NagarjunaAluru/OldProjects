@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/IBSDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/IBSDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="IBSDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ADN" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ADN_Id" type="xs:integer" minOccurs="0"/>
+							<xs:element name="ADN_Code" type="xs:string" minOccurs="0"/>
+							<xs:element name="ADN_Name" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="BUC" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="BUC_Id" type="xs:integer" minOccurs="0"/>
+							<xs:element name="BUC_Code" type="xs:string" minOccurs="0"/>
+							<xs:element name="BUC_Name" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="IBS_Message_Details" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ADN_Code" type="xs:string" minOccurs="0"/>
+							<xs:element name="BUC_Code" type="xs:string" minOccurs="0"/>
+							<xs:element name="IBS_Message_Id" type="xs:integer" minOccurs="0"/>
+							<xs:element name="IBS_Message" type="xs:string" minOccurs="0"/>
+							<xs:element name="Contact_Person_Details" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="User_SSO" type="xs:string" minOccurs="0"/>
+										<xs:element name="First_Name" type="xs:string" minOccurs="0"/>
+										<xs:element name="Last_Name" type="xs:string" minOccurs="0"/>
+										<xs:element name="Phone" type="xs:string" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

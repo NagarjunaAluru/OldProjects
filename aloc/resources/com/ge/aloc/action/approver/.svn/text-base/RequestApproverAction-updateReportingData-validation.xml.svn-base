@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	
+	<field name="updateReportingData.USExpirationDate">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ updateReportingData.USExpirationDate == null || @com.ge.aloc.util.ALOCCommonHelper@compareTwoDates(updateReportingData.USExpirationDate,updateReportingData.foreignExpirationDate) != false]]>
+			</param>
+			<message key="error.required.issuingBankDetails.bidreplyUSExpirationDateInvalid"/>
+		</field-validator>
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[(((requestDetails.USExpirationDateRequired == null) || (requestDetails.USExpirationDateRequired != true) || (updateReportingData.USExpirationDate != null)))]]>
+      	</param>
+		<message key="error.required.taxonomy.usExpDate" />
+		</field-validator>
+	</field>
+	
+	<field name="updateReportingData.foreignExpirationDate">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[(updateReportingData.foreignExpirationDate != null)]]>
+      	</param>
+      	<message key="error.required.taxonomy.foreignExpDate" />
+      	</field-validator>
+	</field>
+	
+	<field name="updateReportingData.lastUSPaidDate">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((updateReportingData.lastUSPaidDateFlag != "Y") || (updateReportingData.lastUSPaidDate != null))]]>
+      	</param>
+      	<message key="error.required.taxonomy.lastUSPaidDate" />
+      	</field-validator>
+	</field>
+	
+	<field name="updateReportingData.lastForeignPaidDate">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((updateReportingData.lastForeignPaidDateFlag != "Y") || (updateReportingData.lastForeignPaidDate != null))]]>
+      	</param>
+      	<message key="error.required.taxonomy.lastForeignPaidDate" />
+      	</field-validator>
+	</field>
+	
+	<field name="updateReportingData.issuanceDate">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((updateReportingData.issuanceDateFlag != "Y") || (updateReportingData.issuanceDate != null))]]>
+      	</param>
+      	<message key="error.required.taxonomy.issuanceDate" />
+      	</field-validator>
+	</field>
+	
+	  <field name="updateReportingData.bankReferenceNumber">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required.taxonomy.bankReferenceNumber" />
+		</field-validator>
+	</field>
+	
+	<field name="updateReportingData.currencyCode">  
+        <field-validator type="requiredstring" >  
+             <message key="error.required.taxonomy.currency" />
+        </field-validator>  
+    </field>
+	
+	<field name="updateReportingData.currencyAmount">  
+        <field-validator type="required" >  
+             <message key="error.required.taxonomy.osAmountOriginal" />
+        </field-validator>  
+    </field>
+	
+	<field name="updateReportingData.reasonForchange">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required.taxonomy.reasonForChange" />
+		</field-validator>
+	</field>
+	
+</validators>

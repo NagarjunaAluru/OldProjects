@@ -1,0 +1,152 @@
+8
+
+dir
+56
+https://openge.ge.com/svn/treasury_aloc/trunk/source/web/sunone_codebase/aloc/resources
+https://openge.ge.com/svn/treasury_aloc
+
+
+
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+720fd033-fee8-473a-95ce-a3690b27228b
+
+i18n
+dir
+
+ehcache.xml
+file
+
+
+
+
+2014-12-17T16:04:59.336569Z
+97e6abfbd1366f4f543e8e86e2c88d10
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+hwf.properties
+file
+
+
+
+
+2014-12-17T16:04:59.343569Z
+72b076fe564e165422b1ae571b967519
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+struts.xml
+file
+
+
+
+
+2014-12-17T16:04:59.349569Z
+8d7eba5b176d55541f3c23e5da323ff8
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+aloc-int-hwf-authorization.xml
+file
+
+
+
+
+2014-12-17T16:04:59.404569Z
+2a7a1e0c676bf950a5614b55cad62182
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+alocerrors.properties
+file
+
+
+
+
+2014-12-17T16:04:59.420569Z
+c4d1bf0e3e31c80bfc6fbc1fbb928d78
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+validators.xml
+file
+
+
+
+
+2014-12-17T16:04:59.433569Z
+bc884c6d10591c7a1e234f1405afa27c
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+xwork-conversion.properties
+file
+
+
+
+
+2014-12-17T16:04:59.442569Z
+1f9ec1f6cd0bedbac9fa35285c2658c8
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+fonts
+dir
+
+strutsconfig
+dir
+
+LibAPIClient.jar
+file
+
+
+
+
+2014-12-17T16:04:59.450569Z
+15c1ffd814a394614b7611596022a208
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+has-props
+
+aloc-ext-hwf-authorization.xml
+file
+
+
+
+
+2014-12-17T16:04:59.456569Z
+5016ed036c2d98582252cad2b3505097
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+com
+dir
+
+templates
+dir
+

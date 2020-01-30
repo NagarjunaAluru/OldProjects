@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+<!-- TreasuryAnalyst tripartyFlag Section Validation -->
+	<field name="requestDetails.transactionParties.instrumentPurposeId">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@isTripartyFlagSection(sectionId) != true || (requestDetails.transactionParties.instrumentPurposeId !=null && requestDetails.transactionParties.instrumentPurposeId !="") ]]>
+			</param>
+			<message key="error.required.requestDetails.instrumentPurposeId"></message>
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.transactionParties.instrumentPurposeOther">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@isTripartyFlagSection(sectionId) != true || (requestDetails.transactionParties.instrumentPurposeId!=16) || (requestDetails.transactionParties.instrumentPurposeOther !=null && requestDetails.transactionParties.instrumentPurposeOther !="") ]]>
+			</param>
+			<message key="error.required.requestDetails.instrumentPurposeOther"></message>
+		</field-validator>
+	</field>
+	<field name="requestDetails.transactionParties.sendBackNotes">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@isTripartyFlagSection(sectionId) != true || ((requestDetails.transactionParties.requiresEdits == false) || (requestDetails.transactionParties.requiresEdits != true)) || (requestDetails.transactionParties.sendBackNotes != "") ]]>
+			</param>
+			<message key="error.required.requestDetails.sendBackNotes"></message>
+		</field-validator>
+	</field>
+	<field name="requestDetails.transactionParties.tpApplicantDetails">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(sectionId == @com.ge.aloc.view.section.RequestSectionId@TPAPPLICANT.getAsString() && @com.ge.aloc.util.ALOCCommonHelper@isBankGuaranteeOrSBLCRequest(requestDetails.instrumentTypeId) == true)
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	<field name="requestDetails.transactionParties.customer.addressDtls.sendBackNotes">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@isTPcustomerSection(sectionId) != true || ((requestDetails.transactionParties.customer.addressDtls.requiresEdits == false) || (requestDetails.transactionParties.customer.addressDtls.requiresEdits != true)) || (requestDetails.transactionParties.customer.addressDtls.sendBackNotes != "") ]]>
+			</param>
+			<message key="error.required.requestDetails.sendBackNotes"></message>
+		</field-validator>
+	</field>
+	
+	<!-- Transaction Parties Section Validation -->
+	<field name="goldId">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@isTPSection(sectionId) != true || (goldId != null && goldId != "" && goldIdSelection != null && goldIdSelection != "") || ((goldId ==null || goldId.trim() =="") && goldIdSelection!=null && goldIdSelection.trim() !="") ]]>
+			</param>
+			<message>
+      			${getText("error.required.requestDetails.legoldId", {'Transaction Parties :'})}
+            </message>
+		</field-validator>
+	</field>
+
+	<field name="nameForAddressTPApplicant">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@isTPSection(sectionId) != true || @com.ge.aloc.util.ALOCCommonHelper@isTPTriParty(requestDetails.siteTypeName, requestDetails.transactionParties.triPartyRequestFlag) != false || (nameForAddressTPApplicant != null && nameForAddressTPApplicant != "" && tpApplicantAddressSelection != null && tpApplicantAddressSelection != "") || ((nameForAddressTPApplicant ==null || nameForAddressTPApplicant.trim() =="") && tpApplicantAddressSelection!=null && tpApplicantAddressSelection.trim() !="") ]]>
+			</param>
+			<message key="error.required.requestDetails.TPApplicant"></message>
+		</field-validator>
+	</field>
+	<field name="nameForAddressTriparty">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ (@com.ge.aloc.util.ALOCCommonHelper@isTPSection(sectionId) != true || @com.ge.aloc.util.ALOCCommonHelper@isTPTriParty(requestDetails.siteTypeName, requestDetails.transactionParties.triPartyRequestFlag) != true) || (nameForAddressTriparty != null && nameForAddressTriparty != "" && triPartyAddressSelection != null && triPartyAddressSelection != "") || ((nameForAddressTriparty ==null || nameForAddressTriparty.trim() =="") && triPartyAddressSelection!=null && triPartyAddressSelection.trim() !="") ]]>
+			</param>
+			<message key="error.required.requestDetails.Triparty"></message>
+		</field-validator>
+	</field>
+	<!-- <field name="nameForAddressTPApplicant">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@isTPapplicantSection(sectionId) != true || (nameForAddressTPApplicant != null && nameForAddressTPApplicant != "" && tpApplicantAddressSelection != null && tpApplicantAddressSelection != "") || ((nameForAddressTPApplicant ==null || nameForAddressTPApplicant.trim() =="") && tpApplicantAddressSelection!=null && tpApplicantAddressSelection.trim() !="") ]]>
+			</param>
+			<message key="error.required.requestDetails.TPApplicant"></message>
+		</field-validator>
+	</field>
+
+	<field name="nameForAddressTPCustomer">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@isTPcustomerSection(sectionId) != true || (nameForAddressTPCustomer != null && nameForAddressTPCustomer != "" && tpCustomerAddressSelection != null && tpCustomerAddressSelection != "") || ((nameForAddressTPCustomer ==null || nameForAddressTPCustomer.trim() =="") && tpCustomerAddressSelection!=null && tpCustomerAddressSelection.trim() !="") ]]>
+			</param>
+			<message key="error.required.requestDetails.TPCustomer"></message>
+		</field-validator>
+	</field> -->
+	
+	<field name="nameForAddressTPCustomer">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@isTPSection(sectionId) != true || (nameForAddressTPCustomer != null && nameForAddressTPCustomer != "" && tpCustomerAddressSelection != null && tpCustomerAddressSelection != "") || ((nameForAddressTPCustomer ==null || nameForAddressTPCustomer.trim() =="") && tpCustomerAddressSelection!=null && tpCustomerAddressSelection.trim() !="") ]]>
+			</param>
+			<message key="error.required.requestDetails.TPCustomer"></message>
+		</field-validator>
+	</field>
+	<field name="principalGoldId">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@isPrincipalSection(sectionId) != true || (principalGoldId != null && principalGoldId != "" && principalGoldIdSelection != null && principalGoldIdSelection != "") || ((principalGoldId ==null || principalGoldId.trim() =="") && principalGoldIdSelection!=null && principalGoldIdSelection.trim() !="") ]]>
+			</param>
+			<message>
+      			${getText("error.required.requestDetails.legoldId", {'Principal :'})}
+            </message>
+		</field-validator>
+	</field>
+	<field name="nameForAddressPrincipal">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@isPrincipalSection(sectionId) != true || (nameForAddressPrincipal != null && nameForAddressPrincipal != "" && principlaAddressSelection != null && principlaAddressSelection != "") || ((nameForAddressPrincipal ==null || nameForAddressPrincipal.trim() =="") && principlaAddressSelection!=null && principlaAddressSelection.trim() !="") ]]>
+			</param>
+			<message key="error.required.requestDetails.principalNameaddress"></message>
+		</field-validator>
+	</field>
+	
+	<field name="nameForObligeeAddress">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@isObligeeSection(sectionId) != true || (nameForObligeeAddress != null && nameForObligeeAddress != "" && obligeeAddressSelection != null && obligeeAddressSelection != "") || ((nameForObligeeAddress ==null || nameForObligeeAddress.trim() =="") && obligeeAddressSelection!=null && obligeeAddressSelection.trim() !="") ]]>
+			</param>
+			<message key="error.required.requestDetails.obligeeNameaddress"></message>
+		</field-validator>
+	</field>
+	
+	<field name="issuingBankName">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@isIssuingBankSection(sectionId) != true  || (issuingBankName !=null && issuingBankName.trim() !="" && issuingBankSelection!=null && issuingBankSelection.trim() !="") || ((issuingBankName ==null || issuingBankName.trim() =="") && issuingBankSelection!=null && issuingBankSelection.trim() !="")]]>
+      		</param>
+			<message key="error.required.dlocBidReply.bankNameLookup"/>
+		</field-validator>
+	</field>
+	
+	<field name="nameForApplicantAddress">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@isApplicantSection(sectionId) != true || (nameForApplicantAddress != null && nameForApplicantAddress != "" && applicantSelection != null && applicantSelection != "") || ((nameForApplicantAddress ==null || nameForApplicantAddress.trim() =="") && applicantSelection!=null && applicantSelection.trim() !="") ]]>
+			</param>
+			<message key="error.required.requestDetails.applicantNameaddress"></message>
+		</field-validator>
+	</field>
+	
+	<field name="beneficiaryGoldId">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@isBeneficiarySection(sectionId) != true || (beneficiaryGoldId != null && beneficiaryGoldId != "" && beneficiaryGoldIdSelection != null && beneficiaryGoldIdSelection != "") || ((beneficiaryGoldId ==null || beneficiaryGoldId.trim() =="") && beneficiaryGoldIdSelection!=null && beneficiaryGoldIdSelection.trim() !="") ]]>
+			</param>
+			<message key="error.required.requestDetails.legoldId"></message>
+		</field-validator>
+	</field>
+	
+	<field name="nameForBeneficiaryAddress">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@isBeneficiarySection(sectionId) != true || (nameForBeneficiaryAddress != null && nameForBeneficiaryAddress != "" && beneficiaryAddressSelection != null && beneficiaryAddressSelection != "") || ((nameForBeneficiaryAddress ==null || nameForBeneficiaryAddress.trim() =="") && beneficiaryAddressSelection!=null && beneficiaryAddressSelection.trim() !="") ]]>
+			</param>
+			<message key="error.required.requestDetails.beneficiaryNameaddress"></message>
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.rider.principal">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					sectionId == @com.ge.aloc.view.section.RequestSectionId@RIDER_PRINCIPAL.getAsString()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	 <field name="requestDetails.rider.obligee">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					sectionId == @com.ge.aloc.view.section.RequestSectionId@RIDER_OBLIGEE.getAsString()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.rider.expiryDate">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					sectionId == @com.ge.aloc.view.section.RequestSectionId@RIDER_EXPIRATION_DATES.getAsString()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.rider.riderBondInformation">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					sectionId == @com.ge.aloc.view.section.RequestSectionId@RIDER_BOND_INFORMATION.getAsString()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field> 
+	
+	<!-- Delivery Instructions Section Validation -->
+	<field name="requestDetails.rider.deliveryInstructions">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					sectionId == @com.ge.aloc.view.section.RequestSectionId@RIDER_DELIVERY_INSTRUTIONS.getAsString()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.transactionParties">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					sectionId == @com.ge.aloc.view.section.RequestSectionId@TRANSACTION_PARTIES.getAsString()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<!-- Project Description Section Validation -->
+	<field name="requestDetails.projDescription">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					sectionId == @com.ge.aloc.view.section.RequestSectionId@PROJECT_DESCRIPTION.getAsString()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<!-- Instrument Details Section Validation -->
+	<field name="requestDetails.instrumentDetails">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					sectionId == @com.ge.aloc.view.section.RequestSectionId@INSTRUMENT_DETAILS.getAsString()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<!-- Instrument Risk Section Validation -->
+	<field name="requestDetails.instrumentRisk">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					sectionId == @com.ge.aloc.view.section.RequestSectionId@INSTRUMENT_RISK.getAsString()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<!-- Instrument Reporting Section Validation -->
+	<field name="requestDetails.instrReporting">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					sectionId == @com.ge.aloc.view.section.RequestSectionId@INSTRUMENT_REPORTING_ATTRIBUTES.getAsString()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<!-- Business Contact Person Section Validation -->
+	<field name="requestDetails.buContactPerson">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					sectionId == @com.ge.aloc.view.section.RequestSectionId@BUSINESS_CONTACT_PERSON.getAsString()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.issuingBankDetails">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					sectionId == @com.ge.aloc.view.section.RequestSectionId@ISSUING_BANK.getAsString()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.applicantDetails">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					sectionId == @com.ge.aloc.view.section.RequestSectionId@APPLICANT.getAsString()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.beneficiaryDetails">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					sectionId == @com.ge.aloc.view.section.RequestSectionId@BENEFICIARY.getAsString()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.paymentScheduleDetails">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					sectionId == @com.ge.aloc.view.section.RequestSectionId@PAYMENT_SCHEDULE.getAsString()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.transactionDetails">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					sectionId == @com.ge.aloc.view.section.RequestSectionId@INSTRUMENT_TRANSACTION_DETAILS.getAsString()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	<field name="requestDetailsBO.formatBO.model.formatTypeId">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression"><![CDATA[ (sectionId != @com.ge.aloc.view.section.RequestSectionId@FORMAT.getAsString()) || (requestDetailsBO.formatBO.model.formatTypeId != null && requestDetailsBO.formatBO.model.formatTypeId != "")]]>
+			</param>
+			<message key="error.required.requestDetails.format.formatType" />
+		</field-validator>	
+	</field>
+	<field name="requestDetailsBO.formatBO.attachmentBOList" >
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression"><![CDATA[(sectionId != @com.ge.aloc.view.section.RequestSectionId@FORMAT.getAsString()) || @com.ge.aloc.util.ALOCCommonHelper@validateFormatDefaultAtmtFileUpload()]]>
+			</param>
+			<message key="error.required.requestDetails.format.attachmentFileUpload" /> 
+		</field-validator>
+	</field>
+	
+	
+	<field name="requestDetails.format.sendBackNotes" >
+		<field-validator type="fieldexpression">
+			<param name="expression"><![CDATA[(sectionId != @com.ge.aloc.view.section.RequestSectionId@FORMAT.getAsString()) || ((requestDetails.format.requiresEdits == false) || (requestDetails.format.requiresEdits != true)) || (requestDetails.format.sendBackNotes != "")]]>
+			</param>
+			<message key="error.required.requestDetails.sendBackNotes" /> 
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.attachments[0].sendBackNotes">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression"><![CDATA[( sectionId != @com.ge.aloc.view.section.RequestSectionId@ATTACHMENTS.getAsString()) || ((requestDetails.attachments[0].requiresEdits == false) || (requestDetails.attachments[0].requiresEdits != true)) || (requestDetails.attachments[0].sendBackNotes != "")]]>
+			</param>
+			<message key="error.required.requestDetails.sendBackNotes" />
+		</field-validator> 
+	</field>
+	
+	<field name="requestDetailsBO.attachmentBOList">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression"><![CDATA[( sectionId != @com.ge.aloc.view.section.RequestSectionId@ATTACHMENTS.getAsString()) || @com.ge.aloc.util.ALOCCommonHelper@validateAtmtFileUpload()]]>
+			</param>
+			<message key="error.required.requestDetails.attachments.fileUpload" />
+		</field-validator> 
+	</field>
+    
+	<field name="requestDetails.bondDetails">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					sectionId == @com.ge.aloc.view.section.RequestSectionId@BOND_DETAILS.getAsString()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.principal">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(sectionId == @com.ge.aloc.view.section.RequestSectionId@PRINCIPAL.getAsString() && @com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() == 6)
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.obligee">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(sectionId == @com.ge.aloc.view.section.RequestSectionId@OBLIGEE.getAsString() && @com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() == 6)
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.bondReqDtls">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					sectionId == @com.ge.aloc.view.section.RequestSectionId@BOND_REQUESTOR.getAsString()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.addressDtls">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					sectionId == @com.ge.aloc.view.section.RequestSectionId@REQUESTOR_MAILING_ADDRESS.getAsString()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.bondInfo">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					sectionId == @com.ge.aloc.view.section.RequestSectionId@BOND_INFORMATION.getAsString()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	<field name="requestDetails.bondInfo">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					sectionId == @com.ge.aloc.view.section.RequestSectionId@ATTORNEY_BOND_INFORMATION.getAsString()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	<field name="requestDetails.deliveryInstructions">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(sectionId == @com.ge.aloc.view.section.RequestSectionId@DELIVERY_INSTRUTIONS.getAsString() && (requestDetails.instrumentTypeId == 1 || requestDetails.instrumentTypeId == 2 || requestDetails.instrumentTypeId == 3))
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.amendment.amendmentInstrumentAmountCurr">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					sectionId == @com.ge.aloc.view.section.RequestSectionId@INSTRUMENT_AMOUNT_CURRENCY.getAsString()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.amendment.expiryDate">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					sectionId == @com.ge.aloc.view.section.RequestSectionId@EXPIRATION_DATES.getAsString()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<!-- tpApplicant details -->
+	<field name="requestDetails.amendment.transactionParties.tpApplicantDetails">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(sectionId == @com.ge.aloc.view.section.RequestSectionId@TPAPPLICANT.getAsString() && requestDetails.instrumentTypeId == 5)
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.amendment.deliveryInstructions">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(sectionId == @com.ge.aloc.view.section.RequestSectionId@DELIVERY_INSTRUTIONS.getAsString() && requestDetails.instrumentTypeId == 5)
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	<field name="requestDetails.SBLC">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					sectionId == @com.ge.aloc.view.section.RequestSectionId@STANDBY_LETTER_OF_CREDIT_CONDITIONS.getAsString()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<!-- <field name="requestDetails.transactionParties.triPartyRequestFlag">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[
+					sectionId == @com.ge.aloc.view.section.RequestSectionId@TRANSACTION_PARTIES.getAsString() || (requestDetails.siteTypeName != "Financial Business") || ((triPartyRequestFlag == true) || (triPartyRequestFlag == false))
+				]]>
+			</param>
+			<message key="error.required.requestDetails.triPartyRequest" />
+		</field-validator>
+	</field> -->
+	
+	
+	<!-- Principal and obligee validations -->
+	
+	<field name="requestDetails.principal.addressDtls.name">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3  || sectionId != @com.ge.aloc.view.section.RequestSectionId@BOND_DETAILS.getAsString() || ((principlaAddressSelection!="New") || (requestDetails.principal.addressDtls.name !=""))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.name", {'Principal :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.principal.addressDtls.address[0]">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3  || sectionId != @com.ge.aloc.view.section.RequestSectionId@BOND_DETAILS.getAsString() || ((principlaAddressSelection!="New") || (requestDetails.principal.addressDtls.address[0] !=""))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.address1", {'Principal :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.principal.addressDtls.city">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3  || sectionId != @com.ge.aloc.view.section.RequestSectionId@BOND_DETAILS.getAsString() || ((principlaAddressSelection!="New") || (requestDetails.principal.addressDtls.city !=""))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.city", {'Principal :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.principal.addressDtls.ZIPPostalCode">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3  || sectionId != @com.ge.aloc.view.section.RequestSectionId@BOND_DETAILS.getAsString() || ((principlaAddressSelection!="New") || (requestDetails.principal.addressDtls.ZIPPostalCode !=""))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.zipOrPostalCode", {'Principal :'})}
+            </message>
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3  || sectionId != @com.ge.aloc.view.section.RequestSectionId@BOND_DETAILS.getAsString() || ((principlaAddressSelection!="New") || (@com.ge.aloc.util.ALOCCommonHelper@isValidZipformat(requestDetails.principal.addressDtls.ZIPPostalCode)))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.zipInFormat", {'Principal :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.principal.addressDtls.countryCd">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3  || sectionId != @com.ge.aloc.view.section.RequestSectionId@BOND_DETAILS.getAsString() || ((principlaAddressSelection!="New") || (requestDetails.principal.addressDtls.countryCd !=""))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.country", {'Principal :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.principal.refDetails[0].refValue">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3  || sectionId != @com.ge.aloc.view.section.RequestSectionId@BOND_DETAILS.getAsString() || ( requestDetails.principal.refDetails[0].refValue !="") ]]>
+      	</param>
+			<message key="error.required.requestDetails.gePrincipalReference" />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.principal.principalBuUniteCd">
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">
+        	<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3  || sectionId != @com.ge.aloc.view.section.RequestSectionId@BOND_DETAILS.getAsString() || ( requestDetails.principal.principalBuUniteCd !="") ]]>
+      	</param>
+			<message key="error.required.requestDetails.principalBusinessUniteCode" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3  || sectionId != @com.ge.aloc.view.section.RequestSectionId@BOND_DETAILS.getAsString() || (@com.ge.aloc.util.ALOCCommonHelper@isValidBUCADN(requestDetails.principal.IBSMsgId) == true)]]>
+			</param>
+			<message key="error.required.requestDetails.principalInvalidBUCADN"></message>
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.principal.principalAccDistNo">
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">
+        	<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3  || sectionId != @com.ge.aloc.view.section.RequestSectionId@BOND_DETAILS.getAsString() ||  ( requestDetails.principal.principalAccDistNo !="") ]]>
+      	</param>
+			<message key="error.required.requestDetails.principalAccountingDistributionNumber" />
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3  || sectionId != @com.ge.aloc.view.section.RequestSectionId@BOND_DETAILS.getAsString() ||  (@com.ge.aloc.util.ALOCCommonHelper@isValidBUCADN(requestDetails.principal.IBSMsgId) == true) ]]>
+			</param>
+			<message key="error.required.requestDetails.principalInvalidADNBUC"></message>
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.principal.sendBackNotes">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+		
+        	<![CDATA[@com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3  || sectionId != @com.ge.aloc.view.section.RequestSectionId@BOND_DETAILS.getAsString() || ((requestDetails.principal.requiresEdits == false) || (requestDetails.principal.requiresEdits != true)) || (requestDetails.principal.sendBackNotes != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.sendBackNotes" />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.obligee.addressDtls.name">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[  @com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3  || sectionId != @com.ge.aloc.view.section.RequestSectionId@BOND_DETAILS.getAsString() || ((obligeeAddressSelection!="New") || (requestDetails.obligee.addressDtls.name !=""))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.name", {'Obligee :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.obligee.addressDtls.address[0]">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[  @com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3  || sectionId != @com.ge.aloc.view.section.RequestSectionId@BOND_DETAILS.getAsString() || ((obligeeAddressSelection!="New") || (requestDetails.obligee.addressDtls.address[0] !=""))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.address1", {'Obligee :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.obligee.addressDtls.city">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3  || sectionId != @com.ge.aloc.view.section.RequestSectionId@BOND_DETAILS.getAsString() || ((obligeeAddressSelection!="New") || (requestDetails.obligee.addressDtls.city !=""))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.city", {'Obligee :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.obligee.addressDtls.ZIPPostalCode">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3  || sectionId != @com.ge.aloc.view.section.RequestSectionId@BOND_DETAILS.getAsString() || ((obligeeAddressSelection!="New") || (requestDetails.obligee.addressDtls.ZIPPostalCode !=""))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.zipOrPostalCode", {'Obligee :'})}
+            </message>
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3  || sectionId != @com.ge.aloc.view.section.RequestSectionId@BOND_DETAILS.getAsString() || ((obligeeAddressSelection!="New") || (@com.ge.aloc.util.ALOCCommonHelper@isValidZipformat(requestDetails.obligee.addressDtls.ZIPPostalCode)))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.zipInFormat", {'Obligee :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.obligee.addressDtls.countryCd">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[@com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3  || sectionId != @com.ge.aloc.view.section.RequestSectionId@BOND_DETAILS.getAsString() || ((obligeeAddressSelection!="New") || (requestDetails.obligee.addressDtls.countryCd !=""))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.country", {'Obligee :'})}
+            </message>
+		</field-validator>
+	</field>
+		
+	<field name="requestDetails.obligee.obligeeReves[0].refValue">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3  || sectionId != @com.ge.aloc.view.section.RequestSectionId@BOND_DETAILS.getAsString() || (@com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3 ) || ( requestDetails.obligee.obligeeReves[0].refValue !="") ]]>
+      	</param>
+			<message key="error.required.requestDetails.obligeeReference" />
+		</field-validator>
+	</field>
+	
+</validators>

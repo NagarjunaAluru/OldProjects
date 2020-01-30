@@ -1,0 +1,719 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails
+END
+ReferenceNumberValidation.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/ReferenceNumberValidation.xsd
+END
+WFDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/WFDetails.xsd
+END
+APMDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/APMDetails.xsd
+END
+IssuingBankDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/IssuingBankDetails.xsd
+END
+ALOCCommon.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/ALOCCommon.xsd
+END
+WinnigBank.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/WinnigBank.xsd
+END
+BondDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/BondDetails.xsd
+END
+FeesPeriodDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/FeesPeriodDetails.xsd
+END
+.folder
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/.folder
+END
+RequestDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/RequestDetails.xsd
+END
+BankFeeDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/BankFeeDetails.xsd
+END
+BuDelegation.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/BuDelegation.xsd
+END
+InvoiceDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/InvoiceDetails.xsd
+END
+BidProcessDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/BidProcessDetails.xsd
+END
+Rider.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/Rider.xsd
+END
+Search.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/Search.xsd
+END
+SearchBankDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/SearchBankDetails.xsd
+END
+WinningBankDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/WinningBankDetails.xsd
+END
+ObligeeAddress.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/ObligeeAddress.xsd
+END
+DelegationApprovers.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/DelegationApprovers.xsd
+END
+InstrumentDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/InstrumentDetails.xsd
+END
+RequestFeeDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/RequestFeeDetails.xsd
+END
+RiderBondInformation.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/RiderBondInformation.xsd
+END
+ReqContactInfo.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/ReqContactInfo.xsd
+END
+DeligationApprovers.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/DeligationApprovers.xsd
+END
+BidmemoDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/BidmemoDetails.xsd
+END
+PaymentPeriodDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/PaymentPeriodDetails.xsd
+END
+GetFeeHistoryDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/GetFeeHistoryDetails.xsd
+END
+FeeHistoryDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/FeeHistoryDetails.xsd
+END
+PreviewDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/PreviewDetails.xsd
+END
+InstrReporting.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/InstrReporting.xsd
+END
+ContactUsDtls.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/ContactUsDtls.xsd
+END
+UserInfo.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/UserInfo.xsd
+END
+SearchInstrDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/SearchInstrDetails.xsd
+END
+LandingPageDtls.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/LandingPageDtls.xsd
+END
+InstrumentRisk.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/InstrumentRisk.xsd
+END
+OtherFee.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/OtherFee.xsd
+END
+RequestStatusDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/RequestStatusDetails.xsd
+END
+APMSearch.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/APMSearch.xsd
+END
+ModelDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/ModelDetails.xsd
+END
+RequestSummary.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/RequestSummary.xsd
+END
+SelectedBanks.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/SelectedBanks.xsd
+END
+FeePeriodDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/FeePeriodDetails.xsd
+END
+AuditLog.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/AuditLog.xsd
+END
+SearchPaymentDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/SearchPaymentDetails.xsd
+END
+TresuryDelegation.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/TresuryDelegation.xsd
+END
+CurrencySetup.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/CurrencySetup.xsd
+END
+TresuryDelegationApprovers.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/TresuryDelegationApprovers.xsd
+END
+GetFXRates.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/GetFXRates.xsd
+END
+UpdateReporting.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/UpdateReporting.xsd
+END
+TransactionParties.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/TransactionParties.xsd
+END
+MyTransactions.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/MyTransactions.xsd
+END
+ProjDescription.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/ProjDescription.xsd
+END
+Inbox.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/Inbox.xsd
+END
+BidReplyDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/BidReplyDetails.xsd
+END
+PreAgreedPricingDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/PreAgreedPricingDetails.xsd
+END
+AmendmentInstrumentAmountCurr.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/AmendmentInstrumentAmountCurr.xsd
+END
+EntityInformation.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/EntityInformation.xsd
+END
+FeeSummaryDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/FeeSummaryDetails.xsd
+END
+FormatTemplate.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/FormatTemplate.xsd
+END
+FeeCalculationDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/FeeCalculationDetails.xsd
+END
+CreditAndCarryOverReport.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/CreditAndCarryOverReport.xsd
+END
+SearchDates.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/SearchDates.xsd
+END
+DashBoard.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/DashBoard.xsd
+END
+PrincipalDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/PrincipalDetails.xsd
+END
+ProposedBankBranchConfirmDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/ProposedBankBranchConfirmDetails.xsd
+END
+AddressDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/AddressDetails.xsd
+END
+BidProcess.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/BidProcess.xsd
+END
+FormatDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/FormatDetails.xsd
+END
+GlanceDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/GlanceDetails.xsd
+END
+CurrentBankFess.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/CurrentBankFess.xsd
+END
+PricingDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/PricingDetails.xsd
+END
+FeeDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/FeeDetails.xsd
+END
+AdditionalInstrumentDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/AdditionalInstrumentDetails.xsd
+END
+BuContactPerson.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/BuContactPerson.xsd
+END
+OneTimeFeesDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/OneTimeFeesDetails.xsd
+END
+FXRateHistory.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/FXRateHistory.xsd
+END
+Attachments.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/Attachments.xsd
+END
+RiderDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/RiderDetails.xsd
+END
+BeneficiaryObligeeDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/BeneficiaryObligeeDetails.xsd
+END
+AmendmentDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/AmendmentDetails.xsd
+END
+BUCAndADN.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/BUCAndADN.xsd
+END
+GetAmendmentRiders.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/GetAmendmentRiders.xsd
+END
+FeeHistory.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/FeeHistory.xsd
+END
+BankDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/BankDetails.xsd
+END
+ApplicantDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/ApplicantDetails.xsd
+END
+ProcessMapper.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/ProcessMapper.xsd
+END
+SearchReqDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/SearchReqDetails.xsd
+END
+ParentSiteDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/ParentSiteDetails.xsd
+END
+FeeRequestSummary.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/FeeRequestSummary.xsd
+END
+BeneficiaryDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/BeneficiaryDetails.xsd
+END
+OpenEmailLink.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/OpenEmailLink.xsd
+END
+TransferFees.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/TransferFees.xsd
+END
+FeesDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/FeesDetails.xsd
+END
+FeePaymentRunDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/FeePaymentRunDetails.xsd
+END
+BondInformation.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/BondInformation.xsd
+END
+FXRateHistoryAndCurrencySetup.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/FXRateHistoryAndCurrencySetup.xsd
+END
+ConfirmationFees.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/ConfirmationFees.xsd
+END
+TransactionDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/TransactionDetails.xsd
+END
+IndicativePricingCompletedDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/IndicativePricingCompletedDetails.xsd
+END
+AvailableBanks.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/AvailableBanks.xsd
+END
+MsgHeader.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/MsgHeader.xsd
+END
+BondReqDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/BondReqDetails.xsd
+END
+PaymentScheduleDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/PaymentScheduleDetails.xsd
+END
+BidDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/BidDetails.xsd
+END
+DeliveryInstructions.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/DeliveryInstructions.xsd
+END
+Amendment.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/Amendment.xsd
+END
+IssuingBankList.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/IssuingBankList.xsd
+END
+SiteSelection.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/SiteSelection.xsd
+END
+TrModelDetails.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/TrModelDetails.xsd
+END
+FeeSummary.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/FeeSummary.xsd
+END
+InfoTransPlatFormSelection.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/InfoTransPlatFormSelection.xsd
+END
+ExpiryDate.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/ExpiryDate.xsd
+END
+StaticDataManagement.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/StaticDataManagement.xsd
+END
+ActionLog.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/ActionLog.xsd
+END
+SiteAdminStaticData.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/SiteAdminStaticData.xsd
+END
+FullSummary.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/FullSummary.xsd
+END
+CumulativeFeeAdjustments.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/CumulativeFeeAdjustments.xsd
+END
+USForeignFee.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/RequestDetails/USForeignFee.xsd
+END

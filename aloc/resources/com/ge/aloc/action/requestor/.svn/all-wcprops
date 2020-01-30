@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/requestor
+END
+RequestorReviewAction-submit-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/requestor/RequestorReviewAction-submit-validation.xml
+END
+RequestorReviewAction-submitAutoAmendment-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/requestor/RequestorReviewAction-submitAutoAmendment-validation.xml
+END
+RequestorReviewAction-submitSuretyRider-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/requestor/RequestorReviewAction-submitSuretyRider-validation.xml
+END
+RequestorAction-submitToReview-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/requestor/RequestorAction-submitToReview-validation.xml
+END
+RequestorReviewAction-reSubmit-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/requestor/RequestorReviewAction-reSubmit-validation.xml
+END
+RequestorAction-createDraftRequest-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/requestor/RequestorAction-createDraftRequest-validation.xml
+END
+RequestorReviewAction-submitAmendment-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/requestor/RequestorReviewAction-submitAmendment-validation.xml
+END

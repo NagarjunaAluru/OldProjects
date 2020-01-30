@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+    <field name="operation">
+    	<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[((amtOfIncreaseOrDecrease == null) || (operation != null && operation !=""))]]>
+			</param>
+			<message key="error.required.requestDetails.increaseDecrease" />
+		</field-validator>
+	</field>
+	<field name="amtOfIncreaseOrDecrease">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+				<![CDATA[((operation == null || operation == '') || (amtOfIncreaseOrDecrease != null))]]>
+			</param>
+			<message key="error.required.rider.amountIncreaseDecrease" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+			<![CDATA[ (@com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(amtOfIncreaseOrDecrease))]]>
+			</param>
+			<message key="error.required.rider.amountIncreaseDecreaseInvalid" />
+		</field-validator>
+	</field>
+	<field name="revisedUSDEquiContractAmt">
+    	<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[((@com.ge.aloc.util.ALOCCommonHelper@isContractBond(requestDetails.bondDetails.bondType) != true) || (amtOfIncreaseOrDecrease == null && (operation == null || operation == '')) || (revisedUSDEquiContractAmt != null))]]>
+			</param>
+			<message key="error.required.rider.riderRevisedUsdAmount" />
+		</field-validator>
+	</field>
+</validators>

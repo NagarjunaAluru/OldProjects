@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<!-- Service Declarations -->
+	<bean id="easService" class="com.ge.aloc.ext.eas.service.client.B2EService_Service" />
+			
+	<!--  One Time Password Mail Sender -->
+	<bean id="otpMailSender" class="com.ge.aloc.ext.OTPMailSender" init-method="init">
+		<property name="sender" value="${aloc.ext.otp.mailSender}" />
+		<property name="subject" value="${aloc.ext.otp.subject}" />
+		<property name="contentXSLTFile" value="templates/otpMailContent.xsl" />
+		<property name="configuration">
+			<props>
+				<prop key="mail.smtp.host">${aloc.ext.otp.smtphost}</prop>
+			</props>
+		</property> 
+	</bean>
+	
+	<!--  DAO Declarations -->
+	<bean id="userOperationsDAO" class="com.ge.aloc.ext.dao.impl.UserOperationsDAO">
+		<property name="serviceClient" ref="applicationServiceClient" />
+	</bean>
+	
+	<!-- Manager Declarations -->
+	<bean id="userOperationsManager" class="com.ge.aloc.ext.manager.impl.UserOperationsManager">
+		<property name="userOperationsDAO" ref="userOperationsDAO" />
+		<property name="otpMailSender" ref="otpMailSender" />
+		<property name="easService" ref="easService" /> 
+		<property name="easOrgId" value="${aloc.ext.eas.orgId}" />
+		<property name="easApplicationId" value="${aloc.ext.eas.appId}" />
+		<property name="easApplicationPassword" value="${aloc.ext.eas.appPassword}" />
+		<property name="easOperation" value="${aloc.ext.eas.operation}" />
+	</bean>
+	
+	<bean class="org.springframework.web.context.support.ServletContextAttributeExporter">
+		<property name="attributes">
+			<map>
+				<entry key="com.ge.aloc.ext.manager.IUserOperationsManager">
+					<ref bean="userOperationsManager" />
+				</entry>
+			</map>
+		</property>
+	</bean> 
+	
+</beans>

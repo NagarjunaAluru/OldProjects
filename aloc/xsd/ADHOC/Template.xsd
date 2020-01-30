@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/ADHOC/Template.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/ADHOC/Filter.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ALOC/ADHOC/Column.xsd"
+	 xmlns:ns2="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/ADHOC/Template.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/ADHOC/Filter.xsd" schemaLocation="Filter.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/ADHOC/Column.xsd" schemaLocation="Column.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd" schemaLocation="../RequestDetails/MsgHeader.xsd"/>
+	<xs:element name="Template">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ns2:Msg_Header" minOccurs="0"/>
+				<xs:element name="Template_ID" type="xs:integer" minOccurs="0"/>
+				<xs:element name="DateFilter" type="xs:string" minOccurs="0"/>
+				<xs:element name="FromDate" type="xs:date" minOccurs="0"/>
+				<xs:element name="ToDate" type="xs:date" minOccurs="0"/>
+				<xs:element name="TemplateName" type="xs:string" minOccurs="0"/>
+				<xs:element name="Description" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Bussiness" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Treasury" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="LastRunDT" type="xs:date" minOccurs="0"/>
+				<xs:element name="SelectedSites" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Template_ID" type="xs:integer" minOccurs="0"/>
+							<xs:element name="Site_ID" type="xs:integer" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="SelectedBanks" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Template_ID" type="xs:integer" minOccurs="0"/>
+							<xs:element name="Bank_MDM_ID" type="xs:integer" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="ns0:Filter" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns1:Column" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

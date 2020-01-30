@@ -1,0 +1,52 @@
+8
+
+dir
+56
+https://openge.ge.com/svn/treasury_aloc/trunk/source/web/sunone_codebase/aloc/WebContent/js/jquery
+https://openge.ge.com/svn/treasury_aloc
+
+
+
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+720fd033-fee8-473a-95ce-a3690b27228b
+
+jquery.min.js
+file
+
+
+
+
+2014-12-17T16:04:16.538569Z
+e0a832c7355cfc8c8d8a71e50ca19594
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+jquery.datepick.js
+file
+
+
+
+
+2014-12-17T16:04:16.548569Z
+c5b36c67eb211f4019ef0ce1f7c06aa0
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+

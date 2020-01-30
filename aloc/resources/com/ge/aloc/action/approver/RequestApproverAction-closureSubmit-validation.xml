@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators> 
+	<field name="requestDetails.newExpDate">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+	        	<![CDATA[(requestDetails.newExpDate != null)]]>
+			</param>
+			<message key="error.required.closure.closureDate"/>
+		</field-validator>
+		<field-validator type="fieldexpression" short-circuit="true">
+				<param name="expression">
+		        	<![CDATA[@com.ge.aloc.util.ALOCCommonHelper@validateClosureDate()]]>
+				</param>
+				<message key="error.required.closure.validateClosureDate"/>
+		</field-validator>
+		<field-validator type="fieldexpression" short-circuit="true">
+				<param name="expression">
+		        	<![CDATA[@com.ge.aloc.util.ALOCCommonHelper@validateClosureDateByToday()]]>
+				</param>
+				<message key="error.required.closure.validateClosureDateByToday"/>
+		</field-validator>
+	</field>
+	<field name="requestDetailsBO.attachmentBOList">	
+		<field-validator type="fieldexpression" >
+			<param name="expression"><![CDATA[@com.ge.aloc.util.ALOCCommonHelper@validateClosureAttachment()]]>
+			</param>
+			<message key="error.required.closure.closureAttachment" />
+		</field-validator>		
+	</field>
+	<field name="requestDetailsBO.attachmentBOList">	
+		<field-validator type="fieldexpression">
+			<param name="expression"><![CDATA[@com.ge.aloc.util.ALOCCommonHelper@validateClosureUploadDescription()]]>
+			</param>
+			<message key="error.required.closure.closureUploadDescrition" />
+		</field-validator>		
+	</field>
+</validators>
+
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/OneTimeFeesDetails.xsd"
+	 targetNamespace="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/OneTimeFeesDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="OneTimeFeesDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="VAT_Taxes" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Stamp_Taxes" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Incidental_Admin_Fee" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Other" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Accept_Pricing_Details_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Reason_For_Rejection" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

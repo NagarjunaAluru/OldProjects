@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/SearchInstrDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/SearchInstrDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="SearchInstrDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Instr_Type_Id" type="xs:integer" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Instr_Currency_Cd" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Instr_From_Amt" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Instr_To_Amt" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Issuance_Country" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                                     <xs:element name="Applicant_Reference_Value" type="xs:string" minOccurs="0"/>
+                                     <xs:element name="Customer_Reference_Value" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+    <field name="name">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required.requestDetails.requestorCompanyName" />
+		</field-validator>
+	</field>
+	
+	  <field name="contactFName">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required.requestDetails.requestorContactFName" />
+		</field-validator>
+	</field>
+	
+	  <field name="contactLName">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required.requestDetails.requestorContactLName" />
+		</field-validator>
+	</field>
+	
+	<field name="phoneNumber">
+		<field-validator type="requiredstring" short-circuit="true">
+			<param name="trim">true</param>
+			<message>
+      			${getText("error.required.requestDetails.phoneNumber", {'Bond Requestor and Mailing Address :'})}
+            </message>
+		</field-validator>
+		<field-validator type="regex">
+            <param name="expression"><![CDATA[^[+]?[0-9- ]*$]]></param>
+            <message>
+      			${getText("error.required.requestDetails.phoneNumberMustBeDigits", {'Bond Requestor and Mailing Address :'})}
+            </message>
+        </field-validator>
+	</field>
+	
+	<field name="address[0]">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>
+      			${getText("error.required.requestDetails.address1", {'Bond Requestor and Mailing Address :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="city">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>
+      			${getText("error.required.requestDetails.city", {'Bond Requestor and Mailing Address :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="ZIPPostalCode">
+		<field-validator type="requiredstring" short-circuit="true">
+			<param name="trim">true</param>
+			<message>
+      			${getText("error.required.requestDetails.zipOrPostalCode", {'Bond Requestor and Mailing Address :'})}
+            </message>
+		</field-validator>
+        <field-validator type="fieldexpression">
+            <param name="expression"><![CDATA[(@com.ge.aloc.util.ALOCCommonHelper@isValidZipformat(ZIPPostalCode))]]></param>
+            <message>
+      			${getText("error.required.requestDetails.zipInFormat", {'Bond Requestor and Mailing Address :'})}
+            </message>
+        </field-validator>
+	</field>
+	<field name="countryCd">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>
+      			${getText("error.required.requestDetails.country", {'Bond Requestor and Mailing Address :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="countryOfIncCd">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>
+      			${getText("error.required.requestDetails.countryOfIncorporation", {'Bond Requestor and Mailing Address :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	 <field name="bondReqPhoneNo">
+	 	<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[((bondReqNameSelection!="Selected") || ((bondReqPhoneNo != null && bondReqPhoneNo != "")))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.phoneNumber", {'Bond Requestor and Mailing Address :'})}
+            </message>
+		</field-validator>
+	 
+		<field-validator type="fieldexpression">
+            <param name="expression"><![CDATA[(bondReqNameSelection != "Selected") || (@com.ge.aloc.util.ALOCCommonHelper@isValidPhoneNumber(bondReqPhoneNo))]]></param>
+            <message>
+      			${getText("error.required.requestDetails.phoneNumberMustBeDigits", {'Bond Requestor and Mailing Address :'})}
+            </message>
+        </field-validator>
+	</field>
+	
+	
+	<field name="bondReqFaxNo">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[(bondReqNameSelection!="Selected") || (bondReqFaxNo == null || bondReqFaxNo == "") || (@com.ge.aloc.util.ALOCCommonHelper@isValidPhoneNumber(bondReqFaxNo))]]>
+			</param>
+			<message key="error.required.requestDetails.faxNumberMustBeDigits" />
+		</field-validator>
+	</field>
+	
+	<field name="sendBackNotes">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requiresEdits == false) || (requiresEdits != true)) || (sendBackNotes != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.sendBackNotes" />
+		</field-validator>
+	</field>
+	
+	
+</validators>

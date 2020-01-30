@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/strutsconfig
+END
+struts-aloc-dashboard.xml
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/strutsconfig/struts-aloc-dashboard.xml
+END
+struts-aloc-treasuryadmin.xml
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/strutsconfig/struts-aloc-treasuryadmin.xml
+END
+struts-aloc-admin.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/strutsconfig/struts-aloc-admin.xml
+END
+struts-aloc-bundle.xml
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/strutsconfig/struts-aloc-bundle.xml
+END
+struts-aloc-requestor.xml
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/strutsconfig/struts-aloc-requestor.xml
+END
+struts-aloc-base.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/strutsconfig/struts-aloc-base.xml
+END
+struts-aloc-int-root.xml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/strutsconfig/struts-aloc-int-root.xml
+END
+struts-aloc-apm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/strutsconfig/struts-aloc-apm.xml
+END
+struts-aloc-siteadmin.xml
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/strutsconfig/struts-aloc-siteadmin.xml
+END
+struts-aloc-approver.xml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/strutsconfig/struts-aloc-approver.xml
+END
+struts-aloc-reports.xml
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/strutsconfig/struts-aloc-reports.xml
+END
+struts-aloc-ext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/strutsconfig/struts-aloc-ext.xml
+END

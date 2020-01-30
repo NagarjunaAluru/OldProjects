@@ -1,0 +1,58 @@
+error.required.reimbursementAgreemnet.agrNameLabel = Enter a valid Reimbursement Agreement Name
+error.required.reimbursementAgreemnet.agreementEnabledDisabled=Select Enabled or Disabled to Enable or Disable agreement
+error.required.reimbursementAgreemnet.agreementText = Copy and paste Instrument documentation
+error.required.reimbursementAgreemnet.defaultAgreement = Select Yes or No to indicate default agreement
+error.required.reimbursementAgreemnet.siteSelectionType = Site Selection is mandatory
+
+error.required.userAnnouncementMgmt.messageContent = Enter a message
+error.required.userAnnouncementMgmt.siteSelections = Select a site
+error.required.userAnnouncementMgmt.roleSelection = Select a role
+error.required.userAnnouncementMgmt.startDate = Enter a start date
+error.required.userAnnouncementMgmt.startDateCompare = Start date should be greater than or equal to today date
+error.required.userAnnouncementMgmt.endDate = Enter a end date
+error.required.userAnnouncementMgmt.endDateCompare = End date should be greater than or equal to today date or start date
+
+
+error.required.standardFormatMgmt.instrumentTypeId = Instrument Type is mandatory
+error.required.standardFormatMgmt.instrumentPurpose = Instrument Purpose is mandatory
+error.required.standardFormatMgmt.bondType = Bond Type is mandatory
+error.required.standardFormatMgmt.subBondType = SubBond Type is mandatory
+error.required.standardFormatMgmt.messagecontent = Template Content is mandatory
+
+
+error.required.recordsRetentionMgmt.expirationDateForPurge = Enter a valid value for purging
+error.required.recordsRetentionMgmt.scheduleFrequency = Select Schedule frequency
+error.required.recordsRetentionMgmt.recurringScheduleFrequency = Select Recurring schedule frequency in months
+error.required.recordsRetentionMgmt.oneTimeRunDate =Enter a One time run date
+error.required.recordsRetentionMgmt.oneTimeRunDateValid = One time run date must be greater than or equal to today date
+error.required.recordsRetentionMgmt.oneTimeRunDateCompare = One time run date date should be greater than or equal to today date
+error.required.recordsRetentionMgmt.approveOrReject = Approve or Reject selection  is mandatory
+error.required.recordsRetentionMgmt.rejectionReason = Enter a reason for return
+error.required.recordsRetentionMgmt.geRecipient = Enter a partial name or SSO to lookup
+error.required.recordsRetentionMgmt.expirationDateForPurgeRange = Purging must be between ${min} and ${max}
+invalid.fieldvalue.recordRetention.yearsAfterExpiry=
+
+#Surety Company Management Validation Messages
+error.required.suretyMaster.suretyName = Enter a name for SuretyName
+error.required.suretyMaster.suretyStatus = Select status
+error.required.suretyMaster.suretyNameExists = Surety name already exists, choose another name
+
+#Pole Name Management Validation Messages
+error.required.poleNameMgmt.poleName=Enter a name for PoleName
+error.required.poleNameMgmt.poleNameExists=Pole name already exists, choose another name
+error.required.poleNameMgmt.poleStatus=Select status
+error.required.poleNameMgmt.countrySelection=Select Country
+
+#Block BUC Management Validation Messages
+error.required.blockBUCMgmt.buc = Enter a value for BUC
+error.required.blockBUCMgmt.notes = Enter a Reason for blocking
+error.required.blockBUCMgmt.adn = Enter a value for ADN
+error.required.blockBUCMgmt.bucSelection = Please Select entire BUC / individual ADNs
+
+#amendment workflow management
+error.required.amdworkflowmgmt.amendmentAmount = Enter an amount for amendment
+error.required.amdworkflowmgmt.amendmentAmountInvalid = Enter a valid amendment amount
+
+#Change Request Ownership
+error.required.changeRequestOwnership.changeRequestor = Select New Request Owner
+error.required.changeRequestOwnership.requestorTransaction = Select requests that require new ownership

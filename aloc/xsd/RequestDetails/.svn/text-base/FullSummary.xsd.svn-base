@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/APM/FullSummary.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/APM/FullSummary.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="FullSummary">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Payment_ID" type="xs:string" minOccurs="0"/>
+				<xs:element name="ALOC_Record_Number" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Amendment_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Original_Amendment_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Site_Prefix" type="xs:string" minOccurs="0"/>
+				<xs:element name="Expiry_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Economic_Expiry_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Bank_Reference_Number" type="xs:string" minOccurs="0"/>
+				<xs:element name="GE_Applicant" type="xs:string" minOccurs="0"/>
+				<xs:element name="TriParty_Applicant" type="xs:string" minOccurs="0"/>
+				<xs:element name="Beneficiary_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Payment_Currency_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="Payment_Currency_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Payment_Amount" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Payment_Amount_String" type="xs:string" minOccurs="0"/>
+				<xs:element name="Payment_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="USD_Payment_Amount" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="US_Fee_Total" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Foreign_Fee_Total" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Period_Fee_Credits" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Period_Amendment_Fees" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Other_Fees" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="OneTime_Fees" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Model_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Aloc_Record_Id" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

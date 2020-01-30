@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<field name="newRequestorName">
+		<field-validator type="fieldexpression">
+		<param name="expression"><![CDATA[(requestorTrasactionsReply.changeRequestor.changeRequestorSso !=null && requestorTrasactionsReply.changeRequestor.changeRequestorSso !="")]]></param>
+      	<message key="error.required.changeRequestOwnership.changeRequestor" />
+      	</field-validator>
+    </field>
+    
+	<field name="requestorTransactionList">
+		<field-validator type="fieldexpression">
+		<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@validateRequestorTransactions(requestorTransactionList)</param> 
+      	<message key="error.required.changeRequestOwnership.requestorTransaction" />
+      	</field-validator>
+	</field>
+</validators>

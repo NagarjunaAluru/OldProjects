@@ -1,0 +1,131 @@
+.dropdownNew {
+	position: absolute;
+	z-index: 9999999;
+	display: none;
+}
+
+.dropdownNew .dropdown-menu,
+.dropdownNew .dropdown-panel {
+	min-width: 160px;
+	max-width: 400px;
+	list-style: none;
+	background: #e3ecf4;
+	border: solid 3px #20406a;
+	overflow: visible;
+	padding: 4px 0;
+	margin: 0;
+}
+
+.dropdownNew .dropdown-panel {
+	padding: 10px;
+}
+
+.dropdownNew.dropdown-tip {
+	margin-top: 8px;
+}
+
+.dropdownNew.dropdown-tip:before {
+
+}
+
+.dropdownNew.dropdown-tip.dropdown-anchor-right:before {
+	left: auto;
+	right: 9px;
+}
+
+.dropdownNew.dropdown-tip:after {
+
+}
+
+.dropdownNew.dropdown-tip.dropdown-anchor-right:after {
+	left: auto;
+	right: 10px;
+}
+
+
+.dropdownNew.dropdown-scroll .dropdown-menu,
+.dropdownNew.dropdown-scroll .dropdown-panel {
+	max-height: 358px;
+	overflow: auto;
+}
+
+.dropdownNew .dropdown-menu LI {
+	list-style: none;
+	padding: 0 0;
+	margin: 0;
+	line-height: 18px;
+}
+
+.dropdownNew .dropdown-menu LI > A,
+.dropdownNew .dropdown-menu LABEL {
+	display: block;
+	color: #555;
+	text-decoration: none;
+	line-height: 18px;
+	padding: 3px 15px;
+	white-space: nowrap;
+}
+
+.dropdownNew .dropdown-menu LI > A:hover,
+.dropdownNew .dropdown-menu LABEL:hover {
+	background-color: #08C;
+	color: #FFF;
+	cursor: pointer;
+}
+
+.dropdownNew .dropdown-menu .dropdown-divider {
+	font-size: 1px;
+	border-top: solid 1px #E5E5E5;
+	padding: 0;
+	margin: 5px 0;
+}
+
+/* Icon Examples - icons courtesy of http://p.yusukekamiyamane.com/ */
+.dropdownNew.has-icons LI > A {
+	padding-left: 30px;
+	background-position: 8px center;
+	background-repeat: no-repeat;
+}
+
+.dropdownNew .undo A { background-image: url(icons/arrow-curve-180-left.png); }
+.dropdownNew .redo A { background-image: url(icons/arrow-curve.png); }
+.dropdownNew .cut A { background-image: url(icons/scissors.png); }
+.dropdownNew .copy A { background-image: url(icons/document-copy.png); }
+.dropdownNew .paste A { background-image: url(icons/clipboard.png); }
+.dropdownNew .delete A { background-image: url(icons/cross-script.png); }
+
+.secondary{
+  display: inline-block;
+  *display: inline;
+  padding: 4px 12px;
+  margin-bottom: 0;
+  margin-left: 5px;
+  margin-right: 0px;
+  font-size: 11px;
+  line-height: 15px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #21406a;
+  *background-color: #21406a;
+  gradient: #346392, #21406a;
+  background-image: -moz-linear-gradient(top, #346392, #21406a);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#346392), to(#21406a));
+  background-image: -webkit-linear-gradient(top, #346392, #21406a);
+  background-image: -o-linear-gradient(top, #346392, #21406a);
+  background-image: linear-gradient(to bottom, #346392, #21406a);
+  background-repeat: repeat-x;
+  border: 1px solid #cccccc;
+  *border: 0;
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.secondary:hover{
+  color: #fff;
+}

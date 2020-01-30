@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/SiteAdmin/BankFeePaymentSetup.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/ALOCCommon.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/SiteAdmin/BankFeePaymentSetup.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/ALOCCommon.xsd" schemaLocation="../RequestDetails/ALOCCommon.xsd"/>
+	<xs:element name="BankFeePaymentSetup">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Bank_Payment" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Bank_Model_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="OpCode" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns0:ActionDetails" minOccurs="0"/>
+				<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Bank_Payment">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Payment_Currency_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Payment_Currency" type="xs:string" minOccurs="0"/>
+				<xs:element name="Payment_Currency_Id" type="xs:integer" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

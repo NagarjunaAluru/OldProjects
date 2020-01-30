@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<field name="revisedExpiryDate">
+		<field-validator type="required" short-circuit="true">
+			<message>
+      			${getText("error.required.requestDetails.amendment.revisedExpiryDate", {'Expiration Dates :'})}
+            </message>
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+			<param name="expression">revisedExpiryDate.compareTo(@com.ge.aloc.util.ALOCCommonHelper@getCurrentDateWithOutTime()) != -1</param>
+			<message key="error.required.requestDetails.amendment.expiryDtNotvalid" />
+		</field-validator>
+	</field>
+	<field name="USRevisedExpiryDate">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[@com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 5 || (USRevisedExpiryDate!= null)]]>
+      		</param>
+			<message key="error.required.requestDetails.amendment.revisedUSExpiryDate" />
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+			<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 5 || (USRevisedExpiryDate.compareTo(revisedExpiryDate) != -1)</param>
+			<message key="error.required.issuingBankDetails.bidreplyUSExpirationDateInvalid"/>
+		</field-validator>
+	</field>
+	
+	
+</validators>

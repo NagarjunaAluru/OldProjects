@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	
+	<field name="requestDetails.tresuryDelegation.approverSso">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[ (actionType != 4 || @com.ge.aloc.util.ALOCCommonHelper@riderTreasuryApproverValidationRequired(requestDetails.rider.riderBondInformation.validationUsdAmount) != true || @com.ge.aloc.util.ALOCCommonHelper@approverSizeValidation() != true) || (requestDetails.tresuryDelegation.approverSso !=null && requestDetails.tresuryDelegation.approverSso != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.treasuryApprover" />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.businessReApprovalFlag">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[ (actionType != 3) || (requestDetails.businessReApprovalFlag != "" && requestDetails.businessReApprovalFlag != null)]]>
+      	</param>
+			<message key="error.required.requestDetails.businessReApproval" />
+		</field-validator>	
+	</field>	
+		
+	<field name="requestDetails.actionDetails.reasonForRejection">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[ (actionType != 3) || (requestDetails.actionDetails.reasonForRejection != "" && requestDetails.actionDetails.reasonForRejection != null)]]>
+      	</param>
+			<message key="error.required.requestDetails.reasonForRejection" />
+		</field-validator>	
+	</field>
+	
+</validators>

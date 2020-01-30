@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+
+	<field name="poleId">
+	
+		<field-validator type="required" >  
+             <message key="error.required.requestDetails.poleName" />
+        </field-validator>  
+		
+	</field>
+	
+	<field name="siteCustoms[0].siteCustomValue">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[(siteRequiredFlag != true) || (siteCustoms[0].siteCustomValue !=null && siteCustoms[0].siteCustomValue !="")]]>
+			</param>
+			 <message><![CDATA[ Instrument Reporting Attributes : ${siteCustoms[0].siteCustomField} is mandatory ]]></message>
+		</field-validator>
+	</field>
+	
+	<field name="sendBackNotes">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requiresEdits == false) || (requiresEdits != true)) || (sendBackNotes != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.sendBackNotes" />
+		</field-validator>
+	</field>
+	
+</validators>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/APM/FXRateHistoryAndCurrencySetup.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/APM/FXRateHistory.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ALOC/APM/CurrencySetup.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/APM/FXRateHistoryAndCurrencySetup.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/APM/FXRateHistory.xsd" schemaLocation="FXRateHistory.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/APM/CurrencySetup.xsd" schemaLocation="CurrencySetup.xsd"/>
+	<xs:element name="FXRateHistoryAndCurrencySetup">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="OpCode" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns0:FXRateHistory" minOccurs="0"/>
+				<xs:element ref="ns1:CurrencySetup" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

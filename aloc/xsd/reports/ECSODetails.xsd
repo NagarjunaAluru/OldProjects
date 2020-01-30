@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/Reports/ECSODetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/Reports/ECSODetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="ECSODetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="IN_EXPIRDATE" type="xs:string" minOccurs="0"/>
+				<xs:element name="IN_BUS_SITE_ID" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="IN_CSO" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="IN_GOLD_ID" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="IN_BUS_SITE_NAME" minOccurs="0"/>
+				<xs:element name="OUT_P_RECORDSET" type="xs:string" minOccurs="0"/>
+				<xs:element name="SITE_ID" type="xs:string" minOccurs="0"/>
+				<xs:element name="SITE_NAME" type="xs:string" minOccurs="0"/>
+				<xs:element name="ALOC_RECORD" type="xs:string" minOccurs="0"/>
+				<xs:element name="INSTRUMENT_TYPE" type="xs:string" minOccurs="0"/>
+				<xs:element name="GOLD_ID" type="xs:string" minOccurs="0"/>
+				<xs:element name="CSO_RECORD" type="xs:string" minOccurs="0"/>
+				<xs:element name="ALOC_USD_EQUIVALENT_AMOUNT" type="xs:string" minOccurs="0"/>
+				<xs:element name="GOLD_ID_1" type="xs:string" minOccurs="0"/>
+				<xs:element name="LOAN_RQST_ID" type="xs:string" minOccurs="0"/>
+				<xs:element name="CSO_TYPE" type="xs:string" minOccurs="0"/>
+				<xs:element name="FCLTY_AMT_IN_NBR" type="xs:string" minOccurs="0"/>
+				<xs:element name="LAST_UPDT" type="xs:string" minOccurs="0"/>
+				<xs:element name="APRVR_ID" type="xs:string" minOccurs="0"/>
+				<xs:element name="STATUS" type="xs:string" minOccurs="0"/>
+				<xs:element name="CSO_AMOUNT" type="xs:string" minOccurs="0"/>
+				<xs:element name="CSO_APPROVAL_DATE" type="xs:string" minOccurs="0"/>
+				<xs:element name="CSO_APPROVER_NAME" type="xs:string" minOccurs="0"/>
+				<xs:element name="OUTSTANDING_AMOUNT" type="xs:string" minOccurs="0"/>
+                                       <xs:element name="REQUESTOR_NAME" type="xs:string" minOccurs="0"/>
+				<xs:element name="REQUESTOR_SSO" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="INEXPIRDATE" type="xs:string"/>
+	<xs:element name="INBUSSITEID" type="xs:string"/>
+	<xs:element name="INGOLDID" type="xs:string"/>
+	<xs:element name="INCSO" type="xs:string"/>
+	<xs:element name="IN_BUS_SITE_NAME" type="xs:string"/>
+	<xs:element name="P_RECORDSET" type="xs:string"/>
+</xs:schema>

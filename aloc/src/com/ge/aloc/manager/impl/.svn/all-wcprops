@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/impl
+END
+SearchManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/impl/SearchManager.java
+END
+ALOCAttachmentManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/impl/ALOCAttachmentManager.java
+END
+ReferenceDataManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/impl/ReferenceDataManager.java
+END
+LookupManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/impl/LookupManager.java
+END
+AdhocReportManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/impl/AdhocReportManager.java
+END
+SiteDetailsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/impl/SiteDetailsManager.java
+END
+CreateBundleManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/impl/CreateBundleManager.java
+END
+ReportsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/impl/ReportsManager.java
+END
+RequestDetailsManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/impl/RequestDetailsManager.java
+END
+LinkTransactionManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/impl/LinkTransactionManager.java
+END
+RequestDetailsSectionManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/impl/RequestDetailsSectionManager.java
+END

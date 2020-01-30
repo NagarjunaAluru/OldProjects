@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+
+	<field name="requestDetails.issuingBankSelectionFlag">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[ (actionType != 4) || (requestDetails.issuingBankSelectionFlag != null && requestDetails.issuingBankSelectionFlag != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.issuingBankSelectionFlag" />
+		</field-validator>
+	</field>
+	<field name="requestDetails.treasurySelectedBankName">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[ ((actionType != 4) || (requestDetails.issuingBankSelectionFlag != "Y")) || (requestDetails.treasurySelectedBankName != null && requestDetails.treasurySelectedBankName != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.issuingBankSelectin" />
+		</field-validator>
+	</field>
+	<field name="requestDetails.reimbursementAgreementId">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[ (actionType != 4) || (requestDetails.reimbursementAgreementId != null && requestDetails.reimbursementAgreementId != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.reimbursementagreement" />
+		</field-validator>
+	</field>
+	<field name="requestDetails.LOCTransferable">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[ ((actionType != 4) || (requestDetails.instrumentType != "Standby Letter Of Credit")) || ((requestDetails.LOCTransferable == true) || (requestDetails.LOCTransferable == false))]]>
+      	</param>
+			<message key="error.required.requestDetails.standbyLOCTransferable" />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.suppressWebcash">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+	        	<![CDATA[ (actionType != 4) || (requestDetails.suppressWebcash == true || requestDetails.suppressWebcash == false)]]>
+	      	</param>
+			<message key="error.required.requestDetails.suppressWebcash" />
+		</field-validator>
+		
+	</field>
+
+	<field name="requestDetails.transferFeesRequiredFlag">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+	        	<![CDATA[ (actionType != 4) || (requestDetails.transferFeesRequiredFlag == true || requestDetails.transferFeesRequiredFlag == false)]]>
+	      	</param>
+			<message key="error.required.requestDetails.transferFees" />
+		</field-validator>
+	</field>
+	<field name="requestDetails.tresuryDelegation.approverSso">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+	        	<![CDATA[ (actionType != 4 || @com.ge.aloc.util.ALOCCommonHelper@approverSizeValidation() != true) || (requestDetails.tresuryDelegation.approverSso !=null && requestDetails.tresuryDelegation.approverSso != "")]]>
+	      	</param>
+			<message key="error.required.requestDetails.tresuryDelegation" />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.businessReApprovalFlag">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[(actionType != 3) ||  (requestDetails.businessReApprovalFlag != null && requestDetails.businessReApprovalFlag != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.businessReApproval" />
+		</field-validator>	
+	</field>
+		
+</validators>

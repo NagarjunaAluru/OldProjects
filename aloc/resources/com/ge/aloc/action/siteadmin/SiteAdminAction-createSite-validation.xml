@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	
+	<field name="siteAdmin">
+		<field-validator type="visitor">
+			<message></message>
+		</field-validator>
+	</field>
+	
+	<field name="goldId">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[(@com.ge.aloc.util.ALOCCommonHelper@isSiteSection(sectionId) != true || siteAdmin.siteType.siteTypeId != "3" || (goldId !=null && goldId.trim() !="" && goldIdSelection!=null && goldIdSelection.trim() !="") || ((goldId ==null || goldId.trim() =="") && goldIdSelection!=null && goldIdSelection.trim() !="") || (siteAdmin.leGoldId != null && siteAdmin.leGoldId !=""))]]>
+      		</param>
+			<message key="error.required.siteDetails.leGoldId"/>
+		</field-validator>
+	</field> 
+</validators>

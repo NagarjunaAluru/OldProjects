@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+
+	 <field name="requestDetails.businessReApprovalFlag">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[ (requestDetails.instrumentTypeId == 4) || ((actionType != 1  || requestDetails.prepareForBundle != "Y") && (actionType != 2 ) || requestDetails.businessReApprovalFlag != null && requestDetails.businessReApprovalFlag != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.businessApproval" />
+		</field-validator>
+	</field>
+
+	 <field name="requestDetails.buDelegation.buApprover.approverSso">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[ ((requestDetails.businessReApprovalFlag == null || requestDetails.businessReApprovalFlag == "" || requestDetails.businessReApprovalFlag == "N") || requestDetails.instrumentTypeId == 4 || actionType != 2) || (requestDetails.buDelegation!=null && requestDetails.buDelegation.buApprover.approverSso != "" && requestDetails.buDelegation.buApprover.approverSso != null)]]>
+      	</param>
+			<message key="error.required.requestDetails.submitbusinessApprover" />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.buDelegation.buApprover.approverSso">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[ ((requestDetails.businessReApprovalFlag == null || requestDetails.businessReApprovalFlag == "" || requestDetails.businessReApprovalFlag == "N") ||  requestDetails.instrumentTypeId == 4 || actionType != 1 || requestDetails.prepareForBundle != "Y") || (requestDetails.buDelegation!=null && requestDetails.buDelegation.buApprover.approverSso != "" && requestDetails.buDelegation.buApprover.approverSso != null)]]>
+      	</param>
+			<message key="error.required.requestDetails.prepareBusinessApprover" />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.modelName">  
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[ (requestDetails.instrumentTypeId == 4 || actionType != 2 || requestDetails.saveAsModel != 'SAVE') || (requestDetails.modelName != null && requestDetails.modelName != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.modelNameisMandatory"/>
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.modelName">  
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[ (requestDetails.instrumentTypeId == 4 || actionType != 7)  || (requestDetails.modelName != null && requestDetails.modelName != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.modelNameisMandatory"/>
+		</field-validator>
+	</field>
+	<field name="requestDetailsBO.formatBO.model.formatTypeId">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression"><![CDATA[ actionType != 2 || (requestDetailsBO.formatBO.model.formatTypeId != null && requestDetailsBO.formatBO.model.formatTypeId != "")]]>
+			</param>
+			<message key="error.required.requestDetails.format.formatType" />
+		</field-validator>	
+	</field>
+	<field name="requestDetailsBO.formatBO.attachmentBOList" >
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression"><![CDATA[ actionType != 2 || @com.ge.aloc.util.ALOCCommonHelper@validateFormatDefaultAtmtFileUpload()]]>
+			</param>
+			<message key="error.required.requestDetails.format.attachmentFileUpload" />
+		</field-validator>
+	</field>	
+	<field name="requestDetailsBO.attachmentBOList">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression"><![CDATA[ actionType != 2 || @com.ge.aloc.util.ALOCCommonHelper@validateAtmtFileUpload()]]>
+			</param>
+			<message key="error.required.requestDetails.attachments.fileUpload" />
+		</field-validator>
+	</field>
+</validators>

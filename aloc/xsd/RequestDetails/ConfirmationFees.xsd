@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/ConfirmationFees.xsd"
+	 targetNamespace="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/ConfirmationFees.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="ConfirmationFees">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Fee_Structure_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Fee_Structure_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Fee_Structure_Value" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Other_Fees" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Additional_Comments" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

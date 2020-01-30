@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/Reports/AverageFeesPaidDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/Reports/AverageFeesPaidDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="AverageFeesPaidDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="IN_FB_NUMBER" type="xs:string" minOccurs="0"/>
+				<xs:element name="IN_FB_VALUE" type="xs:string" minOccurs="0"/>
+				<xs:element name="IN_AMT_RANGE_MIN" type="xs:string" minOccurs="0"/>
+				<xs:element name="IN_AMT_RANGE_MAX" type="xs:string" minOccurs="0"/>
+				<xs:element name="IN_MIN_DATE" type="xs:string" minOccurs="0"/>
+				<xs:element name="IN_MAX_DATE" type="xs:string" minOccurs="0"/>
+				<xs:element name="Range_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="USDEQUIAMOUNT" type="xs:string" minOccurs="0"/>
+				<xs:element name="Total" type="xs:string" minOccurs="0"/>
+				<xs:element name="NoofIssuances" type="xs:string" minOccurs="0"/>
+				<xs:element name="USDEquivalentValue" type="xs:string" minOccurs="0"/>
+				<xs:element name="COUNT_LT_1YR" type="xs:string" minOccurs="0"/>
+				<xs:element name="UNDER_1YR" type="xs:string" minOccurs="0"/>
+				<xs:element name="COUNT_1TO3" type="xs:string" minOccurs="0"/>
+				<xs:element name="UNDER_1TO3_YEARS" type="xs:string" minOccurs="0"/>
+				<xs:element name="COUNT_3TO5" type="xs:string" minOccurs="0"/>
+				<xs:element name="UNDER_3TO5_YEARS" type="xs:string" minOccurs="0"/>
+				<xs:element name="COUNT_GT_5YR" type="xs:string" minOccurs="0"/>
+				<xs:element name="GT_5YR" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

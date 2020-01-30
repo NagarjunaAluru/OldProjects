@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<authorization xmlns:hwf="HWF/authorization/hwf-authorization_1.0"
+	xmlns="HWF/authorization/hwf-authorization_1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="HWF/authorization/hwf-authorization_1.0 hwf-authorization_1_0.xsd ">
+	<permissions>
+		
+	   	<web-resource name="home" default="true">
+	  		<URI>/ext/home.action</URI>
+	   	</web-resource>
+	   	
+	   	<web-resource name="OpenRequest" default="true">
+  			<URI>/ext/openRequest.action</URI>
+	   	</web-resource>
+	   	
+	   	<web-resource name="LookupAction" default="true">
+  			<URI>/ext/*Lookup.action</URI>
+	   	</web-resource>
+	   	
+	   	<web-resource name="homepageDownload" default="true">
+	  		<URI>/ext/downloadAttachment.action</URI>
+	   	</web-resource>
+	   	
+	   	<web-resource name="contactUs" default="true">
+	  		<URI>/ext/contactUs.action</URI>
+	   	</web-resource>
+	   	<web-resource name="help" default="true">
+	  		<URI>/ext/help.action</URI>
+	   	</web-resource>
+	   	<web-resource name="resource" default="true">
+	  		<URI>/ext/downloadResourcePDF.action</URI>
+	   	</web-resource>
+	   	<web-resource name="ValidateAction" default="true">
+  			<URI>/ext/validate*.action</URI>
+	   	</web-resource>
+	   	
+	   	<web-resource name="dashboard" default="true">
+	  		<URI>/ext/dashboard/*.action</URI>
+	   	</web-resource>
+	   	<web-resource name="getSites" default="true">
+	  		<URI>/ext/admin/getSites.action</URI>
+	   	</web-resource>
+	   	<web-resource name="getYearlist" default="true">
+	  		<URI>/ext/apm/getYearlist.action</URI>
+	   	</web-resource>
+	   	<web-resource name="searchFeeHistory" default="true">
+	  		<URI>/ext/admin/searchFeeHistory.action</URI>
+	   	</web-resource>
+	   		<web-resource name="exportInvoice" default="true">
+	  		<URI>/ext/admin/exportInvoiceFeeHistory.action</URI>
+	   	</web-resource>
+	   	<web-resource name="RequestContactInfoDashboardRefData" default="true">
+	  		<URI>/ext/RequestContactInfoDashboardRefData.action</URI>
+	   	</web-resource>
+	   	<web-resource name="dashboardActionLogRefData" default="true">
+	  		<URI>/ext/ActionLogDashboardRefData.action</URI>
+	   	</web-resource>
+	   	
+	   	<web-resource name="requestCheckListPDF" default="true">
+	  		<URI>/ext/requestCheckListPDF.action</URI>
+	   	</web-resource>
+	   	
+	   	<web-resource name="apm">	   	
+	  		<URI>/ext/apm/*.action</URI>
+	  		<principalsRef>
+	    		<principalRef ref="BankOperations"/>
+		    	<principalRef ref="BankReadOnly"/>
+	    	</principalsRef>  	
+	   	</web-resource>	 
+	   	
+	   	<web-resource name="taxonomy" default="true">
+	  		<URI>/ext/*Taxonomy.action</URI>
+	   	</web-resource>
+	   	<web-resource name="saveCurrBankFees" default="true">
+	  		<URI>/ext/saveCurrBankFees.action</URI>
+	   	</web-resource>
+	   	<web-resource name="taxonomyPDFReport" default="true">
+	  		<URI>/ext/taxonomyPDFReport.action</URI>
+	   	</web-resource>
+	   	
+	    <web-resource name="downloadHelpPDF" default="true">
+	  		<URI>/ext/downloadHelpPDF.action</URI>
+	   	</web-resource>
+	   	
+ 		<!-- Permissions for Treasury Admin  Resources -->
+	    <web-resource name="treasuryAdmin">	    
+	  		<URI>/ext/admin/*.action</URI>	
+	  		<principalsRef>
+	    		<principalRef ref="BankOperations"/>
+	    		<principalRef ref="SuretyBrokerOperations"/>	
+	    	</principalsRef>  	
+	   	</web-resource>
+	    <web-resource name="Reports" default="true">
+	  		<URI>/ext/reports/*.action</URI>  		
+	   	</web-resource>
+	   	
+	   	<web-resource name="getFullAuditAndActionLog" default="true">
+  			<URI>/ext/approver/getFullAuditAndActionLog.action</URI>
+	   	</web-resource>
+	   	
+	   	<web-resource name="auditandActionSearch" default="true">
+  			<URI>/ext/approver/auditandActionSearch.action</URI>
+	   	</web-resource>
+	   	
+	   	<!-- 	Attachment Permissions -->
+	   	<web-resource name="attachmentDownload" default="true">
+	  		<URI>/ext/atmt/download*.action</URI>  		
+	   	</web-resource>
+	   	
+	   	<web-resource name="attachmentUpload">
+	  		<URI>/ext/atmt/upload.action</URI>
+	  		<principalsRef>
+	    		<principalRef ref="BankOperations"/>
+	    		<principalRef ref="SuretyBrokerOperations"/>	    		
+	    	</principalsRef> 
+	   	</web-resource>
+	   	
+	   	<web-resource name="attachmentDelete">
+	  		<URI>/ext/atmt/delete.action</URI>
+	  		<principalsRef>
+	    		<principalRef ref="BankOperations"/>
+	    		<principalRef ref="SuretyBrokerOperations"/>
+	    	</principalsRef> 
+	   	</web-resource>
+	   	
+	   	<web-resource name="closureAttachmentDelete">
+	  		<URI>/ext/atmt/closureDelete.action</URI>
+	  		<principalsRef>
+	    		<principalRef ref="BankOperations"/>
+	    		<principalRef ref="SuretyBrokerOperations"/>
+	    	</principalsRef> 
+	   	</web-resource>
+	   	
+	   	   		   		   		   		   			   	
+	   	<!-- Attachment permissions  -->
+	   	<web-resource name="AddAttachment">
+	  		<URI>/ext/addAttachment.action</URI>
+	  		
+	  		<principalsRef>
+	    		<principalRef ref="BankOperations"/>
+	    		<principalRef ref="SuretyBrokerOperations"/>
+	    	</principalsRef>
+	   	</web-resource>
+	   	
+	   	<web-resource name="AddInstrumentDocAttachment">
+	  		<URI>/ext/addInstrDocAttachment.action</URI>
+	  		<principalsRef>
+	    		<principalRef ref="BankOperations"/>
+	    		<principalRef ref="SuretyBrokerOperations"/>
+	    	</principalsRef>
+	   	</web-resource>
+	   	
+	   
+	   <web-resource name="DownloadResources">
+	  		<URI>/ext/requestor/downloadAttachment.action</URI>	  		
+	  		<principalsRef>
+				<principalRef ref="BankOperations"/>
+				<principalRef ref="SuretyBrokerOperations"/>
+				<principalRef ref="BankReadOnly"/>
+				<principalRef ref="SuretyBrokerReadOnly"/>
+	    	</principalsRef>
+	   	</web-resource>
+	   	
+	   <!-- 	Permissions for Requestor Resources -->
+	   	<web-resource name="RequestorResources">
+	  		<URI>/ext/requestor/*.action</URI>
+	  		
+	  		<principalsRef>
+	    		<principalRef ref="BankOperations"/>
+				<principalRef ref="SuretyBrokerOperations"/>
+	    	</principalsRef>
+	   	</web-resource>
+	  	
+	   	
+	   <!-- 	Permissions for Approver Resources -->
+	   	<web-resource name="ApproverResources">
+	  		<URI>/ext/approver/*.action</URI>
+	  		
+	  		<principalsRef>
+	    		<principalRef ref="BankOperations"/>
+	    		<principalRef ref="SuretyBrokerOperations"/>
+	    	</principalsRef>
+	   	</web-resource>
+	   <!-- 	Permissions for Report Resources -->
+	   	<web-resource name="ReportResources">
+	  		<URI>/ext/reports/*.action</URI>
+	  		
+	  		<principalsRef>
+	    		<principalRef ref="BankOperations"/>
+	    		<principalRef ref="SuretyBrokerOperations"/>
+	    	</principalsRef>
+	   	</web-resource>
+
+	  <!--  	Role based business component permissions -->
+	   	<domain name="BusinessAccess" default="true">
+	   		
+	   		<!-- Taxonomy Update Fields Access -->
+	   		<component name="TaxonomyUpdateAccess">
+	   			<principalsRef>
+	    			<principalRef ref="BankOperations"/>
+	    		<principalRef ref="SuretyBrokerOperations"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		
+	   		<!-- Rate History Page Access  -->
+	   		<component name="RateHistoryView">
+	   			<principalsRef>
+		    		<principalRef ref="BankOperations"/>
+		    		<principalRef ref="BankReadOnly"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<component name="TransactionHistoryView">
+	   			<principalsRef>
+		    		<principalRef ref="BankOperations"/>
+		    		<principalRef ref="BankReadOnly"/>
+		    		<principalRef ref="SuretyBrokerOperations"/>
+		    		<principalRef ref="SuretyBrokerReadOnly"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		
+	   		<!-- Bank Dashboard Access -->
+	   		<component name="BankDashBoardAccess">
+	   			<principalsRef>
+		    		<principalRef ref="BankOperations"/>
+		    		<principalRef ref="BankReadOnly"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<!-- Broker Dashboard Access -->
+	   		<component name="BrokerDashBoardAccess">
+	   			<principalsRef>
+		    		<principalRef ref="SuretyBrokerOperations"/>
+		    		<principalRef ref="SuretyBrokerReadOnly"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<component name="IssuanceBankUserAccess">
+	   			<principalsRef>
+		    		<principalRef ref="BankOperations"/>
+		    		<principalRef ref="BankReadOnly"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+
+	   		<!-- Attachment Access -->
+	   		<component name="AttachmentsAccess">
+	   			<principalsRef>
+	   				<principalRef ref="BankOperations"/>
+		    		<principalRef ref="BankReadOnly"/>
+		    		<principalRef ref="SuretyBrokerOperations"/>
+		    		<principalRef ref="SuretyBrokerReadOnly"/>	    		
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<!-- Not Bank Broker ReadOnly Access -->
+	   		<component name="NotBankBrokerReadOnly">
+	   			<principalsRef>
+		    		<principalRef ref="BankOperations"/>
+		    		<principalRef ref="SuretyBrokerOperations"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   		<!-- Bank Broker ReadOnly Access -->
+	   		<component name="BankBrokerReadOnly">
+	   			<principalsRef>
+		    		<principalRef ref="BankReadOnly"/>
+		    		<principalRef ref="SuretyBrokerReadOnly"/>
+		    	</principalsRef>
+	   		</component>
+	   		
+	   	</domain>
+ 	</permissions>
+	
+	<principals>
+		<principal id="BankOperations" name="BankOperations" />
+		<principal id="BankReadOnly" name="BankReadOnly" />
+		<principal id="SuretyBrokerOperations" name="SuretyBrokerOperations" />
+		<principal id="SuretyBrokerReadOnly" name="SuretyBrokerReadOnly" />
+		<principal id="apm" name="apm" />
+	</principals>
+</authorization>
+ 

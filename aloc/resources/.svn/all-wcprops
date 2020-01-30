@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources
+END
+ehcache.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/ehcache.xml
+END
+hwf.properties
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/hwf.properties
+END
+struts.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/struts.xml
+END
+aloc-int-hwf-authorization.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/aloc-int-hwf-authorization.xml
+END
+alocerrors.properties
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/alocerrors.properties
+END
+validators.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/validators.xml
+END
+xwork-conversion.properties
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/xwork-conversion.properties
+END
+LibAPIClient.jar
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/LibAPIClient.jar
+END
+aloc-ext-hwf-authorization.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/aloc-ext-hwf-authorization.xml
+END

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<!-- ############################## Requestor Actions ###############################  -->
+	
+	<bean id="createRequestAction" class="com.ge.aloc.action.requestor.CreateRequestAction" singleton="false" >
+		<property name="requestDetailsManager" ref="requestDetailsManager" />
+	</bean>
+	
+	<bean id="requestorAction" class="com.ge.aloc.action.requestor.RequestorAction" singleton="false" >
+		<property name="requestDetailsSectionManager" ref="requestDetailsSectionManager" />
+		<property name="requestDetailsManager" ref="requestDetailsManager" />
+		<property name="alocAttachmentManager" ref="alocAttachmentManager" />		
+	</bean>
+	
+	<bean id="requestorReviewAction" class="com.ge.aloc.action.requestor.RequestorReviewAction" singleton="false" >
+		<property name="requestDetailsSectionManager" ref="requestDetailsSectionManager" />
+		<property name="requestDetailsManager" ref="requestDetailsManager" />
+		<property name="alocAttachmentManager" ref="alocAttachmentManager" />
+		<property name="errorHandler" ref="globalErrorHandler" />
+	</bean>
+	<bean id="openRequestAction" class="com.ge.aloc.action.request.OpenRequestAction" singleton="false" />
+	
+	<bean id="approverAction" class="com.ge.aloc.action.approver.RequestApproverAction" singleton="false" >
+		<property name="requestDetailsSectionManager" ref="requestDetailsSectionManager" />
+		<property name="requestDetailsManager" ref="requestDetailsManager" />
+		<property name="alocAttachmentManager" ref="alocAttachmentManager" />
+		<property name="linkTransactionManager" ref="linkTransactionManager" />
+		<property name="createBundleManager" ref="createBundleManager" />
+	    <property name="errorHandler" ref="globalErrorHandler" />
+	</bean>
+	<bean id="auditSearchAction" class="com.ge.aloc.action.request.AuditSearchAction" singleton="false">
+	    <property name="requestDetailsSectionManager" ref="requestDetailsSectionManager" />
+	</bean>
+	<!-- ############################## Site Admin Actions ###############################  -->
+	<bean id="siteAdminAction" class="com.ge.aloc.action.siteadmin.SiteAdminAction" singleton="false" >
+		<property name="siteDetailsManager" ref="siteDetailsManager" />
+	</bean>
+	
+	<bean id="manageSiteAction" class="com.ge.aloc.action.siteadmin.ManageSiteAction" singleton="false" >
+		<property name="siteDetailsManager" ref="siteDetailsManager" />
+	</bean>
+	
+	<!-- ############################## Business Admin Actions ###############################  -->
+	
+	<bean id="businessAdminAction" class="com.ge.aloc.action.siteadmin.BusinessAdminAction" singleton="false" >
+		<property name="siteDetailsManager" ref="siteDetailsManager" />
+	</bean>
+	
+	<!-- ############################## Lookup Actions ###############################  -->
+
+	<bean id="lookupAction" class="com.ge.aloc.action.lookup.LookupAction" singleton="false" >
+		<property name="lookupManager" ref="lookupManager" />
+	</bean>
+		
+	<!-- ############################## Dashboard Actions ###############################  -->
+	<bean id="commonDashboardAction" class="com.ge.aloc.action.dashboard.DashboardBaseAction" singleton="false" >
+		<property name="dashboardManager" ref="dashboardManager" />
+		<property name="errorHandler" ref="globalErrorHandler" />
+	</bean>
+	
+	<!-- ############################## Search Actions ###############################  -->
+	<bean id="commonSearchAction" class="com.ge.aloc.action.search.SearchAction" singleton="false" >
+		<property name="searchManager" ref="searchManager" />
+	</bean>
+	
+	<!-- ############################## Reference Data Actions ###############################  -->
+	<bean id="referenceDataAction" class="com.ge.aloc.action.ReferenceDataAction">
+		<property name="referenceDataManager" ref="referenceDataManager" />
+	</bean>
+	
+	<!-- ############################## Dashboard Reference Data Actions ###############################  -->
+	<bean id="dashboardRefDataAction" class="com.ge.aloc.action.dashboard.DashboardRefDataAction" singleton="false">
+		<property name="dashboardRefDataManager" ref="dashboardRefDataManager" />
+		<property name="errorHandler" ref="globalErrorHandler" />
+	</bean>
+	
+	<!-- ############################## Link Transaction Actions ###############################  -->
+	<bean id="linkToAction" class="com.ge.aloc.action.LinkTransactionAction" singleton="false" >
+		<property name="linkTransactionManager" ref="linkTransactionManager" />
+		
+	</bean>	
+		
+	<bean id="CreateBundleAction" class="com.ge.aloc.action.CreateBundleAction" singleton="false" >
+		<property name="createBundleManager" ref="createBundleManager" />
+	</bean>
+	
+	<!-- ############################## Admin Actions ###############################  -->
+	<bean id="suretyNameMgmtAction" class="com.ge.aloc.action.admin.SuretyNameMgmtAction" singleton="false" >
+		<property name="suretyNameManager" ref="suretyNameManager" />
+	</bean>
+	
+	<bean id="poleNameMgmtAction" class="com.ge.aloc.action.admin.PoleNameMgmtAction" singleton="false" >
+		<property name="poleNameManager" ref="poleNameManager" />
+	</bean>
+	
+	<bean id="blockBUCAction" class="com.ge.aloc.action.admin.BlockBUCAction" singleton="false" >
+		<property name="blockBUCManager" ref="blockBUCManager" />
+	</bean>
+	
+	<bean id="feeHistoryAction" class="com.ge.aloc.action.apm.FeeHistoryAction" singleton="false" >
+		<property name="feeHistoryManager" ref="feeHistoryManager" />
+	</bean>
+	
+	<bean id="standardFormatMgmtAction" class="com.ge.aloc.action.admin.StandardFormatMgmtAction" singleton="false" >
+		<property name="standardFormatMgmtManager" ref="standardFormatMgmtManager" />
+	</bean>
+	
+	<bean id="reimbursementAgreementAction" class="com.ge.aloc.action.admin.ReimbursementAgreementAction" singleton="false" >
+		<property name="reimbursementAgreementMgmtManager" ref="reimbursementAgreementMgmtManager" />
+	</bean>
+		
+	<bean id="userAnnouncementMgmtAction" class="com.ge.aloc.action.admin.UserAnnouncementMgmtAction" singleton="false" >
+		<property name="userAnnouncementMgmtManager" ref="userAnnouncementMgmtManager" />	
+		<property name="alocAttachmentManager" ref="alocAttachmentManager" />	
+	    <property name="errorHandler" ref="globalErrorHandler" />	
+	</bean>
+	
+	<bean id="recordsRetentionMgmtAction" class="com.ge.aloc.action.admin.RecordsRetentionMgmtAction" singleton="false" >
+		<property name="recordsRetentionManager" ref="recordsRetentionManager" />		
+	</bean>
+	
+	<bean id="swiftMessageMonitoringAction" class="com.ge.aloc.action.admin.SwiftMessageMonitoringAction" singleton="false" >
+		<property name="swiftMessageMonitoringManager" ref="swiftMessageMonitoringManager" />		
+	</bean>
+	
+	<bean id="changeRequestOwnershipAction" class="com.ge.aloc.action.admin.ChangeRequestOwnershipAction" singleton="false" >
+		<property name="changeRequestOwnershipManager" ref="changeRequestOwnershipManager" />
+		<property name="referenceDataManager" ref="referenceDataManager" />	
+		<property name="errorHandler" ref="globalErrorHandler" />	
+	</bean>
+	
+	<!-- ############################## ALOC Reports Actions ###############################  -->
+	
+	<bean id="reportDetailAction" class="com.ge.aloc.action.reports.ReportDetailAction" singleton="false" >		
+			<property name="reportsManager" ref="reportsManager"/>
+			<property name="lookupManager" ref="lookupManager" /> 	
+			<property name="referenceDataManager" ref="referenceDataManager" /> 	
+	</bean>
+	
+	<bean id="adhocReportAction" class="com.ge.aloc.action.reports.AdhocReportAction" singleton="false">
+			<property name="reportsManager" ref="reportsManager"/>
+			<property name="adhocReportManager" ref="adhocReportManager"/>
+			<property name="fieldManager" ref="adhocReportFieldMngr"/>
+			<property name="errorHandler" ref="globalErrorHandler" /> 
+	</bean>
+	
+	<!-- ############################## Site Admin Actions ###############################  -->
+	<bean id="apmDetailsAction" class="com.ge.aloc.action.apm.APMDetailsAction" singleton="false" >
+		<property name="alocAttachmentManager" ref="alocAttachmentManager" />
+		<property name="apmDetailsManager" ref="apmDetailsManager" />		
+		<property name="errorHandler" ref="globalErrorHandler" />
+	</bean>
+	
+	<bean id="amendmentWorkflowMgmtAction" class="com.ge.aloc.action.admin.AmendmentWorkflowMgmtAction" singleton="false" >
+		<property name="amendmentWorkflowManager" ref="amendmentWorkflowManager" />
+	</bean>
+	
+	<!-- ############################## Home Page Actions ###############################  -->
+	<bean id="homePageAction" class="com.ge.aloc.action.common.HomePageAction" singleton="false" >
+		<property name="homePageManager" ref="homePageManager" />
+	</bean>
+	
+		
+	<bean id="attachmentAction" class="com.ge.aloc.action.common.AttachmentAction" singleton="false">
+	   <property name="alocAttachmentManager" ref="alocAttachmentManager" />
+	   <property name="requestDetailsManager" ref="requestDetailsManager" />
+	   <property name="errorHandler" ref="globalErrorHandler" />
+	   
+	</bean>
+	
+	<!-- ############################## Home Page Generic Actions ###############################  -->
+	<bean id="homePageGenericAction" class="com.ge.aloc.action.common.HomePageGenericAction" singleton="false" >
+		<property name="homePageManager" ref="homePageManager" />
+		<property name="alocAttachmentManager" ref="alocAttachmentManager" />	
+	</bean>
+	<!-- ############################## Validate Amendment Rider Action ###############################  -->
+	<bean id="validateAmendmentRiderAction" class="com.ge.aloc.action.common.ValidateAmendmentRiderAction" singleton="false" >
+		<property name="validateAmendmentRiderManager" ref="validateAmendmentRiderManager" />
+	</bean>
+	<!-- ############################## Validate Close Transaction Action ###############################  -->
+	<bean id="validateCloseTransactionAction" class="com.ge.aloc.action.common.ValidateCloseTransactionAction" singleton="false" >
+		<property name="validateCloseTransactionManager" ref="validateCloseTransactionManager" />
+	</bean>
+</beans>
+

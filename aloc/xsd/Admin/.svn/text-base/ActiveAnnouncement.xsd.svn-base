@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/Admin/ActiveAnnouncement.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/Attachments.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/Admin/ActiveAnnouncement.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/Attachments.xsd" schemaLocation="../RequestDetails/Attachments.xsd"/>
+	<xs:element name="ActiveAnnouncement">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ActiveAnnoucement" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ActiveAnnoucement">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="User_Announcement_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Message_content" type="xs:string" minOccurs="0"/>
+				<xs:element name="Attachment_Link" type="xs:string" minOccurs="0"/>
+				<xs:element name="Start_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="End_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element ref="Act_Site_Selection" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="Act_Role_Selection" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns0:Attachment" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Act_Site_Selection">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Site_Type_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Site_Type_Name" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Act_Role_Selection">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Role_Type_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Role_Name" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

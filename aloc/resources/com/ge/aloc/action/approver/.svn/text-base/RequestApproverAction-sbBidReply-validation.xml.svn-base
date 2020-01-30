@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+
+	 <field name="requestDetails.feesDetails.totoalPremium"> 
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+				<![CDATA[(requestDetails.instrumentTypeId == 3 || (requestDetails.bidOrOptFlag != "Bid") ||  (requestDetails.feesDetails.totoalPremium != null && requestDetails.feesDetails.totoalPremium != ""))]]>
+			</param>
+			<message key="error.required.suretyBondBid.totalPremium" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression"> (requestDetails.instrumentTypeId == 3 || (requestDetails.bidOrOptFlag != "Bid") || @com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(requestDetails.feesDetails.totoalPremium))</param>
+			<message key="error.required.bidReply.amount" />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.feesDetails.surityId">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[((requestDetails.bidOrOptFlag != "Bid") ||  (requestDetails.feesDetails.surityId != null && requestDetails.feesDetails.surityId != ""))]]>
+			</param>
+			<message key="error.required.suretyBondBid.suretyName" />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.comments">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[((requestDetails.bidOrOptFlag != "Bid") ||  (requestDetails.comments != null && requestDetails.comments != ""))]]>
+			</param>
+			<message key="error.required.requestDetails.transferFees.comments" />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.bidReplyDetails.bidExpirationDate">
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">
+        	<![CDATA[((requestDetails.bidOrOptFlag != "Bid") ||  (requestDetails.bidReplyDetails.bidExpirationDate != null))]]>
+      	</param>
+      	<message key="error.required.requestDetails.bidExpirationDate" />
+      	</field-validator>
+      	
+      	<field-validator type="fieldexpression">
+			<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@validateBidExpirationDate(requestDetails.bidReplyDetails.bidExpirationDate,requestDetails.bidOrOptFlag)</param>
+			<message key="error.required.requestDetails.bgBidExpirationDateInvalid" />
+		</field-validator>
+	</field> 
+	<field name="bidHours">
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">
+        	<![CDATA[((requestDetails.bidOrOptFlag != "Bid") || (bidHours !=null && bidHours !="") )]]>
+      	</param>
+			<message key="error.required.requestDetails.bidExpirationHour" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requestDetails.bidOrOptFlag != "Bid") || ((bidHours > 0) && (bidHours <= 12)))]]>
+      	</param>
+			<message key="error.required.requestDetails.bgBidExpirationHourInvalid" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+		<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@validateBidExpirationTime(requestDetails.bidReplyDetails.bidExpirationDate,requestDetails.bidOrOptFlag,bidHours,bidMinutes,bidPeriod)</param>
+			<message key="error.required.requestDetails.bgBidExpirationTimeInvalid" />
+		</field-validator>
+	</field>
+	<field name="bidMinutes">
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">
+        	<![CDATA[((requestDetails.bidOrOptFlag != "Bid") || (bidMinutes !=null && bidMinutes !=""))]]>
+      	</param>
+			<message key="error.required.requestDetails.bidExpirationMinute" />
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requestDetails.bidOrOptFlag != "Bid") || ((bidMinutes !=null && bidMinutes !="") && bidMinutes >= 0 && bidMinutes < 60))]]>
+      	</param>
+			<message key="error.required.requestDetails.bgBidExpirationMinuteInvalid" />
+		</field-validator>
+		
+	</field>
+	
+	<field name="requestDetails.bidOrOptFlag">
+		<field-validator type="required">
+			<message key="error.required.requestDetails.bidOptionSelection" />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.actionDetails.reasonForOptingOut">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requestDetails.bidOrOptFlag != "Optout") ||  (requestDetails.actionDetails.reasonForOptingOut != ""))]]>
+      	</param>
+			<message key="error.required.actionDetails.reasonForOptingOut" />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.feesDetails.premiumFees">
+		<field-validator type="fieldexpression">
+			<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(requestDetails.feesDetails.premiumFees)</param>
+			<message key="error.required.bidReply.amount" />
+		</field-validator>
+    </field>
+    
+    <field name="requestDetails.feesDetails.chargeForRider">
+		<field-validator type="fieldexpression">
+			<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(requestDetails.feesDetails.chargeForRider)</param>
+			<message key="error.required.bidReply.amount" />
+		</field-validator>
+    </field>
+	
+</validators>

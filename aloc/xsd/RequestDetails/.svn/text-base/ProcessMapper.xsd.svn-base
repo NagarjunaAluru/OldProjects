@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/ProcessMapper.xsd"
+	 xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/ProcessMapper.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="ProcessMapper">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="MappingInfo" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MappingInfo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="OperationName" type="xs:string"/>
+				<xs:element name="ProcessName" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

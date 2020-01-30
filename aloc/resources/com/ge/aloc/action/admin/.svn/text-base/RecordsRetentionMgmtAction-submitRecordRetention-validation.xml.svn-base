@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+
+	<field name="recordRetention.status">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[((recordRetention.status == 'Approve') || (recordRetention.status == 'Reject'))]]>
+			</param>
+			<message key="error.required.recordsRetentionMgmt.approveOrReject"></message>
+		</field-validator>
+	</field>
+	
+	<field name="recordRetention.rejectReason">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((recordRetention.status != "Reject") ||  (recordRetention.rejectReason.trim() != "" && recordRetention.rejectReason != null))]]>
+      	</param>
+			<message key="error.required.recordsRetentionMgmt.rejectionReason" />
+		</field-validator>
+	</field>
+	
+</validators>

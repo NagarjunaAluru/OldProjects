@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<!-- common for all bond info section validations -->
+	<field name="needByDt">
+		<field-validator type="required" short-circuit="true">
+			<message key="error.required.requestDetails.needByDate" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">needByDt.compareTo(@com.ge.aloc.util.ALOCCommonHelper@getCurrentDateWithOutTime())
+				!= -1</param>
+			<message key="error.required.requestDetails.needByDtNotvalid" />
+		</field-validator>
+	</field>
+
+	<!-- bid bond info validations  -->
+
+	<field name="bidDt">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 1 ) || (bidDt !=null)]]>
+			</param>
+			<message key="error.required.requestDetails.Biddate" />
+		</field-validator>
+	</field>
+	
+	<field name="estStartDt">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 1 ) || (estStartDt !=null)]]>
+			</param>
+			<message key="error.required.requestDetails.estimatedStartDate" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+			<![CDATA[(requestDetails.bondDetails.bondTypeId != 1 ) || estStartDt.compareTo(@com.ge.aloc.util.ALOCCommonHelper@getCurrentDateWithOutTime())
+				!= -1 ]]>
+			</param>
+			<message key="error.required.requestDetails.estimatedStartDateNotvalid" />
+		</field-validator>
+	</field>
+	<field name="bidBondCurrencyCd">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 1) || (bidBondCurrencyCd !=null && bidBondCurrencyCd !="")]]>
+			</param>
+			<message key="error.required.requestDetails.estBidcurrencyMandatory" />
+		</field-validator>
+	</field>
+	<field name="estBidAmount">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 1 ) || (estBidAmount != null)]]>
+			</param>
+			<message key="error.required.requestDetails.estBidAmountMandatory" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 1 ) || (@com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(estBidAmount))]]>
+			</param>
+			<message key="error.required.requestDetails.estBidAmountInvalid" />
+		</field-validator>
+	</field>
+	<field name="USDEstimatedBondAmt">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 1) || (USDEstimatedBondAmt !=null)]]>
+			</param>
+			<message key="error.required.requestDetails.estusdBidAmountMAndatory" />
+		</field-validator>
+	</field>
+	
+
+	<!-- contract bond info validations -->
+
+	<field name="contractDt">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 2) || (contractDt != null)]]>
+			</param>
+			<message key="error.required.requestDetails.contractDate" />
+		</field-validator>
+	</field>
+
+	<field name="performanceBondAmt">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 2) || (performanceBondAmt != null)]]>
+			</param>
+			<message key="error.required.requestDetails.performanceBondAmounts" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 2) || (@com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(performanceBondAmt))]]>
+			</param>
+			<message key="error.required.requestDetails.performanceBondAmountsInvalid" />
+		</field-validator>
+	</field>
+
+	<field name="contractAmt">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 2) || (contractAmt != null)]]>
+			</param>
+			<message key="error.required.requestDetails.contractAmount" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 2) || (@com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(contractAmt))]]>
+			</param>
+			<message key="error.required.requestDetails.contractAmountInvalid" />
+		</field-validator>
+	</field>
+
+	<field name="contractCurCd">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 2) || (contractCurCd !=null && contractCurCd !="")]]>
+			</param>
+			<message key="error.required.requestDetails.contractCurrency" />
+		</field-validator>
+	</field>
+	
+	<field name="USDContractAmt">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 2) || (USDContractAmt !=null)]]>
+			</param>
+			<message key="error.required.requestDetails.usdContractAmount" />
+		</field-validator>
+	</field>
+	
+	<field name="performanceBondCurrencyCd">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 2) || (performanceBondCurrencyCd !=null && performanceBondCurrencyCd !="")]]>
+			</param>
+			<message key="error.required.requestDetails.currencyCode" />
+		</field-validator>
+	</field>
+	
+	<field name="USDPerformanceBondAmt">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 2) || (USDPerformanceBondAmt !=null)]]>
+			</param>
+			<message key="error.required.requestDetails.usdPerformanceBondAmount" />
+		</field-validator>
+	</field>
+
+		<!-- customs bond info validations -->
+	<field name="importerNum">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 5 ) || (importerNum !=null && importerNum !="")]]>
+			</param>
+			<message key="error.required.requestDetails.importer" />
+		</field-validator>
+	</field>
+
+	<field name="activityCd">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 5 ) || (activityCd !=null && activityCd !="")]]>
+			</param>
+			<message key="error.required.requestDetails.activityCode" />
+		</field-validator>
+	</field>
+
+		<!-- court bond info validations  -->
+	<field name="courtOfJurisdiction">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 4 ) || (courtOfJurisdiction !=null && courtOfJurisdiction !="")]]>
+			</param>
+			<message key="error.required.requestDetails.courtOfJurisdiction" />
+		</field-validator>
+	</field>
+
+	<field name="county">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 4 ) || (county !=null && county !="")]]>
+			</param>
+			<message key="error.required.requestDetails.county" />
+		</field-validator>
+	</field>
+	
+	<field name="courtBondAmt">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 4 ) || (courtBondAmt !=null)]]>
+			</param>
+			<message>
+      			${getText("error.required.requestDetails.bondAmounts", {'Court Bond Details :'})}
+            </message>
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 4 ) || (@com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(courtBondAmt))]]>
+			</param>
+			<message>
+      			${getText("error.required.requestDetails.bondAmountsInvalid", {'Court Bond Details :'})}
+            </message>
+		</field-validator>
+	</field>
+	<field name="USDCourtBondAmt">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 4 ) || (USDCourtBondAmt !=null)]]>
+			</param>
+			<message>
+      			${getText("error.required.requestDetails.usdBondAmount", {'Court Bond Details :'})}
+            </message>
+		</field-validator>
+	</field>
+	<field name="bondCurrencyCd">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 4 ) || (bondCurrencyCd !=null && bondCurrencyCd !="")]]>
+			</param>
+			<message key="error.required.requestDetails.bondCurrencyCd" />
+		</field-validator>
+	</field>
+
+	<field name="effectiveDate">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 4 ) || (effectiveDate !=null)]]>
+			</param>
+			<message>
+      			${getText("error.required.requestDetails.effectiveDate", {'Court Bond Details :'})}
+            </message>
+		</field-validator>
+	</field>
+
+	<field name="lawFirmName">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 4 ) || (lawFirmName !=null && lawFirmName !="")]]>
+			</param>
+			<message key="error.required.requestDetails.lawFirmName" />
+		</field-validator>
+	</field>
+	<field name="attorneyName">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 4 ) || (attorneyName !=null && attorneyName !="")]]>
+			</param>
+			<message key="error.required.requestDetails.attorneyName" />
+		</field-validator>
+	</field>
+
+	<field name="attorneyAddress1">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 4 ) || (attorneyAddress1 !=null && attorneyAddress1 !="")]]>
+			</param>
+			<message key="error.required.requestDetails.attorneyAddress1" />
+		</field-validator>
+	</field>
+
+	<field name="attorneyCity">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 4 ) || (attorneyCity !=null && attorneyCity !="")]]>
+			</param>
+			<message key="error.required.requestDetails.attorneyCity" />
+		</field-validator>
+	</field>
+
+	<field name="attorneyCountryCode">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 4 ) || (attorneyCountryCode !=null && attorneyCountryCode !="")]]>
+			</param>
+			<message key="error.required.requestDetails.attorneyCountry" />
+		</field-validator>
+	</field>
+	<field name="attorneyZIPCode">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 4 ) || (attorneyZIPCode !=null && attorneyZIPCode !="")]]>
+			</param>
+			<message key="error.required.requestDetails.attorneyZip/PostalCode" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 4 ) || (@com.ge.aloc.util.ALOCCommonHelper@isValidZipformat(attorneyZIPCode))]]>
+			</param>
+			<message key="error.required.requestDetails.attorneyZip/PostalCodeInvalid" />
+		</field-validator>
+	</field>
+	<field name="attorneyPhoneNum">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 4 ) || (attorneyPhoneNum !=null && attorneyPhoneNum !="")]]>
+			</param>
+			<message key="error.required.requestDetails.attorneyPhoneNumber" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 4 ) || (@com.ge.aloc.util.ALOCCommonHelper@isValidPhoneNumber(attorneyPhoneNum))]]>
+			</param>
+			<message key="error.required.requestDetails.attorneyPhoneNumberMustBeDigits" />
+		</field-validator>
+	</field>
+	<field name="attorneyFaxNum">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 4 ) || (attorneyFaxNum == null || attorneyFaxNum == "") || (@com.ge.aloc.util.ALOCCommonHelper@isValidPhoneNumber(attorneyFaxNum))]]>
+			</param>
+			<message key="error.required.requestDetails.attFaxNumberMustBeDigits" />
+		</field-validator>
+	</field>
+	<field name="attorneyEmail">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 4 ) || (attorneyEmail !=null && attorneyEmail !="")]]>
+			</param>
+			<message key="error.required.requestDetails.attorneyEmail" />
+		</field-validator>
+	</field>
+
+		<!-- common for all(except court) bond info validations  -->
+	<field name="exactProjDesc">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId == 4 ) || (exactProjDesc !=null && exactProjDesc !="")]]>
+			</param>
+			<message key="error.required.requestDetails.exactProjectDescription" />
+		</field-validator>
+	</field>
+	<field name="currencyCd">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId == 4 || requestDetails.bondDetails.bondTypeId == 2) || (currencyCd !=null && currencyCd !="")]]>
+			</param>
+			<message key="error.required.requestDetails.currencyCode" />
+		</field-validator>
+	</field>
+
+	   <!-- common for all(except contract,Court Bonds) bond info validations  -->
+	<field name="bondAmount">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId == 1 || requestDetails.bondDetails.bondTypeId == 2  || requestDetails.bondDetails.bondTypeId == 4) || (bondAmount !=null)]]>
+			</param>
+			<message>
+      			${getText("error.required.requestDetails.bondAmounts", {'Bond Information :'})}
+            </message>
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId == 1 || requestDetails.bondDetails.bondTypeId == 2  || requestDetails.bondDetails.bondTypeId == 4) || (@com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(bondAmount))]]>
+			</param>
+			<message>
+      			${getText("error.required.requestDetails.bondAmountsInvalid", {'Bond Information :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="bondAmount">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 1) || (bondAmount !=null)]]>
+			</param>
+			<message key="error.required.requestDetails.bidBondAmount" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 1) || (@com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(bondAmount))]]>
+			</param>
+			<message key="error.required.requestDetails.bidBondAmountsInvalid" />
+		</field-validator>
+	</field>
+
+	<!-- common for all(except bid bond,court bond) bond info validations -->
+	<field name="effectiveDt">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId == 1 || requestDetails.bondDetails.bondTypeId == 4 || requestDetails.bondDetails.bondTypeId == 5) || (effectiveDt !=null)]]>
+			</param>
+			<message>
+      			${getText("error.required.requestDetails.effectiveDate", {'Bond Information :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="effectiveDt">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 5) || (effectiveDt !=null)]]>
+			</param>
+			<message key="error.required.requestDetails.desiredEffectiveDate" />
+		</field-validator>
+	</field>
+
+	<!-- common for bid,contract bond info validations -->
+	<field name="estCompletionDt">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 1 && requestDetails.bondDetails.bondTypeId != 2) || (estCompletionDt !=null)]]>
+			</param>
+			<message key="error.required.requestDetails.estimatedCompletionDate" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+			<![CDATA[(requestDetails.bondDetails.bondTypeId != 1 && requestDetails.bondDetails.bondTypeId != 2) || estCompletionDt.compareTo(@com.ge.aloc.util.ALOCCommonHelper@getCurrentDateWithOutTime())
+				!= -1]]>
+			</param>
+			<message key="error.required.requestDetails.estCompletionDtNotvalid" />
+		</field-validator>
+	</field>
+	<field name="warrantyTerm">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 1 && requestDetails.bondDetails.bondTypeId != 2) || (warrantyTerm !=null)]]>
+			</param>
+			<message key="error.required.requestDetails.warrantyTermMonths" />
+		</field-validator>		
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 1 && requestDetails.bondDetails.bondTypeId != 2) || (@com.ge.aloc.util.ALOCCommonHelper@isValidWarrantyTerm(warrantyTerm))]]>
+			</param>
+			 <message key="error.required.requestDetails.warrantyTermMonthsLimit"/>
+		</field-validator>
+	</field>
+
+		<field name="expirationDt">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[( requestDetails.bondDetails.bondTypeId == 5 ) || (expirationDt !=null)]]>
+			</param>
+			<message>
+      			${getText("error.required.requestDetails.sbExpirationDate", {'Bond Information/Court Bond Details :'})}
+            </message>
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[(requestDetails.bondDetails.bondTypeId !=2  && requestDetails.bondDetails.bondTypeId != 3) || ((expirationDt.compareTo(@com.ge.aloc.util.ALOCCommonHelper@getCurrentDateWithOutTime())
+				!= -1) && (expirationDt.compareTo(effectiveDt) != -1))]]>
+			</param>
+			<message>
+      			${getText("error.required.requestDetails.expirationDtNotvalid", {'Bond Information :'})}
+            </message>
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[(requestDetails.bondDetails.bondTypeId !=4 ) || ((expirationDt.compareTo(@com.ge.aloc.util.ALOCCommonHelper@getCurrentDateWithOutTime())
+				!= -1) && (expirationDt.compareTo(effectiveDate) != -1))]]>
+			</param>
+			<message>
+      			${getText("error.required.requestDetails.expirationDtNotvalid", {'Court Bond Details :'})}
+            </message>
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[(requestDetails.bondDetails.bondTypeId != 1) || (expirationDt.compareTo(@com.ge.aloc.util.ALOCCommonHelper@getCurrentDateWithOutTime())
+				!= -1)]]>
+			</param>
+			<message key="error.required.requestDetails.expirationDateGtToday" />
+		</field-validator>
+	</field>
+	<!-- common for bid,license permit and custom bond info validations -->
+	<field name="USEquivalentBondAmt">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[(requestDetails.bondDetails.bondTypeId != 1 && requestDetails.bondDetails.bondTypeId != 3 && requestDetails.bondDetails.bondTypeId != 5) || (USEquivalentBondAmt !=null)]]>
+			</param>
+			<message>
+      			${getText("error.required.requestDetails.usdBondAmount", {'Bond Information :'})}
+            </message>
+		</field-validator>
+	</field>
+	<field name="sendBackNotes">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requiresEdits == false) || (requiresEdits != true)) || (sendBackNotes != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.sendBackNotes" />
+		</field-validator>
+	</field>
+	
+	<field name="attorneySendBackNotes">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((attorneyRequiresEdits == false) || (attorneyRequiresEdits != true)) || (attorneySendBackNotes != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.sendBackNotes" />
+		</field-validator>
+	</field>
+	
+	<field name="issuanceCountryCd">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>
+      			${getText("error.required.requestDetails.issuanceCountry", {'Bond Information/Court Bond Details :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+</validators>

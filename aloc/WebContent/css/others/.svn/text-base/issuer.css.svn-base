@@ -1,0 +1,25 @@
+.span2a {width: 160px;}
+.span2b {width: 145px;}
+.span2c {width: 130px;}
+.span2d {width: 190px;}
+.span2e {width: 120px;}
+
+.span3a{width: 290px;}
+.span3b{width: 260px;}
+.span3c{width: 240px;}
+
+.span1a {width: 100px;}
+.span1b {width: 40px;}
+
+.span4a {width: 275px;}
+.span4b {width: 240px;}
+.span4c {width: 255px;}
+
+.span9a {width: 775px;}
+
+.wbg{background-color: white!important; margin-left: 30px;margin-top: 10px;padding: 10px;}
+.whitemp{/*margin-right:20px;*/ padding-top:10px;}
+.graybg img{margin-left: 20px;}
+
+.gbg{background-color: #ddd; padding:10px; width:100px;}
+.dwn{background-image:url(../../img/dwn.png); background-position:2px 6px; background-repeat:no-repeat; padding-left:20px;}

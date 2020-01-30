@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<field name="projDesc">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required.requestDetails.projDescription" />
+		</field-validator>
+	</field>
+	
+	<field name="bidCurrCd">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required.requestDetails.bidCurrName" />
+		</field-validator>
+	</field>
+	<field name="bidContractAmt">
+		<field-validator type="required" short-circuit="true">
+			<message key="error.required.requestDetails.bidContractAmt" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(bidContractAmt)</param>
+			<message key="error.required.requestDetails.bidContractAmtnotValid" />
+		</field-validator>
+	</field>
+	<field name="sendBackNotes">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requiresEdits == false) || (requiresEdits != true)) || (sendBackNotes != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.sendBackNotes" />
+		</field-validator>
+	</field>
+	
+	
+</validators>

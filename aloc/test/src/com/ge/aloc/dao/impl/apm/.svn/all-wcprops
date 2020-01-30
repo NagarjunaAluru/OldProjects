@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/dao/impl/apm
+END
+FeeHistoryDAOTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/dao/impl/apm/FeeHistoryDAOTest.java
+END
+APMDetailsDAOTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/dao/impl/apm/APMDetailsDAOTest.java
+END

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/dao/impl/admin
+END
+RecordsRetentionMgmtDAOTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/dao/impl/admin/RecordsRetentionMgmtDAOTest.java
+END
+ReimbursementAgreementMgmtDAOTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/dao/impl/admin/ReimbursementAgreementMgmtDAOTest.java
+END
+StandardFormatMgmtDAOTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/dao/impl/admin/StandardFormatMgmtDAOTest.java
+END
+UserAnnouncementMgmtDAOTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/dao/impl/admin/UserAnnouncementMgmtDAOTest.java
+END
+SuretyNameMgmtDAOTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/dao/impl/admin/SuretyNameMgmtDAOTest.java
+END
+SwiftMessageMonitoringDAOTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/dao/impl/admin/SwiftMessageMonitoringDAOTest.java
+END

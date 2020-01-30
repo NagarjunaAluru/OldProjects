@@ -1,0 +1,27 @@
+defaultErrorMessage=Technical error occurred; please contact administrator
+
+ALOC.EXT.USR=Error while performing user operation
+
+ALOC.EXT.USR-EC_NOTFOUND=User not found
+
+ALOC.SITEADMIN.NOACTIVESITE=No Active Site in user session
+ALOC.DASHBOARD.NOROLES=No Roles to This User
+
+ALOC.ATMT-FILEEXTENSION.INVALID=Wrong file type, .DOC, .PDF Extensions are valid.
+ALOC.ATMT-UPLOAD = Unable to upload the file to GE Libraries. Please try again later.
+ALOC.ATMT-DOWNLOAD = Unable to download the file  from GE Libraries. Please try again later.
+ALOC.ATMT-DELETE = Unable to delete the file from GE Libraries. Please try again later. 
+ALOC.ATMT-FILENAME.INVALID = Invalid file name  	
+ALOC.ATMT-FILENAME.SPECIALCHARS = Application does not support foreign characters and special characters like <>:/\|*''%.+=# in the file name. Please rename the file and try again.
+ALOC.ATMT-INPUT.PARAMS.INVALID = Invalid input parameters 
+ALOC.ATMT-NO.METADATA.FOR.FOLDER = No meta data form attached with this folder
+ALOC.ATMT-FILE.SIZE.LIMIT = The file size you are uploading exceeds the 100MB limit.
+ALOC.ATMT-SERVICEERR = Error while performing service operation
+ALOC.ATMT-BANKREFNO.INVALID = Bank Reference Number should be unique. Please try again with different number.
+
+ALOC.GENERAL.RUNTIME-ADVANCESEARCH.INVALID_AMT_RANGE = Invalid Range - To Amount is Greater than From Amount
+ALOC.GENERAL.RUNTIME-ADVANCESEARCH.INVALID_DATE_RANGE = Invalid Range - From Date Date is Greater than To Date
+ALOC.GENERAL.RUNTIME-ADVANCESEARCH.INVALID_AMOUNT= Only numeric value allowed
+ALOC.GENERAL.RUNTIME-ACTIVEREQUEST.NOTFOUND = Please use 'New Session' (in IE, File->New Session) to launch one more instance of ALOC. ALOC in multiple tabs is currently not supported.
+ALOC.GENERAL.RUNTIME-BASICSEARCH.INVALID_VALUE = Please enter at least 3 characters for search.
+ALOC.GENERAL.RUNTIME-BASICSEARCH.INVALID_NAME = Please enter at least 2 characters for search.

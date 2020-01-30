@@ -1,0 +1,185 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model
+END
+Format-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/Format-validation.xml
+END
+BondDetails-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/BondDetails-validation.xml
+END
+Attachment-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/Attachment-validation.xml
+END
+InstrReporting-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/InstrReporting-validation.xml
+END
+TransactionDetails-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/TransactionDetails-validation.xml
+END
+BondInfo-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/BondInfo-validation.xml
+END
+PaymentScheduleDetails-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/PaymentScheduleDetails-validation.xml
+END
+InstrumentRisk-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/InstrumentRisk-validation.xml
+END
+DelegationConfiguration-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/DelegationConfiguration-validation.xml
+END
+Obligee-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/Obligee-validation.xml
+END
+DeliveryInstructions-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/DeliveryInstructions-validation.xml
+END
+Amendment-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/Amendment-validation.xml
+END
+BuContactPerson-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/BuContactPerson-validation.xml
+END
+ReimbursementAgreement-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/ReimbursementAgreement-validation.xml
+END
+AddressDtls-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/AddressDtls-validation.xml
+END
+CustomizedSiteReferences-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/CustomizedSiteReferences-validation.xml
+END
+SiteAdmin-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/SiteAdmin-validation.xml
+END
+TransactionParties-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/TransactionParties-validation.xml
+END
+ExpiryDate-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/ExpiryDate-validation.xml
+END
+InstrumentDetails-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/InstrumentDetails-validation.xml
+END
+ProjDescription-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/ProjDescription-validation.xml
+END
+RiderBondInformation-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/RiderBondInformation-validation.xml
+END
+BondReqDtls-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/BondReqDtls-validation.xml
+END
+ApplicantDetails-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/ApplicantDetails-validation.xml
+END
+AmendmentInstrumentAmountCurr-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/AmendmentInstrumentAmountCurr-validation.xml
+END
+Principal-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/Principal-validation.xml
+END
+IssuingBankDetails-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/IssuingBankDetails-validation.xml
+END
+SBLC-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/SBLC-validation.xml
+END
+TpApplicantDetails-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/TpApplicantDetails-validation.xml
+END
+BeneficiaryDetails-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/model/BeneficiaryDetails-validation.xml
+END

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/Reports/CycleTimeDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/Reports/CycleTimeDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="CycleTimeDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="GB_Site_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="GB_Appname" type="xs:string" minOccurs="0"/>
+				<xs:element name="GB_Issuer" type="xs:string" minOccurs="0"/>
+				<xs:element name="GB_Ben_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="GB_Ben_Cuntry" type="xs:string" minOccurs="0"/>
+				<xs:element name="GB_Country_Issue" type="xs:string" minOccurs="0"/>
+				<xs:element name="GB_Inst_Type_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="GB_Inst_Purpose_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank_Ref_Num" type="xs:string" minOccurs="0"/>
+				<xs:element name="Request_Date" type="xs:string" minOccurs="0"/>
+				<xs:element name="Expir_Date" type="xs:string" minOccurs="0"/>
+				<xs:element name="Tpa_Name_Like" type="xs:string" minOccurs="0"/>
+				<xs:element name="Inst_Type_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Inst_Purpose_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Currency_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Outstanding_Amt_Min" type="xs:string" minOccurs="0"/>
+				<xs:element name="Outstanding_Amt_Max" type="xs:string" minOccurs="0"/>
+				<xs:element name="Current_Contact_SSO" type="xs:string" minOccurs="0"/>
+				<xs:element name="BUC_Like" type="xs:string" minOccurs="0"/>
+				<xs:element name="ADN_Like" type="xs:string" minOccurs="0"/>
+				<xs:element name="Dayhour_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="CycleTime_User_SSO" type="xs:string" minOccurs="0"/>
+				<xs:element name="Site_Id" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="ALOC_Record_Number" type="xs:string" minOccurs="0"/>
+				<xs:element name="Applicant_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuer" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuing_Bank_Branch" type="xs:string" minOccurs="0"/>
+				<xs:element name="Beneficiary_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Beneficiary_Country" type="xs:string" minOccurs="0"/>
+				<xs:element name="Country_Of_Issuance" type="xs:string" minOccurs="0"/>
+				<xs:element name="Show_Results_In" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instrument_Type" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Instrument_Purpose" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Business" type="xs:string" minOccurs="0"/>
+				<xs:element name="Treasury1" type="xs:string" minOccurs="0"/>
+				<xs:element name="Treasury2" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank1" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank2" type="xs:string" minOccurs="0"/>
+				<xs:element name="Total" type="xs:string" minOccurs="0"/>
+                                   <xs:element name="Requestor_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Requestor_Sso" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

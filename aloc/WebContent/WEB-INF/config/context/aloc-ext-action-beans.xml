@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<!-- =======================================================================================================================
+													Servlet Filter Beans
+	======================================================================================================================== -->
+	<bean id="ExternalURLTranslator" class="com.ge.aloc.ext.ExternalURLTranslator" />
+	 
+	 <!-- =======================================================================================================================
+													Action Beans
+	======================================================================================================================== -->
+	<bean id="loginAction" class="com.ge.aloc.ext.action.LoginAction" singleton="false" >
+		<property name="userOperationsManager" ref="userOperationsManager" />
+	</bean>
+	
+	<bean id="userOperationsAction" class="com.ge.aloc.ext.action.UserOperationsAction" singleton="false" >
+		<property name="userOperationsManager" ref="userOperationsManager" />
+	</bean>
+	
+	<bean id="homePageControllerAction" class="com.ge.aloc.ext.action.HomePageControllerAction" singleton="false">
+		<property name="userOperationsManager" ref="userOperationsManager" />
+		<property name="homePageManager" ref="homePageManager" />
+	</bean>
+	
+</beans>

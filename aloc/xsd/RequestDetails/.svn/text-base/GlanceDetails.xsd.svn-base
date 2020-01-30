@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/GlanceDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/GlanceDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="GlanceDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Bids_Count" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Advance_Payment_Count" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Performance_Count" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Retention_Count" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Financial_Count" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Other_Count" type="xs:integer" minOccurs="0"/>
+				<xs:element name="DocLcConfirmation_Count" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Bid_Return_Revisions_Count" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Performacnce_Return_Revisions_Count" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Retention_Return_Revisions_Count" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Other_Return_For_Revisions_Count" type="xs:integer" minOccurs="0"/>
+				<xs:element name="AdvPayment_Return_Revisions_Count" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Finacial_Return_Revisions_Count" type="xs:integer" minOccurs="0"/>
+				<xs:element name="DocLc_Return_Revisions_Count" type="xs:integer" minOccurs="0"/>
+				<xs:element name="OpCode" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

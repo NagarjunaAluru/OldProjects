@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/BeneficiaryObligeeDetails.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/AddressDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/BeneficiaryObligeeDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/AddressDetails.xsd" schemaLocation="AddressDetails.xsd"/>
+	<xs:element name="BeneficiaryObligeeDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Division" type="xs:string"/>
+				<xs:element name="AddressDtls" type="ns0:AddressDtlsType" minOccurs="0"/>
+				<xs:element name="Competing_Banks" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Instrument_Amount" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Currency" type="xs:string" minOccurs="0"/>
+				<xs:element name="Expiration_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+				<xs:element name="Requires_Edits" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Send_Back_Notes" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

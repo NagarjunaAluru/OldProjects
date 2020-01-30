@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<field name="requestDetails.amendment.expiryDate.revisedExpiryDate">
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">
+        	<![CDATA[(actionType != 2 || requestDetails.amendment.expiryDate.revisedExpiryDate !=null)]]>
+      	</param>
+		<message>
+      			${getText("error.required.requestDetails.amendment.revisedExpiryDate", {'Expiration Dates :'})}
+            </message>
+		</field-validator>		
+		
+		<field-validator type="fieldexpression">
+			<param name="expression">
+			<![CDATA[ (actionType != 2 || requestDetails.amendment.expiryDate.revisedExpiryDate.compareTo(@com.ge.aloc.util.ALOCCommonHelper@getCurrentDateWithOutTime()) != -1)]]>
+			</param>
+			<message key="error.required.requestDetails.amendment.expiryDtNotvalid" />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.amendment.amendmentInstrumentAmountCurr.amtOfIncreaseOrDecrease">
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">
+        	<![CDATA[ (actionType != 2 || requestDetails.amendment.amendmentInstrumentAmountCurr.amtOfIncreaseOrDecrease !=null) ]]>
+      	</param>
+			<message key="error.required.requestDetails.amendment.amtOfIncreaseOrDecrease" />
+		</field-validator>	
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[ (actionType != 2 || requestDetails.amendment.amendmentInstrumentAmountCurr.amtOfIncreaseOrDecrease > 0) ]]>
+      	</param>
+			<message key="error.required.requestDetails.amendment.amtOfIncDecMustbeGreaterThanZero" />
+		</field-validator>	
+	</field>
+	
+	<field name="requestDetails.amendment.infoTransPlatFormSelection">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[ (actionType != 2 || requestDetails.amendment.infoTransPlatFormSelection !=null) ]]>
+      	</param>
+			<message key="error.required.requestDetails.infoTransPlatFormSelection" />
+		</field-validator>	
+	</field>
+</validators>

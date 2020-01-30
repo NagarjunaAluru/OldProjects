@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/APM/FeeCalculationDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/APM/FeeCalculationDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="FeeCalculationDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Bank_Reference_Num" type="xs:string" minOccurs="0"/>
+				<xs:element name="Aloc_Record_No" type="xs:string" minOccurs="0"/>
+				<xs:element name="Total_Payment" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="US_Payment" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Foreign_Payment" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Other_Payment" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="USD_Curr_Amount" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Bene_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="GE_Rel_Bank" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issue_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="US_Exp_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Foreign_Exp_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="US_Start_Period" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="US_End_Period" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Foreign_Start_Period" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Foreign_End_Period" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="US_Last_Pd_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Foreign_Last_Pd_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="US_All_In_BPS_PA_Arrears" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="US_All_In_BPS_PA_Adv" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="US_Flat_Fee_PA_Adv" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="US_Flat_Fee_Life" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Foreign_All_In_BPS_PA_Arrears" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Foreign_All_In_BPS_PA_Adv" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Foreign_Flat_Fee_PA_Adv" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Foreign_Flat_Fee_Life" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Amendment_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Amendment_Loc" type="xs:string" minOccurs="0"/>
+				<xs:element name="VAT_Tax" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Stamp_Tax" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Incidental_Fee" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Other_Fee" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="FTRN_Number" type="xs:string" minOccurs="0"/>
+				<xs:element name="Webcash_Model" type="xs:string" minOccurs="0"/>
+				<xs:element name="Suppress_Webcash_IBS" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="BUC" type="xs:string" minOccurs="0"/>
+				<xs:element name="ADN" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

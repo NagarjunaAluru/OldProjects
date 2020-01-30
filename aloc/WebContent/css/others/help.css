@@ -1,0 +1,51 @@
+.gbg{
+	background-color: #fff; 
+	padding:10px; 
+	width:94%; 
+	border:SOlid 1px #cdcdcd;
+	margin:0px auto 10px auto; 
+	border-radius: 5px;
+}
+
+.dwn{
+	background:#f2f2f2 url(../../img/arr.png) no-repeat left center; 
+	background-repeat:no-repeat; 
+	padding:0px 8px 4px 25px; 
+	border:SOlid 1px #cdcdcd;
+}
+
+.wbg{
+	background-color: white!important; 
+	margin-left: 30px;
+	margin-top: 10px;
+	padding: 10px;
+}
+
+.whitemp{/*margin-right:20px;*/ }
+.graybg img{margin-left: 20px;}
+.graybg1{background-color:#e4e4e4;}
+.whitebg1{
+	background-color: white!important; 
+	margin-left: 10px;  
+	border:SOlid 1px #cdcdcd; 
+	/* behavior: url(../PIE.htc); */
+	position:relative; 
+	border-radius: 5px; 
+	padding-top:10px; 
+	padding-bottom: 10px; 
+	line-height:40px;
+}
+
+.grbg{
+	background-color: #f2f2f2; 
+	padding:10px; 
+	border:solid 1px #cdcdcd; 
+	width:100px;
+	/* behavior: url(../PIE.htc); */
+	position:relative;
+	border-radius: 5px;
+}
+
+.span1a {width: 150px;}
+.span1b {width: 40px;}
+.span9a {width: 750px;}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+
+	<field name="requestDetails.bidmemoDetails.expirationDateTime">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+	        	<![CDATA[((requestDetails.bidmemoDetails.expirationDateTime != null))]]>
+	      	</param>
+	      	<message key="error.required.requestDetails.expirationDate" />
+      	</field-validator>
+      	
+      	<field-validator type="fieldexpression">
+			<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@validateBidMemoExpDateWithoutTime(requestDetails.bidmemoDetails.expirationDateTime)</param>
+			<message key="error.required.requestDetails.expirationDateInvalid" />
+		</field-validator>
+	</field> 
+	
+	<field name="hours">
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">
+        	<![CDATA[((hours !="") )]]>
+      	</param>
+			<message key="error.required.requestDetails.expirationHour" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((hours > 0) && (hours <= 12))]]>
+      	</param>
+			<message key="error.required.requestDetails.expirationHourInvalid" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+		    <param name="expression">@com.ge.aloc.util.ALOCCommonHelper@validateBidMemoExpirationDate(requestDetails.bidmemoDetails.expirationDateTime,hours,minutes,period)</param>
+			<message key="error.required.requestDetails.expirationTimeInvalid" />
+		</field-validator>
+	</field>
+	
+	<field name="minutes">
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">
+        	<![CDATA[(minutes !="")]]>
+      	</param>
+			<message key="error.required.requestDetails.expirationMinute" />
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((minutes !=null) && (minutes >= 0 && minutes < 60))]]>
+      	</param>
+			<message key="error.required.requestDetails.expirationMinuteInvalid" />
+		</field-validator>
+		
+	</field> 
+	
+</validators>

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/lookup
+END
+geReferenceLookup.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/lookup/geReferenceLookup.jsp
+END
+businessContactPersonLookup.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/lookup/businessContactPersonLookup.jsp
+END
+bankDetailsLookup.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/lookup/bankDetailsLookup.jsp
+END
+legalLookup.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/lookup/legalLookup.jsp
+END
+userDetailsLookup.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/lookup/userDetailsLookup.jsp
+END
+nameAddressLookup.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/lookup/nameAddressLookup.jsp
+END
+requestorLookup.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/common/lookup/requestorLookup.jsp
+END

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<!-- <field name="leGoldId">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>
+      			${getText("error.required.requestDetails.legoldId", {'Customer/Beneficiary :'})}
+            </message>
+		</field-validator>
+	</field> -->
+	<!-- <field name="leName">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required.requestDetails.refDetails.refValue" />
+		</field-validator>
+	</field> -->
+	
+	<field name="addressDtls.name">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((beneficiaryAddressSelection!="New") || (addressDtls.name !=""))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.name", {'Customer/Beneficiary :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="addressDtls.address[0]">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((beneficiaryAddressSelection!="New") || (addressDtls.address[0] !=""))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.address1", {'Customer/Beneficiary :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="addressDtls.city">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((beneficiaryAddressSelection!="New") || (addressDtls.city !=""))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.city", {'Customer/Beneficiary :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="addressDtls.ZIPPostalCode">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[((beneficiaryAddressSelection!="New") || (addressDtls.ZIPPostalCode !=""))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.zipOrPostalCode", {'Customer/Beneficiary :'})}
+            </message>
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((beneficiaryAddressSelection!="New") || (@com.ge.aloc.util.ALOCCommonHelper@isValidZipformat(addressDtls.ZIPPostalCode)))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.zipInFormat", {'Customer/Beneficiary :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="addressDtls.countryCd">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((beneficiaryAddressSelection!="New") || (addressDtls.countryCd !=""))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.country", {'Customer/Beneficiary :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="refDetails[0].refValue">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required.requestDetails.refDetails.benfiRefValue" />
+		</field-validator>
+	</field>
+	<field name="sendBackNotes">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requiresEdits == false) || (requiresEdits != true)) || (sendBackNotes != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.sendBackNotes" />
+		</field-validator>
+	</field>
+</validators>

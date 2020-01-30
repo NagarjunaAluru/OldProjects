@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/Amendment.xsd"
+	 xmlns:ns2="http://treasury.ge.com/schemas/ALOC/RequestDetails/ExpiryDate.xsd"
+	 xmlns:ns3="http://treasury.ge.com/schemas/ALOC/RequestDetails/TransactionParties.xsd"
+	 xmlns:ns4="http://treasury.ge.com/schemas/ALOC/RequestDetails/Attachments.xsd"
+	 xmlns:ns5="http://treasury.ge.com/schemas/ALOC/RequestDetails/ALOCCommon.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/AmendmentInstrumentAmountCurr.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ALOC/RequestDetails/AuditLog.xsd"
+	 xmlns:ns7="http://treasury.ge.com/schemas/ALOC/RequestDetails/ActionLog.xsd"
+	 xmlns:ns8="http://treasury.ge.com/schemas/ALOC/RequestDetails/DeliveryInstructions.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/Amendment.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/ExpiryDate.xsd" schemaLocation="ExpiryDate.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/TransactionParties.xsd" schemaLocation="TransactionParties.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/Attachments.xsd" schemaLocation="Attachments.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/ALOCCommon.xsd" schemaLocation="ALOCCommon.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/AmendmentInstrumentAmountCurr.xsd" schemaLocation="AmendmentInstrumentAmountCurr.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/AuditLog.xsd" schemaLocation="AuditLog.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/ActionLog.xsd" schemaLocation="ActionLog.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/DeliveryInstructions.xsd" schemaLocation="DeliveryInstructions.xsd"/>
+	<xs:complexType name="Amendment">
+		<xs:sequence>
+			<xs:element name="Op_Code" type="xs:string" minOccurs="0"/>
+			<xs:element name="Request_Id" type="xs:integer" minOccurs="0"/>
+			<xs:element name="Bank_Reference_Number" type="xs:string" minOccurs="0"/>
+			<xs:element name="Amendment_Request_Id" type="xs:string" minOccurs="0"/>
+			<xs:element name="Amendment_Type" type="xs:string" minOccurs="0"/>
+			<xs:element name="Instrument_Type" type="xs:string" minOccurs="0"/>
+			<xs:element name="Instrument_Type_Id" type="xs:string" minOccurs="0"/>
+			<xs:element name="Trigger_Type" type="xs:string" minOccurs="0"/>
+			<xs:element ref="ns3:TransactionParties" minOccurs="0"/>
+			<xs:element ref="ns0:AmendmentInstrumentAmountCurr" minOccurs="0"/>
+			<xs:element ref="ns2:ExpiryDate" minOccurs="0"/>
+			<xs:element ref="ns8:DeliveryInstructions" minOccurs="0"/>
+			<xs:element ref="ns4:Attachment" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="InfoTransPlatFormSelection" type="xs:string" minOccurs="0"/>
+			<xs:element name="Other_Changes" type="xs:string" minOccurs="0"/>
+			<xs:element name="AMD_Workflow_Amt" type="xs:decimal" minOccurs="0"/>
+			<xs:element ref="ns5:ActionDetails" minOccurs="0"/>
+			<xs:element ref="ns1:Audit_Log" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="ns7:ActionLog" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Auto_INC_DEC_Date" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="Old_Instrument_Type_Id" type="xs:int" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

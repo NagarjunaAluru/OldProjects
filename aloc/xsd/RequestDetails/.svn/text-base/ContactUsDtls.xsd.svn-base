@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/Admin/ContactUsDtls.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/Admin/ContactUsDtls.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="ContactUsDtls">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="SystemIssues">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="ContactUs" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="TradeFinaceIssues">
+	<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="ContactUs" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="SurityIssues">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="ContactUs" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ContactUs">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="F_Name" type="xs:string" minOccurs="0"/>
+										<xs:element name="L_Name" type="xs:string" minOccurs="0"/>
+										<xs:element name="Email" type="xs:string" minOccurs="0"/>
+										<xs:element name="Phone_No" type="xs:string" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+</xs:schema>

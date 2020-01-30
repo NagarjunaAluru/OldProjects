@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<field name="poleNameMgmt.poleName">
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression"><![CDATA[(poleNameMgmt.poleName !=null && poleNameMgmt.poleName !="")]]></param>
+      	<message key="error.required.poleNameMgmt.poleName" />
+      	</field-validator>
+      	<field-validator type="fieldexpression">
+		<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@validatePoleNameExists(poleNameMgmt.poleName)</param> 
+      	<message key="error.required.poleNameMgmt.poleNameExists" />
+      	</field-validator>     	
+	</field>
+	
+	<field name="poleNameMgmt.poleStatus">
+		<field-validator type="fieldexpression">
+		<param name="expression"><![CDATA[(poleNameMgmt.poleStatus !=null && poleNameMgmt.poleStatus !="")]]></param> 
+      	<message key="error.required.poleNameMgmt.poleStatus" />
+      	</field-validator>
+	</field>
+	
+	<field name="selectedCountriesCodes">
+		<field-validator type="fieldexpression">
+		<param name="expression"><![CDATA[(selectedCountriesCodes !=null && selectedCountriesCodes !="")]]></param> 
+      	<message key="error.required.poleNameMgmt.countrySelection" />
+      	</field-validator>
+	</field>
+</validators>

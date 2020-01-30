@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/SearchBankDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/SearchBankDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="SearchBankDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Issuing_Bank_Branch_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Relationship_Bank_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank_Ref_No" type="xs:string" minOccurs="0"/>
+				<xs:element name="Surety_Ref_No" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bid_Reply_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Bid_State" type="xs:string" minOccurs="0"/>
+                                     <xs:element name="Surety_Name" type="xs:string" minOccurs="0"/>
+                                   <xs:element name="Surety_Bid_State" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

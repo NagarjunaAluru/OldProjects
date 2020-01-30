@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/APM/BankFeeDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/APM/BankFeeDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="BankFeeDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Bank_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank_MDM_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="BUC_ADN_Error" type="xs:string" minOccurs="0"/>
+				<xs:element name="Payment_Currency_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Payment_Currency_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="Total_Payment_Amount" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Total_USDEquival" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Number_Of_Payments" type="xs:integer" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

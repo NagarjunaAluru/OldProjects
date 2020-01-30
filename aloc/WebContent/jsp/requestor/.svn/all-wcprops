@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/requestor
+END
+documentLoCConfirmation.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/requestor/documentLoCConfirmation.jsp
+END
+saveAndReSubmit.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/requestor/saveAndReSubmit.jsp
+END
+suretyBondRequestorSection.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/requestor/suretyBondRequestorSection.jsp
+END
+createRequestPopup.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/requestor/createRequestPopup.jsp
+END
+bankGuaranteeAndLoCRequest.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/requestor/bankGuaranteeAndLoCRequest.jsp
+END
+docLOCRequestorSection.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/requestor/docLOCRequestorSection.jsp
+END
+saveAndSubmit.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/requestor/saveAndSubmit.jsp
+END
+deal.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/requestor/deal.jsp
+END
+suretyBondRequest.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/requestor/suretyBondRequest.jsp
+END
+bankAndLocReSubmit.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/requestor/bankAndLocReSubmit.jsp
+END
+suretyBondReSubmit.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/requestor/suretyBondReSubmit.jsp
+END
+approveOrReject.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/requestor/approveOrReject.jsp
+END
+saveAndSendBack.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/requestor/saveAndSendBack.jsp
+END
+requestorSection.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/requestor/requestorSection.jsp
+END
+approverSubmit.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/requestor/approverSubmit.jsp
+END

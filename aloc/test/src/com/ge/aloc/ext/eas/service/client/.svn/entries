@@ -1,0 +1,52 @@
+8
+
+dir
+56
+https://openge.ge.com/svn/treasury_aloc/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/ext/eas/service/client
+https://openge.ge.com/svn/treasury_aloc
+
+
+
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+720fd033-fee8-473a-95ce-a3690b27228b
+
+EASTest.java
+file
+
+
+
+
+2014-12-17T16:03:45.745569Z
+8ccf841d35b73eb7fc78122929812cb8
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+EASOTPTest.java
+file
+
+
+
+
+2014-12-17T16:03:45.755569Z
+691b0bb2da1e947a1fa04afa2fe22dd8
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+

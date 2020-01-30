@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	
+	<field name="siteAdmin">
+		<field-validator type="visitor">
+			<message></message>
+		</field-validator>
+	</field>
+	
+	<field name="bankName">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((bankName !=null && bankName.trim() !="" && bankSelection!=null && bankSelection.trim() !="") || ((bankName ==null || bankName.trim() =="") && bankSelection!=null && bankSelection.trim() !=""))]]>
+      		</param>
+			<message key="error.required.siteDetails.bankDetails.name"/>
+		</field-validator>
+	</field>
+	
+	<field name="bankCountryCd">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((bankCountryCd !=null && bankCountryCd.trim() !="" && bankSelection!=null && bankSelection.trim() !="") || ((bankCountryCd ==null || bankCountryCd.trim() =="") && bankSelection!=null && bankSelection.trim() !=""))]]>
+      		</param>
+			<message key="error.required.requestDetails.bankCountry"/>
+		</field-validator>
+	</field>
+	
+	<field name="bankCity">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((bankCity !=null && bankCity.trim() !="" && bankSelection!=null && bankSelection.trim() !="") || ((bankCity ==null || bankCity.trim() =="") && bankSelection!=null && bankSelection.trim() !=""))]]>
+      		</param>
+			<message key="error.required.requestDetails.bankCity"/>
+		</field-validator>
+	</field>
+	
+	<field name="siteAdmin.bankFeePaymentSetup.bankModelCode">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[(((siteAdmin.siteType.siteTypeId != "") && (siteAdmin.siteType.siteTypeId != "2")) ||(siteAdmin.bankFeePaymentSetup.bankModelCode != ""))]]>
+      	</param>
+			<message key="error.required.siteDetails.modelCode" />
+		</field-validator>
+	</field>
+	
+	<field name="siteAdmin.bankFeePaymentSetup.bankPayments[0].paymentCurrency">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[(((siteAdmin.siteType.siteTypeId != "") && (siteAdmin.siteType.siteTypeId != "2")) || (siteAdmin.bankFeePaymentSetup.bankPayments[0].paymentCurrency != ""))]]>
+      	</param>
+			<message key="error.required.siteDetails.paymentCurrency" />
+		</field-validator>
+	</field>
+		
+	<field name="siteAdmin.bankSWIFTConfiguration.SWIFTEnabled">
+		<field-validator type="required">
+			<message key="error.required.siteDetails.swiftEnabled" />
+		</field-validator>
+	</field>
+	
+	<field name="siteAdmin.bankSWIFTConfiguration.isFileActEnabled">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((siteAdmin.bankSWIFTConfiguration.SWIFTEnabled == false) || (siteAdmin.bankSWIFTConfiguration.SWIFTEnabled != true)) || (siteAdmin.bankSWIFTConfiguration.isFileActEnabled == true)]]>
+      		</param>
+			<message key="error.required.siteDetails.verifyThatBankisFileActEnabled" />
+		</field-validator>
+	</field>
+	
+	<field name="siteAdmin.bankSWIFTConfiguration">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">@com.ge.aloc.action.siteadmin.SiteAdminAction@bankSwiftValidate()</param>
+			<message key="error.required.siteDetails.allMandatory" />
+		</field-validator>
+	</field>
+	
+</validators>

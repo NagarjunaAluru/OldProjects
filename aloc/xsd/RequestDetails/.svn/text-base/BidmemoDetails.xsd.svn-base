@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/BidmemoDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/BidmemoDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="BidmemoDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Date_Bid_Memo_Created" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Expiration_DateTime" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Expiration_Time" type="xs:string" minOccurs="0"/>
+				<xs:element name="Select_Bank_Flag" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

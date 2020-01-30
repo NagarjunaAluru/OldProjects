@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/ActionLog.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/ActionLog.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd" schemaLocation="MsgHeader.xsd"/>
+	<xs:element name="ActionLog">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Approver_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Aloc_Request_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Aloc_Record_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Stage_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Stage_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Action_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Action_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Approver_SSO" type="xs:string" minOccurs="0"/>
+				<xs:element name="Approver_First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Approver_Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+				<xs:element name="Audit_Creator" type="xs:string" minOccurs="0"/>
+				<xs:element name="Audit_Created_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Audit_Modifier" type="xs:string" minOccurs="0"/>
+				<xs:element name="Audit_Modified_Dt" type="xs:string" minOccurs="0"/>
+				<xs:element name="Reason_For_Rejection" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instrument_Type_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element ref="ns0:Msg_Header" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Action_Search">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="From_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="To_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Action" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Action_Taken_By" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Sso_Id" type="xs:string" minOccurs="0"/>
+							<xs:element name="First_Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="Last_Name" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Action_DrawDown_Values">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Action" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Action_Taken_By" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Sso_Id" type="xs:string" minOccurs="0"/>
+							<xs:element name="First_Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="Last_Name" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

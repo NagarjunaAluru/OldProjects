@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+
+	<!-- Expirydate Validation -->
+	<field name="requestDetails.amendment.expiryDate">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@AMENDMENT.getId() && (actionType == 2 || actionType == 32))
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	<!-- Instrument Currency Validation -->
+	<field name="requestDetails.amendment.amendmentInstrumentAmountCurr">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@AMENDMENT.getId() && (actionType == 2 || actionType == 32))
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	<!-- DeliveryInstructions Validation -->
+	<field name="requestDetails.amendment.deliveryInstructions">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@AMENDMENT.getId() && (actionType == 2 || actionType == 32))
+				]]>
+			</param>
+			<message />
+		</field-validator>
+		
+	</field>
+	
+	<field name="requestDetails.businessReApprovalFlag">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[(actionType == 1 || actionType != 2 ) || (requestDetails.businessReApprovalFlag != null && requestDetails.businessReApprovalFlag != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.businessApproval" />
+		</field-validator>
+	</field>
+	
+	 <field name="requestDetails.buDelegation.buApprover.approverSso">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[ ((requestDetails.businessReApprovalFlag == null || requestDetails.businessReApprovalFlag == "" || requestDetails.businessReApprovalFlag == "N") || actionType != 2) || (requestDetails.buDelegation!=null && requestDetails.buDelegation.buApprover.approverSso != "" && requestDetails.buDelegation.buApprover.approverSso != null)]]>
+      	</param>
+			<message key="error.required.requestDetails.amendment.submitbusinessApprover" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requestDetails.sendbackbyBuApprover != "Y" ) ||  (actionType !=  32) || (requestDetails.buDelegation!=null && requestDetails.buDelegation.buApprover.approverSso != "" && requestDetails.buDelegation.buApprover.approverSso != null))]]>
+      	</param>
+			<message key="error.required.requestDetails.amendment.submitbusinessApprover" />
+		</field-validator>
+
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requestDetails.businessReApprovalFlag != "Y" ) ||  (actionType !=  32) || (requestDetails.buDelegation!=null && requestDetails.buDelegation.buApprover.approverSso != "" && requestDetails.buDelegation.buApprover.approverSso != null))]]>
+      	</param>
+			<message key="error.required.requestDetails.amendment.submitbusinessApprover" />
+		</field-validator>
+	</field>
+	<!-- geRecipient lookup validation-->
+
+	<field name="requestDetailsBO.attachmentBOList">
+		<field-validator type="fieldexpression">
+			<param name="expression"><![CDATA[ (actionType !=2 && actionType !=  32) || (@com.ge.aloc.util.ALOCCommonHelper@validateAtmtFileUpload())]]>
+			</param>
+			<message key="error.required.requestDetails.attachments.fileUpload" />
+		</field-validator>
+	</field>
+	<field name="requestDetails.amendment.transactionParties.triPartyApplicant.name">
+		<field-validator type="fieldexpression">
+			<param name="expression"><![CDATA[(actionType != 2 && actionType != 32) || (@com.ge.aloc.util.ALOCCommonHelper@isTPTriParty(requestDetails.siteTypeName, requestDetails.transactionParties.triPartyRequestFlag) != true) || (requestDetails.amendment.transactionParties.triPartyApplicant.name != "" && requestDetails.amendment.transactionParties.triPartyApplicant.name != null)]]>
+			</param>
+			<message key="error.required.tParties.triPartyApplicant.name" />
+		</field-validator>
+	</field>
+	<field name="requestDetails.amendment.transactionParties.triPartyApplicant.address[0]">
+		<field-validator type="fieldexpression">
+			<param name="expression"><![CDATA[(actionType != 2 && actionType != 32) || (@com.ge.aloc.util.ALOCCommonHelper@isTPTriParty(requestDetails.siteTypeName, requestDetails.transactionParties.triPartyRequestFlag) != true) || (requestDetails.amendment.transactionParties.triPartyApplicant.address != null && requestDetails.amendment.transactionParties.triPartyApplicant.address[0] != "" && requestDetails.amendment.transactionParties.triPartyApplicant.address[0] != null)]]>
+			</param>
+			<message key="error.required.tParties.triPartyApplicant.address1" />
+		</field-validator>
+	</field>
+	<field name="requestDetails.amendment.transactionParties.triPartyApplicant.city">
+		<field-validator type="fieldexpression">
+			<param name="expression"><![CDATA[(actionType != 2 && actionType != 32) || (@com.ge.aloc.util.ALOCCommonHelper@isTPTriParty(requestDetails.siteTypeName, requestDetails.transactionParties.triPartyRequestFlag) != true) || (requestDetails.amendment.transactionParties.triPartyApplicant.city != "" && requestDetails.amendment.transactionParties.triPartyApplicant.city != null)]]>
+			</param>
+			<message key="error.required.tParties.triPartyApplicant.city" />
+		</field-validator>
+	</field>
+	<field name="requestDetails.amendment.transactionParties.triPartyApplicant.ZIPPostalCode">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression"><![CDATA[(actionType != 2 && actionType != 32) || (@com.ge.aloc.util.ALOCCommonHelper@isTPTriParty(requestDetails.siteTypeName, requestDetails.transactionParties.triPartyRequestFlag) != true) || (requestDetails.amendment.transactionParties.triPartyApplicant.ZIPPostalCode != "" && requestDetails.amendment.transactionParties.triPartyApplicant.ZIPPostalCode != null)]]>
+			</param>
+			<message key="error.required.tParties.triPartyApplicant.ZIPPostalCode" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+            <param name="expression"><![CDATA[(actionType != 2 && actionType != 32) || (@com.ge.aloc.util.ALOCCommonHelper@isTPTriParty(requestDetails.siteTypeName, requestDetails.transactionParties.triPartyRequestFlag) != true) || (@com.ge.aloc.util.ALOCCommonHelper@isValidZipformat(requestDetails.amendment.transactionParties.triPartyApplicant.ZIPPostalCode))]]></param>
+           <message key="error.required.tParties.triPartyApplicant.ZIPPostalCodeFormat" /> 
+        </field-validator>
+	</field>
+	<field name="requestDetails.amendment.transactionParties.triPartyApplicant.countryCd">
+		<field-validator type="fieldexpression">
+			<param name="expression"><![CDATA[(actionType != 2 && actionType != 32) || (@com.ge.aloc.util.ALOCCommonHelper@isTPTriParty(requestDetails.siteTypeName, requestDetails.transactionParties.triPartyRequestFlag) != true) || (requestDetails.amendment.transactionParties.triPartyApplicant.countryCd != "" && requestDetails.amendment.transactionParties.triPartyApplicant.countryCd != null)]]>
+			</param>
+			<message key="error.required.tParties.triPartyApplicant.countryCd" />
+		</field-validator>
+	</field>
+	
+	
+	<field name="requestDetails.amendment.transactionParties.tpApplicantDetails.addressDtls.name">
+		<field-validator type="fieldexpression">
+			<param name="expression"><![CDATA[(actionType != 2 && actionType != 32) || (@com.ge.aloc.util.ALOCCommonHelper@isTPTriParty(requestDetails.siteTypeName, requestDetails.transactionParties.triPartyRequestFlag) != false) || (requestDetails.amendment.transactionParties.tpApplicantDetails.addressDtls.name != "" && requestDetails.amendment.transactionParties.tpApplicantDetails.addressDtls.name != null)]]>
+			</param>
+			<message key="error.required.tParties.Applicant.name" />
+		</field-validator>
+	</field>
+	<field name="requestDetails.amendment.transactionParties.tpApplicantDetails.addressDtls.address[0]">
+		<field-validator type="fieldexpression">
+			<param name="expression"><![CDATA[(actionType != 2 && actionType != 32) || (@com.ge.aloc.util.ALOCCommonHelper@isTPTriParty(requestDetails.siteTypeName, requestDetails.transactionParties.triPartyRequestFlag) != false) || (requestDetails.amendment.transactionParties.tpApplicantDetails.addressDtls.address != null && requestDetails.amendment.transactionParties.tpApplicantDetails.addressDtls.address[0] != "" && requestDetails.amendment.transactionParties.tpApplicantDetails.addressDtls.address[0] != null)]]>
+			</param>
+			<message key="error.required.tParties.Applicant.address1" />
+		</field-validator>
+	</field>
+	<field name="requestDetails.amendment.transactionParties.tpApplicantDetails.addressDtls.city">
+		<field-validator type="fieldexpression">
+			<param name="expression"><![CDATA[(actionType != 2 && actionType != 32) || (@com.ge.aloc.util.ALOCCommonHelper@isTPTriParty(requestDetails.siteTypeName, requestDetails.transactionParties.triPartyRequestFlag) != false) || (requestDetails.amendment.transactionParties.tpApplicantDetails.addressDtls.city != "" && requestDetails.amendment.transactionParties.tpApplicantDetails.addressDtls.city != null)]]>
+			</param>
+			<message key="error.required.tParties.Applicant.city" />
+		</field-validator>
+	</field>
+	<field name="requestDetails.amendment.transactionParties.tpApplicantDetails.addressDtls.ZIPPostalCode">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression"><![CDATA[(actionType != 2 && actionType != 32) || (@com.ge.aloc.util.ALOCCommonHelper@isTPTriParty(requestDetails.siteTypeName, requestDetails.transactionParties.triPartyRequestFlag) != false) || (requestDetails.amendment.transactionParties.tpApplicantDetails.addressDtls.ZIPPostalCode != "" && requestDetails.amendment.transactionParties.tpApplicantDetails.addressDtls.ZIPPostalCode != null)]]>
+			</param>
+			<message key="error.required.tParties.Applicant.ZIPPostalCode" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+            <param name="expression"><![CDATA[(actionType != 2 && actionType != 32) || (@com.ge.aloc.util.ALOCCommonHelper@isTPTriParty(requestDetails.siteTypeName, requestDetails.transactionParties.triPartyRequestFlag) != false) || (@com.ge.aloc.util.ALOCCommonHelper@isValidZipformat(requestDetails.amendment.transactionParties.tpApplicantDetails.addressDtls.ZIPPostalCode))]]></param>
+           <message key="error.required.tParties.Applicant.ZIPPostalCodeFormat" /> 
+        </field-validator>
+	</field>
+	<field name="requestDetails.amendment.transactionParties.tpApplicantDetails.addressDtls.countryCd">
+		<field-validator type="fieldexpression">
+			<param name="expression"><![CDATA[(actionType != 2 && actionType != 32) || (@com.ge.aloc.util.ALOCCommonHelper@isTPTriParty(requestDetails.siteTypeName, requestDetails.transactionParties.triPartyRequestFlag) != false) || (requestDetails.amendment.transactionParties.tpApplicantDetails.addressDtls.countryCd != "" && requestDetails.amendment.transactionParties.tpApplicantDetails.addressDtls.countryCd != null)]]>
+			</param>
+			<message key="error.required.tParties.Applicant.countryCd" />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.amendment.transactionParties.customer.addressDtls.name">
+		<field-validator type="fieldexpression">
+			<param name="expression"><![CDATA[(actionType != 2 && actionType != 32) || (requestDetails.amendment.transactionParties.customer.addressDtls.name != "" && requestDetails.amendment.transactionParties.customer.addressDtls.name != null)]]>
+			</param>
+			<message key="error.required.tParties.customer.name" />
+		</field-validator>
+	</field>
+	<field name="requestDetails.amendment.transactionParties.customer.addressDtls.address[0]">
+		<field-validator type="fieldexpression">
+			<param name="expression"><![CDATA[(actionType != 2 && actionType != 32) || (requestDetails.amendment.transactionParties.customer.addressDtls.address != null && requestDetails.amendment.transactionParties.customer.addressDtls.address[0] != "" && requestDetails.amendment.transactionParties.customer.addressDtls.address[0] != null)]]>
+			</param>
+			<message key="error.required.tParties.customer.address1" />
+		</field-validator>
+	</field>
+	<field name="requestDetails.amendment.transactionParties.customer.addressDtls.city">
+		<field-validator type="fieldexpression">
+			<param name="expression"><![CDATA[(actionType != 2 && actionType != 32) || (requestDetails.amendment.transactionParties.customer.addressDtls.city != "" && requestDetails.amendment.transactionParties.customer.addressDtls.city != null)]]>
+			</param>
+			<message key="error.required.tParties.customer.city" />
+		</field-validator>
+	</field>
+	<field name="requestDetails.amendment.transactionParties.customer.addressDtls.ZIPPostalCode">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression"><![CDATA[(actionType != 2 && actionType != 32) || (requestDetails.amendment.transactionParties.customer.addressDtls.ZIPPostalCode != "" && requestDetails.amendment.transactionParties.customer.addressDtls.ZIPPostalCode!= null)]]>
+			</param>
+			<message key="error.required.tParties.customer.ZIPPostalCode" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+            <param name="expression"><![CDATA[(actionType != 2 && actionType != 32) || (@com.ge.aloc.util.ALOCCommonHelper@isValidZipformat(requestDetails.amendment.transactionParties.customer.addressDtls.ZIPPostalCode))]]></param>
+           <message key="error.required.tParties.customer.ZIPPostalCodeFormat" /> 
+        </field-validator>
+	</field>
+	<field name="requestDetails.amendment.transactionParties.customer.addressDtls.countryCd">
+		<field-validator type="fieldexpression">
+			<param name="expression"><![CDATA[(actionType != 2 && actionType != 32) || (requestDetails.amendment.transactionParties.customer.addressDtls.countryCd != "" && requestDetails.amendment.transactionParties.customer.addressDtls.countryCd != null)]]>
+			</param>
+			<message key="error.required.tParties.customer.countryCd" />
+		</field-validator>
+	</field>
+	<field name="requestDetails.amendment.otherChanges">
+		<field-validator type="fieldexpression">
+			 <param name="expression"><![CDATA[ actionType != 2 || @com.ge.aloc.util.ALOCCommonHelper@amdModifiedValidation() ]]></param>
+           <message key="error.required.requestDetails.amdModificationRequired" /> 
+		</field-validator>
+	</field>
+	
+</validators>

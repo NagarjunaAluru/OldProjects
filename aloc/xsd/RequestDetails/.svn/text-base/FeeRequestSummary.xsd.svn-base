@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/APM/FeeRequestSummary.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/UserDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/APM/FeeRequestSummary.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/UserDetails.xsd" schemaLocation="../MDM/UserDetails.xsd"/>
+	<xs:element name="FeeRequestSummary">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Request_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Amendment_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Site_Prefix" type="xs:string" minOccurs="0"/>
+				<xs:element name="Applicant" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="ns0:UserDetails" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Winning_Bank_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank_Reference_Number" type="xs:string" minOccurs="0"/>
+				<xs:element name="FTRN_Number" type="xs:string" minOccurs="0"/>
+				<xs:element name="Aloc_Record_Id" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

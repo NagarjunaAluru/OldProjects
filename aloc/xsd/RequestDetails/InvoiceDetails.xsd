@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/APM/InvoiceDetails.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/AddressDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/APM/InvoiceDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/AddressDetails.xsd" schemaLocation="../RequestDetails/AddressDetails.xsd"/>
+	<xs:element name="InvoiceDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ALOC_Record_Number" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Aloc_Record_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Amendment_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Site_Prefix" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuing_Bank_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank_Reference_Num" type="xs:string" minOccurs="0"/>
+				<xs:element name="Customer_Beneficiary_Address" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="ns0:AddressDtls" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Instrument_Currency_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="Payment_Currency_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="Payment_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Issuance_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Expiration_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Bank_Site_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Initiater_Contact_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instrument_Amount" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Period_Start_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Period_End_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Foreign_Fees" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="US_Fees" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Other_Fees" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Total_Fees" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="BUC" type="xs:string" minOccurs="0"/>
+				<xs:element name="ADN" type="xs:string" minOccurs="0"/>
+				<xs:element name="LE_Gold_ID" type="xs:string" minOccurs="0"/>
+				<xs:element name="LE_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="GE_Contact_Person_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="QuarterOfYear" type="xs:string" minOccurs="0"/>
+				<xs:element name="US_Expiration_Date" type="xs:dateTime" minOccurs="0"/>
+               	<xs:element name="US_Period_Start_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="US_Period_End_Date" type="xs:dateTime" minOccurs="0"/>
+                <xs:element name="Foreign_Period_Start_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Foreign_Period_End_Date" type="xs:dateTime" minOccurs="0"/>
+                <xs:element name="Other_Period_Start_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Other_Period_End_Date" type="xs:dateTime" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

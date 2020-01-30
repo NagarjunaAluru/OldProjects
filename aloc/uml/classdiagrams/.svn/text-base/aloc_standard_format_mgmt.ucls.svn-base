@@ -1,0 +1,73 @@
+<class-diagram version="1.0.11" icons="true" automaticImage="JPEG" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.action.admin.StandardFormatMgmtAction" 
+    project="aloc" file="/aloc/src/com/ge/aloc/action/admin/StandardFormatMgmtAction.java" binary="false">    
+    <position height="-1" width="-1" x="28" y="54"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="false"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="2" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.manager.admin.IStandardFormatMgmtManager" 
+    project="aloc" file="/aloc/src/com/ge/aloc/manager/admin/IStandardFormatMgmtManager.java" binary="false">    
+    <position height="124" width="265" x="265" y="-59"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="3" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.manager.impl.admin.StandardFormatMgmtManager" 
+    project="aloc" file="/aloc/src/com/ge/aloc/manager/impl/admin/StandardFormatMgmtManager.java" binary="false">    
+    <position height="180" width="358" x="268" y="89"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="4" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.dao.admin.IStandardFormatMgmtDAO" 
+    project="aloc" file="/aloc/src/com/ge/aloc/dao/admin/IStandardFormatMgmtDAO.java" binary="false">    
+    <position height="112" width="341" x="-152" y="285"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="5" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.dao.impl.admin.StandardFormatMgmtDAO" 
+    project="aloc" file="/aloc/src/com/ge/aloc/dao/impl/admin/StandardFormatMgmtDAO.java" binary="false">    
+    <position height="146" width="330" x="271" y="295"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <realization id="6">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
+  <realization id="7">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <association id="8">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="9" name="standardFormatMgmtManager"/>      
+      <multiplicity id="10" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="11">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="12" name="standardFormatMgmtDAO"/>      
+      <multiplicity id="13" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/APM/FeePaymentRunDetails.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/APM/FeePeriodDetails.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ALOC/APM/BankFeeDetails.xsd"
+	 xmlns:ns2="http://treasury.ge.com/schemas/ALOC/APM/RequestFeeDetails.xsd"
+	 xmlns:ns3="http://treasury.ge.com/schemas/ALOC/APM/FeeCalculationDetails.xsd"
+	 xmlns:ns4="http://treasury.ge.com/schemas/ALOC/APM/CreditAndCarryOverReport.xsd"
+	 xmlns:ns5="http://treasury.ge.com/schemas/ALOC/RequestDetails/Attachments.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/APM/FeePaymentRunDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/APM/FeePeriodDetails.xsd" schemaLocation="FeePeriodDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/APM/BankFeeDetails.xsd" schemaLocation="BankFeeDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/APM/RequestFeeDetails.xsd" schemaLocation="RequestFeeDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/APM/FeeCalculationDetails.xsd" schemaLocation="FeeCalculationDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/APM/CreditAndCarryOverReport.xsd" schemaLocation="CreditAndCarryOverReport.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/Attachments.xsd" schemaLocation="../RequestDetails/Attachments.xsd"/>
+	<xs:element name="FeePaymentRunDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Op_Code" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns0:FeePeriodDetails" minOccurs="0"/>
+				<xs:element ref="ns1:BankFeeDetails" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns2:RequestFeeDetails" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns3:FeeCalculationDetails" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Total_Invalid_BUCADNs" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Credits_CarryOver_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="IBSInvoiceFileUploadStatus" type="xs:string" minOccurs="0"/>
+				<xs:element name="IBSFileName" type="xs:string" minOccurs="0"/>
+				<xs:element name="IBSFileContent" type="xs:string" minOccurs="0"/>
+				<xs:element name="WebcashFileUploadStatus" type="xs:string" minOccurs="0"/>
+				<xs:element name="WebcashFileName" type="xs:string" minOccurs="0"/>
+				<xs:element name="WebCashFileContent" type="xs:string" minOccurs="0"/>
+				<xs:element name="PaymentRunCompletionStatus" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns4:CreditAndCarryOverReport" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="TabCount" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns5:Attachment" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

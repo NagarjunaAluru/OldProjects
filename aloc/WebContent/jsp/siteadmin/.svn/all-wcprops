@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/siteadmin
+END
+siteSectionsCommon.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/siteadmin/siteSectionsCommon.jsp
+END
+createSite.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/siteadmin/createSite.jsp
+END
+businessSiteAdmin.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/siteadmin/businessSiteAdmin.jsp
+END
+siteSection.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/siteadmin/siteSection.jsp
+END
+treasuryBusinessAdmin.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/siteadmin/treasuryBusinessAdmin.jsp
+END

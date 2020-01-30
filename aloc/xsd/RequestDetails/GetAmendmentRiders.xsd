@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/GetAmendmentRiders.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/AmendmentDetails.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ALOC/RequestDetails/RiderDetails.xsd"
+	 xmlns:ns2="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 xmlns:ns3="http://treasury.ge.com/schemas/ALOC/RequestDetails/RequestStatusDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/GetAmendmentRiders.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/AmendmentDetails.xsd" schemaLocation="AmendmentDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/RiderDetails.xsd" schemaLocation="RiderDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd" schemaLocation="MsgHeader.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/RequestStatusDetails.xsd" schemaLocation="RequestStatusDetails.xsd"/>
+	<xs:element name="GetAmendmentRiders">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ns2:Msg_Header" minOccurs="0"/>
+				<xs:element name="Request_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element ref="ns0:AmendmentDetails" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns1:RiderDetails" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns3:RequestStatusDetails" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

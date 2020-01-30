@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/EAS/EASDetails.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/EAS/EASDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd" schemaLocation="../RequestDetails/MsgHeader.xsd"/>
+	<xs:element name="EASDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="EAS_Contact_Details" minOccurs="0"/>
+				<xs:element ref="EAS_Bank_Details" minOccurs="0"/>
+				<xs:element ref="EAS_Credentials" minOccurs="0"/>
+				<xs:element ref="ns0:Msg_Header" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EAS_Contact_Details">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Email_Address" type="xs:string" minOccurs="0"/>
+			
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EAS_Bank_Details">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Bank_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Role_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Status" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EAS_Credentials">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="User_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Password" type="xs:string" minOccurs="0"/>
+			
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

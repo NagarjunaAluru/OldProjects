@@ -1,0 +1,105 @@
+<class-diagram version="1.0.11" icons="true" automaticImage="JPEG" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.ext.action.LoginAction" project="aloc" 
+    file="/aloc/src/com/ge/aloc/ext/action/LoginAction.java" binary="false">    
+    <position height="248" width="188" x="-83" y="-67"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="2" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.ext.action.HomePageControllerAction" 
+    project="aloc" file="/aloc/src/com/ge/aloc/ext/action/HomePageControllerAction.java" binary="false">    
+    <position height="171" width="308" x="163" y="-60"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="3" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.ext.action.UserOperationsAction" project="aloc" 
+    file="/aloc/src/com/ge/aloc/ext/action/UserOperationsAction.java" binary="false">    
+    <position height="270" width="265" x="-85" y="219"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="4" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.ext.dao.IUserOperationsDAO" project="aloc" 
+    file="/aloc/src/com/ge/aloc/ext/dao/IUserOperationsDAO.java" binary="false">    
+    <position height="129" width="291" x="204" y="577"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="5" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.ext.dao.impl.UserOperationsDAO" project="aloc" 
+    file="/aloc/src/com/ge/aloc/ext/dao/impl/UserOperationsDAO.java" binary="false">    
+    <position height="-1" width="-1" x="665" y="668"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="6" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.ext.manager.impl.UserOperationsManager" 
+    project="aloc" file="/aloc/src/com/ge/aloc/ext/manager/impl/UserOperationsManager.java" binary="false">    
+    <position height="197" width="281" x="202" y="345"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="7" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.ext.manager.IUserOperationsManager" 
+    project="aloc" file="/aloc/src/com/ge/aloc/ext/manager/IUserOperationsManager.java" binary="false">    
+    <position height="-1" width="-1" x="339" y="217"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <realization id="8">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="7"/>  
+  </realization>  
+  <association id="9">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="10" name="userOperationsDAO"/>      
+      <multiplicity id="11" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="12">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
+  <association id="13">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="14" name="userOperationsManager"/>      
+      <multiplicity id="15" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="16">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="17" name="userOperationsManager"/>      
+      <multiplicity id="18" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="19">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="20" name="userOperationsManager"/>      
+      <multiplicity id="21" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

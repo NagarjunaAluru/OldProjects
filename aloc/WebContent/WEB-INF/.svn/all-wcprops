@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/WEB-INF
+END
+jboss-deployment-structure.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/WEB-INF/jboss-deployment-structure.xml
+END
+web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/WEB-INF/web.xml
+END

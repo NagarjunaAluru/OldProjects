@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/Reports/ContingentliabilityDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/Reports/ContingentliabilityDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="ContingentliabilityDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Site_Type" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Site_ID" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Site" type="xs:string" minOccurs="0"/>
+				<xs:element name="Contingent_User_SSO" type="xs:string" minOccurs="0"/>
+				<xs:element name="Export_Results_By_Bank" type="xs:string" minOccurs="0"/>
+				<xs:element name="Label_Report_As" type="xs:string" minOccurs="0"/>
+				<xs:element name="ALOC_Record_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank_Reference" type="xs:string" minOccurs="0"/>
+				<xs:element name="BeneficiaryObligee_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="BeneficiaryObligee_Country" type="xs:string" minOccurs="0"/>
+				<xs:element name="Applicant_Principal" type="xs:string" minOccurs="0"/>
+				<xs:element name="Thirdparty_Applicant" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instrument_Currency" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instrument_Amount" type="xs:string" minOccurs="0"/>
+				<xs:element name="USD_Amount" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="IssuingBank_Branch" type="xs:string" minOccurs="0"/>
+				<xs:element name="MOR_Bloomberg_Rate" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuance_Date" type="xs:string" minOccurs="0"/>
+				<xs:element name="USExp_Date" type="xs:string" minOccurs="0"/>
+				<xs:element name="ForeignExp_Date" type="xs:string" minOccurs="0"/>
+				<xs:element name="EconomicExp_Date" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuer" type="xs:string" minOccurs="0"/>
+				<xs:element name="Current_Contact_Name_SSO" type="xs:string" minOccurs="0"/>
+				<xs:element name="Current_Contact_SSO" type="xs:string" minOccurs="0"/>
+				<xs:element name="Requestor_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Requestor_SSO" type="xs:string" minOccurs="0"/>
+				<xs:element name="BUC" type="xs:string" minOccurs="0"/>
+				<xs:element name="ADN" type="xs:string" minOccurs="0"/>
+				<xs:element name="GE_Reference" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instrument_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instrument_Purpose" type="xs:string" minOccurs="0"/>
+                                    <xs:element name="INMORBLOOMBERGFLAG" type="xs:string" minOccurs="0"/>
+                                    
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

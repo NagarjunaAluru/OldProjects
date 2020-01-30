@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/approver
+END
+RequestApproverAction-postAwardSubmit-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/approver/RequestApproverAction-postAwardSubmit-validation.xml
+END
+RequestApproverAction-saveCurrBankFees-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/approver/RequestApproverAction-saveCurrBankFees-validation.xml
+END
+RequestApproverAction-issuerSave-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/approver/RequestApproverAction-issuerSave-validation.xml
+END
+RequestApproverAction-sendBackBid-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/approver/RequestApproverAction-sendBackBid-validation.xml
+END
+RequestApproverAction-updateTaxonomyRequest-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 165
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/approver/RequestApproverAction-updateTaxonomyRequest-validation.xml
+END
+RequestApproverAction-trAnalystRiderSubmit-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/approver/RequestApproverAction-trAnalystRiderSubmit-validation.xml
+END
+RequestApproverAction-issuerSubmit-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/approver/RequestApproverAction-issuerSubmit-validation.xml
+END
+RequestApproverAction-suretyCreateBid-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/approver/RequestApproverAction-suretyCreateBid-validation.xml
+END
+RequestApproverAction-trAnalystAmendmentSubmit-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 168
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/approver/RequestApproverAction-trAnalystAmendmentSubmit-validation.xml
+END
+RequestApproverAction-sbBidReply-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/approver/RequestApproverAction-sbBidReply-validation.xml
+END
+RequestApproverAction-analystSubmit-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/approver/RequestApproverAction-analystSubmit-validation.xml
+END
+RequestApproverAction-closureSubmit-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/approver/RequestApproverAction-closureSubmit-validation.xml
+END
+RequestApproverAction-bankSelectionSave-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/approver/RequestApproverAction-bankSelectionSave-validation.xml
+END
+RequestApproverAction-trAnalystSubmit-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/approver/RequestApproverAction-trAnalystSubmit-validation.xml
+END
+RequestApproverAction-updateReportingData-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/approver/RequestApproverAction-updateReportingData-validation.xml
+END
+RequestApproverAction-taxonomyDownloadRequestPDF-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 170
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/approver/RequestApproverAction-taxonomyDownloadRequestPDF-validation.xml
+END
+RequestApproverAction-downloadRequestPDF-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/approver/RequestApproverAction-downloadRequestPDF-validation.xml
+END
+RequestApproverAction-bidReply-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/approver/RequestApproverAction-bidReply-validation.xml
+END
+RequestApproverAction-amdTrApproverSubmit-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/approver/RequestApproverAction-amdTrApproverSubmit-validation.xml
+END
+RequestApproverAction-dlocBidReply-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/approver/RequestApproverAction-dlocBidReply-validation.xml
+END
+RequestApproverAction-createBid-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/approver/RequestApproverAction-createBid-validation.xml
+END
+RequestApproverAction-awardSubmit-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/approver/RequestApproverAction-awardSubmit-validation.xml
+END
+RequestApproverAction-approverSubmit-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/approver/RequestApproverAction-approverSubmit-validation.xml
+END
+RequestApproverAction-dLocCreateBid-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/approver/RequestApproverAction-dLocCreateBid-validation.xml
+END

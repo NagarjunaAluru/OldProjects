@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+   <field name="addressDtls.name">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((obligeeAddressSelection!="New") || (addressDtls.name !=""))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.name", {'Obligee :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="addressDtls.address[0]">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((obligeeAddressSelection!="New") || (addressDtls.address[0] !=""))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.address1", {'Obligee :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="addressDtls.city">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((obligeeAddressSelection!="New") || (addressDtls.city !=""))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.city", {'Obligee :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="addressDtls.ZIPPostalCode">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[((obligeeAddressSelection!="New") || (addressDtls.ZIPPostalCode !=""))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.zipOrPostalCode", {'Obligee :'})}
+            </message>
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((obligeeAddressSelection!="New") || (@com.ge.aloc.util.ALOCCommonHelper@isValidZipformat(addressDtls.ZIPPostalCode)))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.zipInFormat", {'Obligee :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="addressDtls.countryCd">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((obligeeAddressSelection!="New") || (addressDtls.countryCd !=""))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.country", {'Obligee :'})}
+            </message>
+		</field-validator>
+	</field>
+		
+	<field name="obligeeReves[0].refValue">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[ (@com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3 ) || ( obligeeReves[0].refValue !="") ]]>
+      	</param>
+			<message key="error.required.requestDetails.obligeeReference" />
+		</field-validator>
+	</field>
+	<field name="sendBackNotes">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requiresEdits == false) || (requiresEdits != true)) || (sendBackNotes != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.sendBackNotes" />
+		</field-validator>
+	</field>
+</validators>

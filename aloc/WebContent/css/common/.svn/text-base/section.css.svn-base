@@ -1,0 +1,106 @@
+@CHARSET "ISO-8859-1";
+
+h2.section_flip {
+	padding: 0;	margin: 0px!important;
+	background: url(../../img/h2_trigger_a.gif) no-repeat;
+	height: 35px; line-height: 35px;
+	width: 940px;
+	font-size:26px;
+	font-weight: normal;
+	float: left;
+}
+h2.section_flip a {
+	color: #999;
+	text-decoration: none;
+	display: block;
+	padding: 0 0 0 20px;
+	font-size:21px;
+	text-align:left!important;
+	margin-top: 15px;
+}
+h2.section_flip a:hover {
+	color: #000;
+}
+h2.section_active {background-position: left bottom;}
+h2.section_active a { color:#000;}
+
+h2.section_blue a { color:#6587a3;}
+
+.section_panel {
+	margin: 0px!important; 
+	padding: 10px 0px 0px 0px;
+	overflow: hidden;
+	width: 940px;
+	clear: both;
+	border: 0px solid #d6d6d6;
+	display: none;
+}
+
+p.tracking_section_flip {
+	padding: 0;	margin: 0px!important;
+	height: 20px; line-height: 20px;
+	width: 940px;
+	font-size:18px;
+	font-weight: normal;
+	float: left;
+}
+
+h2.acc_triggerA, h2.acc_triggerB, h2.acc_triggerC, h2.acc_triggerD {
+	padding: 0;	margin: 0px!important;
+	background: url(../../img/h2_trigger_a.gif) no-repeat;
+	height: 35px; line-height: 35px;
+	width: 940px;
+	font-size:26px;
+	font-weight: normal;
+	float: left;
+}
+
+
+h2.acc_triggerA a ,h2.acc_triggerB a , h2.acc_triggerC a , h2.acc_triggerD a {
+	color: #999;
+	text-decoration: none;
+	display: block;
+	padding: 0 0 0 20px;
+	font-size:21px;
+	text-align:left!important;
+	margin-top: 15px;
+}
+
+h3.acc_triggerA, h3.acc_triggerB, h3.acc_triggerC, h3.acc_triggerD{
+	padding: 0;	margin: 0px!important;
+	background: url(../../img/h2_trigger_a.gif) no-repeat;
+	height: 35px; line-height: 35px;
+	width: 940px;
+	font-size:16px;
+	font-weight: normal;
+	float: left;
+}
+
+h3.acc_triggerA a ,h3.acc_triggerB a , h3.acc_triggerC a , h3.acc_triggerD a{
+	color: #999;
+	text-decoration: none;
+	display: block;
+	padding: 0 0 0 20px;
+	font-size:16px;
+	text-align:left!important;
+	margin-top: 15px;
+}
+
+h2.acc_triggerA a:hover, h2.acc_triggerB a:hover, h2.acc_triggerC a:hover, h2.acc_triggerD a:hover,h3.acc_triggerA a:hover,h3.acc_triggerB a:hover, h3.acc_triggerC a:hover, h3.acc_triggerD a:hover{	color: #000;}
+h2.acc_active {background-position: left bottom;}
+h2.acc_active a { color:#000;}
+h3.acc_active {background-position: left bottom;}
+h3.acc_active a { color:#000;}
+
+h2.acc_blue a { color:#6587a3;}
+h3.acc_blue a { color:#6587a3;}
+
+.acc_containerA, .acc_containerB, .acc_containerC, .acc_containerD{
+	margin: 0px!important; 
+	padding: 10px 0px 0px 0px;
+	overflow: hidden;
+	width: 940px;
+	clear: both;
+	border: 0px solid #d6d6d6;
+}
+.zeroborder{border:0px!important;}

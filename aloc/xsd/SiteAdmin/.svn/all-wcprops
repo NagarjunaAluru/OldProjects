@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/SiteAdmin
+END
+DelegationConfiguration.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/SiteAdmin/DelegationConfiguration.xsd
+END
+BankFeePaymentSetup.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/SiteAdmin/BankFeePaymentSetup.xsd
+END
+BlockBusinessUnitCodeBank.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/SiteAdmin/BlockBusinessUnitCodeBank.xsd
+END
+BlockBusinessUnitCodeMaster.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/SiteAdmin/BlockBusinessUnitCodeMaster.xsd
+END
+IBS.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/SiteAdmin/IBS.xsd
+END
+SiteAdmin.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/SiteAdmin/SiteAdmin.xsd
+END
+BlockBusinessUnitMasterCollection.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/SiteAdmin/BlockBusinessUnitMasterCollection.xsd
+END
+BankSWIFTConfiguration.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/SiteAdmin/BankSWIFTConfiguration.xsd
+END

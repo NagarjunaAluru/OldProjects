@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/APM/CurrencySetup.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/APM/CurrencySetup.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="CurrencySetup">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="OpCode" type="xs:string" minOccurs="0"/>
+				<xs:element name="Currency_Config_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Currency_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="Currency_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Rate_Direction" type="xs:string" minOccurs="0"/>
+				<xs:element name="Ticker_Symbol" type="xs:string" minOccurs="0"/>
+				<xs:element name="Decimal_Precision" type="xs:integer" minOccurs="0"/>
+				<xs:element name="APM_Payment_Currency_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="BUC" type="xs:string" minOccurs="0"/>
+				<xs:element name="ADN" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

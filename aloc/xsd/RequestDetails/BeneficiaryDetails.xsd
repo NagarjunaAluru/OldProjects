@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/BeneficiaryDetails.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/AddressDetails.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ALOC/RequestDetails/ALOCCommon.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/BeneficiaryDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/ALOCCommon.xsd" schemaLocation="ALOCCommon.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/AddressDetails.xsd" schemaLocation="AddressDetails.xsd"/>
+	<xs:element name="BeneficiaryDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Op_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="Le_Gold_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Le_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Mdm_Gold_Id" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns0:AddressDtls" minOccurs="0"/>
+				<xs:element ref="ns1:Ref_Details" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+				<xs:element name="Requires_Edits" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Send_Back_Notes" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

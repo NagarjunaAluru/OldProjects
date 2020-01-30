@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+ 
+	<field name="addressDtls.name">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((principlaAddressSelection!="New") || (addressDtls.name !=""))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.name", {'Principal :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="addressDtls.address[0]">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((principlaAddressSelection!="New") || (addressDtls.address[0] !=""))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.address1", {'Principal :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="addressDtls.city">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((principlaAddressSelection!="New") || (addressDtls.city !=""))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.city", {'Principal :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="addressDtls.ZIPPostalCode">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[((principlaAddressSelection!="New") || (addressDtls.ZIPPostalCode !=""))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.zipOrPostalCode", {'Principal :'})}
+            </message>
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((principlaAddressSelection!="New") || (@com.ge.aloc.util.ALOCCommonHelper@isValidZipformat(addressDtls.ZIPPostalCode)))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.zipInFormat", {'Principal :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="addressDtls.countryCd">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((principlaAddressSelection!="New") || (addressDtls.countryCd !=""))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.country", {'Principal :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="refDetails[0].refValue">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[ (@com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3 ) || ( refDetails[0].refValue !="") ]]>
+      	</param>
+			<message key="error.required.requestDetails.gePrincipalReference" />
+		</field-validator>
+	</field>
+	
+	<field name="principalBuUniteCd">
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">
+        	<![CDATA[ (@com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3 ) || ( principalBuUniteCd !="") ]]>
+      	</param>
+			<message key="error.required.requestDetails.principalBusinessUniteCode" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[(@com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3 ) || (@com.ge.aloc.util.ALOCCommonHelper@isValidBUCADN(IBSMsgId) == true)]]>
+			</param>
+			<message key="error.required.requestDetails.principalInvalidBUCADN"></message>
+		</field-validator>
+	</field>
+	
+	<field name="principalAccDistNo">
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">
+        	<![CDATA[ (@com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3 ) || ( principalAccDistNo !="") ]]>
+      	</param>
+			<message key="error.required.requestDetails.principalAccountingDistributionNumber" />
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ (@com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3 ) || (@com.ge.aloc.util.ALOCCommonHelper@isValidBUCADN(IBSMsgId) == true) ]]>
+			</param>
+			<message key="error.required.requestDetails.principalInvalidADNBUC"></message>
+		</field-validator>
+	</field>
+	
+	<field name="sendBackNotes">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+		
+        	<![CDATA[((requiresEdits == false) || (requiresEdits != true)) || (sendBackNotes != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.sendBackNotes" />
+		</field-validator>
+	</field>
+	
+</validators>

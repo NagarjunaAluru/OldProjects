@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/manager/impl/admin
+END
+SwiftMessageMonitoringManagerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/manager/impl/admin/SwiftMessageMonitoringManagerTest.java
+END
+RecordsRetentionMgmtManagerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/manager/impl/admin/RecordsRetentionMgmtManagerTest.java
+END
+ReimbursementAgreementMgmtManagerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/manager/impl/admin/ReimbursementAgreementMgmtManagerTest.java
+END
+StandardFormatMgmtManagerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/manager/impl/admin/StandardFormatMgmtManagerTest.java
+END
+UserAnnouncementMgmtManagerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/manager/impl/admin/UserAnnouncementMgmtManagerTest.java
+END
+SuretyNameMgmtManagerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/test/src/com/ge/aloc/manager/impl/admin/SuretyNameMgmtManagerTest.java
+END

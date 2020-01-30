@@ -1,0 +1,40 @@
+8
+
+dir
+56
+https://openge.ge.com/svn/treasury_aloc/trunk/source/web/sunone_codebase/aloc/WebContent/template/aloc-CurrencySetup
+https://openge.ge.com/svn/treasury_aloc
+
+
+
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+720fd033-fee8-473a-95ce-a3690b27228b
+
+radiomap.ftl
+file
+
+
+
+
+2014-12-17T16:04:12.627569Z
+f6b5b6a94069d6523fc7793cbd10690f
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+

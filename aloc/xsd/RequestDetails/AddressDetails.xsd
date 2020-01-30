@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/AddressDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/AddressDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:complexType name="AddressDtlsType">
+		<xs:sequence>
+			<xs:element name="Op_Code" type="xs:string" minOccurs="0"/>
+			<xs:element name="Address_Id" type="xs:integer" minOccurs="0"/>
+			<xs:element name="Address_Type" type="xs:string" minOccurs="0"/>
+			<xs:element name="Address_Type_Id" type="xs:integer" minOccurs="0"/>
+			<xs:element name="Name" type="xs:string" minOccurs="0"/>
+			<xs:element name="Contact_F_Name" type="xs:string" minOccurs="0"/>
+			<xs:element name="Contact_L_Name" type="xs:string" minOccurs="0"/>
+			<xs:element name="Phone_Number" type="xs:string" minOccurs="0"/>
+			<xs:element name="Address" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="City" type="xs:string" minOccurs="0"/>
+			<xs:element name="State_Province" type="xs:string" minOccurs="0"/>
+			<xs:element name="State_Province_Cd" type="xs:string" minOccurs="0"/>
+			<xs:element name="ZIP_PostalCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="Country" type="xs:string" minOccurs="0"/>
+			<xs:element name="Country_Cd" type="xs:string" minOccurs="0"/>
+			<xs:element name="Future_Use_Flag" type="xs:string" minOccurs="0"/>
+			<xs:element name="Country_Of_Inc" type="xs:string" minOccurs="0"/>
+			<xs:element name="Country_Of_Inc_Cd" type="xs:string" minOccurs="0"/>
+			<xs:element name="State_Of_Inc" type="xs:string" minOccurs="0"/>
+			<xs:element name="State_Of_Inc_Cd" type="xs:string" minOccurs="0"/>
+			<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+			<xs:element name="Requires_Edits" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="Send_Back_Notes" type="xs:string" minOccurs="0"/>
+			<xs:element name="Change_Flag" type="xs:string" minOccurs="0"/>
+			<xs:element name="BondReq_Contact_Person" type="xs:string" minOccurs="0"/>
+			<xs:element name="BondReq_Name" type="xs:string" minOccurs="0"/>
+			<xs:element name="BondReq_Email_Address" type="xs:string" minOccurs="0"/>
+			<xs:element name="BondReq_Phone_No" type="xs:string" minOccurs="0"/>
+			<xs:element name="BondReq_Fax_No" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="AddressDtls" type="AddressDtlsType"/>
+</xs:schema>

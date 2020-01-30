@@ -1,0 +1,32 @@
+#login
+error.login.invalidUserId=Invalid UserId
+error.login.invalidPassword=Invalid Password
+error.login.userLocked=User Locked
+
+#SignUp
+error.required.signUp.firstNameMandatory = First name is mandatory
+error.required.signUp.lastNameMandatory = last name is mandatory
+error.required.signUp.emailMandatory = Email address is mandatory
+error.required.signUp.emailInvalid = Invalid Email address
+error.required.signUp.confirmEmailMandatory = Confirm email address is mandatory
+error.required.signUp.mailConfirmMailSame = Mail address & Confirm mail address must be Equal
+error.required.signUp.confirmEmailInvalid = Invalid Confirm email address
+error.required.signUp.bankNameMandatory = Bank name is mandatory
+error.required.signUp.roleMandatory = Role is mandatory
+error.required.signUp.userIdMandatory = User ID is mandatory
+error.required.signUp.passwordMandatory = Password is mandatory
+error.required.signUp.passwordMinChar = Password must be minimum 8 characters
+error.required.signUp.passwordInvalid = Invalid Password
+error.required.signUp.confirmPasswordMandatory = Confirm Password is mandatory
+error.required.signUp.confirmPasswordMinChar = Confirm Password must be minimum 8 characters
+error.required.signUp.passwordConfirmPassSame = Password & Confirm Password must be Equal
+error.required.sgnUp.termsMandatory = This field is mandatory
+
+error.required.reset.userIdMandatory=User ID is mandatory
+error.required.reset.otpMandatory=One Time Password is mandatory
+
+ALOC.EXT.USR-EXISTED.EMAIL=User already existed with this email address
+ALOC.EXT.USR-EXISTED=User already existed with this userId
+
+#Forgot UserId or Password
+ALOC.EXT.USR-NOTFOUND.EMAIL=No user found with this email address

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/impl/common
+END
+HomePageManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/impl/common/HomePageManager.java
+END
+ValidateCloseTransactionManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/impl/common/ValidateCloseTransactionManager.java
+END
+ValidateAmendmentRiderManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/manager/impl/common/ValidateAmendmentRiderManager.java
+END

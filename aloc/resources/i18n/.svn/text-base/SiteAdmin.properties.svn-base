@@ -1,0 +1,201 @@
+
+#SiteAdmin labels 
+
+#common
+label.common.siteAdmin.name = Name
+label.common.siteAdmin.add = Add
+label.common.siteAdmin.remove = Remove
+label.common.siteAdmin.save = Save
+label.common.siteAdmin.lookup = Lookup
+label.common.siteAdmin.yes = Yes
+label.common.siteAdmin.no = No
+label.common.siteAdmin.allFieldsAreRequired = All fields required unless specified
+label.common.siteAdmin.siteType = Site type
+label.common.siteAdmin.description = Description
+label.common.siteAdmin.parentSite = Parent site - optional
+label.common.siteAdmin.parentDescriptionC = Parent description:
+label.common.siteAdmin.parentPrefixC = Parent prefix:
+label.common.siteAdmin.bankName = Bank name
+label.common.siteAdmin.bankIdentifierCodeC = Bank Identifier Code (BIC):
+label.common.siteAdmin.legalEntityGOLDID = Legal Entity GOLD ID
+label.common.siteAdmin.optionalLEGOLDID = Legal Entity GOLD ID - optional
+label.common.siteAdmin.legalEntityNameC = Legal Entity name:
+label.common.siteAdmin.LEGOLDIDC = Legal Entity GOLD ID:
+label.common.siteAdmin.headerSiteOnly = Header site only
+label.common.siteAdmin.groupEmailAddressOpt = Group email address
+label.common.siteAdmin.isThisAtriPartyRequest = Is this a Tri-party request?
+label.common.siteAdmin.privateLabel = Private label?
+label.common.siteAdmin.limitIs30Characters = Limit is 30 characters
+label.common.siteAdmin.thirty = 30
+label.common.siteAdmin.fifty = 50
+label.common.siteAdmin.limit400Characters = characters left (Limit is 400 characters)
+label.common.siteAdmin.fourHundred = 400
+label.common.siteAdmin.charLeftFifty = characters left (Limit is 50 characters)
+label.common.siteAdmin.charlimitSix = 6 alphanumeric character limit
+label.common.siteAdmin.clearResults = Clear results
+label.common.siteAdmin.createNewSite = Create New Site
+label.common.siteAdmin.customizedSiteReferences = Customized Site Fields 
+label.common.siteAdmin.bankFeePaymentSetup = Bank Fee Payment Setup
+label.common.siteAdmin.addAnotherRow = Add Another Row
+label.common.siteAdmin.to = To
+label.common.siteAdmin.addApprovers = Add Approvers
+label.common.siteAdmin.successMsg = Site Created Successfully
+label.common.siteAdmin.sectionSuccess = Section Saved Successfully
+label.common.siteAdmin.businessSiteAdmin = Business Site Admin
+label.siteAdmin.action = Action
+label.siteAdmin.removeSiteCustom = Remove Custom Site Field
+label.siteAdmin.createReqCheck = This Site is available for Request Creation 
+label.siteAdmin.makeThisARequiredField = Make this a required field
+label.siteAdmin.businessAdminDelegationNote = NOTE: This is read only for delegation configuration
+
+#SiteAdmin main screen
+label.siteAdmin.siteAdmin = Site Admin
+label.siteAdmin.IWouldLikeTo = I would like to
+label.siteAdmin.typeDescription = Do you want to create a new site or copy/modify an existing site?
+label.siteAdmin.createANewSite = Create a new site
+label.siteAdmin.copyAnExistingSite = Copy an existing site
+label.siteAdmin.modifyAnExistingSite = Modify an existing site
+label.siteAdmin.treasuryAdmin = Site Admin
+
+#Create Site
+label.siteAdmin.siteName = Site name
+label.siteAdmin.sitePrefix = Site prefix
+label.siteAdmin.4AlphaCharacterLimit = 4 alpha character limit
+label.siteAdmin.parentChildStructure = Parent/Child Site Structure
+label.siteAdmin.siteCode = Site Code
+label.siteAdmin.siteNameC = Site Name
+label.siteAdmin.designation = Designation
+
+#Optional Instruction sentences 
+label.optionalInstructionSentence.siteAdmin = Treasury users are able to set up and modify sites within ALOC for banks and businesses.
+label.optionalInstructionSentence.businessAdmin1 = Once the Treasury user has determined a GE business site is needed, the user is able to include the details required to complete the site set up including the delegation.
+label.optionalInstructionSentence.businessAdmin2 = Enable the business users to modify user access privileges. 
+
+#Site Summary, Modify Site
+label.siteAdmin.sitePrefixName = Site Prefix + Site Name
+label.siteAdmin.siteSummary = Site Summary
+label.siteAdmin.siteIdC = Site ID:
+label.siteAdmin.descriptionC = Description:
+label.siteAdmin.sitePrefixC = Site prefix:
+label.siteAdmin.siteTypeC = Site type:
+label.siteAdmin.parentSiteC = Parent site:
+label.siteAdmin.siteTypeToBeModified = Site type to be modified
+label.siteAdmin.modifyExistingSite = Modify Existing Site
+label.siteAdmin.childSiteNames = Child Site Names
+label.siteAdmin.groupNames = Group Names
+label.siteAdmin.groupNameAlreadyExists = Group Name Already Exists
+
+
+#Delegates
+label.siteAdmin.delegates = Delegates
+label.siteAdmin.approverGroups = Approver groups
+label.siteAdmin.currentDelegates = Current Delegates
+label.siteAdmin.availableApprovers = Available Approvers
+label.siteAdmin.addAdditionalApprovers = Add additional Approvers
+label.siteAdmin.saveGroup = Save Group
+label.siteAdmin.deleteGroup = Delete Group
+
+#Delegation Configuration
+label.siteAdmin.delegationConfiguration = Delegation Configuration 
+label.siteAdmin.instrument = Instrument
+label.siteAdmin.instrumentAmount = USD Instrument Amount
+label.siteAdmin.notificationClause = Notification Clause
+label.siteAdmin.curePeriodIndicator = Cure Period Indicator
+label.siteAdmin.geApprovalOfDraw = GE Approval of Draw
+label.siteAdmin.geProposedDoc = GE Proposed Doc
+label.siteAdmin.customerProposalDoc = Customer Proposal Doc
+label.siteAdmin.approverGroupAssignment = Approver Group Assignment
+label.siteAdmin.approvalGroupConfiguration = Approval Group Configuration
+label.siteAdmin.createNewGroup = Create a new group
+label.siteAdmin.viewAvailableApprovers = View available Approvers
+label.siteAdmin.availableApprovers = Available Approvers
+label.siteAdmin.nameGroup = Name Group
+label.siteAdmin.selectedApprovers = Selected Approvers
+label.siteAdmin.all = All
+label.siteAdmin.amendment = Amendment
+label.siteAdmin.bankGuarantee = Bank Guarantee
+label.siteAdmin.standbyLetterofCredit = Standby Letter of Credit
+label.siteAdmin.rider = Rider
+label.siteAdmin.suretyBond = Surety Bond
+label.siteAdmin.confirmation = Confirmation
+label.siteAdmin.level = Level
+label.siteAdmin.addApprovalLevel = Add approval level
+label.siteAdmin.availableApproversNote = Note:  The below list of available approvers populates from IDM
+
+#Default Delivery Instructions
+label.siteAdmin.defaultDeliveryInstructions = Default Delivery Instructions
+label.siteAdmin.deliverytype = Delivery type - optional
+label.siteAdmin.inPersonPickup = In-person pick-up
+label.siteAdmin.physicalDelivery = Physical delivery (via courier or certified post)
+label.siteAdmin.sendElectronicCopytoMyself = Send electronic copy to myself
+label.siteAdmin.sendElectronicCopytoOthergeRecipient = Send electronic copy to other GE recipient
+label.siteAdmin.recipientOpt = Recipient
+label.siteAdmin.recipient = Recipient:
+label.siteAdmin.recipientEmail = Recipient email:
+label.siteAdmin.companyNameOpt  =Company name
+label.siteAdmin.firstNameOpt = First name
+label.siteAdmin.givenName = Given name
+label.siteAdmin.lastNameOpt = Last name
+label.siteAdmin.surName = Surname
+label.siteAdmin.titleOpt = Title
+label.siteAdmin.address1Opt = Address 1
+label.siteAdmin.address2Opt = Address 2
+label.siteAdmin.cityOpt = City
+label.siteAdmin.stateProvinceOpt = State/Province - optional
+label.siteAdmin.zipPostalCodeOpt = ZIP/Postal code
+label.siteAdmin.countryOpt = Country - optional
+label.siteAdmin.phoneNumberOpt = Phone number
+label.siteAdmin.specialInstructionsOpt = Special instructions
+
+label.siteAdmin.siteCustomOpt = Site custom
+label.siteAdmin.addAdditionalSiteCustom = Add Additional Custom Site Field
+
+label.siteAdmin.customSiteField = Custom Site Field
+label.siteAdmin.customSiteFieldTwo = Custom Site Field 2
+label.siteAdmin.customSiteFieldThree = Custom Site Field 3
+ 
+label.siteAdmin.paymentCurrency = Payment currency
+label.siteAdmin.modelCode = Model code
+
+#Bank SWIFT Configuration
+label.siteAdmin.bankSWIFTConfiguration = Bank SWIFT Configuration
+label.siteAdmin.swiftEnabled = SWIFT enabled
+label.siteAdmin.verifyThatBankisFileActEnabled = Verify that Bank is FileAct enabled
+label.siteAdmin.bankIdentifierCodeOverrideAddressOpt = Bank Identifier Code (BIC) override address
+label.siteAdmin.type = Type
+label.siteAdmin.messageTypeSupported = Message Type Supported
+label.siteAdmin.messageDirection = Message Direction
+
+#Copy Site
+label.siteAdmin.copyExistingSite = Copy Existing Site
+label.siteAdmin.copyAnExistingSite = Copy an existing site
+label.siteAdmin.siteNametobeCopied = Site name to be copied
+label.siteAdmin.newSiteName = New site name
+label.siteAdmin.newSitePrefix = New site prefix
+label.siteAdmin.4CharacterLimit = 4 character limit
+label.siteAdmin.siteNameToBeCopied = Site name to be copied
+
+#Tooltip
+label.siteAdmin.tooltip.sitePrefix=Enter a unique 6 letter code for the site being created.
+label.siteAdmin.tooltip.headerSite=It is intended that this site will not have users and its purpose is to consolidate for reporting purposes only.
+label.siteAdmin.tooltip.groupEmailAddress=Include a group email address to be used in additon to individual user email addresses.
+label.siteAdmin.tooltip.triPartyRequest=Answer yes only if this bank issues instruments for third party applicants.
+label.siteAdmin.tooltip.privateLabel=Answer yes only if this bank issues private label instruments on behalf of GE.
+label.siteAdmin.tooltip.swiftEnabled=Select yes only if the bank participates in the SWIFT 700 series corporate to bank messaging process.
+label.siteAdmin.tooltip.swiftType=This section lists the SWIFT 700 series messages by type that are available for the bank to utilize.
+label.siteAdmin.tooltip.siteName=Enter the name of the GE business or Bank.Note:  GE business name should align with the business delegation received.
+label.siteAdmin.tooltip.delegationConfiguration=Refer to the individual business delegation provided to Treasury and complete the  section below.  Review the delegation carefully to insure accuracy and completeness and that it also complies with policy 30.8.
+label.siteAdmin.tooltip.bankSWIFTConfiguration=This section is to be completed to identify the SWIFT messaging capability of an ALOC bank.
+label.siteAdmin.tooltip.bankFeePaymentSetup=Select payment currency as requested by the bank below. NOTE: only one currency is permitted per bank.
+label.siteAdmin.tooltip.customizeSiteReferences=GE business sites may include up to 3 unique fields which the individual business desires.  Enter the custom name of each field below.
+label.siteAdmin.tooltip.bankLookup = Use the look up below to populate the bank information.
+label.siteAdmin.tooltip.deliveryInstructions = If delivery instructions will always be constant enter below otherwise do not include.
+label.siteAdmin.tooltip.fileActEnabled = FileAct is file exchange service used to transmit files between ALOC and banks.<br/>NOTE: Bank must be FileAct enabled to be considered for SWIFT transmissions.
+label.businessAdmin.tooltip.delegates = Refer to business delegation to obtain the delegate groups and information required below.
+label.businessAdmin.tooltip.approverGroups = Available approver groups are listed by level of approval authority.
+
+
+
+
+
+

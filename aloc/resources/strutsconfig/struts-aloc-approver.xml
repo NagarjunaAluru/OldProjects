@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="approver" extends="struts-aloc-base" namespace="/int/approver">
+			
+		<action name="businessapprover" class="approverAction" method="openRequest">
+			<result name="BankGuaranteeRequestPage">/jsp/common/request/bankAndLocReadonlyRequest.jsp</result>
+			<result name="LOCRequestPage">/jsp/common/request/bankAndLocReadonlyRequest.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/common/request/suretyBondReadonlyRequest.jsp</result>
+			<result name="AmendmentRequestPage">/jsp/common/request/amendment/amendmentTreasuryApprovalRequest.jsp</result>
+			<result name="RiderRequestPage">/jsp/common/request/suretyRider/suretyRiderReadonlyRequest.jsp</result>
+		</action>
+		<action name="treasuryAnalyst" class="approverAction" method="openRequest">
+			<result name="BankGuaranteeRequestPage">/jsp/requestor/treasury/bankAndLocTreasuryAnalyst.jsp</result>
+			<result name="LOCRequestPage">/jsp/requestor/treasury/bankAndLocTreasuryAnalyst.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/requestor/treasury/suretyBondTreasuryAnalyst.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/requestor/treasury/docLOCTreasuryAnalyst.jsp</result>
+			<result name="AmendmentRequestPage">/jsp/requestor/treasury/amendmentTreasuryAnalyst.jsp</result>
+			<result name="RiderRequestPage">/jsp/requestor/treasury/suretyRiderTreasuryAnalyst.jsp</result>
+			 
+		</action>
+		<action name="treasuryApprover" class="approverAction" method="openRequest">
+			<result name="BankGuaranteeRequestPage">/jsp/common/request/bankAndLocReadonlyRequest.jsp</result>
+			<result name="LOCRequestPage">/jsp/common/request/bankAndLocReadonlyRequest.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/common/request/suretyBondReadonlyRequest.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/common/request/docLOCTreasuryApproval.jsp</result> 
+			<result name="AmendmentRequestPage">/jsp/common/request/amendment/amendmentTreasuryApprovalRequest.jsp</result>
+			<result name="RiderRequestPage">/jsp/common/request/suretyRider/suretyRiderReadonlyRequest.jsp</result>
+		</action>
+		<action name="treasuryBidMemo" class="approverAction" method="openRequest">
+			<result name="BankGuaranteeRequestPage">/jsp/requestor/treasury/bgAndLocTreasuryBidMemo.jsp</result>
+			<result name="LOCRequestPage">/jsp/requestor/treasury/bgAndLocTreasuryBidMemo.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/requestor/treasury/suretyBondTreasuryBidMemo.jsp</result>
+			 <result name="DocumentLOCRequestPage">/jsp/requestor/treasury/dLocTreasuryBidMemo.jsp</result> 
+		</action>
+		<action name="postAward" class="approverAction" method="openRequest">
+			<result name="BankGuaranteeRequestPage">/jsp/requestor/treasury/bgAndLocBidPostAward.jsp</result>
+			<result name="LOCRequestPage">/jsp/requestor/treasury/bgAndLocBidPostAward.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/requestor/treasury/suretyBondPostAward.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/requestor/treasury/postAwardDocLOC.jsp</result> 
+			<result name="AmendmentRequestPage">/jsp/requestor/treasury/amendmentPostAward.jsp</result>
+			<result name="AutoAmendmentRequestPage">/jsp/requestor/treasury/autoAmendmentPostAward.jsp</result>
+			<result name="RiderRequestPage">/jsp/requestor/treasury/suretyRiderPostAward.jsp</result>  
+		</action>
+		<action name="*Section" class="approverAction" method="{1}Section">
+			<result name="bankGuaranteeSectionPage">/jsp/requestor/treasury/bgtreasuryAnalystSection.jsp</result>
+			<result name="docLOCSectionPage">/jsp/requestor/treasury/docLOCTreasuryAnalystSection.jsp</result>
+			<result name="suretyBondSectionPage">/jsp/requestor/treasury/suretyBondTreasuryAnalystSection.jsp</result>
+			<result name="AmendmentSectionPage">/jsp/requestor/treasury/amendmentTreasuryAnalystSection.jsp</result>
+			<result name="RiderSectionPage">/jsp/requestor/treasury/suretyRiderTreasuryAnalystSection.jsp</result>
+			
+		</action>
+		<action name="*AdditionalField" class="requestorAction" method="{1}AdditionalField">
+			<result name="bankGuaranteeSectionPage">/jsp/requestor/treasury/bgtreasuryAnalystSection.jsp</result>
+			<result name="docLOCSectionPage">/jsp/requestor/treasury/docLOCTreasuryAnalystSection.jsp</result>
+			<result name="suretyBondSectionPage">/jsp/requestor/treasury/suretyBondTreasuryAnalystSection.jsp</result>		
+		</action>
+		<action name="approverSubmit" class="approverAction" method="submit">
+			<result name="BankGuaranteeRequestPage">/jsp/common/request/bankAndLocReadonlyRequest.jsp</result>
+			<result name="LOCRequestPage">/jsp/common/request/bankAndLocReadonlyRequest.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/common/request/suretyBondReadonlyRequest.jsp</result>
+			 <result name="DocumentLOCRequestPage">/jsp/common/request/docLOCTreasuryApproval.jsp</result>
+			 <result name="AmendmentRequestPage">/jsp/common/request/amendment/amendmentTreasuryApprovalRequest.jsp</result>
+			 <result name="RiderRequestPage">/jsp/common/request/suretyRider/suretyRiderReadonlyRequest.jsp</result>			 
+			<result name="success" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/int/dashboard</param>
+            </result>
+		</action>
+		<action name="analystSubmit" class="approverAction" method="submit">
+			<result name="BankGuaranteeRequestPage">/jsp/requestor/treasury/bankAndLocTreasuryAnalyst.jsp</result>
+			<result name="LOCRequestPage">/jsp/requestor/treasury/bankAndLocTreasuryAnalyst.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/requestor/treasury/suretyBondTreasuryAnalyst.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/requestor/treasury/docLOCTreasuryAnalyst.jsp</result>
+			<result name="success" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/int/dashboard</param>
+            </result>
+		</action>
+		<action name="trAnalystSubmit" class="approverAction" method="submit">
+			<result name="BankGuaranteeRequestPage">/jsp/requestor/treasury/bankAndLocTreasuryAnalyst.jsp</result>
+			<result name="LOCRequestPage">/jsp/requestor/treasury/bankAndLocTreasuryAnalyst.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/requestor/treasury/suretyBondTreasuryAnalyst.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/requestor/treasury/docLOCTreasuryAnalyst.jsp</result>
+			<result name="success" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/int/dashboard</param>
+            </result>
+		</action>
+		
+		<action name="trAnalystRiderSubmit" class="approverAction" method="submit">
+			<result name="RiderRequestPage">/jsp/requestor/treasury/suretyRiderTreasuryAnalyst.jsp</result>
+			<result name="success" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/int/dashboard</param>
+            </result>
+		</action>
+		
+		<action name="postAwardSubmit" class="approverAction" method="submit">
+			<result name="success" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/int/dashboard</param>
+            </result>
+            <result name="BankGuaranteeRequestPage">/jsp/requestor/treasury/bgAndLocBidPostAward.jsp</result>
+			<result name="LOCRequestPage">/jsp/requestor/treasury/bgAndLocBidPostAward.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/requestor/treasury/suretyBondPostAward.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/requestor/treasury/postAwardDocLOC.jsp</result> 
+			<result name="AmendmentRequestPage">/jsp/requestor/treasury/amendmentPostAward.jsp</result>
+			<result name="AutoAmendmentRequestPage">/jsp/requestor/treasury/autoAmendmentPostAward.jsp</result>
+			<result name="RiderRequestPage">/jsp/requestor/treasury/suretyRiderPostAward.jsp</result>
+		</action>
+		
+		<action name="trAnalystAmendmentSubmit" class="approverAction" method="submit">
+			<result name="AmendmentRequestPage">/jsp/requestor/treasury/amendmentTreasuryAnalyst.jsp</result>
+			<result name="success" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/int/dashboard</param>
+            </result>
+		</action>
+		
+		<action name="createBid" class="approverAction" method="submit">
+			<result name="BankGuaranteeRequestPage">/jsp/requestor/treasury/bgAndLocTreasuryBidMemo.jsp</result>
+			<result name="LOCRequestPage">/jsp/requestor/treasury/bgAndLocTreasuryBidMemo.jsp</result>
+			<result name="success">/jsp/requestor/treasury/bgAndLocTreasuryBidMemo.jsp</result>
+		</action>
+		<action name="dLocCreateBid" class="approverAction" method="submit">
+			<result name="DocumentLOCRequestPage">/jsp/requestor/treasury/dLocTreasuryBidMemo.jsp</result>
+			<result name="success">/jsp/requestor/treasury/dLocTreasuryBidMemo.jsp</result>
+		</action>
+		
+		<action name="suretyCreateBid" class="approverAction" method="submit">
+			<result name="SuretyBondRequestPage">/jsp/requestor/treasury/suretyBondTreasuryBidMemo.jsp</result>
+			<result name="success">/jsp/requestor/treasury/suretyBondTreasuryBidMemo.jsp</result>
+		</action>
+		
+		<action name="saveAndExitBid" class="approverAction" method="submit">
+			<result name="BankGuaranteeRequestPage">/jsp/requestor/treasury/bgAndLocTreasuryBidMemo.jsp</result>
+			<result name="LOCRequestPage">/jsp/requestor/treasury/bgAndLocTreasuryBidMemo.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/requestor/treasury/dLocTreasuryBidMemo.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/requestor/treasury/suretyBondTreasuryBidMemo.jsp</result>
+			<result name="success" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/int/dashboard</param>
+            </result>
+		</action>
+		
+		<action name="sendBackBid" class="approverAction" method="submit">
+			<result name="BankGuaranteeRequestPage">/jsp/requestor/treasury/bgAndLocTreasuryBidMemo.jsp</result>
+			<result name="LOCRequestPage">/jsp/requestor/treasury/bgAndLocTreasuryBidMemo.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/requestor/treasury/dLocTreasuryBidMemo.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/requestor/treasury/suretyBondTreasuryBidMemo.jsp</result>
+			<result name="success" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/int/dashboard</param>
+            </result>
+		</action>
+		
+		<action name="bankSelectionSave" class="approverAction" method="submit">
+			<result name="BankGuaranteeRequestPage">/jsp/requestor/treasury/bgAndLocTreasuryBidMemo.jsp</result>
+			<result name="LOCRequestPage">/jsp/requestor/treasury/bgAndLocTreasuryBidMemo.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/requestor/treasury/dLocTreasuryBidMemo.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/requestor/treasury/suretyBondTreasuryBidMemo.jsp</result>
+			<result name="success" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/int/dashboard</param>
+            </result>
+		</action>
+					
+		<action name="readySystemCheck" class="approverAction" method="submit">
+			<result name="*">/jsp/common/request/auditAndTransactionHistoryLog.jsp</result>
+		</action>
+		<action name="requireEditTracking" class="approverAction" method="trackSection">
+			<result name="BankGuaranteeRequestPage">/jsp/common/request/bgTrackSection.jsp</result>
+			<result name="LOCRequestPage">/jsp/common/request/bgTrackSection.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/common/request/suretyTrackSection.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/common/request/dlocTrackSection.jsp</result>
+		</action>
+		
+		<action name="bidReply" class="approverAction" method="submit">
+			<result name="input">/jsp/requestor/treasury/bgAndLocBidReply.jsp</result>
+			<result name="BankGuaranteeRequestPage">/jsp/requestor/treasury/bgAndLocBidReply.jsp</result>
+			<result name="LOCRequestPage">/jsp/requestor/treasury/bgAndLocBidReply.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/requestor/treasury/suretyBondBidReply.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/requestor/treasury/dLocBidReply.jsp</result>
+			<result name="success" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/int/dashboard</param>
+            </result>
+		</action>
+		
+		<action name="sbBidReply" class="approverAction" method="submit">
+			<result name="input">/jsp/requestor/treasury/suretyBondBidReply.jsp</result>
+			<result name="BankGuaranteeRequestPage">/jsp/requestor/treasury/bgAndLocBidReply.jsp</result>
+			<result name="LOCRequestPage">/jsp/requestor/treasury/bgAndLocBidReply.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/requestor/treasury/suretyBondBidReply.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/requestor/treasury/dLocBidReply.jsp</result>
+			<result name="success" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/int/dashboard</param>
+            </result>
+		</action>
+		
+		<action name="dlocBidReply" class="approverAction" method="submit">
+			<result name="input">/jsp/requestor/treasury/dLocBidReply.jsp</result>
+			<result name="BankGuaranteeRequestPage">/jsp/requestor/treasury/bgAndLocBidReply.jsp</result>
+			<result name="LOCRequestPage">/jsp/requestor/treasury/bgAndLocBidReply.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/requestor/treasury/suretyBondBidReply.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/requestor/treasury/dLocBidReply.jsp</result>
+			<result name="success" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/int/dashboard</param>
+            </result>
+		</action>
+		
+		<action name="cancel" class="approverAction" method="cancel">
+			<result name="success" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/int/dashboard</param>
+            </result>
+		</action>
+		<action name="treasuryBidReply" class="approverAction" method="openBidReplyRequest">
+			<result name="BankGuaranteeRequestPage">/jsp/requestor/treasury/bgAndLocBidReply.jsp</result>
+			<result name="LOCRequestPage">/jsp/requestor/treasury/bgAndLocBidReply.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/requestor/treasury/suretyBondBidReply.jsp</result>
+			 <result name="DocumentLOCRequestPage">/jsp/requestor/treasury/dLocBidReply.jsp</result> 
+		</action>
+		<action name="cancelAll" class="approverAction" method="cancelAll">
+			<result name="BankGuaranteeRequestPage">/jsp/requestor/treasury/bankAndLocTreasuryAnalyst.jsp</result>
+			<result name="LOCRequestPage">/jsp/requestor/treasury/bankAndLocTreasuryAnalyst.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/requestor/treasury/suretyBondTreasuryAnalyst.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/requestor/treasury/docLOCTreasuryAnalyst.jsp</result>
+		</action>
+				
+		<action name="treasuryBidAward" class="approverAction" method="openBidAwardRequest">
+			<result name="BankGuaranteeRequestPage">/jsp/requestor/treasury/bgAndLocBidAwardIssuance.jsp</result>
+			<result name="LOCRequestPage">/jsp/requestor/treasury/bgAndLocBidAwardIssuance.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/requestor/treasury/suretyBondBidAwardIssuance.jsp</result>
+			 <result name="DocumentLOCRequestPage">/jsp/requestor/treasury/docLOCBidIssuance.jsp</result> 
+		</action>
+				
+		<action name="selectWinnerForBidAward" class="approverAction" method="selectWinnerForBidAward">
+			<result name="BankGuaranteeRequestPage">/jsp/requestor/treasury/bgAndLocBidAwardIssuance.jsp</result>
+			<result name="LOCRequestPage">/jsp/requestor/treasury/bgAndLocBidAwardIssuance.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/requestor/treasury/suretyBondBidAwardIssuance.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/requestor/treasury/docLOCBidIssuance.jsp</result>
+		    <result name="success" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/int/dashboard</param>
+            </result>
+		</action>
+		
+		<action name="awardSubmit" class="approverAction" method="selectWinnerForBidAward">
+			<result name="BankGuaranteeRequestPage">/jsp/requestor/treasury/bgAndLocBidAwardIssuance.jsp</result>
+			<result name="LOCRequestPage">/jsp/requestor/treasury/bgAndLocBidAwardIssuance.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/requestor/treasury/suretyBondBidAwardIssuance.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/requestor/treasury/docLOCBidIssuance.jsp</result>
+		    <result name="success" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/int/dashboard</param>
+            </result>
+		</action>
+		
+		<action name="taxonomy" class="approverAction" method="openRequest">
+			<result name="BankGuaranteeRequestPage">/jsp/requestor/texonomy/bgAndLocTaxonomy.jsp</result>
+			<result name="LOCRequestPage">/jsp/requestor/texonomy/bgAndLocTaxonomy.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/requestor/texonomy/dLocTaxonomy.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/requestor/texonomy/suretBondTaxonomy.jsp</result>
+			<result name="AmendmentRequestPage">/jsp/requestor/texonomy/amendmentTaxonomy.jsp</result>
+			<result name="RiderRequestPage">/jsp/requestor/texonomy/RiderTaxonomy.jsp</result>
+			<result name="AutoAmendmentRequestPage">/jsp/requestor/texonomy/autoGeneratedAmendment.jsp</result>
+		</action>
+		
+		<action name="openIssuer" class="approverAction" method="openRequest">
+			<result name="BankGuaranteeRequestPage">/jsp/common/request/issuer.jsp</result>
+			<result name="LOCRequestPage">/jsp/common/request/issuer.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/common/request/issuer.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/common/request/issuer.jsp</result>
+			<result name="AmendmentRequestPage">/jsp/common/request/issuer.jsp</result>
+			<result name="AutoAmendmentRequestPage">/jsp/common/request/issuer.jsp</result>
+			<result name="RiderRequestPage">/jsp/common/request/issuer.jsp</result>
+		</action>
+		
+		<action name="openClosure" class="approverAction" method="openRequest">
+			<result name="BankGuaranteeRequestPage">/jsp/requestor/treasury/bankAndSuretyClosureInstrument.jsp</result>
+			<result name="LOCRequestPage">/jsp/requestor/treasury/bankAndSuretyClosureInstrument.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/requestor/treasury/bankAndSuretyClosureInstrument.jsp</result>
+			<result name="AmendmentRequestPage">/jsp/requestor/treasury/bankAndSuretyClosureInstrument.jsp</result>
+			<result name="RiderRequestPage">/jsp/requestor/treasury/bankAndSuretyClosureInstrument.jsp</result>
+		</action>
+		
+		<action name="issuerSubmit" class="approverAction" method="submit">
+		    <result name="BankGuaranteeRequestPage">/jsp/common/request/issuer.jsp</result>
+			<result name="LOCRequestPage">/jsp/common/request/issuer.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/common/request/issuer.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/common/request/issuer.jsp</result>
+			<result name="AmendmentRequestPage">/jsp/common/request/issuer.jsp</result>
+			<result name="AutoAmendmentRequestPage">/jsp/common/request/issuer.jsp</result>
+			<result name="RiderRequestPage">/jsp/common/request/issuer.jsp</result>
+			<result name="success" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/int/dashboard</param>
+            </result>
+		</action>
+		
+		<action name="closureSubmit" class="approverAction" method="submit">
+		    <result name="BankGuaranteeRequestPage">/jsp/requestor/treasury/bankAndSuretyClosureInstrument.jsp</result>
+		    <result name="LOCRequestPage">/jsp/requestor/treasury/bankAndSuretyClosureInstrument.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/requestor/treasury/bankAndSuretyClosureInstrument.jsp</result>
+			<result name="AmendmentRequestPage">/jsp/requestor/treasury/bankAndSuretyClosureInstrument.jsp</result>
+			<result name="RiderRequestPage">/jsp/requestor/treasury/bankAndSuretyClosureInstrument.jsp</result>
+			<result name="success" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/int/dashboard</param>
+            </result>
+		</action>
+		
+		<action name="downloadRequestPDF" class="approverAction" method="downloadPDFFile">
+		    <result name="BankGuaranteeRequestPage">/jsp/common/request/issuer.jsp</result>
+			<result name="LOCRequestPage">/jsp/common/request/issuer.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/common/request/issuer.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/common/request/issuer.jsp</result>
+			<result name="AmendmentRequestPage">/jsp/common/request/issuer.jsp</result>
+			<result name="RiderRequestPage">/jsp/common/request/issuer.jsp</result>
+		</action>
+		
+		<action name="taxonomyDownloadRequestPDF" class="approverAction" method="downloadPDFFile">
+			<result name="BankGuaranteeRequestPage">/jsp/requestor/texonomy/bgAndLocTaxonomy.jsp</result>
+			<result name="LOCRequestPage">/jsp/requestor/texonomy/bgAndLocTaxonomy.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/requestor/texonomy/dLocTaxonomy.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/requestor/texonomy/suretBondTaxonomy.jsp</result>
+			<result name="AmendmentRequestPage">/jsp/requestor/texonomy/amendmentTaxonomy.jsp</result>
+			<result name="RiderRequestPage">/jsp/requestor/texonomy/RiderTaxonomy.jsp</result>
+		</action>
+		
+		<action name="downloadAllAttachments" class="approverAction" method="downloadAllAttachmentsAsZip"/>
+		
+		<action name="getFullAuditAndActionLog" class="approverAction" method="getFullAuditAndActionLog">
+		    <result name="audit">/jsp/common/request/FullAuditLog.jsp</result>
+		    <result name="action">/jsp/common/request/FullTransactionHistoryLog.jsp</result>
+		</action>
+		
+		<action name="auditandActionSearch" class="auditSearchAction" method="auditandActionSearch">
+			 <result name="audit">/jsp/common/request/FullAuditLog.jsp</result>
+		     <result name="action">/jsp/common/request/FullTransactionHistoryLog.jsp</result>
+		</action>
+		
+		<action name="generateFormatDoc" class="approverAction" method="generateFormatDoc"/>
+		
+		<action name="issuerSave" class="approverAction" method="issuanceSave">
+		    <result name="BankGuaranteeRequestPage">/jsp/requestor/texonomy/bgAndLocTaxonomy.jsp</result>
+			<result name="LOCRequestPage">/jsp/requestor/texonomy/bgAndLocTaxonomy.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/requestor/texonomy/dLocTaxonomy.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/requestor/texonomy/suretBondTaxonomy.jsp</result>
+			<result name="AmendmentRequestPage">/jsp/requestor/texonomy/amendmentTaxonomy.jsp</result>
+			<result name="RiderRequestPage">/jsp/requestor/texonomy/RiderTaxonomy.jsp</result>
+			<result name="AutoAmendmentRequestPage">/jsp/requestor/texonomy/autoGeneratedAmendment.jsp</result>
+			
+			<result name="input">/jsp/requestor/texonomy/bgAndLocTaxonomy.jsp</result>
+			<result name="dLocInput">/jsp/requestor/texonomy/dLocTaxonomy.jsp</result>
+			<result name="sbInput">/jsp/requestor/texonomy/suretBondTaxonomy.jsp</result>
+			<result name="riderInput">/jsp/requestor/texonomy/RiderTaxonomy.jsp</result>
+			<result name="amendmentInput">/jsp/requestor/texonomy/amendmentTaxonomy.jsp</result>
+			<result name="autoAmendmentInput">/jsp/requestor/texonomy/autoGeneratedAmendment.jsp</result>
+			
+			<result name="success" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/int/dashboard</param>
+            </result>
+		</action>
+		
+	</package>
+</struts>

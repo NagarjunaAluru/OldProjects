@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*////////////////////////////////////*/
+ /* some styling for triggers */
+  #triggers {
+  text-align:center;
+  }
+
+  #triggers img {
+  cursor:pointer;
+  margin:0 5px;
+  background-color:#fff;
+  border:1px solid #ccc;
+  padding:2px;
+
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;
+
+  }
+
+    /* styling for elements inside overlay */
+  .details {
+  position:absolute;
+  top:15px;
+  left:15px;
+  font-size:11px;
+  color:#000;
+  /* width:150px; */
+  }
+
+  .details h3 {
+  color:#aba;
+  font-size:15px;
+  }
+  
+/* the overlayed element */
+.simple_overlay {
+
+    /* must be initially hidden */
+    display:none;
+
+    /* place overlay on top of other elements */
+    z-index:10000;
+
+    /* styling */
+    background-color:#fff;
+
+    width:430px;
+    min-height:575px;
+    border:1px solid #666;
+	
+    /* CSS3 styling for latest browsers */
+    -moz-box-shadow:0 0 90px 5px #ddd;
+    -webkit-box-shadow: 0 0 90px #ddd;
+}
+
+/* close button positioned on upper right corner */
+.simple_overlay .close {
+    background-image:url(../../img/close.png);
+    position:absolute;
+    right:-15px;
+    top:-15px;
+    cursor:pointer;
+    height:35px;
+    width:35px;
+	opacity:10!important;
+}
+
+#Unblock{min-height:200px!important;}

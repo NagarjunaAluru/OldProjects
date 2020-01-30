@@ -1,0 +1,161 @@
+<class-diagram version="1.0.11" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.action.requestor.CreateRequestAction" 
+    project="aloc" file="/aloc/src/com/ge/aloc/action/requestor/CreateRequestAction.java" binary="false">    
+    <position height="301" width="300" x="-117" y="-130"/>    
+    <display autosize="false" stereotype="false" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="2" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.manager.IRequestDetailsManager" 
+    project="aloc" file="/aloc/src/com/ge/aloc/manager/IRequestDetailsManager.java" binary="false">    
+    <position height="-1" width="-1" x="469" y="42"/>    
+    <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="3" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.manager.impl.RequestDetailsManager" 
+    project="aloc" file="/aloc/src/com/ge/aloc/manager/impl/RequestDetailsManager.java" binary="false">    
+    <position height="-1" width="-1" x="68" y="439"/>    
+    <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="4" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.dao.IRequestDetailsDAO" project="aloc" 
+    file="/aloc/src/com/ge/aloc/dao/IRequestDetailsDAO.java" binary="false">    
+    <position height="-1" width="-1" x="889" y="23"/>    
+    <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="5" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.dao.impl.RequestDetailsDAO" project="aloc" 
+    file="/aloc/src/com/ge/aloc/dao/impl/RequestDetailsDAO.java" binary="false">    
+    <position height="-1" width="-1" x="887" y="404"/>    
+    <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="6" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.action.request.RequestDetailsSupportAction" 
+    project="aloc" file="/aloc/src/com/ge/aloc/action/request/RequestDetailsSupportAction.java" binary="false">    
+    <position height="350" width="246" x="307" y="260"/>    
+    <display autosize="false" stereotype="false" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="7" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.manager.IRequestDetailsSectionManager" 
+    project="aloc" file="/aloc/src/com/ge/aloc/manager/IRequestDetailsSectionManager.java" binary="false">    
+    <position height="234" width="259" x="327" y="678"/>    
+    <display autosize="false" stereotype="false" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="8" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.manager.impl.RequestDetailsSectionManager" 
+    project="aloc" file="/aloc/src/com/ge/aloc/manager/impl/RequestDetailsSectionManager.java" binary="false">    
+    <position height="288" width="339" x="315" y="956"/>    
+    <display autosize="false" stereotype="false" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="9" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.dao.IRequestDetailsSectionDAO" 
+    project="aloc" file="/aloc/src/com/ge/aloc/dao/IRequestDetailsSectionDAO.java" binary="false">    
+    <position height="394" width="331" x="681" y="634"/>    
+    <display autosize="false" stereotype="false" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="10" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.dao.impl.RequestDetailsSectionDAO" 
+    project="aloc" file="/aloc/src/com/ge/aloc/dao/impl/RequestDetailsSectionDAO.java" binary="false">    
+    <position height="231" width="326" x="668" y="1060"/>    
+    <display autosize="false" stereotype="false" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="11" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.bo.RequestDetailsBO" project="aloc" 
+    file="/aloc/src/com/ge/aloc/bo/RequestDetailsBO.java" binary="false">    
+    <position height="-1" width="-1" x="88" y="820"/>    
+    <display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <realization id="12">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
+  <association id="13">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="14" name="requestDetailsManager"/>      
+      <multiplicity id="15" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="16">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="17" name="requestDetailsSectionManager"/>      
+      <multiplicity id="18" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="19">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <association id="20">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="21" name="requestDetailsBO"/>      
+      <multiplicity id="22" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="23">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="9"/>  
+  </realization>  
+  <realization id="24">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="7"/>  
+  </realization>  
+  <association id="25">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="26" name="requestDetailsManager"/>      
+      <multiplicity id="27" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="28">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="29" name="requestDetailsSectionDAO"/>      
+      <multiplicity id="30" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="31">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="32" name="requestDetailsDAO"/>      
+      <multiplicity id="33" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="false" package="true" initial-value="false" signature="true" 
+    visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

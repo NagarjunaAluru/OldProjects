@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/CurrentBankFess.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ALOC/RequestDetails/AuditLog.xsd"
+	 xmlns:ns2="http://treasury.ge.com/schemas/ALOC/RequestDetails/CumulativeFeeAdjustments.xsd"
+	 xmlns:ns3="http://treasury.ge.com/schemas/ALOC/RequestDetails/AddressDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/CurrentBankFess.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd" schemaLocation="MsgHeader.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/AuditLog.xsd" schemaLocation="AuditLog.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/CumulativeFeeAdjustments.xsd" schemaLocation="CumulativeFeeAdjustments.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/AddressDetails.xsd" schemaLocation="AddressDetails.xsd"/>
+	<xs:element name="CurrentBankFees">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ns0:Msg_Header" minOccurs="0"/>
+				<xs:element ref="Current_Winning_Bank" minOccurs="0"/>
+				<xs:element ref="Participant_Bank" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Currentbank_Fee_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Aloc_Request_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element ref="ns2:CumulativeFeeAdjustments" minOccurs="0"/>
+				<xs:element ref="ns1:Audit_Log" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Current_Winning_Bank">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Winning_Bank_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuing_Bank_Branch" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank_Reference_Number" type="xs:string" minOccurs="0"/>
+				<xs:element ref="Allin_Comissions" minOccurs="0"/>
+				<xs:element ref="Local_Comissions" minOccurs="0"/>
+				<xs:element ref="Onetime_Fees" minOccurs="0"/>
+				<xs:element name="Winning_Bank_Comments" type="xs:string" minOccurs="0"/>
+				<xs:element ref="Post_Bid_Reply_Fee_Adjustment" minOccurs="0"/>
+				<xs:element ref="ns3:AddressDtls" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Participant_Bank">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Participant_Bank_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuing_Bank_Branch" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank_Reference_Number" type="xs:string" minOccurs="0"/>
+				<xs:element ref="Allin_Comissions" minOccurs="0"/>
+				<xs:element ref="Local_Comissions" minOccurs="0"/>
+				<xs:element ref="Onetime_Fees" minOccurs="0"/>
+				<xs:element name="Optout_Reason" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns3:AddressDtls" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Allin_Comissions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Allin_Commission_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Allin_Commission_Value" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Allin_Commission_Value_String" type="xs:string" minOccurs="0"/>
+				<xs:element name="Amendment_Transaction_Fee" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Amendment_Transaction_Fee_String" type="xs:string" minOccurs="0"/>
+				<xs:element name="Allin_LPD_Change_require" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Allin_LPD_Exists" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Allin_Last_PaidDate" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="All_In_Flag" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Local_Comissions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Local_Commission_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Local_Commission_Value" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Local_Commission_Value_String" type="xs:string" minOccurs="0"/>
+				<xs:element name="Local_Amendment_Transaction_Fee_String" type="xs:string" minOccurs="0"/>
+				<xs:element name="Local_Amendment_Transaction_Fee" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Local_LPD_Change_require" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Local_LPD_Exists" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Local_Last_PaidDate" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Local_Flag" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Onetime_Fees">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Vat_Taxes" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Stamp_Taxes" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Incidental_Admin_Fee" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Other" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Vat_Taxes_String" type="xs:string" minOccurs="0"/>
+				<xs:element name="Stamp_Taxes_String" type="xs:string" minOccurs="0"/>
+				<xs:element name="Incidental_Admin_Fee_String" type="xs:string" minOccurs="0"/>
+				<xs:element name="Other_String" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Post_Bid_Reply_Fee_Adjustment">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Adjustments" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Adjustments_Amount" type="xs:decimal" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

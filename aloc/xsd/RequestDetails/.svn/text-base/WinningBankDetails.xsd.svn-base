@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/WinningBankDetails.xsd"
+	 xmlns:ns0="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/PreAgreedPricingDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/WinningBankDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/PreAgreedPricingDetails.xsd" schemaLocation="PreAgreedPricingDetails.xsd"/>
+	<xs:element name="WinningBankDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="WinnerDetails" minOccurs="0"/>
+				<xs:element ref="CompetingBankDetails" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="WinnerDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Winning_Bank_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuing_Bank_Branch" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank_Reference_Number" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns0:PreAgreedPricingDetails" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CompetingBankDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="BankNames" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuing_Bank_Branch" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank_Reference_Number" type="xs:string" minOccurs="0"/>
+				<xs:element name="Opt_Out_Reason" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns0:PreAgreedPricingDetails" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

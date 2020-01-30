@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<field name="instrumentPurposeId">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required.requestDetails.instrumentPurposeId" />
+		</field-validator>
+	</field>
+	<field name="instrumentPurposeOther">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((instrumentPurposeId!=16) || (instrumentPurposeOther !=null && instrumentPurposeOther !=""))]]>
+      		</param>
+			<message key="error.required.requestDetails.instrumentPurposeOther" />
+		</field-validator>
+	</field>
+	<field name="triPartyRequestFlag">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[ (requestDetails.siteTypeName != "Financial Business") || ((triPartyRequestFlag == true) || (triPartyRequestFlag == false))]]>
+      	</param>
+			<message key="error.required.requestDetails.triPartyRequest" />
+		</field-validator>
+	</field>
+	
+	<field name="privateLabelFlag">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[(requestDetails.siteTypeName != "Financial Business") || ((privateLabelFlag == true) || (privateLabelFlag == false))]]>
+      	</param>
+			<message key="error.required.requestDetails.privateLabel" />
+		</field-validator>
+	</field>
+	<field name="triPartyApplicant.name">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((requestDetails.siteTypeName != "Financial Business") || (triPartyRequestFlag == false) || (triPartyAddressSelection!="New") || (triPartyApplicant.name !=null && triPartyApplicant.name !=""))]]>
+      		</param>
+			<message key="error.required.tParties.triPartyApplicant.name"/>
+		</field-validator>
+	</field>
+	<field name="triPartyApplicant.address[0]">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((requestDetails.siteTypeName != "Financial Business") || (triPartyRequestFlag == false) || (triPartyAddressSelection!="New") || (triPartyApplicant.address[0] !=null && triPartyApplicant.address[0] !=""))]]>
+      		</param>
+			<message key="error.required.tParties.triPartyApplicant.address1"/>
+		</field-validator>
+	</field>
+	<field name="triPartyApplicant.city">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((requestDetails.siteTypeName != "Financial Business") || (triPartyRequestFlag == false) || (triPartyAddressSelection!="New") || (triPartyApplicant.city !=null && triPartyApplicant.city !=""))]]>
+      		</param>
+			<message key="error.required.tParties.triPartyApplicant.city"/>
+		</field-validator>
+	</field>
+	<field name="triPartyApplicant.ZIPPostalCode">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[((requestDetails.siteTypeName != "Financial Business") || (triPartyRequestFlag == false) || (triPartyAddressSelection!="New") || (triPartyApplicant.ZIPPostalCode !=null && triPartyApplicant.ZIPPostalCode !=""))]]>
+      		</param>
+			<message key="error.required.tParties.triPartyApplicant.ZIPPostalCode"/>
+		</field-validator>
+		<field-validator type="fieldexpression">
+            <param name="expression"><![CDATA[((requestDetails.siteTypeName != "Financial Business") || (triPartyRequestFlag == false) || (triPartyAddressSelection!="New") || (@com.ge.aloc.util.ALOCCommonHelper@isValidZipformat(triPartyApplicant.ZIPPostalCode)))]]></param>
+           <message key="error.required.tParties.triPartyApplicant.ZIPPostalCodeFormat" /> 
+        </field-validator>
+	</field>
+	<field name="triPartyApplicant.countryCd">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((requestDetails.siteTypeName != "Financial Business") || (triPartyRequestFlag == false) || (triPartyAddressSelection!="New") || (triPartyApplicant.countryCd !=null && triPartyApplicant.countryCd !=""))]]>
+      		</param>
+			<message key="error.required.tParties.triPartyApplicant.countryCd"/>
+		</field-validator>
+	</field>
+	
+	<field name="tpApplicantDetails.addressDtls.name">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((tpApplicantAddressSelection!="New") || (triPartyRequestFlag != null && triPartyRequestFlag != false) || (tpApplicantDetails.addressDtls.name !=null && tpApplicantDetails.addressDtls.name !=""))]]>
+      		</param>
+			<message key="error.required.tParties.Applicant.name"/>
+		</field-validator>
+	</field>
+	<field name="tpApplicantDetails.addressDtls.address[0]">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((tpApplicantAddressSelection!="New") || (triPartyRequestFlag != null && triPartyRequestFlag != false) || (tpApplicantDetails.addressDtls.address[0] !=null && tpApplicantDetails.addressDtls.address[0] !=""))]]>
+      		</param>
+			<message key="error.required.tParties.Applicant.address1"/>
+		</field-validator>
+	</field>
+	<field name="tpApplicantDetails.addressDtls.city">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((tpApplicantAddressSelection!="New") || (triPartyRequestFlag != null && triPartyRequestFlag != false) || (tpApplicantDetails.addressDtls.city !=null && tpApplicantDetails.addressDtls.city !=""))]]>
+      		</param>
+			<message key="error.required.tParties.Applicant.city"/>
+		</field-validator>
+	</field>
+	<field name="tpApplicantDetails.addressDtls.ZIPPostalCode">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[((tpApplicantAddressSelection!="New") || (triPartyRequestFlag != null && triPartyRequestFlag != false) || (tpApplicantDetails.addressDtls.ZIPPostalCode !=null && tpApplicantDetails.addressDtls.ZIPPostalCode !=""))]]>
+      		</param>
+			<message key="error.required.tParties.Applicant.ZIPPostalCode"/>
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((tpApplicantAddressSelection!="New") || (triPartyRequestFlag != null && triPartyRequestFlag != false) || (@com.ge.aloc.util.ALOCCommonHelper@isValidZipformat(tpApplicantDetails.addressDtls.ZIPPostalCode)))]]>
+      		</param>
+			<message key="error.required.tParties.Applicant.ZIPPostalCodeFormat"/>
+		</field-validator>
+	</field>
+	<field name="tpApplicantDetails.addressDtls.countryCd">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((tpApplicantAddressSelection!="New") || (triPartyRequestFlag != null && triPartyRequestFlag != false) || (tpApplicantDetails.addressDtls.countryCd !=null && tpApplicantDetails.addressDtls.countryCd !=""))]]>
+      		</param>
+			<message key="error.required.tParties.Applicant.countryCd"/>
+		</field-validator>
+	</field>
+	
+	<field name="tpApplicantDetails.refDetails[0].refValue">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required.requestDetails.geApplicantReference" />
+		</field-validator>
+	</field>
+	
+	<field name="tpApplicantDetails.buUnit">
+		<field-validator type="requiredstring" short-circuit="true">
+			<message key="error.required.requestDetails.businessUnitCode" />
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[(@com.ge.aloc.util.ALOCCommonHelper@isValidBUCADN(tpApplicantDetails.IBSMsgId) == true)]]>
+			</param>
+			<message key="error.required.requestDetails.invalidBUCADN"></message>
+		</field-validator>
+	</field>
+	
+	<field name="tpApplicantDetails.accDist">
+		<field-validator type="requiredstring" short-circuit="true">
+			<message key="error.required.requestDetails.accountingDistributionNumber" />
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ (@com.ge.aloc.util.ALOCCommonHelper@isValidBUCADN(tpApplicantDetails.IBSMsgId) == true) ]]>
+			</param>
+			<message key="error.required.requestDetails.invalidADNBUC"></message>
+		</field-validator>
+	</field>
+	<field name="tpApplicantDetails.csoNo">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[ (requestDetails.siteTypeName != "Financial Business") || (tpApplicantDetails.csoNo != null && tpApplicantDetails.csoNo != "")]]>
+      		</param>
+			<message key="error.required.requestDetails.csoNumber" />
+		</field-validator>
+	</field>
+	
+	<field name="tpApplicantDetails.csoApprovalDt">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[ (requestDetails.siteTypeName != "Financial Business") || (tpApplicantDetails.csoApprovalDt != null)]]>
+      		</param>
+			<message key="error.required.requestDetails.csoDateNotvalid" />
+		</field-validator>
+	</field> 
+	
+	<field name="tpApplicantDetails.certifyFlag">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[ (requestDetails.siteTypeName != "Financial Business") || (tpApplicantDetails.certifyFlag == true )]]>
+      		</param>
+			<message key="error.required.requestDetails.certifyFlag" />
+		</field-validator>
+	</field> 
+	
+	<field name="customer.addressDtls.name">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((tpCustomerAddressSelection!="New") || (customer.addressDtls.name !=null && customer.addressDtls.name !=""))]]>
+      		</param>
+			<message key="error.required.tParties.customer.name"/>
+		</field-validator>
+	</field>
+	<field name="customer.addressDtls.address[0]">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((tpCustomerAddressSelection!="New") || (customer.addressDtls.address[0] !=null && customer.addressDtls.address[0] !=""))]]>
+      		</param>
+			<message key="error.required.tParties.customer.address1"/>
+		</field-validator>
+	</field>
+	<field name="customer.addressDtls.city">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((tpCustomerAddressSelection!="New") || (customer.addressDtls.city !=null && customer.addressDtls.city !=""))]]>
+      		</param>
+			<message key="error.required.tParties.customer.city"/>
+		</field-validator>
+	</field>
+	<field name="customer.addressDtls.ZIPPostalCode">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[((tpCustomerAddressSelection!="New") || (customer.addressDtls.ZIPPostalCode !=null && customer.addressDtls.ZIPPostalCode !=""))]]>
+      		</param>
+			<message key="error.required.tParties.customer.ZIPPostalCode"/>
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((tpCustomerAddressSelection!="New") || (@com.ge.aloc.util.ALOCCommonHelper@isValidZipformat(customer.addressDtls.ZIPPostalCode)))]]>
+      		</param>
+			<message key="error.required.tParties.customer.ZIPPostalCodeFormat"/>
+		</field-validator>
+	</field>
+	<field name="customer.addressDtls.countryCd">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((tpCustomerAddressSelection!="New") || (customer.addressDtls.countryCd !=null && customer.addressDtls.countryCd !=""))]]>
+      		</param>
+			<message key="error.required.tParties.customer.countryCd"/>
+		</field-validator>
+	</field>
+	
+	<field name="customer.refDetails[0].refValue">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required.requestDetails.customerBeneficiaryReference" />
+		</field-validator>
+	</field>
+	
+</validators>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/SearchReqDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/SearchReqDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="SearchReqDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Site_Id" type="xs:integer" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Aloc_Req_No" type="xs:integer" minOccurs="0"/>
+				<xs:element name="ALOC_Record_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Link_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Bundle_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Model_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instr_Purpose_Type" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Bond_Sub_Type" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Bond_Type" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="State_Province" type="xs:string" minOccurs="0"/>
+				<xs:element name="Business_Site_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Business_Site_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bond_SubBond" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Type_Bond" type="xs:string" minOccurs="0"/>
+							<xs:element name="Type_SubBond" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

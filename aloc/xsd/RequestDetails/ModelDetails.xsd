@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/ModelDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/ModelDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="ModelDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Site_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Model_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Applicant_Principal" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bene_Obligee" type="xs:string" minOccurs="0"/>
+				<xs:element name="Creator" type="xs:string" minOccurs="0"/>
+				<xs:element name="Creation_Dt" type="xs:dateTime" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

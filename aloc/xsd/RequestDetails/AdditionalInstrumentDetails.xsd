@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/AdditionalInstrumentDetails.xsd"
+	 xmlns:ns0="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/PreAgreedPricingDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/AdditionalInstrumentDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/PreAgreedPricingDetails.xsd" schemaLocation="PreAgreedPricingDetails.xsd"/>
+	<xs:element name="AdditionalInstrumentDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Current_Instrument_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instrument_Purpose" type="xs:string" minOccurs="0"/>
+				<xs:element name="Amount" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Economic_Expiration_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Expiration_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Instrument_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Governing_Rules_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Governing_Rules_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Governing_Rules_Other_Description" type="xs:string" minOccurs="0"/>
+				<xs:element name="Request_For_Proposal" type="xs:boolean" minOccurs="0"/>
+				<xs:element ref="ns0:PreAgreedPricingDetails" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

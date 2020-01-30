@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/treasury_aloc/!svn/ver/55/trunk/source/web/sunone_codebase/aloc
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/.project
+END
+JBoss-pom.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/treasury_aloc/!svn/ver/55/trunk/source/web/sunone_codebase/aloc/JBoss-pom.xml
+END
+pom.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/treasury_aloc/!svn/ver/55/trunk/source/web/sunone_codebase/aloc/pom.xml
+END
+.pmd
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/.pmd
+END

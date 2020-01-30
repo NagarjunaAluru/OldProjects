@@ -1,0 +1,89 @@
+<class-diagram version="1.0.11" icons="true" automaticImage="JPEG" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.action.reports.ReportDetailAction" 
+    project="aloc" file="/aloc/src/com/ge/aloc/action/reports/ReportDetailAction.java" binary="false">    
+    <position height="-1" width="-1" x="110" y="-406"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="false" private="false"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="2" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.dao.impl.reports.ReportsDAO" project="aloc" 
+    file="/aloc/src/com/ge/aloc/dao/impl/reports/ReportsDAO.java" binary="false">    
+    <position height="-1" width="-1" x="684" y="-55"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="3" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.manager.reports.IReportsManager" 
+    project="aloc" file="/aloc/src/com/ge/aloc/manager/reports/IReportsManager.java" binary="false">    
+    <position height="-1" width="-1" x="693" y="-614"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <interface id="4" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.dao.IReportsDAO" project="aloc" 
+    file="/aloc/src/com/ge/aloc/dao/IReportsDAO.java" binary="false">    
+    <position height="-1" width="-1" x="688" y="-230"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="5" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.bo.ReportDetailBO" project="aloc" 
+    file="/aloc/src/com/ge/aloc/bo/ReportDetailBO.java" binary="false">    
+    <position height="1663" width="252" x="278" y="-688"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="false" private="false"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="6" corner="BOTTOM_RIGHT" language="java" name="com.ge.aloc.manager.impl.ReportsManager" project="aloc" 
+    file="/aloc/src/com/ge/aloc/manager/impl/ReportsManager.java" binary="false">    
+    <position height="-1" width="-1" x="695" y="-427"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <association id="7">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="8" name="reportsManager"/>      
+      <multiplicity id="9" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="10">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
+  <association id="11">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="12" name="reportsDAO"/>      
+      <multiplicity id="13" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="14">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="3"/>  
+  </realization>  
+  <association id="15">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="16" name="reportDtlBO"/>      
+      <multiplicity id="17" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

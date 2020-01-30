@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<field name="projectDesc">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required.requestDetails.projectDesc" />
+		</field-validator>
+	</field>
+	
+	<field name="issuanceCountryCd">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>
+      			${getText("error.required.requestDetails.issuanceCountry", {'Instrument/Transaction Details :'})}
+   			 </message>
+		</field-validator>
+	</field>
+	
+	<field name="contranctAmt">
+		<field-validator type="required" short-circuit="true">
+			<message key="error.required.requestDetails.contranctAmt" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(contranctAmt)</param>
+			<message key="error.required.requestDetails.contranctAmtInvalid" />
+		</field-validator>
+	</field>
+	
+	<field name="contranctCurId">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required.requestDetails.contranctCur" />
+		</field-validator>
+	</field>
+	
+	<field name="docLCCurId">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required.requestDetails.docLCCur" />
+		</field-validator>
+	</field>
+	
+	<field name="docLCAmt">
+		<field-validator type="required" short-circuit="true">
+			<message key="error.required.requestDetails.docLCAmt" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(docLCAmt)</param>
+			<message key="error.required.requestDetails.docLCAmtInvalid" />
+		</field-validator>
+	</field>
+	
+	<field name="shipmentOrigins[0].countryCd">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required.requestDetails.shipmentOriCountries" />
+		</field-validator>
+	</field>
+	
+	<field name="shipmentDestCountryCd">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required.requestDetails.shipmentDestCountry" />
+		</field-validator>
+	</field>
+	
+	<field name="goodsOrigins[0].countryCd">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required.requestDetails.goodsOrigins" />
+		</field-validator>
+	</field>
+	
+	<field name="USContentPercent">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<!-- <![CDATA[((goodsOrigins[0].countryCd != "US") || (goodsOrigins[1].countryCd != "US")|| (goodsOrigins[2].countryCd != "US")) ||(USContentPercent != "")]]> -->
+        	<![CDATA[ (@com.ge.aloc.util.ALOCCommonHelper@validatingGoodsOrigin())]]>
+      	</param>
+			<message key="error.required.requestDetails.usContentPercent" />
+		</field-validator>
+	</field>
+	
+	<field name="USDEquivalent">
+		<field-validator type="required">
+			<message key="error.required.requestDetails.usdDLOCAmount" />
+		</field-validator>
+	</field>
+	<field name="LCPaymentId">
+		<field-validator type="required">
+			<message key="error.required.requestDetails.lcPaymentTerm" />
+		</field-validator>
+	</field>
+	<field name="othPaymentDesc">
+		<field-validator type="required">
+			<message key="error.required.requestDetails.lcPaymentTermOther" />
+		</field-validator>
+	</field>
+	<field name="confirmationType">
+		<field-validator type="required">
+			<message key="error.required.requestDetails.confirmationType" />
+		</field-validator>
+	</field>
+	
+	<field name="bankChargesId">
+		<field-validator type="required">
+			<message key="error.required.requestDetails.bankChargesType" />
+		</field-validator>
+	</field>
+	<field name="sendBackNotes">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requiresEdits == false) || (requiresEdits != true)) || (sendBackNotes != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.sendBackNotes" />
+		</field-validator>
+	</field>
+	
+</validators>

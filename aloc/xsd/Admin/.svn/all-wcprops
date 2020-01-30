@@ -1,0 +1,155 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/Admin
+END
+BusinessUnitCodeList.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/Admin/BusinessUnitCodeList.xsd
+END
+PoleCountry.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/Admin/PoleCountry.xsd
+END
+RequestorLookUp.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/Admin/RequestorLookUp.xsd
+END
+SuretyMasterCollection.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/Admin/SuretyMasterCollection.xsd
+END
+RequestorSearhRequest.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/Admin/RequestorSearhRequest.xsd
+END
+BusinessUnitCode.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/Admin/BusinessUnitCode.xsd
+END
+ActiveAnnouncement.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/Admin/ActiveAnnouncement.xsd
+END
+FormatAuditTrailCollection.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/Admin/FormatAuditTrailCollection.xsd
+END
+AmendmentWorkflowMgmt.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/Admin/AmendmentWorkflowMgmt.xsd
+END
+ReimburseList.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/Admin/ReimburseList.xsd
+END
+UserAnnouncement.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/Admin/UserAnnouncement.xsd
+END
+RequestorSearchReply.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/Admin/RequestorSearchReply.xsd
+END
+PoleNameList.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/Admin/PoleNameList.xsd
+END
+PoleNameManagement.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/Admin/PoleNameManagement.xsd
+END
+BookMarkMasterCollection.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/Admin/BookMarkMasterCollection.xsd
+END
+PaymentDetail.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/Admin/PaymentDetail.xsd
+END
+RecordRetentionList.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/Admin/RecordRetentionList.xsd
+END
+FormatMaster.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/Admin/FormatMaster.xsd
+END
+RecordRetention.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/Admin/RecordRetention.xsd
+END
+RoleSelection.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/Admin/RoleSelection.xsd
+END
+SuretyMaster.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/Admin/SuretyMaster.xsd
+END
+FormatAuditTrail.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/Admin/FormatAuditTrail.xsd
+END
+PaymentDetailCollection.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/Admin/PaymentDetailCollection.xsd
+END
+BookMarkMaster.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/Admin/BookMarkMaster.xsd
+END
+Reimbursement.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/xsd/Admin/Reimbursement.xsd
+END

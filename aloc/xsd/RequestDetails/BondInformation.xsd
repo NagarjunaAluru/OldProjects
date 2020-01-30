@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/BondInfo.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/BondInfo.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="BondInfo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Op_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="Exact_Proj_Desc" type="xs:string" minOccurs="0"/>
+				<xs:element name="Invitation_Or_Bid_No" type="xs:string" minOccurs="0"/>
+				<xs:element name="Obligation_City" type="xs:string" minOccurs="0"/>
+				<xs:element name="Obligation_Country_Or_state" type="xs:string" minOccurs="0"/>
+				<xs:element name="Obligation_Country_Or_state_Cd" type="xs:string" minOccurs="0"/>
+				<xs:element name="Importer_Num" type="xs:string" minOccurs="0"/>
+				<xs:element name="Effective_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Expiration_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Contract_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Est_Completion_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Bid_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Est_Start_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Est_Bid_Amount" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Currency_Cd" type="xs:string" minOccurs="0"/>
+				<xs:element name="Currency_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Performance_Bond_Amt" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Contract_Amt" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Contract_Cur_Cd" type="xs:string" minOccurs="0"/>
+				<xs:element name="Contract_Cur_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="USD_contract_Amt" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Liquidated_Damages" type="xs:string" minOccurs="0"/>
+				<xs:element name="Warranty_Term" type="xs:int" minOccurs="0"/>
+				<xs:element name="Need_By_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Other_info" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bond_Form_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Pole" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Court_Of_Jurisdiction" type="xs:string" minOccurs="0"/>
+				<xs:element name="County" type="xs:string" minOccurs="0"/>
+				<xs:element name="State" type="xs:string" minOccurs="0"/>
+				<xs:element name="State_Cd" type="xs:string" minOccurs="0"/>
+				<xs:element name="Activity_Cd" type="xs:string" minOccurs="0"/>
+				<xs:element name="Case_Number" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Date_Filed" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Judgement_Amt_Cur" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Judgement_Amt_Cur_Cd" type="xs:string" minOccurs="0"/>
+				<xs:element name="Judgement_Amount" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Bond_Currency" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bond_Currency_Cd" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bond_Amount" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="U.S.Equivalent_Bond_Amt" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Effective_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Need_By_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Court_Other_Info" type="xs:string" minOccurs="0"/>
+				<xs:element name="Court_Bond_Amt" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="USD_Court_Bond_Amt" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Attorney_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Law_Firm_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Attorney_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Attorney_Address_1" type="xs:string" minOccurs="0"/>
+				<xs:element name="Attorney_Address_2" type="xs:string" minOccurs="0"/>
+				<xs:element name="Attorney_City" type="xs:string" minOccurs="0"/>
+				<xs:element name="Attorney_State" type="xs:string" minOccurs="0"/>
+				<xs:element name="Attorney_State_Cd" type="xs:string" minOccurs="0"/>
+				<xs:element name="Attorney_ZIP_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="Attorney_Country" type="xs:string" minOccurs="0"/>
+				<xs:element name="Attorney_Country_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="Attorney_Phone_Num" type="xs:string" minOccurs="0"/>
+				<xs:element name="Attorney_Fax_Num" type="xs:string" minOccurs="0"/>
+				<xs:element name="Attorney_Email" type="xs:string" minOccurs="0"/>
+				<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+				<xs:element name="Requires_Edits" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Send_Back_Notes" type="xs:string" minOccurs="0"/>
+				<xs:element name="Attorney_Requires_Edits" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Attorney_Send_Back_Notes" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuance_Country_Cd" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuance_Country_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="USD_Performance_Bond_Amt" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Bid_Bond_Currency_Cd" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bid_Bond_Currency_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="USD_Estimated_Bond_Amt" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Performance_Bond_Currency_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Performance_Bond_Currency_Cd" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/Reports/BidSuccessDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/Reports/BidSuccessDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="BidSuccessDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ANALYS_PERIOD_ST_DT" type="xs:string" minOccurs="0"/>
+				<xs:element name="ANALYS_PERIOD_END_DT" type="xs:string" minOccurs="0"/>
+				<xs:element name="BANK_NAME" type="xs:string" minOccurs="0"/>
+				<xs:element name="COUNTRY_ISSUE" type="xs:string" minOccurs="0"/>
+				<xs:element name="CURRENCY_ISSUE" type="xs:string" minOccurs="0"/>
+				<xs:element name="SITE_ID" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="GB_BANK" type="xs:string" minOccurs="0"/>
+				<xs:element name="GB_COUNTRY_ISSUE" type="xs:string" minOccurs="0"/>
+				<xs:element name="GB_CURRENCY_ISSUE" type="xs:string" minOccurs="0"/>
+				<xs:element name="GB_SITE_ID" type="xs:string" minOccurs="0"/>
+				<xs:element name="BIDSUCCESS_USER_SSO" type="xs:string" minOccurs="0"/>
+				<xs:element name="TotalofBids" type="xs:string" minOccurs="0"/>
+				<xs:element name="TotalofReplies" type="xs:string" minOccurs="0"/>
+				<xs:element name="TotalWon" type="xs:string" minOccurs="0"/>
+				<xs:element name="TotalLost" type="xs:string" minOccurs="0"/>
+				<xs:element name="TotalOpt-out" type="xs:string" minOccurs="0"/>
+				<xs:element name="TotalExpired" type="xs:string" minOccurs="0"/>
+				<xs:element name="Won" type="xs:string" minOccurs="0"/>
+				<xs:element name="Lost" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/Reports/GCFODetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/Reports/GCFODetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="GCFODetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="IN_AS_OF_DATE" type="xs:string" minOccurs="0"/>
+				<xs:element name="GE_BUSINESS_GROUP" type="xs:string" minOccurs="0"/>
+				<xs:element name="GCFO_RECORD" type="xs:string" minOccurs="0"/>
+				<xs:element name="LE_CODE_GOLD_ID" type="xs:string" minOccurs="0"/>
+				<xs:element name="LE_NAME" type="xs:string" minOccurs="0"/>
+				<xs:element name="FACILITY_TYPE" type="xs:string" minOccurs="0"/>
+				<xs:element name="FACILITY_AMOUNT" type="xs:string" minOccurs="0"/>
+				<xs:element name="FACILITY_CURRENCY" type="xs:string" minOccurs="0"/>
+				<xs:element name="BUSINESS_NAME" type="xs:string" minOccurs="0"/>
+				<xs:element name="BUSINESS_SSO" type="xs:string" minOccurs="0"/>
+				<xs:element name="PURPOSE_OF_CREDIT_FACILITY_REMARKS" type="xs:string" minOccurs="0"/>
+				<xs:element name="FACILITY_START_DATE" type="xs:string" minOccurs="0"/>
+				<xs:element name="FACILITY_END_DATE" type="xs:string" minOccurs="0"/>
+				<xs:element name="SUPPORTED_ENTITY_NAME" type="xs:string" minOccurs="0"/>
+				<xs:element name="BANKS_PARENT_NAME" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="INASOFDATE" type="xs:string"/>
+</xs:schema>

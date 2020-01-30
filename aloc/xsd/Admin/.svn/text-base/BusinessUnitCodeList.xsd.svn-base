@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/Admin/BusinessUnitCodeList.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/Admin/BusinessUnitCode.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/Admin/BusinessUnitCodeList.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/Admin/BusinessUnitCode.xsd" schemaLocation="BusinessUnitCode.xsd"/>
+	<xs:element name="BusinessUnitCodeList">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ns0:BusinessUnitCode" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

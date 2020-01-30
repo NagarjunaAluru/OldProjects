@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="Msg_Header">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Opcode" type="xs:string" minOccurs="0"/>
+				<xs:element name="Role_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Status" type="xs:string" minOccurs="0"/>
+				<xs:element name="Audit_Creator" type="xs:string" minOccurs="0"/>
+				<xs:element name="Audit_Modifier" type="xs:string" minOccurs="0"/>
+				<xs:element name="Audit_Created_Dt" type="xs:string" minOccurs="0"/>
+				<xs:element name="Audit_Modified_Dt" type="xs:string" minOccurs="0"/>
+				<xs:element name="Delete_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Audit_Creator_First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Audit_Creator_Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Audit_Modifier_First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Audit_Modifier_Last_Name" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Msg_Header_Info">
+		<xs:sequence>
+			<xs:element ref="Msg_Header" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

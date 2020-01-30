@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<field name="siteName">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required.siteDetails.siteName" />
+		</field-validator>
+	</field>
+	<field name="sitePrefix">
+		<field-validator type="requiredstring" short-circuit="true">
+			<param name="trim">true</param>
+			<message key="error.required.siteDetails.sitePrefix" />
+		</field-validator>
+		<field-validator type="regex">
+		    <param name="expression">^[a-zA-Z0-9]+$</param>
+		    <message key="error.required.siteDetails.sitePrefixAlphaNumeric" />
+		</field-validator>
+	</field>
+	<field name="description">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required.siteDetails.description" />
+		</field-validator>
+	</field>
+	<field name="siteType.siteTypeId">  
+        <field-validator type="required" >  
+             <message key="error.required.siteDetails.siteType" />
+        </field-validator>  
+    </field>
+    <field name="groupEmailAddress">  
+        <field-validator type="email" >  
+             <message key="error.required.siteDetails.email" />
+        </field-validator>  
+    </field>
+   
+	<field name="headerSiteOnly">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((siteType.siteTypeId != "") && (siteType.siteTypeId == "2" || siteType.siteTypeId == "3" || siteType.siteTypeId == "5")) || ((headerSiteOnly == true || headerSiteOnly == false))]]>
+      	</param>
+		<message key="error.required.siteDetails.headerSiteOnly" />
+		</field-validator>
+	</field>
+	
+	<field name="triPartyEnabled">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((siteType.siteTypeId != "") && (siteType.siteTypeId != "2")) || ((triPartyEnabled == true) || (triPartyEnabled == false))]]>
+      	</param>
+			<message key="error.required.siteDetails.triPartyEnabled" />
+		</field-validator>
+	</field>
+	
+	<field name="privateLabel">
+   		<field-validator type="fieldexpression">
+      	<param name="expression">
+        	<![CDATA[((siteType.siteTypeId != "") && (siteType.siteTypeId != "2")) || ((privateLabel == true) || (privateLabel == false))]]>
+      	</param>
+      		<message key="error.required.siteDetails.privateLabel" />
+   		</field-validator>
+	</field>
+	
+</validators>

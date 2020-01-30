@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/InstrReporting.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/InstrReporting.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="InstrReporting">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Op_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="Pole_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Pole_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Bu_Proj_Id" type="xs:string" minOccurs="0"/>
+				<xs:element ref="Site_Custom" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Billing_Ref" type="xs:string" minOccurs="0"/>
+				<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+				<xs:element name="Requires_Edits" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Send_Back_Notes" type="xs:string" minOccurs="0"/>
+                                      <xs:element name="Site_Required_Flag" type="xs:boolean" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Site_Custom">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Site_Custom_Field" type="xs:string" minOccurs="0"/>
+				<xs:element name="Site_Custom_Value" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

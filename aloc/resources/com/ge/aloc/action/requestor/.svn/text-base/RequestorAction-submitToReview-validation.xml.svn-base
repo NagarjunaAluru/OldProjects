@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	 <!-- <field name="requestDetails.attachments">
+        <field-validator type="conditionalvisitor">
+            <param name="expression">
+                <![CDATA[
+                     @com.ge.aloc.view.section.RequestSectionId@ATTACHMENTS.getAsString() == @com.ge.aloc.view.section.RequestSectionId@ATTACHMENTS.getAsString()
+                ]]>
+            </param>
+            <message />
+        </field-validator>
+    </field> 
+    <field name="requestDetails.buDelegation.buApprover.approverSso">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+			<![CDATA[ (((@com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId()) != 1) && ((@com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId()) != 2) && ((@com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId()) != 3)) || ( requestDetails.buDelegation.buApprover.approverSso !="") ]]>
+		</param>
+			<message key="error.required.requestDetails.businessApprover" />
+		</field-validator>
+	</field> 
+	 -->
+	 <!-- Transaction Parties Section Validation -->
+	<field name="goldId">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@isBankGuaranteeOrSBLCRequest(requestDetails.instrumentTypeId) != true || (goldId != null && goldId != "" && goldIdSelection != null && goldIdSelection != "") || ((goldId ==null || goldId.trim() =="") && goldIdSelection!=null && goldIdSelection.trim() !="") ]]>
+			</param>
+			<message>
+      			${getText("error.required.requestDetails.legoldId", {'Transaction Parties :'})}
+            </message>
+		</field-validator>
+	</field>
+
+	<field name="nameForAddressTPApplicant">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@isBankGuaranteeOrSBLCRequest(requestDetails.instrumentTypeId) != true || @com.ge.aloc.util.ALOCCommonHelper@isTPTriParty(requestDetails.siteTypeName, requestDetails.transactionParties.triPartyRequestFlag) != false || (nameForAddressTPApplicant != null && nameForAddressTPApplicant != "" && tpApplicantAddressSelection != null && tpApplicantAddressSelection != "") || ((nameForAddressTPApplicant ==null || nameForAddressTPApplicant.trim() =="") && tpApplicantAddressSelection!=null && tpApplicantAddressSelection.trim() !="") ]]>
+			</param>
+			<message key="error.required.requestDetails.TPApplicant"></message>
+		</field-validator>
+	</field>
+	<field name="nameForAddressTriparty">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ (@com.ge.aloc.util.ALOCCommonHelper@isBankGuaranteeOrSBLCRequest(requestDetails.instrumentTypeId) != true || @com.ge.aloc.util.ALOCCommonHelper@isTPTriParty(requestDetails.siteTypeName, requestDetails.transactionParties.triPartyRequestFlag) != true) || (nameForAddressTriparty != null && nameForAddressTriparty != "" && triPartyAddressSelection != null && triPartyAddressSelection != "") || ((nameForAddressTriparty ==null || nameForAddressTriparty.trim() =="") && triPartyAddressSelection!=null && triPartyAddressSelection.trim() !="") ]]>
+			</param>
+			<message key="error.required.requestDetails.Triparty"></message>
+		</field-validator>
+	</field>
+
+	<field name="nameForAddressTPCustomer">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@isBankGuaranteeOrSBLCRequest(requestDetails.instrumentTypeId) != true || (nameForAddressTPCustomer != null && nameForAddressTPCustomer != "" && tpCustomerAddressSelection != null && tpCustomerAddressSelection != "") || ((nameForAddressTPCustomer ==null || nameForAddressTPCustomer.trim() =="") && tpCustomerAddressSelection!=null && tpCustomerAddressSelection.trim() !="") ]]>
+			</param>
+			<message key="error.required.requestDetails.TPCustomer"></message>
+		</field-validator>
+	</field>
+	 <field name="requestDetails.transactionParties">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@BANK_GUARANTEE.getId() || requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@LOC.getId())
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	<!-- Project Description Section Validation -->
+	<field name="requestDetails.projDescription">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@BANK_GUARANTEE.getId() || requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@LOC.getId())
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<!-- Instrument Details Section Validation -->
+	<field name="requestDetails.instrumentDetails">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@BANK_GUARANTEE.getId() || requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@LOC.getId())
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	<!-- Instrument Risk Section Validation -->
+	<field name="requestDetails.instrumentRisk">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@BANK_GUARANTEE.getId() || requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@LOC.getId())
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<!-- Instrument Reporting Section Validation -->
+	<field name="requestDetails.instrReporting">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@BANK_GUARANTEE.getId() || requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@LOC.getId())
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	<field name="requestDetails.deliveryInstructions">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@BANK_GUARANTEE.getId() || requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@LOC.getId())
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.SBLC">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@LOC.getId()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>  
+        
+     <!-- Business Contact Person Section Validation
+	<field name="requestDetails.buContactPerson">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@DOCUMENT_LOC.getId())
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field> -->
+	 <!-- Issuing Bank Details Section Validation -->
+	<field name="requestDetails.issuingBankDetails">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@DOCUMENT_LOC.getId())
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	<!-- Applicant Details Section Validation -->
+	<field name="requestDetails.applicantDetails">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@DOCUMENT_LOC.getId())
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	<!-- Customer/Beneficiary Section Validation -->
+	<field name="requestDetails.beneficiaryDetails">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@DOCUMENT_LOC.getId())
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	<!-- Transaction Details Section Validation -->
+	<field name="requestDetails.transactionDetails">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@DOCUMENT_LOC.getId())
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	<!-- Payment Schedule Section Validation -->
+	<field name="requestDetails.paymentScheduleDetails">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					(requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@DOCUMENT_LOC.getId())
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	<field name="issuingBankName">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@isDocLOCRequest(requestDetails.instrumentTypeId) != true  || (issuingBankName !=null && issuingBankName.trim() !="" && issuingBankSelection!=null && issuingBankSelection.trim() !="") || ((issuingBankName ==null || issuingBankName.trim() =="") && issuingBankSelection!=null && issuingBankSelection.trim() !="")]]>
+      		</param>
+			<message key="error.required.requestDetails.bankName"/>
+		</field-validator>
+	</field>
+	<field name="bankCountryCd">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@isDocLOCRequest(requestDetails.instrumentTypeId) != true  || (bankCountryCd !=null && bankCountryCd.trim() !="" && issuingBankSelection!=null && issuingBankSelection.trim() !="") || ((bankCountryCd ==null || bankCountryCd.trim() =="") && issuingBankSelection!=null && issuingBankSelection.trim() !="")]]>
+      		</param>
+			<message key="error.required.requestDetails.issuingBankCountry"/>
+		</field-validator>
+	</field>
+	<field name="bankCity">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@isDocLOCRequest(requestDetails.instrumentTypeId) != true  || (bankCity !=null && bankCity.trim() !="" && issuingBankSelection!=null && issuingBankSelection.trim() !="") || ((bankCity ==null || bankCity.trim() =="") && issuingBankSelection!=null && issuingBankSelection.trim() !="")]]>
+      		</param>
+			<message key="error.required.requestDetails.issuingBankCity"/>
+		</field-validator>
+	</field>
+	
+	<field name="nameForApplicantAddress">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@isDocLOCRequest(requestDetails.instrumentTypeId) != true  || (nameForApplicantAddress != null && nameForApplicantAddress.trim() != "" && applicantSelection != null && applicantSelection.trim() != "") || ((nameForApplicantAddress ==null || nameForApplicantAddress.trim() =="") && applicantSelection!=null && applicantSelection.trim() !="") ]]>
+			</param>
+			<message key="error.required.requestDetails.applicantNameaddress"></message>
+		</field-validator>
+	</field>
+	
+	<field name="beneficiaryGoldId">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@isDocLOCRequest(requestDetails.instrumentTypeId) != true || (beneficiaryGoldId != null && beneficiaryGoldId != "" && beneficiaryGoldIdSelection != null && beneficiaryGoldIdSelection != "") || ((beneficiaryGoldId ==null || beneficiaryGoldId.trim() =="") && beneficiaryGoldIdSelection!=null && beneficiaryGoldIdSelection.trim() !="") ]]>
+			</param>
+			<message key="error.required.requestDetails.custlegoldId"></message>
+		</field-validator>
+	</field>
+	
+	<field name="nameForBeneficiaryAddress">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@isDocLOCRequest(requestDetails.instrumentTypeId) != true || (nameForBeneficiaryAddress != null && nameForBeneficiaryAddress != "" && beneficiaryAddressSelection != null && beneficiaryAddressSelection != "") || ((nameForBeneficiaryAddress ==null || nameForBeneficiaryAddress.trim() =="") && beneficiaryAddressSelection!=null && beneficiaryAddressSelection.trim() !="") ]]>
+			</param>
+			<message key="error.required.requestDetails.beneficiaryNameaddress"></message>
+		</field-validator>
+	</field>
+	
+	<!--Surety Bond Request Validations Starts From Here -->
+	
+	
+	<field name="principalGoldId">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ requestDetails.instrumentTypeId != @com.ge.aloc.InstrumentType@SURETY_BOND.getId() || (principalGoldId != null && principalGoldId != "" && principalGoldIdSelection != null && principalGoldIdSelection != "") || ((principalGoldId ==null || principalGoldId.trim() =="") && principalGoldIdSelection!=null && principalGoldIdSelection.trim() !="") ]]>
+			</param>
+			<message>
+      			${getText("error.required.requestDetails.legoldId", {'Principal :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="nameForAddressPrincipal">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ requestDetails.instrumentTypeId != @com.ge.aloc.InstrumentType@SURETY_BOND.getId() || (nameForAddressPrincipal != null && nameForAddressPrincipal != "" && principlaAddressSelection != null && principlaAddressSelection != "") || ((nameForAddressPrincipal ==null || nameForAddressPrincipal.trim() =="") && principlaAddressSelection!=null && principlaAddressSelection.trim() !="") ]]>
+			</param>
+			<message key="error.required.requestDetails.principalNameaddress"></message>
+		</field-validator>
+	</field>
+	
+	<field name="nameForObligeeAddress">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ requestDetails.instrumentTypeId != @com.ge.aloc.InstrumentType@SURETY_BOND.getId() || (nameForObligeeAddress != null && nameForObligeeAddress != "" && obligeeAddressSelection != null && obligeeAddressSelection != "") || ((nameForObligeeAddress ==null || nameForObligeeAddress.trim() =="") && obligeeAddressSelection!=null && obligeeAddressSelection.trim() !="") ]]>
+			</param>
+			<message key="error.required.requestDetails.obligeeNameaddress"></message>
+		</field-validator>
+	</field>
+	
+
+	<!-- Bond Details Section Validation -->
+	<field name="requestDetails.bondDetails">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@SURETY_BOND.getId()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+
+	<!-- Principal Details Section Validation -->
+	<field name="requestDetails.principal">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@SURETY_BOND.getId()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+
+	<!-- Obligee Details Section Validation -->
+	<field name="requestDetails.obligee">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@SURETY_BOND.getId()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+
+	<!-- Requestor Mailing Address Section Validation -->
+	<field name="requestDetails.addressDtls">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@SURETY_BOND.getId()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+
+	<!-- Bond Information Section Validation -->
+	<field name="requestDetails.bondInfo">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@SURETY_BOND.getId()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+
+	<!-- Delivery Instructions Section Validation -->
+	<field name="requestDetails.deliveryInstructions">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					requestDetails.instrumentTypeId == @com.ge.aloc.InstrumentType@SURETY_BOND.getId()
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+
+</validators>

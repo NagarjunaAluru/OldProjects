@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/APM/PaymentPeriodDetails.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/Attachments.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/APM/PaymentPeriodDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/Attachments.xsd" schemaLocation="../RequestDetails/Attachments.xsd"/>
+	<xs:element name="PaymentPeriodDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Op_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="APM_Config_ID" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Payment_Period_Start_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Payment_Period_End_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="FXRate_Revalue_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Payment_Period_Cutoff_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Min_Payment_Amount_USD" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Day_Count" type="xs:integer" minOccurs="0"/>
+				<xs:element name="IBS_File" type="xs:string" minOccurs="0"/>
+				<xs:element name="WebCash_File" type="xs:string" minOccurs="0"/>
+				<xs:element name="Run_Completion_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Equivalent_USD_Value" type="xs:decimal" minOccurs="0"/>
+				<xs:element ref="ns0:Attachment" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

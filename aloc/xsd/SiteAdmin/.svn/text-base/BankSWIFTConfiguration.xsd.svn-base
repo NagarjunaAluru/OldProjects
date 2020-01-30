@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/SiteAdmin/BankSWIFTConfiguration.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/ALOCCommon.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/SiteAdmin/BankSWIFTConfiguration.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/ALOCCommon.xsd" schemaLocation="../RequestDetails/ALOCCommon.xsd"/>
+	<xs:element name="BankSWIFTConfiguration">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="SWIFT_Enabled" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Is_FileAct_Enabled" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Bank_Identifier_Code_Address" type="xs:string" minOccurs="0"/>
+				<xs:element ref="BankSwift" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Opcode" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns0:ActionDetails" minOccurs="0"/>
+				<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BankSwift">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Message_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Message_Type_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Message_Support" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Message_Direction" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

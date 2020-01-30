@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+
+	<field name="requestDetails.tresuryDelegation.approverSso">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[(requestDetails.instrumentTypeId == 4) || (actionType != 4) || (requestDetails.tresuryDelegation.approverSso != null && requestDetails.tresuryDelegation.approverSso != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.tresuryDelegation" />
+		</field-validator>		
+	</field>
+	
+	<field name="requestDetails.businessReApprovalFlag">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[(requestDetails.instrumentTypeId == 4) || (actionType != 3) ||  (requestDetails.businessReApprovalFlag != null && requestDetails.businessReApprovalFlag != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.businessReApproval" />
+		</field-validator>	
+	</field>
+	
+</validators>

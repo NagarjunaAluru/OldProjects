@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/StaticDataManagement.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ALOC/RequestDetails/AddressDetails.xsd"
+	 xmlns:ns2="http://treasury.ge.com/schemas/ALOC/RequestDetails/SiteAdminStaticData.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/StaticDataManagement.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd" schemaLocation="MsgHeader.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/AddressDetails.xsd" schemaLocation="AddressDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/SiteAdminStaticData.xsd" schemaLocation="SiteAdminStaticData.xsd"/>
+	<xs:element name="StaticDataManagement">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ns0:Msg_Header" minOccurs="0"/>
+				<xs:element name="SiteTypes" type="NameValue" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="UserSites" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="NameValue">
+								<xs:sequence>
+									<xs:element name="Site_Type_Id" type="xs:integer" minOccurs="0"/>
+									<xs:element name="Site_Type" type="xs:string" minOccurs="0"/>
+									<xs:element name="User_sso" type="xs:string" minOccurs="0"/>
+								</xs:sequence>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ParentSites" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="NameValue">
+								<xs:sequence>
+									<xs:element name="Parent_Site_Prefix" type="xs:string" minOccurs="0"/>
+									<xs:element name="Parent_Site_Description" type="xs:string" minOccurs="0"/>
+									<xs:element name="SiteType_Id" type="xs:integer" minOccurs="0"/>
+									<xs:element name="SiteType_Name" type="xs:string" minOccurs="0"/>
+								</xs:sequence>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="BondType" type="NameValue" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="BondSubType" type="NameValue" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="InstrumentPurpose" type="NameValue" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="InstrumentType" type="NameValue" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="GeneralInstrumentType" type="NameValue" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="FormatSelection" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="NameValue">
+								<xs:sequence>
+									<xs:element name="Format_Value" type="xs:string" minOccurs="0"/>
+								</xs:sequence>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="LCPaymentTerms" type="NameValue" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="BankCharges" type="NameValue" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="PolesDetails" type="NameValue" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="AddressDetails" type="ns1:AddressDtlsType" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="StateList" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="StateInfo" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="State_Id" type="xs:integer" minOccurs="0"/>
+										<xs:element name="State_Name" type="xs:string" minOccurs="0"/>
+										<xs:element name="State_Code" type="xs:string" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GEDivisionsList" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="GEDivisionName" type="NameValue" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="FileExtnsList" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="FileExtnType" type="NameValue" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="SearchCriteria" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="DashBoard_LinkTo_Search" type="NameValue" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="ns2:SiteAdminStaticData" minOccurs="0"/>
+				<xs:element name="GoverningRules" type="NameValue" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="PricingDetails" type="NameValue" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="FeeStructures" type="NameValue" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Actions" type="NameValue" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="SwiftMessageTypes" type="NameValue" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="RequestStatus" type="NameValue" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="BidStatus" type="NameValue" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="NameValue">
+		<xs:sequence>
+			<xs:element name="ID" type="xs:integer" minOccurs="0"/>
+			<xs:element name="Name" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

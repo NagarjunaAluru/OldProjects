@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/BidProcess.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/WFDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/BidProcess.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/WFDetails.xsd" schemaLocation="WFDetails.xsd"/>
+	<xs:element name="BidProcess">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Instrument_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instrument_Type_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Request_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Aloc_Record_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="State" type="xs:string" minOccurs="0"/>
+				<xs:element name="Applicant_Or_Principal" type="xs:string" minOccurs="0"/>
+				<xs:element name="Tri_Party_Applicant_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bid_Received" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bid_Update_Dt_Time" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Expiration_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Country_Of_Issuance" type="xs:string" minOccurs="0"/>
+				<xs:element name="Currency" type="xs:string" minOccurs="0"/>
+				<xs:element name="Currency_Cd" type="xs:string" minOccurs="0"/>
+				<xs:element name="Amt" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Estimated_Economic_Exp_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Bank_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank_Bid_Id" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Bid_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bid_Action" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bid_Reply_Id" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Instrument_Purpose" type="xs:string" minOccurs="0"/>
+				<xs:element name="Beneficiary_Or_Obligee" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuance_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Bond_Sub_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Amendment_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Rider_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Date_Received" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Instrument_Purpose_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Bond_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bond_Type_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Sub_Bond_Type_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Site_Prefix" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank_Country_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank_Country_Cd" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns0:WFDetails" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

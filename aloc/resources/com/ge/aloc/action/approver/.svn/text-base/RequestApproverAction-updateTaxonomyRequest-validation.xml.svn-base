@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	
+	<!-- Transaction Parties Business Contact Person Lookup Validation -->
+	
+	<!-- Doc. Loc. Business Contact Person Lookup Validation -->
+	
+	<field name="businessContactPerson">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ (requestDetails.instrumentTypeId != 4 ) || (businessContactPerson != null && businessContactPerson != "" && businessContactPersonSelection != null && businessContactPersonSelection != "") || ((businessContactPerson == null || businessContactPerson.trim() == "") && businessContactPersonSelection!=null && businessContactPersonSelection.trim() !="") ]]>
+			</param>
+			<message key="error.required.requestDetails.contactPerson"></message>
+		</field-validator>
+	</field>
+	
+	<!-- BG and SBLC  BUC & ADN Validations -->
+	
+	<field name="requestDetails.transactionParties.tpApplicantDetails.buUnit">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+				<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@isBankGuaranteeOrSBLCRequest(requestDetails.instrumentTypeId) != true || (requestDetails.transactionParties.tpApplicantDetails.buUnit != null && requestDetails.transactionParties.tpApplicantDetails.buUnit.trim() != "")]]>
+			</param>
+			<message key="error.required.requestDetails.businessUnitCode" />
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@isBankGuaranteeOrSBLCRequest(requestDetails.instrumentTypeId) != true || (@com.ge.aloc.util.ALOCCommonHelper@isValidBUCADN(requestDetails.transactionParties.tpApplicantDetails.IBSMsgId) == true)]]>
+			</param>
+			<message key="error.required.requestDetails.invalidBUCADN"></message>
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.transactionParties.tpApplicantDetails.accDist">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+				<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@isBankGuaranteeOrSBLCRequest(requestDetails.instrumentTypeId) != true || (requestDetails.transactionParties.tpApplicantDetails.accDist != null && requestDetails.transactionParties.tpApplicantDetails.accDist.trim() != "")]]>
+			</param>
+			<message key="error.required.requestDetails.accountingDistributionNumber" />
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ @com.ge.aloc.util.ALOCCommonHelper@isBankGuaranteeOrSBLCRequest(requestDetails.instrumentTypeId) != true || (@com.ge.aloc.util.ALOCCommonHelper@isValidBUCADN(requestDetails.transactionParties.tpApplicantDetails.IBSMsgId) == true) ]]>
+			</param>
+			<message key="error.required.requestDetails.invalidBUCADN"></message>
+		</field-validator>
+	</field>
+	
+	<!-- Surety Bond  BUC & ADN Validations -->
+	
+	<field name="requestDetails.principal.principalBuUniteCd">
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">
+        	<![CDATA[ (@com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3 ) || ( requestDetails.principal.principalBuUniteCd !="") ]]>
+      	</param>
+			<message key="error.required.requestDetails.principalBusinessUniteCode" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ (@com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3 ) || (@com.ge.aloc.util.ALOCCommonHelper@isValidBUCADN(requestDetails.principal.IBSMsgId) == true)]]>
+			</param>
+			<message key="error.required.requestDetails.principalInvalidBUCADN"></message>
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.principal.principalAccDistNo">
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">
+        	<![CDATA[ (@com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3 ) || ( requestDetails.principal.principalAccDistNo !="") ]]>
+      	</param>
+			<message key="error.required.requestDetails.principalAccountingDistributionNumber" />
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[ (@com.ge.aloc.util.ALOCCommonHelper@getInstrumentTypeId() != 3 ) || (@com.ge.aloc.util.ALOCCommonHelper@isValidBUCADN(requestDetails.principal.IBSMsgId) == true) ]]>
+			</param>
+			<message key="error.required.requestDetails.principalInvalidADNBUC"></message>
+		</field-validator>
+	</field>
+	
+</validators>

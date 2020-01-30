@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/Admin/FormatAuditTrail.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ALOC/RequestDetails/UserInfo.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/Admin/FormatAuditTrail.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd" schemaLocation="../RequestDetails/MsgHeader.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/UserInfo.xsd" schemaLocation="../RequestDetails/UserInfo.xsd"/>
+	<xs:element name="FormatAuditTrail">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="FormatAuditTrail_Id" type="xs:long" minOccurs="0"/>
+				<xs:element name="Format_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="OldFormat" type="xs:string" minOccurs="0"/>
+				<xs:element name="Audit_Modifier" type="xs:string" minOccurs="0"/>
+				<xs:element name="First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Audit_Modified_Dt" type="xs:dateTime" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

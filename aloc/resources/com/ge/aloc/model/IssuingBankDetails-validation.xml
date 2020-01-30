@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+		
+	<field name="bankName">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((issuingBankSelection!="New") || (bankName !=""))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.name", {'Issuing Bank :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="addressDtls.city">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((issuingBankSelection!="New") || (addressDtls.city !=""))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.city", {'Issuing Bank :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="addressDtls.country">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((issuingBankSelection!="New") || (addressDtls.country !=""))]]>
+      		</param>
+      		<message>
+      			${getText("error.required.requestDetails.country", {'Issuing Bank :'})}
+            </message>
+		</field-validator>
+	</field>
+	
+	<field name="creditLetterNo">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[(creditLetterNo == null || creditLetterNo == "") || (@com.ge.aloc.util.ALOCCommonHelper@isValidCreditNo(creditLetterNo))]]>
+			</param>
+			<message key="error.required.requestDetails.letterOfCredit" />
+		</field-validator>
+	</field>
+	
+	<field name="sendBackNotes">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requiresEdits == false) || (requiresEdits != true)) || (sendBackNotes != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.sendBackNotes" />
+		</field-validator>
+	</field>
+	
+</validators>

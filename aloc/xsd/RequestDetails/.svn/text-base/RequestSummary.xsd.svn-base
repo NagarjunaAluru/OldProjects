@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/RequestSummary.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/RequestSummary.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="RequestSummary">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Op_Code" type="xs:string" minOccurs="0"/>
+				<xs:element ref="Requestor" minOccurs="0"/>
+				<xs:element name="Linked_Transaction_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Model_Code" type="xs:string" minOccurs="0"/>
+	<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Requestor">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Sso_Id" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

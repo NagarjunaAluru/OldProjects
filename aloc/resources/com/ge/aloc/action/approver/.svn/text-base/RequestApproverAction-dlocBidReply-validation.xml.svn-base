@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+
+  	<field name="requestDetails.bidOrOptFlag">
+		<field-validator type="required">
+			<message key="error.required.requestDetails.bidOptionSelection" />
+		</field-validator>
+	</field>
+	
+	<field name="bankName">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((requestDetails.bidOrOptFlag != "Bid") || (bankName !=null && bankName.trim() !="" && bankSelection!=null && bankSelection.trim() !="") || ((bankName ==null || bankName.trim() =="") && bankSelection!=null && bankSelection.trim() !=""))]]>
+      		</param>
+			<message key="error.required.dlocBidReply.bankNameLookup"/>
+		</field-validator>
+	</field>
+	
+	<field name="bankCountryCd">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((requestDetails.bidOrOptFlag != "Bid") || (bankCountryCd !=null && bankCountryCd.trim() !="" && bankSelection!=null && bankSelection.trim() !="") || ((bankCountryCd ==null || bankCountryCd.trim() =="") && bankSelection!=null && bankSelection.trim() !=""))]]>
+      		</param>
+			<message key="error.required.requestDetails.bankCountry"/>
+		</field-validator>
+	</field>
+	
+	<field name="bankCity">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((requestDetails.bidOrOptFlag != "Bid") || (bankCity !=null && bankCity.trim() !="" && bankSelection!=null && bankSelection.trim() !="") || ((bankCity ==null || bankCity.trim() =="") && bankSelection!=null && bankSelection.trim() !=""))]]>
+      		</param>
+			<message key="error.required.requestDetails.bankCity"/>
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.confirmationFees.feeStructureId">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requestDetails.bidOrOptFlag != "Bid") ||  (requestDetails.confirmationFees.feeStructureId != null))]]>
+      	</param>
+      	<message key="error.required.requestDetails.feeStructure" />
+      	</field-validator>
+	</field> 
+	
+	<field name="requestDetails.confirmationFees.feeStructureValue">
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@validateFeeStructureValue(requestDetails.bidOrOptFlag,requestDetails.confirmationFees.feeStructureId,feeStructureValue)</param>
+      	<message key="error.required.requestDetails.feeStructureValue" />
+      	</field-validator>
+      	
+      	<field-validator type="fieldexpression">
+		<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@validateFeeStructureAmount(feeStructureValue,requestDetails.bidOrOptFlag)</param>
+      	<message key="error.required.requestDetails.feeStructureValueAmount" />
+      	</field-validator>
+	</field> 
+	<field name="requestDetails.indicativePricingCompletedDetails.pricingExpirationDateTime">
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">
+        	<![CDATA[((requestDetails.bidOrOptFlag != "Bid") || (requestDetails.indicativePricingCompletedDetails.pricingExpirationDateTime != null))]]>
+      	</param>
+      	<message key="error.required.requestDetails.bidExpirationDate" />
+      	</field-validator>
+      	
+      	<field-validator type="fieldexpression">
+			<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@validateBidExpirationDate(requestDetails.indicativePricingCompletedDetails.pricingExpirationDateTime,requestDetails.bidOrOptFlag)</param>
+			<message key="error.required.requestDetails.bgBidExpirationDateInvalid" />
+		</field-validator>
+	</field> 
+	<field name="bidHours">
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">
+        	<![CDATA[((requestDetails.bidOrOptFlag != "Bid") || (bidHours !=null && bidHours !="") )]]>
+      	</param>
+			<message key="error.required.requestDetails.bidExpirationHour" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requestDetails.bidOrOptFlag != "Bid") || ((bidHours > 0) && (bidHours <= 12)))]]>
+      	</param>
+			<message key="error.required.requestDetails.bgBidExpirationHourInvalid" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+		<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@validateBidExpirationTime(requestDetails.indicativePricingCompletedDetails.pricingExpirationDateTime,requestDetails.bidOrOptFlag,bidHours,bidMinutes,bidPeriod)</param>
+			<message key="error.required.requestDetails.bgBidExpirationTimeInvalid" />
+		</field-validator>
+	</field>
+	<field name="bidMinutes">
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">
+        	<![CDATA[((requestDetails.bidOrOptFlag != "Bid") || (bidMinutes !=null && bidMinutes !=""))]]>
+      	</param>
+			<message key="error.required.requestDetails.bidExpirationMinute" />
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requestDetails.bidOrOptFlag != "Bid") || ((bidMinutes !=null && bidMinutes !="") && bidMinutes >= 0 && bidMinutes < 60))]]>
+      	</param>
+			<message key="error.required.requestDetails.bgBidExpirationMinuteInvalid" />
+		</field-validator>
+	</field> 
+	
+	<field name="requestDetails.actionDetails.reasonForOptingOut">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requestDetails.bidOrOptFlag != "Optout") ||  (requestDetails.actionDetails.reasonForOptingOut != ""))]]>
+      	</param>
+			<message key="error.required.actionDetails.reasonForOptingOut" />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.confirmationFees.otherFees">
+		<field-validator type="fieldexpression">
+			<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(requestDetails.confirmationFees.otherFees)</param>
+			<message key="error.required.common.invalidValue" />
+		</field-validator>
+    </field>	
+		
+</validators>

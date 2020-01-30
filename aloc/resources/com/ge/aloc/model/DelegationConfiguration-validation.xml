@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+ <validators>
+	
+	<field name="delegationConfigs">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@delegationFieldsMandatory()</param>
+			<message key="error.required.siteDetails.allMandatory" />
+		</field-validator>
+		
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@instrAmtPostive()</param>
+			<message key="error.required.siteDetails.amountPositive" />
+		</field-validator>
+		
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@instrAmtInvalid()</param>
+			<message key="error.required.siteDetails.amountInvalid" />
+		</field-validator>
+		
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@delegBaseEndAmtValidation()</param>
+			<message key="error.required.siteDetails.instrStartEndAmt" />
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+			<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@delegInstrRangeDiff()</param>
+			<message key="error.required.siteDetails.instrRangeDifferent" />
+		</field-validator>
+	</field>
+</validators> 

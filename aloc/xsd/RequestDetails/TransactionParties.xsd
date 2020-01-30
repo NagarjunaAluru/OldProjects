@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/TransactionParties.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/ALOCCommon.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ALOC/RequestDetails/AddressDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/TransactionParties.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/ALOCCommon.xsd" schemaLocation="ALOCCommon.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/AddressDetails.xsd" schemaLocation="AddressDetails.xsd"/>
+	<xs:element name="TransactionParties">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Op_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instrument_Purpose_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instrument_Purpose" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instrument_Purpose_Other" type="xs:string" minOccurs="0"/>
+				<xs:element name="Site_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Tri_Party_Request_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Private_Label_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element ref="TpApplicantDetails" minOccurs="0"/>
+				<xs:element name="Tri_Party_Applicant" type="ns1:AddressDtlsType" minOccurs="0"/>
+				<xs:element ref="Customer" minOccurs="0"/>
+				<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+				<xs:element name="Requires_Edits" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Send_Back_Notes" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TpBuContactPerson">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Sso_Id" type="xs:int" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TpApplicantDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Le_Gold_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Le_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Mdm_Gold_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element ref="TpBuContactPerson" minOccurs="0"/>
+				<xs:element ref="ns1:AddressDtls" minOccurs="0"/>
+				<xs:element ref="ns0:Ref_Details" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Bu_Unit" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bu_Unit_Code" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Acc_Dist_No" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Acc_Dist" type="xs:string" minOccurs="0"/>
+				<xs:element name="IBS_Syst_Msg" type="xs:string" minOccurs="0"/>
+				<xs:element name="IBS_Msg_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="IBS_User_Sso" type="xs:string" minOccurs="0"/>
+				<xs:element name="IBS_First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="IBS_Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="IBS_Phone_No" type="xs:string" minOccurs="0"/>
+				<xs:element name="Cso_No" type="xs:string" minOccurs="0"/>
+				<xs:element name="Certify_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Cso_Approval_Dt" type="xs:date" minOccurs="0"/>
+				<xs:element name="Requires_Edits" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Send_Back_Notes" type="xs:string" minOccurs="0"/>
+				<xs:element name="Change_Flag" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Customer">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ns1:AddressDtls" minOccurs="0"/>
+				<xs:element ref="ns0:Ref_Details" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Change_Flag" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

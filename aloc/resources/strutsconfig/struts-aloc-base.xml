@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="struts-aloc-base" extends="struts-default">
+		<interceptors>
+			<interceptor name="serviceClientAwareInterceptor" class="serviceClientAwareInterceptor" />
+			<interceptor name="requestDetailsBOAwareInterceptor" class="requestDetailsBOAwareInterceptor" />
+			
+			<interceptor-stack name="aloc-default-interceptors">
+				<interceptor-ref name="serviceClientAwareInterceptor" />
+				<interceptor-ref name="requestDetailsBOAwareInterceptor" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+		
+		<default-interceptor-ref name="aloc-default-interceptors" />
+		
+		<global-results>
+			<result name="error">/jsp/common/error.jsp</result>
+		</global-results>
+	</package>
+	
+	<package name="struts-aloc-json-base" extends="json-default">
+		<interceptors>
+			<interceptor name="serviceClientAwareInterceptor" class="serviceClientAwareInterceptor" />
+			<interceptor name="requestDetailsBOAwareInterceptor" class="requestDetailsBOAwareInterceptor" />
+			
+			<interceptor-stack name="aloc-json-default-interceptors">
+				<interceptor-ref name="serviceClientAwareInterceptor" />
+				<interceptor-ref name="requestDetailsBOAwareInterceptor" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+		
+		<default-interceptor-ref name="aloc-json-default-interceptors" />
+	</package>
+</struts>

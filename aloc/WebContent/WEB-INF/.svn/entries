@@ -1,0 +1,58 @@
+8
+
+dir
+56
+https://openge.ge.com/svn/treasury_aloc/trunk/source/web/sunone_codebase/aloc/WebContent/WEB-INF
+https://openge.ge.com/svn/treasury_aloc
+
+
+
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+720fd033-fee8-473a-95ce-a3690b27228b
+
+config
+dir
+
+jboss-deployment-structure.xml
+file
+
+
+
+
+2014-12-17T16:04:11.700569Z
+b56a2bd617ea98f7ae0db7316d5a8db4
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+web.xml
+file
+
+
+
+
+2014-12-17T16:04:11.707569Z
+7844f4b8f688a29c5a8d3f8652cc3ba4
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+tags
+dir
+

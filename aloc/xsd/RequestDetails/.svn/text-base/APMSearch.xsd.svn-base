@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/APM/APMSearch.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/APM/APMSearch.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="APMSearch">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Site_Id" type="xs:integer" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="ALOC_Record_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="ALOC_Record_Number" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Site_Prefix" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank_Reference_Number" type="xs:string" minOccurs="0"/>
+				<xs:element name="Applicant" type="xs:string" minOccurs="0"/>
+				<xs:element name="Beneficiary" type="xs:string" minOccurs="0"/>
+				<xs:element name="BUC" type="xs:string" minOccurs="0"/>
+				<xs:element name="ADN" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instrument_Amount" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Instrument_Amount_From" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Instrument_Amount_To" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Payment_Amount" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Payment_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Payment_Date_From" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Payment_Date_To" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Instrument_Currency" type="xs:string" minOccurs="0"/>
+				<xs:element name="Foreign_Expiry_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Payment_Currency" type="xs:string" minOccurs="0"/>
+				<xs:element name="Payment_Bank" type="xs:string" minOccurs="0"/>
+				<xs:element name="Country_Of_Issuence" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Payment_Currencies" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

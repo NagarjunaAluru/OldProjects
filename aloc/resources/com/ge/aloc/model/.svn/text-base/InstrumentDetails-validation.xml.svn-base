@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<field name="issuanceCountryId">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>
+      			${getText("error.required.requestDetails.issuanceCountry", {'Instrument Details :'})}
+            </message>
+		</field-validator>
+	</field>
+	<field name="instrumentCurrencyId">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required.requestDetails.instrumentCurrencyId" />
+		</field-validator>
+	</field>
+	<field name="instrumentAmt">
+		<field-validator type="required" short-circuit="true">
+			<message key="error.required.requestDetails.instrumentAmt" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(instrumentAmt)</param>
+			<message key="error.required.requestDetails.instrumentAmtnotValid" />
+		</field-validator>
+	</field>
+	<field name="maxPossibleExpo">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[@com.ge.aloc.util.ALOCCommonHelper@isBankGuaranteeOrSBLCRequest(requestDetails.instrumentTypeId) != true || (requestDetails.transactionParties.instrumentPurposeId !=12 && requestDetails.transactionParties.instrumentPurposeId !=14) || (requestDetails.instrumentDetails.maxPossibleExpo != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.maxPossibleExpo" />
+		</field-validator>	
+	</field> 
+	 <field name="issueDt">
+		<field-validator type="required" short-circuit="true">
+			<message key="error.required.requestDetails.issueDt" />
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+			<param name="expression">issueDt.compareTo(@com.ge.aloc.util.ALOCCommonHelper@getCurrentDateWithOutTime()) != -1</param>
+			<message key="error.required.requestDetails.issueDateNotvalid" />
+		</field-validator>
+	</field>
+
+	 
+	<field name="expiryDt">
+		<field-validator type="required" short-circuit="true">
+			<message key="error.required.requestDetails.expiryDt" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[((expiryDt.compareTo(@com.ge.aloc.util.ALOCCommonHelper@getCurrentDateWithOutTime()) != -1) && (expiryDt.compareTo(issueDt) != -1))]]>
+			</param>
+			<message key="error.required.requestDetails.expiryDtNotvalid" />
+		</field-validator>
+		
+	</field>
+
+	<field name="econoExpiryDt">
+			<field-validator type="fieldexpression" short-circuit="true">
+				<param name="expression">
+				<![CDATA[@com.ge.aloc.util.ALOCCommonHelper@isEconoExpiryDtMandatory(expiryDt) != true || (econoExpiryDt!= null)]]>
+				</param>
+				<message key="error.required.requestDetails.econoExpiryDt" />
+			</field-validator>
+	       <field-validator type="fieldexpression">
+			<param name="expression">
+			<![CDATA[@com.ge.aloc.util.ALOCCommonHelper@isEconoExpiryDtMandatory(expiryDt) != true || (econoExpiryDt == null) || ((econoExpiryDt.compareTo(@com.ge.aloc.util.ALOCCommonHelper@getCurrentDateWithOutTime()) != -1) && (econoExpiryDt.compareTo(expiryDt) != 1))]]>
+			</param>
+			<message key="error.required.requestDetails.econoExpiryDtNotvalid" />
+		</field-validator>
+		
+	</field>
+	
+	<field name="autoExtendClause.AutoExtendFlag">
+		<field-validator type="required">
+			<message key="error.required.requestDetails.autoExtendFlag" />
+		</field-validator>
+	</field>
+	<field name="autoExtendClause.nonRenewalPeriod">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((autoExtendClause.autoExtendFlag == "false") || (autoExtendClause.autoExtendFlag != "true")) || (autoExtendClause.nonRenewalPeriod != null)]]>
+      	</param>
+			<message key="error.required.requestDetails.Nonrenewalnoticeperiod" />
+		</field-validator>
+	</field>
+	<field name="autoExtendClause.otherTimeFrame">
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">
+        	<![CDATA[((autoExtendClause.autoExtendFlag == "false") || (autoExtendClause.autoExtendFlag != "true") || (autoExtendClause.nonRenewalPeriod==null) || (autoExtendClause.nonRenewalPeriod!="other")) || (autoExtendClause.otherTimeFrame !=null && autoExtendClause.otherTimeFrame !="")]]>
+      	</param>
+			<message key="error.required.requestDetails.otherTimeFrame" />
+		</field-validator>
+		<field-validator type="regex">
+    		<param name="expression">
+    			<![CDATA[^[0-9]+$]]>
+    		</param>
+         	<message key="error.required.requestDetails.validotherTimeFrame"/>
+ 		</field-validator>
+	</field>
+	
+	<field name="initialExpiryDt">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+			<![CDATA[((autoExtendClause.autoExtendFlag == "false") || (autoExtendClause.autoExtendFlag != "true")) || (initialExpiryDt !=null)]]>
+			</param>
+			<message key="error.required.requestDetails.initialExpiryDt" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+			<![CDATA[((autoExtendClause.autoExtendFlag == "false") || (autoExtendClause.autoExtendFlag != "true")) || ((initialExpiryDt.compareTo(@com.ge.aloc.util.ALOCCommonHelper@getCurrentDateWithOutTime()) != -1))]]>
+			</param>
+			<message key="error.required.requestDetails.initialExpiryDtNotvalid" />
+		</field-validator>
+		
+	</field>
+	
+	<field name="sendBackNotes">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requiresEdits == false) || (requiresEdits != true)) || (sendBackNotes != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.sendBackNotes" />
+		</field-validator>
+	</field>
+	<field name="autoIncDecFlag">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required.requestDetails.autoIncDec" />
+		</field-validator>
+	</field>
+	<field name="autoIncDecs">
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@autoIncreaseDecreaseMandatory()</param>
+			<message key="error.required.requestDetails.allMandatory" />
+		</field-validator>
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@autoIncreaseDecreaseDateValidation()</param>
+			<message key="error.required.requestDetails.autoIncDtvalid" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+		<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@autoIncDecDateCompareToTodayDate()</param>
+			<message key="error.required.requestDetails.autoIncDtTodayvalid" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+		<param name="expression">@com.ge.aloc.util.ALOCCommonHelper@autoIncDecAmountValidation()</param>
+			<message key="error.required.requestDetails.autoIncAmountvalid" />
+		</field-validator>
+	</field>
+	<field name="USDEquivalent">
+		<field-validator type="required">
+			<message key="error.required.requestDetails.approximateUsdAmt" />
+		</field-validator>
+	</field>
+
+</validators>

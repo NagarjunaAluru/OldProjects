@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/admin
+END
+AmendmentWorkflowMgmtAction-saveAmendmentWorkflowMgmt-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 172
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/admin/AmendmentWorkflowMgmtAction-saveAmendmentWorkflowMgmt-validation.xml
+END
+SuretyNameMgmtAction-updateSurety-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/admin/SuretyNameMgmtAction-updateSurety-validation.xml
+END
+RecordsRetentionMgmtAction-sendRectention-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/admin/RecordsRetentionMgmtAction-sendRectention-validation.xml
+END
+BlockBUCAction-searchBUC-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/admin/BlockBUCAction-searchBUC-validation.xml
+END
+RecordsRetentionMgmtAction-saveRecordRetention-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 165
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/admin/RecordsRetentionMgmtAction-saveRecordRetention-validation.xml
+END
+StandardFormatMgmtAction-standardFormatManagement-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 168
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/admin/StandardFormatMgmtAction-standardFormatManagement-validation.xml
+END
+ChangeRequestOwnershipAction-changeSelectedRequestsOwnership-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 179
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/admin/ChangeRequestOwnershipAction-changeSelectedRequestsOwnership-validation.xml
+END
+UserAnnouncementMgmtAction-saveUserAnnouncement-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/admin/UserAnnouncementMgmtAction-saveUserAnnouncement-validation.xml
+END
+PoleNameMgmtAction-updatePole-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/admin/PoleNameMgmtAction-updatePole-validation.xml
+END
+BlockBUCAction-blockBUC-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/admin/BlockBUCAction-blockBUC-validation.xml
+END
+RecordsRetentionMgmtAction-submitRecordRetention-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/admin/RecordsRetentionMgmtAction-submitRecordRetention-validation.xml
+END
+ReimbursementAgreementAction-createOrUpdateAgreement-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 171
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/admin/ReimbursementAgreementAction-createOrUpdateAgreement-validation.xml
+END
+ReimbursementAgreementAction-createOrUpdateReimbursementAgreement-validation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 184
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/resources/com/ge/aloc/action/admin/ReimbursementAgreementAction-createOrUpdateReimbursementAgreement-validation.xml
+END

@@ -1,0 +1,82 @@
+8
+
+dir
+56
+https://openge.ge.com/svn/treasury_aloc/trunk/source/web/sunone_codebase/aloc/src/com/ge/aloc/ext
+https://openge.ge.com/svn/treasury_aloc
+
+
+
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+720fd033-fee8-473a-95ce-a3690b27228b
+
+ExternalURLTranslator.java
+file
+
+
+
+
+2014-12-17T16:03:54.324569Z
+d44fe6ed7a872a4aaa57fbcc9f3c5393
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+auth
+dir
+
+dao
+dir
+
+OTPMailSender.java
+file
+
+
+
+
+2014-12-17T16:03:54.331569Z
+89313fd47c16700bc4f36dcd209c7a07
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+eas
+dir
+
+filters
+dir
+
+manager
+dir
+
+action
+dir
+
+UserOperationException.java
+file
+
+
+
+
+2014-12-17T16:03:54.341569Z
+69c8b6bd87a98ad624acd7c35dd4a1c2
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+

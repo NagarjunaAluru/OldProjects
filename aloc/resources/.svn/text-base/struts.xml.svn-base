@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.multipart.maxSize" value="157286400" />	
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.custom.i18n.resources" value="i18n/ApplicationResources,i18n/ALOCRequest,i18n/SiteAdmin,i18n/ExternalUserManagement,i18n/ext,i18n/RequestDetails-validation,i18n/DashboardResources,i18n/SiteAdmin-validation,i18n/LinkTransaction,i18n/TreasuryAdminResources,i18n/TreasuryAdmin-validation,i18n/ext-validation,i18n/ALOCReports" />		
+	<constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+	<constant name="struts.configuration.xml.reload" value="true" />
+	<constant name="struts.i18n.reload" value="true" />
+	
+	<include file="strutsconfig/struts-aloc-base.xml" />
+	<include file="strutsconfig/struts-aloc-int-root.xml" />
+	<include file="strutsconfig/struts-aloc-requestor.xml" />
+	<include file="strutsconfig/struts-aloc-siteadmin.xml" />
+	<include file="strutsconfig/struts-aloc-treasuryadmin.xml" />
+	<include file="strutsconfig/struts-aloc-dashboard.xml" />
+	<include file="strutsconfig/struts-aloc-bundle.xml" />
+	<include file="strutsconfig/struts-aloc-approver.xml" />
+	<include file="strutsconfig/struts-aloc-admin.xml" />
+	<include file="strutsconfig/struts-aloc-reports.xml" />
+	<include file="strutsconfig/struts-aloc-apm.xml" />
+	<include file="strutsconfig/struts-aloc-ext.xml" />
+</struts>

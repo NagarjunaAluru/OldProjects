@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/Admin/BookMarkMasterCollection.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/Admin/SuretyMaster.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ALOC/Admin/BookMarkMaster.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/Admin/BookMarkMasterCollection.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/Admin/SuretyMaster.xsd" schemaLocation="SuretyMaster.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/Admin/BookMarkMaster.xsd" schemaLocation="BookMarkMaster.xsd"/>
+	<xs:element name="BookMarkMaster_Collection">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ns1:BookMark_Master" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

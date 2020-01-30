@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="struts-aloc-ext-usercheck" extends="struts-default">
+		<interceptors>
+			<interceptor name="userStatusCheckInterceptor" class="userStatusCheckInterceptor" />
+			<interceptor name="serviceClientAwareInterceptor" class="serviceClientAwareInterceptor" />
+			<interceptor name="requestDetailsBOAwareInterceptor" class="requestDetailsBOAwareInterceptor" />
+			
+			<interceptor-stack name="aloc-ext-usercheck-interceptors">
+				<interceptor-ref name="userStatusCheckInterceptor" />
+				<interceptor-ref name="serviceClientAwareInterceptor" />
+				<interceptor-ref name="requestDetailsBOAwareInterceptor" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+		
+		<default-interceptor-ref name="aloc-ext-usercheck-interceptors" />
+		
+		<global-results>
+			<result name="userRegistrationPending">/jsp/ext/regPending.jsp</result>
+		</global-results>
+	</package>
+	
+	<package name="struts-aloc-ext-json-base" extends="json-default">
+		<interceptors>
+			<interceptor name="userStatusCheckInterceptor" class="userStatusCheckInterceptor" />
+			<interceptor name="serviceClientAwareInterceptor" class="serviceClientAwareInterceptor" />
+			<interceptor name="requestDetailsBOAwareInterceptor" class="requestDetailsBOAwareInterceptor" />
+			
+			<interceptor-stack name="aloc-json-default-interceptors">
+				<interceptor-ref name="userStatusCheckInterceptor" />
+				<interceptor-ref name="serviceClientAwareInterceptor" />
+				<interceptor-ref name="requestDetailsBOAwareInterceptor" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+		
+		<default-interceptor-ref name="aloc-json-default-interceptors" />
+	</package>
+	
+	<package name="externalPublic" extends="struts-default" namespace="/ext/public">
+	
+		<!-- Mapping to display login page -->
+		<action name="login" class="loginAction" method="login">
+           	<result name="success">/jsp/ext/login.jsp</result>			
+		</action>
+		
+		<!-- Mapping to Invalid UserId and Password -->
+		<action name="invalid*" class="loginAction" method="invalid{1}">
+           	<result name="success">/jsp/ext/login.jsp</result>			
+		</action>
+		
+		<!-- Mapping to User Locked status -->
+		<action name="userLocked" class="loginAction" method="userLocked">
+           	<result name="success">/jsp/ext/login.jsp</result>			
+		</action>
+		
+		<!--  Mapping for logout -->
+		<action name="logout" class="com.ge.aloc.ext.action.LogoutAction">
+			<result name="success" type="redirectAction">
+                <param name="actionName">login</param>
+                <param name="namespace">/ext/public</param>
+            </result>
+		</action>
+		
+		<!-- Mapping to displays signup page -->
+		<action name="signupPage">
+			<result>/jsp/ext/signUp.jsp</result>
+		</action>
+		
+		<!-- Mapping to create user when user clicks on register button -->
+		<action name="signup" class="userOperationsAction" method="signup">
+			<result name="input">/jsp/ext/signUp.jsp</result>
+           	<result name="success">/jsp/ext/login.jsp</result>			
+		</action>
+		
+		<!-- Mapping to display forgotUserId page -->
+		<action name="forgotUserIdOrPasswordPage">
+			<result>/jsp/ext/forgot.jsp</result>
+		</action>
+		
+		<!-- Mapping to process forgotUserId request -->
+		<action name="forgotUserIdOrPassword" class="userOperationsAction" method="forgotUserIdOrPassword">
+			<result name="input">/jsp/ext/forgot.jsp</result>
+           	<result name="success">/jsp/ext/resetPassword.jsp</result>			
+		</action>
+		
+		<!-- Mapping to display resetPassword -->
+		<action name="resetPasswordPage">
+			<result>/jsp/ext/resetPassword.jsp</result>
+		</action>
+		
+		<!-- Mapping to process password reset -->
+		<action name="resetPassword" class="userOperationsAction" method="resetPassword">
+			<result name="input">/jsp/ext/resetPassword.jsp</result>
+			<result name="success" type="chain">
+                <param name="actionName">login</param>
+                <param name="namespace">/ext/public</param>
+            </result>
+		</action>
+	</package>
+	
+	
+	
+	<package name="external" extends="struts-aloc-ext-usercheck" namespace="/ext">
+		<action name="home" class="homePageControllerAction">
+			<result name="bankHomePage">/jsp/ext/common/bankLandingPage.jsp</result>
+			<result name="brokerHomePage">/jsp/ext/common/brokerLandingPage.jsp</result>
+			<result name="emailRequest" type="chain">
+				<param name="actionName">openRequest</param>
+				<param name="requestId">${requestId}</param>
+				<param name="stage">${stage}</param>
+				<param name="stageName">${stageName}</param>
+				<param name="instrumentId">${instrumentId}</param>
+				<param name="queueName">${queueName}</param>
+				<param name="procedureName">${procedureName}</param>
+				<param name="wfid">${wfid}</param>
+				<param name="amendmentId">${amendmentId}</param>
+				<param name="bankBidId">${bankBidId}</param>
+				<param name="bidFlag">${bidFlag}</param>
+				<param name="bankName">${bankName}</param>
+			</result>
+			<result name="emailTaxonomyRequest" type="chain">
+				<param name="actionName">openRequest</param>
+				<param name="requestId">${requestId}</param>
+				<param name="stage">${stage}</param>
+				<param name="stageName">${stageName}</param>
+				<param name="instrumentId">${instrumentId}</param>
+				<param name="queueName">${queueName}</param>
+				<param name="procedureName">${procedureName}</param>
+				<param name="wfid">${wfid}</param>
+				<param name="amendmentId">${amendmentId}</param>
+				<param name="dashboardViewType">${dashboardViewType}</param>
+			</result>
+		</action>
+		
+		<action name="downloadAttachment" class="userAnnouncementMgmtAction" method="downloadAttachment">
+		 <result name="download" type="stream" >
+			<param name="inputName">inputStream</param>
+	    	<param name="bufferSize">1024</param>
+		 </result>
+		</action>
+		<action name="validateCloseTransaction" class="validateCloseTransactionAction"/>
+		<action name="help" class="homePageGenericAction" method="getHelpPage">
+				<result name="success">/jsp/ext/common/help.jsp</result>
+		</action>	
+		
+		<action name="ActionLogDashboardRefData" class="dashboardRefDataAction" method="getActionLog" >
+			<result name="actionLogSuccess">/jsp/dashboard/common/actionLogPopup.jsp</result>
+		</action>
+		<action name="RequestContactInfoDashboardRefData" class="dashboardRefDataAction" method="getRequestContactInfo" >
+			<result name="BankBidTab">/jsp/ext/dashboard/common/BidBankDashboardExpand.jsp</result>
+			<result name="BankPendingIssTab">/jsp/ext/dashboard/common/BankPendingIssuanceExpand.jsp</result>
+			<result name="BankHistoricTransTab">/jsp/ext/dashboard/common/BankHistoricalTransactionsExpand.jsp</result>
+		</action>
+		<action name="openRequest" class="openRequestAction">
+			<result name="treasuryBidReply" type="chain">
+				<param name="actionName">treasuryBidReply</param>
+				<param name="namespace">/ext/approver</param>
+			</result>
+			<result name="Taxonomy" type="chain">
+				<param name="actionName">taxonomy</param>
+				<param name="namespace">/ext/approver</param>
+			</result>
+			<result name="issuer" type="chain">
+				<param name="actionName">openIssuer</param>
+				<param name="namespace">/ext/approver</param>
+			</result>
+			<result name="closure" type="chain">
+				<param name="actionName">openClosure</param>
+				<param name="namespace">/ext/approver</param>
+			</result>			
+		</action> 	
+		
+		<action name="*Lookup" class="lookupAction" method="get{1}">
+			<result name="bankDetailsLookupPage">/jsp/ext/request/common/bankDetailsLookup.jsp</result>
+			<result name="businessContactPersonLookupPage">/jsp/ext/request/common/businessContactPersonLookup.jsp</result>
+			<result name="userDetailsLookupPage">/jsp/ext/request/common/userDetailsLookup.jsp</result>
+		</action>
+		
+		<action name="addAttachment">
+			<result name="success">/jsp/ext/request/common/add-attachment.jsp</result>
+		</action>
+		
+		<action name="taxonomyPDFReport" class="approverAction" method="downloadPDFFile"/>
+		<action name="downloadResourcePDF" class="homePageGenericAction" method="downloadGlossaryUserManualPDF"/>
+		
+		<action name="*Taxonomy" class="approverAction" method="get{1}">
+			<result name="BankGuaranteeRequestPage">/jsp/ext/request/taxonomy/bgAndLocTaxonomy.jsp</result>
+			<result name="LOCRequestPage">/jsp/ext/request/taxonomy/bgAndLocTaxonomy.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/ext/request/taxonomy/dLocTaxonomy.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/ext/request/taxonomy/suretBondTaxonomy.jsp</result>
+			<result name="AmendmentRequestPage">/jsp/ext/request/taxonomy/amendmentTaxonomy.jsp</result>
+			<result name="RiderRequestPage">/jsp/ext/request/taxonomy/RiderTaxonomy.jsp</result>
+			<result name="AutoAmendmentRequestPage">/jsp/ext/request/taxonomy/autoGeneratedAmendment.jsp</result>
+		</action>
+		
+		<action name="cancelTaxonomy" class="approverAction" method="cancel">
+			<result name="success" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/ext/dashboard</param>
+            </result>
+		</action>
+		
+		<action name="contactUs" class="homePageGenericAction" method="getContactUs">
+			<result name="success">/jsp/ext/common/contactUs.jsp</result>
+		</action>
+		
+		<action name="help" class="homePageGenericAction" method="getHelpPage">
+			<result name="success">/jsp/ext/common/help.jsp</result>
+		</action>
+		
+		<action name="downloadHelpPDF" class="homePageGenericAction" method="downloadHelpPDF">
+			<result name="input">/jsp/ext/common/help.jsp</result>
+		</action>
+	</package>
+	
+	<package name="externalApprover" extends="struts-aloc-ext-usercheck" namespace="/ext/approver">
+		<action name="treasuryBidReply" class="approverAction" method="openBidReplyRequest">
+			<result name="BankGuaranteeRequestPage">/jsp/ext/request/bgAndLocBidReply.jsp</result>
+			<result name="LOCRequestPage">/jsp/ext/request/bgAndLocBidReply.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/ext/request/suretyBondBidReply.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/ext/request/dLocBidReply.jsp</result> 
+		</action>
+		
+		<action name="openIssuer" class="approverAction" method="openRequest">
+			<result name="BankGuaranteeRequestPage">/jsp/ext/request/issuer.jsp</result>
+			<result name="LOCRequestPage">/jsp/ext/request/issuer.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/ext/request/issuer.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/ext/request/issuer.jsp</result>
+			<result name="AmendmentRequestPage">/jsp/ext/request/issuer.jsp</result>
+			<result name="AutoAmendmentRequestPage">/jsp/ext/request/issuer.jsp</result>
+			<result name="RiderRequestPage">/jsp/ext/request/issuer.jsp</result>
+		</action>
+		
+		<action name="openClosure" class="approverAction" method="openRequest">
+			<result name="BankGuaranteeRequestPage">/jsp/ext/request/bankAndSuretyClosureInstrument.jsp</result>
+			<result name="LOCRequestPage">/jsp/ext/request/bankAndSuretyClosureInstrument.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/ext/request/bankAndSuretyClosureInstrument.jsp</result>
+			<result name="AmendmentRequestPage">/jsp/ext/request/bankAndSuretyClosureInstrument.jsp</result>
+			<result name="RiderRequestPage">/jsp/ext/request/bankAndSuretyClosureInstrument.jsp</result>
+		</action>
+		
+		<action name="taxonomy" class="approverAction" method="openRequest">
+			<result name="BankGuaranteeRequestPage">/jsp/ext/request/taxonomy/bgAndLocTaxonomy.jsp</result>
+			<result name="LOCRequestPage">/jsp/ext/request/taxonomy/bgAndLocTaxonomy.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/ext/request/taxonomy/dLocTaxonomy.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/ext/request/taxonomy/suretBondTaxonomy.jsp</result>
+			<result name="AmendmentRequestPage">/jsp/ext/request/taxonomy/amendmentTaxonomy.jsp</result>
+			<result name="RiderRequestPage">/jsp/ext/request/taxonomy/RiderTaxonomy.jsp</result>
+			<result name="AutoAmendmentRequestPage">/jsp/ext/request/taxonomy/autoGeneratedAmendment.jsp</result>
+		</action>
+		
+		<action name="bidReply" class="approverAction" method="submit">
+			<result name="input">/jsp/ext/request/bgAndLocBidReply.jsp</result>
+			<result name="BankGuaranteeRequestPage">/jsp/ext/request/bgAndLocBidReply.jsp</result>
+			<result name="LOCRequestPage">/jsp/ext/request/bgAndLocBidReply.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/ext/request/suretyBondBidReply.jsp</result>
+			<result name="DocumentLOCRequestPage">jsp/ext/request/dLocBidReply.jsp</result>
+			<result name="success" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/ext/dashboard</param>
+            </result>
+		</action>
+		
+		<action name="sbBidReply" class="approverAction" method="submit">
+			<result name="input">/jsp/ext/request/suretyBondBidReply.jsp</result>
+			<result name="BankGuaranteeRequestPage">/jsp/ext/request/bgAndLocBidReply.jsp</result>
+			<result name="LOCRequestPage">/jsp/ext/request/bgAndLocBidReply.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/ext/request/suretyBondBidReply.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/ext/request/dLocBidReply.jsp</result>
+			<result name="success" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/ext/dashboard</param>
+            </result>
+		</action>
+		
+		<action name="dlocBidReply" class="approverAction" method="submit">
+			<result name="input">/jsp/ext/request/dLocBidReply.jsp</result>
+			<result name="BankGuaranteeRequestPage">/jsp/ext/request/bgAndLocBidReply.jsp</result>
+			<result name="LOCRequestPage">/jsp/ext/request/bgAndLocBidReply.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/ext/request/suretyBondBidReply.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/ext/request/dLocBidReply.jsp</result>
+			<result name="success" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/ext/dashboard</param>
+            </result>
+		</action>
+		
+		<action name="issuerSubmit" class="approverAction" method="submit">
+		    <result name="BankGuaranteeRequestPage">/jsp/ext/request/issuer.jsp</result>
+			<result name="LOCRequestPage">/jsp/ext/request/issuer.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/ext/request/issuer.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/ext/request/issuer.jsp</result>
+			<result name="AmendmentRequestPage">/jsp/ext/request/issuer.jsp</result>
+			<result name="AutoAmendmentRequestPage">/jsp/ext/request/issuer.jsp</result>
+			<result name="RiderRequestPage">/jsp/ext/request/issuer.jsp</result>
+			<result name="success" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/ext/dashboard</param>
+            </result>
+		</action>
+		
+		<action name="issuerSave" class="approverAction" method="issuanceSave">
+		    <result name="BankGuaranteeRequestPage">/jsp/ext/request/taxonomy/bgAndLocTaxonomy.jsp</result>
+			<result name="LOCRequestPage">/jsp/ext/request/taxonomy/bgAndLocTaxonomy.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/ext/request/taxonomy/dLocTaxonomy.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/ext/request/taxonomy/suretBondTaxonomy.jsp</result>
+			<result name="AmendmentRequestPage">/jsp/ext/request/taxonomy/amendmentTaxonomy.jsp</result>
+			<result name="RiderRequestPage">/jsp/ext/request/taxonomy/RiderTaxonomy.jsp</result>
+			<result name="AutoAmendmentRequestPage">/jsp/ext/request/taxonomy/autoGeneratedAmendment.jsp</result>
+			
+			<result name="input">/jsp/ext/request/taxonomy/bgAndLocTaxonomy.jsp</result>
+			<result name="dLocInput">/jsp/ext/request/taxonomy/dLocTaxonomy.jsp</result>
+			<result name="sbInput">/jsp/ext/request/taxonomy/suretBondTaxonomy.jsp</result>
+			<result name="riderInput">/jsp/ext/request/taxonomy/RiderTaxonomy.jsp</result>
+			<result name="amendmentInput">/jsp/ext/request/taxonomy/amendmentTaxonomy.jsp</result>
+			<result name="autoAmendmentInput">/jsp/ext/request/taxonomy/autoGeneratedAmendment.jsp</result>
+			
+			<result name="success" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/ext/dashboard</param>
+            </result>
+		</action>
+		
+		<action name="closureSubmit" class="approverAction" method="submit">
+		    <result name="BankGuaranteeRequestPage">/jsp/ext/request/bankAndSuretyClosureInstrument.jsp</result>
+		    <result name="LOCRequestPage">/jsp/ext/request/bankAndSuretyClosureInstrument.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/ext/request/bankAndSuretyClosureInstrument.jsp</result>
+			<result name="AmendmentRequestPage">/jsp/ext/request/bankAndSuretyClosureInstrument.jsp</result>
+			<result name="RiderRequestPage">/jsp/ext/request/bankAndSuretyClosureInstrument.jsp</result>
+			<result name="success" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/ext/dashboard</param>
+            </result>
+		</action>
+		
+		<action name="downloadRequestPDF" class="approverAction" method="downloadPDFFile">
+		    <result name="BankGuaranteeRequestPage">/jsp/ext/request/issuer.jsp</result>
+			<result name="LOCRequestPage">/jsp/ext/request/issuer.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/ext/request/issuer.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/ext/request/issuer.jsp</result>
+			<result name="AmendmentRequestPage">/jsp/ext/request/issuer.jsp</result>
+			<result name="RiderRequestPage">/jsp/ext/request/issuer.jsp</result>
+		</action>
+		
+		<action name="taxonomyDownloadRequestPDF" class="approverAction" method="downloadPDFFile">
+			<result name="BankGuaranteeRequestPage">/jsp/ext/request/taxonomy/bgAndLocTaxonomy.jsp</result>
+			<result name="LOCRequestPage">/jsp/ext/request/taxonomy/bgAndLocTaxonomy.jsp</result>
+			<result name="DocumentLOCRequestPage">/jsp/ext/request/taxonomy/dLocTaxonomy.jsp</result>
+			<result name="SuretyBondRequestPage">/jsp/ext/request/taxonomy/suretBondTaxonomy.jsp</result>
+			<result name="AmendmentRequestPage">/jsp/ext/requestor/taxonomy/amendmentTaxonomy.jsp</result>
+			<result name="RiderRequestPage">/jsp/ext/requestor/taxonomy/RiderTaxonomy.jsp</result>
+		</action>
+		
+		<action name="cancel" class="approverAction" method="cancel">
+			<result name="success" type="redirectAction">
+                <param name="actionName">displayDashboard</param>
+                <param name="namespace">/ext/dashboard</param>
+            </result>
+		</action>
+		<action name="getFullAuditAndActionLog" class="approverAction" method="getFullAuditAndActionLog">
+		    <result name="audit">/jsp/ext/request/common/FullAuditLog.jsp</result>
+		    <result name="action">/jsp/ext/request/common/FullTransactionHistoryLog.jsp</result>
+		</action>
+		
+		<action name="auditandActionSearch" class="auditSearchAction" method="auditandActionSearch">
+			 <result name="audit">/jsp/ext/request/common/FullAuditLog.jsp</result>
+		     <result name="action">/jsp/ext/request/common/FullTransactionHistoryLog.jsp</result>
+		</action>
+		
+	</package>
+	
+	<package name="externalDashboards" extends="struts-aloc-ext-usercheck" namespace="/ext/dashboard">
+	
+		<action name="displayDashboard" class="commonDashboardAction" method="display">
+			<result name="success">/jsp/ext/dashboard/externalDashboard.jsp</result>
+		</action>
+		
+		<action name="displayBankBidProcessDashboard" class="commonDashboardAction" method="display">
+			<result name="success">/jsp/ext/dashboard/externalDashboard.jsp</result>
+			<param name="dashboardViewType">BANKBIDPROCESS</param>
+		</action>
+		
+		<action name="displayBankPendingIssDashboard" class="commonDashboardAction" method="display">
+			<result name="success">/jsp/ext/dashboard/externalDashboard.jsp</result>
+			<param name="dashboardViewType">TREASURYBANKPENDINGINCE</param>
+		</action>
+		
+		<action name="displayBankHistTransDashboard" class="commonDashboardAction" method="display">
+			<result name="success">/jsp/ext/dashboard/externalDashboard.jsp</result>
+			<param name="dashboardViewType">TREASURYBANKHIST</param>
+		</action>
+		
+		<action name="displayBankPendingAmendmentDashboard" class="commonSearchAction" method="displayPendingAmendmentRider">
+			<result name="success">/jsp/ext/dashboard/externalDashboard.jsp</result>
+			<param name="dashboardViewType">TREASURYBANKPENDINGINCE</param>
+		</action>
+		
+		<action name="displayBrokerBidProcessDashboard" class="commonDashboardAction" method="display">
+			<result name="success">/jsp/ext/dashboard/externalDashboard.jsp</result>
+			<param name="dashboardViewType">TREASURYBROKERBIDPROCESS</param>
+		</action>
+		
+		<action name="displayBrokerPendingIssDashboard" class="commonDashboardAction" method="display">
+			<result name="success">/jsp/ext/dashboard/externalDashboard.jsp</result>
+			<param name="dashboardViewType">TREASURYBROKERPENDINGINCE</param>
+		</action>
+		
+		<action name="displayBrokerHistTransDashboard" class="commonDashboardAction" method="display">
+			<result name="success">/jsp/ext/dashboard/externalDashboard.jsp</result>
+			<param name="dashboardViewType">TREASURYBROKERHIST</param>
+		</action>	
+		
+		<action name="displayBrokerPendingRiderDashboard" class="commonSearchAction" method="displayPendingAmendmentRider">
+			<result name="success">/jsp/ext/dashboard/externalDashboard.jsp</result>
+			<param name="dashboardViewType">TREASURYBROKERPENDINGINCE</param>
+		</action>	
+		
+		<action name="getGlanceDetails" class="commonDashboardAction" method="getGlanceDetails">
+			<result name="success">/jsp/ext/dashboard/externalDashboard.jsp</result>
+		</action>	
+		
+		<action name="saveDefaultView" class="commonDashboardAction" method="saveDefaultView">
+		</action>
+		
+		
+		<action name="addInstrumentPurpose" class="commonSearchAction" method="addElements">
+			<result name="success">/jsp/dashboard/common/addInstrumentPurpose.jsp</result>
+		</action>
+		
+		<action name="addPole" class="commonSearchAction" method="addElements">
+			<result name="success">/jsp/dashboard/common/addPole.jsp</result>
+		</action>
+		
+		<action name="addInstrumentCurrency" class="commonSearchAction" method="addElements">
+			<result name="success">/jsp/dashboard/common/addInstrumentCurrency.jsp</result>
+		</action>
+		
+		<action name="addPaymentCurrency" class="commonSearchAction" method="addElements">
+			<result name="success">/jsp/dashboard/common/addPaymentCurrency.jsp</result>
+		</action>
+		
+		<action name="addIssuanceCountry" class="commonSearchAction" method="addElements">
+			<result name="success">/jsp/dashboard/common/addIssuanceCountry.jsp</result>
+		</action>
+		
+		<action name="addSubBond" class="commonSearchAction" method="addElements">
+			<result name="success">/jsp/ext/dashboard/common/addSubBond.jsp</result>
+		</action>
+		
+		<action name="basicSearch" class="commonSearchAction" method="basicSearch">
+			<result name="success">/jsp/ext/dashboard/externalSearchResult.jsp</result>
+		</action>
+		
+		<action name="advanceSearch" class="commonSearchAction" method="advanceSearch">
+			<result name="success">/jsp/ext/dashboard/externalSearchResult.jsp</result>
+		</action>	
+		
+		<action name="addApmIssuanceCountry" class="commonSearchAction" method="addElements">
+			<result name="success">/jsp/dashboard/common/addApmIssuanceCountry.jsp</result>
+		</action>
+		
+		<action name="addApmPaymentCurrency" class="commonSearchAction" method="addElements">
+			<result name="success">/jsp/dashboard/common/addApmPaymentCurrency.jsp</result>
+		</action>
+		
+		<action name="getAllIssuingBanks" class="commonSearchAction" method="getAllIssuingBanks">
+			<result name="success">/jsp/dashboard/common/bankDetailPanel.jsp</result>
+		</action>
+		
+		<action name="getAllSuretyNames" class="commonSearchAction" method="getAllSuretyNames">
+			<result name="success">/jsp/dashboard/common/suretyCompName.jsp</result>
+		</action>
+	</package>
+	
+	<package name="externalReports" extends="struts-aloc-ext-usercheck" namespace="/ext/reports">
+	
+		<action name="loadContingentReport" class="reportDetailAction" method="loadContingentReport" >
+			<param name="reportName">Contingent Report</param>
+			<result name="success">/jsp/ext/reports/contigentReport.jsp</result>
+		</action>
+		
+		<action name="assignInsuanceValuesReports" class="reportDetailAction" method="assignInsuanceValues" >
+			<param name="reportName">Issuance and Expiration Report</param>
+			<result name="success">/jsp/ext/reports/issuanceExpirationReport.jsp</result>
+		</action>
+		
+		<action name="loadCycleTimeReports" class="reportDetailAction" method="loadCycleTimeReport" >
+			<param name="reportName">Cycle Time Report</param>
+			<result name="success">/jsp/ext/reports/cycleTimeReport.jsp</result>
+		</action>
+		
+		<action name="bidSuccessReports" class="reportDetailAction" method="loadBidSuccessReport" >
+			<param name="reportName">Bid Success Report</param>
+			<result name="success">/jsp/ext/reports/bidSuccessReport.jsp</result>
+		</action>
+		
+		<action name="feesPaidReports" class="reportDetailAction" method="onloadFeesPaidReport" >
+			<param name="reportName">Fees Paid Report</param>
+			<result name="success">/jsp/ext/reports/feesPaidReport.jsp</result>
+		</action>
+		
+		<action name="userReport" class="reportDetailAction" method="loadContingentReport" >
+			<param name="reportName">User Report</param>
+			<result name="success">/jsp/ext/reports/userReport.jsp</result>
+		</action>
+		
+		<action name="addBankSelection" class="reportDetailAction" method="addElements">
+			<result name="success">/jsp/ext/reports/bankSelectionReports.jsp</result>
+		</action>
+		
+		<action name="addSiteSelection" class="reportDetailAction" method="addElements">
+			<result name="success">/jsp/ext/reports/siteSelectionReports.jsp</result>
+		</action>
+		
+		<action name="resetSiteNames" class="reportDetailAction" method="resetSitesValues" >
+			<result name="success">/jsp/ext/reports/siteSelectionReports.jsp</result>
+		</action>
+		
+		<action name="resetBankNames" class="reportDetailAction" method="resetBankNamesBidSuccess" >
+			<result name="success">/jsp/ext/reports/bankSelectionReports.jsp</result>
+		</action>
+		
+		<action name="exportIssuanceExpirationReportResults" class="reportDetailAction" method="exportReportDetails" >
+				<param name="reportName">Issuance and Expiration Report</param>
+				<result name="success">/jsp/ext/reports/issuanceExpirationReport.jsp</result>
+		</action>
+		
+		<action name="exportFeesPaidReportResults" class="reportDetailAction" method="exportReportDetails" >
+				<param name="reportName">Fees Paid Report</param>
+				<result name="success">/jsp/ext/reports/feesPaidReport.jsp</result>
+		</action>
+		
+		<action name="exportUserReportResults" class="reportDetailAction" method="exportReportDetails" >
+				<param name="reportName">User Report</param>
+				<result name="success">/jsp/ext/reports/userReport.jsp</result>
+		</action>
+		
+		<action name="exportCycleTimeReportResults" class="reportDetailAction" method="exportReportDetails" >
+				<param name="reportName">Cycle Time Report</param>
+				<result name="success">/jsp/ext/reports/cycleTimeReport.jsp</result>
+		</action>
+		
+		<action name="exportContingentLiabilityResults" class="reportDetailAction" method="exportReportDetails" >
+				<param name="reportName">Contingent Report</param>
+				<result name="success">/jsp/ext/reports/contigentReport.jsp</result>
+		</action>
+
+		<action name="exportBidSuccessResults" class="reportDetailAction" method="exportReportDetails" >
+				<param name="reportName">Bid Success Report</param>
+				<result name="success">/jsp/ext/reports/bidSuccessReport.jsp</result>
+		</action>
+		
+		<action name="getSites" class="reportDetailAction" method="getSitesInfo">
+			<result name="success">/jsp/reports/siteSelectionReports.jsp</result>	
+		</action>
+		
+		<action name="recordCountForBidSuccess" class="reportDetailAction" method="recordsCountDetails" >
+			<param name="reportName">Bid Success Report</param>
+		</action>
+		
+		<action name="recordCountForContingent" class="reportDetailAction" method="recordsCountDetails" >
+			<param name="reportName">Contingent Report</param>
+		</action>
+		
+		<action name="recordCountForIssuance" class="reportDetailAction" method="recordsCountDetails" >
+			<param name="reportName">Issuance and Expiration Report</param>
+		</action>
+		
+		<action name="recordCountForAging" class="reportDetailAction" method="recordsCountDetails" >
+			<param name="reportName">Aging_Report</param>
+		</action>
+		
+		<action name="recordCountForECSO" class="reportDetailAction" method="recordsCountDetails" >
+			<param name="reportName">ECSO Report</param>
+		</action>
+		
+		<action name="recordCountForGCFO" class="reportDetailAction" method="recordsCountDetails" >
+			<param name="reportName">GCFO Report</param>
+		</action>
+		
+		<action name="recordCountForUser" class="reportDetailAction" method="recordsCountDetails" >
+			<param name="reportName">User Report</param>
+		</action>
+		
+		<action name="recordCountForFeesPaid" class="reportDetailAction" method="recordsCountDetails" >
+			<param name="reportName">Fees Paid Report</param>
+		</action>
+		
+		<action name="recordCountForFeeQuotation" class="reportDetailAction" method="recordsCountDetails" >
+			<param name="reportName">Fee Quotation and Forcast Report</param>
+		</action>
+		
+		<action name="recordCountForCycleTime" class="reportDetailAction" method="recordsCountDetails" >
+			<param name="reportName">Cycle Time Report</param>
+		</action>
+		
+		<action name="recordCountForFeeProjection" class="reportDetailAction" method="recordsCountDetails" >
+			<param name="reportName">Fee Projection Report</param>
+		</action>
+		
+		<action name="recordCountForAvgFeesPaid" class="reportDetailAction" method="recordsCountDetails" >
+			<param name="reportName">Avg Fees Paid Report</param>
+		</action>
+		
+		<!-- Ad-hoc Report actions start here -->
+		<action name="customReport" class="adhocReportAction" method="open">
+			<result name="success">/jsp/ext/reports/adhoc/adhocReport.jsp</result>		
+		</action>
+		<action name="runReport" class="adhocReportAction" method="prepareSpotfireQuery"/>
+		
+		<action name="customReportSearchFields" class="adhocReportAction" method="searchFields" />
+		
+		<action name="customReportRenderFilter" class="adhocReportAction" method="renderFilter">
+			<result name="success">/jsp/ext/reports/adhoc/filtersController.jsp</result>
+		</action>
+		<action name="customReportRenderColumn" class="adhocReportAction" method="renderFilter">
+			<result name="success">/jsp/ext/reports/adhoc/columnsController.jsp</result>
+		</action>
+		
+		<action name="customReportSaveTemplate" class="adhocReportAction" method="saveTemplate" />
+		
+		<action name="viewUserReports" class="adhocReportAction" method="getAvailableReports">
+			<result name="success">/jsp/ext/reports/adhoc/viewAdhocReports.jsp</result>
+			<param name="adhocReportTabType">MYREPORTS</param>
+		</action>
+		
+		<action name="viewPublishedReports" class="adhocReportAction" method="getAvailableReports">
+			<result name="success">/jsp/ext/reports/adhoc/viewAdhocReports.jsp</result>
+			<param name="adhocReportTabType">PUBLISHEDREPORTS</param>
+		</action>
+		
+		<action name="openTemplate" class="adhocReportAction" method="openWithTemplate">
+			<result name="success">/jsp/ext/reports/adhoc/adhocReport.jsp</result>
+		</action>
+		<action name="deleteTemplate" class="adhocReportAction" method="deleteTemplate">
+			<result name="successMyReport" type="chain">viewUserReports</result>
+			<result name="successPublishedReport" type="chain">viewPublishedReports</result>
+		</action>
+		<action name="resetSites" class="adhocReportAction" method="resetSitesAndBanks" >
+			<result name="success">/jsp/ext/reports/adhoc/adhocSiteSelection.jsp</result>
+		</action>
+		
+		<action name="resetBanks" class="adhocReportAction" method="resetSitesAndBanks" >
+			<result name="success">/jsp/ext/reports/adhoc/adhocBankSelection.jsp</result>
+		</action>
+		<!-- Ad-hoc Report actions end here -->
+		
+	</package>
+	
+	<package name="externalRequestor" extends="struts-aloc-ext-usercheck" namespace="/ext/requestor">
+	
+		<action name="getBondSubTypes" class="referenceDataAction" method="getBondSubTypes">
+		</action>
+		
+		<action name="addAdditionalBcpField" class="requestorAction" method="addAdditionalField">
+			<result name="success">/jsp/ext/request/common/buContactperson.jsp</result>			
+		</action>
+		<action name="removeAdditionalField" class="requestorAction" method="removeAdditionalField">
+		</action>
+		
+	</package>
+	
+	<package name="externalAdmin" extends="struts-aloc-ext-usercheck" namespace="/ext/admin">
+	
+		<action name="getSites" class="referenceDataAction" method="getSites">
+			<result name="success">/jsp/ext/dashboard/common/siteSelectionInAdavnceSearch.jsp</result>
+		</action>
+		
+		<action name="*FeeHistory" class="feeHistoryAction" method="{1}FeeHistory">
+			<result name="success">/jsp/ext/apm/FeeHistory.jsp</result>
+			<result name="defViewPage">/jsp/ext/apm/feeHistorySummaryDet.jsp</result>
+			<result name="download" type="stream">
+			    <param name="contentDisposition">attachment;filename=report.xls</param>
+			    <param name="contentType">application/vnd.ms-excel</param>
+			    <param name="inputName">inputStream</param>
+			    <param name="bufferSize">1024</param>
+			</result>
+	    </action>
+	    
+	    <action name="basicFHSearch" class="commonSearchAction" method="basicFHSearch">
+			<result name="success">/jsp/ext/apm/feeHistorySummaryDet.jsp</result>
+		</action>
+	
+		<action name="advanceFHSearch" class="commonSearchAction" method="advanceFHSearch">
+			<result name="success">/jsp/ext/apm/feeHistorySummaryDet.jsp</result>
+		</action>
+		
+		<action name="downloadFHSearchResults" class="feeHistoryAction" method="downloadFHSearchResults">
+			 <result name="download" type="stream">
+				    <param name="contentDisposition">attachment;filename=report.xls</param>
+				    <param name="contentType">application/vnd.ms-excel</param>
+				    <param name="inputName">inputStream</param>
+				    <param name="bufferSize">1024</param>
+			 </result>
+		</action>
+	</package>
+	
+	<package name="externalApm" extends="struts-aloc-ext-usercheck" namespace="/ext/apm">
+		
+		<action name="getYearlist" class="apmDetailsAction" method="getYearlist">
+			<result name="success">/jsp/ext/apm/apmFXRateHistoryandCurrencySetup.jsp</result>
+		</action>
+		
+		<action name="*FeeSummary" class="apmDetailsAction" method="{1}FeeSummaryDetails">
+                <result name="success">/jsp/ext/apm/feeSummaryDetails.jsp</result>
+        </action>
+        
+        <action name="viewFullRequest" class="approverAction" method="openRequest">
+			<result name="BankGuaranteeRequestPage">/jsp/ext/apm/bgAndLocAPMRequest.jsp</result>
+			<result name="LOCRequestPage">/jsp/ext/apm/bgAndLocAPMRequest.jsp</result>
+		</action>
+		
+		<action name="openFXRateHistory" class="apmDetailsAction" method="openFXRateHistory">
+			<result name="success">/jsp/ext/apm/fxRateperiodSelect.jsp</result>
+		</action>
+		
+		<action name="getFxRates" class="apmDetailsAction" method="getFxRates">
+			<result name="success">/jsp/ext/apm/showFXRates.jsp</result>
+		</action>
+		
+		<action name="downloadResultExport" class="apmDetailsAction" method="downloadFXRates">
+		 <result name="download" type="stream">
+			    <param name="contentDisposition">attachment;filename=report.xls</param>
+			    <param name="contentType">application/vnd.ms-excel</param>
+			    <param name="inputName">inputStream</param>
+			    <param name="bufferSize">1024</param>
+		 </result>
+		</action>
+	</package>
+	
+	<package name="externalAttachments" extends="struts-aloc-ext-json-base" namespace="/ext/atmt">
+		<global-results>
+			<result name="error" type="json">
+				<param name="noCache">true</param>
+ 				<param name="excludeNullProperties">true</param>
+ 				<!-- <param name="statusCode">500</param> -->
+				<param name="contentType">text/html</param>
+				<param name="includeProperties">
+					^status$,
+					^errorCode$,
+					^errorMsg$,
+					^typeId$,
+					^attachment\.attachmentName$,
+					^attachment\.attachmentTypeId$,
+					^attachment\.geFileId$,
+					^attachment\.attachmentOriginalName
+				</param>
+			</result>
+			
+			<result name="success" type="json">
+					<param name="noCache">true</param>
+					<param name="excludeNullProperties">true</param>
+					<param name="contentType">text/html</param>
+		       		<param name="includeProperties">
+						^status$,
+						^index$,
+						^typeId$,
+						^formatId$,
+						^attachment\.attachmentName$,
+						^attachment\.attachmentTypeId$,
+						^attachment\.geFileId$,
+						^attachment\.attachmentOriginalName
+					</param>
+		       </result>
+		</global-results>
+	
+		<action name="upload" class="attachmentAction" method="upload" />	
+		<action name="closureDelete" class="attachmentAction" method="delete"/>
+		<action name="delete" class="attachmentAction" method="delete">
+			 <result name="otherAttachmentSuccess">/jsp/ext/request/common/attachmentRefresh.jsp</result>
+			 <result name="issuerAttachmentSuccess">/jsp/ext/request/common/issuanceAttachmentRefresh.jsp</result>
+			 <result name="closureAttachmentSuccess">/jsp/ext/request/common/closureAttachments.jsp</result>			 
+		</action>	
+		
+		<action name="download" class="attachmentAction" method="download" />	
+		
+	</package> 
+</struts>

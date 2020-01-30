@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:tns="http://com.ge.b2ewebservice/B2EService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="B2EService" targetNamespace="http://com.ge.b2ewebservice/B2EService/">
+    <wsdl:types>
+        <xsd:schema xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://com.ge.b2ewebservice/B2EService/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://com.ge.b2ewebservice/B2EService/">
+            <xsd:complexType name="Image">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="altText" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="data" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="height" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="width" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="path" nillable="true" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="ArrayOfQuestion">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="item" nillable="true" type="tns:Question"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="ArrayOfArrayOfQuestion">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="item" nillable="true" type="tns:ArrayOfQuestion"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="UserAttributes">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="givenName" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="linkedBu" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="mail" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="orgId" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="password" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="selfReg" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="surname" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="userName" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="gessouid" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="currentPassword" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="ssoStatus" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="sessionId" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="transactionId" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="userLanguage" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="userCountry" nillable="true" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="ArrayOfImage">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="item" nillable="true" type="tns:Image"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="DeviceResponse">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="deviceTokenCookie" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="deviceTokenFSO" nillable="true" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="MobileDevice">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="simId" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="otherId" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="hardwareId" nillable="true" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="DeviceRequest">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="beaconId" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="devicePrint" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="deviceTokenCookie" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="deviceTokenFSO" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="httpAccept" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="httpAcceptChars" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="httpAcceptEncoding" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="httpAcceptLanguage" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="httpReferrer" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="ipAddress" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="userAgent" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="mobileDevice" nillable="true" type="tns:MobileDevice"/>
+                    <xsd:element minOccurs="0" name="deviceName" nillable="true" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="ArrayOf_xsd_string">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="item" nillable="true" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="B2EResponse">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="browseImageCategories" nillable="true" type="tns:ArrayOf_xsd_string">
+            		</xsd:element>
+                    <xsd:element minOccurs="0" name="browseImages" nillable="true" type="tns:ArrayOfImage">
+            		</xsd:element>
+                    <xsd:element minOccurs="0" name="browseQuestions" nillable="true" type="tns:ArrayOfArrayOfQuestion">
+            		</xsd:element>
+                    <xsd:element minOccurs="0" name="deviceResponse" nillable="true" type="tns:DeviceResponse">
+            		</xsd:element>
+                    <xsd:element minOccurs="0" name="errCode" nillable="true" type="xsd:string">
+            		</xsd:element>
+                    <xsd:element minOccurs="0" name="errMsg" nillable="true" type="xsd:string">
+            		</xsd:element>
+                    <xsd:element minOccurs="0" name="result" nillable="true" type="xsd:string">
+            		</xsd:element>
+                    <xsd:element minOccurs="0" name="userStatus" nillable="true" type="tns:UserStatus">
+            		</xsd:element>
+                    <xsd:element minOccurs="0" name="challengeQuestionId" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="challengeQuestionText" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="challengeAnswerScore" nillable="true" type="xsd:int">
+            		</xsd:element>
+                    <xsd:element minOccurs="0" name="EventRiskPolicy" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="userImage" nillable="true" type="tns:Image"/>
+                    <xsd:element minOccurs="0" name="userPhrase" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="userIDMatches" nillable="true" type="tns:ArrayOfUIDMatch"/>
+                    <xsd:element minOccurs="0" name="userQuestions" nillable="true" type="tns:ArrayOfQuestion"/>
+                    <xsd:element minOccurs="0" name="userAttributes" nillable="true" type="tns:UserAttributes"/>
+                    <xsd:element minOccurs="0" name="userAnswers" nillable="true" type="tns:ArrayOf_xsd_string"/>
+                    <xsd:element minOccurs="0" name="eventRiskFacts" nillable="true" type="tns:ArrayOfEventRiskFact"/>
+                    <xsd:element minOccurs="0" name="boundDevices" nillable="true" type="tns:ArrayOf_xsd_string"/>
+                    <xsd:element minOccurs="0" name="smSession" nillable="true" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:simpleType name="ChannelIndicatorType">
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="WEB"/>
+                    <xsd:enumeration value="MOBILE"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="UserStatus">
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="NOTENROLLED"/>
+                    <xsd:enumeration value="UNVERIFIED"/>
+                    <xsd:enumeration value="VERIFIED"/>
+                    <xsd:enumeration value="LOCKOUT"/>
+                    <xsd:enumeration value="DELETED"/>
+                    <xsd:enumeration value="UNLOCKED"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:complexType name="B2ERequest">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="answers" nillable="true" type="tns:ArrayOf_xsd_string"/>
+                    <xsd:element minOccurs="0" name="bindDevice" nillable="true" type="xsd:string">
+            		</xsd:element>
+                    <xsd:element minOccurs="0" name="browseImageCategory" nillable="true" type="xsd:string">
+            		</xsd:element>
+                    <xsd:element minOccurs="0" name="deviceRequest" nillable="true" type="tns:DeviceRequest">
+            		</xsd:element>
+                    <xsd:element minOccurs="0" name="operation" nillable="true" type="xsd:string">
+            		</xsd:element>
+                    <xsd:element minOccurs="0" name="questionNames" nillable="true" type="tns:ArrayOf_xsd_string">
+            		</xsd:element>
+                    <xsd:element minOccurs="0" name="userAttributes" nillable="true" type="tns:UserAttributes">
+            		</xsd:element>
+                    <xsd:element minOccurs="0" name="userImage" nillable="true" type="tns:Image">
+            		</xsd:element>
+                    <xsd:element minOccurs="0" name="userPhrase" nillable="true" type="xsd:string">
+            		</xsd:element>
+                    <xsd:element minOccurs="0" name="useOtp" nillable="true" type="xsd:string">
+            		</xsd:element>
+                    <xsd:element minOccurs="0" name="challengeAnswerId" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="challengeAnswer" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="eventResult" nillable="true" type="tns:Event"/>
+                    <xsd:element minOccurs="0" name="applicationID" nillable="true" type="xsd:string">
+            		</xsd:element>
+                    <xsd:element minOccurs="0" name="applicationPassword" nillable="true" type="xsd:string">
+            		</xsd:element>
+                    <xsd:element minOccurs="0" name="userStatus" nillable="true" type="tns:UserStatus">
+            		</xsd:element>
+                    <xsd:element minOccurs="0" name="channelIndicator" nillable="true" type="tns:ChannelIndicatorType"/>
+                    <xsd:element minOccurs="0" name="deviceToUnbind" nillable="true" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:element name="getImages">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="request" nillable="true" type="tns:B2ERequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="getImagesResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="getImagesReturn" nillable="true" type="tns:B2EResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="addUserResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="addUserReturn" nillable="true" type="tns:B2EResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="addUser">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="request" nillable="true" type="tns:B2ERequest">
+            			</xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="getQuestions">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="request" nillable="true" type="tns:B2ERequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="getQuestionsResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="getQuestionsReturn" nillable="true" type="tns:B2EResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:complexType name="Question">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="name" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="text" nillable="true" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:element name="challenge">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="request" nillable="true" type="tns:B2ERequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="challengeResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="challengeReturn" nillable="true" type="tns:B2EResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="challengeAnswer">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="request" nillable="true" type="tns:B2ERequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="challengeAnswerResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="challengeAnswerReturn" nillable="true" type="tns:B2EResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="updatePassword">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="request" nillable="true" type="tns:B2ERequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="updatePasswordResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="updatePasswordReturn" nillable="true" type="tns:B2EResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="changePassword">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="request" nillable="true" type="tns:B2ERequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="changePasswordResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="changePasswordReturn" nillable="true" type="tns:B2EResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="forgotUserID">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="request" nillable="true" type="tns:B2ERequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="forgotUserIDResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="forgotUserIDReturn" nillable="true" type="tns:B2EResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:complexType name="UIDMatch">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="uid" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="gessouid" nillable="true" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="ArrayOfUIDMatch">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="item" nillable="true" type="tns:UIDMatch"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="EventRiskFact">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="name" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="value" nillable="true" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="ArrayOfEventRiskFact">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="item" nillable="true" type="tns:EventRiskFact"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:element name="getUserInfo">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="request" nillable="true" type="tns:B2ERequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="getUserInfoResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="getUserInfoReturn" nillable="true" type="tns:B2EResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="updateUser">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="request" nillable="true" type="tns:B2ERequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="updateUserResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="updateUserReturn" nillable="true" type="tns:B2EResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="signin">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="request" nillable="true" type="tns:B2ERequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="signinResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="signinReturn" nillable="true" type="tns:B2EResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="eventResults">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="request" nillable="true" type="tns:B2ERequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="eventResultsResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="eventResultsReturn" nillable="true" type="tns:B2EResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:complexType name="Event">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="eventType" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="success" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="numberOfAttempts" nillable="true" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:element name="passwordAuthenticate">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="request" nillable="true" type="tns:B2ERequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="passwordAuthenticateResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="1" minOccurs="1" name="passwordAuthenticateReturn" nillable="true" type="tns:B2EResponse"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="getImagesRequest">
+        <wsdl:part element="tns:getImages" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="changePasswordResponse">
+        <wsdl:part element="tns:changePasswordResponse" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="updatePasswordResponse">
+        <wsdl:part element="tns:updatePasswordResponse" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="signinResponse">
+        <wsdl:part element="tns:signinResponse" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="passwordAuthenticateRequest">
+        <wsdl:part element="tns:passwordAuthenticate" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="changePasswordRequest">
+        <wsdl:part element="tns:changePassword" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="challengeRequest">
+        <wsdl:part element="tns:challenge" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="updateUserRequest">
+        <wsdl:part element="tns:updateUser" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="eventResultsRequest">
+        <wsdl:part element="tns:eventResults" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getQuestionsRequest">
+        <wsdl:part element="tns:getQuestions" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="updatePasswordRequest">
+        <wsdl:part element="tns:updatePassword" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="addUserRequest">
+        <wsdl:part element="tns:addUser" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getImagesResponse">
+        <wsdl:part element="tns:getImagesResponse" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="addUserResponse">
+        <wsdl:part element="tns:addUserResponse" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getQuestionsResponse">
+        <wsdl:part element="tns:getQuestionsResponse" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getUserInfoRequest">
+        <wsdl:part element="tns:getUserInfo" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="challengeAnswerResponse">
+        <wsdl:part element="tns:challengeAnswerResponse" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="eventResultsResponse">
+        <wsdl:part element="tns:eventResultsResponse" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="forgotUserIDResponse">
+        <wsdl:part element="tns:forgotUserIDResponse" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="challengeAnswerRequest">
+        <wsdl:part element="tns:challengeAnswer" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="signinRequest">
+        <wsdl:part element="tns:signin" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="passwordAuthenticateResponse">
+        <wsdl:part element="tns:passwordAuthenticateResponse" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="updateUserResponse">
+        <wsdl:part element="tns:updateUserResponse" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="forgotUserIDRequest">
+        <wsdl:part element="tns:forgotUserID" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getUserInfoResponse">
+        <wsdl:part element="tns:getUserInfoResponse" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="challengeResponse">
+        <wsdl:part element="tns:challengeResponse" name="parameters">
+    </wsdl:part>
+    </wsdl:message>
+    <wsdl:portType name="B2EService">
+        <wsdl:operation name="getImages">
+            <wsdl:input message="tns:getImagesRequest">
+    </wsdl:input>
+            <wsdl:output message="tns:getImagesResponse">
+    </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="addUser">
+            <wsdl:input message="tns:addUserRequest">
+    </wsdl:input>
+            <wsdl:output message="tns:addUserResponse">
+    </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getQuestions">
+            <wsdl:input message="tns:getQuestionsRequest">
+    </wsdl:input>
+            <wsdl:output message="tns:getQuestionsResponse">
+    </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="challenge">
+            <wsdl:input message="tns:challengeRequest">
+    </wsdl:input>
+            <wsdl:output message="tns:challengeResponse">
+    </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="challengeAnswer">
+            <wsdl:input message="tns:challengeAnswerRequest">
+    </wsdl:input>
+            <wsdl:output message="tns:challengeAnswerResponse">
+    </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="updatePassword">
+            <wsdl:input message="tns:updatePasswordRequest">
+    </wsdl:input>
+            <wsdl:output message="tns:updatePasswordResponse">
+    </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="changePassword">
+            <wsdl:input message="tns:changePasswordRequest">
+    </wsdl:input>
+            <wsdl:output message="tns:changePasswordResponse">
+    </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="forgotUserID">
+            <wsdl:input message="tns:forgotUserIDRequest">
+    </wsdl:input>
+            <wsdl:output message="tns:forgotUserIDResponse">
+    </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getUserInfo">
+            <wsdl:input message="tns:getUserInfoRequest">
+    </wsdl:input>
+            <wsdl:output message="tns:getUserInfoResponse">
+    </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="updateUser">
+            <wsdl:input message="tns:updateUserRequest">
+    </wsdl:input>
+            <wsdl:output message="tns:updateUserResponse">
+    </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="signin">
+            <wsdl:input message="tns:signinRequest">
+    </wsdl:input>
+            <wsdl:output message="tns:signinResponse">
+    </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="eventResults">
+            <wsdl:input message="tns:eventResultsRequest">
+    </wsdl:input>
+            <wsdl:output message="tns:eventResultsResponse">
+    </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="passwordAuthenticate">
+            <wsdl:input message="tns:passwordAuthenticateRequest">
+    </wsdl:input>
+            <wsdl:output message="tns:passwordAuthenticateResponse">
+    </wsdl:output>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="B2EServiceSOAP" type="tns:B2EService">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="getImages">
+            <soap:operation soapAction="http://com.ge.b2ewebservice/B2EService/getImages"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="addUser">
+            <soap:operation soapAction="http://com.ge.b2ewebservice/B2EService/addUser"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getQuestions">
+            <soap:operation soapAction="http://com.ge.b2ewebservice/B2EService/getQuestions"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="challenge">
+            <soap:operation soapAction="http://com.ge.b2ewebservice/B2EService/challenge"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="challengeAnswer">
+            <soap:operation soapAction="http://com.ge.b2ewebservice/B2EService/challengeAnswer"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="updatePassword">
+            <soap:operation soapAction="http://com.ge.b2ewebservice/B2EService/updatePassword"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="changePassword">
+            <soap:operation soapAction="http://com.ge.b2ewebservice/B2EService/changePassword"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="forgotUserID">
+            <soap:operation soapAction="http://com.ge.b2ewebservice/B2EService/forgotUserID"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getUserInfo">
+            <soap:operation soapAction="http://com.ge.b2ewebservice/B2EService/getUserInfo"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="updateUser">
+            <soap:operation soapAction="http://com.ge.b2ewebservice/B2EService/updateUser"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="signin">
+            <soap:operation soapAction="http://com.ge.b2ewebservice/B2EService/signin"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="eventResults">
+            <soap:operation soapAction="http://com.ge.b2ewebservice/B2EService/eventResults"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="passwordAuthenticate">
+            <soap:operation soapAction="http://com.ge.b2ewebservice/B2EService/passwordAuthenticate"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="B2EService">
+        <wsdl:port binding="tns:B2EServiceSOAP" name="B2EServiceSOAP">
+            <soap:address location="https://autheservice-nxgen.stage.us.money.ge.com:8443/EnhancedAuthenticationService/services/B2EService"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

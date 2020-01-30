@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/APM/FeeSummaryDetails.xsd"
+	 xmlns:ns2="http://treasury.ge.com/schemas/ALOC/APM/FeeSummary.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/APM/FeeRequestSummary.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ALOC/APM/OtherFee.xsd"
+	 xmlns:ns4="http://treasury.ge.com/schemas/ALOC/APM/USForeignFee.xsd"
+	 xmlns:ns3="http://treasury.ge.com/schemas/ALOC/RequestDetails/WFDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/APM/FeeSummaryDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/APM/FeeSummary.xsd" schemaLocation="FeeSummary.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/APM/FeeRequestSummary.xsd" schemaLocation="FeeRequestSummary.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/APM/OtherFee.xsd" schemaLocation="OtherFee.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/APM/USForeignFee.xsd" schemaLocation="USForeignFee.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/WFDetails.xsd" schemaLocation="../RequestDetails/WFDetails.xsd"/>
+	<xs:element name="FeeSummaryDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ns0:FeeRequestSummary" minOccurs="0"/>
+				<xs:element ref="ns2:FeeSummary" minOccurs="0"/>
+				<xs:element ref="ns4:USForeignFee" minOccurs="0"/>
+				<xs:element ref="ns1:OtherFee" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Total_Other" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Total_Other_String" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns3:WFDetails" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/MDM/Schema.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 xmlns:ns2="http://treasury.ge.com/schemas/Rates/RatesRequest.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/IBSDetails.xsd"
+	 xmlns:ns3="http://treasury.ge.com/schemas/ALOC/RequestDetails/AddressDetails.xsd"
+	 xmlns:ns4="http://treasury.ge.com/schemas/ALOC/UserDetails.xsd"
+	 xmlns:ns5="http://treasury.ge.com/schemas/ALOC/Admin/BusinessUnitCode.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/MDM/Schema.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd" schemaLocation="../RequestDetails/MsgHeader.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/Rates/RatesRequest.xsd" schemaLocation="RatesRequest.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/IBSDetails.xsd" schemaLocation="IBSDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/AddressDetails.xsd" schemaLocation="../RequestDetails/AddressDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/UserDetails.xsd" schemaLocation="UserDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/Admin/BusinessUnitCode.xsd" schemaLocation="../Admin/BusinessUnitCode.xsd"/>
+	<xs:element name="MDM">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="TransactionId" type="xs:string" minOccurs="0"/>
+				<xs:element name="RecordCount" type="xs:string" minOccurs="0"/>
+				<xs:element name="Pagination" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Pagination_Enable" type="xs:boolean" minOccurs="0"/>
+							<xs:element name="Pagination_Start" type="xs:int" minOccurs="0"/>
+							<xs:element name="Pagination_Increment" type="xs:int" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="ns1:Msg_Header" minOccurs="0"/>
+				<xs:element name="Entity" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="LE_MDM_Id" type="xs:string" minOccurs="0"/>
+							<xs:element name="LE_Gold_Id" type="xs:string" minOccurs="0"/>
+							<xs:element name="LE_Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="LE_Address" type="ns3:AddressDtlsType" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Country" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Country_MDM_Id" type="xs:string" minOccurs="0"/>
+							<xs:element name="Country_Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="Country_Code" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Currency" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Currency_MDM_Id" type="xs:string" minOccurs="0"/>
+							<xs:element name="Currency_Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="Currency_Code" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="ns2:Rates" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="BankDetails" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Bank_MDM_Id" type="xs:string" minOccurs="0"/>
+							<xs:element name="Bank_Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="Bank_Code" type="xs:string" minOccurs="0"/>
+							<xs:element name="BIC_Code" type="xs:string" minOccurs="0"/>
+							<xs:element name="Site_Id" type="xs:integer" minOccurs="0"/>
+							<xs:element name="Site_Name" type="xs:string" minOccurs="0"/>
+							<xs:element name="BankAddress" type="ns3:AddressDtlsType" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="ns0:IBSDetails" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="GoldId_CSO_Validation" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="GoldId_CSONum_Id" type="xs:string" minOccurs="0"/>
+							<xs:element name="Gold_Id" type="xs:string" minOccurs="0"/>
+							<xs:element name="CSO_Number" type="xs:string" minOccurs="0"/>
+							<xs:element name="Validation_Details" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="IsValid_Combo" type="xs:boolean" minOccurs="0"/>
+										<xs:element name="Validation_Result" type="xs:string" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="BussContPerson" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="ns4:UserDetails" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GERecipientDetails" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="ns4:UserDetails" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="GetApprovers" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="ns4:UserDetails" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="SiteType_Id" type="xs:integer" minOccurs="0"/>
+							<xs:element name="SiteType_Name" type="xs:string" minOccurs="0"/>
+                            <xs:element name="Site_Id" type="xs:integer" minOccurs="0"/>
+                            <xs:element name="Site_Name" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="ns5:BusinessUnitCode" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

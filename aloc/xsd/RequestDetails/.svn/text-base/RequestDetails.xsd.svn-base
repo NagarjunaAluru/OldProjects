@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/RequestDetails.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/RequestDetails/AddressDetails.xsd"
+	 xmlns:ns2="http://treasury.ge.com/schemas/ALOC/RequestDetails/Format.xsd"
+	 xmlns:ns3="http://treasury.ge.com/schemas/ALOC/RequestDetails/InstrumentDetails.xsd"
+	 xmlns:ns4="http://treasury.ge.com/schemas/ALOC/RequestDetails/InstrumentRisk.xsd"
+	 xmlns:ns5="http://treasury.ge.com/schemas/ALOC/RequestDetails/ProjDescription.xsd"
+	 xmlns:ns6="http://treasury.ge.com/schemas/ALOC/RequestDetails/RequestSummary.xsd"
+	 xmlns:ns7="http://treasury.ge.com/schemas/ALOC/RequestDetails/TransactionParties.xsd"
+	 xmlns:ns9="http://treasury.ge.com/schemas/ALOC/RequestDetails/ALOCCommon.xsd"
+	 xmlns:ns10="http://treasury.ge.com/schemas/ALOC/RequestDetails/BondDetails.xsd"
+	 xmlns:ns11="http://treasury.ge.com/schemas/ALOC/RequestDetails/BondInfo.xsd"
+	 xmlns:ns12="http://treasury.ge.com/schemas/ALOC/RequestDetails/BondReqDtls.xsd"
+	 xmlns:ns13="http://treasury.ge.com/schemas/ALOC/RequestDetails/Principal.xsd"
+	 xmlns:ns14="http://treasury.ge.com/schemas/ALOC/RequestDetails/Obligee.xsd"
+	 xmlns:ns16="http://treasury.ge.com/schemas/ALOC/RequestDetails/ApplicantDetails.xsd"
+	 xmlns:ns17="http://treasury.ge.com/schemas/ALOC/RequestDetails/BeneficiaryDetails.xsd"
+	 xmlns:ns18="http://treasury.ge.com/schemas/ALOC/RequestDetails/BuContactPerson"
+	 xmlns:ns19="http://treasury.ge.com/schemas/ALOC/RequestDetails/IssuingBankDetails.xsd"
+	 xmlns:ns20="http://treasury.ge.com/schemas/ALOC/RequestDetails/PaymentScheduleDetails.xsd"
+	 xmlns:ns21="http://treasury.ge.com/schemas/ALOC/RequestDetails/TransactionDetails.xsd"
+	 xmlns:ns22="http://treasury.ge.com/schemas/ALOC/RequestDetails/InstrReporting.xsd"
+	 xmlns:ns23="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd"
+	 xmlns:ns24="http://treasury.ge.com/schemas/ALOC/RequestDetails/WFDetails.xsd"
+	 xmlns:ns15="http://treasury.ge.com/schemas/ALOC/RequestDetails/Attachments.xsd"
+	 xmlns:ns26="http://treasury.ge.com/schemas/ALOC/RequestDetails/DeliveryInstructions.xsd"
+	 xmlns:ns25="http://treasury.ge.com/schemas/ALOC/RequestDetails/BidProcessDetails.xsd"
+	 xmlns:ns27="http://treasury.ge.com/schemas/ALOC/RequestDetails/BuDelegation.xsd"
+	 xmlns:ns28="http://treasury.ge.com/schemas/ALOC/RequestDetails/ActionLog.xsd"
+	 xmlns:ns29="http://treasury.ge.com/schemas/ALOC/RequestDetails/WinningBankDetails.xsd"
+	 xmlns:ns30="http://treasury.ge.com/schemas/ALOC/RequestDetails/DelegationApprovers.xsd"
+	 xmlns:ns8="http://treasury.ge.com/schemas/ALOC/RequestDetails/TransferFees.xsd"
+	 xmlns:ns31="http://treasury.ge.com/schemas/ALOC/RequestDetails/TresuryDelegation.xsd"
+	 xmlns:ns32="http://treasury.ge.com/schemas/ALOC/RequestDetails/AdditionalInstrumentDetails.xsd"
+	 xmlns:ns33="http://treasury.ge.com/schemas/ALOC/RequestDetails/BidmemoDetails.xsd"
+	 xmlns:ns1="http://treasury.ge.com/schemas/ALOC/RequestDetails/BankDetails.xsd"
+	 xmlns:ns34="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/TreasuryDelegationApprovers.xsd"
+	 xmlns:ns35="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/AvailableBanks.xsd"
+	 xmlns:ns36="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/SelectedBanks.xsd"
+	 xmlns:ns37="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/FeesDetails.xsd"
+	 xmlns:ns38="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/BidReplyDetails.xsd"
+	 xmlns:ns39="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/OneTimeFeesDetails.xsd"
+	 xmlns:ns40="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/PricingDetails.xsd"
+	 xmlns:ns41="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/PreAgreedPricingDetails.xsd"
+	 xmlns:ns42="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/ConfirmationFees.xsd"
+	 xmlns:ns43="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/ProposedBankBranchConfirmDetails.xsd"
+	 xmlns:ns44="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/IndicativePricingCompletedDetails.xsd"
+	 xmlns:ns45="http://treasury.ge.com/schemas/ALOC/RequestDetails/Amendment.xsd"
+	 xmlns:ns47="http://treasury.ge.com/schemas/ALOC/Resources/Schemas/RequestDetails/SiteSelection.xsd"
+	 xmlns:ns48="http://treasury.ge.com/schemas/ALOC/RequestDetails/AuditLog.xsd"
+	 xmlns:ns46="http://treasury.ge.com/schemas/ALOC/RequestDetails/Rider.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/RequestDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/AddressDetails.xsd" schemaLocation="AddressDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/Format.xsd" schemaLocation="FormatDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/InstrumentDetails.xsd" schemaLocation="InstrumentDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/InstrumentRisk.xsd" schemaLocation="InstrumentRisk.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/ProjDescription.xsd" schemaLocation="ProjDescription.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/RequestSummary.xsd" schemaLocation="RequestSummary.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/TransactionParties.xsd" schemaLocation="TransactionParties.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/ALOCCommon.xsd" schemaLocation="ALOCCommon.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/BondDetails.xsd" schemaLocation="BondDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/BondInfo.xsd" schemaLocation="BondInformation.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/BondReqDtls.xsd" schemaLocation="BondReqDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/Principal.xsd" schemaLocation="PrincipalDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/Obligee.xsd" schemaLocation="ObligeeAddress.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/ApplicantDetails.xsd" schemaLocation="ApplicantDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/BeneficiaryDetails.xsd" schemaLocation="BeneficiaryDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/BuContactPerson" schemaLocation="BuContactPerson.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/IssuingBankDetails.xsd" schemaLocation="IssuingBankDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/PaymentScheduleDetails.xsd" schemaLocation="PaymentScheduleDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/TransactionDetails.xsd" schemaLocation="TransactionDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/InstrReporting.xsd" schemaLocation="InstrReporting.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/MsgHeader.xsd" schemaLocation="MsgHeader.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/WFDetails.xsd" schemaLocation="WFDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/Attachments.xsd" schemaLocation="Attachments.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/DeliveryInstructions.xsd" schemaLocation="DeliveryInstructions.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/BidProcessDetails.xsd" schemaLocation="BidProcessDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/BuDelegation.xsd" schemaLocation="BuDelegation.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/ActionLog.xsd" schemaLocation="ActionLog.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/WinningBankDetails.xsd" schemaLocation="WinningBankDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/DelegationApprovers.xsd" schemaLocation="DelegationApprovers.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/TransferFees.xsd" schemaLocation="TransferFees.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/TresuryDelegation.xsd" schemaLocation="TresuryDelegation.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/AdditionalInstrumentDetails.xsd" schemaLocation="AdditionalInstrumentDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/BidmemoDetails.xsd" schemaLocation="BidmemoDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/BankDetails.xsd" schemaLocation="BankDetails.xsd"/>
+	<xs:import namespace="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/TreasuryDelegationApprovers.xsd" schemaLocation="TresuryDelegationApprovers.xsd"/>
+	<xs:import namespace="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/AvailableBanks.xsd" schemaLocation="AvailableBanks.xsd"/>
+	<xs:import namespace="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/SelectedBanks.xsd" schemaLocation="SelectedBanks.xsd"/>
+	<xs:import namespace="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/FeesDetails.xsd" schemaLocation="FeesDetails.xsd"/>
+	<xs:import namespace="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/BidReplyDetails.xsd" schemaLocation="BidReplyDetails.xsd"/>
+	<xs:import namespace="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/OneTimeFeesDetails.xsd" schemaLocation="OneTimeFeesDetails.xsd"/>
+	<xs:import namespace="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/PricingDetails.xsd" schemaLocation="PricingDetails.xsd"/>
+	<xs:import namespace="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/PreAgreedPricingDetails.xsd" schemaLocation="PreAgreedPricingDetails.xsd"/>
+	<xs:import namespace="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/ConfirmationFees.xsd" schemaLocation="ConfirmationFees.xsd"/>
+	<xs:import namespace="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/ProposedBankBranchConfirmDetails.xsd" schemaLocation="ProposedBankBranchConfirmDetails.xsd"/>
+	<xs:import namespace="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/IndicativePricingCompletedDetails.xsd" schemaLocation="IndicativePricingCompletedDetails.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/Amendment.xsd" schemaLocation="Amendment.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/Resources/Schemas/RequestDetails/SiteSelection.xsd" schemaLocation="SiteSelection.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/AuditLog.xsd" schemaLocation="AuditLog.xsd"/>
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/Rider.xsd" schemaLocation="Rider.xsd"/>
+	<xs:element name="RequestDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ns23:Msg_Header" minOccurs="0"/>
+				<xs:element name="Op_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="Request_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Aloc_Record_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Model_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Model_Used_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Site_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Site_Prefix" type="xs:string" minOccurs="0"/>
+				<xs:element name="Site_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Site_Type_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Site_Type_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Instrument_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Instrument_Type_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Instrument_Location_Val" type="xs:string" minOccurs="0"/>
+				<xs:element name="Governing_Rule_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Local_Cntry_Law_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Requestor_SSO" type="xs:string" minOccurs="0"/>
+				<xs:element name="Request_Status" type="xs:string" minOccurs="0"/>
+				<xs:element name="Requestor_FName" type="xs:string" minOccurs="0"/>
+				<xs:element name="Requestor_LName" type="xs:string" minOccurs="0"/>
+				<xs:element name="Prepare_For_Bundle" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns9:ActionDetails" minOccurs="0"/>
+				<xs:element ref="ns6:RequestSummary" minOccurs="0"/>
+				<xs:element ref="ns7:TransactionParties" minOccurs="0"/>
+				<xs:element ref="ns5:ProjDescription" minOccurs="0"/>
+				<xs:element ref="ns3:InstrumentDetails" minOccurs="0"/>
+				<xs:element ref="ns4:InstrumentRisk" minOccurs="0"/>
+				<xs:element name="Standby_Loc_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Pole_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Pole_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element ref="ns2:Format" minOccurs="0"/>
+				<xs:element ref="ns10:BondDetails" minOccurs="0"/>
+				<xs:element ref="ns13:Principal" minOccurs="0"/>
+				<xs:element ref="ns14:Obligee" minOccurs="0"/>
+				<xs:element ref="ns12:BondReqDtls" minOccurs="0"/>
+				<xs:element ref="ns0:AddressDtls" minOccurs="0"/>
+				<xs:element ref="ns11:BondInfo" minOccurs="0"/>
+				<xs:element ref="SBLC" minOccurs="0"/>
+				<xs:element ref="ns16:ApplicantDetails" minOccurs="0"/>
+				<xs:element ref="ns17:BeneficiaryDetails" minOccurs="0"/>
+				<xs:element ref="ns18:BuContactPerson" minOccurs="0"/>
+				<xs:element ref="ns19:IssuingBankDetails" minOccurs="0"/>
+				<xs:element ref="ns20:PaymentScheduleDetails" minOccurs="0"/>
+				<xs:element ref="ns21:TransactionDetails" minOccurs="0"/>
+				<xs:element ref="ns22:InstrReporting" minOccurs="0"/>
+				<xs:element ref="ns24:WFDetails" minOccurs="0"/>
+				<xs:element ref="ns15:Attachment" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns26:DeliveryInstructions" minOccurs="0"/>
+				<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns1:BankDetails" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="BundleDetails" minOccurs="0"/>
+				<xs:element name="PendingBundleRequestCount" type="xs:integer" minOccurs="0"/>
+				<xs:element ref="LinkDetails" minOccurs="0"/>
+				<xs:element ref="ns25:BidProcessDetails" minOccurs="0"/>
+				<xs:element ref="ns27:BuDelegation" minOccurs="0"/>
+				<xs:element ref="ns28:ActionLog" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns28:Action_DrawDown_Values" minOccurs="0"/>
+				<xs:element ref="ns28:Action_Search" minOccurs="0"/>
+				<xs:element ref="ns29:WinningBankDetails" minOccurs="0"/>
+				<xs:element name="Save_As_Model" type="xs:string" minOccurs="0"/>
+				<xs:element name="Model_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Model_Status" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns30:DelegationApprovers" minOccurs="0"/>
+				<xs:element ref="ReimbursementAgreementType" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Reimbursement_Agreement_id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Reimbursement_Agreement_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="US_Expiration_Date_Required" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="LOC_Transferable" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Suppress_Webcash" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Transfer_Fees_Required_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element ref="ns8:TransferFees" minOccurs="0"/>
+				<xs:element ref="ns31:TresuryDelegation" minOccurs="0"/>
+				<xs:element ref="ns32:AdditionalInstrumentDetails" minOccurs="0"/>
+				<xs:element ref="ns33:BidmemoDetails" minOccurs="0"/>
+				<xs:element ref="ns34:TreasuryDelegationApprovers" minOccurs="0"/>
+				<xs:element ref="ns35:AvailableBanks" minOccurs="0"/>
+				<xs:element ref="ns36:SelectedBanks" minOccurs="0"/>
+				<xs:element name="Bid_Or_Opt_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="BANK_BID_ID" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Bid_Reply_ID" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Bid_Action_ID" type="xs:integer" minOccurs="0"/>
+				<xs:element ref="ns37:FeesDetails" minOccurs="0"/>
+				<xs:element ref="ns38:BidReplyDetails" minOccurs="0"/>
+				<xs:element ref="ns39:OneTimeFeesDetails" minOccurs="0"/>
+				<xs:element ref="ns40:PricingDetails" minOccurs="0"/>
+				<xs:element ref="ns41:PreAgreedPricingDetails" minOccurs="0"/>
+				<xs:element ref="ns42:ConfirmationFees" minOccurs="0"/>
+				<xs:element ref="ns43:ProposedBankBranchConfirmDetails" minOccurs="0"/>
+				<xs:element ref="ns44:IndicativePricingCompletedDetails" minOccurs="0"/>
+				<xs:element name="Amendment" type="ns45:Amendment" minOccurs="0"/>
+				<xs:element name="PreviousAmendment" type="ns45:Amendment" minOccurs="0"/>
+				<xs:element name="Rider" type="ns46:Rider" minOccurs="0"/>
+				<xs:element name="PreviousRider" type="ns46:Rider" minOccurs="0"/>
+				<xs:element ref="ns47:SiteSelection" minOccurs="0"/>
+				<xs:element name="Instrument_Doc_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Instrument_Doc_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuance_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Confirmation_Ref_Number" type="xs:string" minOccurs="0"/>
+				<xs:element name="Confirmation_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Surety_Id" type="xs:int" minOccurs="0"/>
+				<xs:element name="Surety_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Premium_Fees" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Charge_For_Rider" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Total_Premium" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Issuer_Notes" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank_Ref_Number" type="xs:string" minOccurs="0"/>
+				<xs:element name="Additional_Fees" type="xs:string" minOccurs="0"/>
+				<xs:element name="New_Exp_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Closer_Notes" type="xs:string" minOccurs="0"/>
+				<xs:element ref="ns48:Audit_Log" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ns48:Audit_Search" minOccurs="0"/>
+				<xs:element ref="ns48:DrawDown_Values" minOccurs="0"/>
+				<xs:element name="Issuing_Bank_Selection_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Business_ReApproval_Flag" type="xs:string" minOccurs="0"/>
+				<xs:element name="Treasury_Selected_Bank_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Treasury_Selected_Bank_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuance_Surety_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Sendbackby_BuApprover" type="xs:string" minOccurs="0"/>
+				<xs:element name="Transmission_Platform" type="xs:string" minOccurs="0"/>
+				<xs:element name="Approver_Amount" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Last_Save_Time" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Bank_Contact_Sso" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank_Contact_Fname" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank_Contact_Lname" type="xs:string" minOccurs="0"/>
+				<xs:element name="Check_Amdmen_Ridert" type="xs:string" minOccurs="0"/>
+				<xs:element name="Swift_Format_doc" type="xs:string" minOccurs="0"/>
+				<xs:element ref="IssunaceDocType" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Retain_Bid_Reply" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SBLC">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Op_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="US_Issuance_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Credit_Issuance_Country" type="xs:string" minOccurs="0"/>
+				<xs:element name="Credit_Issuance_Country_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Credit_req_Cnfm_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Credit_Cnfm_Country" type="xs:string" minOccurs="0"/>
+				<xs:element name="Credit_Cnfm_Country_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Credit_Req_Advise_Flag" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Credit_Advise_Country" type="xs:string" minOccurs="0"/>
+				<xs:element name="Credit_Advise_Country_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Requires_Edits" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Send_Back_Notes" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="BundleDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Transaction_State" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bundle_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Req_Count" type="xs:int" minOccurs="0"/>
+				<xs:element name="Bundle_Creation_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Bundle_Creator" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bundle_Creator_First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bundle_Creator_Last_Name" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LinkDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Link_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Link_Request_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Linked_Request_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Aloc_Link_Request_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Aloc_Linked_Request_Id" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="RequestDetailsCollectionType">
+		<xs:sequence>
+			<xs:element ref="RequestDetails" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ReimbursementAgreementType">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Reimbursement_Agreement_id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Reimbursement_Agreement_Name" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="IssunaceDocType">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Reference_Num" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuer_Doc_Type_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Issuance_Desc" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issue_Dt" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Issuance_Document" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuer_Doc_Type_Name" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,26 @@
+.h2desc{height:105px!important;}
+.desc{color:#666; padding-left:5px;}
+h3.closure {font-size:18px; border-bottom:1px solid #00437E; color:#555;/*line-height:24px;*/
+margin:0 0 20px 15px; padding-bottom: 0px!important; margin-left:0px !important;}
+.closure-request-summary{
+width: 100%;
+padding: 10px;
+background: #d7e1ea;
+border: 0px solid red;
+margin: -10px -10px 20px -10px;
+}
+.closure-request-summary .heading {
+font-size: 16px;
+border-bottom: 0px!important;
+color: #000;
+font-weight: bold;
+margin: 0 0 10px 0px;
+padding: 5px;}
+
+.closure-request-summary .heading span{
+font-size: 16px;
+border-bottom: 0px!important;
+color: #000;
+font-weight: normal;
+margin: 0 0 10px 0px;
+padding: 5px;}

@@ -1,0 +1,67 @@
+8
+
+dir
+56
+https://openge.ge.com/svn/treasury_aloc/trunk/source/web/sunone_codebase/aloc/WebContent/js/tiny_mce/plugins/inlinepopups
+https://openge.ge.com/svn/treasury_aloc
+
+
+
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+720fd033-fee8-473a-95ce-a3690b27228b
+
+editor_plugin.js
+file
+
+
+
+
+2014-12-17T16:04:20.082569Z
+cbfebda03eef4bd608a86827948c4224
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+template.htm
+file
+
+
+
+
+2014-12-17T16:04:20.090569Z
+3d7e3ae05511a9f64c5da924b9e971ba
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+editor_plugin_src.js
+file
+
+
+
+
+2014-12-17T16:04:20.099569Z
+4b1b187a27aeaa393c9ed5e10a13ce83
+2014-12-11T04:13:10.295791Z
+24
+sombabu07
+
+skins
+dir
+

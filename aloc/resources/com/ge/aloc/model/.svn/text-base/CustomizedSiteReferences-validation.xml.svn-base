@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+ <validators>
+	<field name="siteCustoms[0]">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[(siteCustoms[0] != "") || (siteRequiredFlag != true)]]>
+			</param>
+			<message key="error.required.siteDetails.customSiteField" />
+		</field-validator>
+	</field>
+</validators> 

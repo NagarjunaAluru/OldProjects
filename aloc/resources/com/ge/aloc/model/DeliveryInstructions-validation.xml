@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<field name="deliveryType">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required.requestDetails.deliverType" />
+		</field-validator>
+	</field>
+	
+	<field name="companyName">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required.requestDetails.companyName" />
+		</field-validator>
+	</field>
+	
+	<field name="firstName">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required.requestDetails.recipientsFirstName" />
+		</field-validator>
+	</field>
+	
+	<field name="lastName">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message key="error.required.requestDetails.recipientsLastName" />
+		</field-validator>
+	</field>
+	<field name="address1">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((deliveryType != "false") || (deliveryType == "true")) || (address1 != "")]]>
+      	</param>
+      		<message>
+      			${getText("error.required.requestDetails.address1", {'Delivery Instructions :'})}
+            </message>
+		</field-validator>
+	</field>
+	<field name="city">
+	<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((deliveryType != "false") || (deliveryType == "true")) || (city != "")]]>
+      	</param>
+      		<message>
+      			${getText("error.required.requestDetails.city", {'Delivery Instructions :'})}
+            </message>
+		</field-validator>
+	</field>
+
+	<field name="ZIPPostalcode">
+		<field-validator type="fieldexpression" short-circuit="true">
+		<param name="expression">
+        	<![CDATA[((deliveryType != "false") || (deliveryType == "true")) || (ZIPPostalcode != "")]]>
+      	</param>
+      		<message>
+      			${getText("error.required.requestDetails.zipOrPostalCode", {'Delivery Instructions :'})}
+            </message>
+		</field-validator>
+		<field-validator type="fieldexpression">
+            <param name="expression"><![CDATA[((deliveryType != "false") || (deliveryType == "true")) || (@com.ge.aloc.util.ALOCCommonHelper@isValidZipformat(ZIPPostalcode))]]></param>
+           	<message>
+      			${getText("error.required.requestDetails.zipInFormat", {'Delivery Instructions :'})}
+            </message>
+        </field-validator>
+		 
+	</field>
+	<field name="countryCd">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((deliveryType != "false") || (deliveryType == "true")) || (countryCd != "")]]>
+      	</param>
+      		<message>
+      			${getText("error.required.requestDetails.country", {'Delivery Instructions :'})}
+            </message>
+		</field-validator>
+	</field>
+	<field name="deliveryDesignationFlag">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[ (requestDetails.instrumentTypeId == 3 || requestDetails.instrumentTypeId == 6 ) ||((deliveryDesignationFlag == "Applicant") || (deliveryDesignationFlag == "Beneficiary") ||(deliveryDesignationFlag == "OtherParty"))]]>
+      	</param>
+			<message key="error.required.requestDetails.deliveryDesignationFlag" />
+		</field-validator>
+	</field>
+	<field name="phoneNo">
+		<field-validator type="requiredstring" short-circuit="true">
+			<param name="trim">true</param>
+			<message>
+      			${getText("error.required.requestDetails.phoneNumber", {'Delivery Instructions :'})}
+            </message>
+		</field-validator>
+		<field-validator type="regex">
+            <param name="expression"><![CDATA[^[+]?[0-9- ]*$]]></param>
+            <message>
+      			${getText("error.required.requestDetails.phoneNumberMustBeDigits", {'Delivery Instructions :'})}
+            </message>
+        </field-validator>
+	</field>
+	<field name="specialInstructions">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[ (requestDetails.instrumentTypeId != 3 && requestDetails.instrumentTypeId != 6 ) || (specialInstructions !=null && specialInstructions !="")]]>
+      	</param>
+			<message key="error.required.requestDetails.specialInstructions" />
+		</field-validator>
+	</field>
+	<field name="sendBackNotes">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requiresEdits == false) || (requiresEdits != true)) || (sendBackNotes != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.sendBackNotes" />
+		</field-validator>
+	</field>
+	
+</validators>

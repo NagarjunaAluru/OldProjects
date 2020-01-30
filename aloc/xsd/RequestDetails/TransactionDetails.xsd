@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/TransactionDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/TransactionDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="TransactionDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Op_Code" type="xs:string" minOccurs="0"/>
+				<xs:element name="Project_Desc" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuance_Country_Cd" type="xs:string" minOccurs="0"/>
+				<xs:element name="Issuance_Country" type="xs:string" minOccurs="0"/>
+				<xs:element name="Contranct_Amt" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Contranct_Cur" type="xs:string" minOccurs="0"/>
+				<xs:element name="Contranct_Cur_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Doc_LC_Cur" type="xs:string" minOccurs="0"/>
+				<xs:element name="Doc_LC_Cur_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="Doc_LC_Amt" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="USD_Equivalent" type="xs:decimal" minOccurs="0"/>
+				<xs:element ref="Shipment_Origin" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Shipment_Dest_Country_Cd" type="xs:string" minOccurs="0"/>
+				<xs:element name="Shipment_Dest_Country" type="xs:string" minOccurs="0"/>
+				<xs:element ref="Goods_Origin" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="US_Content_Percent" type="xs:string" minOccurs="0"/>
+				<xs:element name="LC_Payment_Term" type="xs:string" minOccurs="0"/>
+				<xs:element name="LC_Payment_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Oth_Payment_Desc" type="xs:string" minOccurs="0"/>
+				<xs:element name="Confirmation_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank_Charges_Type" type="xs:string" minOccurs="0"/>
+				<xs:element name="Bank_Charges_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Prefered_Loc_Country_Cd" type="xs:string" minOccurs="0"/>
+				<xs:element name="Prefered_Loc_Country_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Comments" type="xs:string" minOccurs="0"/>
+				<xs:element name="Requires_Edits" type="xs:boolean" minOccurs="0"/>
+				<xs:element name="Send_Back_Notes" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Shipment_Origin">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Country_Cd" type="xs:string" minOccurs="0"/>
+				<xs:element name="County_Name" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Goods_Origin">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Country_Cd" type="xs:string" minOccurs="0"/>
+				<xs:element name="County_Name" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/Admin/SuretyMasterCollection.xsd"
+	 xmlns:ns0="http://treasury.ge.com/schemas/ALOC/Admin/SuretyMaster.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/Admin/SuretyMasterCollection.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://treasury.ge.com/schemas/ALOC/Admin/SuretyMaster.xsd" schemaLocation="SuretyMaster.xsd"/>
+	<xs:element name="Surety_Master_Collection">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ns0:Surety_Master" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

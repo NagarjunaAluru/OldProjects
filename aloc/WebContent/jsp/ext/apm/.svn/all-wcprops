@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/ext/apm
+END
+suretyBondAPMRequest.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/ext/apm/suretyBondAPMRequest.jsp
+END
+apmFXRateHistoryandCurrencySetup.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/ext/apm/apmFXRateHistoryandCurrencySetup.jsp
+END
+fxRateHistory.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/ext/apm/fxRateHistory.jsp
+END
+feeHistorySummaryDet.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/ext/apm/feeHistorySummaryDet.jsp
+END
+fxRateperiodSelect.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/ext/apm/fxRateperiodSelect.jsp
+END
+showFXRates.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/ext/apm/showFXRates.jsp
+END
+advanceSearchInFeeHistory.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/ext/apm/advanceSearchInFeeHistory.jsp
+END
+basicSearchInFeeHistory.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/ext/apm/basicSearchInFeeHistory.jsp
+END
+bgAndLocAPMRequest.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/ext/apm/bgAndLocAPMRequest.jsp
+END
+FeeHistory.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/ext/apm/FeeHistory.jsp
+END
+requestsFullViewHeader.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/ext/apm/requestsFullViewHeader.jsp
+END
+feeSummaryDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/treasury_aloc/!svn/ver/30/trunk/source/web/sunone_codebase/aloc/WebContent/jsp/ext/apm/feeSummaryDetails.jsp
+END

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/RequestDetails/FeeHistory.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/RequestDetails/FeeHistory.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="FeeHistory">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Payment_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Payment_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Payment_Currency" type="xs:string" minOccurs="0"/>
+				<xs:element name="Payment_Amount" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Expiration_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Economic_Exp_Date" type="xs:dateTime" minOccurs="0"/>
+				<xs:element name="Total_USD_Equivalent" type="xs:decimal" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

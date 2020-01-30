@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	
+	<field name="refDetails[0].refValue">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[((((@com.ge.aloc.util.ALOCCommonHelper@getStageId())!=5) ) || (refDetails[0].refValue !=null && (refDetails[0].refValue).trim() !="") )]]>
+			</param>
+			<message key="error.required.requestDetails.geApplicantReference" />
+		</field-validator>
+	</field>
+	
+	<field name="buUnit">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[((((@com.ge.aloc.util.ALOCCommonHelper@getStageId())!=5) ) || (buUnit !=null && buUnit.trim() !="") )]]>
+			</param>
+			<message key="error.required.requestDetails.businessUnitCode" />
+		</field-validator>
+	</field>
+	
+	<field name="accDist">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[((((@com.ge.aloc.util.ALOCCommonHelper@getStageId())!=5) ) || (accDist !=null && accDist.trim() !="") )]]>
+			</param>
+			<message key="error.required.requestDetails.accountingDistributionNumber" />
+		</field-validator>
+	</field>
+	
+	<field name="csoNo">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[@com.ge.aloc.util.ALOCCommonHelper@isBankGuaranteeOrSBLCRequest(requestDetails.instrumentTypeId) != true || (requestDetails.siteTypeName != "Financial Business") || (csoNo != null && csoNo != "")]]>
+      		</param>
+			<message key="error.required.requestDetails.csoNumber" />
+		</field-validator>
+	</field>
+	
+	<field name="csoApprovalDt">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[@com.ge.aloc.util.ALOCCommonHelper@isBankGuaranteeOrSBLCRequest(requestDetails.instrumentTypeId) != true || (requestDetails.siteTypeName != "Financial Business") || (csoApprovalDt != null)]]>
+      		</param>
+			<message key="error.required.requestDetails.csoDateNotvalid" />
+		</field-validator>
+	</field> 
+	
+	<field name="certifyFlag">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[@com.ge.aloc.util.ALOCCommonHelper@isBankGuaranteeOrSBLCRequest(requestDetails.instrumentTypeId) != true || (requestDetails.siteTypeName != "Financial Business") || (certifyFlag == true )]]>
+      		</param>
+			<message key="error.required.requestDetails.certifyFlag" />
+		</field-validator>
+	</field> 
+	
+	<field name="sendBackNotes">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[@com.ge.aloc.util.ALOCCommonHelper@isBankGuaranteeOrSBLCRequest(requestDetails.instrumentTypeId) != true || ((requiresEdits == false) || (requiresEdits != true)) || (sendBackNotes != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.sendBackNotes" />
+		</field-validator>
+	</field>
+</validators>

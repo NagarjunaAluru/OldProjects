@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+  		"-//Apache Struts//XWork Validator 1.0.3//EN"
+  		"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<!-- Principal Section Validation -->
+	
+	<field name="requestDetails.rider.principal.addressDtls.name">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((actionType != 2 && actionType != 32) || (principlaAddressSelection!="New") || (requestDetails.rider.principal.addressDtls.name !="" && requestDetails.rider.principal.addressDtls.name != null))]]>
+			</param>
+			<message>
+      			${getText("error.required.requestDetails.name", {'Principal :'})}
+            </message>
+		</field-validator>
+	</field>
+
+	<field name="requestDetails.rider.principal.addressDtls.address[0]">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((actionType != 2 && actionType != 32) || (principlaAddressSelection!="New") || (requestDetails.rider.principal.addressDtls.address[0] !="" && requestDetails.rider.principal.addressDtls.address[0] != null))]]>
+			</param>
+			<message>
+      			${getText("error.required.requestDetails.address1", {'Principal :'})}
+            </message>
+		</field-validator>
+	</field>
+	<field name="requestDetails.rider.principal.addressDtls.city">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((actionType != 2 && actionType != 32) || (principlaAddressSelection!="New") || (requestDetails.rider.principal.addressDtls.city !="" && requestDetails.rider.principal.addressDtls.city != null))]]>
+			</param>
+			<message>
+      			${getText("error.required.requestDetails.city", {'Principal :'})}
+            </message>
+		</field-validator>
+	</field>
+
+	<field name="requestDetails.rider.principal.addressDtls.ZIPPostalCode">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[((actionType != 2 && actionType != 32) || (principlaAddressSelection!="New") || (requestDetails.rider.principal.addressDtls.ZIPPostalCode !="" && requestDetails.rider.principal.addressDtls.ZIPPostalCode != null))]]>
+			</param>
+			<message>
+      			${getText("error.required.requestDetails.zipOrPostalCode", {'Principal :'})}
+            </message>
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((actionType != 2 && actionType != 32) || (principlaAddressSelection!="New") || (@com.ge.aloc.util.ALOCCommonHelper@isValidZipformat(requestDetails.rider.principal.addressDtls.ZIPPostalCode)))]]>
+			</param>
+			<message>
+      			${getText("error.required.requestDetails.zipInFormat", {'Principal :'})}
+            </message>
+		</field-validator>
+	</field>
+
+	<field name="requestDetails.rider.principal.addressDtls.countryCd">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((actionType != 2 && actionType != 32) || (principlaAddressSelection!="New") || (requestDetails.rider.principal.addressDtls.countryCd !="" && requestDetails.rider.principal.addressDtls.countryCd != null))]]>
+			</param>
+			<message>
+      			${getText("error.required.requestDetails.country", {'Principal :'})}
+            </message>
+		</field-validator>
+	</field>
+
+	<!-- Obligee Section Validation -->
+
+	<field name="requestDetails.rider.obligee.addressDtls.name">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((actionType != 2 && actionType != 32) || (obligeeAddressSelection!="New") || (requestDetails.rider.obligee.addressDtls.name !="" && requestDetails.rider.obligee.addressDtls.name != null))]]>
+			</param>
+			<message>
+      			${getText("error.required.requestDetails.name", {'Obligee :'})}
+            </message>
+		</field-validator>
+	</field>
+
+	<field name="requestDetails.rider.obligee.addressDtls.address[0]">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((actionType != 2 && actionType != 32) || (obligeeAddressSelection!="New") || (requestDetails.rider.obligee.addressDtls.address[0] !="" && requestDetails.rider.obligee.addressDtls.address[0] != null))]]>
+			</param>
+			<message>
+      			${getText("error.required.requestDetails.address1", {'Obligee :'})}
+            </message>
+		</field-validator>
+	</field>
+
+	<field name="requestDetails.rider.obligee.addressDtls.city">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((actionType != 2 && actionType != 32) || (obligeeAddressSelection!="New") || (requestDetails.rider.obligee.addressDtls.city !="" && requestDetails.rider.obligee.addressDtls.city != null))]]>
+			</param>
+			<message>
+      			${getText("error.required.requestDetails.city", {'Obligee :'})}
+            </message>
+		</field-validator>
+	</field>
+
+	<field name="requestDetails.rider.obligee.addressDtls.ZIPPostalCode">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[((actionType != 2 && actionType != 32) || (obligeeAddressSelection!="New") || (requestDetails.rider.obligee.addressDtls.ZIPPostalCode !="" && requestDetails.rider.obligee.addressDtls.ZIPPostalCode != null))]]>
+			</param>
+			<message>
+      			${getText("error.required.requestDetails.zipOrPostalCode", {'Obligee :'})}
+            </message>
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((actionType != 2 && actionType != 32) || (obligeeAddressSelection!="New") || (@com.ge.aloc.util.ALOCCommonHelper@isValidZipformat(requestDetails.rider.obligee.addressDtls.ZIPPostalCode)))]]>
+			</param>
+			<message>
+      			${getText("error.required.requestDetails.zipInFormat", {'Obligee :'})}
+            </message>
+		</field-validator>
+	</field>
+
+	<field name="requestDetails.rider.obligee.addressDtls.countryCd">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+        		<![CDATA[((actionType != 2 && actionType != 32) || (obligeeAddressSelection!="New") || (requestDetails.rider.obligee.addressDtls.countryCd !="" && requestDetails.rider.obligee.addressDtls.countryCd != null))]]>
+			</param>
+			<message>
+      			${getText("error.required.requestDetails.country", {'Obligee :'})}
+            </message>
+		</field-validator>
+	</field>
+
+	<!-- ExpiryDate Section Validation -->
+
+	<field name="requestDetails.rider.expiryDate.revisedExpiryDate">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+        		<![CDATA[((actionType != 2 && actionType != 32) || (requestDetails.rider.expiryDate.revisedExpiryDate != null))]]>
+			</param>
+			<message>
+      			${getText("error.required.requestDetails.amendment.revisedExpiryDate", {'Expiration Dates :'})}
+            </message>
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[((actionType != 2 && actionType != 32) || (requestDetails.rider.expiryDate.revisedExpiryDate.compareTo(@com.ge.aloc.util.ALOCCommonHelper@getCurrentDateWithOutTime())
+				!= -1 ))]]>
+			</param>
+			<message key="error.required.rider.revisedExpirationDateTodayDate" />
+		</field-validator>
+	</field>
+	<!-- Bond Information Validation -->
+	<field name="requestDetails.rider.riderBondInformation.operation">
+		<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[((actionType != 2 && actionType != 32) || (requestDetails.rider.riderBondInformation.amtOfIncreaseOrDecrease == null) || (requestDetails.rider.riderBondInformation.operation != null && requestDetails.rider.riderBondInformation.operation !=""))]]>
+			</param>
+			<message key="error.required.requestDetails.increaseDecrease" />
+		</field-validator>
+	</field>
+	<field name="requestDetails.rider.riderBondInformation.amtOfIncreaseOrDecrease">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+				<![CDATA[((actionType != 2 && actionType != 32) || (requestDetails.rider.riderBondInformation.operation == null || requestDetails.rider.riderBondInformation.operation == '') || (requestDetails.rider.riderBondInformation.amtOfIncreaseOrDecrease != null))]]>
+			</param>
+			<message key="error.required.rider.amountIncreaseDecrease" />
+		</field-validator>
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression">
+				<![CDATA[((actionType != 2 && actionType != 32) || (requestDetails.rider.riderBondInformation.operation == null || requestDetails.rider.riderBondInformation.operation == '') || (requestDetails.rider.riderBondInformation.amtOfIncreaseOrDecrease > 0))]]>
+			</param>
+			<message key="error.required.rider.amountIncreaseDecreaseMustGreaterThanZero" />
+		</field-validator>
+		<field-validator type="fieldexpression">
+			<param name="expression">
+			<![CDATA[ (actionType != 2 && actionType != 32) || @com.ge.aloc.util.ALOCCommonHelper@isValidDecimal(requestDetails.rider.riderBondInformation.amtOfIncreaseOrDecrease)]]>
+			</param>
+			<message key="error.required.rider.amountIncreaseDecreaseInvalid" />
+		</field-validator>
+	</field>
+	<field name="requestDetails.rider.riderBondInformation.revisedUSDEquiContractAmt">
+    	<field-validator type="fieldexpression">
+			<param name="expression">
+				<![CDATA[((@com.ge.aloc.util.ALOCCommonHelper@isContractBond(requestDetails.bondDetails.bondType)!= true) || (requestDetails.rider.riderBondInformation.amtOfIncreaseOrDecrease == null && (requestDetails.rider.riderBondInformation.operation == null || requestDetails.rider.riderBondInformation.operation == '')) || (requestDetails.rider.riderBondInformation.revisedUSDEquiContractAmt != null))]]>
+			</param>
+			<message key="error.required.rider.riderRevisedUsdAmount" />
+		</field-validator>
+	</field>
+	<!-- Delivery Instructions Section Validation -->
+	<field name="requestDetails.rider.deliveryInstructions">
+		<field-validator type="conditionalvisitor">
+			<param name="expression">
+				<![CDATA[
+					((actionType == 2 || actionType == 32) && requestDetails.instrumentTypeId == 6)
+				]]>
+			</param>
+			<message />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.businessReApprovalFlag">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[(actionType == 1 || actionType != 2 ) || (requestDetails.businessReApprovalFlag != null && requestDetails.businessReApprovalFlag != "")]]>
+      	</param>
+			<message key="error.required.requestDetails.businessApproval" />
+		</field-validator>
+	</field>
+	
+	<field name="requestDetails.buDelegation.buApprover.approverSso">
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[ ((requestDetails.businessReApprovalFlag == null || requestDetails.businessReApprovalFlag == "" || requestDetails.businessReApprovalFlag == "N") || actionType != 2) || (requestDetails.buDelegation!=null && requestDetails.buDelegation.buApprover.approverSso != "" && requestDetails.buDelegation.buApprover.approverSso != null)]]>
+      	</param>
+			<message key="error.required.rider.submitbusinessApprover" />
+		</field-validator>
+	
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requestDetails.sendbackbyBuApprover != "Y" ) ||  (actionType !=  32) || (requestDetails.buDelegation!=null && requestDetails.buDelegation.buApprover.approverSso != "" && requestDetails.buDelegation.buApprover.approverSso != null))]]>
+      	</param>
+			<message key="error.required.requestDetails.submitbusinessApprover" />
+		</field-validator>
+
+		<field-validator type="fieldexpression">
+		<param name="expression">
+        	<![CDATA[((requestDetails.businessReApprovalFlag != "Y" ) ||  (actionType !=  32) || (requestDetails.buDelegation!=null && requestDetails.buDelegation.buApprover.approverSso != "" && requestDetails.buDelegation.buApprover.approverSso != null))]]>
+      	</param>
+			<message key="error.required.requestDetails.submitbusinessApprover" />
+		</field-validator>
+	</field>	
+	<field name="requestDetailsBO.attachmentBOList">
+		<field-validator type="fieldexpression" short-circuit="true">
+			<param name="expression"><![CDATA[(actionType !=2) || (@com.ge.aloc.util.ALOCCommonHelper@validateAtmtFileUpload())]]>
+			</param>
+			<message key="error.required.requestDetails.attachments.fileUpload" />
+		</field-validator>
+	</field>
+</validators>

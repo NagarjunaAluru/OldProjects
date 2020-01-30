@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://treasury.ge.com/schemas/ALOC/UserDetails.xsd"
+	 targetNamespace="http://treasury.ge.com/schemas/ALOC/UserDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="UserDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="User_Id" type="xs:string" minOccurs="0"/>
+				<xs:element name="User_Sso" type="xs:string" minOccurs="0"/>
+				<xs:element name="First_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Last_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Email_Addr" type="xs:string" minOccurs="0"/>
+				<xs:element name="Phone_Num" type="xs:string" minOccurs="0"/>
+				<xs:element name="Fax_Num" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

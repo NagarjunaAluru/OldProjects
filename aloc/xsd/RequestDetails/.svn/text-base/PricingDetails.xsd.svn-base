@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/PricingDetails.xsd"
+	 xmlns:ns0="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/OneTimeFeesDetails.xsd"
+	 targetNamespace="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/PricingDetails.xsd"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.tibco.com/schemas/ALOC/Resources/Schemas/RequestDetails/OneTimeFeesDetails.xsd" schemaLocation="OneTimeFeesDetails.xsd"/>
+	<xs:element name="PricingDetails">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="All_In_Commissions_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="All_In_Commissions_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="All_In_Commissions_Value" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="All_In_Ammendment_Transaction_Fee" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Local_Commissions_Id" type="xs:integer" minOccurs="0"/>
+				<xs:element name="Local_Commissions_Name" type="xs:string" minOccurs="0"/>
+				<xs:element name="Local_Commissions_Value" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="Local_Ammendment_Transaction_Fee" type="xs:decimal" minOccurs="0"/>
+				<xs:element ref="ns0:OneTimeFeesDetails" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
