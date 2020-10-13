@@ -19,7 +19,7 @@
 		<spring.struts.version>2.0.8</spring.struts.version>
 		<jaxb-api.version>2.0</jaxb-api.version>
 		<jaxb-impl.version>2.0.3</jaxb-impl.version>
-		<junit.version>4.8.1</junit.version>
+		<junit.version>4.13.1</junit.version>
 		<log4j.version>1.2.16</log4j.version>
 		<displaytag.version>1.2</displaytag.version>
 		<tibcojms.version>5.0.0</tibcojms.version>
