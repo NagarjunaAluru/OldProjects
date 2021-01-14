@@ -23,7 +23,7 @@
 		<junit.version>4.8.1</junit.version>
 		<jmockit.version>0.999</jmockit.version>
 		<jxl.version>2.6.10</jxl.version>
-		<poi.version>3.9</poi.version>
+		<poi.version>4.1.2</poi.version>
 		<log4j.version>1.2.16</log4j.version>
 		<tibcojms.version>5.0.0</tibcojms.version>
 		<hwf-core.version>2.0.25</hwf-core.version>
